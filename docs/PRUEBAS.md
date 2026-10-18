@@ -25,6 +25,7 @@
 - Para escribir en el chat: `user_keyboard_input` con Slash, espera unos 600 ms, el texto y Return (`SendAsync` se queda colgado).
 - Un `require()` de un módulo del servidor desde `execute_luau` crea **otra copia** del módulo: para probar, usa los remotes o los comandos.
 - Las capturas de pantalla pueden llegar con varios segundos de retraso.
+- Si una `screen_capture` con `camera_position` falla (timeout), la cámara de Studio puede quedarse en `Scriptable` y **no se puede mover**. Arreglo (barra de comandos o `execute_luau` en Edit): `workspace.CurrentCamera.CameraType = Enum.CameraType.Fixed`. Cada persona tiene su propia cámara: hay que hacerlo en cada Studio.
 - No cambies `RightGrip.Part0` de una herramienta: Roblox la suelta y se cae del mundo.
 - Un Highlight `AlwaysOnTop` tapa las partículas que hay delante del modelo.
 - El Bloom del juego quema de blanco los Neon claros y el `Fire` de Roblox: usa partículas y colores menos intensos.
