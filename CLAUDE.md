@@ -28,6 +28,7 @@ Usa la fecha real y el nombre del usuario con el que trabajas (`bbogatell` o `se
 ## Contexto técnico rápido
 
 - Todo el código está en Studio: `ServerScriptService.DiamondServer` (servidor), `StarterPlayer.StarterPlayerScripts.DiamondClient` (cliente), `ReplicatedStorage` (compartido: `Config`, `DigAnim`, `ShovelLook`, `TalismanLook`). Mapa completo en `docs/ARQUITECTURA.md`.
+- **Estilo del mapa:** todo es de bloques con textura de studs (`rbxassetid://6348166067`). Solo el interior de las parcelas de los jugadores y el campo del diamante (dentro de la barrera) llevan terreno/material realista. No añadas árboles, rocas ni materiales realistas fuera de esas zonas.
 - **Casi todos los números del juego** (precios, niveles, talismanes, gnomos) están en `ReplicatedStorage.Config`.
 - Para probar en Studio hay comandos de chat (`/gnomo`, `/talisman ...`, `/empezar`) y `Request:InvokeServer("Debug", ...)`. Ver `docs/PRUEBAS.md`.
 - La API de DataStore está desactivada en Studio, así que los avisos de DataStore en la consola son normales.
