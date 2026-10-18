@@ -5,7 +5,7 @@
 ## Cómo funciona
 
 1. Las 15 parcelas van **una detrás de otra** en un carril largo que sale del lobby. Al final, después de la parcela 15, está el campo del diamante.
-2. **Para cavar en una parcela hace falta su pala** (o una mejor). Con una pala peor, el suelo está «demasiado duro».
+2. **Para cavar en una parcela hace falta su pala** (o una mejor). Con una pala peor, el suelo está «demasiado duro». Se mantienen las **30 palas**: la parcela N pide la pala **2N−1** (parcela 1 → pala 1, parcela 2 → pala 3… parcela 15 → pala 29). Las palas pares sirven para cavar más rápido o con más daño en la parcela que ya tienes, y la pala 30 es la mejor para la última parcela.
 3. Al cavar puede salir un **fósil**. Su rareza depende de la parcela (tabla de cada parcela). El jugador lo lleva **encima de la cabeza** hasta su base. Mientras lo lleva, va más lento según el **peso** del fósil, y otros jugadores le pueden pegar para que lo suelte.
 4. En la base, el fósil queda asegurado y **se abre con el tiempo**. Al abrirse sale un **bicho** de la rareza del fósil.
 
@@ -95,7 +95,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** pocas hojas que caen, mariposas.
 - **Fósiles:** Común 75 % · Poco común 22 % · Raro 3 %.
 
-**2. Pantano Jurásico** · pala 2
+**2. Pantano Jurásico** · pala 3
 - **Tema:** pantano con agua verde, nenúfares gigantes y troncos podridos.
 - **Terreno que se cava:** `Mud` (barro).
 - **Decoración:** nenúfares enormes, juncos altos, troncos huecos, un esqueleto de Compsognathus sobre una roca, charcos (Glass verde translúcido).
@@ -103,7 +103,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** burbujas que salen del barro, luciérnagas, niebla baja.
 - **Fósiles:** Común 40 % · Poco común 40 % · Raro 18 % · Épico 2 %.
 
-**3. Playa de Ámbar** · pala 3
+**3. Playa de Ámbar** · pala 5
 - **Tema:** costa prehistórica con arena dorada, gotas gigantes de ámbar con insectos dentro y conchas de amonites.
 - **Terreno que se cava:** `Sand` (arena).
 - **Decoración:** amonites gigantes en espiral, gotas de ámbar enormes en Neon naranja translúcido con un mosquito dentro, palmeras prehistóricas (cicas), olas de bloques azules.
@@ -111,7 +111,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** brillos dorados en el ámbar, gaviotas prehistóricas.
 - **Fósiles:** Poco común 35 % · Raro 45 % · Épico 17 % · Legendario 1 % · Brainrot 2 %.
 
-**4. Cañón de Arena Roja** · pala 4
+**4. Cañón de Arena Roja** · pala 7
 - **Tema:** cañón desértico de rocas rojas en capas, con huellas gigantes de dinosaurio en las paredes.
 - **Terreno que se cava:** `Sandstone` (arenisca).
 - **Decoración:** paredes en capas rojas y naranjas, arcos de piedra, huellas gigantes en relieve, cactus prehistóricos, un esqueleto de Triceratops semienterrado.
@@ -119,7 +119,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** remolinos de arena, polvo en el aire.
 - **Fósiles:** Raro 40 % · Épico 45 % · Legendario 12 % · Mítico 1 % · Brainrot 2 %.
 
-**5. Selva Cretácica** · pala 5
+**5. Selva Cretácica** · pala 9
 - **Tema:** selva espesa con árboles gigantes, lianas, flores enormes y una cascada.
 - **Terreno que se cava:** `LeafyGrass` arriba y `Ground` debajo.
 - **Decoración:** árboles colosales de bloques con raíces, lianas colgando, flores gigantes de colores, una cascada de bloques azules, un Braquiosaurio de piedra asomando entre los árboles.
@@ -127,7 +127,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** hojas, luciérnagas, gotas de la cascada y pájaros.
 - **Fósiles:** Épico 45 % · Legendario 42 % · Mítico 10 % · Brainrot 3 %.
 
-**6. Tundra de los Mamuts** · pala 6
+**6. Tundra de los Mamuts** · pala 11
 - **Tema:** llanura helada de la edad de hielo con mamuts congelados en bloques de hielo.
 - **Terreno que se cava:** `Snow` arriba e `Ice` debajo.
 - **Decoración:** bloques de hielo gigantes con mamuts y Triceratops congelados dentro, carámbanos enormes, pinos nevados, un esqueleto de Megaterio de pie.
@@ -135,7 +135,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** nieve que cae, vaho, brillo de escarcha.
 - **Fósiles:** Legendario 50 % · Mítico 38 % · Cósmico 8 % · Mutante 2 % · Brainrot 2 %.
 
-**7. Volcán Humeante** · pala 7
+**7. Volcán Humeante** · pala 13
 - **Tema:** las faldas de un volcán en erupción, con ríos de lava y rocas negras.
 - **Terreno que se cava:** `Basalt` con vetas de `CrackedLava`.
 - **Decoración:** un volcán colosal al fondo echando humo, ríos de lava (Neon naranja), rocas negras con grietas brillantes, un Espinosaurio de obsidiana en la entrada.
@@ -143,7 +143,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** ceniza, brasas que suben, humo y temblores de vez en cuando.
 - **Fósiles:** Legendario 25 % · Mítico 50 % · Cósmico 20 % · Secreto 1 % · Mutante 2 % · Brainrot 2 %.
 
-**8. Abismo Marino Seco** · pala 8
+**8. Abismo Marino Seco** · pala 15
 - **Tema:** el fondo de un océano prehistórico que se ha secado: corales gigantes, conchas y esqueletos de reptiles marinos.
 - **Terreno que se cava:** `Salt` (sal) y `Limestone` (caliza).
 - **Decoración:** corales enormes de colores, esqueleto colosal de Mosasaurio arqueado sobre la parcela como un puente, conchas gigantes, algas secas.
@@ -151,7 +151,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** burbujas que flotan en el aire, rayos de luz como bajo el agua.
 - **Fósiles:** Mítico 40 % · Cósmico 45 % · Secreto 11 % · Mutante 2 % · Brainrot 2 %.
 
-**9. Cementerio de Gigantes** · pala 9
+**9. Cementerio de Gigantes** · pala 17
 - **Tema:** un valle lleno de esqueletos colosales de dinosaurios, con niebla y cuervos.
 - **Terreno que se cava:** `Slate` (pizarra) oscuro.
 - **Decoración:** costillares gigantes que forman arcos, cráneos enormes de T-Rex y Triceratops, lápidas de piedra, árboles secos, farolas con fuego verde.
@@ -159,7 +159,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** niebla, cuervos, fuego verde, polvo de hueso.
 - **Fósiles:** Mítico 15 % · Cósmico 50 % · Secreto 30 % · Eterno 1 % · Mutante 2 % · Brainrot 2 %.
 
-**10. Cueva de Cristal** · pala 10
+**10. Cueva de Cristal** · pala 19
 - **Tema:** una caverna gigante llena de cristales brillantes de colores.
 - **Terreno que se cava:** `Glacier` y `Rock`.
 - **Decoración:** racimos de cristales colosales en Neon (rosa, cian, morado), estalactitas, un Estegosaurio de cristal gigante en la entrada, setas luminosas.
@@ -167,7 +167,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** destellos, polvo brillante, luz pulsante de los cristales.
 - **Fósiles:** Cósmico 40 % · Secreto 48 % · Eterno 8 % · Mutante 2 % · Brainrot 2 %.
 
-**11. Templo Perdido** · pala 11
+**11. Templo Perdido** · pala 21
 - **Tema:** las ruinas de un templo antiguo construido por dinosaurios, con estatuas gigantes y runas.
 - **Terreno que se cava:** `Cobblestone` y `Limestone`.
 - **Decoración:** columnas colosales, escalinatas, estatuas gigantes de Rex y Raptores guardianes, runas en Neon dorado, braseros con fuego, enredaderas.
@@ -175,7 +175,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** runas flotando, polvo dorado, fuego de los braseros.
 - **Fósiles:** Cósmico 15 % · Secreto 55 % · Eterno 25 % · Divino 1 % · Mutante 2 % · Brainrot 2 %.
 
-**12. Islas del Cielo** · pala 12
+**12. Islas del Cielo** · pala 23
 - **Tema:** islas flotantes entre las nubes, unidas por puentes, donde anidan los pterosaurios.
 - **Terreno que se cava:** la isla principal, de `Ground` y `Rock` (las islas pequeñas de alrededor son decoración de studs).
 - **Decoración:** islas flotantes con cascadas que caen al vacío, puentes colgantes, nidos gigantes de Quetzalcoatlus, nubes de bloques blancas, un arco de nubes en la entrada.
@@ -183,7 +183,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** nubes que pasan, plumas, viento, rayos de sol.
 - **Fósiles:** Secreto 45 % · Eterno 46 % · Divino 5 % · Mutante 3 % · Brainrot 1 %.
 
-**13. Grieta Dimensional** · pala 13
+**13. Grieta Dimensional** · pala 25
 - **Tema:** el suelo se ha roto y deja ver otra dimensión: fragmentos de roca flotan y hay portales.
 - **Terreno que se cava:** `Asphalt` (oscuro) con capas de `CrackedLava` en tono morado (color del material cambiado a morado).
 - **Decoración:** rocas flotantes girando, portales en Neon morado, grietas de energía en el suelo, un Dragón Fracturado de piedra suspendido en el aire.
@@ -191,7 +191,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** fragmentos flotando, chispas moradas, distorsión, relámpagos.
 - **Fósiles:** Secreto 20 % · Eterno 63 % · Divino 13 % · Mutante 4 %.
 
-**14. Nebulosa de los Dioses** · pala 14
+**14. Nebulosa de los Dioses** · pala 27
 - **Tema:** una parcela en el espacio: plataformas sobre una nebulosa, con planetas y anillos alrededor.
 - **Terreno que se cava:** `Glacier` (con color cambiado a morado cósmico) y `Basalt`.
 - **Decoración:** planetas gigantes de bloques orbitando, anillos de Saturno, estrellas en Neon, constelaciones de dinosaurios dibujadas en el cielo, un T-Rex de nebulosa enorme mirando desde arriba.
@@ -199,7 +199,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 - **Ambiente:** estrellas, cometas, polvo cósmico, auroras.
 - **Fósiles:** Eterno 60 % · Divino 35 % · Mutante 5 %.
 
-**15. Trono del Rey Galáctico** · pala 15
+**15. Trono del Rey Galáctico** · pala 29
 - **Tema:** la parcela definitiva: un santuario colosal de oro y luz en el que reina una estatua gigantesca del T-Rex Galáctico, justo antes del campo del diamante.
 - **Terreno que se cava:** `Foil` (oro) y `Marble` (mármol) en capas, con vetas de `Glacier` brillante.
 - **Decoración:** estatua colosal del T-Rex Galáctico sentado en un trono, columnas de oro, escaleras de luz, halos flotando, cascadas de luz, arcos con gemas y un portal dorado hacia el campo del diamante.
@@ -227,7 +227,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 | 14 | | | | | | | | | 60 | 35 | | 5 |
 | 15 | | | | | | | | | 30 | 65 | | 5 |
 
-> **Pendiente de decidir:** el juego tiene ahora 30 palas y aquí hay 15 parcelas. Opciones: dejar 15 palas (una por parcela) o que cada parcela pida una de cada dos palas (parcela N → pala 2N−1).
+> **Palas:** se mantienen las 30 palas actuales. La parcela N pide la pala 2N−1 (columna «pala» de cada parcela). Las palas pares no abren parcela nueva, pero cavan más rápido en la parcela en la que estás.
 
 ---
 
