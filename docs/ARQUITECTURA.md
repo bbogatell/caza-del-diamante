@@ -10,6 +10,7 @@
 | `Plots` | Las 8 parcelas personales del lobby (asignar, título flotante). **Ya no se cava en ellas** (`hit` devuelve `noDig`); en la fase 5 del gran cambio pasan a ser bases. |
 | `PlotDecor` | Decoración de cada parcela por nivel (30 niveles, `build(plotModel, level)`). |
 | `Shovels` | Crea la herramienta (Tool) de la pala a partir de `ReplicatedStorage.ShovelLook`. |
+| `Lane` | **Carril de 15 parcelas compartidas**: terreno de los hoyos (`Config.PLOTS`), cavar (pala 2N−1 o mejor, monedas `Config.DIG_VALUE`), regenerar (cada `LANE.regenTime` o al cavar el 80 %, con aviso y sacando a los de dentro), textos de los arcos y carteles con la pala. Gancho `Lane.onDig` para los fósiles. |
 | `Event` | El evento: barrera, campo, diamante escondido, recoger el diamante y ganador entre servidores. |
 | `Finale` | Cinemática final del servidor y paso al infierno (`ServerStorage.Finale`). |
 
@@ -20,10 +21,11 @@
 | `DiamondClient.UIKit` | Componentes de UI, **lista de sonidos** (`UI.SOUNDS`) e iconos, grupos de sonido (música/efectos). |
 | `DiamondClient.HUD` / `Menus` / `Fx` / `Cinematic` | Interfaz fija, ventanas (tienda, diario, ajustes), efectos de pantalla y cinemática final. |
 | `ShovelFx`, `PlotFx`, `StatueBoard` | Animaciones visuales (piezas que flotan en palas y parcelas, cartel del diamante del lobby). |
+| `LaneFx` | Ambiente de cada parcela al entrar (tinte, niebla, noche), desde `Config.PLOTS[n].sky`. |
 | `DebugLevelKey` | **Solo Studio:** la tecla E sube de nivel para probar. |
 
 ## Compartido: `ReplicatedStorage`
-- `Config`: **casi todos los números del juego**: niveles, terrenos, palas y precios, profundidad, daño, diario, Robux.
+- `Config`: **casi todos los números del juego**: carril y parcelas (`LANE`, `PLOTS`), palas (`SHOVELS`), monedas por cavar (`DIG_VALUE`), base, fósiles, eventos, velocidad, diario, Robux. Hijos: `Config.Creatures` (los 198 bichos) y `Config.Fossils` (13 rarezas y 60 fósiles).
 - `DigAnim`: animación de cavar (de una animación de Blender, 19 fotogramas), postura al llevar la pala y animación de pegar.
 - `ShovelLook`: modelos de las 30 palas (piezas).
 - `Remotes`: `Swing` (cavar), `Hit` (pegar), `Push` (servidor → cliente), `Request` (peticiones).
@@ -31,7 +33,11 @@
 
 ## Mapa: `workspace.Map`
 - `Lobby` (estilo studs, sin árboles): `Floor` (baldosas con textura de studs, top y=18, huecos en los 8 hoyos y en la escalera al campo), `Cliffs` (paredes de piedra de bloques, `Tier4` lejano, `Mine` al fondo), `Props` (barandilla, rodapié, faroles, jardineras, estandartes, cascada, marcos de los hoyos), estatua del diamante con cartel, tienda, diario, rankings, `PlotFrames` (8 parcelas en 2 filas, delante = +Z), `Bounds` (barreras invisibles). Lo antiguo está guardado en `ServerStorage.LobbyBackup`.
-- `Field`: campo del evento con barrera (±122). `Field.StudRing`: baldosas de studs de todo lo que rodea la barrera (franja de la valla, talud del sur, lados y norte); dentro de la barrera sigue el terreno real (se excava en el evento). `Field.Walkway.StudFence`: valla y farolas de bloques + `FenceCollider` invisibles. Copias: `ServerStorage.FieldRingBackup` (terreno), `ServerStorage.FieldPropsBackup` (cartel, arco, escalera y valla originales).
+- `Lane` (gran cambio): `Gateway` (portón del fondo del lobby), `Plot01`…`Plot15` (cada una: `Floor`, `Cliffs` con barreras invisibles, `Arch`, `ShovelSign`, `Ambience`, `Decor`) y `FieldEnd` (plaza de llegada al campo, montañas y barreras). Se genera en Edit con `ServerStorage.LaneKit` + `ServerStorage.LaneThemes`: `require(game.ServerStorage.LaneKit).buildPlot(n)` rehace una parcela.
+- `Meadow`: prado de studs donde antes estaba el campo.
+- `Field`: campo del evento con barrera (±122), **al final del carril** (centro `Config.FIELD_CENTER` = z −3208, girado 180°). `Field.StudRing`: baldosas de studs de todo lo que rodea la barrera (franja de la valla, talud del sur, lados y norte); dentro de la barrera sigue el terreno real (se excava en el evento). `Field.Walkway.StudFence`: valla y farolas de bloques + `FenceCollider` invisibles. Copias: `ServerStorage.FieldRingBackup` (terreno), `ServerStorage.FieldPropsBackup` (cartel, arco, escalera y valla originales).
 - **Regla de estilo:** solo el interior de las parcelas y el campo dentro de la barrera llevan material realista; todo lo demás, textura de studs `rbxassetid://6348166067`.
 - `workspace.Mountains` (fuera de `Map`): montañas de fondo de bloques con studs (hierba/roca/nieve), solo decorado (sin colisión). `Mountains.Fill`: bloques que tapan restos de terreno detrás de las paredes del lobby y en las esquinas. Sustituyen al terreno liso de alrededor; copia del terreno original en `ServerStorage.MountainsBackup`. `Finale.buildHell` las borra.
+- `ServerStorage.Models.Bichos|Fosiles|Palas`: aquí se dejan los modelos finales con el id como nombre; si no hay, el juego genera uno provisional.
+- **StreamingEnabled** está activado: en el cliente, buscar las piezas del mapa con `WaitForChild`/`FindFirstChild`.
 - `ServerStorage.Finale`: plataforma del cielo y el infierno (con `HellBounds`). `ServerStorage.MapAssets`: modelos del Creator Store (sin scripts).
