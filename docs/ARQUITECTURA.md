@@ -12,7 +12,7 @@
 | `Shovels` | Crea la herramienta (Tool) de la pala a partir de `ReplicatedStorage.ShovelLook`. |
 | `Event` | El evento: barrera, campo, diamante escondido, recoger el diamante y ganador entre servidores. |
 | `Finale` | Cinemática final del servidor y paso al infierno (`ServerStorage.Finale`). |
-| `Gnomes` | El gnomo: tamaños/rarezas, efectos, movimiento por los caminos, vida, se escapa a los 4 min y suelta un talismán. |
+| `Gnomes` | El gnomo: tamaños/rarezas, efectos, sale de la mina del fondo del lobby (nodo 14) y se mueve por los caminos, vida, se escapa a los 4 min y suelta un talismán. Grupos de colisión `Gnome`/`MineGate`: la barrera invisible del fondo (z=−454) no frena a los gnomos. |
 | `Talismans` | Pedestales, llevar/soltar/robar/entregar talismanes, mejoras (atributos `Buff_<tipo>`) e intercambio. |
 
 ## Cliente: `StarterPlayer.StarterPlayerScripts`

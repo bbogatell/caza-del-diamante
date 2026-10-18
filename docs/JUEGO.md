@@ -14,7 +14,7 @@ Después viene una **cinemática final secreta** (el diamante sube, cielo con el
 6. **Extras:** racha diaria de 7 días, ranking «TOP NIVEL», VIP x2 monedas (los IDs de Robux están aún a 0).
 
 ## Gnomos y talismanes
-- **Gnomo:** aparece cada **8–15 min** y corre por los caminos entre parcelas. Tiene alarma, música de persecución, contorno rojo y un contador: **se escapa a los 4 min**. Se le pega con la pala (cada pala hace más daño; suena una moneda en cada golpe).
+- **Gnomo:** aparece cada **8–15 min**, sale de la mina del fondo del lobby y corre por los caminos entre parcelas. Tiene alarma, música de persecución, contorno rojo y un contador: **se escapa a los 4 min**. Se le pega con la pala (cada pala hace más daño; suena una moneda en cada golpe).
 - **4 tamaños de gnomo** = 4 rarezas de talismán: Gnomo (Común), Raro, Épico, **Legendario** (enorme, arcoíris, muchísimas partículas).
 - **Talismán:** al morir el gnomo suelta uno. Se lleva encima de la cabeza hasta tu parcela; **si te pegan se te cae** y otro lo puede coger.
 - **Pedestales:** 8 delante de cada parcela. Un talismán en tu pedestal te da su mejora mientras lo tengas. Otros pueden **robártelo** (mantener la tecla 2,5 s en tu pedestal) y llevárselo; si les pegas lo sueltan.
