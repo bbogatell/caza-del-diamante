@@ -34,6 +34,6 @@
 - `Assets`: diamante y otros.
 
 ## Mapa: `workspace.Map`
-- `Lobby`: estatua del diamante con cartel, tienda, diario, rankings, `PlotFrames` (8 parcelas en 2 filas, delante = +Z), `Bounds` (barreras invisibles).
+- `Lobby` (estilo studs, sin árboles): `Floor` (baldosas con textura de studs, top y=18, huecos en los 8 hoyos y en la escalera al campo), `Props` (barandilla, borde, farolas), estatua del diamante con cartel, tienda, diario, rankings, `PlotFrames` (8 parcelas en 2 filas, delante = +Z), `Bounds` (barreras invisibles). Lo antiguo está guardado en `ServerStorage.LobbyBackup`.
 - `Field`: campo del evento con barrera.
 - `ServerStorage.Finale`: plataforma del cielo y el infierno (con `HellBounds`). `ServerStorage.MapAssets`: modelos del Creator Store (sin scripts).
