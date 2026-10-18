@@ -6,11 +6,14 @@
 | Script | Qué hace |
 |---|---|
 | `Main` (Script) | Punto de entrada: crea los remotes, gestiona la entrada de jugadores, el golpe de pala (cavar), el golpe a otros jugadores (`Hit`), las peticiones (`Request`: tienda, diario, ajustes, Debug), los comandos de chat y el ranking. |
-| `Data` | Perfiles en DataStore `DiamondHunt_Player_v2` (coins, level, streak, passes, settings…; al cargar borra los talismanes antiguos). Los publica como **atributos del jugador** (`Coins`, `Level`, `Settings`…). Ranking `DiamondHunt_Level_v1`. |
-| `Plots` | Las 8 parcelas personales del lobby (asignar, título flotante). **Ya no se cava en ellas** (`hit` devuelve `noDig`); en la fase 5 del gran cambio pasan a ser bases. |
+| `Data` | Perfiles en DataStore `DiamondHunt_Player_v2` (coins, level, streak, passes, `base` (pedestales), `speed` (mejoras), settings…; al cargar borra los talismanes antiguos). Los publica como **atributos del jugador** (`Coins`, `Level`, `Settings`…). Ranking `DiamondHunt_Level_v1`. |
+| `Plots` | Asigna a cada jugador una de las 8 parcelas del lobby (su **base**), el título flotante y el decorado por nivel de pala (`PlotDecor`). Ya no hay terreno ni se cava (`hit` devuelve `noDig`). |
 | `PlotDecor` | Decoración de cada parcela por nivel (30 niveles, `build(plotModel, level)`). |
 | `Shovels` | Crea la herramienta (Tool) de la pala a partir de `ReplicatedStorage.ShovelLook`. |
 | `Lane` | **Carril de 15 parcelas compartidas**: terreno de los hoyos (`Config.PLOTS`), cavar (pala 2N−1 o mejor, monedas `Config.DIG_VALUE`), regenerar (cada `LANE.regenTime` o al cavar el 80 %, con aviso y sacando a los de dentro), textos de los arcos y carteles con la pala. Gancho `Lane.onDig` para los fósiles. |
+| `Fossils` | Fósiles: salen al cavar (`Lane.onDig`), sueltos en `workspace.Fossils` con «Coger», llevar encima de la cabeza (atributos `Carrying`, `CarryWeight`), golpes que los tiran, entrega en la base, evento de fósil raro (uno por servidor, atributo `FossilEvent`) y `rollCreature` (qué bicho sale). |
+| `Bases` | Bases (las parcelas del lobby): suelo y 10 pedestales, fósiles abriéndose (tiempo real, también sin conexión), eclosión, monedas por segundo de los bichos, vender, cartel. Guardado en `p.base.slots`. |
+| `Looks` | Modelos de fósiles y bichos: el final de `ServerStorage.Models.Fosiles/Bichos.<id>` o uno provisional (usa los constructores de `LaneThemes`). |
 | `Event` | El evento: barrera, campo, diamante escondido, recoger el diamante y ganador entre servidores. |
 | `Finale` | Cinemática final del servidor y paso al infierno (`ServerStorage.Finale`). |
 
@@ -22,13 +25,14 @@
 | `DiamondClient.HUD` / `Menus` / `Fx` / `Cinematic` | Interfaz fija, ventanas (tienda, diario, ajustes), efectos de pantalla y cinemática final. |
 | `ShovelFx`, `PlotFx`, `StatueBoard` | Animaciones visuales (piezas que flotan en palas y parcelas, cartel del diamante del lobby). |
 | `LaneFx` | Ambiente de cada parcela al entrar (tinte, niebla, noche), desde `Config.PLOTS[n].sky`. |
+| `BaseFx` | Cuenta atrás encima de los fósiles de las bases, grietas y temblor en el último 10 %. |
 | `DebugLevelKey` | **Solo Studio:** la tecla E sube de nivel para probar. |
 
 ## Compartido: `ReplicatedStorage`
 - `Config`: **casi todos los números del juego**: carril y parcelas (`LANE`, `PLOTS`), palas (`SHOVELS`), monedas por cavar (`DIG_VALUE`), base, fósiles, eventos, velocidad, diario, Robux. Hijos: `Config.Creatures` (los 198 bichos) y `Config.Fossils` (13 rarezas y 60 fósiles).
 - `DigAnim`: animación de cavar (de una animación de Blender, 19 fotogramas), postura al llevar la pala y animación de pegar.
 - `ShovelLook`: modelos de las 30 palas (piezas).
-- `Remotes`: `Swing` (cavar), `Hit` (pegar), `Push` (servidor → cliente), `Request` (peticiones).
+- `Remotes` (avisos nuevos por `Push`: `FossilFound`, `FossilPicked`, `FossilDropped`, `FossilFell`, `FossilDelivered`, `RareFound`, `FossilEvent`, `Hatched`, `Sold`, `RegenWarn`): `Swing` (cavar), `Hit` (pegar), `Push` (servidor → cliente), `Request` (peticiones).
 - `Assets`: diamante y otros.
 
 ## Mapa: `workspace.Map`

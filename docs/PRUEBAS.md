@@ -3,19 +3,22 @@
 ## Comandos de chat (solo en Studio o con la cuenta del dueño)
 | Comando | Qué hace |
 |---|---|
-| `/gnomo [comun\|raro\|epico\|legendario]` | Hace aparecer un gnomo (al azar si no dices cuál). |
-| `/talisman <tipo> [rareza] [cantidad]` | Te da talismanes en tus pedestales. Tipos: `velocidad`, `picada`, `empuje`, `area`, `salto`, `suerte`, `cazagnomos`. Rareza por defecto: legendario. |
-| `/talisman todos [rareza]` | Uno de cada tipo. |
-| `/talisman suelo <tipo> [rareza]` | Lo suelta en el suelo delante de ti. |
-| `/talisman borrar` | Quita todos tus talismanes. |
-| `/empezar` | Abre la barrera del evento ya. |
+| `/fosil <id o nombre> [parcela]` | Te da ese fósil en las manos (p. ej. `/fosil C-III`, `/fosil amonites`). Ids: `C-I`, `C-II`, `C-III`, `C-S1` (★), `C-S2` (★★), igual con `PC`, `R`, `E`, `L`, `M`, `CO`, `S`, `ET`, `D`, `B`, `MU`. La parcela cuenta para los raros que dan bichos de Evento (por defecto 11). |
+| `/fosil <id> base [parcela]` | Lo pone directamente en un pedestal libre de tu base. |
+| `/abrir` | Abre ya todos los fósiles de tu base. |
+| `/evento empezar [minutos]` · `/evento terminar` | Empieza o acaba un evento de fósil raro (uno por servidor, con haz de luz). |
+| `/regenerar <1-15>` | Regenera esa parcela del carril (aviso y te saca del hoyo). |
+| `/pala <1-30>` | Te da esa pala. |
+| `/base borrar` | Vacía tu base. |
+| `/empezar` | Abre la barrera del evento del diamante ya. |
 | `/rayosx` | Muestra dónde está el diamante escondido. |
 
 ## Desde un script (`Request:InvokeServer("Debug", ...)`, solo Studio)
-`"coins", n` · `"level", n` · `"gnome", tier` · `"drop"` · `"talisman", {tipo, rareza}` · `"clearTalismans"` · `"resetDaily"` · `"simpit"` (cava el hoyo entero y compara lo ganado con el precio de la siguiente pala).
+`"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"diamond"`.
 
-- La tecla **E** sube de nivel en Studio (`DebugLevelKey`), salvo si sale un aviso de «pulsa E».
-- Para probar robos, intercambios y peleas: en Studio, pestaña **Prueba**, elige **2 jugadores** y dale a **Iniciar**.
+- La tecla **E** sube de pala en Studio (`DebugLevelKey`), salvo si sale un aviso de «pulsa E».
+- Para probar los golpes y robar fósiles: en Studio, pestaña **Prueba**, elige **2 jugadores** y dale a **Iniciar**.
+- Las parcelas del carril empiezan en z = −520; centro de la parcela N: `Config.plotCenter(n)` (z = −632 − 168·(N−1)). El campo está en z = −3208.
 
 ## Trucos (para Claude con el MCP de Roblox Studio)
 - El `studio_id` cambia en cada sesión: primero `list_roblox_studios`.
@@ -29,3 +32,6 @@
 - No cambies `RightGrip.Part0` de una herramienta: Roblox la suelta y se cae del mundo.
 - Un Highlight `AlwaysOnTop` tapa las partículas que hay delante del modelo.
 - El Bloom del juego quema de blanco los Neon claros y el `Fire` de Roblox: usa partículas y colores menos intensos.
+- **Edit cachea los `require`:** tras editar un módulo, `require` desde `execute_luau` en Edit devuelve la versión vieja. Para probar en Edit, clona el módulo (y los que usa) o prueba en Play.
+- Para rehacer una parcela del carril: `require(game.ServerStorage.LaneKit).buildPlot(n)` (en Edit; con clones si has cambiado `LaneKit`/`LaneThemes`).
+- En el chat, la primera vez puede no coger el foco: si el comando no hace nada, repítelo.
