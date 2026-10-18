@@ -13,6 +13,7 @@
 - [ ] Gnomos/talismanes con **2 jugadores**: empuje al pegar, robo de pedestales, intercambio.
 - [ ] Cavar hasta el fondo en niveles altos y ver el aviso de comprar la siguiente pala.
 - [ ] Ajustes en móvil (barra de volumen con el dedo).
+- [ ] Montañas de bloques (`workspace.Mountains`): rendimiento en móvil y que desaparezcan bien en la cinemática final / paso al infierno.
 
 ## Ideas / mejoras
 - [ ] Modelos 3D bonitos para los talismanes (sustituir `ReplicatedStorage.TalismanLook`).
