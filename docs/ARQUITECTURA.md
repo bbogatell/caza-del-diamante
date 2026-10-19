@@ -21,7 +21,7 @@
 ## Cliente: `StarterPlayer.StarterPlayerScripts`
 | Script | Qué hace |
 |---|---|
-| `DiamondClient.Main` | Entrada del cliente: UI, la pala (solo cava), respuestas a los avisos del servidor, música y el **movimiento** (siempre corres a tu velocidad, animación de correr a ritmo fijo y **sin inercia**: se corta cualquier velocidad que añadan los choques). |
+| `DiamondClient.Main` | Entrada del cliente: UI, la pala (solo cava), respuestas a los avisos del servidor, música y el **movimiento** (siempre corres a tu velocidad, animación de correr a ritmo fijo y **sin inercia**: la velocidad horizontal es siempre la dirección que pulsas × tu velocidad, así que arranca y para en seco y los choques no te lanzan). |
 | `DiamondClient.UIKit` | Componentes de UI, **lista de sonidos** (`UI.SOUNDS`) e iconos, grupos de sonido (música/efectos). |
 | `DiamondClient.HUD` / `Menus` / `Fx` / `Cinematic` | Interfaz fija, ventanas, efectos de pantalla y cinemática final. La **tienda** (`Menus`): cabecera, categorías a la izquierda (Palas, Velocidad, Objetos, VIP, Monedas), artículo destacado y cuadrícula de tarjetas. En Studio, el atributo del jugador `DebugOpenMenu = "Shop:objetos"` abre una ventana. |
 | `ShovelFx`, `PlotFx`, `StatueBoard` | Animaciones visuales (piezas que flotan en palas y parcelas, cartel del diamante del lobby). |
