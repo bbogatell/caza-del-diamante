@@ -42,4 +42,7 @@
 - Para rehacer una parcela del carril: `require(game.ServerStorage.LaneKit).buildPlot(n)` (en Edit; con clones si has cambiado `LaneKit`/`LaneThemes`).
 - En el chat, la primera vez puede no coger el foco: si el comando no hace nada, repítelo.
 - Si la pala cuelga de la mano en vez de ir cogida con las dos: mira si hay más de una `RightGrip` en `RightHand` (pasa si al jugador se le da la pala dos veces).
+- Los materiales de terreno válidos son pocos (Grass, Ground, Mud, Sand, Sandstone, Rock, Slate, Basalt, Ice, Glacier, Snow, Salt, Limestone, Cobblestone, Brick, Concrete, Pavement, Asphalt, CrackedLava, LeafyGrass, WoodPlanks): `Granite`, `Marble`, etc. son de piezas y en el terreno dan «Invalid terrain material».
+- Con StreamingEnabled el cliente no tiene las piezas lejanas: para leer algo de una parcela lejana desde una prueba, hazlo en el `Server` o teletranspórtate antes. Tras un teletransporte largo espera 2-3 s antes de pedir algo al servidor que dependa de la posición.
+- El módulo `Event` no se puede leer en Play (se esconde al arrancar); el diamante se recoge con el `ProximityPrompt` de `workspace.HiddenDiamond` (`InputHoldBegin`/`InputHoldEnd`).
 - La tienda se puede abrir desde un script de prueba con `LocalPlayer:SetAttribute("DebugOpenMenu", "Shop:objetos")` (pestañas: palas, velocidad, objetos, vip, monedas), porque los clics simulados del MCP no la abren.

@@ -18,6 +18,7 @@
 - [ ] Cuenta atrás, grietas y temblor de los fósiles vistos en pantalla.
 - [ ] Rendimiento del carril con StreamingEnabled en móvil.
 - [ ] Ajustes en móvil (barra de volumen con el dedo).
+- [ ] Probar la progresión jugando de verdad (sin trucos): el ritmo de las primeras palas (la 2 cuesta 2.200 y un bicho común da 3 💰/s).
 - [ ] Montañas de bloques (`workspace.Mountains`): rendimiento en móvil y que desaparezcan bien en la cinemática final / paso al infierno.
 
 ## Ideas / mejoras

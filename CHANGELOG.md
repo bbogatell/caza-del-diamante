@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · seguo970 (Claude) · Prueba de la progresión entera y arreglos
+**Qué:** se ha jugado la progresión de principio a fin (jugador nuevo → cavar → fósil → base → bicho → palas 1-30 por las 15 parcelas → evento de fósil raro → evento del diamante → final). Arreglos:
+- **Parcela 13 (Grieta Dimensional): no se podía cavar.** Usaba `Granite`, que no es un material de terreno de Roblox: el hoyo salía relleno de hierba por debajo de la capa de asfalto y cada palada daba error en el servidor (sin tierra ni fósiles). Ahora es `Brick` en morado.
+- **El haz de luz del fósil raro** no se veía de lejos (StreamingEnabled): ahora es un modelo persistente y se ve desde el lobby.
+- Con la base al máximo, el aviso de «base llena» ya no dice «agrándala».
+**Dónde:** `Config.PLOTS[13]` (`terrain`/`veins` = `Brick`) y `Config.TERRAIN_COLORS` (quitado `Granite`, `Brick` morado). `DiamondServer.Fossils` (`buryEventFossil`: modelo `RareFossilBeam` con `ModelStreamingMode = Persistent` y la pieza `Beam` dentro). `DiamondServer.Bases.place` (mensaje de base llena).
+**Probado:** en Play, todo con un jugador: 60 paladas en la parcela 1 (+151 de tierra, 1 fósil), coger con E, «Superficie», dejarlo en la base, se abre en 15 s y da 3 💰/s; comprar las 30 palas y cavar en cada parcela con su pala mínima (con la anterior «demasiado duro»); comprobación automática de las 15 parcelas, los 60 fósiles y los bichos que salen (0 errores); Máquina de Fósiles (lejos, sin tierra, con fósil en las manos), soltar fósil; agrandar la base 2 veces y dejar un fósil al fondo; base llena; vender; cinta (+2 por paso, mejora y rastro); regenerar con el jugador dentro; evento de fósil raro (sale ★, da un bicho Eterno); `/empezar`, cavar hasta el diamante, recogerlo y paso al infierno. Tras los arreglos: la parcela 13 da tierra y sin errores en la consola. **Sin probar:** lo de 2 jugadores (bate, trampa, hielo, robar fósiles) y el guardado real.
+**Notas:** el terreno de los hoyos lo pone el servidor al arrancar, así que en Edit la parcela 13 se sigue viendo con hierba (da igual).
+
 ## 2026-10-19 · seguo970 (Claude) · Lobby pulido: suelo, plaza, barandilla y simetría
 **Qué:** repaso del lobby (antes del portón de las parcelas), sin cambiar el estilo de studs:
 - **Suelo sin huecos:** 576 rendijas (detrás de la fila de bases de atrás y a los lados de la de delante) por donde se veía el terreno realista, tapadas con hierba. 51 baldosas de un verde más claro que no pegaban con sus vecinas, igualadas al tono de alrededor (incluido el parche claro que quedaba delante de la plaza, resto de la escalera antigua al campo).
