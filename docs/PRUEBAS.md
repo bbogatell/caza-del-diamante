@@ -10,6 +10,7 @@
 | `/regenerar <1-15>` | Regenera esa parcela del carril (aviso y te saca del hoyo). |
 | `/pala <1-30>` | Te da esa pala. |
 | `/base borrar` | Vacía tu base. |
+| `/objetos` | Te da la alfombra mágica, 10 trampas y 10 poderes de hielo. |
 | `/dinero <cantidad>` | Te da monedas: `/dinero 5000`, `/dinero 2.5m`, `/dinero 1b`, `/dinero 3t`. |
 | `/empezar` | Abre la barrera del evento del diamante ya. |
 | `/rayosx` | Muestra dónde está el diamante escondido. |
@@ -37,3 +38,4 @@
 - Para rehacer una parcela del carril: `require(game.ServerStorage.LaneKit).buildPlot(n)` (en Edit; con clones si has cambiado `LaneKit`/`LaneThemes`).
 - En el chat, la primera vez puede no coger el foco: si el comando no hace nada, repítelo.
 - Si la pala cuelga de la mano en vez de ir cogida con las dos: mira si hay más de una `RightGrip` en `RightHand` (pasa si al jugador se le da la pala dos veces).
+- La tienda se puede abrir desde un script de prueba con `LocalPlayer:SetAttribute("DebugOpenMenu", "Shop:objetos")` (pestañas: palas, velocidad, objetos, vip, monedas), porque los clics simulados del MCP no la abren.

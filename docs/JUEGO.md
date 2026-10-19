@@ -18,6 +18,12 @@ Después viene una **cinemática final secreta** (el diamante sube, cielo con el
 10. **La pala importa en el evento:** cuanto mejor sea, más grande y más rápido cavas en el campo del diamante.
 11. **Extras:** racha diaria de 7 días, ranking «TOP NIVEL», VIP x2 monedas (los IDs de Robux están aún a 0).
 
+## Objetos
+- **Bate** (todos): se noquea con el bate, no con la pala; a quien lleva un fósil le quita vida hasta que lo suelta.
+- **Alfombra Mágica** (Robux): vuelas por el mapa (hay un techo invisible).
+- **Trampas de Oso** (Robux, se gastan): quien la pise se queda atrapado 5 s.
+- **Poder de Hielo** (Robux, se gasta): congela 5 s al jugador más cercano.
+
 ## Otros
 - Se puede pegar a otros jugadores en el lobby y en el carril, no en el campo del diamante.
 - Barreras invisibles en el borde del mapa y en el infierno.

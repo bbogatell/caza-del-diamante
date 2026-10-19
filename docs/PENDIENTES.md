@@ -4,7 +4,7 @@
 
 ## Por hacer antes de lanzar
 - [ ] Confirmar fecha y hora definitivas del evento (`Config.EVENT_TIME`).
-- [ ] Crear los gamepasses y productos de Robux y poner sus IDs en `Config.PASSES` / `Config.PRODUCTS` (ahora están a 0): x2 Monedas, Correr VIP, +1 Correr, los 4 «Abrir fósil ya» (`OpenNow1-4`) y los packs de monedas.
+- [ ] Crear los gamepasses y productos de Robux y poner sus IDs en `Config.PASSES` / `Config.PRODUCTS` (ahora están a 0): x2 Monedas, Correr VIP, +1 Correr, los 4 «Abrir fósil ya» (`OpenNow1-4`), la Alfombra Mágica, las trampas (`Traps3/10`), el hielo (`Freeze3/10`) y los packs de monedas.
 - [ ] Poner **8 jugadores por servidor** en Game Settings → Places (no se puede desde un script).
 - [ ] Revisar la economía jugando (precios de palas, `DIG_VALUE`, 6 % de fósiles, vida del fósil 60, venta ×60 s).
 - [ ] Revisar las normas de Roblox sobre el premio en Robux y redactar las condiciones del premio.
@@ -12,7 +12,7 @@
 - [ ] Borrar `StarterPlayerScripts.DebugLevelKey` (o dejarlo, solo funciona en Studio).
 
 ## Sin probar
-- [ ] Con **2 jugadores**: pegar a quien lleva un fósil hasta que se le cae y cogerlo.
+- [ ] Con **2 jugadores**: el bate (empuje y tirar el fósil), la trampa y el hielo sobre otro jugador.
 - [ ] El evento del diamante y la cinemática final con el campo en su sitio nuevo (z −3208).
 - [ ] Guardado real de la base y la velocidad (DataStore apagado en Studio) y que los fósiles se abran estando desconectado.
 - [ ] Cuenta atrás, grietas y temblor de los fósiles vistos en pantalla.
@@ -31,3 +31,4 @@
 - [ ] **30 palas** → `ServerStorage.Models.Palas.L<n>` (`L1`…`L30`). Ahora: los diseños de `ShovelLook` (por nivel) con los nombres nuevos; falta adaptarlos a los diseños de `PALAS.md`.
 - [ ] **Decorado de las 15 parcelas**: piezas sencillas de `ServerStorage.LaneThemes` (dodo, esqueletos, volcán, puente de mosasaurio, templo, islas, T-Rex Galáctico…). Mejorable con modelos más detallados, sobre todo las estatuas.
 - [ ] Bases: plataforma sencilla igual para todos (borde, postes y puerta); mejorable.
+- [ ] Objetos: modelos sencillos (bate, trampa, orbe de hielo, alfombra) y emojis en la tienda; mejorables con modelos e iconos propios.
