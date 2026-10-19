@@ -2,6 +2,36 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · Estelas solo decorativas y sin orden; icono que bota sobre la Tienda de Estelas
+**Qué** (lo pidió bbogatell):
+- **Las estelas ya no dan ningún bonus:** son solo decorativas. `Config.perStep` ya no usa la estela, así que la cinta da lo mismo con o sin estela.
+- **Se puede comprar cualquiera sin las anteriores**, por ejemplo la 16 directamente. Ya no hay candados de «Anterior»; cada tarjeta dice lo vistosa que es (Sencilla, Con efectos, Brillante, Épica, Legendaria, ¡EXAGERADA!) en vez del multiplicador.
+- **La Tienda de Estelas se ve más:**
+  - encima del puesto hay un icono grande ✨ «¡ESTELAS!» que bota, con un brillo que gira, el ✨ que late y chispas;
+  - el puesto es persistente (StreamingEnabled), así que se ve desde todo el lobby.
+
+**Dónde:**
+- `Config`:
+  - `ownsTrail(t, n)` nuevo;
+  - `bestTrail` lo usa;
+  - `perStep` sin estela;
+  - comentario de `TRAINING.trails` (el campo `mult` queda sin usar).
+- `DiamondServer.Training`: `buyTrail(n)` sin orden (guarda en `p.training.owned`), y el bucle de la cinta llama a `perStep(tread, 0, mult)`.
+- `DiamondServer.Data`: atributos `TrailsOwned` y `TrailEquip` (quitados `Trail`, `TrailCash` y `TrailsR`).
+- `DiamondClient.Menus` (ventana `Trails`).
+- `DiamondClient.Main` (animación del icono).
+- `Workspace.Map.Lobby.TrailShop.FloatIcon`.
+
+**Guardados:** los que compraron estelas antes siguen teniendo las 1..`trail` (las de dinero compradas en orden) más las de Robux; las nuevas compras van a `owned`.
+
+**Probado:** en Play:
+- comprar la 16 sin dinero: «Te faltan…»;
+- comprar la 8 directamente con 1T: la tienes y la llevas puesta;
+- `perStep` con estela = sin estela (2);
+- la ventana sin candados (captura);
+- el icono botando sobre el puesto visto desde la plaza (captura);
+- sin errores en la consola.
+
 ## 2026-10-19 · bbogatell (Claude) · 20 estelas y Tienda de Estelas física, monedas más grandes, sin aviso al cavar en tu base
 **Qué** (lo pidió bbogatell):
 - **20 estelas** (antes 11 «rastros»), cada vez más exageradas:
