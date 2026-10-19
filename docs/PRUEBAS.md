@@ -12,6 +12,7 @@
 | `/base borrar` | Vacía tu base. |
 | `/objetos` | Te da la alfombra mágica, 10 trampas y 10 poderes de hielo. |
 | `/velocidad <cantidad>` | Te da velocidad (la estadística): `/velocidad 100k`, `/velocidad 2.5m`. |
+| `/tierra <cantidad>` | Te da tierra para la máquina: `/tierra 5000`, `/tierra 2m`. |
 | `/dinero <cantidad>` | Te da monedas: `/dinero 5000`, `/dinero 2.5m`, `/dinero 1b`, `/dinero 3t`. |
 | `/empezar` | Abre la barrera del evento del diamante ya. |
 | `/rayosx` | Muestra dónde está el diamante escondido. |
