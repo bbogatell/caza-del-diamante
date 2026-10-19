@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · seguo970 (Claude) · Bases pegadas a los caminitos laterales, con sitio para crecer
+**Qué:** las 8 bases tienen ahora **la entrada pegada al caminito lateral** que sale del camino central: la fila de delante al de z −276 y la de atrás al de z −368. Detrás de cada base queda hierba libre (34 studs en la fila de delante y 30 en la de atrás) para que en el futuro la base se pueda **agrandar un par de veces hacia dentro**, lejos del camino. La **cinta de correr** ya no está delante de la base (quedaría encima del camino): va **dentro**, en la esquina de la entrada, con su cartel mirando al camino, y ahí no se pueden dejar fósiles.
+**Dónde:** `Lobby.PlotFrames` movidas en Z (+5 la fila de delante → centro z −305; +29 la de atrás → centro z −397; atributo `MovedToPaths`). Suelo: 96 baldosas de hierba nuevas tapando los hoyos antiguos que quedaban a la vista, 14 `PitLip` y unas flores de `Props.Flowers` quitadas (copia en `ServerStorage.LobbyBasesMoveBackup`). `Config.BASE.tread` (posición y zona de la cinta dentro de la base), `Training` (`placement`), `Bases.place` (no deja fósiles encima de la cinta).
+**Probado:** en Play: la cinta sale dentro de la base (x +16, z +13), subirse funciona y suma velocidad; dejar un fósil encima de la cinta da «Ahí está tu cinta de correr…» y en otro sitio se deja bien. Captura desde arriba. Sin errores.
+**Notas:** agrandar la base todavía **no existe**: solo se ha dejado el sitio. Si se hace, la base debe crecer hacia −Z (lejos de la entrada) y hay que tener en cuenta `Config.BASE.half` y la valla `Fence`. Los fósiles ya guardados se dibujan relativos al centro de la base, así que se mueven con ella.
+
 ## 2026-10-19 · seguo970 (Claude) · Bases con vallas de madera como en «Roba un huevo»
 **Qué:** las 8 bases del lobby ya no tienen borde blanco, postes morados con farolillos ni puerta amarilla: ahora las rodea **una valla de madera de postes y dos travesaños**, como las granjas de «Roba un huevo», con textura de studs y una **entrada de 12 studs delante** (donde estaba la puerta). La plataforma verde y todo lo demás de la base sigue igual.
 **Dónde:** `workspace.Map.Lobby.PlotFrames.PlotN` → nuevo `Fence` (`FencePost` 1,4×5×1,4 cada 6 studs y `FenceRail` a 1,6 y 3,5 de altura, 1 stud dentro del borde). Quitados `Border`, `Post`, `Lamp`, `GatePost` y `GateTop`; copia en `ServerStorage.PlotFramesBackup`. Sin cambios en scripts (solo usan `Platform`, `Spot`, `Floor` y `TitleAnchor`).
