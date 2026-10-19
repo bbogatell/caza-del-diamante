@@ -2,6 +2,58 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · Ronda de cambios jugando: tienda, x2 Velocidad, carteles, modo lento, luz, inercia y Máquina de Fósiles
+**Qué** (lo pidió bbogatell mientras jugaba):
+- **Tienda:**
+  - Fuera la tarjeta del Bate (todos lo tienen desde el principio).
+  - Los packs de monedas cubren todo el juego: 10K (25 R$), 1M (49), 100M (99), 10B (199), 1T (399), 100T (799) y 10Q (1499). Al final las últimas palas cuestan 15T-68T y las mejores cintas 1Q-15Q.
+- **Botón «x2 Velocidad»:** ya no abre la tienda. Compra directamente el siguiente multiplicador y luego ofrece x4, x8, x16…
+- **Cartel de la cinta:** el botón de dinero se pone verde si te llega y rojo si no. Se actualiza solo con tus monedas.
+- **Cartel «Agrandar base»:** ahora está FUERA de la base, al otro lado del caminito, delante de la mitad izquierda (la cinta está delante de la derecha). Tiene un botón físico que se pulsa con el ratón (verde o rojo igual que el de la cinta). Ya no hay aviso de E, y se ha quitado la zona de la base reservada para el cartel.
+- **Modo lento:** botón pequeño a la izquierda (debajo de «x2 Velocidad»), ON/OFF. En ON corres a 16, la velocidad de empezar, aunque hayas entrenado. No se guarda: al entrar siempre está en OFF.
+- **Luz propia** (PointLight cálida) cuando estás dentro de un hoyo, para verte en el fondo.
+- **«Soltar fósil» y «Salir del hoyo»** ya no se tapan: si salen los dos, «Soltar fósil» sube.
+- **Un poco de inercia** al correr: la velocidad tarda unos 0,2 s en llegar al máximo y en pararse (antes era de golpe).
+- **Ventana de la Máquina de Fósiles:** las rarezas van en grupos con separadores sutiles (Básicos, Avanzados, «✨ Los mejores ✨» con un borde dorado suave que late, y Especiales). Así no parecen todas igual de buenas.
+- **Máquina de Fósiles nueva** (modelo hecho a mano con studs, 87 piezas). Tiene:
+  - cúpula de cristal llena de huevos de colores de rareza, con brillitos;
+  - pantalla «TIERRA ➜ FÓSIL», botones, manómetro y palanca;
+  - tolva de tierra con tubería a la izquierda;
+  - engranaje y chimenea con humo a la derecha;
+  - bandeja de salida con un huevo;
+  - columnas con focos.
+
+  Mantiene `Chute`, `PromptPart` y `MachinePrompt`, que es lo que usa el código. La antigua está en `ServerStorage.FossilMachineBackup`. Busqué en la biblioteca, pero los modelos gratis eran máquinas de gacha de otros juegos con scripts y otro estilo, así que no usé ninguno.
+
+**Dónde:**
+- `Config.PRODUCTS` (`Coins10k`…`Coins10q`; quitados `Coins5k`/`50k`/`500k`) y `Config.BASE.upgradeSign` = `{x = -12, z = 39}`.
+- `DiamondClient.Menus` (sin `shop.cards.Bat`; `MACHINE_GROUPS`).
+- `DiamondClient.HUD` (botón `SlowMode`).
+- `DiamondClient.Main`:
+  - `promoBtn` → `BuyRobux SpeedX…`;
+  - `wantSpeed` con `SlowMode`;
+  - `DigLight` e `INERTIA_RATE` = 12 en el Heartbeat;
+  - posición de `DropFossil`;
+  - el clic de carteles acepta `BaseButton`;
+  - bucle que colorea los botones con la etiqueta `PriceButton`.
+- `DiamondServer.Bases.upgradeSign` (botón `BuyBase` con `BaseButton`/`Owner`/`Price`).
+- `DiamondServer.Training.sign` (`Owner`/`Price` en `BuyCash`).
+- `Workspace.Map.Lobby.FossilMachine`.
+
+**Probado:** en Play.
+- Botones de los carteles rojos con 0 monedas y verdes tras `/dinero 30000`.
+- Clic en «Agrandar base»: pasa a Base grande y cobra 25K.
+- Clic en «x2 Velocidad»: `SpeedMult` 0→1 y el botón pasa a «x4 · 9 R$».
+- Modo lento: con 1M de velocidad, WalkSpeed 16 en ON y 119 en OFF.
+- Inercia medida: arranca de 0 a 119 en ~0,1 s con la versión de 22 y luego la bajé a 12 (~0,2 s; esta última no la medí).
+- Dentro de un hoyo: `DigLight` encendida y «Soltar fósil» encima de «Salir del hoyo» (captura).
+- Tienda: Monedas y Objetos (sin Bate). Ventana de la máquina con los grupos (capturas).
+- Sin errores en la consola.
+
+**Notas:**
+- Los IDs de los packs de monedas nuevos siguen a 0 (están en PENDIENTES, como los demás productos).
+- Para seguo970: el cartel de agrandar base ya no está dentro de la base.
+
 ## 2026-10-19 · bbogatell (Claude) · Cinta delante de la base, al otro lado del caminito, y «Base enorme» de 20 studs
 **Qué:**
 - La cinta de correr cambia de sitio (lo pidió bbogatell): ahora va en la hierba al otro lado del caminito, delante de la mitad derecha de la base vista desde el lobby. El corredor mira a su base y el cartel de mejora (con sus botones físicos) está a la derecha de la cinta, mirando al lobby.
