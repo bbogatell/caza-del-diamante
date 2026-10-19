@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · seguo970 (Claude) · Menos fósiles al cavar, máquina más cara, soltar el fósil e icono de tierra
+**Qué:**
+- **Menos fósiles al cavar:** 2 % por palada (antes 6 %), más o menos uno cada 50 paladas.
+- **Máquina de Fósiles mucho más cara**, para que lo bueno sea cavar: cada rareza cuesta unas 5 veces la tierra que sacas, de media, hasta que te sale cavando. Común 1.000 · Poco común 4.000 · Raro 7.500 · Épico 15K · Legendario 30K · Mítico 60K · Cósmico 200K · Secreto 500K · Eterno 2M · Divino 7,5M · Brainrot 150K · Mutante 1,5M.
+- **Soltar el fósil:** mientras llevas uno sale el botón «⬇️ Soltar fósil (G)» abajo en el centro (también con la tecla G). Cae delante de ti y cualquiera lo puede coger.
+- **Icono nuevo de la tierra:** un montón de tierra marrón con studs, dibujado con piezas de interfaz (sin imagen). Sale en el HUD, en la máquina (cabecera y precios) y en lo que vuela al contador al cavar. El texto flotante ahora dice «+N tierra».
+**Dónde:** `Config.FOSSIL.chance` y `Config.DIRT.prices`; `DiamondServer.Main` (`handlers.DropFossil`, usa `Fossils.drop`); cliente `Main` (botón y tecla G, texto del aviso al coger un fósil), `UIKit` (`UI.dirtIcon`), `HUD`, `Menus` (máquina), `Fx.flyIcons` (icono `"dirt"`).
+**Probado:** en Play: botón oculto sin fósil y visible con fósil; soltar deja el fósil en el suelo y vuelve a esconder el botón; soltar sin fósil da «No llevas ningún fósil»; captura de la máquina con los precios y del HUD. Sin errores. No probado: la tecla G a mano y en móvil.
+**Notas:** el cálculo de los precios supone unos 2,7 bloques por palada con la pala 1, escalados por el radio de la pala mínima de cada parcela. Se intentó usar la imagen «Dirt Pile» de la Creator Store, pero solo se puede cargar con su id de imagen, que no se pudo sacar.
+
 ## 2026-10-19 · seguo970 (Claude) · Vuelven los fósiles al cavar en las parcelas
 **Qué:** al cavar en las parcelas del carril vuelve a poder salir un fósil (6 % por palada que saca tierra), con la rareza según la tabla de cada parcela y luego I/II/III, como antes. Sale suelto en el suelo con el aviso «¡FÓSIL …! pulsa E para cogerlo». **La tierra se sigue dando** en cada palada y la Máquina de Fósiles sigue igual: ahora son dos maneras de conseguir fósiles.
 **Dónde:** `DiamondServer.Fossils` → `Fossils.onDig` (vuelve a usar `Fossils.roll(n)` y `Config.FOSSIL.chance`).

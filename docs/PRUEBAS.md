@@ -18,7 +18,7 @@
 | `/rayosx` | Muestra dónde está el diamante escondido. |
 
 ## Desde un script (`Request:InvokeServer("Debug", ...)`, solo Studio)
-`"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `Request:InvokeServer("PlaceFossil")` deja el que llevas · `"UpgradeTread", "cash"|"robux"` · `"BuyTrail"` · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"diamond"`.
+`"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `Request:InvokeServer("PlaceFossil")` deja el que llevas · `Request:InvokeServer("DropFossil")` lo suelta en el suelo (como el botón o la G) · `"UpgradeTread", "cash"|"robux"` · `"BuyTrail"` · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"diamond"`.
 
 - La tecla **E** sube de pala en Studio (`DebugLevelKey`), salvo si sale un aviso de «pulsa E».
 - Para probar los golpes y robar fósiles: en Studio, pestaña **Prueba**, elige **2 jugadores** y dale a **Iniciar**.

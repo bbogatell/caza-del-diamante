@@ -6,7 +6,7 @@
 - [ ] Confirmar fecha y hora definitivas del evento (`Config.EVENT_TIME`).
 - [ ] Crear los gamepasses y productos de Robux y poner sus IDs en `Config.PASSES` / `Config.PRODUCTS` (ahora están a 0): x2 Monedas, los 4 «Abrir fósil ya» (`OpenNow1-4`), la Alfombra Mágica, las trampas (`Traps3/10`), el hielo (`Freeze3/10`) y los packs de monedas; los de la velocidad: mejoras de cinta `Tread2-11` (`TRAINING.treadmills[n].robuxId`) y multiplicadores `SpeedX2-128` (`TRAINING.mults[n].id`).
 - [ ] Poner **8 jugadores por servidor** en Game Settings → Places (no se puede desde un script).
-- [ ] Revisar la economía jugando (precios de palas, `DIG_VALUE`, 6 % de fósiles, vida del fósil 60, venta ×60 s).
+- [ ] Revisar la economía jugando (precios de palas, tierra por bloque `DIRT.perVoxel`, precios de la máquina `DIRT.prices`, 2 % de fósiles, vida del fósil 60, venta ×60 s).
 - [ ] Revisar las normas de Roblox sobre el premio en Robux y redactar las condiciones del premio.
 - [ ] Subir los paquetes de monedas con Robux (5K/50K/500K se han quedado cortos con los precios nuevos).
 - [ ] Borrar `StarterPlayerScripts.DebugLevelKey` (o dejarlo, solo funciona en Studio).
