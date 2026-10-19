@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · seguo970 (Claude) · Lobby pulido: suelo, plaza, barandilla y simetría
+**Qué:** repaso del lobby (antes del portón de las parcelas), sin cambiar el estilo de studs:
+- **Suelo sin huecos:** 576 rendijas (detrás de la fila de bases de atrás y a los lados de la de delante) por donde se veía el terreno realista, tapadas con hierba. 51 baldosas de un verde más claro que no pegaban con sus vecinas, igualadas al tono de alrededor (incluido el parche claro que quedaba delante de la plaza, resto de la escalera antigua al campo).
+- **Plaza:** el borde delantero ya no tiene la abertura de la escalera antigua (los 2 trozos de camino que salían por ahí son ahora hierba). Los 4 bordes quedan pegados a la plaza (antes había una franja de hierba de 2 studs en 3 lados y en el otro no). El borde de atrás tiene ahora una abertura del ancho del camino central, para que el camino entre limpio en la plaza en vez de pasar por encima del borde.
+- **Barandilla de delante:** rojo y blanco alternos de punta a punta (en el centro había 10 tramos de otro tono y dos blancos seguidos).
+- **Fuera los bordes negros** de los hoyos antiguos (18 `PitLip`), 6 de ellos asomaban junto a las bases.
+- **Simetría:** jardinera del borde este a la misma altura que la del oeste; pinos de los lados en espejo (añadido el del este que faltaba a z −330) y bajados al suelo los 3 que flotaban; matas de flores en espejo (73 copiadas al lado que les faltaba, 11 quitadas porque al otro lado no había sitio).
+**Dónde:** `workspace.Map.Lobby.Floor` (Grass, Path, PlazaBorder, PitLip), `Lobby.Props.Rail`, `Lobby.Props.Flowers` (Leaf/Bloom/Center, Planter, Pine). Copia de lo quitado o cambiado en `ServerStorage.LobbyPolishBackup`. Sin cambios en scripts.
+**Probado:** comprobación automática del suelo (0 huecos alrededor de la plaza), todas las matas apoyadas en el suelo y ninguna sobre camino o plaza; capturas desde arriba y del portón; en Play: se sale de la plaza hacia las bases por la abertura y se pasa el borde lateral hasta la tienda. Sin errores.
+**Notas:** quedan asimetrías **a propósito**: la Máquina de Fósiles (solo a la derecha del camino), la cascada (pared este) y los colores de los rankings (azul / amarillo).
+
 ## 2026-10-19 · seguo970 (Claude) · Agrandar la base
 **Qué:** la base se puede **agrandar dos veces con monedas**, en un cartel verde «Agrandar base» dentro de la base (en la esquina de la entrada, enfrente de la cinta de correr). Crece **hacia atrás**, lejos de la entrada, y la valla se rehace a la nueva medida:
 - Normal: 50×50, 12 sitios.
