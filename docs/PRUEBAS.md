@@ -11,12 +11,13 @@
 | `/pala <1-30>` | Te da esa pala. |
 | `/base borrar` | Vacía tu base. |
 | `/objetos` | Te da la alfombra mágica, 10 trampas y 10 poderes de hielo. |
+| `/velocidad <cantidad>` | Te da velocidad (la estadística): `/velocidad 100k`, `/velocidad 2.5m`. |
 | `/dinero <cantidad>` | Te da monedas: `/dinero 5000`, `/dinero 2.5m`, `/dinero 1b`, `/dinero 3t`. |
 | `/empezar` | Abre la barrera del evento del diamante ya. |
 | `/rayosx` | Muestra dónde está el diamante escondido. |
 
 ## Desde un script (`Request:InvokeServer("Debug", ...)`, solo Studio)
-`"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `Request:InvokeServer("PlaceFossil")` deja el que llevas · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"diamond"`.
+`"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `Request:InvokeServer("PlaceFossil")` deja el que llevas · `"UpgradeTread", "cash"|"robux"` · `"BuyTrail"` · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"diamond"`.
 
 - La tecla **E** sube de pala en Studio (`DebugLevelKey`), salvo si sale un aviso de «pulsa E».
 - Para probar los golpes y robar fósiles: en Studio, pestaña **Prueba**, elige **2 jugadores** y dale a **Iniciar**.

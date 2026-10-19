@@ -4,7 +4,7 @@
 
 ## Por hacer antes de lanzar
 - [ ] Confirmar fecha y hora definitivas del evento (`Config.EVENT_TIME`).
-- [ ] Crear los gamepasses y productos de Robux y poner sus IDs en `Config.PASSES` / `Config.PRODUCTS` (ahora están a 0): x2 Monedas, Correr VIP, +1 Correr, los 4 «Abrir fósil ya» (`OpenNow1-4`), la Alfombra Mágica, las trampas (`Traps3/10`), el hielo (`Freeze3/10`) y los packs de monedas.
+- [ ] Crear los gamepasses y productos de Robux y poner sus IDs en `Config.PASSES` / `Config.PRODUCTS` (ahora están a 0): x2 Monedas, los 4 «Abrir fósil ya» (`OpenNow1-4`), la Alfombra Mágica, las trampas (`Traps3/10`), el hielo (`Freeze3/10`) y los packs de monedas; los de la velocidad: mejoras de cinta `Tread2-11` (`TRAINING.treadmills[n].robuxId`) y multiplicadores `SpeedX2-128` (`TRAINING.mults[n].id`).
 - [ ] Poner **8 jugadores por servidor** en Game Settings → Places (no se puede desde un script).
 - [ ] Revisar la economía jugando (precios de palas, `DIG_VALUE`, 6 % de fósiles, vida del fósil 60, venta ×60 s).
 - [ ] Revisar las normas de Roblox sobre el premio en Robux y redactar las condiciones del premio.
@@ -32,3 +32,4 @@
 - [ ] **Decorado de las 15 parcelas**: piezas sencillas de `ServerStorage.LaneThemes` (dodo, esqueletos, volcán, puente de mosasaurio, templo, islas, T-Rex Galáctico…). Mejorable con modelos más detallados, sobre todo las estatuas.
 - [ ] Bases: plataforma sencilla igual para todos (borde, postes y puerta); mejorable.
 - [ ] Objetos: modelos sencillos (bate, trampa, orbe de hielo, alfombra) y emojis en la tienda; mejorables con modelos e iconos propios.
+- [ ] Cintas de correr: modelos sencillos por nivel (colores, neón, alas, cuernos, halo); mejorables. Faltan las pociones de velocidad y los packs de velocidad de «Roba un huevo» (no pedidos).

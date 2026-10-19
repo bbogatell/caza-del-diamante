@@ -15,18 +15,20 @@
 | `Bases` | Bases (las 8 parcelas del lobby, 50×50, iguales): el jugador deja el fósil donde quiera del suelo (`place`), se abre con el tiempo (también sin conexión), «abrir ya» con Robux (`requestOpen`/`grantOpen`), eclosión, monedas por segundo, vender, cartel. Guardado en `p.base.slots` con la posición `ox`/`oz`. |
 | `Looks` | Modelos de fósiles y bichos: el final de `ServerStorage.Models.Fosiles/Bichos.<id>` o uno provisional (usa los constructores de `LaneThemes`). |
 | `Items` | Objetos de la mochila: **Bate** (gratis, golpea al de delante; es lo que noquea, la pala ya no pega), **Alfombra Mágica** (pase; el modelo bajo los pies al equiparla), **Trampas de Oso** y **Poder de Hielo** (se gastan, `p.items`). `Items.stun` deja quieto a un jugador unos segundos. |
+| `Training` | **Velocidad entrenada** (como «Roba un huevo»): la cinta de correr de cada jugador delante de su base (11 niveles, cada uno con su aspecto), el cartel de mejora (dinero / Robux), los pasos que suman velocidad, los rastros (multiplican y se ven detrás) y los multiplicadores de Robux. Guardado en `p.training`. |
 | `Event` | El evento: barrera, campo, diamante escondido, recoger el diamante y ganador entre servidores. |
 | `Finale` | Cinemática final del servidor y paso al infierno (`ServerStorage.Finale`). |
 
 ## Cliente: `StarterPlayer.StarterPlayerScripts`
 | Script | Qué hace |
 |---|---|
-| `DiamondClient.Main` | Entrada del cliente: UI, la pala (solo cava), respuestas a los avisos del servidor, música y el **movimiento** (siempre corres a tu velocidad, animación de correr a ritmo fijo y **sin inercia**: la velocidad horizontal es siempre la dirección que pulsas × tu velocidad, así que arranca y para en seco y los choques no te lanzan). |
+| `DiamondClient.Main` | Entrada del cliente: UI, la pala (solo cava), respuestas a los avisos del servidor, música y el **movimiento** (siempre corres a la velocidad que has entrenado (`Config.walkSpeedOf(SpeedStat)`), animación de correr a ritmo fijo y **sin inercia**: la velocidad horizontal es siempre la dirección que pulsas × tu velocidad, así que arranca y para en seco y los choques no te lanzan). |
 | `DiamondClient.UIKit` | Componentes de UI, **lista de sonidos** (`UI.SOUNDS`) e iconos, grupos de sonido (música/efectos). |
 | `DiamondClient.HUD` / `Menus` / `Fx` / `Cinematic` | Interfaz fija, ventanas, efectos de pantalla y cinemática final. La **tienda** (`Menus`): cabecera, categorías a la izquierda (Palas, Velocidad, Objetos, VIP, Monedas), artículo destacado y cuadrícula de tarjetas. En Studio, el atributo del jugador `DebugOpenMenu = "Shop:objetos"` abre una ventana. |
 | `ShovelFx`, `PlotFx`, `StatueBoard` | Animaciones visuales (piezas que flotan en palas y parcelas, cartel del diamante del lobby). |
 | `LaneFx` | Ambiente de cada parcela al entrar (tinte, niebla, noche), desde `Config.PLOTS[n].sky`. |
 | `BaseFx` | Fósiles abriéndose en las bases: levitan, giran, brillan y sueltan partículas (más cuanto menos les queda), grietas y temblor en el último 10 %, cuenta atrás; esconde el «Abrir ya» a quien no es el dueño. |
+| `TreadFx` | Subirse a tu cinta: el personaje corre sin moverse y la cinta se mueve (atributo local `OnTreadmill`). |
 | `CarpetFly` | Vuelo con la alfombra mágica (LinearVelocity + AlignOrientation en el personaje, límite de altura). |
 | `DebugLevelKey` | **Solo Studio:** la tecla E sube de nivel para probar. |
 
