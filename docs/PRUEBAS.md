@@ -35,3 +35,4 @@
 - **Edit cachea los `require`:** tras editar un módulo, `require` desde `execute_luau` en Edit devuelve la versión vieja. Para probar en Edit, clona el módulo (y los que usa) o prueba en Play.
 - Para rehacer una parcela del carril: `require(game.ServerStorage.LaneKit).buildPlot(n)` (en Edit; con clones si has cambiado `LaneKit`/`LaneThemes`).
 - En el chat, la primera vez puede no coger el foco: si el comando no hace nada, repítelo.
+- Si la pala cuelga de la mano en vez de ir cogida con las dos: mira si hay más de una `RightGrip` en `RightHand` (pasa si al jugador se le da la pala dos veces).

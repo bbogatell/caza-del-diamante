@@ -16,7 +16,7 @@
 - [ ] El evento del diamante y la cinemática final con el campo en su sitio nuevo (z −3208).
 - [ ] Guardado real de la base y la velocidad (DataStore apagado en Studio) y que los fósiles se abran estando desconectado.
 - [ ] Cuenta atrás, grietas y temblor de los fósiles vistos en pantalla.
-- [ ] Rendimiento del carril en móvil (StreamingEnabled está desactivado porque rompe el agarre de la pala; para activarlo, `DigAnim` necesita su propia soldadura).
+- [ ] Rendimiento del carril con StreamingEnabled en móvil.
 - [ ] Ajustes en móvil (barra de volumen con el dedo).
 - [ ] Montañas de bloques (`workspace.Mountains`): rendimiento en móvil y que desaparezcan bien en la cinemática final / paso al infierno.
 
