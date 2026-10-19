@@ -4,7 +4,7 @@
 
 ## Por hacer antes de lanzar
 - [ ] Confirmar fecha y hora definitivas del evento (`Config.EVENT_TIME`).
-- [ ] Crear los gamepasses y productos de Robux y poner sus IDs en `Config.PASSES` / `Config.PRODUCTS` (ahora están a 0): x2 Monedas, Velocidad VIP, +1 Andar, +1 Correr, los 4 «Abrir fósil ya» (`OpenNow1-4`) y los packs de monedas.
+- [ ] Crear los gamepasses y productos de Robux y poner sus IDs en `Config.PASSES` / `Config.PRODUCTS` (ahora están a 0): x2 Monedas, Correr VIP, +1 Correr, los 4 «Abrir fósil ya» (`OpenNow1-4`) y los packs de monedas.
 - [ ] Poner **8 jugadores por servidor** en Game Settings → Places (no se puede desde un script).
 - [ ] Revisar la economía jugando (precios de palas, `DIG_VALUE`, 6 % de fósiles, vida del fósil 60, venta ×60 s).
 - [ ] Revisar las normas de Roblox sobre el premio en Robux y redactar las condiciones del premio.

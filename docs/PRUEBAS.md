@@ -10,6 +10,7 @@
 | `/regenerar <1-15>` | Regenera esa parcela del carril (aviso y te saca del hoyo). |
 | `/pala <1-30>` | Te da esa pala. |
 | `/base borrar` | Vacía tu base. |
+| `/dinero <cantidad>` | Te da monedas: `/dinero 5000`, `/dinero 2.5m`, `/dinero 1b`, `/dinero 3t`. |
 | `/empezar` | Abre la barrera del evento del diamante ya. |
 | `/rayosx` | Muestra dónde está el diamante escondido. |
 
