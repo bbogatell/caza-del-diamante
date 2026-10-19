@@ -30,6 +30,6 @@
 - [ ] **60 fósiles** → `ServerStorage.Models.Fosiles.<id>` (`C-I`…`MU-III`; los raros `C-S1` = ★, `C-S2` = ★★…). Ahora: roca de studs con un relieve sencillo.
 - [ ] **30 palas** → `ServerStorage.Models.Palas.L<n>` (`L1`…`L30`). Ahora: los diseños de `ShovelLook` (por nivel) con los nombres nuevos; falta adaptarlos a los diseños de `PALAS.md`.
 - [ ] **Decorado de las 15 parcelas**: piezas sencillas de `ServerStorage.LaneThemes` (dodo, esqueletos, volcán, puente de mosasaurio, templo, islas, T-Rex Galáctico…). Mejorable con modelos más detallados, sobre todo las estatuas.
-- [ ] Bases: plataforma sencilla igual para todos (borde, postes y puerta); mejorable.
+- [ ] Bases: plataforma sencilla igual para todos con valla de madera (como «Roba un huevo»); la valla no choca.
 - [ ] Objetos: modelos sencillos (bate, trampa, orbe de hielo, alfombra) y emojis en la tienda; mejorables con modelos e iconos propios.
 - [ ] Cintas de correr: modelos sencillos por nivel (colores, neón, alas, cuernos, halo); mejorables. Faltan las pociones de velocidad y los packs de velocidad de «Roba un huevo» (no pedidos).
