@@ -2,6 +2,55 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · Estelas rehechas: cada una con su tema (rayos, alas, órbitas, huellas…)
+**Qué** (bbogatell pidió que no fueran solo cambios de color): las 20 estelas son nuevas y cada una tiene algo propio:
+
+| # | Estela | Qué tiene |
+|---|---|---|
+| 1 | Polvo | Nubes de polvo a los pies. |
+| 2 | Huellas Brillantes | Huellas de neón en el suelo. |
+| 3 | Burbujas | Pompas de jabón. |
+| 4 | Corazones | Corazones que suben. |
+| 5 | Jardín | Flores que caen y florecitas en el suelo. |
+| 6 | Melodía | Notas musicales. |
+| 7 | Fuego | Llamas y chispas, con pisadas que arden. |
+| 8 | Ventisca | Nieve, niebla y cristales de hielo que salen del suelo. |
+| 9 | Fantasmal | Fantasmas y niebla. |
+| 10 | Tóxica | Burbujas verdes y charcos de ácido. |
+| 11 | Sakura | Remolino de pétalos. |
+| 12 | Estrellas Fugaces | Estrellas y 2 cometas en órbita. |
+| 13 | Tormenta Eléctrica | Rayos en zigzag que caen al suelo, chispazos y bolas eléctricas. |
+| 14 | Inframundo | Calaveras, fuego, rayos rojos y pisadas de fuego. |
+| 15 | Galaxia | 3 planetas en órbita inclinada y polvo de estrellas. |
+| 16 | Dragón | Alas de dragón con huesos que aletean, fuego, chispas y rayos rojos. |
+| 17 | Arcoíris (99 R$) | Cinta arcoíris, 6 cometas de colores, estrellas, corazones y huellas arcoíris. |
+| 18 | Agujero Negro (199 R$) | Un agujero negro con disco brillante te sigue, con rayos morados y ondas expansivas. |
+| 19 | Divina (399 R$) | Alas de ángel, aureola dorada, plumas y huellas de oro. |
+| 20 | Supernova (799 R$) | Todo: ondas y rayos arcoíris, 8 cometas, aureola arcoíris, huellas y ~210 partículas/s. |
+
+Las estelas grandes llevan una segunda cinta más fina a la altura del pecho. Todo es decorativo (sin bonus) y se compra en cualquier orden. En la tienda, cada tarjeta tiene su icono y una frase.
+
+**Cómo:**
+- La cinta y las partículas las pone el servidor (se replican). `Training.trailFx` tiene un preset por tipo de partícula, con texturas de la Creator Store (corazón, calavera, fantasma, flor, pétalo, burbuja, estrella, nota, rayo blanco, rayo rojo, bola eléctrica, brillo) y las de Roblox.
+- Los extras (huellas, rayos, órbitas, ondas, alas y aureola) los dibuja cada cliente para todos los jugadores a menos de 160 studs, con el nuevo LocalScript `StarterPlayerScripts.TrailExtras`, que lee el atributo `TrailId` del personaje. No cargan la red.
+- Las partículas y los extras de movimiento solo salen mientras corres o entrenas.
+- Equipar ya no guarda al momento (se guarda al minuto o al salir), para no gastar llamadas al DataStore si alguien cambia mucho de estela.
+
+**Dónde:**
+- `Config.TRAINING.trails` (20 nuevas, con `fx`, `extras`, `icon` y `desc`; precios de 100 a 10T).
+- `DiamondServer.Training` (`TEX`, `preset`, `trailFx`, `equipTrail`).
+- Nuevo `StarterPlayerScripts.TrailExtras`.
+- `DiamondClient.Menus` (icono y descripción en las tarjetas).
+
+**Probado:** en Play:
+- comprar las 20 (16 con dinero y 4 simuladas);
+- capturas corriendo de Tormenta Eléctrica (rayo que cae), Divina (alas y aureola), Dragón (alas con huesos), Agujero Negro (agujero con disco y onda), Supernova, Ventisca (cristales en el suelo) y Melodía (notas);
+- sin errores en la consola.
+
+**Sin probar:** con varios jugadores a la vez (rendimiento con muchas estelas grandes juntas).
+
+**Guardados:** se mantienen los números de estela; si alguien tenía la estela n, ahora tiene la nueva estela n.
+
 ## 2026-10-19 · bbogatell (Claude) · Estelas solo decorativas y sin orden; icono que bota sobre la Tienda de Estelas
 **Qué** (lo pidió bbogatell):
 - **Las estelas ya no dan ningún bonus:** son solo decorativas. `Config.perStep` ya no usa la estela, así que la cinta da lo mismo con o sin estela.
