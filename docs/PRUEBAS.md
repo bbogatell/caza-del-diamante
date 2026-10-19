@@ -4,7 +4,7 @@
 | Comando | Qué hace |
 |---|---|
 | `/fosil <id o nombre> [parcela]` | Te da ese fósil en las manos (p. ej. `/fosil C-III`, `/fosil amonites`). Ids: `C-I`, `C-II`, `C-III`, `C-S1` (★), `C-S2` (★★), igual con `PC`, `R`, `E`, `L`, `M`, `CO`, `S`, `ET`, `D`, `B`, `MU`. La parcela cuenta para los raros que dan bichos de Evento (por defecto 11). |
-| `/fosil <id> base [parcela]` | Lo pone directamente en un pedestal libre de tu base. |
+| `/fosil <id> base [parcela]` | Lo pone directamente en un sitio libre de tu base. |
 | `/abrir` | Abre ya todos los fósiles de tu base. |
 | `/evento empezar [minutos]` · `/evento terminar` | Empieza o acaba un evento de fósil raro (uno por servidor, con haz de luz). |
 | `/regenerar <1-15>` | Regenera esa parcela del carril (aviso y te saca del hoyo). |
@@ -14,7 +14,7 @@
 | `/rayosx` | Muestra dónde está el diamante escondido. |
 
 ## Desde un script (`Request:InvokeServer("Debug", ...)`, solo Studio)
-`"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"diamond"`.
+`"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `Request:InvokeServer("PlaceFossil")` deja el que llevas · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"diamond"`.
 
 - La tecla **E** sube de pala en Studio (`DebugLevelKey`), salvo si sale un aviso de «pulsa E».
 - Para probar los golpes y robar fósiles: en Studio, pestaña **Prueba**, elige **2 jugadores** y dale a **Iniciar**.

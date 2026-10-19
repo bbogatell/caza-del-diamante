@@ -7,12 +7,12 @@
 |---|---|
 | `Main` (Script) | Punto de entrada: crea los remotes, gestiona la entrada de jugadores, el golpe de pala (cavar), el golpe a otros jugadores (`Hit`), las peticiones (`Request`: tienda, diario, ajustes, Debug), los comandos de chat y el ranking. |
 | `Data` | Perfiles en DataStore `DiamondHunt_Player_v2` (coins, level, streak, passes, `base` (pedestales), `speed` (mejoras), settings…; al cargar borra los talismanes antiguos). Los publica como **atributos del jugador** (`Coins`, `Level`, `Settings`…). Ranking `DiamondHunt_Level_v1`. |
-| `Plots` | Asigna a cada jugador una de las 8 parcelas del lobby (su **base**), el título flotante y el decorado por nivel de pala (`PlotDecor`). Ya no hay terreno ni se cava (`hit` devuelve `noDig`). |
+| `Plots` | Asigna a cada jugador una de las 8 parcelas del lobby (su **base**) y el título flotante. Sin decorado por nivel (`PlotDecor` ya no se usa) ni terreno; no se cava (`hit` devuelve `noDig`). |
 | `PlotDecor` | Decoración de cada parcela por nivel (30 niveles, `build(plotModel, level)`). |
 | `Shovels` | Crea la herramienta (Tool) de la pala a partir de `ReplicatedStorage.ShovelLook`. |
 | `Lane` | **Carril de 15 parcelas compartidas**: terreno de los hoyos (`Config.PLOTS`), cavar (pala 2N−1 o mejor, monedas `Config.DIG_VALUE`), regenerar (cada `LANE.regenTime` o al cavar el 80 %, con aviso y sacando a los de dentro), textos de los arcos y carteles con la pala. Gancho `Lane.onDig` para los fósiles. |
 | `Fossils` | Fósiles: salen al cavar (`Lane.onDig`), sueltos en `workspace.Fossils` con «Coger», llevar encima de la cabeza (atributos `Carrying`, `CarryWeight`), golpes que los tiran, entrega en la base, evento de fósil raro (uno por servidor, atributo `FossilEvent`) y `rollCreature` (qué bicho sale). |
-| `Bases` | Bases (las parcelas del lobby): suelo y 10 pedestales, fósiles abriéndose (tiempo real, también sin conexión), eclosión, monedas por segundo de los bichos, vender, cartel. Guardado en `p.base.slots`. |
+| `Bases` | Bases (las 8 parcelas del lobby, 50×50, iguales): el jugador deja el fósil donde quiera del suelo (`place`), se abre con el tiempo (también sin conexión), «abrir ya» con Robux (`requestOpen`/`grantOpen`), eclosión, monedas por segundo, vender, cartel. Guardado en `p.base.slots` con la posición `ox`/`oz`. |
 | `Looks` | Modelos de fósiles y bichos: el final de `ServerStorage.Models.Fosiles/Bichos.<id>` o uno provisional (usa los constructores de `LaneThemes`). |
 | `Event` | El evento: barrera, campo, diamante escondido, recoger el diamante y ganador entre servidores. |
 | `Finale` | Cinemática final del servidor y paso al infierno (`ServerStorage.Finale`). |
@@ -25,7 +25,7 @@
 | `DiamondClient.HUD` / `Menus` / `Fx` / `Cinematic` | Interfaz fija, ventanas (tienda, diario, ajustes), efectos de pantalla y cinemática final. |
 | `ShovelFx`, `PlotFx`, `StatueBoard` | Animaciones visuales (piezas que flotan en palas y parcelas, cartel del diamante del lobby). |
 | `LaneFx` | Ambiente de cada parcela al entrar (tinte, niebla, noche), desde `Config.PLOTS[n].sky`. |
-| `BaseFx` | Cuenta atrás encima de los fósiles de las bases, grietas y temblor en el último 10 %. |
+| `BaseFx` | Fósiles abriéndose en las bases: levitan, giran, brillan y sueltan partículas (más cuanto menos les queda), grietas y temblor en el último 10 %, cuenta atrás; esconde el «Abrir ya» a quien no es el dueño. |
 | `DebugLevelKey` | **Solo Studio:** la tecla E sube de nivel para probar. |
 
 ## Compartido: `ReplicatedStorage`
@@ -36,7 +36,7 @@
 - `Assets`: diamante y otros.
 
 ## Mapa: `workspace.Map`
-- `Lobby` (estilo studs, sin árboles): `Floor` (baldosas con textura de studs, top y=18, huecos en los 8 hoyos y en la escalera al campo), `Cliffs` (paredes de piedra de bloques, `Tier4` lejano, `Mine` al fondo), `Props` (barandilla, rodapié, faroles, jardineras, estandartes, cascada, marcos de los hoyos), estatua del diamante con cartel, tienda, diario, rankings, `PlotFrames` (8 parcelas en 2 filas, delante = +Z), `Bounds` (barreras invisibles). Lo antiguo está guardado en `ServerStorage.LobbyBackup`.
+- `Lobby` (estilo studs, sin árboles): `Floor` (baldosas con textura de studs, top y=18, huecos en los 8 hoyos y en la escalera al campo), `Cliffs` (paredes de piedra de bloques, `Tier4` lejano, `Mine` al fondo), `Props` (barandilla, rodapié, faroles, jardineras, estandartes, cascada, marcos de los hoyos), estatua del diamante con cartel, tienda, diario, rankings, `PlotFrames` (8 bases de 50×50 en 2 filas, x ±33/±95, z −310/−426, delante = +Z), `Bounds` (barreras invisibles). Lo antiguo está guardado en `ServerStorage.LobbyBackup`.
 - `Lane` (gran cambio): `Gateway` (portón del fondo del lobby), `Plot01`…`Plot15` (cada una: `Floor`, `Cliffs` con barreras invisibles, `Arch`, `ShovelSign`, `Ambience`, `Decor`) y `FieldEnd` (plaza de llegada al campo, montañas y barreras). Se genera en Edit con `ServerStorage.LaneKit` + `ServerStorage.LaneThemes`: `require(game.ServerStorage.LaneKit).buildPlot(n)` rehace una parcela.
 - `Meadow`: prado de studs donde antes estaba el campo.
 - `Field`: campo del evento con barrera (±122), **al final del carril** (centro `Config.FIELD_CENTER` = z −3208, girado 180°). `Field.StudRing`: baldosas de studs de todo lo que rodea la barrera (franja de la valla, talud del sur, lados y norte); dentro de la barrera sigue el terreno real (se excava en el evento). `Field.Walkway.StudFence`: valla y farolas de bloques + `FenceCollider` invisibles. Copias: `ServerStorage.FieldRingBackup` (terreno), `ServerStorage.FieldPropsBackup` (cartel, arco, escalera y valla originales).
