@@ -21,7 +21,7 @@
 ## Cliente: `StarterPlayer.StarterPlayerScripts`
 | Script | Qué hace |
 |---|---|
-| `DiamondClient.Main` | Entrada del cliente: UI, controles de la pala (elige entre cavar y pegar), respuestas a los avisos del servidor, música, correr, mejoras de velocidad. |
+| `DiamondClient.Main` | Entrada del cliente: UI, la pala (solo cava), respuestas a los avisos del servidor, música y el **movimiento** (siempre corres a tu velocidad, animación de correr a ritmo fijo y **sin inercia**: se corta cualquier velocidad que añadan los choques). |
 | `DiamondClient.UIKit` | Componentes de UI, **lista de sonidos** (`UI.SOUNDS`) e iconos, grupos de sonido (música/efectos). |
 | `DiamondClient.HUD` / `Menus` / `Fx` / `Cinematic` | Interfaz fija, ventanas, efectos de pantalla y cinemática final. La **tienda** (`Menus`): cabecera, categorías a la izquierda (Palas, Velocidad, Objetos, VIP, Monedas), artículo destacado y cuadrícula de tarjetas. En Studio, el atributo del jugador `DebugOpenMenu = "Shop:objetos"` abre una ventana. |
 | `ShovelFx`, `PlotFx`, `StatueBoard` | Animaciones visuales (piezas que flotan en palas y parcelas, cartel del diamante del lobby). |
@@ -42,6 +42,7 @@
 - `Lane` (gran cambio): `Gateway` (portón del fondo del lobby), `Plot01`…`Plot15` (cada una: `Floor`, `Cliffs` con barreras invisibles, `Arch`, `ShovelSign`, `Ambience`, `Decor`) y `FieldEnd` (plaza de llegada al campo, montañas y barreras). Se genera en Edit con `ServerStorage.LaneKit` + `ServerStorage.LaneThemes`: `require(game.ServerStorage.LaneKit).buildPlot(n)` rehace una parcela.
 - `FrontMountains`: montañas de studs donde antes estaba el campo (delante del lobby). `SkyLimit`: techo invisible a y = 222 en todo el mapa.
 - `Field`: campo del evento con barrera (±122), **al final del carril** (centro `Config.FIELD_CENTER` = z −3208, girado 180°). `Field.StudRing`: baldosas de studs de todo lo que rodea la barrera (franja de la valla, talud del sur, lados y norte); dentro de la barrera sigue el terreno real (se excava en el evento). `Field.Walkway.StudFence`: valla y farolas de bloques + `FenceCollider` invisibles. Copias: `ServerStorage.FieldRingBackup` (terreno), `ServerStorage.FieldPropsBackup` (cartel, arco, escalera y valla originales).
+- **Regla de colisiones:** los adornos se atraviesan (CanCollide desactivado) para no chocar corriendo; solo chocan los suelos, las paredes de los acantilados, las barreras invisibles, el techo y lo imprescindible del campo.
 - **Regla de estilo:** solo el interior de las parcelas y el campo dentro de la barrera llevan material realista; todo lo demás, textura de studs `rbxassetid://6348166067`.
 - `workspace.Mountains` (fuera de `Map`): montañas de fondo de bloques con studs (hierba/roca/nieve), solo decorado (sin colisión). `Mountains.Fill`: bloques que tapan restos de terreno detrás de las paredes del lobby y en las esquinas. Sustituyen al terreno liso de alrededor; copia del terreno original en `ServerStorage.MountainsBackup`. `Finale.buildHell` las borra.
 - `ServerStorage.Models.Bichos|Fosiles|Palas`: aquí se dejan los modelos finales con el id como nombre; si no hay, el juego genera uno provisional.
