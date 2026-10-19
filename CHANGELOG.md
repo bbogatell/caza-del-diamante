@@ -2,6 +2,51 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · 20 estelas y Tienda de Estelas física, monedas más grandes, sin aviso al cavar en tu base
+**Qué** (lo pidió bbogatell):
+- **20 estelas** (antes 11 «rastros»), cada vez más exageradas:
+  - van de una línea fina gris (Polvo) a la **Supernova**: arcoíris ancho de 4 studs, ~430 partículas/s (estrellas, brillos, orbes, chispas y plumas) y luz propia;
+  - por el medio hay burbujas, fuego, nieve, humo, pétalos, estrellas…
+  - las 16 primeras se compran con dinero y en orden (100 → 6000Q); las 4 últimas con Robux cuando quieras: Arcoíris 99, Cósmica 199, Divina 399 y Supernova 799;
+  - todas multiplican los pasos en la cinta (x1,5 … x150), y cuenta la mejor que tengas;
+  - puedes equipar cualquiera de las tuyas o quitártela;
+  - las partículas solo salen mientras te mueves.
+
+  Las 11 primeras tienen el mismo multiplicador y precio que los rastros antiguos, así que el número guardado (`p.training.trail`) significa lo mismo y no hace falta tocar ningún guardado. Las de Robux van aparte (`p.training.rtrails`).
+- **Tienda de Estelas física:** puesto morado y blanco al lado de la Tienda de Palas, con:
+  - cartel «✨ TIENDA DE ESTELAS ✨»;
+  - estelas de neón en exposición sobre el mostrador;
+  - tarros de colores;
+  - un arcoíris encima que se ve de lejos.
+
+  Con E se abre su ventana: 20 tarjetas con la muestra de colores, el multiplicador y Comprar / Equipar / ✔ Equipada. **Ya no está en la tienda del HUD** (quitada la tarjeta «Rastro» de Velocidad); solo se compra en el puesto.
+- **Las monedas del HUD se ven un poco más grandes** que la velocidad y la tierra.
+- **Sin «Aquí no se cava»** cuando das un palazo dentro de tu base (entre tus fósiles). Fuera de la base sigue saliendo.
+
+**Dónde:**
+- `Config.TRAINING.trails` (20, con `w`/`life`/`glow`/`fx`/`light`/`rainbow`/`robux`), `Config.PRODUCTS.Trail17-20` y `Config.bestTrail`.
+- `DiamondServer.Training`: `buyTrail(n)`, `grantTrail`, `equipTrail`, `ownsTrail`, `trailFx` nuevo y el bucle que enciende las partículas al moverte.
+- `DiamondServer.Data`:
+  - atributos `Trail` (la mejor), `TrailCash`, `TrailsR` y `TrailEquip`;
+  - ahora requiere `Config`.
+- `DiamondServer.Main`: `BuyTrail(n)`, `EquipTrail`, y las estelas en `BuyRobux` y `ProcessReceipt`.
+- `DiamondClient.Menus`: ventana `Trails` (`buildTrails`, `refreshTrails`), sin la tarjeta Rastro.
+- `DiamondClient.Main`: `TrailPrompt` abre `Trails`, y `r.noDig` calla dentro de tu base.
+- `DiamondClient.HUD`: filas Speed 0,22, Coins 0,31 y Dirt 0,22.
+- `Workspace.Map.Lobby.TrailShop` (quitada una mata de flores que había en ese sitio).
+
+**Probado:** en Play:
+- abrir el puesto con E (captura);
+- comprar la 1 y la 2, y la 3 sin la 2 da «Primero compra la Estela de Hierba»;
+- Supernova con compra simulada: 5 emisores y luz;
+- equipar la 1 y volver a la 20;
+- las partículas se encienden al moverte;
+- capturas de la Supernova corriendo (arcoíris con estrellas, muy brillante);
+- monedas más grandes en el HUD;
+- sin errores en la consola.
+
+**Sin probar:** cómo se ven las estelas de otro jugador (2 jugadores).
+
 ## 2026-10-19 · bbogatell (Claude) · Tutorial más rápido y visual, flechas que avanzan, icono de pala
 **Qué** (lo pidió bbogatell tras probar el tutorial):
 - **Ir a la parcela ya no es eterno:**
