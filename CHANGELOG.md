@@ -2,6 +2,23 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · Cinta delante de la base, al otro lado del caminito, y «Base enorme» de 20 studs
+**Qué:**
+- La cinta de correr cambia de sitio (lo pidió bbogatell): ahora va en la hierba al otro lado del caminito, delante de la mitad derecha de la base vista desde el lobby. El corredor mira a su base y el cartel de mejora (con sus botones físicos) está a la derecha de la cinta, mirando al lobby.
+- En la fila de atrás, la cinta queda detrás de las bases de delante, justo donde crecían con las mejoras. Por eso **«Base enorme» crece ahora 20 studs en vez de 30** (bbogatell eligió esta opción). «Base grande» sigue en 15. Si alguien tenía cosas guardadas más atrás de donde llega ahora su base, se mueven dentro al entrar.
+**Dónde:**
+- `Config.BASE.tread` = `{x = 10, z = 39.7, signX = 18.5, signZ = 39}` (respecto al centro de la base).
+- `Config.BASE.upgrades[2].extra` = 20.
+- `DiamondServer.Training.placement`.
+- `DiamondServer.Bases.ensurePositions` (mete dentro los `oz` que se salen).
+**Probado:** en Play.
+- La cinta de la base 1 sale en x −80,5 / z −265,5, sobre la hierba y fuera del caminito (captura).
+- Clic con el ratón en el botón de Robux: la cinta pasa al nivel 2.
+- Subido a la cinta: +30 de velocidad en 3 s.
+- Sin errores en la consola.
+- En la fila de atrás la cinta ocupa z −363,8..−350,8. El caminito acaba en −364 y la valla de una base de delante con «Base enorme» queda en −350, sin solaparse. Comprobado con cuentas, no en Play con 2 jugadores.
+**Notas:** para seguo970: si cambias el tamaño de las bases o los caminitos, revisa `Config.BASE.tread`, porque la cinta de la fila de atrás está justo entre el caminito y el fondo de la base de delante.
+
 ## 2026-10-19 · bbogatell (Claude) · Cinta de correr fuera de la base y cartel con botones físicos
 **Qué:**
 - La cinta de correr y su cartel de mejora ya no están dentro de la base. Van fuera, en la franja de hierba del lado de fuera de cada base (lejos del camino central), junto a la entrada, como en *Roba un huevo*. Las bases de los extremos usan la franja junto al borde del lobby y las del centro el hueco de 12 studs entre bases. El cartel está delante de la cinta y mira al caminito.
