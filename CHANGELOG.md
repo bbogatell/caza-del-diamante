@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · Zapatos encima de la cabeza y zapato del HUD que tiembla en la cinta
+**Qué:**
+- Al correr en tu cinta, en cada paso salen encima de tu cabeza zapatos 👟 y un «👟 +N» (lo que ganas) que suben y se desvanecen, como en *Roba un huevo*. No dependen del ajuste «Números».
+- El zapato de la fila de velocidad (abajo a la izquierda del HUD) tiembla mientras entrenas y vuelve a su sitio al bajarte.
+- El cliente vuelve a tener el aviso de cinta mejorada (`TreadUp`: destello, confeti y cartel con el nombre de la cinta). El servidor lo enviaba, pero el cliente ya no tenía el manejador.
+**Dónde:** `DiamondClient.Main` (`shoeBurst`, `handlers.Step` y `handlers.TreadUp`, antes de `handlers.DigFx`). `DiamondClient.HUD` (justo después de crear `speedRow`: un `RenderStepped` que mueve `speedRow.Icon` mientras `OnTreadmill` o `Training` está activo).
+**Probado:** en Play, subido a la cinta de mi base: salen los zapatos con «+2» encima de la cabeza (captura), el zapato del HUD rota entre −14° y +14°, y no hay errores en la consola.
+**Notas:** los billboards de los zapatos van sin `AlwaysOnTop`, porque con `AlwaysOnTop` no salían en las capturas de Studio.
+
 ## 2026-10-19 · seguo970 (Claude) · Prueba de la progresión entera y arreglos
 **Qué:** se ha jugado la progresión de principio a fin (jugador nuevo → cavar → fósil → base → bicho → palas 1-30 por las 15 parcelas → evento de fósil raro → evento del diamante → final). Arreglos:
 - **Parcela 13 (Grieta Dimensional): no se podía cavar.** Usaba `Granite`, que no es un material de terreno de Roblox: el hoyo salía relleno de hierba por debajo de la capa de asfalto y cada palada daba error en el servidor (sin tierra ni fósiles). Ahora es `Brick` en morado.
