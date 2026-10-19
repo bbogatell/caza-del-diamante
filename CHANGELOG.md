@@ -2,6 +2,24 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · Cinta de correr fuera de la base y cartel con botones físicos
+**Qué:**
+- La cinta de correr y su cartel de mejora ya no están dentro de la base. Van fuera, en la franja de hierba del lado de fuera de cada base (lejos del camino central), junto a la entrada, como en *Roba un huevo*. Las bases de los extremos usan la franja junto al borde del lobby y las del centro el hueco de 12 studs entre bases. El cartel está delante de la cinta y mira al caminito.
+- El cartel tiene 2 **botones físicos** que se pulsan con el ratón (o tocándolos en el móvil): rojo «🏃 $precio» (dinero) y morado «R$ precio» (Robux). El botón se hunde al pulsarlo. Ya no hay avisos de E/R. Si pulsas la cinta de otro, sale «Esta cinta no es tuya».
+- Como la cinta ya no está dentro, se ha quitado la zona de la base donde no se podían dejar fósiles.
+**Dónde:**
+- `Config.BASE.tread` = `{side = 31, z = 10, signZ = 21}` (distancia hacia fuera desde el centro de la base, posición de la cinta y posición del cartel).
+- `DiamondServer.Training`: `sign` (tablero y botones `BuyCash`/`BuyRobux` con el atributo `TreadButton` y un `ClickDetector` solo para el cursor de mano), `placement` y `refresh` (sin ProximityPrompts).
+- `DiamondClient.Main`, bloque «treadmill sign buttons»: un `InputBegan` hace un raycast al botón, comprueba que la cinta sea tuya, anima el botón y envía `Request("UpgradeTread", kind)`.
+- `DiamondServer.Bases` (quitada la comprobación de `B.tread`).
+**Probado:** en Play.
+- La cinta sale en x −126 junto a la base 1, fuera de la valla.
+- Clic con el ratón en el botón de dinero sin dinero: aviso de que faltan monedas.
+- Clic en el de Robux: compra simulada de Studio, la cinta pasa a Sci-Fi y el cartel se actualiza (botones rojo a la izquierda y morado a la derecha).
+- Subido a la cinta en su nuevo sitio: +30 de velocidad en 3 s, con los zapatos encima de la cabeza.
+- Sin errores en la consola.
+**Notas:** los clics virtuales del MCP no activan `ClickDetector.MouseClick`, pero sí `UserInputService`. Por eso el clic se lee en el cliente, y así también se puede probar. Con la piel «angelical», las alas de la cinta pueden asomar un poco por la valla en los huecos de 12 studs (no colisionan).
+
 ## 2026-10-19 · bbogatell (Claude) · Zapatos encima de la cabeza y zapato del HUD que tiembla en la cinta
 **Qué:**
 - Al correr en tu cinta, en cada paso salen encima de tu cabeza zapatos 👟 y un «👟 +N» (lo que ganas) que suben y se desvanecen, como en *Roba un huevo*. No dependen del ajuste «Números».
