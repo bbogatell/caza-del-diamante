@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · seguo970 (Claude) · Agrandar la base
+**Qué:** la base se puede **agrandar dos veces con monedas**, en un cartel verde «Agrandar base» dentro de la base (en la esquina de la entrada, enfrente de la cinta de correr). Crece **hacia atrás**, lejos de la entrada, y la valla se rehace a la nueva medida:
+- Normal: 50×50, 12 sitios.
+- **Base grande** (25K monedas): 50×65, 16 sitios.
+- **Base enorme** (1,5M monedas): 50×80, 20 sitios.
+Se guarda con la partida. Al irte, la base vuelve a su tamaño normal para el siguiente que la use. No se pueden dejar fósiles encima del cartel.
+**Dónde:** `Config.BASE.upgrades` (nombre, `extra` de largo, `slots` de más y precio) y `Config.BASE.upgradeSign`. `DiamondServer.Bases`: nivel guardado en `p.base.lvl`, `applySize` (alarga `Platform` hacia −Z y rehace `Fence`), cartel con `ProximityPrompt` (E), `Bases.upgrade`, `Bases.setLevel`; «dentro de la base», sitios y cartel de encima ya tienen en cuenta el tamaño; atributo del jugador `BaseLevel`. `Main`: petición `UpgradeBase`, `Debug "baseLevel"` y comando `/base nivel <1-3>`.
+**Probado:** en Play: sin monedas avisa de lo que falta; con monedas sube a 65 y luego a 80 (plataforma y valla), la tercera vez dice «¡Tu base ya es la más grande!»; dejar un fósil al fondo de la parte nueva funciona; el cartel de encima pasa a «1/20». Sin errores. No probado: con 2 jugadores, y salir y volver (el DataStore está apagado en Studio).
+**Notas:** los precios son una propuesta (a la altura de las palas 5-6 y 9): ajustadlos en `Config.BASE.upgrades`. Detrás de cada base solo hay sitio para 30 studs de más; si se añade otro nivel, hay que mover cosas del lobby.
+
 ## 2026-10-19 · seguo970 (Claude) · Bases pegadas a los caminitos laterales, con sitio para crecer
 **Qué:** las 8 bases tienen ahora **la entrada pegada al caminito lateral** que sale del camino central: la fila de delante al de z −276 y la de atrás al de z −368. Detrás de cada base queda hierba libre (34 studs en la fila de delante y 30 en la de atrás) para que en el futuro la base se pueda **agrandar un par de veces hacia dentro**, lejos del camino. La **cinta de correr** ya no está delante de la base (quedaría encima del camino): va **dentro**, en la esquina de la entrada, con su cartel mirando al camino, y ahí no se pueden dejar fósiles.
 **Dónde:** `Lobby.PlotFrames` movidas en Z (+5 la fila de delante → centro z −305; +29 la de atrás → centro z −397; atributo `MovedToPaths`). Suelo: 96 baldosas de hierba nuevas tapando los hoyos antiguos que quedaban a la vista, 14 `PitLip` y unas flores de `Props.Flowers` quitadas (copia en `ServerStorage.LobbyBasesMoveBackup`). `Config.BASE.tread` (posición y zona de la cinta dentro de la base), `Training` (`placement`), `Bases.place` (no deja fósiles encima de la cinta).

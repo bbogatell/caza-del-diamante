@@ -10,6 +10,7 @@
 | `/regenerar <1-15>` | Regenera esa parcela del carril (aviso y te saca del hoyo). |
 | `/pala <1-30>` | Te da esa pala. |
 | `/base borrar` | Vacía tu base. |
+| `/base nivel <1-3>` | Pone tu base de ese tamaño (1 = normal, 2 = grande, 3 = enorme) sin pagar. |
 | `/objetos` | Te da la alfombra mágica, 10 trampas y 10 poderes de hielo. |
 | `/velocidad <cantidad>` | Te da velocidad (la estadística): `/velocidad 100k`, `/velocidad 2.5m`. |
 | `/tierra <cantidad>` | Te da tierra para la máquina: `/tierra 5000`, `/tierra 2m`. |

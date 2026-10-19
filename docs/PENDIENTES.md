@@ -21,7 +21,7 @@
 - [ ] Montañas de bloques (`workspace.Mountains`): rendimiento en móvil y que desaparezcan bien en la cinemática final / paso al infierno.
 
 ## Ideas / mejoras
-- [ ] Mejorar la base para agrandarla (hay sitio libre detrás de cada base: 34 studs la fila de delante, 30 la de atrás; debe crecer hacia −Z, lejos de la entrada).
+- [x] Mejorar la base para agrandarla (seguo970, 19/10): 2 niveles con monedas. Falta probar con 2 jugadores y al salir/volver, y ajustar los precios.
 - [ ] Pendiente del fondo del lobby algo escalonada y un trozo de agua azul suelto a la derecha.
 - [ ] Discord del juego (hay un brief preparado).
 

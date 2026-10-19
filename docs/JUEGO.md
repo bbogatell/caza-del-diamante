@@ -6,7 +6,7 @@ Hay un **diamante escondido** bajo un campo de excavación de 240×240 studs, **
 Después viene una **cinemática final secreta** (el diamante sube, cielo con el ganador bailando, explosión de «10.000 ROBUX», el mapa se derrumba y se pasa a un **infierno** con una puerta «COMING SOON 100.000 ROBUX»). ⚠️ **El final no se revela a los jugadores** (ni en Discord).
 
 ## Antes del evento (estilo «Roba un huevo»)
-1. **Lobby y base:** cada jugador tiene una de las 8 parcelas del lobby como **base** (8 jugadores por servidor): todas iguales, de 50×50, y caben 12 cosas.
+1. **Lobby y base:** cada jugador tiene una de las 8 parcelas del lobby como **base** (8 jugadores por servidor): todas iguales, de 50×50, y caben 12 cosas. Con monedas se puede **agrandar** dos veces (hacia atrás): 16 y 20 sitios.
 2. **El carril:** por el portón del fondo del lobby se llega a **15 parcelas compartidas**, una detrás de otra (`Config.PLOTS`, diseño en `PARCELAS_Y_FOSILES.md`). Cada una es un hoyo enorme de terreno realista con su decorado de studs, cada vez más épico. Al final está el campo del diamante.
 3. **Palas:** 30 (`PALAS.md`). **La parcela N pide la pala 2N−1 o mejor**; con una peor el suelo está «demasiado duro». Las pares cavan más rápido y ancho y pegan más. Se compran en la tienda.
 4. **Cavar da tierra** (más en las parcelas avanzadas) y a veces **un fósil** (2 % por palada, `Config.FOSSIL.chance`), de la rareza que toque según la parcela (I, II o III). En la **Máquina de Fósiles** del lobby la tierra se canjea por un fósil de la rareza que elijas (si está desbloqueada); sale I, II o III al azar. Los hoyos se regeneran cada 5 min o al cavarlos al 80 % (aviso y te sacan del hoyo).
