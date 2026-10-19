@@ -29,7 +29,7 @@
 | `ShovelFx`, `PlotFx`, `StatueBoard` | Animaciones visuales (piezas que flotan en palas y parcelas, cartel del diamante del lobby). |
 | `LaneFx` | Ambiente de cada parcela al entrar (tinte, niebla, noche), desde `Config.PLOTS[n].sky`. |
 | `BaseFx` | Fósiles abriéndose en las bases: levitan, giran, brillan y sueltan partículas (más cuanto menos les queda), grietas y temblor en el último 10 %, cuenta atrás; esconde el «Abrir ya» a quien no es el dueño. |
-| `DiamondClient.Tutorial` | La parte del cliente del tutorial: tarjeta del paso arriba (con «Saltar tutorial», que pide confirmar), línea naranja en el suelo y flecha que bota sobre el destino, botones del HUD brillando con una mano, y el resumen final con «¡A jugar!». Va en su propio ScreenGui `Tutorial` (por encima de los menús). |
+| `DiamondClient.Tutorial` | La parte del cliente del tutorial: tarjeta del paso arriba (icono grande + pocas palabras + 11 puntos de progreso; «Saltar», que pide confirmar; baja abajo cuando hay una ventana abierta), flechas ▲ que avanzan por el suelo hasta el destino (piezas con SurfaceGui en la carpeta `TutorialArrows`) y flecha que bota sobre él, botones del HUD brillando con una mano, y el resumen final con «¡A jugar!». Va en su propio ScreenGui `Tutorial` (por encima de los menús). |
 | `TreadFx` | Subirse a tu cinta: el personaje corre sin moverse y la cinta se mueve (atributo local `OnTreadmill`). |
 | `CarpetFly` | Vuelo con la alfombra mágica (LinearVelocity + AlignOrientation en el personaje, límite de altura). |
 | `DebugLevelKey` | **Solo Studio:** la tecla E sube de nivel para probar. |

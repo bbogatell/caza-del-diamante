@@ -2,6 +2,46 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · Tutorial más rápido y visual, flechas que avanzan, icono de pala
+**Qué** (lo pidió bbogatell tras probar el tutorial):
+- **Ir a la parcela ya no es eterno:**
+  - en los pasos 2-6 del tutorial (ir a la parcela, cavar, coger, volver a la base y dejar el fósil) corres como mínimo a **45**. Unos 7 s de la base a la parcela 1, antes ~20 s;
+  - además, la velocidad inicial de todos sube de 16 a **20** (`TRAINING.walkBase`). También afecta al modo lento.
+- **Instrucciones mucho más cortas y visuales:**
+  - tarjeta más pequeña con un icono grande y 2-4 palabras («Ve a la Parcela 1», «Clic para cavar», «Coge el fósil [E]», «Llévalo a tu base», «¡Monedas cada segundo!», «Compra la Pala 2»…);
+  - 11 puntos de progreso debajo (verde = hecho, amarillo = ahora);
+  - «Saltar ⏭» (pide confirmar);
+  - resumen final de una línea por punto;
+  - con una ventana abierta (la tienda), la tarjeta baja abajo para no tapar el título.
+- **Flechas que se mueven:** en vez de la línea, una fila de flechas ▲ amarillas tumbadas en el suelo que avanzan desde ti hasta el objetivo (aparecen y desaparecen suavemente en los extremos, 160 studs como mucho). La flecha que bota encima del objetivo sigue igual.
+- **Icono de pala en vez de pico**, el dibujo de pala con mango dorado `rbxassetid://66677176` (`UI.ICONS.shovel`, que ya estaba pero no se usaba). Está en:
+  - la fila de la pala del HUD (abajo a la izquierda);
+  - la pestaña «Palas» de la tienda;
+  - el paso «Clic para cavar» del tutorial;
+  - el cartel del portón «PARCELAS · FÓSILES» (2 iconos a los lados).
+
+  Quitados los ⛏️ del distintivo «SIGUIENTE PALA», del aviso de la barrera y del cronómetro del evento.
+
+**Dónde:**
+- `DiamondClient.Tutorial`: `STEPS`, `buildCard` con los puntos, flechas en `buildArrow`/`pointAt` y la tarjeta baja con `Menus.isOpen`.
+- `DiamondClient.Menus`:
+  - `Menus.isOpen`;
+  - campo `icon` en las categorías;
+  - badge sin ⛏️.
+- `DiamondClient.HUD` (icono de pala, cronómetro ⏱️).
+- `DiamondClient.Main`: `TUTORIAL_SPEED` = 45 en `wantSpeed`, y aviso de la barrera con 💎.
+- `Config.TRAINING.walkBase` = 20.
+- `Workspace.Map.Lane.Gateway.Board.Title` (texto sin ⛏️ + `ShovelIcon0`/`ShovelIcon1`).
+
+**Probado:** en Play:
+- paso 2 con WalkSpeed 45 y las flechas avanzando hacia el portón (captura);
+- paso 3 con el icono de pala y «Clic para cavar»;
+- pala en el HUD, en la pestaña Palas y en el portón;
+- con la tienda abierta, la tarjeta baja abajo;
+- sin errores en la consola.
+
+**Notas:** busqué una textura de flechas en la biblioteca, pero las que cargaban se estrechaban en perspectiva, así que las flechas son piezas propias.
+
 ## 2026-10-19 · bbogatell (Claude) · Tutorial para jugadores nuevos
 **Qué:** tutorial guiado de 11 pasos, aprendiendo jugando como en *Roba un huevo* (diseño acordado con bbogatell):
 1. Bienvenida.
