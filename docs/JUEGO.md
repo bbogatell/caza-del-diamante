@@ -14,7 +14,7 @@ Después viene una **cinemática final secreta** (el diamante sube, cielo con el
 6. **En la base** lo dejas **donde quieras del suelo** (botón o F). Ahí está a salvo y **se abre con el tiempo** (10 s – 18 h, también sin estar conectado): levita, gira, brilla y suelta partículas, se agrieta al final y sale un **bicho**. Se puede **abrir ya con Robux** (precio según lo que le quede) (198 bichos, 13 rarezas, `BICHOS_DINOSAURIOS.md`). Los bichos **generan monedas cada segundo**; se pueden vender para hacer sitio.
 7. **Eventos de fósiles raros:** durante un evento hay **un fósil raro (★/★★) por servidor**, enterrado con un haz de luz. Se avisa a todos cuando alguien lo saca y se ve a través de las paredes mientras lo lleva. Da bichos dos rarezas más arriba o bichos de Evento.
 8. **Economía:** los precios de las palas siguen lo que generan los bichos: abrir la siguiente parcela cuesta lo que generan 6 bichos típicos de tu parcela en 4 min (parcela 1) … 2 h (parcela 14). Todo se ajusta en `Config` (`SHOVELS`, `DIG_VALUE`, `CREATURE_INCOME_MULT`, `FOSSIL`, `BASE`).
-9. **Velocidad:** se compra **correr** más rápido con monedas (100 niveles: de 30 a 900) o con Robux (pestaña «Velocidad» de la tienda). Andar no se mejora.
+9. **Velocidad:** se compra **correr** más rápido con monedas (100 niveles: de 30 a 600) o con Robux (pestaña «Velocidad» de la tienda). Andar no se mejora.
 10. **La pala importa en el evento:** cuanto mejor sea, más grande y más rápido cavas en el campo del diamante.
 11. **Extras:** racha diaria de 7 días, ranking «TOP NIVEL», VIP x2 monedas (los IDs de Robux están aún a 0).
 

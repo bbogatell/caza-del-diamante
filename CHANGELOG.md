@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · Velocidad máxima al correr: 600
+**Qué:** el nivel 100 de correr más rápido baja de 900 a **600**. Siguen siendo 100 niveles, los 10 primeros igual (30 → 55); el resto de la curva se suaviza: nivel 25 = 101, 50 = 218, 75 = 384, 90 = 508. Los precios no cambian.
+**Dónde:** `Config.SPEED.run.curve`.
+**Probado:** en Play: nivel 100, WalkSpeed 600 y 605 studs recorridos en 1 s.
+
 ## 2026-10-19 · bbogatell (Claude) · Correr más rápido: 100 niveles, el 100 a 900
 **Qué:** correr más rápido pasa a **100 niveles**. Los 10 primeros igual (30 → 55); luego la curva se acelera hasta **900 en el nivel 100** (nivel 25 = 110, 50 = 278, 75 = 541, 90 = 745). Precios: nivel 1 = 4.000, 10 = 53,5K, 25 = 4M, 50 = 5,4B, 75 = 7,3T, 90 = 551T, 100 = 9,8Q (más o menos un día de lo que generan los mejores bichos).
 **Dónde:** `Config.SPEED.run` (`max` 100, `curve`, `price`).
