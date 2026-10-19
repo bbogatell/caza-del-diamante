@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · seguo970 (Claude) · Icono de la tierra: cubo de tierra
+**Qué:** el icono de la tierra es ahora un **cubo de tierra** marrón con manchas y contorno oscuro (imagen que pasó seguo970), en el HUD, la Máquina de Fósiles y lo que vuela al cavar.
+**Dónde:** `DiamondClient.UIKit` → `UI.ICONS.dirt` = `rbxassetid://135332230770845` (subida desde Studio con la cuenta de seguo970: fondo blanco quitado, recortada a 512×512). `UI.dirtIcon` vuelve a ser un `UI.icon` normal.
+**Probado:** en Play: la imagen carga y se ve en el HUD y en la máquina (captura). Sin errores.
+**Notas:** la imagen es de la cuenta de seguo970; si algún día no carga en el juego publicado (permisos de la imagen), hay que subirla con la cuenta dueña del juego.
+
 ## 2026-10-19 · seguo970 (Claude) · Icono de la tierra: trozo de tierra simple
 **Qué:** el icono de la tierra (la divisa) es ahora un trozo de tierra marrón sencillo con contorno, sacado de la Creator Store, en vez del montón dibujado con piezas. Sale en el HUD, en la Máquina de Fósiles (cabecera y precios) y en lo que vuela al contador al cavar.
 **Dónde:** `DiamondClient.UIKit` → `UI.ICONS.dirt` = `rbxassetid://91931004002192` (imagen del decal «Pile Of Dirt UI Image», 80942902348690) y `UI.dirtIcon` (amplía la imagen ×2,74 y la centra, porque el dibujo solo ocupa el centro).
