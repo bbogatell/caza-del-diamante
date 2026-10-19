@@ -5,6 +5,22 @@ Hay un **diamante escondido** bajo un campo de excavación de 240×240 studs, **
 
 Después viene una **cinemática final secreta** (el diamante sube, cielo con el ganador bailando, explosión de «10.000 ROBUX», el mapa se derrumba y se pasa a un **infierno** con una puerta «COMING SOON 100.000 ROBUX»). ⚠️ **El final no se revela a los jugadores** (ni en Discord).
 
+## Tutorial
+Los jugadores nuevos hacen un tutorial guiado de 11 pasos (tarjeta arriba, flecha en el suelo y botones que brillan):
+1. Bienvenida.
+2. Ir a la parcela 1.
+3. Cavar (el primer fósil sale seguro a la 5.ª palada).
+4. Cogerlo con E.
+5. Llevarlo a la base.
+6. Dejarlo en el suelo (se abre en 8 s).
+7. Esperar al bicho.
+8. Ver que da monedas.
+9. Correr en la cinta.
+10. Comprar la pala 2 (cuesta solo 50).
+11. Resumen (Máquina de Fósiles, el diamante y el bate).
+
+Se puede saltar. Mientras dura no te pueden pegar con el bate, y la ventana del diario espera a que acabe. Premio: 1 trampa de oso y 1 poder de hielo.
+
 ## Antes del evento (estilo «Roba un huevo»)
 1. **Lobby y base:** cada jugador tiene una de las 8 parcelas del lobby como **base** (8 jugadores por servidor): todas iguales, de 50×50, y caben 12 cosas. Con monedas se puede **agrandar** dos veces (hacia atrás): 16 y 20 sitios.
 2. **El carril:** por el portón del fondo del lobby se llega a **15 parcelas compartidas**, una detrás de otra (`Config.PLOTS`, diseño en `PARCELAS_Y_FOSILES.md`). Cada una es un hoyo enorme de terreno realista con su decorado de studs, cada vez más épico. Al final está el campo del diamante.

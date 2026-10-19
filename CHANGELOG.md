@@ -2,6 +2,75 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-19 · bbogatell (Claude) · Tutorial para jugadores nuevos
+**Qué:** tutorial guiado de 11 pasos, aprendiendo jugando como en *Roba un huevo* (diseño acordado con bbogatell):
+1. Bienvenida.
+2. Ir a la parcela 1.
+3. Cavar: el primer fósil sale seguro en la 5.ª palada (un Común I).
+4. Cogerlo con E.
+5. Llevarlo a la base. Si se te cae, vuelve al paso 4. Si estás en el hoyo, brilla «Salir del hoyo».
+6. Dejarlo con un clic: el primero se abre en 8 s.
+7. Esperar al bicho.
+8. «Tu bicho te da monedas cada segundo».
+9. Correr en tu cinta (10 pasos, unos 5 s).
+10. Abrir la Tienda (se abre en Palas) y comprar la pala 2.
+11. Resumen con la Máquina de Fósiles, el diamante y el bate, y el botón «¡A jugar!».
+
+Cómo se ve:
+- Tarjeta arriba con «PASO n/11», un icono y el texto. Los textos cambian en móvil («Toca…»).
+- Línea naranja en el suelo hasta el destino y flecha que bota encima.
+- El botón del HUD que hay que usar brilla y tiene una mano que lo señala.
+- «Saltar tutorial» pide confirmar con un segundo clic y no da premio.
+
+Mientras dura:
+- No te pueden pegar ni con el bate ni con la pala, ni quitarte el fósil.
+- No sale la bienvenida de siempre, y la ventana del diario se abre al terminar.
+
+Al acabar: premio de 1 trampa de oso y 1 poder de hielo. **La pala 2 cuesta ahora 50** (antes 2.200), para que el tutorial la compre con las monedas del primer bicho.
+
+Quién lo hace:
+- Los jugadores nuevos.
+- Los guardados antiguos sin progreso (ni monedas, ni tierra, ni pala 2, ni velocidad, ni nada en la base).
+- Los demás jugadores no lo ven.
+
+**Dónde:**
+- Nuevo `DiamondServer.Tutorial`:
+  - `p.tutorial` (número de paso o `"done"`) y el atributo `Tutorial`;
+  - `reach`, `back`, `finish` y `clientNext`;
+  - ganchos `onDig` y `onTreadStep`, y `protected`;
+  - `resolve` (lo llama `Data.load`);
+  - atributo `BaseCenter` para la flecha.
+- Ganchos en `Fossils`:
+  - `onDig` fuerza el fósil con `Fossils.tutorialFossil`;
+  - `pickUp` avanza el paso;
+  - `drop` vuelve al paso 4;
+  - `hit` no quita el fósil durante el tutorial.
+- Ganchos en `Bases.place` (abre en 8 s) y `hatch`, en `Training` (pasos en la cinta) y en `Items.useBat` (salta a quien hace el tutorial).
+- `Main`:
+  - el golpe de pala no toca a quien hace el tutorial;
+  - `BuyShovel` avanza el paso;
+  - handlers `TutNext` y `TutSkip`;
+  - comando `/tutorial`.
+- Nuevo `DiamondClient.Tutorial` (ScreenGui propio `Tutorial`, DisplayOrder 8, encima de los menús).
+- `DiamondClient.Main`: lo arranca, y la bienvenida y el diario esperan.
+- `Config.SHOVELS[2].price` = 50.
+
+**Probado:** en Play, el tutorial entero con un jugador nuevo:
+- la tarjeta sale y el diario no;
+- paso 2 con la flecha;
+- 5 paladas → fósil y paso 4;
+- E → paso 5, con la flecha a la base;
+- entrar → paso 6;
+- clic en el suelo → paso 7, y a los 8 s sale el Proto Bebé (+3/s) → paso 8 → paso 9 con brillo en la velocidad;
+- 6 s en la cinta → paso 10;
+- Tienda (se abre en Palas) → comprar la pala 2 → resumen → «¡A jugar!»: +1 trampa, +1 hielo y se abre el diario.
+
+También probados `/tutorial` y «Saltar tutorial» con la tienda abierta (se quita sin premio). Sin errores en la consola.
+
+**Sin probar:** que el bate no te toque durante el tutorial (hacen falta 2 jugadores) y el guardado real del paso.
+
+**Notas:** en Studio no se carga el guardado, así que cada Play sale el tutorial. Para no verlo, pon `NoTutorial` = true en `Workspace` o sáltalo (está en PRUEBAS).
+
 ## 2026-10-19 · bbogatell (Claude) · Ronda de cambios jugando: tienda, x2 Velocidad, carteles, modo lento, luz, inercia y Máquina de Fósiles
 **Qué** (lo pidió bbogatell mientras jugaba):
 - **Tienda:**

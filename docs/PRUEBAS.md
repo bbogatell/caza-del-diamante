@@ -17,6 +17,9 @@
 | `/dinero <cantidad>` | Te da monedas: `/dinero 5000`, `/dinero 2.5m`, `/dinero 1b`, `/dinero 3t`. |
 | `/empezar` | Abre la barrera del evento del diamante ya. |
 | `/rayosx` | Muestra dónde está el diamante escondido. |
+| `/tutorial` | Empieza el tutorial otra vez desde el paso 1. |
+
+**Tutorial en Studio:** en Studio no se carga el guardado, así que cada Play eres un jugador nuevo y sale el tutorial. Para no verlo mientras pruebas otras cosas, pon el atributo `NoTutorial` = true en `Workspace` (en Edit), o pulsa «Saltar tutorial» dos veces.
 
 ## Desde un script (`Request:InvokeServer("Debug", ...)`, solo Studio)
 `"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `Request:InvokeServer("PlaceFossil")` deja el que llevas · `Request:InvokeServer("DropFossil")` lo suelta en el suelo (como el botón o la G) · `"UpgradeTread", "cash"|"robux"` · `"BuyTrail"` · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"diamond"`.

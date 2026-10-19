@@ -34,7 +34,7 @@
 | # | Pala | Rareza | Parcela | Papel | Precio | Radio | Ritmo (s) | Daño |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Pala de Rama de Helecho | Común | 1 | abre la 1 | 0 | 4,50 | 0,900 | 10 |
-| 2 | Pala de Hueso de Dodo | Común | 1 | mejora | 2.200 | 4,65 | 0,883 | 11 |
+| 2 | Pala de Hueso de Dodo | Común | 1 | mejora | 50 (muy barata: se compra en el tutorial) | 4,65 | 0,883 | 11 |
 | 3 | Pala de Junco del Pantano | Común | 2 | abre la 2 | 3.600 | 4,80 | 0,867 | 12 |
 | 4 | Pala de Caparazón | Poco común | 2 | mejora | 5.500 | 4,95 | 0,850 | 14 |
 | 5 | Pala de Amonites | Poco común | 3 | abre la 3 | 10K | 5,10 | 0,834 | 15 |
