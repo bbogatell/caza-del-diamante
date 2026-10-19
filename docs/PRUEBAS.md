@@ -33,6 +33,7 @@
 - Un `require()` de un módulo del servidor desde `execute_luau` crea **otra copia** del módulo: para probar, usa los remotes o los comandos.
 - Las capturas de pantalla pueden llegar con varios segundos de retraso.
 - Si una `screen_capture` con `camera_position` falla (timeout), la cámara de Studio puede quedarse en `Scriptable` y **no se puede mover**. Arreglo (barra de comandos o `execute_luau` en Edit): `workspace.CurrentCamera.CameraType = Enum.CameraType.Fixed`. Cada persona tiene su propia cámara: hay que hacerlo en cada Studio.
+- **Iconos de la Creator Store:** un `ImageLabel` no carga el id del decal, necesita el id de la imagen. Para sacarlo: `InsertService:LoadAsset(idDelDecal)` en el servidor del Play y leer `Decal.Texture` (con `insert_asset` en Edit sale el mismo id del decal, que no sirve). Comprueba que carga con `ContentProvider:PreloadAsync` (estado `Success`).
 - No cambies `RightGrip.Part0` de una herramienta: Roblox la suelta y se cae del mundo.
 - Un Highlight `AlwaysOnTop` tapa las partículas que hay delante del modelo.
 - El Bloom del juego quema de blanco los Neon claros y el `Fire` de Roblox: usa partículas y colores menos intensos.
