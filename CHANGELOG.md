@@ -2,6 +2,43 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Primer bicho hecho a mano: 191 · Mecha Krakenoide
+**Qué** (lo pidió bbogatell): modelo final del bicho 191 a partir de su ficha en `BICHOS_DINOSAURIOS.md` y de una imagen de referencia de ChatGPT.
+- **Modelo** (20,6 studs de alto, 293 piezas): pedestal metálico con bordes de neón, centro plateado del que salen 8 tentáculos de cable negro con anillos de neón morado y garras mecánicas de 3 dedos. Las 2 delanteras van levantadas con las garras abiertas; las otras 6 se apoyan en el suelo y levantan la punta. Tiene torso blindado con núcleo de reactor, hombreras, rejillas de escape, cuello de cable y cabeza de mosasaurio de acero con la boca abierta, dientes, ojos de neón morado, cresta y 2 antenas.
+- **Partículas y efectos (12, los de la ficha):**
+  1. Rayos entre tentáculos (5 Beams que parpadean y se curvan).
+  2. Chispas.
+  3. Humo de las rejillas.
+  4. Vapor del cuello.
+  5. Destellos.
+  6. Luces (núcleo, ojos y pedestal).
+  7. Aceite que gotea de las garras.
+  8. Relámpagos (emisor y rayos en zigzag entre garras).
+  9. Burbujas.
+  10. Anillos (2 anillos de neón que giran).
+  11. Pulsos (el núcleo late y sale una onda del pedestal cada 4 s).
+  12. Zumbido eléctrico (sonido en bucle, se oye de cerca).
+
+  Lleva además el contorno morado de los Mutantes.
+- **Animación en reposo:**
+  - respira (1 → 1,03 en 2 s);
+  - parpadea cada 3-5 s;
+  - mueve la cabeza y abre y cierra la mandíbula;
+  - los tentáculos se balancean con una onda que baja por el cable;
+  - las antenas vibran con el zumbido.
+
+**Cómo:**
+- `ServerStorage.Models.Bichos["191"]` es el modelo final (Looks ya usaba esa carpeta si existe).
+- Lo construye `ServerStorage.CreatureBuilders.MechaKrakenoide`; para regenerarlo, ejecutar `require(game.ServerStorage.CreatureBuilders.MechaKrakenoide)()` en la barra de comandos.
+- La animación la hace cada cliente: el nuevo `ReplicatedStorage.CreatureRigs` define los tentáculos y la animación, y el nuevo `StarterPlayerScripts.CreatureAnim` la aplica a los modelos con la etiqueta `CreatureRig`. Tiene en cuenta la escala, porque las bases encogen los bichos, y el modelo es `Atomic` para StreamingEnabled.
+
+**Probado:** en Play:
+- a tamaño real en el lobby, se anima (los tentáculos se mueven y salen relámpagos);
+- en una base, encogido, también se anima;
+- sin errores.
+
+**Ojo:** en las bases todos los bichos se encogen para caber en su hueco (9 studs de ancho y 16 de alto, `Bases.draw` → `Looks.creature(b, 9, 16)`). Este, al ser tan ancho por los tentáculos, se queda en ~5 studs de alto. Hay que decidir si los bichos grandes pueden ocupar más sitio.
+
 ## 2026-10-20 · bbogatell (Claude) · Máquina de Fósiles nueva: modelo 3D hecho con código
 **Qué** (lo pidió bbogatell): rediseño de la Máquina de Fósiles.
 - **Referencia:** imagen hecha con ChatGPT (la segunda que generó): máquina morada y dorada estilo bloques con tolva de tierra, tubería, engranajes, cúpula de cristal con fósiles, pantalla «TIERRA → FÓSIL», palanca y cinta de salida.
