@@ -13,6 +13,7 @@
 - **Neon:** solo en lo que brilla (ojos mágicos, cristales, lava, runas, venas de energía, núcleos).
 - **Ojos:** expresivos, de estilo cartoon (esfera blanca, pupila y brillo). En los bichos fieros, ceño marcado y pupila pequeña; en los adorables, ojos grandes.
 - **Montaje:** todo anclado, con una pieza raíz invisible (`Root`) en la base para colocarlo en el pedestal.
+- **Sin sonido:** los bichos no llevan ningún sonido. Si la ficha pide algo como «zumbido», se hace visual (vibración, pulsos).
 - **Animación en reposo (todos):** respira (escala 1 → 1,03 en 2 s), parpadea cada 3-5 s y balancea la cola. Cada ficha añade su animación propia.
 
 ### Proporciones
