@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Los bichos salen a tamaño real en la base
+**Qué** (lo decidió bbogatell): en la base los bichos ya no se encogen para caber en un hueco de 9×16 studs, sino que salen a su tamaño real (la altura de su rareza o la del modelo hecho a mano). Los grandes ocupan más sitio, y no pasa nada si se montan unos encima de otros. El Mecha Krakenoide sale con sus 20 studs.
+
+**Dónde:** `DiamondServer.Bases` (`draw`: `Looks.creature(b)` sin límites).
+
+**Probado:** en Play, un fósil Mutante abierto con `/abrir` da un Mecha Cocodonte de 13 studs, y el Krakenoide sale de 20,6 en la base (captura). Sin errores.
+
+**Ojo:** los Divinos genéricos miden hasta 32 studs, así que una base llena de bichos grandes estará muy apretada.
+
 ## 2026-10-20 · bbogatell (Claude) · Primer bicho hecho a mano: 191 · Mecha Krakenoide
 **Qué** (lo pidió bbogatell): modelo final del bicho 191 a partir de su ficha en `BICHOS_DINOSAURIOS.md` y de una imagen de referencia de ChatGPT.
 - **Modelo** (20,6 studs de alto, 293 piezas): pedestal metálico con bordes de neón, centro plateado del que salen 8 tentáculos de cable negro con anillos de neón morado y garras mecánicas de 3 dedos. Las 2 delanteras van levantadas con las garras abiertas; las otras 6 se apoyan en el suelo y levantan la punta. Tiene torso blindado con núcleo de reactor, hombreras, rejillas de escape, cuello de cable y cabeza de mosasaurio de acero con la boca abierta, dientes, ojos de neón morado, cresta y 2 antenas.
