@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bicho 8 · Leaelly Polar hecho a mano
+
+- **Qué:** modelo hecho a mano del bicho 8 (Leaelly Polar, Poco común, 4,3 studs, 96 piezas), fiel a su hoja de ChatGPT. Es un bípedo erguido blanco nieve con manchas y rayas grises en el lomo, ojos azules enormes, orejeras rosa con diadema, una bufanda de anillos blancos y azul hielo enrollada al cuello y una cola larguísima de anillos que se enrosca hacia arriba al final. Las garras son grises y lleva puños azules en los tobillos. Le caen copos de nieve encima (ritmo 4, textura de copo `rbxassetid://1190797289`). Tirita de frío y echa vaho por la boca, mueve la cola y pasea por la base. Sin sonidos.
+- **Dónde:** `ServerStorage.CreatureBuilders.LeaellyPolar` → `ServerStorage.Models.Bichos["8"]`. `ReplicatedStorage.CreatureRigs` (Generic): nuevo atributo `Shiver` y emisor `Breath` para tiritar y echar vaho. Docs: `GUIA_BICHOS.md` (también la nota de medir la altura antes de añadir piezas invisibles de efectos), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 8 base` + `/abrir`: tirita, pasea 2 studs y salen la nieve y el vaho. Sin errores en la consola.
+- **Notas:** el siguiente es el 9 (Dimorfo Bocazas, Raro, 4,8 studs).
+
 ## 2026-10-20 · bbogatell (Claude) · Bicho 7 · Ovi Ladrón hecho a mano
 
 - **Qué:** modelo hecho a mano del bicho 7 (Ovi Ladrón, Poco común, 4,6 studs, 117 piezas), fiel a su hoja de ChatGPT. Es un oviraptor naranja de bloques inclinado hacia delante, con cuello largo, ojos enfadados, pico amarillo curvo y una cresta roja alta en media luna. Abraza con los brazos un huevo blanco con motas azules y cara de pillo. Los brazos llevan alas de plumas amarillas con la punta negra, la cola acaba en un abanico de plumas y las patas tienen garras gris oscuro. Destellos blancos alrededor del huevo (ritmo 2). Mira a los lados escondiendo el huevo, mueve la cola y pasea por la base. Sin sonidos.
