@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Guía: animación optimizada con huesos
+
+- **Qué:** nueva sección «Animación optimizada: huesos (OBLIGATORIO para todos los bichos)» en la guía de los bichos. Explica por qué se hace, con los datos de la prueba de rendimiento, y cómo funciona: el cliente agrupa las piezas en huesos invisibles anclados, suelda el resto con `WeldConstraint` y cada frame solo mueve los huesos con `BulkMoveTo`. Incluye la tabla de grupos del rig `Generic` por `Role`, las reglas para hacer bichos (todo lo que se mueva distinto necesita su `Role`, solo los `Eye` cambian de tamaño, no soldar en el constructor...), cómo hacer un rig propio con huesos y cómo comprobarlo con `/llenar`.
+- **Dónde:** `docs/GUIA_BICHOS.md` (sección 3).
+- **Notas:** el siguiente paso es pasar el rig `Generic` y el del Mecha Krakenoide a este sistema.
+
 ## 2026-10-20 · bbogatell (Claude) · Prueba: Mecha Krakenoide con animación optimizada (comparativa)
 
 - **Qué:** versión de prueba de la animación del Mecha Krakenoide que mueve «huesos» en vez de piezas. El cliente agrupa las 293 piezas en 85 grupos: cuerpo, cabeza, mandíbula, cada velocidad de anillo, cada segmento de tentáculo y cada garra. Cada grupo tiene una pieza invisible anclada, y el resto de piezas del grupo se desanclan y se sueldan a ella con `WeldConstraint`, solo en el cliente. Cada frame solo se mueven los huesos y los ojos (87 en vez de 293). Diferencias: la respiración es un pequeño sube y baja de todo el cuerpo en vez de hincharse, y las antenas no vibran. Se mantienen los rayos y el pulso.

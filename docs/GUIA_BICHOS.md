@@ -87,7 +87,8 @@ Las piezas se marcan con el atributo `Role`:
 - `"Tail"`: se balancea alrededor de `TailPivot` (`TailSway` = radianes).
 - `"Wing"`: aletea alrededor de su propio atributo `WingPivot` (y más rápido al caminar).
 - `"Leg"`: se balancea alrededor de su `LegPivot` (cadera) al caminar. `Side` = 1 o −1: en bípedos una pata cada lado; **en cuadrúpedos, las patas en diagonal comparten Side** (delantera izquierda y trasera derecha = 1, las otras = −1).
-- Lo demás respira con el cuerpo (1 → 1,03 en 2 s) y, al caminar, sube/baja y se bambolea.
+- Lo demás va con el cuerpo: respira (sube y baja un poco cada 2 s) y, al caminar, sube/baja y se bambolea.
+- Cada grupo se mueve como un bloque rígido (ver «Animación optimizada: huesos» más abajo).
 
 Atributos del modelo: `HeadPivot`, `TailPivot`, `TailSway` (0,35), `HeadTilt` (0,35; 0 = nada), `StepRate` (10; patas cortas = 12-13), `Waddle` (0,08; gordos 0,14), `Hop` (altura de saltitos nerviosos, p. ej. 0,35; nil = no), `Yawn` (ángulo del bostezo, p. ej. 0,6) + `JawPivot`, `Chew` (ángulo de la mandíbula al masticar, p. ej. 0,35; las piezas con `Role = "Snack"`, como una hojita, solo se ven mientras mastica), `Stretch` (inclinación hacia delante del estiramiento de corredor, p. ej. 0,6) + `BodyPivot` (las caderas), `WingFlap` (amplitud del aleteo de las piezas `Role = "Wing"`, 0,12 por defecto; p. ej. 0,22) y `WingSpeed` (velocidad del aleteo, 2,2 por defecto), `Sneak` (giro de cabeza, p. ej. 0,65, de la mirada pilla a un lado y a otro cada pocos segundos; las piezas con `Role = "Hug"`, como unos brazos abrazando un huevo, giran al revés alrededor de `BodyPivot`, como escondiéndolo), `Shiver` (cuánto se sacude de lado al tiritar de frío, p. ej. 0,06; un `ParticleEmitter` llamado `Breath` con `Rate = 0` en la boca echa vaho al tiritar y de vez en cuando), `Scream` (ángulo de la mandíbula al chillar: levanta la cabeza y abre y cierra el pico 3 veces; usa `Role = "Jaw"` y `JawPivot`), `Headbutt` (inclinación del cabezazo alrededor de `BodyPivot`; un `ParticleEmitter` llamado `Stars` con `Rate = 0` suelta 3 estrellitas al golpear) y `Jog` (segundos que corre en el sitio, moviendo las patas sin avanzar). Los pivotes se dan en las coordenadas del constructor (antes del `ScaleTo`): el rig ya tiene en cuenta la escala.
 
@@ -96,7 +97,46 @@ Atributos del modelo: `HeadPivot`, `TailPivot`, `TailSway` (0,35), `HeadTilt` (0
 **Caminar según el tipo** (ver la guía común del documento): con patas → `Role = "Leg"`; voladores → `Wing` (ya baten más al caminar); sin patas (serpientes, peces, tentáculos, orugas) → no pongas `Leg`: se desliza solo; si quieres que algo ondule más al moverse, haz un rig propio.
 
 ### Rig propio (bichos complicados)
-Para cosas que el Generic no hace (tentáculos articulados, piezas que orbitan, rayos entre piezas...), añade en `ReplicatedStorage.CreatureRigs` una tabla `Rigs.MiRig = {init = function(model) ... end, animate = function(model, st, t) ... end}` y pon `Kit.finish(m, "MiRig")`. Mira `Rigs.MechaKrakenoide`: `init` guarda la posición de reposo de cada pieza relativa a la Root dividida por `model:GetScale()`; `animate` calcula los CFrames y los mueve todos con `workspace:BulkMoveTo`. Usa `st.walking` y `st.dt` (los pone CreatureAnim). Los rayos en zigzag y las ondas del Krakenoide están en `CreatureAnim` (bloque «extras of the Mecha Krakenoide»).
+Para cosas que el Generic no hace (tentáculos articulados, piezas que orbitan, rayos entre piezas...), añade en `ReplicatedStorage.CreatureRigs` una tabla `Rigs.MiRig = {init = function(model) ... end, animate = function(model, st, t) ... end}` y pon `Kit.finish(m, "MiRig")`. Mira `Rigs.MechaKrakenoide`: `init` agrupa las piezas en **huesos** (ver la sección siguiente) y `animate` calcula dónde va cada hueso y los mueve todos a la vez con `workspace:BulkMoveTo`. Usa `st.walking` y `st.dt` (los pone CreatureAnim). Los rayos en zigzag y las ondas del Krakenoide están en `CreatureAnim` (bloque «extras of the Mecha Krakenoide»).
+
+### Animación optimizada: huesos (OBLIGATORIO para todos los bichos)
+
+**Por qué:** antes cada rig movía **todas las piezas una a una en cada frame**. En la prueba de rendimiento (8 bases llenas con `/llenar`), eso costaba unos 2,8 µs por pieza: con 20 bichos por base (160 bichos, unas 15.000 piezas) la animación se comía 42 ms por frame y el juego bajaba a 16-20 FPS. Ahora se mueven **huesos**: unas pocas piezas invisibles por bicho, y el motor arrastra el resto. Con el Mecha Krakenoide, la animación pasó de 0,58 ms a 0,14 ms por frame (293 piezas movidas → 87).
+
+**Cómo funciona (lo hace el rig en el cliente, en `init`; el constructor no tiene que soldar nada):**
+1. Para cada **grupo** de piezas que se mueven juntas, el rig crea un **hueso**: una `Part` invisible, anclada y sin colisión llamada `Bone`, puesta en el pivote del grupo (`HeadPivot`, `TailPivot`, cada `WingPivot`, cada `LegPivot`...).
+2. Las piezas del grupo se **desanclan** (`Anchored = false`) y se **sueldan** a su hueso con un `WeldConstraint`. Todo esto solo en el cliente: en el servidor el modelo sigue anclado y sin huesos.
+3. En cada frame, `animate` calcula solo el CFrame de cada hueso y los mueve todos juntos con `workspace:BulkMoveTo(huesos, cframes, Enum.BulkMoveMode.FireCFrameChanged)`. Las piezas soldadas van detrás solas.
+
+**Grupos del rig `Generic`** (salen solos del atributo `Role` de cada pieza):
+
+| Grupo (un hueso) | Piezas | Pivote del hueso | Cómo se mueve |
+|---|---|---|---|
+| Cuerpo | sin `Role` (y lo que no sea de otro grupo) | la Root | respira (sube y baja un poco), se bambolea al andar, saltitos, tiritar, cabezazo, estiramiento |
+| Cabeza | `Head` y `Snack` | `HeadPivot` | va con el cuerpo y gira (mira, tuerce, chilla, mirada pilla) |
+| Mandíbula | `Jaw` | `JawPivot` | va con la cabeza y se abre (bostezo, masticar, chillido) |
+| Cola | `Tail` | `TailPivot` | va con el cuerpo y se balancea |
+| Un ala por cada `WingPivot` distinto | `Wing` | su `WingPivot` | va con el cuerpo y aletea |
+| Una pata por cada `Side` + `LegPivot` distinto | `Leg` | su `LegPivot` | se balancea al andar (no respira ni se bambolea) |
+| Abrazo | `Hug` | `BodyPivot` | va con el cuerpo y gira al revés que la cabeza en la mirada pilla |
+| **Ojos** (no son hueso) | `Eye` | — | **se quedan anclados** y se mueven uno a uno con la cabeza, porque parpadean cambiando de tamaño |
+
+**Reglas al hacer un bicho:**
+- **Todo lo que tenga que moverse distinto del resto necesita su propio `Role` y su pivote.** Ya no hay movimiento pieza a pieza: las piezas de un mismo grupo se mueven como un bloque rígido. Una cola larga que se dobla en curva no puede ser un solo grupo `Tail`: haz un rig propio con un hueso por segmento (como los tentáculos del Krakenoide).
+- **Solo las piezas `Eye` pueden cambiar de tamaño** durante la animación (las demás van soldadas). Si una pieza tiene que encogerse, latir o cambiar de forma, hazla `Eye` o ponla en un rig propio que la deje anclada y la mueva aparte.
+- Cambiar `Transparency` o `Color` de piezas soldadas sí se puede (lo hacen las `Snack` y el núcleo del Krakenoide).
+- No llames `Bone` a ninguna pieza del modelo, y no sueldes ni desanclas nada en el constructor: lo hace el rig en el cliente.
+- Los `ParticleEmitter`, luces y `Beam` van en piezas normales y siguen al grupo de su pieza.
+- La respiración es un pequeño **sube y baja** de todo el cuerpo (antes cada pieza se separaba un poco del centro). No intentes imitar el hinchado pieza a pieza.
+
+**Rig propio con huesos** (mira `Rigs.MechaKrakenoide`):
+- En `init`, crea los huesos con `newBone(model, cframe)` y suelda cada pieza con `attach(bone, part)`. Pon cada hueso donde la pieza estaría con el desplazamiento 0: si una pieza va en `hueso * Off`, el hueso es `pieza.CFrame * Off:Inverse()` (con `Off` escalado por `model:GetScale()`).
+- En `animate`, mete en la lista de `BulkMoveTo` **solo los huesos** (y las piezas que se queden ancladas a propósito, como los ojos).
+- Los cálculos van a escala 1 y relativos a la Root: multiplica las posiciones por `model:GetScale()` (helper `scaled(cf, s)`) antes de mover.
+
+**Distancia y cámara:** `CreatureAnim` solo anima los bichos que están a menos de 180 studs de la cámara **y** dentro de la pantalla (con margen). Los demás se quedan quietos en su última pose hasta que vuelven a verse.
+
+**Cómo comprobarlo:** en Play, `/llenar 20` (8 bases × 20 bichos) y mide desde el cliente los FPS y cuánto tarda una pasada de animación (ver «Prueba de rendimiento» en `CHANGELOG.md`). `/llenar 0` los quita.
 
 ## 4. Partículas y efectos
 
