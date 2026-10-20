@@ -4,7 +4,7 @@
 >
 > Cada ficha trae lo necesario para pedir el modelo 3D a Claude. **Antes de modelar cualquiera, aplica la guía de estilo de abajo (la parte común y la fila de su rareza)** y luego la ficha del bicho.
 
-## Proceso para hacer un bicho (hechos: 1, 191)
+## Proceso para hacer un bicho (hechos: 1, 2, 191)
 
 1. ChatGPT genera una ficha visual del bicho (pose principal, 4 vistas, animación en reposo y partículas) a partir de esta ficha.
 2. Claude construye el modelo con un script en `ServerStorage.CreatureBuilders.<Nombre>` (usa `CreatureBuilders.Kit`), que lo guarda en `ServerStorage.Models.Bichos.<id>`.

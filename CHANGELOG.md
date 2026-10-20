@@ -2,6 +2,20 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bicho 2 · Compi hecho a mano
+**Qué:** segundo bicho de la lista, con su ficha visual de ChatGPT.
+- **Compi** (Común, chibi, 3,6 studs, 49 piezas, sin partículas):
+  - bípedo pequeñito inclinado hacia delante, verde lima con studs;
+  - cabeza grande y redonda con ojos grandes de cartoon, mofletes y 4 dientecitos;
+  - barriga amarillo crema y rayas verde oscuro en la cabeza, el lomo y la cola;
+  - bracitos de 2 dedos y cola larga de 4 segmentos.
+- **Animaciones:** respira, parpadea, balancea la cola, mira alrededor y camina por la base con pasitos rápidos. Su animación propia son los **saltitos nerviosos**: cada pocos segundos, cuando está quieto, da 2-3 saltitos.
+- **Rig genérico:** nuevo atributo `Hop` (altura de los saltitos) para los bichos que saltan.
+
+**Dónde:** `ServerStorage.CreatureBuilders.Compi`, `ServerStorage.Models.Bichos["2"]` y `ReplicatedStorage.CreatureRigs` (Generic: `Hop`).
+
+**Probado:** en Play, `/bicho 2 base` + `/abrir`: sale en la base, se pasea y salta (los pies suben 0,3 studs). Sin errores.
+
 ## 2026-10-20 · bbogatell (Claude) · Los bichos se pasean por la base (animación de caminar)
 **Qué** (lo pidió bbogatell):
 - Los bichos hechos a mano se pasean por la base: de vez en cuando caminan despacio a un punto cercano dentro de un círculo pequeño alrededor de donde se dejaron (2,5-7 studs según su tamaño), se giran hacia donde van y se paran unos segundos. Solo en las bases, no en las vistas previas.
