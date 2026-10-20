@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Altura propia para cada bicho
+
+- **Qué:** las 198 fichas tienen ahora una línea `- **Altura:** N studs` con su altura exacta, elegida según la especie, la forma (bebés y bichos bajos y anchos más bajos; cuellos largos, crestas y alas más altos) y el valor dentro de su rareza. Casi todas caen en el rango de la tabla «Escalada por rareza» y como mucho se salen un poco. Los bichos ya hechos (1-6 y 191) mantienen la altura con la que se construyeron, y los especiales (175-198) la que ya ponía su ficha.
+- **Dónde:** `docs/BICHOS_DINOSAURIOS.md` (fichas y nota en la tabla de rarezas), `docs/GUIA_BICHOS.md` (usar la altura de la ficha al escalar y en el prompt de ChatGPT).
+- **Probado:** comprobado que las 198 fichas tienen su línea de altura.
+- **Notas:** el siguiente bicho por hacer es el 7 (Ovi Ladrón, 4,6 studs).
+
 ## 2026-10-20 · bbogatell (Claude) · Bicho 6 · Micro Raptor hecho a mano
 
 - **Qué:** modelo hecho a mano del bicho 6 (Micro Raptor, Poco común), fiel a la hoja de referencia: raptor negro inclinado hacia delante, ojo amarillo enfadado, cresta de 3 plumas, 4 alas (brazos y patas emplumadas) con puntas azul eléctrico, cola larga con abanico de plumas y garras grises. Destellos azules en las puntas de las alas (rate 3 en total). Bate las alas suavemente, mueve cabeza y cola y pasea por la base. Sin sonidos.
