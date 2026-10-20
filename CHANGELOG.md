@@ -2,6 +2,9 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Guía para hacer los bichos
+**Qué:** nueva `docs/GUIA_BICHOS.md` con todo el proceso para que otro Claude siga haciendo los bichos igual: ficha visual en ChatGPT (cuenta, prompt, límite de imágenes), constructor con `CreatureBuilders.Kit` y convenciones, rig `Generic` (roles y atributos), rigs propios, caminar, partículas y texturas que funcionan, cómo probarlo con `/bicho N base` + `/abrir`, y cómo registrarlo. El siguiente bicho es el 4.
+
 ## 2026-10-20 · bbogatell (Claude) · Bicho 3 · Proto Bebé hecho a mano
 **Qué:** tercer bicho de la lista, con su ficha visual de ChatGPT.
 - **Proto Bebé** (Común, chibi de bebé, 3,4 studs, 41 piezas, sin partículas):

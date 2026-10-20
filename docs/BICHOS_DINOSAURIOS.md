@@ -6,6 +6,8 @@
 
 ## Proceso para hacer un bicho (hechos: 1, 2, 3, 191)
 
+**Guía completa paso a paso: [`GUIA_BICHOS.md`](GUIA_BICHOS.md).**
+
 1. ChatGPT genera una ficha visual del bicho (pose principal, 4 vistas, animación en reposo y partículas) a partir de esta ficha.
 2. Claude construye el modelo con un script en `ServerStorage.CreatureBuilders.<Nombre>` (usa `CreatureBuilders.Kit`), que lo guarda en `ServerStorage.Models.Bichos.<id>`.
 3. Animación: los sencillos usan el rig `Generic` de `ReplicatedStorage.CreatureRigs` (piezas marcadas con el atributo `Role` = Head/Eye/Tail/Wing; atributos del modelo `HeadPivot`, `TailPivot`, `TailSway`, `HeadTilt`); los complicados tienen su propio rig.
