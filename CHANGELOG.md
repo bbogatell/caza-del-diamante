@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Tutorial: flechas del suelo bien orientadas e icono de chincheta
+**Qué** (lo pidió bbogatell):
+- Las flechas del suelo del tutorial salían giradas (eran el carácter «▲» en una SurfaceGui, que no apuntaba hacia donde iban). Ahora cada flecha es una **V de 2 barras de neón naranja** que apunta siempre al destino y avanza hacia él.
+- El icono del paso «Ve a la Parcela 1» era la flecha azul ➡️; ahora es una chincheta 📍.
+
+**Dónde:** `DiamondClient.Tutorial` (`buildArrow`: barras con el atributo `Off` = posición dentro de la flecha; `STEPS[2].icon`).
+
+**Probado:** en Play, paso 2: las V apuntan hacia el portón, vistas desde arriba y desde detrás del jugador (capturas). Sin errores.
+
 ## 2026-10-19 · bbogatell (Claude) · Estelas rehechas: cada una con su tema (rayos, alas, órbitas, huellas…)
 **Qué** (bbogatell pidió que no fueran solo cambios de color): las 20 estelas son nuevas y cada una tiene algo propio:
 
