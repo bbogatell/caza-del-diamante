@@ -12,6 +12,7 @@
 - [ ] Borrar `StarterPlayerScripts.DebugLevelKey` (o dejarlo, solo funciona en Studio).
 
 ## Sin probar
+- [ ] Pala 30 nueva (201 piezas, alas que aletean): rendimiento en móvil y cómo se ve en la tienda.
 - [ ] Con **2 jugadores**: el bate (empuje y tirar el fósil), la trampa y el hielo sobre otro jugador.
 - [ ] El evento del diamante y la cinemática final con el campo en su sitio nuevo (z −3208).
 - [ ] Guardado real de la base y la velocidad (DataStore apagado en Studio) y que los fósiles se abran estando desconectado.

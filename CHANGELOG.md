@@ -2,6 +2,18 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · seguo970 (Claude) · Pala 30 nueva: Pala Divina del Diamante (como el render)
+**Qué:** la pala 30 se ha rehecho siguiendo el render que se hizo con IA (`Downloads/Pala_Divina_render.png` de seguo970):
+- **Hoja:** diamante facetado blanco brillante con un diamante pequeño azul brillando dentro y un engaste de oro en arco con gemas moradas.
+- **Mango y empuñadura:** mango de oro con tramos de cristal, anillas, nudos con gemas moradas y cadenitas; empuñadura de corona de oro con 6 puntas, gema morada y remate brillante.
+- **Adornos animados:** alas de ángel blancas que **aletean**, halo doble que gira, 4 anillos de luz con bolitas moradas (uno alrededor del diamante y tres inclinados en el mango) y un mini T-Rex de cristal morado que vuela alrededor.
+- **Partículas y luz:** 9 emisores (arcoíris, polvo de diamante, destello, nebulosa, plumas de luz, chispas doradas, estrellas, estela del T-Rex) y 3 luces.
+- **Al cavar con ella:** columna de luz, onda blanca y destello arcoíris en el suelo (lo ven todos los que estén cerca).
+La forma la usan la mano y la vista previa de la tienda (los dos salen de `ShovelLook`).
+**Dónde:** `ReplicatedStorage.ShovelLook` → `L[30]` rehecho, nuevas ayudas `ring` y `flap` (piezas que oscilan alrededor de un eje: atributos de la Weld `Root`, `Axis`, `Amp`, `FlapSpeed` y etiqueta `ShovelFlap`; `Root` se escala con la pala). `StarterPlayerScripts.ShovelFx` → anima `ShovelFlap` y hace el efecto al cavar de las palas de `DIG_FX` (ahora solo `L30`), escuchando el `Push` «SwingAnim».
+**Probado:** en Play: `Debug "level" 30` da la pala, 201 piezas, 89 piezas girando y 38 aleteando (se mueven), la hoja queda por encima de los pies al llevarla; cavando en la parcela 1 sale el efecto en cada palada; capturas de la pala y del golpe. Sin errores. No probado: en móvil (son muchas piezas) ni la vista de la tienda.
+**Notas:** no se ha importado el `.glb` del otro Claude: la pala está hecha con piezas dentro del juego, siguiendo el render. Para dar el efecto de cavar a otra pala, se añade a `DIG_FX` en `ShovelFx`.
+
 ## 2026-10-20 · bbogatell (Claude) · Todos los bichos animados con huesos (optimización)
 
 - **Qué:** todos los bichos (los hechos y los que vendrán) se animan ya con **huesos**, como explica la guía. Cambios:
