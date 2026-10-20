@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bicho 12 · Archie hecho a mano
+
+- **Qué:** modelo hecho a mano del bicho 12 (Archie, Archaeopteryx, Raro, 4,8 studs, 127 piezas), fiel a su hoja de ChatGPT (comparado de frente y en 3/4). Es mitad ave, mitad dinosaurio, negro azabache e inclinado hacia delante. Tiene las alas muy abiertas y levantadas, de plumas negras con una franja verde tornasol (metálica) y puntas blancas en las de fuera, y 3 garras blancas en cada muñeca. El hocico es largo y está abierto (boca roja, dientes blancos). Tiene ojo dorado, cresta de plumas en punta y gorguera verde, garras blancas en los pies y una cola de reptil con plumas a los dos lados con la punta blanca. Le caen plumas negras (ritmo 4) y suelta destellos verdes (ritmo 4). Da saltitos aleteando, mueve la cola y pasea. Sin sonidos.
+- **Dónde:** `ServerStorage.CreatureBuilders.Archie` → `ServerStorage.Models.Bichos["12"]` (sin cambios en el rig: usa `Hop` + `WingFlap`/`WingSpeed`).
+- **Probado:** en Play, con `/bicho 12 base` + `/abrir`: salta (0,38 studs), aletea, pasea 1,7 studs y están los dos emisores. Sin errores en la consola.
+- **Notas:** la primera cuenta de ChatGPT se quedó sin imágenes gratis; esta hoja se hizo con otra cuenta. El siguiente es el 13 (Dilo Abanico, Raro, 5,8 studs).
+
 ## 2026-10-20 · bbogatell (Claude) · Bichos 9, 10 y 11 hechos a mano (Dimorfo Bocazas, Cabezón Pachy, Galli Avestruz)
 
 - **Qué:** los tres primeros Raros, cada uno fiel a su hoja de ChatGPT (comparados de frente, de lado y en 3/4). Sin sonidos.
