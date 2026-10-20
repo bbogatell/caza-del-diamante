@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bichos 9, 10 y 11 hechos a mano (Dimorfo Bocazas, Cabezón Pachy, Galli Avestruz)
+
+- **Qué:** los tres primeros Raros, cada uno fiel a su hoja de ChatGPT (comparados de frente, de lado y en 3/4). Sin sonidos.
+  - **9 · Dimorfo Bocazas** (4,8 studs, 85 piezas): pterosaurio gris oscuro de pie, con alas de membrana morada abiertas hacia arriba (triángulos hechos con cuñas), un pico enorme de frailecillo a franjas negro, amarillo y naranja, abierto y con dientes blancos de dos tamaños, ojo amarillo, cresta naranja y cola fina acabada en un rombo morado. Le caen plumitas moradas de las alas (ritmo 5, textura `rbxassetid://242842525`). Chilla abriendo y cerrando el pico, aletea suave y pasea.
+  - **10 · Cabezón Pachy** (5,6 studs, 73 piezas): bípedo robusto verde oliva inclinado para embestir, con una cúpula crema enorme rodeada de pinchos grises y un vendaje blanco con cruz roja, ojos amarillos, hocico y barriga color tostado y cola gruesa. Polvo en los pies (ritmo 5). Cada pocos segundos da un cabezazo y salen 3 estrellitas amarillas.
+  - **11 · Galli Avestruz** (6,2 studs, 59 piezas): dinosaurio-avestruz de patas larguísimas gris oscuro (una levantada, corriendo), cuerpo beige con rayas marrones en el lomo, cuello largo blanco por delante, ojo amarillo grande y pico negro. Líneas de velocidad blancas hacia atrás (ritmo 8) y polvo en los pies (ritmo 5). Corre en el sitio de vez en cuando.
+- **Dónde:** `ServerStorage.CreatureBuilders.DimorfoBocazas`, `CabezonPachy` y `GalliAvestruz` → `ServerStorage.Models.Bichos["9"]`, `["10"]` y `["11"]`. `ReplicatedStorage.CreatureRigs` (Generic): nuevos atributos `Scream`, `Headbutt` (+ emisor `Stars`) y `Jog`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 9 base`, `/bicho 10 base`, `/bicho 11 base` + `/abrir`: los tres pasean. El Dimorfo abre el pico, el Pachy se inclina 0,35 rad en el cabezazo y el Galli mueve las patas. Todos los emisores están. Sin errores en la consola.
+- **Notas:** el siguiente es el 12 (Archie, Raro, 4,8 studs).
+
 ## 2026-10-20 · bbogatell (Claude) · Bicho 8 · Leaelly Polar hecho a mano
 
 - **Qué:** modelo hecho a mano del bicho 8 (Leaelly Polar, Poco común, 4,3 studs, 96 piezas), fiel a su hoja de ChatGPT. Es un bípedo erguido blanco nieve con manchas y rayas grises en el lomo, ojos azules enormes, orejeras rosa con diadema, una bufanda de anillos blancos y azul hielo enrollada al cuello y una cola larguísima de anillos que se enrosca hacia arriba al final. Las garras son grises y lleva puños azules en los tobillos. Le caen copos de nieve encima (ritmo 4, textura de copo `rbxassetid://1190797289`). Tirita de frío y echa vaho por la boca, mueve la cola y pasea por la base. Sin sonidos.
