@@ -7,6 +7,7 @@
 | `/fosil <id> base [parcela]` | Lo pone directamente en un sitio libre de tu base. |
 | `/bicho <número>` · `/bicho <número> base` | Te da un fósil (en las manos o directamente en tu base) que al abrirse da ese bicho concreto, p. ej. `/bicho 191` = Mecha Krakenoide. Úsalo con `/abrir` para verlo al momento. |
 | `/abrir` | Abre ya todos los fósiles de tu base. |
+| `/llenar [cantidad] [id]` | Prueba de rendimiento: llena las 8 bases del lobby con esa cantidad de bichos cada una (por defecto 12), alternando los bichos ya hechos a mano, o solo el bicho `id` (p. ej. `/llenar 20 191`). Solo se ven: no se guarda nada ni cambia los datos de nadie. `/llenar 0` los quita. |
 | `/evento empezar [minutos]` · `/evento terminar` | Empieza o acaba un evento de fósil raro (uno por servidor, con haz de luz). |
 | `/regenerar <1-15>` | Regenera esa parcela del carril (aviso y te saca del hoyo). |
 | `/pala <1-30>` | Te da esa pala. |

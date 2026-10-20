@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Comando /llenar para pruebas de rendimiento
+
+- **Qué:** comando de prueba `/llenar [cantidad] [id]`. Llena las 8 bases del lobby con esa cantidad de bichos cada una (por defecto 12), alternando los bichos ya hechos a mano (`ServerStorage.Models.Bichos`), o solo el bicho `id` (p. ej. `/llenar 20 191`). Los bichos pasean como los de verdad. Solo se ven: no se guarda nada ni cambia los datos de nadie. `/llenar 0` los quita. Máximo 60 por base.
+- **Dónde:** `ServerScriptService.DiamondServer.Main` (junto a `/bicho` y `/abrir`; los bichos van a la carpeta `workspace.PruebaBichos`). Docs: `PRUEBAS.md`.
+- **Probado:** en Play, `/llenar` pone 96 bichos (8 × 12) y `/llenar 0` los quita. Sin errores.
+
 ## 2026-10-20 · bbogatell (Claude) · Archie con brazos + prueba de rendimiento de los bichos
 
 - **Qué:**
