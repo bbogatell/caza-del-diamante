@@ -2,6 +2,22 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bicho 3 · Proto Bebé hecho a mano
+**Qué:** tercer bicho de la lista, con su ficha visual de ChatGPT.
+- **Proto Bebé** (Común, chibi de bebé, 3,4 studs, 41 piezas, sin partículas):
+  - cuadrúpedo rechoncho color arena con studs;
+  - gola corta y redonda marrón claro con 3 lunares oscuros;
+  - pico de loro gris con punta ganchuda y un bultito en la nariz;
+  - ojos grandes y mofletes;
+  - cola corta;
+  - cáscara de huevo blanca con el borde roto de gorrito.
+- **Animaciones:** respira, parpadea, balancea la cola, mira alrededor y camina con sus 4 patas (en diagonal). Su animación propia es el **bostezo**: cada 6-12 s abre el pico, cierra los ojos y echa la cabeza un poco atrás.
+- **Rig genérico:** papel `Jaw` (se abre alrededor de `JawPivot` con el atributo `Yawn`) y marcha de 4 patas (las patas en diagonal comparten `Side`).
+
+**Dónde:** `ServerStorage.CreatureBuilders.ProtoBebe`, `ServerStorage.Models.Bichos["3"]` y `ReplicatedStorage.CreatureRigs` (Generic: `Jaw`/`Yawn`).
+
+**Probado:** en Play, con `/bicho 3 base` + `/abrir`: bosteza (abre el pico y cierra los ojos) y se pasea. Sin errores.
+
 ## 2026-10-20 · bbogatell (Claude) · Bicho 2 · Compi hecho a mano
 **Qué:** segundo bicho de la lista, con su ficha visual de ChatGPT.
 - **Compi** (Común, chibi, 3,6 studs, 49 piezas, sin partículas):
