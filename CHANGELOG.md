@@ -2,6 +2,20 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Nombre de bichos y fósiles en el color de su rareza
+**Qué** (lo pidió bbogatell): el letrero de encima de cada bicho y cada fósil tiene ahora:
+- el **nombre en el color de su rareza**;
+- una **etiqueta con la rareza** (p. ej. «MUTANTE», «LEGENDARIO II», «★ ÉPICO») en una píldora de ese color;
+- en los bichos, debajo, lo que generan en verde («+1.0B 💰/s»).
+
+La cuenta atrás de los fósiles se ha subido un poco para no pisar el letrero.
+
+**Dónde:** `DiamondServer.Looks` (`label`) y `StarterPlayerScripts.BaseFx` (altura de la cuenta atrás).
+
+**Probado:** en Play, el Mecha Krakenoide sale en verde con «MUTANTE» y el Huevo de Oro en dorado con «LEGENDARIO II», con la cuenta atrás encima (capturas). Sin errores.
+
+**Nota:** hay una carpeta `ServerScriptService._tmpLooks` con una copia vieja de Looks que no he tocado. ¿Es de seguo970?
+
 ## 2026-10-20 · bbogatell (Claude) · Los bichos no llevan sonido
 **Qué** (lo pidió bbogatell): quitado el zumbido del Mecha Krakenoide. Su «zumbido» queda solo como la vibración de las antenas. Regla para todos los bichos a partir de ahora: ningún sonido. Está apuntada en la guía de estilo de `BICHOS_DINOSAURIOS.md`, y por si acaso `Looks.creature` borra cualquier `Sound` que traiga un modelo de bicho.
 
