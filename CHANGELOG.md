@@ -2,6 +2,27 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bicho 1 · Dodo Corriente hecho a mano + rig genérico
+**Qué:** primer bicho de la lista hecho con el proceso nuevo (ficha visual de ChatGPT → modelo → animación).
+- **Dodo Corriente** (Común, chibi, 3,8 studs, 32 piezas, sin partículas):
+  - cuerpo gris azulado muy gordo con studs y barriga más clara;
+  - patitas naranjas cortas;
+  - pico enorme y curvo amarillo pálido con la punta ganchuda marrón;
+  - ojos de despistado, uno más grande que el otro;
+  - alitas con la punta blanca;
+  - penacho de 3 plumas blancas en la cola.
+- **Animación:** respira (1 → 1,03 en 2 s), parpadea cada 3-5 s, balancea la cola, tuerce la cabeza a los lados de vez en cuando, mueve las alitas y mira un poco alrededor.
+- **Rig genérico nuevo** (`ReplicatedStorage.CreatureRigs.Generic`) para los bichos sencillos. Las piezas se marcan con `Role` (Head, Eye, Tail, Wing) y el modelo lleva `HeadPivot`, `TailPivot`, `TailSway` y `HeadTilt`.
+- **Kit** para los constructores (`ServerStorage.CreatureBuilders.Kit`: `Kit.new(id)` y `Kit.finish(m, rig)`), para que cada bicho nuevo sea solo su forma.
+
+**Dónde:**
+- `ServerStorage.CreatureBuilders.DodoCorriente` y `Kit`.
+- `ServerStorage.Models.Bichos["1"]`.
+- `ReplicatedStorage.CreatureRigs`.
+- El proceso está apuntado en `BICHOS_DINOSAURIOS.md`.
+
+**Probado:** en Play, `/bicho 1 base` + `/abrir`: el Dodo sale en la base con su letrero «COMÚN» y la cabeza animada. Sin errores.
+
 ## 2026-10-20 · bbogatell (Claude) · Nombre de bichos y fósiles en el color de su rareza
 **Qué** (lo pidió bbogatell): el letrero de encima de cada bicho y cada fósil tiene ahora:
 - el **nombre en el color de su rareza**;
