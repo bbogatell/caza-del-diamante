@@ -2,6 +2,35 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Avisos en pantalla más cortos y claros
+**Qué** (lo pidió bbogatell): se han reescrito todos los avisos de pantalla (unos 60): título de 2-4 palabras con un emoji de icono, y debajo qué hacer en pocas palabras. Ejemplos:
+
+| Momento | Ahora pone |
+|---|---|
+| Sale un fósil | «🥚 ¡FÓSIL RARO!» + «[E] para cogerlo» (en móvil, «Tócalo para cogerlo») |
+| Lo coges | «🏠 ¡LLÉVALO A TU BASE!» + «🐢 Vas más lento · 🏏 ¡que no te peguen!» |
+| Lo dejas en la base | «✅ ¡FÓSIL A SALVO!» + «⏳ Se abre en 1 min» |
+| Sale el bicho | «🎉 ¡PROTO BEBÉ!» + «+3 💰 por segundo» |
+| Pala nueva | «⛏️ PALA 3!» + «🔓 Parcela 2 abierta» |
+| Suelo duro | «🪨 ¡DEMASIADO DURO!» + «Necesitas la Pala 5 🛒» |
+| Trampa / hielo | «🪤 ¡ATRAPADO!» / «❄️ ¡CONGELADO!» + «5 s sin moverte» |
+| Evento | «⭐ ¡FÓSIL RARO ENTERRADO!» + «Parcela 3 · busca la luz 🔦» |
+| Errores | «💰 Te faltan 25.0K», «🏠 Base llena · vende o agrándala», «🔒 Primero la Pala 4», «🏠 Entra en tu base»… |
+
+**Avisos pequeños nuevos:** los mensajes cortos (errores, «¡Se te cayó el fósil!», ventas, rayos X…) ya no salen como un cartel enorme en medio de la pantalla. Ahora son una **píldora pequeña** justo debajo del centro, que se apila si salen varios y desaparece a los 1,8 s. Los carteles grandes siguen siendo para los momentos importantes.
+
+**Dónde:**
+- `DiamondClient.Fx.toast` (nuevo), que usa `Menus.toast`.
+- Textos de `DiamondClient.Main`, `Menus` y `Tutorial`.
+- Los `msg`/`Toast` de `DiamondServer.Main`, `Fossils`, `Bases`, `Training`, `Lane` e `Items`.
+
+Los comandos de prueba (/dinero…) no se han tocado.
+
+**Probado:** en Play:
+- coger un fósil (cartel nuevo);
+- comprar sin dinero la base y la cinta: dos píldoras apiladas debajo del centro, sin tapar el cartel (captura);
+- sin errores en la consola.
+
 ## 2026-10-20 · bbogatell (Claude) · Tutorial: flechas del suelo bien orientadas e icono de chincheta
 **Qué** (lo pidió bbogatell):
 - Las flechas del suelo del tutorial salían giradas (eran el carácter «▲» en una SurfaceGui, que no apuntaba hacia donde iban). Ahora cada flecha es una **V de 2 barras de neón naranja** que apunta siempre al destino y avanza hacia él.
