@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Comando /bicho para sacar un bicho concreto
+**Qué:** comando de prueba `/bicho <número>` (o `/bicho <número> base`). Da un fósil de la rareza de ese bicho que, al abrirse, da justo ese bicho. Con `/abrir` sale al momento. Ejemplo: `/bicho 191 base` y luego `/abrir` = Mecha Krakenoide.
+
+**Dónde:**
+- `DiamondServer.Main`: comando `GiveCreatureFossil`.
+- `Fossils.rollCreature`: respeta `entry.creature`.
+- `Fossils.give`: acepta un 4.º parámetro con el bicho.
+- `Bases`: el hueco guarda `cr` y `hatch` lo pasa.
+
+**Probado:** en Play, con `/bicho 191 base` + `/abrir` y con `/bicho 191` en las manos, dejándolo en la base + `/abrir`: las dos veces sale el 191. Sin errores.
+
 ## 2026-10-20 · bbogatell (Claude) · Los bichos salen a tamaño real en la base
 **Qué** (lo decidió bbogatell): en la base los bichos ya no se encogen para caber en un hueco de 9×16 studs, sino que salen a su tamaño real (la altura de su rareza o la del modelo hecho a mano). Los grandes ocupan más sitio, y no pasa nada si se montan unos encima de otros. El Mecha Krakenoide sale con sus 20 studs.
 
