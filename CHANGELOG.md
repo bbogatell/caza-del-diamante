@@ -2,6 +2,24 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Máquina de Fósiles nueva: modelo 3D hecho con código
+**Qué** (lo pidió bbogatell): rediseño de la Máquina de Fósiles.
+- **Referencia:** imagen hecha con ChatGPT (la segunda que generó): máquina morada y dorada estilo bloques con tolva de tierra, tubería, engranajes, cúpula de cristal con fósiles, pantalla «TIERRA → FÓSIL», palanca y cinta de salida.
+- **Modelo:** generado con un script de Python (`trimesh`), sin Blender, en `tools/modelos/maquina_fosiles.py`. Está hecho de cajas, cilindros, tubos, una espiral para los amonites y calaveras de dinosaurio. Tiene 13 piezas, una por material (Purple, Gold, Glass, Bone, Neon…), con unos 18.000 triángulos en total, todas por debajo del límite de Roblox. El script exporta `.glb`/`.obj` y saca una imagen de prueba con un renderizador propio (`maquina_fosiles_preview.png`).
+- **Importación:** bbogatell lo importó con *Import 3D*. Luego en Studio:
+  - se giró 180° y se colocó en el sitio de la máquina anterior (x 36, z −250);
+  - se le pusieron colores y materiales a cada pieza (cristal transparente en la cúpula, neón en las luces y metal en la palanca);
+  - se le añadió el texto de la pantalla («TIERRA ⬇️ FÓSIL»), luces, brillitos en la cúpula y polvo sobre la tolva;
+  - se reutilizó el cartel de arriba y el `MachinePrompt`;
+  - se añadieron `Chute` (sobre la cinta de salida) y `PromptPart` (delante), que son lo que usa el código;
+  - el modelo es persistente con StreamingEnabled.
+
+**Dónde:** `Workspace.Map.Lobby.FossilMachine` (MeshParts nuevos). La anterior está en `ServerStorage.FossilMachineV2Backup` (y la primera sigue en `FossilMachineBackup`). No hay cambios de código.
+
+**Probado:** en Play: E delante de la máquina abre la ventana; comprar un fósil Común cobra 1.000 de tierra y te lo da en las manos (captura). Sin errores.
+
+**Notas:** para cambiar el modelo, edita el script, vuelve a generarlo (`python tools/modelos/maquina_fosiles.py <carpeta>`, requiere `pip install trimesh numpy scipy pillow manifold3d mapbox_earcut`) e impórtalo otra vez.
+
 ## 2026-10-20 · bbogatell (Claude) · Fuera la Tienda de Palas física; la de Estelas ocupa su sitio
 **Qué** (lo pidió bbogatell):
 - Se quita el puesto «Tienda de Palas» del lobby. Las palas se siguen comprando con el botón «Tienda» del HUD.
