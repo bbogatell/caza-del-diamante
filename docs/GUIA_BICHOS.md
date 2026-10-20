@@ -1,6 +1,6 @@
 # Guía para hacer los bichos (para Claude)
 
-Así se han hecho los bichos 1 (Dodo Corriente), 2 (Compi), 3 (Proto Bebé) y 191 (Mecha Krakenoide). Sigue los pasos en este orden, **un bicho cada vez y por orden de la lista** (`BICHOS_DINOSAURIOS.md`). El siguiente es el **4**.
+Así se han hecho los bichos 1 (Dodo Corriente), 2 (Compi), 3 (Proto Bebé) y 191 (Mecha Krakenoide). Sigue los pasos en este orden, **un bicho cada vez y por orden de la lista** (`BICHOS_DINOSAURIOS.md`). El siguiente es el **5**.
 
 Reglas del repo: haz `git pull` antes de empezar, añade una entrada al principio del `CHANGELOG.md` por cada bicho, haz commit y push (formato en `CLAUDE.md`). Escribe al usuario en español.
 
@@ -23,6 +23,8 @@ Reglas del repo: haz `git pull` antes de empezar, añade una entrada al principi
 **Prompt (rellena lo que va entre «»; copia modelo, colores y efectos de la ficha):**
 
 > Genera una imagen tipo FICHA DE PERSONAJE para un videojuego de Roblox (estilo cartoon de bloques, como "Roba un huevo"), con fondo de isla Roblox desenfocado y paneles oscuros azul marino con bordes redondeados, todo en español. Bicho: "«Nombre»" («especie»), «N» $/s, rareza «Rareza» (color «color de la rareza»). Distribución: arriba a la izquierda el título "«Nombre»" con "«N» $/s"; en el centro el bicho grande sobre un pedestal «de piedra sencillo / acorde a su tema», con una flecha vertical que indique "«altura de su rareza» studs (altura)"; arriba a la derecha un panel con "«N» $/s", "«Rareza»", "Modelo:" («texto del modelo de la ficha»), "Colores:" («colores de la ficha») y "Partículas («n»):" («lista de la ficha» o "ninguna"). Debajo, una fila con 4 vistas del bicho: Frente, Lado, Espalda y 3/4. Debajo, una fila "Animaciones" con viñetas unidas por flechas: Respira (escala 1 → 1,03 en 2 s), Parpadea (cada 3-5 s), Balancea la cola, «su animación propia de la ficha», Camina («patas alternas / se desliza / vuela», según el bicho). «Si tiene partículas: Debajo, una fila "Partículas" con un icono de cada una y su ritmo.» El bicho debe verse hecho con piezas sencillas (bloques, esferas, cuñas, cilindros) con textura de studs de LEGO, fácil de modelar, «proporciones chibi (cabeza enorme, cuerpo rechoncho, patas cortitas) — SOLO Comunes y bebés — / proporciones de dinosaurio real exageradas en cartoon, más robusto cuanto más rara la rareza». «Sin partículas ni efectos brillantes» (solo si no tiene).
+
+**Fidelidad a la imagen (lo pide el usuario):** para verla grande, busca la imagen con `javascript_tool` (`img` con `naturalWidth > 1000`), dibújala en un `canvas` a pantalla completa recortando zonas (pose principal, vistas, animaciones) y haz `screenshot`. Luego compara capturas del modelo **desde los mismos ángulos que las vistas** (frente, lado, 3/4) y corrige hasta que se parezca: formas (bloques o redondeado), proporciones, número de patas, tamaño de ojos, accesorios.
 
 Mira la imagen y fíjate en: silueta y pose, proporciones, colores exactos, dónde van rayas/manchas, ojos, accesorios, qué hace en cada animación.
 
@@ -87,7 +89,7 @@ Las piezas se marcan con el atributo `Role`:
 - `"Leg"`: se balancea alrededor de su `LegPivot` (cadera) al caminar. `Side` = 1 o −1: en bípedos una pata cada lado; **en cuadrúpedos, las patas en diagonal comparten Side** (delantera izquierda y trasera derecha = 1, las otras = −1).
 - Lo demás respira con el cuerpo (1 → 1,03 en 2 s) y, al caminar, sube/baja y se bambolea.
 
-Atributos del modelo: `HeadPivot`, `TailPivot`, `TailSway` (0,35), `HeadTilt` (0,35; 0 = nada), `StepRate` (10; patas cortas = 12-13), `Waddle` (0,08; gordos 0,14), `Hop` (altura de saltitos nerviosos, p. ej. 0,35; nil = no), `Yawn` (ángulo del bostezo, p. ej. 0,6) + `JawPivot`. Los pivotes se dan en las coordenadas del constructor (antes del `ScaleTo`): el rig ya tiene en cuenta la escala.
+Atributos del modelo: `HeadPivot`, `TailPivot`, `TailSway` (0,35), `HeadTilt` (0,35; 0 = nada), `StepRate` (10; patas cortas = 12-13), `Waddle` (0,08; gordos 0,14), `Hop` (altura de saltitos nerviosos, p. ej. 0,35; nil = no), `Yawn` (ángulo del bostezo, p. ej. 0,6) + `JawPivot`, `Chew` (ángulo de la mandíbula al masticar, p. ej. 0,35; las piezas con `Role = "Snack"`, como una hojita, solo se ven mientras mastica). Los pivotes se dan en las coordenadas del constructor (antes del `ScaleTo`): el rig ya tiene en cuenta la escala.
 
 **Animación propia de la ficha:** si es tuerce la cabeza / saltitos / bostezo, ya existe (HeadTilt / Hop / Yawn). Si es otra cosa (p. ej. «agita las alas», «golpea el suelo», «ruge»), **añádela al rig Generic** como opción nueva con su atributo (mira cómo están hechos Hop y Yawn en `CreatureRigs`) y documenta el atributo en el comentario de arriba del Generic.
 

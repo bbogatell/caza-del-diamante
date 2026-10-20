@@ -2,6 +2,24 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bicho 4 · Loro-saurio hecho a mano
+**Qué:** cuarto bicho de la lista, copiado lo más fiel posible de su ficha visual de ChatGPT (comparando frente, lado y 3/4).
+- **Loro-saurio** (Común, chibi, 3,6 studs, 68 piezas, sin partículas). Muy de bloques, como en la imagen:
+  - cabeza cúbica verde oliva más grande que el cuerpo, con studs redondos encima;
+  - ojos grandes a los lados con borde negro;
+  - pico de loro naranja cuadrado con gancho hacia abajo y raja;
+  - 2 pinchos amarillos en cada mejilla;
+  - cuerpo de ladrillo con bultos de studs a los lados y barriga clara;
+  - 4 patas cortas con pies gris oscuro;
+  - abanico de 7 varillas rojizas en la cola, abierto como un pavo real.
+- **Animaciones:** respira, parpadea, balancea la cola, mira alrededor y camina con 4 patas. Su animación propia es **masticar**: cada pocos segundos aparece una hojita verde en el pico y mueve la mandíbula unos 2,5 s.
+- **Rig genérico:** nuevo atributo `Chew` y papel `Snack` (piezas que solo se ven mientras mastica).
+- **`GUIA_BICHOS.md`:** cómo ver la imagen de ChatGPT en grande para copiarla bien, y `Chew`/`Snack`.
+
+**Dónde:** `ServerStorage.CreatureBuilders.LoroSaurio`, `ServerStorage.Models.Bichos["4"]` y `ReplicatedStorage.CreatureRigs` (Generic: `Chew`/`Snack`).
+
+**Probado:** en Play, con `/bicho 4 base` + `/abrir`: mastica (aparece la hoja y se mueve la mandíbula) y se pasea. Sin errores.
+
 ## 2026-10-20 · bbogatell (Claude) · Guía para hacer los bichos
 **Qué:** nueva `docs/GUIA_BICHOS.md` con todo el proceso para que otro Claude siga haciendo los bichos igual: ficha visual en ChatGPT (cuenta, prompt, límite de imágenes), constructor con `CreatureBuilders.Kit` y convenciones, rig `Generic` (roles y atributos), rigs propios, caminar, partículas y texturas que funcionan, cómo probarlo con `/bicho N base` + `/abrir`, y cómo registrarlo. El siguiente bicho es el 4.
 
