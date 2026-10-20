@@ -2,6 +2,19 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Fuera la Tienda de Palas física; la de Estelas ocupa su sitio
+**Qué** (lo pidió bbogatell):
+- Se quita el puesto «Tienda de Palas» del lobby. Las palas se siguen comprando con el botón «Tienda» del HUD.
+- La Tienda de Estelas (con su icono que bota) se ha movido exactamente a ese sitio: 34 studs hacia el portón, en el mismo hueco de la plaza.
+
+**Dónde:**
+- `Workspace.Map.Lobby.Shop` se ha movido a `ServerStorage.ShovelShopBackup` por si se quiere recuperar.
+- `Workspace.Map.Lobby.TrailShop` está ahora en x −72, z −205.
+
+No hay que tocar código: `DiamondClient.Main` busca `Lobby.Shop` con `FindFirstChild`.
+
+**Probado:** en Play, junto al puesto en su nuevo sitio, E abre la ventana de estelas, y la tienda de palas ya no está en el lobby. Sin errores.
+
 ## 2026-10-20 · bbogatell (Claude) · Avisos en pantalla más cortos y claros
 **Qué** (lo pidió bbogatell): se han reescrito todos los avisos de pantalla (unos 60): título de 2-4 palabras con un emoji de icono, y debajo qué hacer en pocas palabras. Ejemplos:
 
