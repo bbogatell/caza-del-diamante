@@ -2,6 +2,23 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Archie con brazos + prueba de rendimiento de los bichos
+
+- **Qué:**
+  - **Archie (12):** ahora tiene brazos visibles. De cada hombro baja un brazo hasta delante del pecho, con una mano y sus 3 garras blancas, como en la hoja; antes las garras estaban en mitad del ala y no se veían los brazos. Tiene 137 piezas.
+  - **Prueba de rendimiento:** se llenaron las 8 bases del lobby con bichos ya hechos (1-12 y 191, mezclados) en Play, y se midió el cliente en Studio con dos vistas: desde arriba viendo todas las bases y dentro de una base.
+
+| Bichos por base | Total | Piezas | FPS (arriba / en base) | Animación (ms por frame) |
+|---|---|---|---|---|
+| 1 | 8 | 615 | 60 / 60 | 1,2 |
+| 5 | 40 | 3.595 | 60 / 50 | 9 |
+| 10 | 80 | 7.572 | 36 / 23 | 21-26 |
+| 20 (bases llenas) | 160 | 14.983 | 20 / 16 | 42 |
+
+- **Conclusión:** el cuello de botella es la animación (`CreatureAnim` mueve cada pieza cada frame: unos 2,8 µs por pieza), no el dibujado (CPU de render 6-18 ms, GPU 4-10 ms). Con un servidor lleno (8 jugadores × 20 bichos) bajaría a unos 16-20 FPS. Propuesta: animar por grupos soldados (un «hueso» por cabeza, cola, cada pata y cada ala, con el resto de piezas unidas con `WeldConstraint`) y no animar los bichos lejanos o fuera de cámara.
+- **Dónde:** `ServerStorage.CreatureBuilders.Archie` → `Models.Bichos["12"]`. La prueba de rendimiento se hizo con código temporal en Play (no queda nada en el juego).
+- **Probado:** vista previa de Archie de frente y en 3/4; medidas de la tabla tomadas en Play.
+
 ## 2026-10-20 · bbogatell (Claude) · Bicho 12 · Archie hecho a mano
 
 - **Qué:** modelo hecho a mano del bicho 12 (Archie, Archaeopteryx, Raro, 4,8 studs, 127 piezas), fiel a su hoja de ChatGPT (comparado de frente y en 3/4). Es mitad ave, mitad dinosaurio, negro azabache e inclinado hacia delante. Tiene las alas muy abiertas y levantadas, de plumas negras con una franja verde tornasol (metálica) y puntas blancas en las de fuera, y 3 garras blancas en cada muñeca. El hocico es largo y está abierto (boca roja, dientes blancos). Tiene ojo dorado, cresta de plumas en punta y gorguera verde, garras blancas en los pies y una cola de reptil con plumas a los dos lados con la punta blanca. Le caen plumas negras (ritmo 4) y suelta destellos verdes (ritmo 4). Da saltitos aleteando, mueve la cola y pasea. Sin sonidos.
