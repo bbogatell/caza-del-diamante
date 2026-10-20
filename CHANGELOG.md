@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bicho 6 · Micro Raptor hecho a mano
+
+- **Qué:** modelo hecho a mano del bicho 6 (Micro Raptor, Poco común), fiel a la hoja de referencia: raptor negro inclinado hacia delante, ojo amarillo enfadado, cresta de 3 plumas, 4 alas (brazos y patas emplumadas) con puntas azul eléctrico, cola larga con abanico de plumas y garras grises. Destellos azules en las puntas de las alas (rate 3 en total). Bate las alas suavemente, mueve cabeza y cola y pasea por la base. Sin sonidos.
+- **Dónde:** `ServerStorage.CreatureBuilders.MicroRaptor` → `ServerStorage.Models.Bichos["6"]` (98 piezas, 4,5 studs). `ReplicatedStorage.CreatureRigs` (Generic): nuevos atributos `WingFlap` y `WingSpeed` para controlar el aleteo. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 6 base` + `/abrir`: pasea (1,7 studs en 10 s), las alas se mueven y hay destellos. No sale ningún error de `CreatureAnim` en la consola.
+- **Notas:** el siguiente es el 7.
+
 ## 2026-10-20 · bbogatell (Claude) · Bicho 5 · Hipsi Velocín hecho a mano
 **Qué:** quinto bicho de la lista, copiado de su ficha visual de ChatGPT (comparando las vistas 3/4 y lateral).
 - **Hipsi Velocín** (Común, chibi, 3,8 studs, 61 piezas, sin partículas):
