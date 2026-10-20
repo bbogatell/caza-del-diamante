@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Prueba: Mecha Krakenoide con animación optimizada (comparativa)
+
+- **Qué:** versión de prueba de la animación del Mecha Krakenoide que mueve «huesos» en vez de piezas. El cliente agrupa las 293 piezas en 85 grupos: cuerpo, cabeza, mandíbula, cada velocidad de anillo, cada segmento de tentáculo y cada garra. Cada grupo tiene una pieza invisible anclada, y el resto de piezas del grupo se desanclan y se sueldan a ella con `WeldConstraint`, solo en el cliente. Cada frame solo se mueven los huesos y los ojos (87 en vez de 293). Diferencias: la respiración es un pequeño sube y baja de todo el cuerpo en vez de hincharse, y las antenas no vibran. Se mantienen los rayos y el pulso.
+- **Dónde:** `ReplicatedStorage.CreatureRigs` (nuevo rig `MechaKrakenoideFast`); `StarterPlayerScripts.CreatureAnim` (rayos y pulso también para el rig nuevo). En el mapa, carpeta `Workspace.PruebaKraken` delante del spawn: dos Krakenoides lado a lado con cartel, «NORMAL» (rig de siempre) y «OPTIMIZADO» (`Rig = "MechaKrakenoideFast"`). **Hay que borrar esta carpeta antes de publicar.**
+- **Probado:** en Play, los dos se mueven (tentáculos y cabeza) y no hay errores. Coste de una llamada a la animación: normal 0,58 ms, optimizado 0,14 ms (4,2 veces menos). Falta probar con muchos a la vez (`/llenar`) y decidir si se pasa a todos los bichos.
+
 ## 2026-10-20 · bbogatell (Claude) · Comando /llenar para pruebas de rendimiento
 
 - **Qué:** comando de prueba `/llenar [cantidad] [id]`. Llena las 8 bases del lobby con esa cantidad de bichos cada una (por defecto 12), alternando los bichos ya hechos a mano (`ServerStorage.Models.Bichos`), o solo el bicho `id` (p. ej. `/llenar 20 191`). Los bichos pasean como los de verdad. Solo se ven: no se guarda nada ni cambia los datos de nadie. `/llenar 0` los quita. Máximo 60 por base.
