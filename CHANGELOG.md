@@ -2,6 +2,19 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Los bichos se pasean por la base (animación de caminar)
+**Qué** (lo pidió bbogatell):
+- Los bichos hechos a mano se pasean por la base: de vez en cuando caminan despacio a un punto cercano dentro de un círculo pequeño alrededor de donde se dejaron (2,5-7 studs según su tamaño), se giran hacia donde van y se paran unos segundos. Solo en las bases, no en las vistas previas.
+- **Dodo Corriente:** animación de caminar con pasitos rápidos de sus patas cortas (las patas se balancean alternas), y el cuerpo gordo sube y baja y se bambolea de lado.
+- **Mecha Krakenoide:** no tiene patas, así que se desliza y los tentáculos ondean más rápido mientras avanza.
+- **Documento:** los bichos no tenían animación de caminar. Añadida a la guía común de `BICHOS_DINOSAURIOS.md` para todos, con cómo hacerlo según el tipo (con patas, voladores o sin patas) y cómo marcar las patas al modelar.
+
+**Cómo:** lo hace cada cliente en `StarterPlayerScripts.CreatureAnim` (estado `wander`: mueve la Root del modelo y el resto la sigue). El rig `Generic` de `CreatureRigs` tiene el papel `Leg` (atributos `Side` y `LegPivot`) y la marcha (`StepRate` y `Waddle`). El letrero y el aviso de vender van con el bicho.
+
+**Probado:** en Play, en 10 s el Krakenoide se movió 8 studs y el Dodo se desplazó moviendo las patas. Sin errores.
+
+**Nota:** cada jugador ve el paseo calculado en su propio ordenador, así que dos jugadores pueden ver al mismo bicho en sitios algo distintos de su círculo (es decorativo).
+
 ## 2026-10-20 · bbogatell (Claude) · Bicho 1 · Dodo Corriente hecho a mano + rig genérico
 **Qué:** primer bicho de la lista hecho con el proceso nuevo (ficha visual de ChatGPT → modelo → animación).
 - **Dodo Corriente** (Común, chibi, 3,8 studs, 32 piezas, sin partículas):

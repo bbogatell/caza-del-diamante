@@ -22,6 +22,12 @@
 - **Montaje:** todo anclado, con una pieza raíz invisible (`Root`) en la base para colocarlo en el pedestal.
 - **Sin sonido:** los bichos no llevan ningún sonido. Si la ficha pide algo como «zumbido», se hace visual (vibración, pulsos).
 - **Animación en reposo (todos):** respira (escala 1 → 1,03 en 2 s), parpadea cada 3-5 s y balancea la cola. Cada ficha añade su animación propia.
+- **Animación de caminar (todos):** en la base, cada bicho se pasea despacio de vez en cuando por un círculo pequeño alrededor de donde se dejó (entre 2,5 y 7 studs según su tamaño), se gira hacia donde va y se para unos segundos entre paseo y paseo. Según el tipo:
+  - **Con patas** (bípedos, cuadrúpedos, aves): las patas se balancean alternas al andar, y el cuerpo sube y baja un poco y se bambolea de lado. Los gordos se bambolean más y los de patas cortas dan pasitos rápidos.
+  - **Voladores:** baten más las alas mientras avanzan.
+  - **Sin patas** (tentáculos, serpientes, peces, babosas, robots con orugas): se deslizan, reptan o flotan, y lo que tengan (tentáculos, cola, aletas, orugas) se mueve más rápido mientras avanzan.
+
+  Al modelarlo: marcar las piezas de cada pata con `Role = "Leg"`, `Side` (1 / −1) y `LegPivot` (la cadera), y ajustar `StepRate`/`Waddle` en el modelo si hace falta (ver el proceso arriba).
 
 ### Proporciones
 
