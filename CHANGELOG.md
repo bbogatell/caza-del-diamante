@@ -2,17 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
-## 2026-10-20 · seguo970 (Claude) · Pala 30 nueva: Pala Divina del Diamante (como el render)
-**Qué:** la pala 30 se ha rehecho siguiendo el render que se hizo con IA (`Downloads/Pala_Divina_render.png` de seguo970):
-- **Hoja:** diamante facetado blanco brillante con un diamante pequeño azul brillando dentro y un engaste de oro en arco con gemas moradas.
-- **Mango y empuñadura:** mango de oro con tramos de cristal, anillas, nudos con gemas moradas y cadenitas; empuñadura de corona de oro con 6 puntas, gema morada y remate brillante.
-- **Adornos animados:** alas de ángel blancas que **aletean**, halo doble que gira, 4 anillos de luz con bolitas moradas (uno alrededor del diamante y tres inclinados en el mango) y un mini T-Rex de cristal morado que vuela alrededor.
-- **Partículas y luz:** 9 emisores (arcoíris, polvo de diamante, destello, nebulosa, plumas de luz, chispas doradas, estrellas, estela del T-Rex) y 3 luces.
+## 2026-10-20 · seguo970 (Claude) · Pala 30: el modelo importado, con materiales, animación y efectos
+**Qué:** la pala 30 (Pala Divina del Diamante) es ahora **el modelo 3D que se importó** (`ServerStorage.Pala Divina del Diamante`, el `.glb` de `tools/modelos/L30`), con:
+- **Materiales y colores** (venían en gris): diamante de cristal, gema interior azul brillante, oro metálico en mango, cuello y corona, cadenas doradas, cristal verdoso, gemas moradas, halos de luz dorada y ojos amarillos del T-Rex. Las alas, los anillos, los orbes y el T-Rex conservan su textura importada.
+- **Animación con sus huesos:** los 4 anillos y los 2 halos giran, el T-Rex da vueltas alrededor (hueso `Orbita`), las alas aletean, las 6 cadenas se balancean y el T-Rex mueve la cola y la mandíbula.
+- **10 emisores de partículas** (arcoíris y polvo de diamante en la hoja, destello, neblina rosa y azul, chispas doradas en la corona, plumas de luz que caen de las alas, estela del T-Rex, estrellas en los anillos) y 2 luces.
 - **Al cavar con ella:** columna de luz, onda blanca y destello arcoíris en el suelo (lo ven todos los que estén cerca).
-La forma la usan la mano y la vista previa de la tienda (los dos salen de `ShovelLook`).
-**Dónde:** `ReplicatedStorage.ShovelLook` → `L[30]` rehecho, nuevas ayudas `ring` y `flap` (piezas que oscilan alrededor de un eje: atributos de la Weld `Root`, `Axis`, `Amp`, `FlapSpeed` y etiqueta `ShovelFlap`; `Root` se escala con la pala). `StarterPlayerScripts.ShovelFx` → anima `ShovelFlap` y hace el efecto al cavar de las palas de `DIG_FX` (ahora solo `L30`), escuchando el `Push` «SwingAnim».
-**Probado:** en Play: `Debug "level" 30` da la pala, 201 piezas, 89 piezas girando y 38 aleteando (se mueven), la hoja queda por encima de los pies al llevarla; cavando en la parcela 1 sale el efecto en cada palada; capturas de la pala y del golpe. Sin errores. No probado: en móvil (son muchas piezas) ni la vista de la tienda.
-**Notas:** no se ha importado el `.glb` del otro Claude: la pala está hecha con piezas dentro del juego, siguiendo el render. Para dar el efecto de cavar a otra pala, se añade a `DIG_FX` en `ShovelFx`.
+Se usa igual en la mano, en la tienda y en el cartel de la pala del carril. Del mismo tamaño que las demás palas.
+(Antes, el mismo día, se había rehecho la pala con piezas en `ShovelLook`; eso **se ha deshecho**: `L[30]` de `ShovelLook` vuelve a ser el diseño de antes y solo se usa si falta el modelo.)
+**Dónde:** nuevo `ReplicatedStorage.Models.Palas.L30` (copia preparada del importado: escala 0,406, pieza `Handle` en la mano justo encima de la corona y soldada a `RootPart`, sin `InitialPoses`, `AnimSaves` ni `AnimationController`). `ShovelLook.build`: si existe `ReplicatedStorage.Models.Palas.L<n>` con `Handle`, usa ese modelo. `ShovelFx`: huesos con la etiqueta `ShovelBone` (atributos `Mode` = spin/swing, `Axis` en el espacio del hueso, `Speed`, `Amp`, `Phase`), animados en **Heartbeat** (en RenderStepped el Animator del personaje los volvía a poner a cero), y efecto al cavar `DIG_FX.L30` (busca `Blade` u `Hoja`). `Menus` (vista previa de la tienda): el cristal se dibuja liso, porque los ViewportFrame no pintan `Glass`.
+**Probado:** en Play: `Debug "level" 30` da la pala; los huesos giran y aletean (comprobado al dibujar); captura en la mano; cavando en la parcela 1 sale el efecto en cada palada; tienda con la tarjeta de la pala 30. Sin errores. No probado: en móvil y con otro jugador mirando.
+**Notas:** el original importado sigue en `ServerStorage` sin tocar. Para animar otro modelo con huesos: etiqueta `ShovelBone` en el hueso y sus atributos. En la tienda la pala 30 se ve algo pálida sobre el fondo claro de su tarjeta.
 
 ## 2026-10-20 · bbogatell (Claude) · Todos los bichos animados con huesos (optimización)
 

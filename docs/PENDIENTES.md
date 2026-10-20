@@ -12,7 +12,7 @@
 - [ ] Borrar `StarterPlayerScripts.DebugLevelKey` (o dejarlo, solo funciona en Studio).
 
 ## Sin probar
-- [ ] Pala 30 nueva (201 piezas, alas que aletean): rendimiento en móvil y cómo se ve en la tienda.
+- [ ] Pala 30 importada (`Models.Palas.L30`, huesos animados): rendimiento en móvil y verla en la mano de otro jugador. En la tienda se ve pálida sobre su tarjeta.
 - [ ] Con **2 jugadores**: el bate (empuje y tirar el fósil), la trampa y el hielo sobre otro jugador.
 - [ ] El evento del diamante y la cinemática final con el campo en su sitio nuevo (z −3208).
 - [ ] Guardado real de la base y la velocidad (DataStore apagado en Studio) y que los fósiles se abran estando desconectado.
@@ -31,7 +31,7 @@
 > Para cambiar cualquiera: deja el modelo final en la carpeta indicada con el **id como nombre** y el juego lo usa en vez del provisional. Pon una pieza `Root` en la base (si no, se crea sola). Las palas necesitan una pieza `Handle` en la empuñadura, con el mango a lo largo de +Y y todo soldado al `Handle`.
 - [ ] **198 bichos** → `ServerStorage.Models.Bichos.<id>` (id = número de su ficha en `BICHOS_DINOSAURIOS.md`, p. ej. `174` = T-Rex Galáctico). Ahora: dinosaurio de bloques genérico según el nombre, con los colores de su rareza.
 - [ ] **60 fósiles** → `ServerStorage.Models.Fosiles.<id>` (`C-I`…`MU-III`; los raros `C-S1` = ★, `C-S2` = ★★…). Ahora: roca de studs con un relieve sencillo.
-- [ ] **30 palas** → `ServerStorage.Models.Palas.L<n>` (`L1`…`L30`). Ahora: los diseños de `ShovelLook` (por nivel) con los nombres nuevos; falta adaptarlos a los diseños de `PALAS.md`.
+- [ ] **30 palas** → `ReplicatedStorage.Models.Palas.L<n>` (`L1`…`L30`; así también salen en la tienda; `ServerStorage.Models.Palas` solo cambia la de la mano). Hecha: `L30` (modelo importado). Ahora: los diseños de `ShovelLook` (por nivel) con los nombres nuevos; falta adaptarlos a los diseños de `PALAS.md`.
 - [ ] **Decorado de las 15 parcelas**: piezas sencillas de `ServerStorage.LaneThemes` (dodo, esqueletos, volcán, puente de mosasaurio, templo, islas, T-Rex Galáctico…). Mejorable con modelos más detallados, sobre todo las estatuas.
 - [ ] Bases: plataforma sencilla igual para todos con valla de madera (como «Roba un huevo»); la valla no choca.
 - [ ] Objetos: modelos sencillos (bate, trampa, orbe de hielo, alfombra) y emojis en la tienda; mejorables con modelos e iconos propios.
