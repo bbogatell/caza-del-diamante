@@ -2,6 +2,22 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bicho 5 · Hipsi Velocín hecho a mano
+**Qué:** quinto bicho de la lista, copiado de su ficha visual de ChatGPT (comparando las vistas 3/4 y lateral).
+- **Hipsi Velocín** (Común, chibi, 3,8 studs, 61 piezas, sin partículas):
+  - corredor de pie, de ladrillos verde hoja;
+  - cabeza grande de bloques con studs encima y hocico ancho;
+  - ojos enormes en las esquinas de la cara;
+  - **cinta roja** en la frente con nudo y dos tiras detrás;
+  - barriga blanca y lunares verde oscuro;
+  - bracitos hacia delante, piernas largas con deditos y cola recta y larga.
+- **Animaciones:** respira, parpadea, balancea la cola, mira alrededor y camina. Su animación propia son los **estiramientos de corredor**: cada 7-12 s abre las piernas, se inclina hacia delante desde las caderas y aguanta la postura.
+- **Rig genérico:** nuevos atributos `Stretch` + `BodyPivot`.
+
+**Dónde:** `ServerStorage.CreatureBuilders.HipsiVelocin`, `ServerStorage.Models.Bichos["5"]` y `ReplicatedStorage.CreatureRigs` (Generic: `Stretch`).
+
+**Probado:** en Play, con `/bicho 5 base` + `/abrir`: se pasea y se estira (la cabeza baja al inclinarse). Sin errores.
+
 ## 2026-10-20 · bbogatell (Claude) · Bicho 4 · Loro-saurio hecho a mano
 **Qué:** cuarto bicho de la lista, copiado lo más fiel posible de su ficha visual de ChatGPT (comparando frente, lado y 3/4).
 - **Loro-saurio** (Común, chibi, 3,6 studs, 68 piezas, sin partículas). Muy de bloques, como en la imagen:
