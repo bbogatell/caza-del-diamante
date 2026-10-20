@@ -14,6 +14,7 @@ Repositorio compartido del equipo. **Aquí no está el código del juego**: el j
 | [`docs/JUEGO.md`](docs/JUEGO.md) | Qué es el juego y cómo se juega (diseño). |
 | [`docs/ARQUITECTURA.md`](docs/ARQUITECTURA.md) | Dónde está cada cosa en Studio: scripts, módulos, carpetas del mapa. |
 | [`docs/PRUEBAS.md`](docs/PRUEBAS.md) | Comandos de chat y de prueba, y trucos para probar en Studio. |
+| [`docs/IMPORTAR_MODELOS.md`](docs/IMPORTAR_MODELOS.md) | Cómo meter un modelo `.glb` (p. ej. una pala hecha con IA) con sus texturas y su animación. |
 | [`docs/PENDIENTES.md`](docs/PENDIENTES.md) | Lista de cosas por hacer / ideas / bugs conocidos. |
 
 ## Cómo trabajamos

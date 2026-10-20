@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · seguo970 (Claude) · Pala 29: el modelo del Rey Galáctico con su animación exacta y texturas
+**Qué:** la pala 29 (Pala del Rey Galáctico) es ahora el modelo 3D que hizo otro Claude (`tools/modelos/L29/Pala_del_Rey_Galactico.glb`), con:
+- **Su animación «Rey» exacta** (6 s en bucle): mandíbula, cráneo, capa, cadenas, halo, planetas, 3 anillos y 3 destellos. Roblox la descartaba al importar («no compatible»); se ha sacado del archivo y se reproduce por código, sin publicar nada. Se deja fuera el hueso que hacía flotar toda la pala (en la mano se movería sola).
+- **Texturas y materiales:** la galaxia (capa, cráneo, mango, corona, halo) y el arcoíris (destellos) subidos a Roblox; oro metálico, cristal del cráneo y de la punta, zafiro y amatista, y Neon en ojos, constelaciones, anillos y halo (Roblox no importa los colores ni el brillo del glTF, solo imágenes).
+- **Efectos** del `EfectosReyGalactico.lua`: ojos que laten, anillos que cambian de tono rosa, destellos y luz en el cráneo, polvo galáctico en la capa, destellos en halo y planetas. Y el efecto al cavar de las Divinas (columna de luz, onda y arcoíris).
+**Dónde:** nuevo `ReplicatedStorage.Models.Palas.L29` (escala 0,409, `Handle` encima de la corona, módulo `ShovelAnim`). `ShovelFx`: reproduce módulos con la etiqueta `ShovelAnim` (fotogramas de `Transform` por hueso o Motor6D, en Heartbeat), colores animados con la etiqueta `ShovelColor` (atributos `ColorMode` pulse/hue…), `DIG_FX.L29`. Imágenes: galaxia `rbxassetid://106543189759352`, arcoíris `rbxassetid://99409713783326` (subidas con la cuenta de seguo970). Original importado en `ServerStorage.Pala del Rey Galactico`. Guía y herramientas: `docs/IMPORTAR_MODELOS.md` y `tools/glb/`.
+**Probado:** en Play: `Debug "level" 29` da la pala; la animación se ve al dibujar (mandíbula y anillos moviéndose); captura en la mano; cavando sale el efecto. Sin errores. No probado: en móvil, con otro jugador mirando y en la tienda.
+**Notas:** el importador convirtió los huesos `Craneo`, `Mandibula`, `Halo` y `Capa2` en Motor6D porque se llaman igual que una malla; la animación los mueve igual. Los colores de cada trozo de malla se asignaron por el orden de los materiales del archivo: si algún trozo sale de un color raro, se cambia en `L29`.
+
 ## 2026-10-20 · seguo970 (Claude) · Pala 30: el modelo importado, con materiales, animación y efectos
 **Qué:** la pala 30 (Pala Divina del Diamante) es ahora **el modelo 3D que se importó** (`ServerStorage.Pala Divina del Diamante`, el `.glb` de `tools/modelos/L30`), con:
 - **Materiales y colores** (venían en gris): diamante de cristal, gema interior azul brillante, oro metálico en mango, cuello y corona, cadenas doradas, cristal verdoso, gemas moradas, halos de luz dorada y ojos amarillos del T-Rex. Las alas, los anillos, los orbes y el T-Rex conservan su textura importada.
