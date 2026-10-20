@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Bicho 7 · Ovi Ladrón hecho a mano
+
+- **Qué:** modelo hecho a mano del bicho 7 (Ovi Ladrón, Poco común, 4,6 studs, 117 piezas), fiel a su hoja de ChatGPT. Es un oviraptor naranja de bloques inclinado hacia delante, con cuello largo, ojos enfadados, pico amarillo curvo y una cresta roja alta en media luna. Abraza con los brazos un huevo blanco con motas azules y cara de pillo. Los brazos llevan alas de plumas amarillas con la punta negra, la cola acaba en un abanico de plumas y las patas tienen garras gris oscuro. Destellos blancos alrededor del huevo (ritmo 2). Mira a los lados escondiendo el huevo, mueve la cola y pasea por la base. Sin sonidos.
+- **Dónde:** `ServerStorage.CreatureBuilders.OviLadron` → `ServerStorage.Models.Bichos["7"]`. `ReplicatedStorage.CreatureRigs` (Generic): nuevo atributo `Sneak` y rol `Hug` para la mirada pilla. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 7 base` + `/abrir`: la cabeza gira 0,62 rad y el huevo 0,29 rad hacia el otro lado, pasea 1,5 studs y hay destellos. Sin errores en la consola.
+- **Notas:** el siguiente es el 8 (Leaelly Polar, 4,3 studs).
+
 ## 2026-10-20 · bbogatell (Claude) · Altura propia para cada bicho
 
 - **Qué:** las 198 fichas tienen ahora una línea `- **Altura:** N studs` con su altura exacta, elegida según la especie, la forma (bebés y bichos bajos y anchos más bajos; cuellos largos, crestas y alas más altos) y el valor dentro de su rareza. Casi todas caen en el rango de la tabla «Escalada por rareza» y como mucho se salen un poco. Los bichos ya hechos (1-6 y 191) mantienen la altura con la que se construyeron, y los especiales (175-198) la que ya ponía su ficha.
