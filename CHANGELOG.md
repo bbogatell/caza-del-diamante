@@ -2,6 +2,23 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-20 · bbogatell (Claude) · Todos los bichos animados con huesos (optimización)
+
+- **Qué:** todos los bichos (los hechos y los que vendrán) se animan ya con **huesos**, como explica la guía. Cambios:
+  - El rig `Generic` agrupa las piezas por `Role`: cuerpo, cabeza (+ `Snack`), mandíbula, cola, un ala por `WingPivot`, una pata por `Side` + `LegPivot` y abrazo (`Hug`). Los ojos se quedan anclados porque parpadean. Las animaciones especiales siguen igual: saltitos, bostezo, masticar, estiramiento, mirada pilla, tiritar, chillido, cabezazo y correr en el sitio. Diferencia visible: la respiración es un sube y baja del cuerpo.
+  - El Mecha Krakenoide usa la versión con huesos que se probó lado a lado. La de antes se ha borrado, y también la carpeta de prueba `PruebaKraken` del mapa.
+  - `CreatureAnim`: solo anima los bichos a menos de 120 studs (antes 180) **y** en pantalla. Entre 60 y 120 studs los anima un frame de cada dos. Nuevo atributo de prueba `workspace.PauseCreatureAnim`, que lo para todo.
+  - Si un rig se inicia dos veces sobre el mismo modelo, primero deshace los huesos viejos (`resetBones`).
+- **Dónde:** `ReplicatedStorage.CreatureRigs` (rig `Generic`, `MechaKrakenoide`, helpers `newBone` / `attach` / `resetBones`), `StarterPlayerScripts.CreatureAnim`. Docs: `GUIA_BICHOS.md`.
+- **Probado:** en Play con `/llenar 13` salen los 13 bichos hechos en las 8 bases, todos montados bien (capturas de cerca) y sin errores. Rendimiento con `/llenar 20` (160 bichos, unas 16.600 piezas), en Studio:
+
+| Vista | Antes (pieza a pieza) | Ahora (huesos + distancia) | Bichos quietos (referencia) |
+|---|---|---|---|
+| Desde arriba, todas las bases | 20 FPS | 58-60 FPS | 60 FPS |
+| Dentro de una base | 16 FPS | 49-50 FPS | 60 FPS |
+
+- **Notas:** Studio ejecuta servidor y cliente a la vez, así que en un jugador real debería ir algo mejor. Si hace falta más margen, se pueden bajar `MAX_DIST` o `HALF_DIST` en `CreatureAnim`.
+
 ## 2026-10-20 · bbogatell (Claude) · Guía: animación optimizada con huesos
 
 - **Qué:** nueva sección «Animación optimizada: huesos (OBLIGATORIO para todos los bichos)» en la guía de los bichos. Explica por qué se hace, con los datos de la prueba de rendimiento, y cómo funciona: el cliente agrupa las piezas en huesos invisibles anclados, suelda el resto con `WeldConstraint` y cada frame solo mueve los huesos con `BulkMoveTo`. Incluye la tabla de grupos del rig `Generic` por `Role`, las reglas para hacer bichos (todo lo que se mueva distinto necesita su `Role`, solo los `Eye` cambian de tamaño, no soldar en el constructor...), cómo hacer un rig propio con huesos y cómo comprobarlo con `/llenar`.

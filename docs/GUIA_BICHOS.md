@@ -134,9 +134,11 @@ Para cosas que el Generic no hace (tentáculos articulados, piezas que orbitan, 
 - En `animate`, mete en la lista de `BulkMoveTo` **solo los huesos** (y las piezas que se queden ancladas a propósito, como los ojos).
 - Los cálculos van a escala 1 y relativos a la Root: multiplica las posiciones por `model:GetScale()` (helper `scaled(cf, s)`) antes de mover.
 
-**Distancia y cámara:** `CreatureAnim` solo anima los bichos que están a menos de 180 studs de la cámara **y** dentro de la pantalla (con margen). Los demás se quedan quietos en su última pose hasta que vuelven a verse.
+**Distancia y cámara:** `CreatureAnim` solo anima los bichos que están a menos de **120 studs** de la cámara (`MAX_DIST`) **y** dentro de la pantalla (con margen). Entre 60 y 120 studs (`HALF_DIST`) se animan **un frame de cada dos**, cada bicho en un frame distinto para repartir el trabajo. Los demás se quedan quietos en su última pose hasta que vuelven a verse.
 
-**Cómo comprobarlo:** en Play, `/llenar 20` (8 bases × 20 bichos) y mide desde el cliente los FPS y cuánto tarda una pasada de animación (ver «Prueba de rendimiento» en `CHANGELOG.md`). `/llenar 0` los quita.
+**Si el rig vuelve a arrancar** con un modelo que ya tenía huesos, `init` primero borra los huesos viejos y vuelve a anclar las piezas (`resetBones`). Así no quedan piezas soldadas a dos huesos, que hunde los FPS.
+
+**Cómo comprobarlo:** en Play, `/llenar 20` (8 bases × 20 bichos) y mide desde el cliente los FPS (`RenderStepped`) y `Stats.RenderCPUFrameTime` / `RenderGPUFrameTime`. Para comparar con los bichos quietos, pon en el cliente `workspace:SetAttribute("PauseCreatureAnim", true)` (y `nil` para volver). `/llenar 0` los quita. Ojo: si la ventana de Studio no tiene el foco, Studio baja a ~15 FPS con la GPU casi parada; esas medidas no valen, repítelas. Resultados de referencia en `CHANGELOG.md` («Todos los bichos animados con huesos»).
 
 ## 4. Partículas y efectos
 
