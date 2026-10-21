@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: capa más baja, colgada de un broche de oro
+**Qué:** la capa de la pala 29 cuelga 0,15 studs más abajo, sin cambiarle la forma ni la animación. La capa ya estaba en el punto más bajo del cráneo, así que para que no quede flotando cuelga de un broche de oro que va a lo largo de su borde de arriba. El broche está medio metido en el cráneo y medio en la capa.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`:
+- `Capa`, `Cadenas_*` y `Estrellas_Colgantes` bajan 0,15 hacia «abajo en la mano» (se actualiza `C0`).
+- Piezas nuevas `Broche_Capa_0`…`3` (cilindros) y `Broche_Capa_Nudo0`…`4` (bolas): oro Foil de 0,2 de grosor, que siguen la curva del cráneo y van soldadas a `Capa`.
+
+**Probado:** el hueco entre el cráneo y la capa es de 0,12 y el broche se mete 0,04 en cada lado. Captura de cerca en la mano. Antes se comprobó con rayos que no había otra zona del cráneo (ni la mandíbula) más baja donde colgarla.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: capa centrada bajo el cráneo
 **Qué:** la capa de la pala 29 quedaba un poco hacia un lado del cráneo. Ahora sale del centro de la parte de abajo del cráneo, sin dejar de estar pegada a su superficie.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Capa`, `Cadenas_*` y `Estrellas_Colgantes` se mueven 0,2 studs hacia el plano central del cráneo. Después se vuelve a ajustar el hueso de arriba de cada tira a la superficie (0,03 dentro) y las cadenas y estrellas siguen la media.
