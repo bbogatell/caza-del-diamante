@@ -2,3 +2,4 @@
 constelaciones_brillo  rbxassetid://74868553841081
 anillo_degradado       rbxassetid://106037477362116
 (reutilizadas de la pala 28: p_zafiro, p_rosa, p_saturno_ambar, p_violeta, p_tierra, nebulosa, halo; ver tools/modelos/L28/texturas/IDS.txt)
+huella_trex            rbxassetid://73572332203778

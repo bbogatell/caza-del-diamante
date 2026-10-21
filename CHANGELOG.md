@@ -2,6 +2,19 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: huella de T-Rex detallada y destello arcoíris al cavar
+**Qué:** el efecto al cavar de la pala 29 tiene ahora:
+- **La huella:** misma forma que el dibujo de referencia de seguo970 (talón ancho y tres dedos con garras en gancho). Rellena de bandas de arcoíris desde el borde hacia dentro, con borde blanco y un brillo alrededor. Mide 5,2 × 6,5 studs, el doble que antes.
+- **Cómo aparece:** sale de golpe con un pequeño rebote, y un «eco» de la huella crece y se desvanece.
+- **Al golpear, un destello arcoíris:** brillo blanco, un anillo arcoíris que se abre y chispas de todos los colores. No hay rayo ni columna de luz.
+
+Como antes, mira hacia donde mira el jugador, se pega al suelo y todo desaparece en 0,5 s.
+**Dónde:**
+- `StarterPlayerScripts.ShovelFx`: `trexPrint` reescrita. Usa un `Decal` en una pieza plana invisible, girada para que las garras queden delante.
+- Imagen generada por `tools/modelos/L29/huella.ps1` (contorno a mano + distancia al borde) y subida como `rbxassetid://73572332203778` (en `texturas/IDS.txt`).
+
+**Probado:** en Play: dirección comprobada con una huella fija (las garras hacia delante) y captura de una huella real con su eco y el anillo. Sin errores.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: huella arcoíris de T-Rex al cavar
 **Qué:** al dar un palazo al suelo con la pala 29 aparece en el suelo una huella de tiranosaurio (talón y tres dedos con garras, de unos 4 studs) en arcoíris: rojo en el borde y violeta en el centro. Apunta hacia donde mira el jugador, aparece de golpe y se desvanece en 0,5 s. Sustituye a la explosión arcoíris, que no gustó.
 **Dónde:** `StarterPlayerScripts.ShovelFx`: función `trexPrint` (7 capas de 7 óvalos, SmoothPlastic para que no se vea blanca por el brillo del Neon) en lugar de `rainbowDig`; `DIG_FX.L29 = trexPrint`. La llamada del efecto pasa ahora también el personaje y la normal del suelo (los otros efectos lo ignoran).
