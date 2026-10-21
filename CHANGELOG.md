@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 1: Pala de Rama de Helecho importada y texturizada
+**Qué:** la pala 1 es ahora el modelo 3D de `PalaRamaHelecho.glb`: palo de madera torcido, cuerda beige, hoja de piedra gris y un helecho enrollado. Lleva las texturas del archivo (color + relieve) en las 5 piezas, sin animación, como pide el prompt.
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L1`: 5 piezas a escala 1 (5,4 studs) con su `SurfaceAppearance` creado por el importador, `RenderFidelity` Precise, y material y color de respaldo (Wood, Slate, Fabric, Grass) por si falla la textura.
+- `Handle` invisible: deja la mano izquierda por debajo del helecho y la derecha junto a la cuerda.
+- Original importado en `ServerStorage.PalaRamaHelecho`. Archivos en `tools/modelos/L1/`.
+- Las texturas también se han subido aparte (IDs en `tools/modelos/L1/texturas/IDS.txt`), de reserva.
+
+**Probado:** en Play con `Debug "level" 1`: la pala sale en la mano, sin errores, con la mano izquierda a 0,26 de la base y la derecha a 3,09 (en la cuerda). La forma y el helecho verde se ven bien. **La madera y la piedra salían grises:** sus imágenes, recién subidas, aún no las servía Roblox (están en revisión, unos minutos). No se ha podido volver a mirar porque la vista 3D de Studio dejó de dibujar.
+**Notas:** no se usa `StarterPack` ni `Tool.Grip` como dice el prompt: el juego monta la herramienta desde `Models.Palas.L1` y `DigAnim` coloca las manos. No probado con avatar R6 (el juego usa R15).
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: huella de T-Rex detallada y destello arcoíris al cavar
 **Qué:** el efecto al cavar de la pala 29 tiene ahora:
 - **La huella:** misma forma que el dibujo de referencia de seguo970 (talón ancho y tres dedos con garras en gancho). Rellena de bandas de arcoíris desde el borde hacia dentro, con borde blanco y un brillo alrededor. Mide 5,2 × 6,5 studs, el doble que antes.

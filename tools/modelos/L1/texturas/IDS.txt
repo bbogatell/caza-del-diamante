@@ -1,0 +1,8 @@
+﻿Wood_albedo   rbxassetid://111596515291333
+Wood_normal   rbxassetid://84310851497484
+Stone_albedo  rbxassetid://139077760173480
+Stone_normal  rbxassetid://99971229447525
+Rope_albedo   rbxassetid://97669892524241
+Rope_normal   rbxassetid://115901186722890
+Fern_albedo   rbxassetid://122856665276063
+Fern_normal   rbxassetid://109108905029646

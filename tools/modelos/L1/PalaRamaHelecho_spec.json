@@ -1,0 +1,128 @@
+{
+  "nombre": "Pala de Rama de Helecho",
+  "unidades": "1 unidad = 1 stud (en el importador elegir escala 'Stud'); Y arriba; la hoja apunta a +Y, cara frontal (tachuelas visibles en el arte) hacia +Z",
+  "bbox_min": [
+    -0.984,
+    -0.057,
+    -0.354
+  ],
+  "bbox_max": [
+    0.737,
+    5.355,
+    0.396
+  ],
+  "longitud_total_studs": 5.412,
+  "punto_de_agarre": {
+    "posicion": [
+      0.027,
+      0.454,
+      0.042
+    ],
+    "nota": "donde va la mano derecha (zona baja del mango, por debajo del helecho, que empieza en y≈0.75). Usar como origen del Handle / GripPos."
+  },
+  "centro_cabeza_piedra": [
+    -0.125,
+    4.39,
+    0.0
+  ],
+  "piezas": {
+    "Mango": {
+      "material_textura": "Wood",
+      "triangulos": 14418,
+      "vertices": 7597,
+      "roblox_material": "Wood",
+      "color_rgb_0_255": [
+        176,
+        115,
+        66
+      ]
+    },
+    "HojaPiedra": {
+      "material_textura": "Stone",
+      "triangulos": 2944,
+      "vertices": 8832,
+      "roblox_material": "Slate",
+      "color_rgb_0_255": [
+        143,
+        143,
+        148
+      ]
+    },
+    "Cuerda": {
+      "material_textura": "Rope",
+      "triangulos": 17546,
+      "vertices": 9552,
+      "roblox_material": "Fabric",
+      "color_rgb_0_255": [
+        224,
+        204,
+        153
+      ]
+    },
+    "TalloHelecho": {
+      "material_textura": "Fern",
+      "triangulos": 10060,
+      "vertices": 5531,
+      "roblox_material": "Grass",
+      "color_rgb_0_255": [
+        84,
+        168,
+        46
+      ]
+    },
+    "HojasHelecho": {
+      "material_textura": "Fern",
+      "triangulos": 7656,
+      "vertices": 4872,
+      "roblox_material": "Grass",
+      "color_rgb_0_255": [
+        84,
+        168,
+        46
+      ]
+    }
+  },
+  "jerarquia_recomendada": {
+    "Tool": "PalaRamaHelecho",
+    "Handle": "Mango",
+    "soldados_a_Handle": [
+      "HojaPiedra",
+      "Cuerda",
+      "TalloHelecho",
+      "HojasHelecho"
+    ]
+  },
+  "texturas": {
+    "Wood": {
+      "albedo": "textures/Wood_albedo.png",
+      "normal": "textures/Wood_normal.png",
+      "normal_formato": "OpenGL (Y+ verde arriba); si se ve invertido, invertir canal G"
+    },
+    "Stone": {
+      "albedo": "textures/Stone_albedo.png",
+      "normal": "textures/Stone_normal.png",
+      "normal_formato": "OpenGL (Y+ verde arriba); si se ve invertido, invertir canal G"
+    },
+    "Rope": {
+      "albedo": "textures/Rope_albedo.png",
+      "normal": "textures/Rope_normal.png",
+      "normal_formato": "OpenGL (Y+ verde arriba); si se ve invertido, invertir canal G"
+    },
+    "Fern": {
+      "albedo": "textures/Fern_albedo.png",
+      "normal": "textures/Fern_normal.png",
+      "normal_formato": "OpenGL (Y+ verde arriba); si se ve invertido, invertir canal G"
+    }
+  },
+  "notas_uv": {
+    "Mango": "u = alrededor del palo (0..1), v = 0.12..1 a lo largo (base->punta); la testa de la base usa el cuadro u<0.12, v<0.12",
+    "HojaPiedra": "cara frontal u 0..0.5, cara trasera u 0.5..1 (proyección planar XY); canto = franja inferior v<0.25 (repite en u)",
+    "Cuerda": "u = alrededor, v = a lo largo con repetición (tileable); textura de 3 cabos alineada con el relieve",
+    "TalloHelecho": "atlas Fern: u alrededor, v 0.53..0.97 (base->punta del báculo)",
+    "HojasHelecho": "atlas Fern: u a lo largo del foliolo, v 0.03..0.47 a lo ancho"
+  },
+  "pivotes_para_animacion": {
+    "baculo_helecho": "punta superior del TalloHelecho (espiral) – puede animarse con un leve 'respirar' de escala",
+    "cabo_cuerda": "cabo colgante bajo el nudo – balanceo secundario opcional"
+  }
+}
