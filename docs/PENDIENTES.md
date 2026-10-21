@@ -12,7 +12,7 @@
 - [ ] Borrar `StarterPlayerScripts.DebugLevelKey` (o dejarlo, solo funciona en Studio).
 
 ## Bugs / a medias
-- [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend`. Falta verla cavando de verdad a varias velocidades de pala y con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
+- [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
 - [ ] **Pala 29 nueva** (seguo970, 21/10): se borró la importada (Rey Galáctico); falta el modelo nuevo.
 
 ## Sin probar
