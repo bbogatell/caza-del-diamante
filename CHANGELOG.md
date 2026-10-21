@@ -2,6 +2,24 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 4: Pala de Caparazón importada
+**Qué:** la pala 4 es ahora el modelo 3D `PalaCaparazon.glb`: hoja de caparazón de tortuga, mango de madera oscura, lianas verdes y gotas de barro. Va texturizada con materiales y los colores del prompt, que se ven sin esperar a que Roblox apruebe imágenes:
+- placas verdes y borde marrón / arena / oliva: Slate;
+- juntas color crema y reverso marrón: SmoothPlastic;
+- mango y pomo: Wood;
+- lianas: Grass;
+- barro: SmoothPlastic con algo de brillo.
+
+Mango alargado 0,9 studs, como en las palas 2 y 3, para que tenga el largo de las demás.
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L4` (escala 1,25, 7,2 studs).
+- Girada 180° sobre el mango para que las placas miren hacia delante con la pala en la mano.
+- `Handle` invisible: mano izquierda en la liana de abajo.
+- Original importado en `ServerStorage.PalaCaparazon`. Archivos en `tools/modelos/L4/`.
+
+**Probado:** captura de frente (comparada con la referencia). En Play con `Debug "level" 4`: las manos van en la liana de abajo y en la madera, con las placas verdes hacia delante. Captura en la mano.
+**Notas:** no se han hecho las animaciones del prompt (el juego usa `DigAnim`) ni se usa `StarterPack`.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 3: mango más largo
 **Qué:** el mango trenzado de la pala 3 es 0,9 studs más largo. El collar, la rana y el nenúfar quedan más lejos de las manos, y la mano derecha agarra la trenza en vez de quedar pegada al collar.
 **Dónde:** `ReplicatedStorage.Models.Palas.L3`:
