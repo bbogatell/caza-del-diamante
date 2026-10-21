@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: la capa se mueve como tela
+**Qué:** la capa de la pala 29 ondea como una tela: la parte de arriba queda fija al cuello y el movimiento crece hacia el borde de abajo, con una onda que baja y cruza la capa. Sigue además el balanceo de conjunto que comparte con las cadenas y las estrellas colgantes.
+**Dónde:** en `ReplicatedStorage.Models.Palas.L29` se cambia la pieza `Capa` por la de `Pala29_Capa_Rig.glb`, con sus 31 huesos (5 tiras × 6). Conserva la textura, las partículas y el Motor6D `ShovelOrbit`. Los huesos llevan la etiqueta `ShovelBone` (`Mode` swing, eje a lo ancho de la capa, `Amp` de 0,015 a 0,14 rad de arriba a abajo, `Speed` 2,4 y `Phase` desfasada por fila y columna). Original importado en `ServerStorage.Pala29_Capa_Rig`.
+**Probado:** en Play: los huesos se mueven, la parte de arriba coincide con la línea de anclaje del manifest y en la captura cuelga y se curva bien. Sin errores. No probado en móvil (skinning de 31 huesos).
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29 nueva: Rey Galáctico texturizada y animada
 **Qué:** la pala 29 es el modelo nuevo de `Pala29_ReyGalactico.glb` (cráneo de T-Rex de oro y cristal), montado así:
 - **Materiales:** oro Foil en cráneo, dientes, cuernos, mango, cuello, halo, pomo y cadenas. Cristal lavanda en el cráneo, la mandíbula, el cuello y la punta. Mango de cristal con constelaciones blancas que brillan. Ojos Neon amarillos. Anillos con degradado rosa↔cian que brilla. Capa de tela galáctica. Planetas con textura.
