@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: borrado todo para volver a empezar
+**Qué:** se quita la pala 29 importada (Rey Galáctico) para poner un modelo nuevo más adelante. Mientras tanto, la pala 29 vuelve a ser el diseño de bloques de `ShovelLook`.
+**Dónde:** borrados `ReplicatedStorage.Models.Palas.L29`, `ServerStorage.Pala del Rey Galactico` (importación GLB), `Workspace.Pala_del_Rey_Galactico` (importación FBX) y las 4 entradas de la pala en `ServerStorage.RBX_ANIMSAVES` («Rey», «Automatic Save»). En `ShovelFx` se quita `DIG_FX.L29` y la búsqueda de la pieza `Craneo`.
+**Probado:** comprobado que no queda ninguna instancia con «Rey Galactico» ni `L29`. No probado en Play.
+**Notas:** se mantienen en el repositorio `tools/modelos/L29/` (archivos originales) y las texturas subidas a Roblox (galaxia y arcoíris); no estorban. Las etiquetas `ShovelAnim` y `ShovelColor` de `ShovelFx` siguen ahí por si las usa el modelo nuevo. Sobre la animación nueva de cavar: `animacion cabar2.fbx` no trae animación (solo el esqueleto en una postura), así que no se ha cambiado. Para leer FBX binarios hay una herramienta nueva: `tools/fbx/fbxanim.ps1`.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 28: la Pala Galáctica importada, texturizada y animada
 **Qué:** la pala 28 es ahora el modelo 3D de `PalaGalactica_Roblox.zip`, montado así:
 - **Texturas propias:** galaxia espiral en la hoja con un remolino brillante encima que gira, nebulosa dentro del mango de cristal, 8 planetas (Tierra, gigantes con bandas, violeta con cráteres, vetas rosas/rubí, zafiro con nubes), anillos de planeta, 3 anillos de energía (rosa, violeta-azul, oro-cian) y auroras.
