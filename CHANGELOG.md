@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: cráneo y mango de galaxia
+**Qué:** en la pala 29, la parte de arriba del cráneo, el mango y el cuello pasan de cristal (diamante) a la misma tela de galaxia que la capa. Siguen de diamante la punta del final del mango y la mandíbula. Las constelaciones del mango desaparecen con el cambio.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Craneo_Cristal`, `Mango_Cristal` y `Cuello_Cristal` llevan el `SurfaceAppearance` de la capa (nebulosa con brillo 0,6), material Fabric, sin transparencia. `Punta_Cristal` y `Mandibula_Cristal` sin tocar. **Copia de antes del cambio:** `ServerStorage.CopiasPalas.L29_antes_galaxia` (para volver atrás, sustituir `L29` por esa copia renombrada a `L29`).
+**Probado:** captura en Play con la pala en la mano.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: capa más baja, colgada de un broche de oro
 **Qué:** la capa de la pala 29 cuelga 0,15 studs más abajo, sin cambiarle la forma ni la animación. La capa ya estaba en el punto más bajo del cráneo, así que para que no quede flotando cuelga de un broche de oro que va a lo largo de su borde de arriba. El broche está medio metido en el cráneo y medio en la capa.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`:
