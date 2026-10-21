@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 2: mango de hueso más largo
+**Qué:** el mango de la pala 2 se veía corto: buena parte del largo era el cráneo, que queda por debajo de la mano. Ahora el hueso es 0,9 studs más largo entre la mano y la piedra. El antiguo collar bajo la piedra queda como una articulación a media altura, y un nudo de hueso nuevo une el mango con la piedra. El cráneo, el pico y la piedra no cambian.
+**Dónde:** `ReplicatedStorage.Models.Palas.L2`:
+- `Blade_Stone` sube 0,9.
+- Piezas nuevas `Hueso_Extension` (cilindro de 0,3, mismo material y color que el hueso) y `Hueso_Nudo` (bola de 0,46), soldadas al `Handle`.
+- Largo total: 6,5 studs.
+- **Copia de antes:** `ServerStorage.CopiasPalas.L2_corta`.
+
+**Probado:** en Play: la mano derecha agarra el hueso, ya no la base de la piedra. La piedra queda a 4,5 del ojo del cráneo (antes 3,6). Captura de la pala sola y en la mano.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 2: Pala de Hueso de Dodo importada
 **Qué:** la pala 2 es ahora el modelo 3D `PalaHuesoDodo.glb`: hoja de piedra tallada gris, mango de hueso color crema, y cráneo de dodo con cuencas oscuras y pico amarillo en la punta de abajo. Va texturizada con materiales de Roblox, que se ven sin esperar a que Roblox apruebe imágenes.
 **Dónde:**
