@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: la capa sale desde detrás del cráneo
+**Qué:** la capa de la pala 29 sale ahora de debajo de la parte trasera del cráneo y cae por debajo del mango hacia el cuerpo, un poco más baja, como en el dibujo de seguo970.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Capa`, `Cadenas_Guirnaldas`, `Cadenas_Colgantes` y `Estrellas_Colgantes` se desplazan 0,8 studs hacia el cráneo a lo largo del mango y 0,2 más lejos del mango. Se actualizan `C0` y `Pivot` de sus Motor6D.
+**Probado:** en Play con la pala en la mano: el centro de la capa queda a 2,4 del agarre y 1,1 por debajo del mango. Captura de frente.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: capa centrada bajo el mango
 **Qué:** en la mano, la capa de la pala 29 quedaba por encima del mango, hacia la cabeza del personaje. Ahora cuelga por debajo del mango, entre el collar y el centro de la empuñadura. La animación no cambia.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`. `Capa`, `Cadenas_Guirnaldas`, `Cadenas_Colgantes` y `Estrellas_Colgantes` giran 180° alrededor del eje del mango y se desplazan 0,6 studs hacia el agarre; se actualizan sus Motor6D (`C0`, `Pivot`, `Axis`). Atributo `CapeFlip` en el modelo.
