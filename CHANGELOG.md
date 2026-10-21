@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: capa centrada bajo el mango
+**Qué:** en la mano, la capa de la pala 29 quedaba por encima del mango, hacia la cabeza del personaje. Ahora cuelga por debajo del mango, entre el collar y el centro de la empuñadura. La animación no cambia.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`. `Capa`, `Cadenas_Guirnaldas`, `Cadenas_Colgantes` y `Estrellas_Colgantes` giran 180° alrededor del eje del mango y se desplazan 0,6 studs hacia el agarre; se actualizan sus Motor6D (`C0`, `Pivot`, `Axis`). Atributo `CapeFlip` en el modelo.
+**Probado:** en Play con la pala en la mano: el centro de la capa queda 0,8 studs por debajo del mango y a 1,6 del agarre (antes 0,8 por encima y a 2,2). Captura de frente.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: capa a lo largo del mango y con más movimiento
 **Qué:** en la mano, la capa de la pala 29 sobresalía en diagonal. Ahora cae a lo largo del mango, hacia el pomo, y se mueve más: la tela ondea más rápido y más amplio, y el balanceo de conjunto pasa de ±6° a ±9°.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`. `Capa`, `Cadenas_Guirnaldas`, `Cadenas_Colgantes` y `Estrellas_Colgantes` giran −38,4° (de «hacia abajo» a «a lo largo del mango») alrededor del centro de la línea donde cuelga la capa; se actualizan sus Motor6D (`C0`, `Pivot`, `Axis`, `Swing` 9). Huesos de la capa: `Amp` de 0,022 a 0,21 rad y `Speed` 2,8. Atributo `CapeTurn` en el modelo con el giro aplicado.
