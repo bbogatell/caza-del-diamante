@@ -12,7 +12,7 @@
 - [ ] Borrar `StarterPlayerScripts.DebugLevelKey` (o dejarlo, solo funciona en Studio).
 
 ## Bugs / a medias
-- [ ] **Animación publicada de la pala 29 vacía** (seguo970, 21/10): las animaciones `130701784003158` (seguo970) y `109501587444048` (bbogatell) tienen **0 fotogramas**, solo `AnimationRigData` del rig `Pala_del_Rey_Galactico` (es el «Automatic Save» vacío de `ServerStorage.RBX_ANIMSAVES`). La buena es `RBX_ANIMSAVES."Pala del Rey Galactico".Rey` (145 fotogramas, 6 s en bucle). Para publicarla: Animation Editor → seleccionar el modelo `Pala del Rey Galactico` → ⋯ → Load → «Rey» → ⋯ → Publish to Roblox (con la cuenta de bbogatell). Mientras tanto la pala 29 sigue con su animación horneada (`ShovelAnim`), que es la misma.
+- [ ] **Animación publicada de la pala 29** (seguo970, 21/10): `130701784003158` y `109501587444048` están vacías (0 fotogramas). `103511085846454` (bbogatell) tiene la «Rey» completa, pero al reproducirla el cráneo, la mandíbula, el halo y la capa (Motor6D del importador) se separan de la pala. La pala 29 sigue con la animación horneada (`ShovelAnim`), que se ve bien. Solo haría falta publicar una animación si se quiere cambiar el movimiento; habría que arreglar esos 4 huesos en el Animation Editor, y aun así en la mano se movería 2,4 veces de más (ver CHANGELOG del 21/10).
 
 ## Sin probar
 - [ ] Palas 29 y 30 importadas (`Models.Palas.L29`/`L30`, animadas): rendimiento en móvil y verlas en la mano de otro jugador. En la tienda la 30 se ve pálida sobre su tarjeta; la 29 sin mirar.

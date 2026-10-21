@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: probada la animación publicada, se queda la de antes
+**Qué:** se probó la animación publicada por bbogatell (`103511085846454`, la «Rey» del Animation Editor) en la pala 29. Tiene sus 145 fotogramas, pero al reproducirla con un Animator **el cráneo, la mandíbula, el halo y la capa se separan de la pala** varios studs (también en el modelo original sin escalar). Por eso la pala 29 sigue con su animación horneada (`ShovelAnim`), que es la misma animación pero bien convertida. Para el jugador no cambia nada.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29` y `ShovelFx` quedan igual que antes. Borradas del workspace la copia `Pala del Rey Galactico` y `Rey_publicar`, que se pusieron solo para poder publicar.
+**Probado:** en Play con `Debug "level" 29`: el Animator la reproduce, pero el cráneo y el halo flotan lejos del mango (captura). Después se dejó todo como estaba.
+**Notas:** el fallo viene del importador. Convirtió en Motor6D los huesos `Craneo`, `Mandibula`, `Halo` y `Capa2`, que se llaman igual que una malla, y la animación «Rey» que creó no encaja con esos Motor6D. Además, en la mano las piezas están directamente dentro del `Tool`, que tiene escala 1, así que un Animator movería las piezas 2,4 veces de más (la pala está a escala 0,409). Sigue en `workspace` la importación FBX `Pala_del_Rey_Galactico` (a y=261); se puede borrar si ya no hace falta.
+
 ## 2026-10-20 · seguo970 (Claude) · Pala 29: el modelo del Rey Galáctico con su animación exacta y texturas
 **Qué:** la pala 29 (Pala del Rey Galáctico) es ahora el modelo 3D que hizo otro Claude (`tools/modelos/L29/Pala_del_Rey_Galactico.glb`), con:
 - **Su animación «Rey» exacta** (6 s en bucle): mandíbula, cráneo, capa, cadenas, halo, planetas, 3 anillos y 3 destellos. Roblox la descartaba al importar («no compatible»); se ha sacado del archivo y se reproduce por código, sin publicar nada. Se deja fuera el hueso que hacía flotar toda la pala (en la mano se movería sola).
