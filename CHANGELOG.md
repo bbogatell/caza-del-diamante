@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: destello arcoíris centrado en los ojos
+**Qué:** el destello arcoíris de la pala 29 estaba centrado en el halo dorado, por encima y detrás de la cabeza. Ahora está centrado entre los dos ojos del cráneo y ya no gira con el halo.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`: el `BillboardGui` `Destello` pasa del attachment `Halo.HaloCenter` (borrado) a uno nuevo, `Craneo_Oro.OjosCentro`, en el punto medio de `Ojo_Izq` y `Ojo_Der`. Mismo tamaño e imagen.
+**Probado:** captura en Play mirando el cráneo de frente.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: aros del mango centrados
 **Qué:** los tres aros que rodean el mango de la pala 29 estaban descentrados: el del collar hacia un lado y los dos del mango hacia el otro. Ahora los tres quedan centrados, con el mango en medio. Sus planetas giran igual que antes, ahora alrededor del mango.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Anillo_Collar` (+ `Planeta_Tierra`), `Anillo_Mango_1` (+ `Planeta_Morado_1`) y `Anillo_Mango_2` (+ `Planeta_Morado_2`) se desplazan hasta el eje del mango. Antes estaban 0,23, 0,37 y 0,39 studs fuera del eje. Se actualiza `C0` de sus Motor6D; el centro de la órbita se mueve con ellos.
