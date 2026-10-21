@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: capa girada 90° y saliendo de la superficie del cráneo
+**Qué:** la capa de la pala 29 se ha girado 90°. Ahora su borde de arriba va a lo largo de la parte de abajo del cráneo, no de lado a lado. Ya no está metida dentro: cada tira sale justo de la superficie exterior del cráneo, sin ninguna parte flotando.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`:
+- `Capa`, `Cadenas_*` y `Estrellas_Colgantes` giran 90° alrededor de la dirección de caída.
+- El hueso superior de cada tira (`Capa_C0_B0`…`Capa_C4_B0`) se mueve hasta la superficie del cráneo, medida con rayos contra la malla y dejándolo 0,03 dentro. Así el borde sigue la curva del cráneo.
+- Las cadenas y las estrellas se mueven 0,37, la media de las tiras.
+- El balanceo de conjunto baja a ±4°, para que los extremos no se despeguen.
+- Atributo `CapeFrom` = "skull surface".
+
+**Probado:** después del ajuste, las 5 tiras quedan a 0,03 bajo la superficie. Captura en la mano y sin errores en Play.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: la capa sale de dentro del cráneo
 **Qué:** con los cambios anteriores, la capa de la pala 29 quedaba flotando, separada de la pala. Ahora su borde de arriba está metido en la parte trasera del cráneo, de lado a lado de la cabeza, y la capa cae hacia el suelo cuando se lleva la pala. Al ondear gira sobre ese borde, así que nunca se despega.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Capa`, `Cadenas_Guirnaldas`, `Cadenas_Colgantes` y `Estrellas_Colgantes` se recolocan desde su posición original del modelo. El borde superior va al punto (2,2; 3,3; 0) del manifest y la caída va hacia «abajo» medido en la mano. Motor6D con `Pivot` en el borde y `Axis` a lo ancho de la cabeza. Atributo `CapeFrom` = "skull" en el modelo. Sustituye a los ajustes anteriores de la capa del mismo día.
