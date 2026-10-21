@@ -13,7 +13,7 @@
 
 ## Bugs / a medias
 - [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
-- [ ] **Pala 29 nueva** (seguo970, 21/10): se borró la importada (Rey Galáctico); falta el modelo nuevo.
+- [ ] **Pala 29 nueva** (seguo970, 21/10): puesta, texturizada y animada. Falta verla en la tienda, en móvil y en la mano de otro jugador. La capa se balancea entera: si se importa `tools/modelos/L29/Pala29_Capa_Rig.glb` se puede animar como tela.
 
 ## Sin probar
 - [ ] **Pala 28 (Pala Galáctica)** (seguo970, 21/10): seguo970 la ha visto en Play y se ve bien. Falta mirarla en la tienda, en móvil y en la mano de otro jugador. Del prompt quedan sin hacer el «aparecer» de anillos y halo al sacarla y la flotación de ±0,05 (casi no se vería).
@@ -36,7 +36,7 @@
 > Para cambiar cualquiera: deja el modelo final en la carpeta indicada con el **id como nombre** y el juego lo usa en vez del provisional. Pon una pieza `Root` en la base (si no, se crea sola). Las palas necesitan una pieza `Handle` en la empuñadura, con el mango a lo largo de +Y y todo soldado al `Handle`.
 - [ ] **198 bichos** → `ServerStorage.Models.Bichos.<id>` (id = número de su ficha en `BICHOS_DINOSAURIOS.md`, p. ej. `174` = T-Rex Galáctico). Ahora: dinosaurio de bloques genérico según el nombre, con los colores de su rareza.
 - [ ] **60 fósiles** → `ServerStorage.Models.Fosiles.<id>` (`C-I`…`MU-III`; los raros `C-S1` = ★, `C-S2` = ★★…). Ahora: roca de studs con un relieve sencillo.
-- [ ] **30 palas** → `ReplicatedStorage.Models.Palas.L<n>` (`L1`…`L30`; así también salen en la tienda; `ServerStorage.Models.Palas` solo cambia la de la mano). Hechas: `L28` y `L30` (la `L29` se borró el 21/10 para poner un modelo nuevo) (modelos importados; cómo: `docs/IMPORTAR_MODELOS.md`). Ahora: los diseños de `ShovelLook` (por nivel) con los nombres nuevos; falta adaptarlos a los diseños de `PALAS.md`.
+- [ ] **30 palas** → `ReplicatedStorage.Models.Palas.L<n>` (`L1`…`L30`; así también salen en la tienda; `ServerStorage.Models.Palas` solo cambia la de la mano). Hechas: `L28`, `L29` y `L30` (modelos importados; cómo: `docs/IMPORTAR_MODELOS.md`). Ahora: los diseños de `ShovelLook` (por nivel) con los nombres nuevos; falta adaptarlos a los diseños de `PALAS.md`.
 - [ ] **Decorado de las 15 parcelas**: piezas sencillas de `ServerStorage.LaneThemes` (dodo, esqueletos, volcán, puente de mosasaurio, templo, islas, T-Rex Galáctico…). Mejorable con modelos más detallados, sobre todo las estatuas.
 - [ ] Bases: plataforma sencilla igual para todos con valla de madera (como «Roba un huevo»); la valla no choca.
 - [ ] Objetos: modelos sencillos (bate, trampa, orbe de hielo, alfombra) y emojis en la tienda; mejorables con modelos e iconos propios.
