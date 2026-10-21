@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 3: mango más largo
+**Qué:** el mango trenzado de la pala 3 es 0,9 studs más largo. El collar, la rana y el nenúfar quedan más lejos de las manos, y la mano derecha agarra la trenza en vez de quedar pegada al collar.
+**Dónde:** `ReplicatedStorage.Models.Palas.L3`:
+- `Collar`, `Blade_*` y `Frog_*` suben 0,9.
+- `Shaft_Braid` se alarga ×1,28 desde su extremo de abajo, y `Shaft_Leaves` se mueven con ella. Se rehacen las soldaduras.
+- Largo total: 7,2 studs.
+- **Copia de antes:** `ServerStorage.CopiasPalas.L3_corta`.
+
+**Probado:** en Play: las manos quedan a 0,7 y 3,5 del extremo, y el collar a 4,6 (antes 3,7). Captura en la mano.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 3: Pala de Junco del Pantano importada
 **Qué:** la pala 3 es ahora el modelo 3D `PalaJuncoPantano.glb`: mango de junco trenzado con hojitas, cañas atadas en el extremo, collar de cuerda, una rana verde y la hoja de nenúfar turquesa con nervios. Va texturizada con materiales de Roblox y los colores del archivo, que se ven sin esperar aprobaciones de imágenes.
 **Dónde:**
