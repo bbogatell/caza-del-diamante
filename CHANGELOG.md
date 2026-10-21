@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: aros del mango centrados
+**Qué:** los tres aros que rodean el mango de la pala 29 estaban descentrados: el del collar hacia un lado y los dos del mango hacia el otro. Ahora los tres quedan centrados, con el mango en medio. Sus planetas giran igual que antes, ahora alrededor del mango.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Anillo_Collar` (+ `Planeta_Tierra`), `Anillo_Mango_1` (+ `Planeta_Morado_1`) y `Anillo_Mango_2` (+ `Planeta_Morado_2`) se desplazan hasta el eje del mango. Antes estaban 0,23, 0,37 y 0,39 studs fuera del eje. Se actualiza `C0` de sus Motor6D; el centro de la órbita se mueve con ellos.
+**Probado:** los tres a 0,00 del eje y captura en la mano.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: cráneo y mango de galaxia
 **Qué:** en la pala 29, la parte de arriba del cráneo, el mango y el cuello pasan de cristal (diamante) a la misma tela de galaxia que la capa. Siguen de diamante la punta del final del mango y la mandíbula. Las constelaciones del mango desaparecen con el cambio.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Craneo_Cristal`, `Mango_Cristal` y `Cuello_Cristal` llevan el `SurfaceAppearance` de la capa (nebulosa con brillo 0,6), material Fabric, sin transparencia. `Punta_Cristal` y `Mandibula_Cristal` sin tocar. **Copia de antes del cambio:** `ServerStorage.CopiasPalas.L29_antes_galaxia` (para volver atrás, sustituir `L29` por esa copia renombrada a `L29`).
