@@ -39,7 +39,7 @@
 
 ## Compartido: `ReplicatedStorage`
 - `Config`: **casi todos los números del juego**: carril y parcelas (`LANE`, `PLOTS`), palas (`SHOVELS`), monedas por cavar (`DIG_VALUE`), base, fósiles, eventos, velocidad, diario, Robux. Hijos: `Config.Creatures` (los 198 bichos) y `Config.Fossils` (13 rarezas y 60 fósiles).
-- `DigAnim`: animación de cavar (de una animación de Blender, 19 fotogramas), postura al llevar la pala y animación de pegar.
+- `DigAnim`: animación de cavar (de Blender, 26 fotogramas: `tools/animacion cavar/`), postura al llevar la pala (el primer fotograma) y animación de pegar. Para cambiarla: `exportar_cavar.py` (con Blender) y `convertir_cavar.ps1` dan las líneas de `FRAMES`.
 - `ShovelLook`: modelos de las 30 palas (piezas). Si existe `ReplicatedStorage.Models.Palas.L<n>` (modelo importado ya escalado, con `Handle`), se usa ese: ahora la `L28` (Pala Galáctica: piezas sueltas unidas al `Handle`; las que se mueven con Motor6D `ShovelOrbit`) y la `L30` (Pala Divina del Diamante, con huesos animados).
 - `Remotes` (avisos nuevos por `Push`: `FossilFound`, `FossilPicked`, `FossilDropped`, `FossilFell`, `FossilDelivered`, `RareFound`, `FossilEvent`, `Hatched`, `Sold`, `RegenWarn`): `Swing` (cavar), `Hit` (pegar), `Push` (servidor → cliente), `Request` (peticiones).
 - `Assets`: diamante y otros.

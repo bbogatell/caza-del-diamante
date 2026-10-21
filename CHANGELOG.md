@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Animación nueva de cavar, copiada fotograma a fotograma del .blend
+**Qué:** al cavar, el personaje hace la animación nueva de seguo970: levanta la pala por encima de la cabeza, se agacha, la clava, saca la tierra y la lanza (26 fotogramas). La postura al llevar la pala es su primer fotograma.
+**Dónde:** `ReplicatedStorage.DigAnim`: tabla `FRAMES` nueva y momentos del golpe (`IMPACT_AT` 0,6; `SCOOP_AT` 0,68; `TOSS_AT` 0,78, sacados de la altura de la pala en cada fotograma). Herramientas en `tools/animacion cavar/`: el `.blend` (rig MrXen0 R15, acción `Higgsfield_Motion.005_retarget`, 26 fotogramas a 20 fps), `exportar_cavar.py` (Blender en modo consola calcula cada hueso con IK incluido) y `convertir_cavar.ps1` (lo pasa a las articulaciones de Roblox).
+**Probado:** en Play, congelando la animación con el atributo `DebugDigF`: las articulaciones dan los mismos ángulos que Blender en cada fotograma; capturas del fotograma 12 (pala arriba) y 15 (agachado, pala clavada). Sin errores. No probado cavando de verdad ni con otro jugador.
+**Notas:** el FBX `animacion cabar2.fbx` no traía animación; por eso se sacó del `.blend`. Se usó Blender 5.2.2 portable descargado en `C:\bl52` (se puede borrar). Se mantiene `LEFT_GRIP` (la pala en la mano izquierda); el primer fotograma coincide con el de la animación anterior.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: borrado todo para volver a empezar
 **Qué:** se quita la pala 29 importada (Rey Galáctico) para poner un modelo nuevo más adelante. Mientras tanto, la pala 29 vuelve a ser el diseño de bloques de `ShovelLook`.
 **Dónde:** borrados `ReplicatedStorage.Models.Palas.L29`, `ServerStorage.Pala del Rey Galactico` (importación GLB), `Workspace.Pala_del_Rey_Galactico` (importación FBX) y las 4 entradas de la pala en `ServerStorage.RBX_ANIMSAVES` («Rey», «Automatic Save»). En `ShovelFx` se quita `DIG_FX.L29` y la búsqueda de la pieza `Craneo`.
