@@ -2,6 +2,20 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 2: Pala de Hueso de Dodo importada
+**Qué:** la pala 2 es ahora el modelo 3D `PalaHuesoDodo.glb`: hoja de piedra tallada gris, mango de hueso color crema, y cráneo de dodo con cuencas oscuras y pico amarillo en la punta de abajo. Va texturizada con materiales de Roblox, que se ven sin esperar a que Roblox apruebe imágenes.
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L2`, a escala 1,25 (5,6 studs, como el resto de palas):
+  - `Blade_Stone`: Slate `#8A8C94`.
+  - `Handle_Bone`: SmoothPlastic `#E8DEC2`.
+  - `Beak_Keratin`: SmoothPlastic `#E8B820`.
+  - `Cavities_Dark`: SmoothPlastic `#33302E`.
+- `Handle` invisible con la mano izquierda justo encima del cráneo.
+- Original importado en `ServerStorage.PalaHuesoDodo`.
+
+**Probado:** en Play con `Debug "level" 2`: la pala sale en la mano. La mano izquierda va encima del cráneo y la derecha en la base de la hoja. Captura de frente.
+**Notas:** no se han hecho las animaciones del prompt: el juego ya tiene las suyas (`DigAnim`) para todas las palas. Tampoco se usa `StarterPack` ni `Tool.Grip`: el juego monta la herramienta desde `Models.Palas`.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 1: piedra, cuerda y madera con materiales de Roblox
 **Qué:** la madera, la piedra y la cuerda de la pala 1 salían grises en el juego porque Roblox no había aprobado sus imágenes. Ahora usan materiales propios de Roblox, que siempre se ven: madera marrón con vetas, piedra gris con textura de roca y cuerda beige de tela. El helecho sigue con su textura, que sí carga.
 **Dónde:** `ReplicatedStorage.Models.Palas.L1`: sin `SurfaceAppearance` en `Mango` (Wood, 150/95/52), `HojaPiedra` (Slate, 135/135/140) y `Cuerda` (Fabric, 214/190/138).
