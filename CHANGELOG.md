@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: capa a lo largo del mango y con más movimiento
+**Qué:** en la mano, la capa de la pala 29 sobresalía en diagonal. Ahora cae a lo largo del mango, hacia el pomo, y se mueve más: la tela ondea más rápido y más amplio, y el balanceo de conjunto pasa de ±6° a ±9°.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`. `Capa`, `Cadenas_Guirnaldas`, `Cadenas_Colgantes` y `Estrellas_Colgantes` giran −38,4° (de «hacia abajo» a «a lo largo del mango») alrededor del centro de la línea donde cuelga la capa; se actualizan sus Motor6D (`C0`, `Pivot`, `Axis`, `Swing` 9). Huesos de la capa: `Amp` de 0,022 a 0,21 rad y `Speed` 2,8. Atributo `CapeTurn` en el modelo con el giro aplicado.
+**Probado:** en Play con la pala en la mano: captura de frente con la capa paralela al mango, sin errores.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: la capa se mueve como tela
 **Qué:** la capa de la pala 29 ondea como una tela: la parte de arriba queda fija al cuello y el movimiento crece hacia el borde de abajo, con una onda que baja y cruza la capa. Sigue además el balanceo de conjunto que comparte con las cadenas y las estrellas colgantes.
 **Dónde:** en `ReplicatedStorage.Models.Palas.L29` se cambia la pieza `Capa` por la de `Pala29_Capa_Rig.glb`, con sus 31 huesos (5 tiras × 6). Conserva la textura, las partículas y el Motor6D `ShovelOrbit`. Los huesos llevan la etiqueta `ShovelBone` (`Mode` swing, eje a lo ancho de la capa, `Amp` de 0,015 a 0,14 rad de arriba a abajo, `Speed` 2,4 y `Phase` desfasada por fila y columna). Original importado en `ServerStorage.Pala29_Capa_Rig`.
