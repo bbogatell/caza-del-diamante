@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: arreglado que la calavera no se moviera en la mano
+**Qué:** en la mano, la mandíbula, el cráneo, el halo y una parte de la capa de la pala 29 estaban quietos. Solo se movían los huesos finos (capa, cadenas, anillos, planetas). Ahora la boca muerde de verdad y el cráneo y el halo se balancean como en la animación.
+**Dónde:** `StarterPlayerScripts.ShovelFx`: las animaciones `ShovelAnim` se aplican en `RunService.PreSimulation` (antes iban en Heartbeat). El `Transform` de un Motor6D solo mueve la pieza si la física lo ve, y escrito en Heartbeat el Animator del personaje lo borraba antes del siguiente paso de física. A los huesos no les pasa porque se dibujan directamente desde su `Transform`.
+**Probado:** en Play con la pala 29 en la mano, midiendo la posición real de las piezas: la boca va 0 → 30° → 0 dos veces cada 6 s, `Mandibula2` la sigue, el cráneo y el halo no se separan (3,3-3,6 studs de la mano) y los planetas siguen girando. No lo he visto en captura (los efectos tapan la calavera).
+**Notas:** los Motor6D de las palas importadas leídos con `.Transform` parecen moverse aunque la pieza no se mueva; para comprobarlo hay que mirar el `CFrame` de las piezas.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: la boca se abre y se cierra como en el vídeo
 **Qué:** la calavera de la pala 29 ahora muerde: abre la boca hasta 30° y la cierra de golpe, dos veces en cada vuelta de 6 s (como en `Pala_Rey_Galactico_preview`). Además, todas las piezas del cráneo, la mandíbula y el halo se mueven juntas. Antes solo se movía la pieza principal de cada una y el resto (cristal de la mandíbula, dientes, ojos, partes del cráneo y del halo) se quedaba quieto, así que la boca casi no parecía abrirse.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`. Motor6D de `Craneo2-5`, `Ojos`, `Ojos2` y `Dientes` ahora cuelgan de `Craneo`; `Mandibula2` de `Mandibula`; `Halo2-5` de `Halo` (antes de `RootPart`). En `L29.ShovelAnim`, la pista `Mandibula` está hecha a mano (giro en Z de 0 a 30°); el resto sigue siendo la animación «Rey» del .glb.
