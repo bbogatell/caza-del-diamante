@@ -1,0 +1,285 @@
+{
+  "units": "studs",
+  "px_per_stud": 280.0,
+  "origin": "grip point on the handle axis (hand position)",
+  "axes": "+Y = handle axis toward the blade, +Z = lily pad front face (frog side), +X = right side of the blade",
+  "parts": {
+    "Grip_Reeds": {
+      "material": "M_Reed",
+      "triangles": 10368,
+      "vertices": 5200,
+      "bbox_min": [
+        -0.271,
+        -1.304,
+        -0.242
+      ],
+      "bbox_max": [
+        0.281,
+        -0.531,
+        0.355
+      ],
+      "center": [
+        0.005,
+        -0.917,
+        0.056
+      ]
+    },
+    "Grip_Binding": {
+      "material": "M_Binding",
+      "triangles": 11264,
+      "vertices": 5636,
+      "bbox_min": [
+        -0.311,
+        -1.059,
+        -0.287
+      ],
+      "bbox_max": [
+        0.264,
+        -0.5,
+        0.287
+      ],
+      "center": [
+        -0.024,
+        -0.78,
+        0.0
+      ]
+    },
+    "Shaft_Braid": {
+      "material": "M_Braid",
+      "triangles": 19040,
+      "vertices": 9528,
+      "bbox_min": [
+        -0.227,
+        -0.711,
+        -0.179
+      ],
+      "bbox_max": [
+        0.234,
+        1.903,
+        0.179
+      ],
+      "center": [
+        0.003,
+        0.596,
+        -0.0
+      ]
+    },
+    "Shaft_Leaves": {
+      "material": "M_SmallLeaf",
+      "triangles": 2124,
+      "vertices": 1116,
+      "bbox_min": [
+        -0.34,
+        -0.048,
+        0.037
+      ],
+      "bbox_max": [
+        0.345,
+        1.172,
+        0.187
+      ],
+      "center": [
+        0.002,
+        0.562,
+        0.112
+      ]
+    },
+    "Collar": {
+      "material": "M_Collar",
+      "triangles": 18336,
+      "vertices": 9172,
+      "bbox_min": [
+        -0.354,
+        1.609,
+        -0.277
+      ],
+      "bbox_max": [
+        0.273,
+        2.451,
+        0.277
+      ],
+      "center": [
+        -0.041,
+        2.03,
+        0.0
+      ]
+    },
+    "Blade_Stem": {
+      "material": "M_Stem",
+      "triangles": 960,
+      "vertices": 482,
+      "bbox_min": [
+        -0.167,
+        2.113,
+        -0.036
+      ],
+      "bbox_max": [
+        0.101,
+        2.517,
+        0.099
+      ],
+      "center": [
+        -0.033,
+        2.315,
+        0.032
+      ]
+    },
+    "Blade_LilyPad": {
+      "material": "M_LilyPad",
+      "triangles": 872,
+      "vertices": 2616,
+      "bbox_min": [
+        -0.861,
+        1.8,
+        -0.082
+      ],
+      "bbox_max": [
+        0.747,
+        3.731,
+        0.083
+      ],
+      "center": [
+        -0.057,
+        2.766,
+        0.0
+      ]
+    },
+    "Blade_Veins": {
+      "material": "M_Vein",
+      "triangles": 8040,
+      "vertices": 4046,
+      "bbox_min": [
+        -0.731,
+        1.971,
+        0.036
+      ],
+      "bbox_max": [
+        0.582,
+        3.5,
+        0.114
+      ],
+      "center": [
+        -0.074,
+        2.736,
+        0.075
+      ]
+    },
+    "Frog_Body": {
+      "material": "M_FrogSkin",
+      "triangles": 17384,
+      "vertices": 8774,
+      "bbox_min": [
+        -0.52,
+        1.747,
+        -0.056
+      ],
+      "bbox_max": [
+        0.03,
+        2.527,
+        0.309
+      ],
+      "center": [
+        -0.245,
+        2.137,
+        0.127
+      ]
+    },
+    "Frog_Belly": {
+      "material": "M_FrogBelly",
+      "triangles": 952,
+      "vertices": 478,
+      "bbox_min": [
+        -0.316,
+        2.1,
+        0.071
+      ],
+      "bbox_max": [
+        -0.136,
+        2.382,
+        0.257
+      ],
+      "center": [
+        -0.226,
+        2.241,
+        0.164
+      ]
+    },
+    "Frog_Spots": {
+      "material": "M_FrogSpot",
+      "triangles": 1120,
+      "vertices": 570,
+      "bbox_min": [
+        -0.488,
+        1.936,
+        0.14
+      ],
+      "bbox_max": [
+        -0.374,
+        2.173,
+        0.24
+      ],
+      "center": [
+        -0.431,
+        2.055,
+        0.19
+      ]
+    },
+    "Frog_Eyes": {
+      "material": "M_FrogEye",
+      "triangles": 2104,
+      "vertices": 1060,
+      "bbox_min": [
+        -0.431,
+        2.254,
+        0.084
+      ],
+      "bbox_max": [
+        -0.231,
+        2.522,
+        0.298
+      ],
+      "center": [
+        -0.331,
+        2.388,
+        0.191
+      ]
+    }
+  },
+  "overall_size_studs": [
+    1.608,
+    5.034,
+    0.642
+  ],
+  "anchors": {
+    "grip": [
+      0,
+      0,
+      0
+    ],
+    "butt_end": [
+      -0.016,
+      -1.286,
+      0.0
+    ],
+    "blade_center_vein_hub": [
+      -0.128,
+      2.511,
+      0.054
+    ],
+    "frog_seat (pivot for frog anims)": [
+      -0.181,
+      1.941,
+      0.143
+    ],
+    "frog_head_center": [
+      -0.318,
+      2.364,
+      0.136
+    ],
+    "blade_tip_top": [
+      -0.172,
+      3.731,
+      0.0
+    ]
+  }
+}

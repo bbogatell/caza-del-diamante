@@ -2,6 +2,19 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 3: Pala de Junco del Pantano importada
+**Qué:** la pala 3 es ahora el modelo 3D `PalaJuncoPantano.glb`: mango de junco trenzado con hojitas, cañas atadas en el extremo, collar de cuerda, una rana verde y la hoja de nenúfar turquesa con nervios. Va texturizada con materiales de Roblox y los colores del archivo, que se ven sin esperar aprobaciones de imágenes.
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L3`, a escala 1,25 (6,3 studs). Materiales:
+  - juncos y trenza: Grass;
+  - ataduras y collar: Fabric;
+  - nenúfar: Ice turquesa (aspecto de cristal tallado, como en la imagen);
+  - nervios, hojas y rana: SmoothPlastic (ojos negros con algo de brillo).
+- `Handle` invisible con la mano izquierda en la trenza, justo encima de la atadura.
+- Original importado en `ServerStorage.PalaJuncoPantano`. Archivos en `tools/modelos/L3/`.
+
+**Probado:** captura de frente (comparada con la referencia). En Play con `Debug "level" 3`: la pala sale en la mano, la mano izquierda va sobre la trenza y la derecha justo debajo del collar. Captura en la mano.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 2: mango de hueso más largo
 **Qué:** el mango de la pala 2 se veía corto: buena parte del largo era el cráneo, que queda por debajo de la mano. Ahora el hueso es 0,9 studs más largo entre la mano y la piedra. El antiguo collar bajo la piedra queda como una articulación a media altura, y un nudo de hueso nuevo une el mango con la piedra. El cráneo, el pico y la piedra no cambian.
 **Dónde:** `ReplicatedStorage.Models.Palas.L2`:
