@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: explosión arcoíris al cavar
+**Qué:** al dar un palazo al suelo con la pala 29 ya no sale la pequeña explosión rosa-lila de la pala 28, sino una más grande de arcoíris:
+- un destello blanco;
+- 7 anillos de colores que se abren por el suelo hasta unos 22 studs;
+- una columna de luz de 7 colores;
+- más de 100 estrellas de todos los colores que saltan y caen.
+
+La pala 28 sigue con su efecto.
+**Dónde:** `StarterPlayerScripts.ShovelFx`: función nueva `rainbowDig` y `DIG_FX.L29 = rainbowDig`.
+**Probado:** en Play con la pala 29: cada golpe crea las 15 piezas del efecto. Captura del estallido. Sin errores.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: aliento de nebulosa por la boca
 **Qué:** la calavera de la pala 29 echa por la boca un aliento de galaxia: una nube rosa → violeta → azul con estrellitas blancas, que sale entre los dientes, se abre y se desvanece. «Respira»: sale más y menos cada 2,5 s, el mismo ritmo que la mandíbula. No se ha cambiado nada más de la pala.
 **Dónde:**
