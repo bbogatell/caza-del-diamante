@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: aliento de nebulosa por la boca
+**Qué:** la calavera de la pala 29 echa por la boca un aliento de galaxia: una nube rosa → violeta → azul con estrellitas blancas, que sale entre los dientes, se abre y se desvanece. «Respira»: sale más y menos cada 2,5 s, el mismo ritmo que la mandíbula. No se ha cambiado nada más de la pala.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L29`: attachment nuevo `Craneo_Oro.Aliento`, delante de la boca y mirando hacia fuera, con los emisores `Nebulosa` (humo tintado, tamaño de 0,5 a 2,4) y `EstrellasAliento`. Los dos llevan la etiqueta `ShovelPulse` (`Min`/`Max` = partículas por segundo).
+- `ShovelFx`: `ShovelPulse` admite también `ParticleEmitter` (pulsa `Rate`, solo en pasos enteros: si se cambia en cada fotograma el emisor deja de echar partículas).
+- **Copia de antes:** `ServerStorage.CopiasPalas.L29_prototipo` (la pala tal como estaba al darla por buena).
+
+**Probado:** en Play el emisor funciona y da 18 partículas/s en el pico, sin errores. No se ha podido ver la nube en las capturas, porque Studio en segundo plano no avanza las partículas continuas; con una ráfaga manual sí se ve la nube rosa en la boca. Falta mirarlo en pantalla.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: destello arcoíris centrado en los ojos
 **Qué:** el destello arcoíris de la pala 29 estaba centrado en el halo dorado, por encima y detrás de la cabeza. Ahora está centrado entre los dos ojos del cráneo y ya no gira con el halo.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`: el `BillboardGui` `Destello` pasa del attachment `Halo.HaloCenter` (borrado) a uno nuevo, `Craneo_Oro.OjosCentro`, en el punto medio de `Ojo_Izq` y `Ojo_Der`. Mismo tamaño e imagen.
