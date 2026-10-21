@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: la boca se abre y se cierra como en el vídeo
+**Qué:** la calavera de la pala 29 ahora muerde: abre la boca hasta 30° y la cierra de golpe, dos veces en cada vuelta de 6 s (como en `Pala_Rey_Galactico_preview`). Además, todas las piezas del cráneo, la mandíbula y el halo se mueven juntas. Antes solo se movía la pieza principal de cada una y el resto (cristal de la mandíbula, dientes, ojos, partes del cráneo y del halo) se quedaba quieto, así que la boca casi no parecía abrirse.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`. Motor6D de `Craneo2-5`, `Ojos`, `Ojos2` y `Dientes` ahora cuelgan de `Craneo`; `Mandibula2` de `Mandibula`; `Halo2-5` de `Halo` (antes de `RootPart`). En `L29.ShovelAnim`, la pista `Mandibula` está hecha a mano (giro en Z de 0 a 30°); el resto sigue siendo la animación «Rey» del .glb.
+**Probado:** en Play con `Debug "level" 29` la mandíbula va 0 → 30° → 0 dos veces cada 6 s y `Mandibula2` la sigue. Capturas en Edit de la boca abierta a 23°, 30° y 37° (con 37° la mandíbula se mete en la capa; por eso 30°). Sin errores. No mirado de cerca en la mano (los efectos tapan la calavera).
+**Notas:** para cambiar cuánto abre, regenerar la pista `Mandibula` del módulo (valor `OPEN`, 61 fotogramas cada 0,1 s, rotación solo en el 6.º número de cada fotograma).
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: probada la animación publicada, se queda la de antes
 **Qué:** se probó la animación publicada por bbogatell (`103511085846454`, la «Rey» del Animation Editor) en la pala 29. Tiene sus 145 fotogramas, pero al reproducirla con un Animator **el cráneo, la mandíbula, el halo y la capa se separan de la pala** varios studs (también en el modelo original sin escalar). Por eso la pala 29 sigue con su animación horneada (`ShovelAnim`), que es la misma animación pero bien convertida. Para el jugador no cambia nada.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29` y `ShovelFx` quedan igual que antes. Borradas del workspace la copia `Pala del Rey Galactico` y `Rey_publicar`, que se pusieron solo para poder publicar.
