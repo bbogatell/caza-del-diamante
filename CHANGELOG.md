@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 1: piedra, cuerda y madera con materiales de Roblox
+**Qué:** la madera, la piedra y la cuerda de la pala 1 salían grises en el juego porque Roblox no había aprobado sus imágenes. Ahora usan materiales propios de Roblox, que siempre se ven: madera marrón con vetas, piedra gris con textura de roca y cuerda beige de tela. El helecho sigue con su textura, que sí carga.
+**Dónde:** `ReplicatedStorage.Models.Palas.L1`: sin `SurfaceAppearance` en `Mango` (Wood, 150/95/52), `HojaPiedra` (Slate, 135/135/140) y `Cuerda` (Fabric, 214/190/138).
+**Probado:** captura en Play con la pala en la mano.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 1: Pala de Rama de Helecho importada y texturizada
 **Qué:** la pala 1 es ahora el modelo 3D de `PalaRamaHelecho.glb`: palo de madera torcido, cuerda beige, hoja de piedra gris y un helecho enrollado. Lleva las texturas del archivo (color + relieve) en las 5 piezas, sin animación, como pide el prompt.
 **Dónde:**
