@@ -15,7 +15,7 @@
 - [ ] **Animación publicada de la pala 29** (seguo970, 21/10): `130701784003158` y `109501587444048` están vacías (0 fotogramas). `103511085846454` (bbogatell) tiene la «Rey» completa, pero al reproducirla el cráneo, la mandíbula, el halo y la capa (Motor6D del importador) se separan de la pala. La pala 29 sigue con la animación horneada (`ShovelAnim`), que se ve bien. Solo haría falta publicar una animación si se quiere cambiar el movimiento; habría que arreglar esos 4 huesos en el Animation Editor, y aun así en la mano se movería 2,4 veces de más (ver CHANGELOG del 21/10).
 
 ## Sin probar
-- [ ] **Pala 28 (Pala Galáctica) vista en pantalla** (seguo970, 21/10): montada, texturizada y animada, pero la vista 3D de Studio no dibujaba al probarla, así que no se ha mirado: colores, halo, cometas, que no atraviese al personaje, la tienda. Del prompt quedan sin hacer el «aparecer» de anillos y halo al sacarla y la flotación de ±0,05 (casi no se vería).
+- [ ] **Pala 28 (Pala Galáctica)** (seguo970, 21/10): seguo970 la ha visto en Play y se ve bien. Falta mirarla en la tienda, en móvil y en la mano de otro jugador. Del prompt quedan sin hacer el «aparecer» de anillos y halo al sacarla y la flotación de ±0,05 (casi no se vería).
 - [ ] Palas 29 y 30 importadas (`Models.Palas.L29`/`L30`, animadas): rendimiento en móvil y verlas en la mano de otro jugador. En la tienda la 30 se ve pálida sobre su tarjeta; la 29 sin mirar.
 - [ ] Con **2 jugadores**: el bate (empuje y tirar el fósil), la trampa y el hielo sobre otro jugador.
 - [ ] El evento del diamante y la cinemática final con el campo en su sitio nuevo (z −3208).
