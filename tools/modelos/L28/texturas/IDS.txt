@@ -1,0 +1,17 @@
+﻿galaxia          rbxassetid://134468349585940
+remolino         rbxassetid://115969519102611
+nebulosa         rbxassetid://97891625149044
+energia_rosa     rbxassetid://76759686211568
+energia_violeta  rbxassetid://117384019344264
+energia_oro      rbxassetid://72814435790008
+aurora           rbxassetid://76984114977072
+anillo_planeta   rbxassetid://125769920705556
+p_tierra         rbxassetid://131626334272933
+p_magenta        rbxassetid://83210412856594
+p_saturno_oro    rbxassetid://94066799196311
+p_saturno_ambar  rbxassetid://100149333394360
+p_violeta        rbxassetid://132059487932945
+p_rosa           rbxassetid://90320498342739
+p_rubi           rbxassetid://72220035750598
+p_zafiro         rbxassetid://120407133274675
+halo             rbxassetid://129742364074441

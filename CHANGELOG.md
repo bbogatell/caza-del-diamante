@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 28: la Pala Galáctica importada, texturizada y animada
+**Qué:** la pala 28 es ahora el modelo 3D de `PalaGalactica_Roblox.zip`, montado así:
+- **Texturas propias:** galaxia espiral en la hoja con un remolino brillante encima que gira, nebulosa dentro del mango de cristal, 8 planetas (Tierra, gigantes con bandas, violeta con cráteres, vetas rosas/rubí, zafiro con nubes), anillos de planeta, 3 anillos de energía (rosa, violeta-azul, oro-cian) y auroras.
+- **Materiales:** oro Foil, cristal y estrellas Neon.
+- **Animación:** los 6 planetas de la hoja orbitan la galaxia y giran sobre sí mismos. Los del mango y el del pomo orbitan a su ritmo. Los anillos de energía giran y laten, el halo de estrellas gira, la nebulosa gira dentro del mango y las auroras se balancean.
+- **Efectos:** luz rosa-violeta que respira en el núcleo, chispas en el remolino, destello en la estrella grande, cometas, polvo de estrellas, halo arcoíris con rayos dorados detrás de la hoja y luz dorada en el pomo.
+- **Al cavar:** estallido de estrellas rosas, azules y doradas con onda violeta, y todo gira ×3 durante medio segundo.
+**Dónde:** nuevo `ReplicatedStorage.Models.Palas.L28` (escala 0,6, ~6,8 studs; original importado en `ServerStorage.PalaGalactica`). `ShovelFx`: etiquetas nuevas `ShovelOrbit` (Motor6D, en PreSimulation) y `ShovelPulse` (luces y piezas), `DIG_FX.L28` y aceleración al cavar (atributo local `FxBoostUntil` en la herramienta). Texturas: `tools/modelos/L28/texturas.ps1`, IDs en `tools/modelos/L28/texturas/IDS.txt` (subidas con la cuenta de seguo970).
+**Probado:** en Play con `Debug "level" 28`: los planetas se mueven (cada anillo de planeta pegado a su planeta), los anillos giran, la luz y la transparencia laten, al cavar se acelera, sin errores en la consola. Las manos caen en el mango (izquierda encima del pomo, derecha al inicio del cuello): con escala 0,55 y el agarre del manifest la derecha caía en la hoja, por eso escala 0,6 y agarre más bajo. **No visto en pantalla:** la vista 3D de Studio no dibujaba durante la prueba.
+**Notas:** no se usa `StarterPack` ni `Tool.Grip` como dice el prompt del zip: el juego monta la herramienta desde `Models.Palas.L28` y `DigAnim` coloca las manos. Del prompt no se ha hecho el «aparecer» de anillos y halo al sacarla ni la flotación de ±0,05.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: arreglado que la calavera no se moviera en la mano
 **Qué:** en la mano, la mandíbula, el cráneo, el halo y una parte de la capa de la pala 29 estaban quietos. Solo se movían los huesos finos (capa, cadenas, anillos, planetas). Ahora la boca muerde de verdad y el cráneo y el halo se balancean como en la animación.
 **Dónde:** `StarterPlayerScripts.ShovelFx`: las animaciones `ShovelAnim` se aplican en `RunService.PreSimulation` (antes iban en Heartbeat). El `Transform` de un Motor6D solo mueve la pieza si la física lo ve, y escrito en Heartbeat el Animator del personaje lo borraba antes del siguiente paso de física. A los huesos no les pasa porque se dibujan directamente desde su `Transform`.

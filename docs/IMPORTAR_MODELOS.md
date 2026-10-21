@@ -19,3 +19,11 @@
 7. **Efectos:** partículas y luces en las piezas o en los huesos (así siguen la animación); colores animados con la etiqueta `ShovelColor`; efecto al cavar añadiendo la pala a `DIG_FX` en `ShovelFx`.
 
 Datos de la pala 29 ya extraídos en `tools/modelos/L29/` (`animacion_Rey.json` y `.lua`).
+
+## Modelos sin huesos ni texturas (pala 28)
+
+La pala 28 (`tools/modelos/L28/`) llegó como 36 mallas sueltas con un manifest (`PalaGalactica_manifest.json`: centros, ejes y velocidades de cada órbita y puntos para efectos).
+- **Texturas:** las genera `tools/modelos/L28/texturas.ps1` (C# dentro de PowerShell; no hace falta Python). IDs subidos en `texturas/IDS.txt`. Se ponen con `SurfaceAppearance` (`AlphaMode = Transparency` en las que llevan transparencia, `EmissiveStrength` + `EmissiveMaskContent` para que brillen).
+- **Ejes:** el importador gira el modelo 180° sobre Y, así que un punto o eje `(x, y, z)` del manifest es `(-x, y, -z)` en Studio (y se multiplica por la escala).
+- **Agarre:** en la mano, la izquierda queda ~0,68 studs por debajo del `Handle` y la derecha 2,8 studs más arriba (pose de `DigAnim`). Con un mango corto hay que bajar el `Handle` para que la mano derecha no caiga en la hoja.
+- **Animación:** sin huesos; cada pieza que se mueve va con un Motor6D al `Handle` con la etiqueta `ShovelOrbit` (ver `docs/ARQUITECTURA.md`).

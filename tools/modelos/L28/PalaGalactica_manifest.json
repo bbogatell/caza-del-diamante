@@ -1,0 +1,1184 @@
+{
+  "model": "PalaGalactica",
+  "units": "1 unidad = 1 stud",
+  "up_axis": "+Y",
+  "blade_front": "+Z",
+  "grip": [
+    0,
+    0,
+    0
+  ],
+  "parts": {
+    "Blade_Galaxy": {
+      "group": "Blade",
+      "material": "galaxy",
+      "triangles": 17280,
+      "vertices": 8642,
+      "pivot_bbox_center": [
+        0.0,
+        5.5998,
+        -0.0662
+      ],
+      "size": [
+        3.7,
+        3.9405,
+        0.3706
+      ],
+      "notes": "Superficie de la hoja. UV planar: centro de la espiral = (0.5,0.5). Anverso y reverso comparten UV (reverso en espejo)."
+    },
+    "Blade_SwirlFront": {
+      "group": "Blade",
+      "material": "galaxy_overlay",
+      "triangles": 2520,
+      "vertices": 1297,
+      "pivot_bbox_center": [
+        0.0,
+        5.35,
+        -0.0347
+      ],
+      "size": [
+        3.24,
+        3.24,
+        0.1085
+      ],
+      "notes": "Disco circular (R=1.62) 0.018 por delante del anverso. UV radial: centro (0.5,0.5), borde = círculo inscrito. Textura de brazos espirales con alfa; GIRAR sobre el eje Z del modelo por BladeCenter."
+    },
+    "Blade_SwirlBack": {
+      "group": "Blade",
+      "material": "galaxy_overlay",
+      "triangles": 2520,
+      "vertices": 1297,
+      "pivot_bbox_center": [
+        0.0,
+        5.35,
+        -0.1909
+      ],
+      "size": [
+        3.24,
+        3.24,
+        0.1562
+      ],
+      "notes": "Igual que Blade_SwirlFront pero en el reverso (UV en espejo)."
+    },
+    "Blade_GoldFrame": {
+      "group": "Blade",
+      "material": "gold",
+      "triangles": 17776,
+      "vertices": 9992,
+      "pivot_bbox_center": [
+        0.0,
+        5.6201,
+        0.0257
+      ],
+      "size": [
+        4.893,
+        4.2276,
+        0.367
+      ],
+      "notes": "Marco dorado, filigranas y garras de la hoja."
+    },
+    "Blade_Crystals": {
+      "group": "Blade",
+      "material": "crystal",
+      "triangles": 1244,
+      "vertices": 3732,
+      "pivot_bbox_center": [
+        -0.0363,
+        5.8271,
+        0.0905
+      ],
+      "size": [
+        5.4286,
+        5.3469,
+        1.3514
+      ],
+      "notes": "Esquirlas de cristal facetado alrededor de la hoja y del cuello."
+    },
+    "Blade_Stars": {
+      "group": "Blade",
+      "material": "gold_star",
+      "triangles": 300,
+      "vertices": 900,
+      "pivot_bbox_center": [
+        -0.0055,
+        5.8686,
+        0.0584
+      ],
+      "size": [
+        3.8909,
+        3.6454,
+        0.3145
+      ],
+      "notes": "Estrella grande de 8 puntas, estrellas de 5 puntas y destellos dorados."
+    },
+    "Collar_Gold": {
+      "group": "Collar",
+      "material": "gold",
+      "triangles": 4400,
+      "vertices": 2483,
+      "pivot_bbox_center": [
+        -0.0,
+        3.5836,
+        0.0
+      ],
+      "size": [
+        3.0588,
+        1.4671,
+        0.841
+      ],
+      "notes": "Casquillo dorado que une mango y hoja; brazos que abrazan la hoja; dos cabujones."
+    },
+    "Shaft_CrystalShell": {
+      "group": "Shaft",
+      "material": "crystal",
+      "triangles": 720,
+      "vertices": 2160,
+      "pivot_bbox_center": [
+        0.0,
+        0.7,
+        0.0
+      ],
+      "size": [
+        0.5352,
+        4.5,
+        0.5352
+      ],
+      "notes": "Prisma octogonal de cristal retorcido 150°. Transparente."
+    },
+    "Shaft_NebulaCore": {
+      "group": "Shaft",
+      "material": "nebula",
+      "triangles": 2880,
+      "vertices": 1518,
+      "pivot_bbox_center": [
+        0.0,
+        0.7,
+        0.0
+      ],
+      "size": [
+        0.32,
+        4.44,
+        0.32
+      ],
+      "notes": "Cilindro interior. UV cilíndrica: U = ángulo (0..1), V = altura (0 abajo, 1 arriba). Textura de nebulosa tileable en U; animar desplazando V/U."
+    },
+    "Shaft_GoldBands": {
+      "group": "Shaft",
+      "material": "gold",
+      "triangles": 9408,
+      "vertices": 5096,
+      "pivot_bbox_center": [
+        0.0,
+        0.6962,
+        0.0
+      ],
+      "size": [
+        0.695,
+        4.3325,
+        0.6766
+      ],
+      "notes": "7 aros dorados (algunos estriados) alrededor del mango."
+    },
+    "Shaft_OrbitRing_Upper": {
+      "group": "Shaft",
+      "material": "gold",
+      "triangles": 1536,
+      "vertices": 864,
+      "pivot_bbox_center": [
+        0.0,
+        2.15,
+        0.0
+      ],
+      "size": [
+        1.166,
+        0.6156,
+        1.0607
+      ],
+      "notes": "Órbita dorada fina superior (lleva Planet_ShaftEarth y Planet_ShaftSaturn)."
+    },
+    "Shaft_OrbitRing_Lower": {
+      "group": "Shaft",
+      "material": "gold",
+      "triangles": 1536,
+      "vertices": 864,
+      "pivot_bbox_center": [
+        0.0,
+        0.65,
+        0.0
+      ],
+      "size": [
+        1.0016,
+        0.5211,
+        1.0195
+      ],
+      "notes": "Órbita dorada fina inferior (lleva Planet_ShaftRuby y Planet_ShaftSapphire)."
+    },
+    "Pommel_Crystal": {
+      "group": "Pommel",
+      "material": "crystal",
+      "triangles": 128,
+      "vertices": 384,
+      "pivot_bbox_center": [
+        -0.0,
+        -2.16,
+        0.0
+      ],
+      "size": [
+        0.7761,
+        1.32,
+        0.7761
+      ],
+      "notes": "Gema octogonal facetada del pomo."
+    },
+    "Pommel_Gold": {
+      "group": "Pommel",
+      "material": "gold",
+      "triangles": 3680,
+      "vertices": 11040,
+      "pivot_bbox_center": [
+        0.0,
+        -2.065,
+        0.0
+      ],
+      "size": [
+        0.964,
+        1.1566,
+        0.964
+      ],
+      "notes": "Engaste dorado, 4 garras y estrellas del pomo."
+    },
+    "Planet_Earth": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        -1.1605,
+        7.0024,
+        0.1129
+      ],
+      "size": [
+        0.5977,
+        0.5977,
+        0.6
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: azul océano + continentes verdes."
+    },
+    "Planet_Magenta": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        1.5232,
+        6.5749,
+        -0.2683
+      ],
+      "size": [
+        0.3997,
+        0.3997,
+        0.4
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: magenta / fucsia con vetas."
+    },
+    "Planet_SaturnGold": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        2.1123,
+        5.5112,
+        -0.1101
+      ],
+      "size": [
+        0.5187,
+        0.5187,
+        0.52
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: naranja-dorado con bandas."
+    },
+    "PlanetRing_SaturnGold": {
+      "group": "Planets",
+      "material": "planet_ring",
+      "triangles": 384,
+      "vertices": 388,
+      "pivot_bbox_center": [
+        2.1123,
+        5.5112,
+        -0.1101
+      ],
+      "size": [
+        1.1188,
+        0.5156,
+        1.1164
+      ],
+      "notes": "Anillo plano del planeta. UV: U = radial (0 interior -> 1 exterior), V = ángulo."
+    },
+    "Planet_SaturnAmber": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        1.5986,
+        4.0769,
+        0.3409
+      ],
+      "size": [
+        0.4794,
+        0.4794,
+        0.48
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: ámbar con bandas."
+    },
+    "PlanetRing_SaturnAmber": {
+      "group": "Planets",
+      "material": "planet_ring",
+      "triangles": 384,
+      "vertices": 388,
+      "pivot_bbox_center": [
+        1.5986,
+        4.0769,
+        0.3409
+      ],
+      "size": [
+        0.9618,
+        0.5009,
+        0.9391
+      ],
+      "notes": "Anillo plano del planeta. UV: U = radial (0 interior -> 1 exterior), V = ángulo."
+    },
+    "Planet_Violet": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        0.5364,
+        3.6201,
+        0.6478
+      ],
+      "size": [
+        0.4999,
+        0.4999,
+        0.5
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: violeta con cráteres."
+    },
+    "Planet_Rose": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        -1.6884,
+        4.6961,
+        0.7838
+      ],
+      "size": [
+        0.36,
+        0.36,
+        0.36
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: rosa / rubí."
+    },
+    "Planet_ShaftEarth": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        -0.5331,
+        2.1569,
+        0.2284
+      ],
+      "size": [
+        0.26,
+        0.26,
+        0.26
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: azul y verde (mini Tierra)."
+    },
+    "Planet_ShaftSaturn": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        0.5331,
+        1.9568,
+        0.122
+      ],
+      "size": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: naranja con bandas."
+    },
+    "PlanetRing_ShaftSaturn": {
+      "group": "Planets",
+      "material": "planet_ring",
+      "triangles": 384,
+      "vertices": 388,
+      "pivot_bbox_center": [
+        0.5331,
+        1.9568,
+        0.122
+      ],
+      "size": [
+        0.6073,
+        0.2515,
+        0.583
+      ],
+      "notes": "Anillo plano del planeta. UV: U = radial (0 interior -> 1 exterior), V = ángulo."
+    },
+    "Planet_ShaftRuby": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        -0.4325,
+        0.416,
+        -0.1691
+      ],
+      "size": [
+        0.2199,
+        0.2199,
+        0.22
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: rojo rubí / magenta."
+    },
+    "Planet_ShaftSapphire": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        0.4476,
+        0.7442,
+        -0.2473
+      ],
+      "size": [
+        0.1599,
+        0.1599,
+        0.16
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: azul zafiro."
+    },
+    "Planet_PommelBlue": {
+      "group": "Planets",
+      "material": "planet",
+      "triangles": 960,
+      "vertices": 561,
+      "pivot_bbox_center": [
+        -0.42,
+        -1.52,
+        0.3
+      ],
+      "size": [
+        0.2399,
+        0.2399,
+        0.24
+      ],
+      "notes": "Planeta (UV equirectangular estándar). Color guía: azul con nubes."
+    },
+    "StarHalo": {
+      "group": "Halo",
+      "material": "gold_star",
+      "triangles": 5844,
+      "vertices": 17532,
+      "pivot_bbox_center": [
+        0.0099,
+        5.3871,
+        -0.0164
+      ],
+      "size": [
+        5.2518,
+        5.7553,
+        3.0506
+      ],
+      "notes": "Collar de 34 estrellas doradas + cadena, centrado en la galaxia. Girarlo sobre su eje."
+    },
+    "EnergyRing_1": {
+      "group": "EnergyRings",
+      "material": "energy",
+      "triangles": 4160,
+      "vertices": 2254,
+      "pivot_bbox_center": [
+        0.0,
+        5.25,
+        0.0
+      ],
+      "size": [
+        4.8358,
+        2.1643,
+        4.8123
+      ],
+      "notes": "Anillo grande que rodea la galaxia (rosa/magenta). UV: U recorre el anillo (x6), V cruza el ancho."
+    },
+    "EnergyRing_2": {
+      "group": "EnergyRings",
+      "material": "energy",
+      "triangles": 4160,
+      "vertices": 2254,
+      "pivot_bbox_center": [
+        -0.0,
+        1.05,
+        0.0
+      ],
+      "size": [
+        1.9488,
+        0.8831,
+        1.8544
+      ],
+      "notes": "Anillo medio alrededor del mango (violeta/azul)."
+    },
+    "EnergyRing_3": {
+      "group": "EnergyRings",
+      "material": "energy",
+      "triangles": 4160,
+      "vertices": 2254,
+      "pivot_bbox_center": [
+        -0.0,
+        -1.95,
+        0.0
+      ],
+      "size": [
+        1.4279,
+        0.9113,
+        1.3509
+      ],
+      "notes": "Anillo del pomo (dorado/cian)."
+    },
+    "Aurora_Shaft": {
+      "group": "Auroras",
+      "material": "aurora",
+      "triangles": 556,
+      "vertices": 560,
+      "pivot_bbox_center": [
+        0.0026,
+        0.5993,
+        -0.136
+      ],
+      "size": [
+        1.9689,
+        3.4209,
+        1.8463
+      ],
+      "notes": "Cinta de aurora en espiral alrededor del mango. UV: U a lo largo (0..1), V a lo ancho. Doble cara."
+    },
+    "Aurora_Blade": {
+      "group": "Auroras",
+      "material": "aurora",
+      "triangles": 556,
+      "vertices": 560,
+      "pivot_bbox_center": [
+        -1.4368,
+        5.3669,
+        -0.6951
+      ],
+      "size": [
+        2.8755,
+        4.8568,
+        0.6421
+      ],
+      "notes": "Cinta de aurora tras el lado izquierdo de la hoja. UV: U a lo largo, V a lo ancho. Doble cara."
+    },
+    "Comet_Template": {
+      "group": "FX_Templates",
+      "material": "comet",
+      "triangles": 384,
+      "vertices": 255,
+      "pivot_bbox_center": [
+        -2.3415,
+        2.7304,
+        0.6
+      ],
+      "size": [
+        0.6954,
+        0.4392,
+        0.18
+      ],
+      "notes": "Núcleo de cometa opcional (plantilla). Clonar y animar; la estela es partícula/Trail en Roblox."
+    },
+    "Handle": {
+      "group": "Tool",
+      "material": "handle",
+      "triangles": 12,
+      "vertices": 36,
+      "pivot_bbox_center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.54,
+        1.5,
+        0.54
+      ],
+      "notes": "Caja de agarre 0.54 x 1.5 x 0.54 centrada en el Grip. En Roblox: Transparency=1, CanCollide=false."
+    }
+  },
+  "attachments": {
+    "Grip": {
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "note": "Tool.Grip: la mano sujeta aquí; la pala apunta a +Y"
+    },
+    "BladeCenter": {
+      "pos": [
+        0.0,
+        5.35,
+        0.0
+      ],
+      "note": "Núcleo de la galaxia (brillo central, partículas de vórtice)"
+    },
+    "BladeCenterFront": {
+      "pos": [
+        0.0,
+        5.35,
+        0.03499999999999999
+      ],
+      "note": "Sobre el núcleo, cara frontal"
+    },
+    "BladeTip": {
+      "pos": [
+        1.3593579470535623e-16,
+        7.57,
+        0.08799999999999997
+      ],
+      "note": "Punta de la hoja (impactos al cavar)"
+    },
+    "BladeLeft": {
+      "pos": [
+        -1.85,
+        5.35,
+        1.1933407904472317e-18
+      ],
+      "note": "Borde izquierdo"
+    },
+    "BladeRight": {
+      "pos": [
+        1.85,
+        5.35,
+        1.1933407904472317e-18
+      ],
+      "note": "Borde derecho"
+    },
+    "BigStar": {
+      "pos": [
+        0.9552860748192955,
+        7.146631802889464,
+        0.10195513921972274
+      ],
+      "note": "Estrella grande de 8 puntas (destello)"
+    },
+    "CollarGem": {
+      "pos": [
+        0,
+        3.3,
+        0.36
+      ],
+      "note": "Cabujón del cuello"
+    },
+    "ShaftTop": {
+      "pos": [
+        0,
+        2.95,
+        0
+      ],
+      "note": "Inicio de nebulosa (Beam hacia ShaftBottom)"
+    },
+    "ShaftBottom": {
+      "pos": [
+        0,
+        -1.55,
+        0
+      ],
+      "note": "Fin de nebulosa"
+    },
+    "PommelTip": {
+      "pos": [
+        0,
+        -2.82,
+        0
+      ],
+      "note": "Punta del pomo"
+    },
+    "PommelStarFront": {
+      "pos": [
+        0,
+        -2.03,
+        0.3
+      ],
+      "note": "Estrella dorada del pomo"
+    },
+    "Comet_Spawn_A": {
+      "pos": [
+        -2.9,
+        6.2,
+        0.4
+      ],
+      "note": "Origen sugerido de cometa (arriba-izquierda)"
+    },
+    "Comet_Spawn_B": {
+      "pos": [
+        -2.4,
+        2.4,
+        0.5
+      ],
+      "note": "Origen sugerido de cometa (izquierda)"
+    },
+    "Comet_Spawn_C": {
+      "pos": [
+        1.6,
+        -1.2,
+        0.6
+      ],
+      "note": "Origen sugerido de cometa (abajo-derecha)"
+    },
+    "Aurora_Shaft_Start": {
+      "pos": [
+        0.48,
+        -1.1,
+        0.26
+      ],
+      "note": "Inicio aurora del mango"
+    },
+    "Aurora_Shaft_End": {
+      "pos": [
+        -0.49703142269900363,
+        2.3,
+        0.23549896995486932
+      ],
+      "note": "Fin aurora del mango"
+    },
+    "HaloCenter": {
+      "pos": [
+        0,
+        5.35,
+        -0.4
+      ],
+      "note": "Detrás de la hoja: halo arcoíris / rayos de luz (BillboardGui o partícula)"
+    }
+  },
+  "total_triangles": 97472,
+  "planets": [
+    {
+      "name": "Planet_Earth",
+      "center": [
+        -1.1605219349632059,
+        7.002407911176753,
+        0.11285802386067105
+      ],
+      "radius": 0.3,
+      "color": "azul océano + continentes verdes",
+      "orbit": {
+        "center": [
+          0.0,
+          5.35,
+          0.0
+        ],
+        "axis": [
+          0.17364817766693033,
+          0.23824655840996276,
+          0.9555547539512126
+        ],
+        "note": "órbita alrededor de la galaxia"
+      },
+      "spin_axis": [
+        -0.08797230083962769,
+        0.9961229212727625,
+        0.0
+      ]
+    },
+    {
+      "name": "Planet_Magenta",
+      "center": [
+        1.5231871414342824,
+        6.574924478564639,
+        -0.2682553894750389
+      ],
+      "radius": 0.2,
+      "color": "magenta / fucsia con vetas",
+      "orbit": {
+        "center": [
+          0.0,
+          5.35,
+          0.0
+        ],
+        "axis": [
+          0.17364817766693033,
+          0.23824655840996276,
+          0.9555547539512126
+        ],
+        "note": "órbita alrededor de la galaxia"
+      },
+      "spin_axis": [
+        0.34950055904175825,
+        0.9369361553646537,
+        0.0
+      ]
+    },
+    {
+      "name": "Planet_SaturnGold",
+      "center": [
+        2.112321003899934,
+        5.511180521079032,
+        -0.110094578013035
+      ],
+      "radius": 0.26,
+      "color": "naranja-dorado con bandas",
+      "orbit": {
+        "center": [
+          0.0,
+          5.35,
+          0.0
+        ],
+        "axis": [
+          0.17364817766693033,
+          0.23824655840996276,
+          0.9555547539512126
+        ],
+        "note": "órbita alrededor de la galaxia"
+      },
+      "spin_axis": [
+        -0.31675263340418747,
+        0.9485081808985689,
+        0.0
+      ],
+      "ring_part": "PlanetRing_SaturnGold"
+    },
+    {
+      "name": "Planet_SaturnAmber",
+      "center": [
+        1.5986277921078313,
+        4.076930097436934,
+        0.34085510923045764
+      ],
+      "radius": 0.24,
+      "color": "ámbar con bandas",
+      "orbit": {
+        "center": [
+          0.0,
+          5.35,
+          0.0
+        ],
+        "axis": [
+          0.17364817766693033,
+          0.23824655840996276,
+          0.9555547539512126
+        ],
+        "note": "órbita alrededor de la galaxia"
+      },
+      "spin_axis": [
+        -0.335113341268513,
+        0.9421778221248116,
+        0.0
+      ],
+      "ring_part": "PlanetRing_SaturnAmber"
+    },
+    {
+      "name": "Planet_Violet",
+      "center": [
+        0.5363797575640188,
+        3.6200716040255454,
+        0.6477997379413003
+      ],
+      "radius": 0.25,
+      "color": "violeta con cráteres",
+      "orbit": {
+        "center": [
+          0.0,
+          5.35,
+          0.0
+        ],
+        "axis": [
+          0.17364817766693033,
+          0.23824655840996276,
+          0.9555547539512126
+        ],
+        "note": "órbita alrededor de la galaxia"
+      },
+      "spin_axis": [
+        -0.17415777034720908,
+        0.9847177621164801,
+        0.0
+      ]
+    },
+    {
+      "name": "Planet_Rose",
+      "center": [
+        -1.6883564705135294,
+        4.696090852883494,
+        0.7838081753799596
+      ],
+      "radius": 0.18,
+      "color": "rosa / rubí",
+      "orbit": {
+        "center": [
+          0.0,
+          5.35,
+          0.0
+        ],
+        "axis": [
+          0.17364817766693033,
+          0.23824655840996276,
+          0.9555547539512126
+        ],
+        "note": "órbita alrededor de la galaxia"
+      },
+      "spin_axis": [
+        -0.18857849043152913,
+        0.982058120961568,
+        0.0
+      ]
+    },
+    {
+      "name": "Planet_ShaftEarth",
+      "center": [
+        -0.533111687820419,
+        2.1569225673504686,
+        0.22835062156811062
+      ],
+      "radius": 0.13,
+      "color": "azul y verde (mini Tierra)",
+      "orbit": {
+        "center": [
+          0.0,
+          2.15,
+          0.0
+        ],
+        "radius": 0.58,
+        "axis": [
+          -0.20791169081775934,
+          -0.8636530695286485,
+          -0.45921248275176924
+        ],
+        "note": "órbita del mango superior"
+      },
+      "spin_axis": [
+        -0.39672200401341445,
+        0.9179388059841355,
+        0.0
+      ]
+    },
+    {
+      "name": "Planet_ShaftSaturn",
+      "center": [
+        0.533111687820419,
+        1.9568177044675583,
+        0.12195297865194017
+      ],
+      "radius": 0.14,
+      "color": "naranja con bandas",
+      "orbit": {
+        "center": [
+          0.0,
+          2.15,
+          0.0
+        ],
+        "radius": 0.58,
+        "axis": [
+          -0.20791169081775934,
+          -0.8636530695286485,
+          -0.45921248275176924
+        ],
+        "note": "órbita del mango superior"
+      },
+      "spin_axis": [
+        -0.20020798108552645,
+        0.9797534201571626,
+        0.0
+      ],
+      "ring_part": "PlanetRing_ShaftSaturn"
+    },
+    {
+      "name": "Planet_ShaftRuby",
+      "center": [
+        -0.4324713336526636,
+        0.4159952434803219,
+        -0.16914585272732138
+      ],
+      "radius": 0.11,
+      "color": "rojo rubí / magenta",
+      "orbit": {
+        "center": [
+          0.0,
+          0.65,
+          0.0
+        ],
+        "radius": 0.52,
+        "axis": [
+          0.3562720417153323,
+          -0.8818042466894012,
+          0.30901699437494745
+        ],
+        "note": "órbita del mango inferior"
+      },
+      "spin_axis": [
+        0.02152477749632491,
+        0.9997683151379292,
+        0.0
+      ]
+    },
+    {
+      "name": "Planet_ShaftSapphire",
+      "center": [
+        0.4476392303857894,
+        0.7442037420156168,
+        -0.24727469423674014
+      ],
+      "radius": 0.08,
+      "color": "azul zafiro",
+      "orbit": {
+        "center": [
+          0.0,
+          0.65,
+          0.0
+        ],
+        "radius": 0.52,
+        "axis": [
+          0.3562720417153323,
+          -0.8818042466894012,
+          0.30901699437494745
+        ],
+        "note": "órbita del mango inferior"
+      },
+      "spin_axis": [
+        -0.028731911658742705,
+        0.9995871534050617,
+        0.0
+      ]
+    },
+    {
+      "name": "Planet_PommelBlue",
+      "center": [
+        -0.42,
+        -1.52,
+        0.3
+      ],
+      "radius": 0.12,
+      "color": "azul con nubes",
+      "orbit": {
+        "center": [
+          0.0,
+          -1.95,
+          0.0
+        ],
+        "axis": [
+          0.27944785969957336,
+          0.9314928656652445,
+          0.23287321641631112
+        ],
+        "radius": 0.62,
+        "note": "órbita del pomo"
+      },
+      "spin_axis": [
+        0.16440341959995536,
+        0.9863931851061427,
+        0.0
+      ]
+    }
+  ],
+  "energy_rings": {
+    "EnergyRing_1": {
+      "center": [
+        0.0,
+        5.25,
+        0.0
+      ],
+      "radius": 2.45,
+      "axis": [
+        -0.29389262614623657,
+        -0.9045084971874737,
+        0.3090169943749475
+      ]
+    },
+    "EnergyRing_2": {
+      "center": [
+        0.0,
+        1.05,
+        0.0
+      ],
+      "radius": 0.95,
+      "axis": [
+        0.22430607566620386,
+        -0.8996425315582589,
+        0.37460659341591196
+      ]
+    },
+    "EnergyRing_3": {
+      "center": [
+        0.0,
+        -1.95,
+        0.0
+      ],
+      "radius": 0.72,
+      "axis": [
+        -0.3591271399312983,
+        -0.8066127627927412,
+        0.46947156278589086
+      ]
+    }
+  },
+  "shaft_orbits": {
+    "Shaft_OrbitRing_Upper": {
+      "center": [
+        0.0,
+        2.15,
+        0.0
+      ],
+      "radius": 0.58,
+      "axis": [
+        -0.20791169081775934,
+        -0.8636530695286485,
+        -0.45921248275176924
+      ]
+    },
+    "Shaft_OrbitRing_Lower": {
+      "center": [
+        0.0,
+        0.65,
+        0.0
+      ],
+      "radius": 0.52,
+      "axis": [
+        0.3562720417153323,
+        -0.8818042466894012,
+        0.30901699437494745
+      ]
+    }
+  },
+  "star_halo": {
+    "center": [
+      0.0,
+      5.35,
+      0.0
+    ],
+    "radius": 2.85,
+    "axis": [
+      0.45552625097926297,
+      -0.24192189559966773,
+      0.8567202758766954
+    ]
+  },
+  "blade_planet_orbit": {
+    "center": [
+      0.0,
+      5.35,
+      0.0
+    ],
+    "axis": [
+      0.17364817766693033,
+      0.23824655840996276,
+      0.9555547539512126
+    ]
+  }
+}
