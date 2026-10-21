@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: la capa sale de dentro del cráneo
+**Qué:** con los cambios anteriores, la capa de la pala 29 quedaba flotando, separada de la pala. Ahora su borde de arriba está metido en la parte trasera del cráneo, de lado a lado de la cabeza, y la capa cae hacia el suelo cuando se lleva la pala. Al ondear gira sobre ese borde, así que nunca se despega.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Capa`, `Cadenas_Guirnaldas`, `Cadenas_Colgantes` y `Estrellas_Colgantes` se recolocan desde su posición original del modelo. El borde superior va al punto (2,2; 3,3; 0) del manifest y la caída va hacia «abajo» medido en la mano. Motor6D con `Pivot` en el borde y `Axis` a lo ancho de la cabeza. Atributo `CapeFrom` = "skull" en el modelo. Sustituye a los ajustes anteriores de la capa del mismo día.
+**Probado:** los 3 huesos centrales del borde quedan dentro de la caja del cráneo y los 2 de los extremos justo en su superficie. Captura en la mano: la capa sale del cráneo. Sin errores.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: la capa sale desde detrás del cráneo
 **Qué:** la capa de la pala 29 sale ahora de debajo de la parte trasera del cráneo y cae por debajo del mango hacia el cuerpo, un poco más baja, como en el dibujo de seguo970.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Capa`, `Cadenas_Guirnaldas`, `Cadenas_Colgantes` y `Estrellas_Colgantes` se desplazan 0,8 studs hacia el cráneo a lo largo del mango y 0,2 más lejos del mango. Se actualizan `C0` y `Pivot` de sus Motor6D.
