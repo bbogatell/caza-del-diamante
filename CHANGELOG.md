@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-21 · seguo970 (Claude) · Pala 29: capa centrada bajo el cráneo
+**Qué:** la capa de la pala 29 quedaba un poco hacia un lado del cráneo. Ahora sale del centro de la parte de abajo del cráneo, sin dejar de estar pegada a su superficie.
+**Dónde:** `ReplicatedStorage.Models.Palas.L29`: `Capa`, `Cadenas_*` y `Estrellas_Colgantes` se mueven 0,2 studs hacia el plano central del cráneo. Después se vuelve a ajustar el hueso de arriba de cada tira a la superficie (0,03 dentro) y las cadenas y estrellas siguen la media.
+**Probado:** el centro de la capa queda a 0,07 del plano central del cráneo (antes 0,27) y las 5 tiras a 0,03 bajo la superficie. Captura mirando al cráneo de frente, en Play.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 29: capa girada 90° y saliendo de la superficie del cráneo
 **Qué:** la capa de la pala 29 se ha girado 90°. Ahora su borde de arriba va a lo largo de la parte de abajo del cráneo, no de lado a lado. Ya no está metida dentro: cada tira sale justo de la superficie exterior del cráneo, sin ninguna parte flotando.
 **Dónde:** `ReplicatedStorage.Models.Palas.L29`:
