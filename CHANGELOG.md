@@ -2,6 +2,41 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · seguo970 (Claude) · Pala 8: Pala de Cuerno de Triceratops importada, texturizada y animada
+**Qué:** la pala 8 es ahora el modelo `Pala8_TriceratopsHorn`. La hoja es una gola de triceratops azul con rombos dorados, ribete y púas de hueso, y dos cuernos de marfil. El mango es de hueso con vendas de cuero y el pomo lleva una gema azul.
+- **Materiales de Roblox:**
+  - gola: SmoothPlastic azul (la de detrás algo más oscura);
+  - rombos: Foil dorado;
+  - hueso: Limestone;
+  - cuero: Fabric;
+  - cuernos: Marble;
+  - gema: Neon azul.
+- **Animación:**
+  - la gola «respira» ±1,5° desde su base cada 3 s;
+  - la gema tiene luz azul que respira y chispas;
+  - polvo azul cristalino sube alrededor de la gola;
+  - destellos blancos y cian que parpadean.
+- **Al sacarla:** estallido de polvo azul.
+- **Al cavar:** estallido de polvo azul y chispas desde las puntas de los dos cuernos.
+
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L8`, a escala 1,55 (7,75 studs) para que las manos quepan entre el pomo y la gola.
+- El mango del modelo se llama `MangoHueso` y el `Handle` es invisible.
+- Las 5 piezas de la gola van con Motor6D `ShovelOrbit`.
+- Attachments `Punta` en los cuernos y `Gema` en el pomo.
+- `ShovelFx`: `DIG_FX.L8 = hornDig`, y se busca `FrillFront` para el efecto.
+- Original en `ServerStorage.PalaCuernoTriceratops`.
+
+**Probado:** en Play con `Debug "level" 8`:
+- la mano izquierda va a 1,10 del pomo y la derecha a 3,92, bajo la gola (4,17);
+- la luz va de 0,8 a 1,5 y la gola se mueve hasta 1,4°;
+- no hay errores en la consola.
+
+Captura en la mano: la gola mira hacia delante.
+**Notas:**
+- No se ha hecho el remolino/arco alrededor de la gola ni las animaciones de personaje propias (el juego usa `DigAnim`).
+- Studio se desconectó al final de la prueba y no se paró el Play; los cambios se hicieron antes, en Edit.
+
 ## 2026-10-22 · bbogatell (Claude) · Bichos 27, 28 y 29 · Ptera Cresta, Plesio Cuellilargo y Carno Toro (Épicos con animación enérgica)
 
 - **Qué:** los tres últimos Épicos, detallados, fieles a sus hojas de ChatGPT y con animación especial enérgica. Sin sonidos.
