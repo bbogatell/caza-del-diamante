@@ -2,6 +2,35 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · seguo970 (Claude) · Pala 9: Pala de Liana y Colmillo importada, texturizada y animada
+**Qué:** la pala 9 es ahora el modelo `Pala9_LianaColmillo` (54 piezas): rama marrón envuelta en lianas verdes, colmillo de marfil, hojas, 7 hibiscos rosas y naranjas, y 13 pétalos y hojas flotando alrededor.
+- **Materiales de Roblox:**
+  - rama: Wood;
+  - colmillo: Marble crema;
+  - lianas, hojas y flores: SmoothPlastic con los colores del prompt (hojas y pétalos por las dos caras).
+- **Animación:**
+  - las 13 piezas flotantes orbitan despacio alrededor del mango, en los dos sentidos, girando sobre sí mismas;
+  - las hojas de la cabeza se mecen ±6° como con brisa;
+  - las flores cabecean;
+  - los zarcillos se mueven;
+  - destellos blancos en la cabeza, algún pétalo cayendo y una luz suave en el colmillo.
+- **Al sacarla:** estallido de pétalos y destellos.
+- **Al cavar:** tierra con pétalos y hojas despedidos (sin temblor de cámara).
+
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L9`, a escala 1,45 (7,5 studs). El `Handle` es invisible, con la mano izquierda encima de las lianas de la base.
+- 37 piezas con Motor6D `ShovelOrbit`: 13 flotantes, 8 hojas de la cabeza, 14 de las flores y 2 zarcillos.
+- `ShovelFx`: `DIG_FX.L9 = jungleDig`, y se busca `Blade_Tusk` para el efecto.
+- Original en `ServerStorage.Pala9_LianaColmillo`.
+
+**Probado:** en Play con `Debug "level" 9`:
+- la mano izquierda va a 1,10 de la base y la derecha a 3,93, bajo el colmillo (4,29);
+- las piezas flotantes giran;
+- no hay errores en la consola.
+
+Captura en la mano.
+**Notas:** no se ha hecho el «pop» de escala al sacarla ni las animaciones de personaje propias (el juego usa `DigAnim`).
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 39 · Pachirino (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,2 studs y tiene 464 piezas. Es un ceratopsio corpulento, gris pardo moteado y cubierto de escamas en relieve una a una, con patas como columnas y uñas color hueso. Lleva un gran bulto marrón oscuro y rugoso en la nariz (44 bultitos), pico color hueso y gola con baldosas naranja entre anillos negros y borde negro, de la que salen dos cuernos gruesos color hueso curvados hacia arriba. Efectos: nieve (ritmo 25), vaho por la nariz (ritmo 15), escarcha brillante (ritmo 15), polvo de nieve (ritmo 8) y luz blanca. **Animación:** `Charge`: agacha la cabeza, rasca el suelo 3 veces resoplando nubes de vaho y da un cabezazo con el bulto que rompe el hielo (trozos de hielo, gran resoplido, nube de nieve y onda azul hielo).
