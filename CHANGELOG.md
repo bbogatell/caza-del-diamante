@@ -2,6 +2,23 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · bbogatell (Claude) · Animaciones especiales enérgicas (bichos 14 y 17-24)
+
+- **Qué:** el usuario pidió que las animaciones especiales se notaran: las de antes eran pobres (por ejemplo, el Deino solo levantaba los brazos). Ahora cada animación especial mueve todo el cuerpo con preparación, golpe rápido, impacto con ráfaga de partículas y onda expansiva en el suelo, rebote y vuelta. Rehechas:
+  - **14 Iguano Pulgar:** salta con los brazos disparados hacia arriba y el pecho fuera, aterriza aplastándose y rebota; ráfaga de destellos en los pulgares.
+  - **17 Kentro Pincho:** en el coletazo el tronco gira al revés, se agacha y mira hacia atrás.
+  - **18 Troodon Listillo:** se acerca el libro a la nariz y lee moviendo la cabeza por las líneas; luego «¡ajá!»: salta con el libro en alto y suelta una ráfaga de «?» (textura nueva `rbxassetid://403653614`, amarilla; la de antes salía negra).
+  - **19 Velocirraptor:** se encabrita rugiendo con la pata muy alta y la estampa con todo el cuerpo (cabeza abajo, cola arriba); nube de polvo, onda y sacudida.
+  - **20 Paraso Trompeta:** coge aire, se encabrita y da 4 trompetazos con la cabeza hacia arriba vibrando y la cola agitándose.
+  - **21 Estego Placas:** se agacha, se levanta con las placas ardiendo y tiembla con fuerza agitando la cola; dos ráfagas de calor y onda.
+  - **22 Anqui Tanque:** gira el tronco y sube la maza muy alto, la estampa (el cuerpo da un bote), polvo, onda, y sacude la cabeza.
+  - **23 Cori Casco:** se encabrita con la cabeza hacia atrás y la cresta da 3 destellos, cada uno con aros grandes.
+  - **24 Deino Terrible:** doble zarpazo: se agacha con los brazos arriba, se lanza hacia delante y corta con un brazo y luego con el otro, girando el tronco y con la boca abierta; zarpazos y chispas rojas grandes.
+- **Rig `Generic`:** pose de acción de cuerpo entero (`actPos`/`actPitch`/`actYaw`/`actRoll`, `actHead`, `actTail`, `armAdd`, `legAdd`, `jawAdd`), fotogramas clave `kf`, atributos `ArmStyle` (`swipe`/`thumbs`/`read`, emisores `SwipeFx`/`ArmFx`), `GlowMove` (`flare`/`bellow`) y `Shockwave` (+ `ShockwaveColor`).
+- **Dónde:** `ReplicatedStorage.CreatureRigs`; constructores de los bichos 14 y 17-24 (bloque `-- [full-body patch]` antes de `Kit.finish`) → `Models.Bichos`. Docs: `GUIA_BICHOS.md` (regla nueva: la animación especial tiene que ser enérgica y exagerada, con todo el cuerpo).
+- **Probado:** en Play, con los bichos en la base: el cuerpo de cada uno se mueve entre 0,4 y 1,6 studs y gira hasta 1 rad durante su animación especial (antes el cuerpo no se movía). Capturas del Deino lanzándose con la boca abierta, del Cori con la cabeza atrás y del Paraso encabritado tocando. Sin errores en la consola.
+- **Notas:** el siguiente es el 25 (Estira Corona); su hoja de ChatGPT ya está hecha.
+
 ## 2026-10-22 · bbogatell (Claude) · Bichos 23 y 24 · Cori Casco y Deino Terrible (Épicos detallados)
 
 - **Qué:** dos Épicos más, con detalle y fieles a sus hojas de ChatGPT. Sin sonidos.
