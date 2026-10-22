@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 37 · Elvisaurio (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,4 studs y tiene 431 piezas. Es un terópodo blanco hielo con franjas azul claro, tupé amarillo de bloques, gafas de sol negras con brillo y boca abierta sonriente. Efectos: notas musicales (ritmo 20), estrellas (ritmo 20), copos de nieve (ritmo 15), destellos en las gafas (ritmo 5) y luz blanca. **Animación:** baile rockero de 2,4 s (mueve las caderas, alterna las patas, sube y baja los brazos y suelta notas y estrellas cada medio segundo) que acaba en una pose con salto, explosión de notas y onda azul hielo.
+- **Rig `Generic`:** nuevo `Dance` (baile con pose final).
+- **Dónde:** `ServerStorage.CreatureBuilders.Elvisaurio` → `Models.Bichos["37"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Dance`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el cuerpo se mueve 1,39 studs y gira 0,27 rad bailando. Sin errores en la consola.
+- **Notas:** el siguiente es el 38 (Sauro Pinchos, Legendario, 8,6 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bichos 35 y 36 · Braquio Cuellito y Terizino Tijeras (Legendarios)
 
 - **Qué:** dos Legendarios más, muy detallados, fieles a sus hojas de ChatGPT y con animación especial enérgica. Los dos llevan brillo dorado en el suelo. Sin sonidos.
