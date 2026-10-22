@@ -2,6 +2,35 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · seguo970 (Claude) · Pala 7: Pala de Arenisca Roja importada, texturizada y animada
+**Qué:** la pala 7 es ahora el modelo `PalaArenisca`: hoja de arenisca roja con la huella de dinosaurio tallada, mango de cactus con espinas, tres cuerdas y piedrecitas.
+- **Materiales de Roblox:**
+  - hoja: Sandstone `#C3422A`;
+  - cactus: Grass `#7C8560`;
+  - espinas: beige;
+  - cuerdas: Fabric;
+  - piedrecitas: Sandstone.
+- **Animación:**
+  - nubecitas de arena que salen de la hoja;
+  - destellos;
+  - 4 piedrecitas de arena que orbitan despacio alrededor de la hoja.
+- **Al cavar:** estallido de arena.
+
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L7`, a escala 1,45 (7,2 studs), girado para que la huella mire hacia delante.
+- El mango del modelo se llama `Cactus` y el `Handle` es invisible, con la mano izquierda encima de la cuerda de abajo.
+- `Piedrecita1-4` con Motor6D `ShovelOrbit`.
+- `ShovelFx`: `DIG_FX.L7 = sandDig`.
+- Original en `ServerStorage.PalaArenisca`.
+
+**Probado:** en Play con `Debug "level" 7`:
+- la mano izquierda va a 1,24 del pomo y la derecha a 4,04, bajo la cuerda de arriba (4,59);
+- las piedrecitas giran y el efecto al cavar se crea;
+- no hay errores en la consola.
+
+**No visto en pantalla:** la vista 3D de Studio no dibujaba al probarla.
+**Notas:** del prompt no se han hecho las animaciones de personaje propias ni los sonidos (el juego usa `DigAnim`), ni las copias en `StarterPack`.
+
 ## 2026-10-22 · seguo970 (Claude) · Pala 6: sin temblor de cámara al cavar
 **Qué:** al cavar con la pala 6 ya no tiembla la cámara. El estallido de tierra y destellos de ámbar sigue igual.
 **Dónde:** `StarterPlayerScripts.ShovelFx`: se quita la sacudida de `amberDig`.
