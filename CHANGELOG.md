@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 33 · Alo Feroz (Legendario)
+
+- **Qué:** **33 · Alo Feroz** (Legendario, 10 studs, 403 piezas), fiel a su hoja de ChatGPT. Es un gran terópodo musculoso marrón rojizo con rayas negras en el lomo, el cuello, la cabeza, los muslos y la cola, escamas sueltas, crestas por el lomo y barriga, garganta y mandíbula beige. El cráneo es largo, con una mandíbula enorme llena de dientes uno a uno, cuernos rojos delante de los ojos, crestas rojas en el hocico, cicatrices y ojo amarillo. Tiene brazos fuertes con 3 garras negras y brillo dorado en el suelo. Efectos: aliento de vapor naranja (ritmo 25), chispas rojas (ritmo 20), anillo de rugido rojo (ritmo 1), polvo (ritmo 10) y luz roja. **Animación:** se agacha cogiendo aire, se encabrita y ruge con la boca muy abierta, temblando, con la cabeza y la cola agitándose y los brazos abiertos; salen 3 anillos de rugido enormes, ráfagas de vapor y la onda en el suelo. Está hecho a partir del constructor del Carno Toro. Sin sonidos.
+- **Rig `Generic`:** nuevo `Roar` (+ emisores `RoarFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.AloFeroz` → `Models.Bichos["33"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play con `/bicho 33 base` + `/abrir`: la mandíbula se abre 0,92 rad en el rugido (captura encabritado con el anillo rojo). Sin errores en la consola.
+- **Notas:** el siguiente es el 34 (Dimetro Vela, Legendario, 9 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 32 · Tricera Jefe (Legendario)
 
 - **Qué:** **32 · Tricera Jefe** (Legendario, 9,4 studs, 406 piezas), fiel a su hoja de ChatGPT. Es un triceratops enorme y macizo gris azulado, cubierto de escamas en relieve sueltas, con placas en el lomo y patas como columnas con uñas de marfil. Lleva la cabeza baja, con pico negro, ojo amarillo y cejas marcadas, tres cuernos de marfil largos y curvados y pinchos en las mejillas. La gola es gigante, azul real, con rombos amarillos y un borde de 18 pinchos de marfil. Tiene brillo dorado en el suelo. Efectos: destellos azules en la gola (ritmo 25), polvo (ritmo 20), piedrecitas (ritmo 10), resoplidos (ritmo 10) y luz azul. **Animación:** resopla y se encabrita, embiste hacia delante bajando los cuernos y estampa la parte delantera contra el suelo (gran nube de polvo, piedras, 2 ondas) mientras todo el cuerpo tiembla, y vuelve. Sin sonidos.
