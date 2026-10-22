@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · bbogatell (Claude) · Bichos 14 y 15 · Iguano Pulgar e Ictio Saltarín (detallados)
+
+- **Qué:** dos Raros hechos con detalle, fieles a sus hojas de ChatGPT. Sin sonidos.
+  - **14 · Iguano Pulgar** (6,5 studs, 233 piezas): herbívoro grande semierguido verde musgo con decenas de manchas sueltas más claras y más oscuras, placas grises en la barriga y el pecho, una fila de pinchos de hueso por el lomo y la cola, cabeza de caballo con pico gris, mejillas, ceja y ojo amarillo. Brazos musculosos con el puño cerrado y un pincho de hueso enorme en cada pulgar, levantado («¡bien!»). Patas con 3 dedos y garras oscuras. Destellos blancos en los pulgares (ritmo 6). Cada pocos segundos levanta los brazos.
+  - **15 · Ictio Saltarín** (5 studs con su ola, 207 piezas): ictiosaurio con forma de delfín saltando sobre una ola turquesa semitransparente (montículo, rizo con espuma y gotas en el aire). Lomo azul marino con baldosas más claras y oscuras, barriga blanca, línea azul clara en los costados, hocico largo abierto con dientes arriba y abajo, ojos enormes con brillo, aleta dorsal, dos pares de aletas y cola en media luna. Gotas de agua (ritmo 8) y espuma (ritmo 5). Cada pocos segundos da un salto en arco. Sin patas: se desliza y mueve las aletas.
+- **Rig `Generic`:** nuevos atributos `ArmRaise` (rol `Arm`, con `ArmPivot` y `Side`) y `Leap` (salto en arco), y rol `Base` (piezas que no se mueven nunca, como la ola).
+- **Dónde:** `ServerStorage.CreatureBuilders.IguanoPulgar` y `IctioSaltarin` → `Models.Bichos["14"]` y `["15"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 14 base`, `/bicho 15 base` + `/abrir`: el pulgar del Iguano se mueve 0,67 studs al levantar los brazos y el hocico del Ictio 1,27 studs al saltar, mientras la ola no se mueve (0,00). Los dos pasean. Sin errores en la consola.
+- **Notas:** el siguiente es el 16 (Celo Cazador, Raro, 5,3 studs).
+
 ## 2026-10-22 · bbogatell (Claude) · Bicho 13 · Dilo Abanico (detallado) + bichos con más piezas
 
 - **Qué:**
