@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 45 · Diplo Látigo (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 10,4 studs y tiene 421 piezas. Es un saurópodo larguísimo, gris verdoso con bandas blancas en el lomo, el cuello y la cola, baldosas oscuras y claras y barriga crema. Tiene patas como columnas con uñas blancas, el cuello largo estirado hacia arriba y hacia delante, y cabeza pequeña y alargada. La cola es todavía más larga: sube por detrás y acaba en un látigo fino con anillos blancos. Efectos: onda blanca en la punta de la cola (ritmo 1), polvo (ritmo 25), viento (ritmo 15), destellos (ritmo 10) y luz blanca. **Animación:** `Crack`: lleva la cola muy a un lado girando el cuerpo al otro y se agacha; luego la cruza de golpe y en la punta revienta un anillo sónico blanco con viento, polvo y onda, con un segundo chasquido en el rebote. Cada vez cambia de lado.
+- **Rig `Generic`:** nuevo `Crack` (latigazo con anillo sónico en la punta de la cola).
+- **Dónde:** `ServerStorage.CreatureBuilders.DiploLatigo` → `Models.Bichos["45"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Crack`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la cola gira 0,98 rad en el latigazo. Sin errores en la consola.
+- **Notas:** el siguiente es el 46 (Majunga Calvo, Legendario, 9,2 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 44 · Guanlong Cresta (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9 studs y tiene 478 piezas. Es un tiranosaurio esbelto cubierto de plumas naranjas y blancas una a una, con plumas largas en el cuello y los brazos, cara crema, boca abierta con dientes y patas marrón oscuro. A lo largo del hocico lleva una cresta alta como un casco, en degradado amarillo, naranja y rojo; el borde rojo es Neon. Efectos: chispas naranjas (ritmo 25), brasas (ritmo 15), humo (ritmo 10), destellos en la cresta (ritmo 10) y luz naranja. **Animación:** `GlowMove = "bellow"`: se encabrita echando la cabeza atrás con la boca abierta, la cresta se enciende en blanco amarillento y da 3 destellos, cada uno con una explosión de chispas y brasas (onda naranja al primero).
