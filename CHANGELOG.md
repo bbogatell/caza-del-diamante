@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · seguo970 (Claude) · Pala 10: arregladas las normales al revés
+**Qué:** las mallas de la pala 10 venían con las normales al revés, así que partes de la pala salían huecas o mal iluminadas (el mango y las tiras casi no se veían). Ahora todas las piezas se ven sólidas y con la luz bien. Además, la hoja y las garras negras ya no salen azuladas por el reflejo del cielo.
+**Dónde:** `ReplicatedStorage.Models.Palas.L10`: `DoubleSided = true` en todas las MeshParts, y `Reflectance` 0,02 en `Blade` y `GripTalons` (antes 0,12).
+**Probado:** capturas de la pala sola antes y después, y de cerca de la hoja y de la empuñadura.
+**Notas:** el arreglo de verdad sería dar la vuelta a las normales en el GLB y reimportar. Con `DoubleSided` se ve bien sin reimportar.
+
 ## 2026-10-23 · seguo970 (Claude) · Pala 10: Pala de Garra de Raptor importada y animada
 **Qué:** la pala 10 es ahora el modelo `PalaGarraRaptor`: garra en hoz negra con el filo rojo, mango de hueso con tiras de cuero, colmillos, cuentas, plumas rojas, negras y a rayas, y empuñadura en forma de garra de reptil.
 - **Colores:** el archivo trae colores por vértice (el degradado negro-rojo de la hoja, las rayas de las plumas, las escamas) y en Roblox se ven, así que se usan tal cual con `Color` blanco y acabado brillante en la hoja y las garras.
