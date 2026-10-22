@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · bbogatell (Claude) · Bichos 23 y 24 · Cori Casco y Deino Terrible (Épicos detallados)
+
+- **Qué:** dos Épicos más, con detalle y fieles a sus hojas de ChatGPT. Sin sonidos.
+  - **23 · Cori Casco** (8 studs, 252 piezas): hadrosaurio grande semierguido verde azulado oscuro con bandas blancas finas y baldosas, barriga, pecho y garganta blancos, brazos cortos con garras y patas fuertes. Pico de pato naranja, ojo amarillo y una cresta alta y redonda como un casco corintio: láminas moradas con el borde amarillo. Efectos: partículas moradas (ritmo 10), aros de sonido desde la cresta (ritmo 2) y luz morada. Cada pocos segundos la cresta se enciende (Neon lila) y suelta aros grandes.
+  - **24 · Deino Terrible** (7,2 studs, 378 piezas): raptor grande y muy musculoso de plumas gris pizarra sueltas, con plumas largas de punta roja en los brazos y la cola, pecho y garganta blancos y una cresta de plumas rojas en la cabeza y el cuello. Cara gris con mirada de cazador (ojo amarillo, ceja negra), boca abierta llena de dientes, garras negras enormes en las manos y garra en hoz levantada en cada pie. Efectos: chispas rojas (ritmo 10), zarpazos rojos en el aire (ritmo 2), plumas (ritmo 6) y luz roja. Cada pocos segundos da un zarpazo levantando los brazos. Está hecho a partir del constructor del Velocirraptor.
+- **Rig:** sin cambios (el Cori usa `GlowColor` + `GlowFx` y el Deino `ArmRaise`).
+- **Dónde:** `ServerStorage.CreatureBuilders.CoriCasco` y `DeinoTerrible` → `Models.Bichos["23"]` y `["24"]`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 23 base`, `/bicho 24 base` + `/abrir`: la cresta del Cori cambia de color al encenderse y las garras del Deino se mueven 1,6 studs en el zarpazo. Los dos pasean. Sin errores en la consola.
+- **Notas:** el siguiente es el 25 (Estira Corona, Épico, 7,4 studs).
+
 ## 2026-10-22 · bbogatell (Claude) · Bichos 21 y 22 · Estego Placas y Anqui Tanque (Épicos detallados)
 
 - **Qué:** dos Épicos más, con detalle y fieles a sus hojas de ChatGPT. Sin sonidos.
