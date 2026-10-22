@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · seguo970 (Claude) · Pala 4: las dos caras del caparazón encajan
+**Qué:** el contorno del caparazón de la pala 4 no es del todo simétrico, así que la copia de la cara de detrás asomaba 0,04–0,08 studs por un lado al mirar la pala de frente. Ahora la cara de detrás no sobresale nada, y el borde que deja por detrás se ve como un marco dorado.
+**Dónde:** `ReplicatedStorage.Models.Palas.L4`:
+- Las 5 piezas `*_Atras` se desplazan 0,026 de lado y se reducen al 93 % en ancho y alto (no en grosor), desde el centro de la hoja.
+- `Blade_Underside` pasa a Slate color arena `#C9A060`, para que su borde visible por detrás combine con el caparazón.
+- **Copia de antes:** `ServerStorage.CopiasPalas.L4_dos_caras_v1`.
+
+**Probado:** midiendo el contorno con rayos cada 0,03 studs a lo alto de la hoja: la cara de detrás no sobresale en ningún punto. Capturas por los dos lados.
+**Notas:** que las dos caras fueran exactamente iguales necesitaría una malla espejada (reimportar), porque Roblox no permite reflejar una malla.
+
 ## 2026-10-22 · seguo970 (Claude) · Pala 4: caparazón por las dos caras
 **Qué:** la hoja de la pala 4 tenía el caparazón solo por delante; por detrás era lisa. Ahora las dos caras tienen el caparazón: placas verdes, borde de tres colores y juntas color crema.
 **Dónde:** `ReplicatedStorage.Models.Palas.L4`: copias `Blade_Base_Atras`, `Blade_ScutesGreen_Atras`, `Blade_MarginalBrown_Atras`, `Blade_MarginalTan_Atras` y `Blade_MarginalOlive_Atras`. Son las piezas de delante giradas media vuelta sobre el eje del mango, por el centro de la hoja, y van soldadas al `Handle`. **Copia de antes:** `ServerStorage.CopiasPalas.L4_una_cara`.
