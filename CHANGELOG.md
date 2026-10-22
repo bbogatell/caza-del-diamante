@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 43 · Megalo Abuelo (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,6 studs y tiene 438 piezas. Es un gran terópodo veterano y erguido, marrón verdoso con rayas y bultos oscuros y barriga crema. Lleva sombrero de copa negro con cinta roja y hebilla dorada, monóculo dorado con cadena, pajarita roja con cuello blanco, bigote y patillas de escamas blancas y un bastón de hueso blanco con punta dorada en la mano derecha. Efectos: destellos dorados (ritmo 25), polvo de libro antiguo (ritmo 15), burbujas de té (ritmo 10) y luz cálida. **Animación:** `Bow`: hace girar el bastón soltando destellos, se quita el sombrero, hace una reverencia profunda llevándolo al pecho (explosión de destellos y estrellas y onda dorada), se incorpora y se lo vuelve a poner.
+- **Rig `Generic`:** nuevo `Bow` y nuevo rol `Hat` (piezas que van con la cabeza y se pueden levantar; atributo `HatPivot`).
+- **Dónde:** `ServerStorage.CreatureBuilders.MegaloAbuelo` → `Models.Bichos["43"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Bow` y rol `Hat`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el cuerpo se inclina 0,56 rad en la reverencia y el sombrero se separa 1,2 studs de la cabeza. Sin errores en la consola.
+- **Notas:** el siguiente es el 44 (Guanlong Cresta, Legendario, 9 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 42 · Uta Raptor (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,8 studs y tiene 453 piezas. Es el raptor más grande, musculoso y pesado, cubierto de plumas verde oscuro una a una con puntas naranja y rayas verde muy oscuro. Tiene una gran cresta de plumas verdes y naranjas en la cabeza y el cuello, cara gris con la boca abierta llena de dientes y ojo amarillo. Los brazos llevan plumas largas como alas y garras negras con la punta roja, y cada pata tiene una garra de hoz negra con el filo rojo. Efectos: zarpazos rojos (ritmo 3), plumas (ritmo 20), chispas (ritmo 20), polvo (ritmo 10) y luz verde. **Animación:** `Pounce`: se agacha encogido, salta hacia delante y hacia arriba con los brazos abiertos y las patas pateando, da un tajo con las garras de hoz (2 ráfagas de zarpazos rojos y chispas) y aterriza fuerte (polvo y onda verde).
