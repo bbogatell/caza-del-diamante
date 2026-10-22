@@ -4,7 +4,7 @@
 >
 > Cada ficha trae lo necesario para pedir el modelo 3D a Claude. **Antes de modelar cualquiera, aplica la guía de estilo de abajo (la parte común y la fila de su rareza)** y luego la ficha del bicho.
 
-## Proceso para hacer un bicho (hechos: 1-38, 191)
+## Proceso para hacer un bicho (hechos: 1-39, 191)
 
 **Guía completa paso a paso: [`GUIA_BICHOS.md`](GUIA_BICHOS.md).**
 

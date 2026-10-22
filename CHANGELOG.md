@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 39 · Pachirino (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,2 studs y tiene 464 piezas. Es un ceratopsio corpulento, gris pardo moteado y cubierto de escamas en relieve una a una, con patas como columnas y uñas color hueso. Lleva un gran bulto marrón oscuro y rugoso en la nariz (44 bultitos), pico color hueso y gola con baldosas naranja entre anillos negros y borde negro, de la que salen dos cuernos gruesos color hueso curvados hacia arriba. Efectos: nieve (ritmo 25), vaho por la nariz (ritmo 15), escarcha brillante (ritmo 15), polvo de nieve (ritmo 8) y luz blanca. **Animación:** `Charge`: agacha la cabeza, rasca el suelo 3 veces resoplando nubes de vaho y da un cabezazo con el bulto que rompe el hielo (trozos de hielo, gran resoplido, nube de nieve y onda azul hielo).
+- **Dónde:** `ServerStorage.CreatureBuilders.Pachirino` → `Models.Bichos["39"]`. Docs: `BICHOS_DINOSAURIOS.md`, `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base: el cuerpo avanza 1,95 studs y se inclina 0,42 rad en el cabezazo. Sin errores en la consola.
+- **Notas:** el siguiente es el 40 (Quetzal Gigante, Legendario, 10,8 studs); su hoja ya se ha pedido. Hemos visto que la pieza invisible `Root` (1 stud, centrada en los pies) entra en la medida de la altura, así que todos los bichos se ven unos 0,5-0,9 studs más bajos de lo que pone su ficha. No se ha cambiado para que todos sigan igual.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 38 · Sauro Pinchos (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 8,6 studs y tiene 568 piezas. Es un nodosaurio enorme y blindado: cuerpo marrón oscuro cubierto de bultos marrón claro en relieve (uno a uno, cada uno con su protuberancia), pinchos gigantes grises con la punta dorada en el cuello y los hombros, pinchos más pequeños en los flancos y la cola, patas como columnas con uñas claras, pico oscuro y cola larga y gorda. Efectos: destellos dorados en los pinchos (ritmo 25), polvo (ritmo 15), chispas (ritmo 10) y luz dorada. **Animación:** se agacha, se eriza sacudiendo los pinchos con todo el cuerpo vibrando (3 ráfagas de destellos y chispas) y embiste de lado con el hombro (nube de polvo, explosión de chispas y onda dorada); cada vez embiste hacia un lado.
