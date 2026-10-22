@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 49 · Tarbo Mongol (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 10,4 studs y tiene 474 piezas. Es un tiranosaurio asiático poderoso, marrón arena con rayas y bultos marrón oscuro y barriga crema. Lleva un casco dorado de guerrero mongol (cinta con remaches, cúpula, pincho, gema roja, carrilleras) con un largo penacho de pelo rojo y borlas rojas. También lleva hombreras de cuero en capas con remaches dorados y ribete rojo, correas con un medallón dorado en el pecho y una tela roja colgando por detrás. Efectos: arena (ritmo 30), destellos dorados (ritmo 20), polvo (ritmo 15), viento (ritmo 10) y luz cálida. **Animación:** `WarCry`: coge aire agachado, se encabrita rugiendo con la cabeza alta y los brazos abiertos (3 anillos de rugido, temblando), baja la cabeza y carga levantando una tormenta de arena (nube de arena, polvo y onda dorada, y otra ráfaga de arena).
+- **Rig `Generic`:** nuevo `WarCry` (grito de guerra y carga).
+- **Dónde:** `ServerStorage.CreatureBuilders.TarboMongol` → `Models.Bichos["49"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `WarCry`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la mandíbula se abre 0,71 rad en el rugido y el cuerpo se inclina 0,48 rad en la carga. Sin errores en la consola.
+- **Notas:** el siguiente es el 50 (Giganoto Rey, Legendario, 11,5 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 48 · Argentino Titán (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 11 studs y tiene 430 piezas. Es un saurópodo descomunal y el más ancho de su rareza, marrón grisáceo con baldosas oscuras y rayas celeste y blanca a lo largo de los costados del cuerpo, el cuello y la cola, con barriga beige. Las patas son como columnas de templo, con anillo, base y uñas blancas. Tiene el cuello alto, la cabeza pequeña y una banderita argentina clavada en el lomo (celeste, blanca y celeste con un sol amarillo). Efectos: ondas de polvo (ritmo 30), piedrecitas (ritmo 15), destellos celestes (ritmo 15), temblor del suelo (rocas en el pisotón) y luz blanca. **Animación:** `Rear`: se levanta sobre las patas traseras pataleando en el aire y da un pisotón descomunal (gran nube de polvo, rocas, 2 ondas celestes), con todo el cuerpo temblando.
