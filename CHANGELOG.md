@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 34 · Dimetro Vela (Legendario)
+
+- **Qué:** **34 · Dimetro Vela** (Legendario, 9 studs, 407 piezas), fiel a su hoja de ChatGPT. Es un reptil robusto gris verdoso con escamas sueltas más claras y más oscuras, barriga amarilla y patas muy abiertas a los lados con garras oscuras. Tiene la cabeza grande, con la boca abierta y dientes de dos tamaños arriba y abajo, lengua y ojo amarillo. En el lomo lleva una vela ENORME: 13 varillas blancas y una membrana por bandas de naranja a rojo que brilla en Neon de atardecer. Tiene brillo dorado en el suelo. Efectos: calor que sube (ritmo 25), chispas (ritmo 15), brasas (ritmo 10) y luz naranja. **Animación:** se encabrita rugiendo con la cabeza hacia atrás y la boca abierta mientras la vela se enciende 3 veces (ráfagas de chispas y calor, onda en el suelo). Sin sonidos.
+- **Rig:** sin cambios (usa `GlowColor` + `GlowMove = "bellow"`).
+- **Dónde:** `ServerStorage.CreatureBuilders.DimetroVela` → `Models.Bichos["34"]`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play con `/bicho 34 base` + `/abrir`: la vela pasa a Neon y el bicho se encabrita rugiendo (captura). Sin errores en la consola.
+- **Notas:** las dos cuentas de ChatGPT se han quedado sin imágenes (la primera vuelve mañana a las 19:15). El siguiente es el 35 (Braquio Cuellito, Legendario, 11,2 studs).
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 33 · Alo Feroz (Legendario)
 
 - **Qué:** **33 · Alo Feroz** (Legendario, 10 studs, 403 piezas), fiel a su hoja de ChatGPT. Es un gran terópodo musculoso marrón rojizo con rayas negras en el lomo, el cuello, la cabeza, los muslos y la cola, escamas sueltas, crestas por el lomo y barriga, garganta y mandíbula beige. El cráneo es largo, con una mandíbula enorme llena de dientes uno a uno, cuernos rojos delante de los ojos, crestas rojas en el hocico, cicatrices y ojo amarillo. Tiene brazos fuertes con 3 garras negras y brillo dorado en el suelo. Efectos: aliento de vapor naranja (ritmo 25), chispas rojas (ritmo 20), anillo de rugido rojo (ritmo 1), polvo (ritmo 10) y luz roja. **Animación:** se agacha cogiendo aire, se encabrita y ruge con la boca muy abierta, temblando, con la cabeza y la cola agitándose y los brazos abiertos; salen 3 anillos de rugido enormes, ráfagas de vapor y la onda en el suelo. Está hecho a partir del constructor del Carno Toro. Sin sonidos.
