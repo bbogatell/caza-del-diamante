@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 47 · Krono Mandíbula (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado alrededor y sin sonidos. Mide 10,2 studs y tiene 523 piezas. Es un reptil marino colosal que salta casi en vertical de una ola: una corona de salpicaduras de bloques azules de distintas alturas, con espuma blanca. Es azul petróleo con baldosas más claras, barriga blanca con manchas azules y 4 aletas enormes a franjas. La cabeza es gigante (un tercio del cuerpo: se hace a tamaño normal y luego se agranda ×1,3 desde el cuello), con la mandíbula muy abierta llena de dientes cónicos uno a uno y ojos amarillos. La cola queda bajo el agua. Efectos: salpicaduras (ritmo 30), espuma (ritmo 15-20), burbujas (ritmo 20), gotas (ritmo 15-20) y luz azul. **Animación:** `Chomp`: se echa atrás abriendo la mandíbula al máximo, se lanza y la cierra de golpe (estrellas y gotas en la boca, salpicadura y onda), da un segundo mordisco y sacude la cabeza como si tuviera una presa.
+- **Rig `Generic`:** nuevo `Chomp` (mordisco gigante).
+- **Dónde:** `ServerStorage.CreatureBuilders.KronoMandibula` → `Models.Bichos["47"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Chomp`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la mandíbula se abre 0,75 rad y se cierra 0,5 rad de golpe. Sin errores en la consola.
+- **Notas:** el siguiente es el 48 (Argentino Titán, Legendario, 11 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 46 · Majunga Calvo (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,2 studs y tiene 408 piezas. Es un terópodo robusto, rojo ladrillo con manchas y bultos negros, barriga, garganta y mandíbula grises. Tiene la cara corta y gorda con un cuerno redondo amarillo en la frente (con brillo), cejas negras grandes de mal humor, ojos amarillos y brazos diminutos. Efectos: nubecita negra de enfado sobre la cabeza (ritmo 5), chispas rojas (ritmo 25), vapor por la nariz (ritmo 15), polvo (ritmo 10) y luz roja. **Animación:** `Tantrum`: patalea de rabia muy rápido, botando y temblando con la cabeza y los brazos agitándose, con polvo en cada pisotón y nubes negras con rayos rojos encima. Luego se echa atrás y da un cabezazo con el cuerno (polvo, nube y onda roja).
