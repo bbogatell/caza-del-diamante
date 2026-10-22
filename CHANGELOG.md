@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · seguo970 (Claude) · Pala 5: Pala de Amonites importada
+**Qué:** la pala 5 es ahora el modelo `PalaAmonites`, importado por seguo970 con sus texturas: hoja de amonites a rayas marrones y crema, mango de piedra arenosa, cuerdas, conchas rosas, caracolas y arena dorada.
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L5`, con las texturas del archivo (`TextureID`, `Color` blanco para que se vean con su color real).
+- A escala 1,45 (6,5 studs), para que las manos quepan entre las dos cuerdas.
+- El mango del modelo se llama `Mango` y el `Handle` es invisible, con la mano izquierda en la cuerda de abajo.
+- Original en `ServerStorage.PalaAmonites`.
+
+**Probado:** en Play con `Debug "level" 5`: las texturas cargan bien. La mano izquierda va en la cuerda de abajo y la derecha en la de arriba, justo bajo la hoja. Captura en la mano.
+
 ## 2026-10-22 · seguo970 (Claude) · Pala 4: cara de detrás en espejo y del mismo tamaño
 **Qué:** la cara de detrás del caparazón de la pala 4 era más pequeña que la de delante (se había reducido para que no asomara). Ahora es una copia en espejo exacta: mismo tamaño y mismo contorno por los dos lados, sin que nada asome.
 **Dónde:**
