@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 46 · Majunga Calvo (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,2 studs y tiene 408 piezas. Es un terópodo robusto, rojo ladrillo con manchas y bultos negros, barriga, garganta y mandíbula grises. Tiene la cara corta y gorda con un cuerno redondo amarillo en la frente (con brillo), cejas negras grandes de mal humor, ojos amarillos y brazos diminutos. Efectos: nubecita negra de enfado sobre la cabeza (ritmo 5), chispas rojas (ritmo 25), vapor por la nariz (ritmo 15), polvo (ritmo 10) y luz roja. **Animación:** `Tantrum`: patalea de rabia muy rápido, botando y temblando con la cabeza y los brazos agitándose, con polvo en cada pisotón y nubes negras con rayos rojos encima. Luego se echa atrás y da un cabezazo con el cuerno (polvo, nube y onda roja).
+- **Rig `Generic`:** nuevo `Tantrum` (rabieta y cabezazo).
+- **Dónde:** `ServerStorage.CreatureBuilders.MajungaCalvo` → `Models.Bichos["46"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Tantrum`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el cuerpo bota 0,46 studs en la rabieta y avanza en el cabezazo. Se ven la nube negra y los rayos. Sin errores en la consola.
+- **Notas:** el siguiente es el 47 (Krono Mandíbula, Legendario, 10,2 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 45 · Diplo Látigo (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 10,4 studs y tiene 421 piezas. Es un saurópodo larguísimo, gris verdoso con bandas blancas en el lomo, el cuello y la cola, baldosas oscuras y claras y barriga crema. Tiene patas como columnas con uñas blancas, el cuello largo estirado hacia arriba y hacia delante, y cabeza pequeña y alargada. La cola es todavía más larga: sube por detrás y acaba en un látigo fino con anillos blancos. Efectos: onda blanca en la punta de la cola (ritmo 1), polvo (ritmo 25), viento (ritmo 15), destellos (ritmo 10) y luz blanca. **Animación:** `Crack`: lleva la cola muy a un lado girando el cuerpo al otro y se agacha; luego la cruza de golpe y en la punta revienta un anillo sónico blanco con viento, polvo y onda, con un segundo chasquido en el rebote. Cada vez cambia de lado.
