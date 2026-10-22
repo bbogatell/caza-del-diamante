@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 48 · Argentino Titán (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 11 studs y tiene 430 piezas. Es un saurópodo descomunal y el más ancho de su rareza, marrón grisáceo con baldosas oscuras y rayas celeste y blanca a lo largo de los costados del cuerpo, el cuello y la cola, con barriga beige. Las patas son como columnas de templo, con anillo, base y uñas blancas. Tiene el cuello alto, la cabeza pequeña y una banderita argentina clavada en el lomo (celeste, blanca y celeste con un sol amarillo). Efectos: ondas de polvo (ritmo 30), piedrecitas (ritmo 15), destellos celestes (ritmo 15), temblor del suelo (rocas en el pisotón) y luz blanca. **Animación:** `Rear`: se levanta sobre las patas traseras pataleando en el aire y da un pisotón descomunal (gran nube de polvo, rocas, 2 ondas celestes), con todo el cuerpo temblando.
+- **Dónde:** `ServerStorage.CreatureBuilders.ArgentinoTitan` → `Models.Bichos["48"]`. Docs: `BICHOS_DINOSAURIOS.md`, `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base: el cuerpo se levanta 0,59 rad. Sin errores en la consola.
+- **Notas:** el siguiente es el 49 (Tarbo Mongol, Legendario, 10,4 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 47 · Krono Mandíbula (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado alrededor y sin sonidos. Mide 10,2 studs y tiene 523 piezas. Es un reptil marino colosal que salta casi en vertical de una ola: una corona de salpicaduras de bloques azules de distintas alturas, con espuma blanca. Es azul petróleo con baldosas más claras, barriga blanca con manchas azules y 4 aletas enormes a franjas. La cabeza es gigante (un tercio del cuerpo: se hace a tamaño normal y luego se agranda ×1,3 desde el cuello), con la mandíbula muy abierta llena de dientes cónicos uno a uno y ojos amarillos. La cola queda bajo el agua. Efectos: salpicaduras (ritmo 30), espuma (ritmo 15-20), burbujas (ritmo 20), gotas (ritmo 15-20) y luz azul. **Animación:** `Chomp`: se echa atrás abriendo la mandíbula al máximo, se lanza y la cierra de golpe (estrellas y gotas en la boca, salpicadura y onda), da un segundo mordisco y sacude la cabeza como si tuviera una presa.
