@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 41 · Lio Pleuro (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado alrededor y sin sonidos. Mide 9,6 studs y tiene 522 piezas. Es un reptil marino masivo que sale casi erguido de un remolino turquesa: anillos de baldosas en espiral con espuma blanca y agua transparente. Es azul oscuro con baldosas azul claro por encima y gris claro con baldosas por la barriga. Tiene una cabeza enorme de cocodrilo con la boca muy abierta (roja por dentro, 38 dientes blancos uno a uno), ojos amarillos, cuello corto y 4 aletas anchas a franjas. Bajo el agua lleva una cola con aleta, que solo se ve al saltar. Efectos: remolino de agua (ritmo 30), burbujas (ritmo 20), espuma (ritmo 15), gotas (ritmo 15) y luz azul. **Animación:** `Breach`: se hunde encogido con las aletas arriba, sale disparado del remolino con la boca abierta (salpicadura), gira en el aire y cae con un chapuzón enorme (gran salpicadura de gotas y espuma, 2 ondas), y se balancea en el agua.
+- **Rig `Generic`:** nuevo `Breach` (salto fuera del charco para bichos marinos erguidos; `Dive` está pensado para los que nadan tumbados).
+- **Dónde:** `ServerStorage.CreatureBuilders.LioPleuro` → `Models.Bichos["41"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Breach`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el cuerpo sube 3,7 studs al saltar. Sin errores en la consola.
+- **Notas:** el siguiente es el 42 (Uta Raptor, Legendario, 9,8 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 40 · Quetzal Gigante (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 10,8 studs y tiene 470 piezas. Es un pterosaurio gigante apoyado en las cuatro extremidades: las delanteras son largas, naranja con franjas blancas de hueso, y llevan las alas plegadas, con la membrana naranja por secciones y baldosas. Tiene cuerpo blanco con escamas, cuello de jirafa blanco, cabeza amarilla con cresta roja, ojos verdes y pico larguísimo en degradado amarillo, naranja y rojo. Efectos: ráfagas de viento (ritmo 25), plumitas (ritmo 15), destellos (ritmo 10) y luz cálida. **Animación:** `WingBurst`: pliega las alas y se agacha; luego las abre de golpe hacia arriba, con una ráfaga de viento, polvo y plumas, un destello de luz y una onda.
