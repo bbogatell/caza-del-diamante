@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · bbogatell (Claude) · Bichos 21 y 22 · Estego Placas y Anqui Tanque (Épicos detallados)
+
+- **Qué:** dos Épicos más, con detalle y fieles a sus hojas de ChatGPT. Sin sonidos.
+  - **21 · Estego Placas** (7,8 studs, 322 piezas): estegosaurio corpulento verde oliva con decenas de manchas más claras y más oscuras, placas crema en la barriga y cabeza pequeña baja con pico. Dos filas de placas gigantes en forma de cometa, hechas con triángulos: centro naranja dentro de un borde rojo en relieve y nervio rojo, más grandes sobre las caderas. La cola tiene 4 pinchos blancos largos. Efectos: calor que sube de las placas (ritmo 12), chispas naranjas (ritmo 8), polvo en la cola (ritmo 5) y luz cálida. Cada pocos segundos las placas se encienden (se vuelven Neon dorado) y suelta una ráfaga de calor.
+  - **22 · Anqui Tanque** (6,6 studs, 310 piezas): tanque viviente ancho y bajo, marrón tierra con escamas tostadas. Lleva un caparazón entero de placas gris piedra una a una, con pinchos de hueso, borde oscuro con placas laterales y pinchos grandes a los lados. Collar blindado, cabeza blindada con cuernos de hueso y pico, y patas cortas con garras oscuras. La cola levantada acaba en una maza enorme gris oscuro con bandas de hierro y bultos. Efectos: polvo y piedrecitas al golpear el suelo (a ráfagas), chispas grises (ritmo 6) y luz suave. Cada pocos segundos levanta la maza y la estampa contra el suelo.
+- **Rig `Generic`:** nuevo atributo `TailSlam` (+ emisores `SlamFx`) y piezas que brillan con el atributo `GlowColor` (+ emisores `GlowFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.EstegoPlacas` y `AnquiTanque` → `Models.Bichos["21"]` y `["22"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 21 base`, `/bicho 22 base` + `/abrir`: las placas del Estego cambian de color al encenderse y la maza del Anqui se mueve 2,7 studs al golpear. Los dos pasean. Sin errores en la consola.
+- **Notas:** el siguiente es el 23 (Cori Casco, Épico, 8 studs).
+
 ## 2026-10-22 · bbogatell (Claude) · Bichos 19 y 20 · Velocirraptor y Paraso Trompeta (Épicos detallados)
 
 - **Qué:** los dos primeros Épicos, con detalle y fieles a sus hojas de ChatGPT. Sin sonidos.
