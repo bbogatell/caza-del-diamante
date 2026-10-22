@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · bbogatell (Claude) · Bichos 25 y 26 · Estira Corona y Bario Pescador (Épicos con animación enérgica)
+
+- **Qué:** dos Épicos más, detallados, fieles a sus hojas de ChatGPT y con su animación especial enérgica desde el principio. Sin sonidos.
+  - **25 · Estira Corona** (7,4 studs, 272 piezas): ceratopsio robusto verde bosque con baldosas claras y oscuras, barriga tostada, pico de loro, ojo amarillo, cuerno largo de hueso en la nariz y pinchitos en las mejillas y las cejas. Lleva una gola amarilla con el centro rojo y una corona de 6 pinchos de hueso larguísimos, más 8 pequeños alrededor. Efectos: rayitos amarillos desde la corona (ritmo 12), destellos (ritmo 5), polvo (ritmo 6) y luz amarilla. **Animación:** se encabrita levantando la parte delantera, sacude la cabeza con fuerza 4 veces a los lados (ráfagas de rayos) y baja las patas de golpe (polvo y onda en el suelo).
+  - **26 · Bario Pescador** (8 studs, 280 piezas): terópodo grande verde agua con rayas azul oscuro y baldosas, barriga y garganta blancas, hocico de cocodrilo con dientes uno a uno, lengua, pequeña cresta y ojo amarillo. Tiene brazos fuertes con garras negras enormes en los pulgares y un pez plateado (con escamas, aletas y ojos) colgado de una garra. Efectos: gotas de agua que caen del pez (ritmo 12), salpicaduras a sus pies (ritmo 8), burbujas (ritmo 5) y luz azul. **Animación:** se agacha mirando el agua, clava las garras con un gran chapuzón (agua, gotas y onda), saca el pez en alto, levanta la cabeza orgulloso y da un saltito.
+- **Rig `Generic`:** nuevos `HeadShake` (+ emisores `ShakeFx`) y `ArmStyle = "fish"`. Las patas delanteras con el atributo `FrontLeg = true` siguen al cuerpo cuando se encabrita (marcadas también en el Kentro, el Paraso, el Estego y el Anqui).
+- **Dónde:** `ServerStorage.CreatureBuilders.EstiraCorona` y `BarioPescador` → `Models.Bichos["25"]` y `["26"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 25 base`, `/bicho 26 base` + `/abrir`: el cuerpo del Estira se mueve 1,2 studs y su cabeza gira 0,9 rad al sacudirla; el cuerpo del Bario se mueve 3,1 studs al pescar y su cabeza gira 1,7 rad. Sin errores en la consola.
+- **Notas:** el siguiente es el 27 (Ptera Cresta, Épico, 7,6 studs).
+
 ## 2026-10-22 · bbogatell (Claude) · Animaciones especiales enérgicas (bichos 14 y 17-24)
 
 - **Qué:** el usuario pidió que las animaciones especiales se notaran: las de antes eran pobres (por ejemplo, el Deino solo levantaba los brazos). Ahora cada animación especial mueve todo el cuerpo con preparación, golpe rápido, impacto con ráfaga de partículas y onda expansiva en el suelo, rebote y vuelta. Rehechas:
