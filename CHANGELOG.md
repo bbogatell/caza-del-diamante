@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · seguo970 (Claude) · Pala 4: cara de detrás en espejo y del mismo tamaño
+**Qué:** la cara de detrás del caparazón de la pala 4 era más pequeña que la de delante (se había reducido para que no asomara). Ahora es una copia en espejo exacta: mismo tamaño y mismo contorno por los dos lados, sin que nada asome.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L4`: las 5 piezas `*_Atras` son ahora las mallas en espejo de `PalaCaparazon_Espejo.glb`. Van a escala 1,25, con el mismo giro que su pieza de delante y la posición reflejada por el plano medio de la hoja.
+- `Blade_Underside` vuelve a su color (SmoothPlastic `#966F3C`).
+- El espejo se creó con Blender: `tools/modelos/L4/espejo_caparazon.py` (refleja las 5 piezas en el grosor y da la vuelta a las normales). El GLB resultante está en `tools/modelos/L4/`.
+- Importación original en `ServerStorage.PalaCaparazon_Espejo`.
+- **Copia de antes:** `ServerStorage.CopiasPalas.L4_dos_caras_v2`.
+
+**Probado:** midiendo los dos contornos con rayos cada 0,03 studs: la diferencia máxima es de 0,01 studs. Capturas por los dos lados.
+
 ## 2026-10-22 · seguo970 (Claude) · Pala 4: las dos caras del caparazón encajan
 **Qué:** el contorno del caparazón de la pala 4 no es del todo simétrico, así que la copia de la cara de detrás asomaba 0,04–0,08 studs por un lado al mirar la pala de frente. Ahora la cara de detrás no sobresale nada, y el borde que deja por detrás se ve como un marco dorado.
 **Dónde:** `ReplicatedStorage.Models.Palas.L4`:
