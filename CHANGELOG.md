@@ -2,6 +2,33 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · seguo970 (Claude) · Pala 6: Pala de Ámbar importada, texturizada y animada
+**Qué:** la pala 6 es ahora el modelo `PalaAmbar`: hoja de ámbar naranja translúcido con un mosquito y burbujas dentro, mango de madera, anillos y collar de oro, gemas de ámbar y una gota escurriendo.
+- **Materiales:**
+  - ámbar: Glass;
+  - mosquito: marrón mate;
+  - burbujas y gemas: Neon;
+  - madera: Wood;
+  - oro: Foil.
+- **Animaciones:**
+  - una luz cálida dentro de la hoja que respira cada 2,5 s;
+  - las gemas laten entre naranja oscuro y claro;
+  - las burbujas suben y bajan un poco dentro de la hoja;
+  - las alas del mosquito tiemblan levemente;
+  - destellos naranjas y dorados alrededor de la hoja.
+- **Al sacarla:** estallido de destellos.
+- **Al cavar:** tierra y destellos de ámbar en el impacto, y una sacudida suave de cámara para quien cava.
+
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L6`, a escala 1,5 (7,4 studs) para que las manos caigan entre los anillos y el collar. `AmberBubbles` y `MosquitoWings` van con Motor6D `ShovelOrbit`. Original en `ServerStorage.PalaAmbar`.
+- `ShovelFx`:
+  - etiqueta nueva `ShovelEquipBurst`: el emisor suelta `Burst` partículas al sacar la pala;
+  - `DIG_FX.L6 = amberDig`;
+  - se busca `AmberBlade` para el efecto.
+
+**Probado:** en Play con `Debug "level" 6`: la mano izquierda va encima de los anillos de abajo y la derecha bajo el collar. La luz va de 0,6 a 1,7, la gema cambia de color y las burbujas se mueven. Al cavar sale el estallido. Sin errores. Captura de frente y en la mano.
+**Notas:** del prompt no se ha hecho la inspección con la tecla F ni animaciones de personaje nuevas, porque el juego usa `DigAnim` para todas las palas. Las texturas son materiales de Roblox, que no necesitan aprobación de imágenes.
+
 ## 2026-10-22 · seguo970 (Claude) · Pala 5: Pala de Amonites importada
 **Qué:** la pala 5 es ahora el modelo `PalaAmonites`, importado por seguo970 con sus texturas: hoja de amonites a rayas marrones y crema, mango de piedra arenosa, cuerdas, conchas rosas, caracolas y arena dorada.
 **Dónde:**
