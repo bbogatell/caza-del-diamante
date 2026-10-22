@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 50 · Giganoto Rey (Legendario)
+
+- **Qué:** el último Legendario, muy detallado y fiel a su hoja de ChatGPT, con brillo dorado intenso en el suelo (3 discos) y sin sonidos. Mide 11,5 studs (el mayor de los Legendarios) y tiene 419 piezas. Es un terópodo gigante gris oscuro con rayas rojas y bultos oscuros, barriga, garganta y mandíbula gris claro. Tiene el cráneo largo con dientes de sierra, una cresta de bultos sobre los ojos, cicatrices en el hocico y el costado, ojos naranja brillante (con brillo Neon) y brazos fuertes con garras negras. Efectos: anillo de rugido, polvo (ritmo 30), piedrecitas que saltan (ritmo 20), chispas rojas (ritmo 20) y luz roja. **Animación:** `Roar` (ángulo 1,0): se agacha cogiendo aire y ruge con la cabeza alzada y la boca muy abierta, temblando, con 3 anillos de rugido rojos, aliento, piedras que saltan y onda.
+- **Dónde:** `ServerStorage.CreatureBuilders.GiganotoRey` → `Models.Bichos["50"]`. Docs: `BICHOS_DINOSAURIOS.md`, `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base: el cuerpo se encabrita 0,28 rad rugiendo. Sin errores en la consola.
+- **Notas:** con este se acaban los Legendarios. El siguiente es el 51 (Raptor Duna), el primer **Mítico** (10,6 studs, 500-750 piezas, 4-6 emisores, aura a ras de suelo y luz fuerte); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 49 · Tarbo Mongol (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 10,4 studs y tiene 474 piezas. Es un tiranosaurio asiático poderoso, marrón arena con rayas y bultos marrón oscuro y barriga crema. Lleva un casco dorado de guerrero mongol (cinta con remaches, cúpula, pincho, gema roja, carrilleras) con un largo penacho de pelo rojo y borlas rojas. También lleva hombreras de cuero en capas con remaches dorados y ribete rojo, correas con un medallón dorado en el pecho y una tela roja colgando por detrás. Efectos: arena (ritmo 30), destellos dorados (ritmo 20), polvo (ritmo 15), viento (ritmo 10) y luz cálida. **Animación:** `WarCry`: coge aire agachado, se encabrita rugiendo con la cabeza alta y los brazos abiertos (3 anillos de rugido, temblando), baja la cabeza y carga levantando una tormenta de arena (nube de arena, polvo y onda dorada, y otra ráfaga de arena).
