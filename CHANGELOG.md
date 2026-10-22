@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bichos 35 y 36 · Braquio Cuellito y Terizino Tijeras (Legendarios)
+
+- **Qué:** dos Legendarios más, muy detallados, fieles a sus hojas de ChatGPT y con animación especial enérgica. Los dos llevan brillo dorado en el suelo. Sin sonidos.
+  - **35 · Braquio Cuellito** (11,2 studs, 401 piezas): saurópodo enorme y robusto verde agua con decenas de manchas verde oscuro, barriga y parte de abajo del cuello grises, patas como columnas con uñas blancas (las delanteras más largas) y cuello altísimo. Tiene la cabeza pequeña, con una joroba en la nariz y una rama marrón con hojas lima en la boca, que mastica. Efectos: hojas que caen girando (ritmo 25), destellos verdes (ritmo 15), polvo (ritmo 10) y luz verde. **Animación:** se agacha, se levanta sobre las patas traseras pataleando en el aire con la cabeza alta y estampa las patas delanteras (gran nube de polvo, piedras, 2 ondas) mientras todo el cuerpo tiembla.
+  - **36 · Terizino Tijeras** (10,6 studs, 405 piezas): bípedo enorme cubierto de plumas blancas y negras sueltas, con barriga grande, cuello largo a franjas y cabeza pequeña con pico amarillo. Tiene brazos larguísimos abiertos, con plumas largas colgando y 3 garras enormes como cuchillas negras con el filo plateado. Efectos: destellos plateados en las garras (ritmo 25), plumas (ritmo 15), estelas plateadas (ritmo 10), polvo (ritmo 8) y luz blanca. **Animación:** doble tajo cruzado: se agacha con los brazos arriba, se lanza y corta con un brazo y luego con el otro girando el tronco; salen zarpazos plateados grandes y chispas.
+- **Rig `Generic`:** nuevo `Rear` (se levanta sobre las patas traseras y estampa), con pataleo solo de las patas `FrontLeg`.
+- **Dónde:** `ServerStorage.CreatureBuilders.BraquioCuellito` y `TerizinoTijeras` → `Models.Bichos["35"]` y `["36"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play con los dos en la base: el cuerpo del Braquio gira 0,55 rad al levantarse y el del Terizino 0,51 rad en el tajo. Sin errores en la consola.
+- **Notas:** se ha borrado la fila de comparación de alturas (`FilaAlturas`). El siguiente es el 37 (Elvisaurio, Legendario, 9,4 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 34 · Dimetro Vela (Legendario)
 
 - **Qué:** **34 · Dimetro Vela** (Legendario, 9 studs, 407 piezas), fiel a su hoja de ChatGPT. Es un reptil robusto gris verdoso con escamas sueltas más claras y más oscuras, barriga amarilla y patas muy abiertas a los lados con garras oscuras. Tiene la cabeza grande, con la boca abierta y dientes de dos tamaños arriba y abajo, lengua y ojo amarillo. En el lomo lleva una vela ENORME: 13 varillas blancas y una membrana por bandas de naranja a rojo que brilla en Neon de atardecer. Tiene brillo dorado en el suelo. Efectos: calor que sube (ritmo 25), chispas (ritmo 15), brasas (ritmo 10) y luz naranja. **Animación:** se encabrita rugiendo con la cabeza hacia atrás y la boca abierta mientras la vela se enciende 3 veces (ráfagas de chispas y calor, onda en el suelo). Sin sonidos.
