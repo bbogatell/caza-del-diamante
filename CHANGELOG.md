@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · bbogatell (Claude) · Bichos 19 y 20 · Velocirraptor y Paraso Trompeta (Épicos detallados)
+
+- **Qué:** los dos primeros Épicos, con detalle y fieles a sus hojas de ChatGPT. Sin sonidos.
+  - **19 · Velocirraptor** (6,6 studs, 355 piezas): raptor musculoso cubierto de plumas marrón dorado, naranja y marrón oscuro sueltas, con rayas negras en el lomo, los muslos y la cola. Cara gris con sonrisa malvada y la boca abierta con dientes arriba y abajo, lengua, ojo amarillo con rendija y ceja negra, cresta de plumas y garganta crema. Brazos emplumados con plumas largas colgando y 3 garras negras grandes. Garra en hoz enorme levantada en cada pie y cola con plumas largas a los lados y en abanico. Efectos: plumas que caen (ritmo 10), zarpazos naranjas en el aire delante de él (ritmo 2) y luz naranja en el pecho. Cada pocos segundos levanta una pata y golpea el suelo con la garra (sale una nube de polvo).
+  - **20 · Paraso Trompeta** (8,2 studs, 270 piezas): hadrosaurio grande verde con bandas amarillas y baldosas, barriga y garganta crema, placas en la barriga y cresta dorsal. Pico de pato gris, ojo amarillo y cresta tubular larguísima hacia atrás (roja, con relieves y la punta naranja). Patas delanteras más cortas y cola larga con bandas. Efectos: notas musicales de colores desde la punta de la cresta (ritmo 10), aros de sonido (ritmo 2) y luz amarilla. Cada pocos segundos levanta la cabeza y «toca la trompeta»: salen ráfagas de notas y aros.
+- **Rig `Generic`:** nuevos atributos `Stomp` (+ emisor `StompFx`) y `Trumpet` (+ emisores `TrumpetFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.Velocirraptor` y `ParasoTrompeta` → `Models.Bichos["19"]` y `["20"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributos y texturas), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 19 base`, `/bicho 20 base` + `/abrir`: la garra del Velocirraptor se mueve 1,7 studs al pisotear y la punta de la cresta del Paraso 2,4 studs al tocar. Los dos pasean y tienen todos los efectos (6 y 7). Sin errores en la consola.
+- **Notas:** el siguiente es el 21 (Estego Placas, Épico, 7,8 studs).
+
 ## 2026-10-22 · bbogatell (Claude) · Bichos 16, 17 y 18 · Celo Cazador, Kentro Pincho y Troodon Listillo (detallados)
 
 - **Qué:** los tres últimos Raros, con detalle y fieles a sus hojas de ChatGPT. Sin sonidos.
