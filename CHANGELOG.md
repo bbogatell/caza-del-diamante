@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · seguo970 (Claude) · Pala 6: sin temblor de cámara al cavar
+**Qué:** al cavar con la pala 6 ya no tiembla la cámara. El estallido de tierra y destellos de ámbar sigue igual.
+**Dónde:** `StarterPlayerScripts.ShovelFx`: se quita la sacudida de `amberDig`.
+**Probado:** no probado en Play (cambio de solo quitar código).
+
 ## 2026-10-22 · seguo970 (Claude) · Pala 6: Pala de Ámbar importada, texturizada y animada
 **Qué:** la pala 6 es ahora el modelo `PalaAmbar`: hoja de ámbar naranja translúcido con un mosquito y burbujas dentro, mango de madera, anillos y collar de oro, gemas de ámbar y una gota escurriendo.
 - **Materiales:**
