@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 38 · Sauro Pinchos (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 8,6 studs y tiene 568 piezas. Es un nodosaurio enorme y blindado: cuerpo marrón oscuro cubierto de bultos marrón claro en relieve (uno a uno, cada uno con su protuberancia), pinchos gigantes grises con la punta dorada en el cuello y los hombros, pinchos más pequeños en los flancos y la cola, patas como columnas con uñas claras, pico oscuro y cola larga y gorda. Efectos: destellos dorados en los pinchos (ritmo 25), polvo (ritmo 15), chispas (ritmo 10) y luz dorada. **Animación:** se agacha, se eriza sacudiendo los pinchos con todo el cuerpo vibrando (3 ráfagas de destellos y chispas) y embiste de lado con el hombro (nube de polvo, explosión de chispas y onda dorada); cada vez embiste hacia un lado.
+- **Rig `Generic`:** nuevo `Bristle` (erizarse y embestir de lado).
+- **Dónde:** `ServerStorage.CreatureBuilders.SauroPinchos` → `Models.Bichos["38"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Bristle`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el cuerpo se desplaza 2,0 studs y gira 0,31 rad en la embestida. Sin errores en la consola.
+- **Notas:** el siguiente es el 39 (Pachirino, Legendario, 9,2 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 37 · Elvisaurio (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,4 studs y tiene 431 piezas. Es un terópodo blanco hielo con franjas azul claro, tupé amarillo de bloques, gafas de sol negras con brillo y boca abierta sonriente. Efectos: notas musicales (ritmo 20), estrellas (ritmo 20), copos de nieve (ritmo 15), destellos en las gafas (ritmo 5) y luz blanca. **Animación:** baile rockero de 2,4 s (mueve las caderas, alterna las patas, sube y baja los brazos y suelta notas y estrellas cada medio segundo) que acaba en una pose con salto, explosión de notas y onda azul hielo.
