@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 32 · Tricera Jefe (Legendario)
+
+- **Qué:** **32 · Tricera Jefe** (Legendario, 9,4 studs, 406 piezas), fiel a su hoja de ChatGPT. Es un triceratops enorme y macizo gris azulado, cubierto de escamas en relieve sueltas, con placas en el lomo y patas como columnas con uñas de marfil. Lleva la cabeza baja, con pico negro, ojo amarillo y cejas marcadas, tres cuernos de marfil largos y curvados y pinchos en las mejillas. La gola es gigante, azul real, con rombos amarillos y un borde de 18 pinchos de marfil. Tiene brillo dorado en el suelo. Efectos: destellos azules en la gola (ritmo 25), polvo (ritmo 20), piedrecitas (ritmo 10), resoplidos (ritmo 10) y luz azul. **Animación:** resopla y se encabrita, embiste hacia delante bajando los cuernos y estampa la parte delantera contra el suelo (gran nube de polvo, piedras, 2 ondas) mientras todo el cuerpo tiembla, y vuelve. Sin sonidos.
+- **Rig `Generic`:** nuevo `Quake` (+ emisores `QuakeFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.TriceraJefe` → `Models.Bichos["32"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play con `/bicho 32 base` + `/abrir`: el cuerpo avanza 2,2 studs en la embestida (captura con la cabeza baja y los cuernos por delante). Sin errores en la consola.
+- **Notas:** la primera cuenta de ChatGPT vuelve a tener imágenes. El siguiente es el 33 (Alo Feroz, Legendario, 10 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bichos 30 y 31 · Ptero Chispa y Archie de Luz (primeros Legendarios)
 
 - **Qué:** los dos primeros Legendarios, muy detallados, fieles a sus hojas de ChatGPT y con animación especial enérgica. Los dos llevan el brillo dorado en el suelo de su rareza. Sin sonidos.
