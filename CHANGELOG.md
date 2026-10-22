@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · bbogatell (Claude) · Bichos 27, 28 y 29 · Ptera Cresta, Plesio Cuellilargo y Carno Toro (Épicos con animación enérgica)
+
+- **Qué:** los tres últimos Épicos, detallados, fieles a sus hojas de ChatGPT y con animación especial enérgica. Sin sonidos.
+  - **27 · Ptera Cresta** (7,6 studs, 315 piezas): pterosaurio grande de pie con las alas abiertas de par en par. La membrana va por secciones (triángulos) con degradado de azul celeste a azul marino, mosaico de baldosas de otros azules, venas y borde marino, y tiene huesos de los dedos oscuros con garras. Cuerpo y cuello blancos, pico largo amarillo abierto con la boca roja y cresta roja larga hacia atrás. Efectos: ráfagas de viento en espiral (ritmo 12), plumitas (ritmo 5), destellos azules en las puntas de las alas (ritmo 5) y luz azul. **Animación:** se agacha con las alas arriba, aletea con fuerza levantando una ráfaga de viento, sube volando unos 3 studs, se mantiene aleteando rápido y aterriza con un rebote (otra ráfaga y onda).
+  - **28 · Plesio Cuellilargo** (7,5 studs, 299 piezas): reptil marino de cuerpo ancho verde azulado con decenas de lunares turquesa, barriga crema, cuatro aletas grandes con nervios y cuello larguísimo en S (por debajo crema, con escamas). La cabeza es pequeña, con la boca abierta llena de dientes. Está en un charco azul transparente con rocas, musgo y ondas. Efectos: burbujas (ritmo 12), ondas en el agua (ritmo 3), gotas (ritmo 6) y luz turquesa. **Animación:** se echa atrás, se zambulle de cabeza en el charco hasta desaparecer bajo el agua y sale de golpe con la cabeza hacia arriba (grandes salpicaduras, espuma y ondas).
+  - **29 · Carno Toro** (8,5 studs, 297 piezas): terópodo musculoso rojo intenso cubierto de bultos rojo oscuro sueltos y en filas por el lomo, con barriga y garganta naranjas. Cara corta y alta con dos cuernos de toro negros, boca abierta llena de dientes, ojo amarillo, bracitos diminutos y patas enormes con garras negras. Efectos: vapor por la nariz (ritmo 15), chispas rojas (ritmo 10), polvo (ritmo 8) y luz roja. **Animación:** agacha los cuernos, rasca el suelo 3 veces como un toro (polvo hacia atrás y resoplidos de vapor) y embiste hacia delante con la cabeza baja (gran nube, onda) antes de volver.
+- **Rig `Generic`:** nuevos `TakeOff` (+ `TakeOffFx`), `Dive` (+ `DiveFx`) y `Charge` (+ `ChargeFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.PteraCresta`, `PlesioCuellilargo` y `CarnoToro` → `Models.Bichos["27"]`, `["28"]` y `["29"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play con los tres en la base: el Ptera sube 3,2 studs al despegar, el Plesio baja 2,7 studs bajo el agua y sale 1,4 por encima, y el Carno embiste (después se alargó la embestida a 3,8). Sin errores en la consola.
+- **Notas:** con esto quedan hechos todos los Épicos. El siguiente es el 30 (Ptero Chispa, el primer Legendario); su hoja de ChatGPT ya se ha pedido.
+
 ## 2026-10-22 · bbogatell (Claude) · Bichos 25 y 26 · Estira Corona y Bario Pescador (Épicos con animación enérgica)
 
 - **Qué:** dos Épicos más, detallados, fieles a sus hojas de ChatGPT y con su animación especial enérgica desde el principio. Sin sonidos.
