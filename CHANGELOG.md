@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 40 · Quetzal Gigante (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 10,8 studs y tiene 470 piezas. Es un pterosaurio gigante apoyado en las cuatro extremidades: las delanteras son largas, naranja con franjas blancas de hueso, y llevan las alas plegadas, con la membrana naranja por secciones y baldosas. Tiene cuerpo blanco con escamas, cuello de jirafa blanco, cabeza amarilla con cresta roja, ojos verdes y pico larguísimo en degradado amarillo, naranja y rojo. Efectos: ráfagas de viento (ritmo 25), plumitas (ritmo 15), destellos (ritmo 10) y luz cálida. **Animación:** `WingBurst`: pliega las alas y se agacha; luego las abre de golpe hacia arriba, con una ráfaga de viento, polvo y plumas, un destello de luz y una onda.
+- **Dónde:** `ServerStorage.CreatureBuilders.QuetzalGigante` → `Models.Bichos["40"]`. Docs: `BICHOS_DINOSAURIOS.md`, `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base: las alas se abren 1,21 rad. Sin errores en la consola.
+- **Notas:** el siguiente es el 41 (Lio Pleuro, Legendario, 9,6 studs); su hoja ya se ha pedido.
+
 ## 2026-10-22 · seguo970 (Claude) · Pala 9: Pala de Liana y Colmillo importada, texturizada y animada
 **Qué:** la pala 9 es ahora el modelo `Pala9_LianaColmillo` (54 piezas): rama marrón envuelta en lianas verdes, colmillo de marfil, hojas, 7 hibiscos rosas y naranjas, y 13 pétalos y hojas flotando alrededor.
 - **Materiales de Roblox:**
