@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · seguo970 (Claude) · Pala 4: caparazón por las dos caras
+**Qué:** la hoja de la pala 4 tenía el caparazón solo por delante; por detrás era lisa. Ahora las dos caras tienen el caparazón: placas verdes, borde de tres colores y juntas color crema.
+**Dónde:** `ReplicatedStorage.Models.Palas.L4`: copias `Blade_Base_Atras`, `Blade_ScutesGreen_Atras`, `Blade_MarginalBrown_Atras`, `Blade_MarginalTan_Atras` y `Blade_MarginalOlive_Atras`. Son las piezas de delante giradas media vuelta sobre el eje del mango, por el centro de la hoja, y van soldadas al `Handle`. **Copia de antes:** `ServerStorage.CopiasPalas.L4_una_cara`.
+**Probado:** capturas de la pala sola por delante y por detrás: las dos caras se ven iguales. No se ha mirado en la mano porque Studio se desconectó del MCP. Puede haber quedado en `workspace` una copia de prueba, `PruebaL4` (a y=500), que se puede borrar.
+
 ## 2026-10-21 · seguo970 (Claude) · Pala 4: Pala de Caparazón importada
 **Qué:** la pala 4 es ahora el modelo 3D `PalaCaparazon.glb`: hoja de caparazón de tortuga, mango de madera oscura, lianas verdes y gotas de barro. Va texturizada con materiales y los colores del prompt, que se ven sin esperar a que Roblox apruebe imágenes:
 - placas verdes y borde marrón / arena / oliva: Slate;
