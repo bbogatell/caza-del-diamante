@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 42 · Uta Raptor (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,8 studs y tiene 453 piezas. Es el raptor más grande, musculoso y pesado, cubierto de plumas verde oscuro una a una con puntas naranja y rayas verde muy oscuro. Tiene una gran cresta de plumas verdes y naranjas en la cabeza y el cuello, cara gris con la boca abierta llena de dientes y ojo amarillo. Los brazos llevan plumas largas como alas y garras negras con la punta roja, y cada pata tiene una garra de hoz negra con el filo rojo. Efectos: zarpazos rojos (ritmo 3), plumas (ritmo 20), chispas (ritmo 20), polvo (ritmo 10) y luz verde. **Animación:** `Pounce`: se agacha encogido, salta hacia delante y hacia arriba con los brazos abiertos y las patas pateando, da un tajo con las garras de hoz (2 ráfagas de zarpazos rojos y chispas) y aterriza fuerte (polvo y onda verde).
+- **Rig `Generic`:** nuevo `Pounce` (salto de raptor con tajo de las garras de hoz).
+- **Dónde:** `ServerStorage.CreatureBuilders.UtaRaptor` → `Models.Bichos["42"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Pounce`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el cuerpo avanza 2,9 studs y sube 2,6 studs en el salto. Sin errores en la consola.
+- **Notas:** el siguiente es el 43 (Megalo Abuelo, Legendario, 9,6 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 41 · Lio Pleuro (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado alrededor y sin sonidos. Mide 9,6 studs y tiene 522 piezas. Es un reptil marino masivo que sale casi erguido de un remolino turquesa: anillos de baldosas en espiral con espuma blanca y agua transparente. Es azul oscuro con baldosas azul claro por encima y gris claro con baldosas por la barriga. Tiene una cabeza enorme de cocodrilo con la boca muy abierta (roja por dentro, 38 dientes blancos uno a uno), ojos amarillos, cuello corto y 4 aletas anchas a franjas. Bajo el agua lleva una cola con aleta, que solo se ve al saltar. Efectos: remolino de agua (ritmo 30), burbujas (ritmo 20), espuma (ritmo 15), gotas (ritmo 15) y luz azul. **Animación:** `Breach`: se hunde encogido con las aletas arriba, sale disparado del remolino con la boca abierta (salpicadura), gira en el aire y cae con un chapuzón enorme (gran salpicadura de gotas y espuma, 2 ondas), y se balancea en el agua.
