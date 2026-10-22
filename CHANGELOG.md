@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · bbogatell (Claude) · Bicho 13 · Dilo Abanico (detallado) + bichos con más piezas
+
+- **Qué:**
+  - **Bicho 13 · Dilo Abanico** (Raro, 5,8 studs, **326 piezas**), el primero hecho con mucho más detalle, fiel a su hoja de ChatGPT (comparado de frente, de lado y en 3/4). Es un terópodo esbelto amarillo verdoso lleno de manchas negras sueltas. Lleva una gola enorme en dos mitades: paneles amarillos con nervios, lunares rojos y negros y puntas rojas. Las crestas rojas en media luna tienen el borde blanco, en láminas. La boca está abierta con dientes uno a uno arriba y abajo, paladar y lengua. Tiene ojos amarillos con pupila de rendija y ceja, brazos con 3 garras negras, patas fuertes con escamas en la espinilla, 3 dedos con garra y espolón, y una cola larga recta con manchas y cresta.
+  - **Efectos:** gotitas verdes en la boca (ritmo 6) y destellos en la gola (ritmo 4). Cada pocos segundos abre la gola de golpe, abre la boca, echa la cabeza adelante y escupe una bola verde, y luego la cierra despacio. Mueve la cola, parpadea y pasea. Sin sonidos.
+  - **Rig `Generic`:** nuevo atributo `Frill`, rol `Frill` (un hueso por mitad, con `FrillPivot` y `Side`) y emisor `Spit`.
+  - **Más detalle en todos los bichos nuevos:** con la animación por huesos, las piezas ya casi no cuestan FPS, así que la tabla de rarezas pide ahora muchas más piezas (Raro 200-320, Divino 1300-1800…) y bichos muy detallados.
+- **Dónde:** `ServerStorage.CreatureBuilders.DiloAbanico` → `Models.Bichos["13"]`; `ReplicatedStorage.CreatureRigs` (Frill). Docs: `BICHOS_DINOSAURIOS.md` (tabla de piezas y nota), `GUIA_BICHOS.md` (Frill, tabla de huesos).
+- **Probado:** en Play, con `/bicho 13 base` + `/abrir`: la gola se abre y se cierra (los paneles se mueven 0,53 studs de delante atrás), la mandíbula se abre 0,66 rad, pasea 2,7 studs y están los 5 emisores. Sin errores en la consola.
+- **Notas:** el siguiente es el 14 (Iguano Pulgar, Raro, 6,5 studs).
+
 ## 2026-10-22 · seguo970 (Claude) · Pala 7: Pala de Arenisca Roja importada, texturizada y animada
 **Qué:** la pala 7 es ahora el modelo `PalaArenisca`: hoja de arenisca roja con la huella de dinosaurio tallada, mango de cactus con espinas, tres cuerdas y piedrecitas.
 - **Materiales de Roblox:**

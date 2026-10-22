@@ -4,7 +4,7 @@
 >
 > Cada ficha trae lo necesario para pedir el modelo 3D a Claude. **Antes de modelar cualquiera, aplica la guía de estilo de abajo (la parte común y la fila de su rareza)** y luego la ficha del bicho.
 
-## Proceso para hacer un bicho (hechos: 1-12, 191)
+## Proceso para hacer un bicho (hechos: 1-13, 191)
 
 **Guía completa paso a paso: [`GUIA_BICHOS.md`](GUIA_BICHOS.md).**
 
@@ -38,23 +38,23 @@
 
 ### Escalada por rareza (OBLIGATORIA)
 
-Cada rareza **supera claramente** a la anterior en tamaño, número de piezas, detalle y efectos. **Cada bicho tiene su altura exacta en su ficha (`Altura`)**, elegida según su especie, su forma y su valor: suele caer dentro del rango de su rareza y como mucho se sale un poco (los bebés y los bichos bajos y anchos por debajo; los más altos o valiosos de cada rareza por encima). Usa siempre la de la ficha. Los números de partículas son orientativos (ritmo = `Rate` del `ParticleEmitter`).
+Cada rareza **supera claramente** a la anterior en tamaño, número de piezas, detalle y efectos. **Cada bicho tiene su altura exacta en su ficha (`Altura`)**, elegida según su especie, su forma y su valor: suele caer dentro del rango de su rareza y como mucho se sale un poco (los bebés y los bichos bajos y anchos por debajo; los más altos o valiosos de cada rareza por encima). Usa siempre la de la ficha. **Piezas:** desde que la animación va por huesos (ver `GUIA_BICHOS.md`), el número de piezas casi no afecta a los FPS, así que los bichos se hacen **muy detallados** (manchas y escamas sueltas, dientes uno a uno, dedos y garras, costillas de crestas y golas, bordes de otro color…). Los números de la tabla son el mínimo orientativo; los bichos 1-12 se hicieron antes con menos piezas. Los números de partículas son orientativos (ritmo = `Rate` del `ParticleEmitter`).
 
 | Rareza | Altura (studs) | Piezas | Pose y presencia | Partículas y efectos |
 |---|---|---|---|---|
-| Común | 3-4 | 15-25 | Chibi, adorable, pose tranquila | Ninguna |
-| Poco común | 4-5 | 20-35 | Cartoon normal, pose con personalidad | 1 emisor suave (ritmo 2-4) |
-| Raro | 5-6 | 30-45 | Cartoon atlético, rasgos marcados | 1-2 emisores (ritmo 5-8) |
-| Épico | 7-8 | 45-70 | Musculoso, pose de acción | 2-3 emisores (ritmo 10-15) + `PointLight` |
-| Legendario | 9-10 | 70-100 | Robusto e imponente, escamas y placas en relieve | 3-4 emisores (ritmo 20-30) + luz + brillo dorado en el suelo |
-| Mítico | 11-12 | 100-140 | Blindado o elemental, piezas brillantes incrustadas | 4-6 emisores (ritmo 30-50) + aura a ras de suelo + luz fuerte |
-| Cósmico | 13-15 | 130-180 | Majestuoso, piezas flotando alrededor | 6-8 emisores (ritmo 50-80) + estrellas orbitando + 2 luces |
-| Secreto | 16-18 | 160-230 | Amenazador, silueta enorme y oscura | 8-10 emisores (ritmo 60-100) + `Highlight` negro y morado + humo oscuro + niebla en el suelo |
-| Eterno | 20-24 | 220-320 | Leyenda viva: armaduras, coronas, alas o estructuras gigantes | 10-14 emisores (ritmo 100-150) + 2-3 anillos de energía girando + `Beam` de luz + pulsos de onda cada 4 s |
-| Divino | 26-32 | 300-450 | Dios colosal: cada pieza recargada, varias capas de armadura y adornos | 15-25 emisores (ritmo 150-300) + halo + `Beam` de luz desde el cielo + partículas arcoíris + ondas de choque + temblor de cámara cerca |
-| Brainrot | 5-14 | 30-120 | Meme absurdo; crece con su valor | Crece de 1 a 8 emisores con su valor |
-| Mutante | 8-22 | 50-250 | Orgánicos: carne, baba y bultos; Mecha: robots de guerra | De 3 a 14 emisores según su valor |
-| Evento | 12-22 | 120-300 | Dragosaurios espectaculares | De 6 a 14 emisores según su valor |
+| Común | 3-4 | 60-100 | Chibi, adorable, pose tranquila | Ninguna |
+| Poco común | 4-5 | 100-160 | Cartoon normal, pose con personalidad | 1 emisor suave (ritmo 2-4) |
+| Raro | 5-6 | 200-320 | Cartoon atlético, rasgos marcados | 1-2 emisores (ritmo 5-8) |
+| Épico | 7-8 | 300-450 | Musculoso, pose de acción | 2-3 emisores (ritmo 10-15) + `PointLight` |
+| Legendario | 9-10 | 400-600 | Robusto e imponente, escamas y placas en relieve | 3-4 emisores (ritmo 20-30) + luz + brillo dorado en el suelo |
+| Mítico | 11-12 | 500-750 | Blindado o elemental, piezas brillantes incrustadas | 4-6 emisores (ritmo 30-50) + aura a ras de suelo + luz fuerte |
+| Cósmico | 13-15 | 650-900 | Majestuoso, piezas flotando alrededor | 6-8 emisores (ritmo 50-80) + estrellas orbitando + 2 luces |
+| Secreto | 16-18 | 800-1100 | Amenazador, silueta enorme y oscura | 8-10 emisores (ritmo 60-100) + `Highlight` negro y morado + humo oscuro + niebla en el suelo |
+| Eterno | 20-24 | 1000-1400 | Leyenda viva: armaduras, coronas, alas o estructuras gigantes | 10-14 emisores (ritmo 100-150) + 2-3 anillos de energía girando + `Beam` de luz + pulsos de onda cada 4 s |
+| Divino | 26-32 | 1300-1800 | Dios colosal: cada pieza recargada, varias capas de armadura y adornos | 15-25 emisores (ritmo 150-300) + halo + `Beam` de luz desde el cielo + partículas arcoíris + ondas de choque + temblor de cámara cerca |
+| Brainrot | 5-14 | 150-700 | Meme absurdo; crece con su valor | Crece de 1 a 8 emisores con su valor |
+| Mutante | 8-22 | 300-1300 | Orgánicos: carne, baba y bultos; Mecha: robots de guerra | De 3 a 14 emisores según su valor |
+| Evento | 12-22 | 650-1300 | Dragosaurios espectaculares | De 6 a 14 emisores según su valor |
 
 **Al salir del fósil:** Común, un «pop» pequeño. Cada rareza superior, una explosión más grande. Divino: columna de luz, onda de choque, lluvia de partículas y temblor.
 
