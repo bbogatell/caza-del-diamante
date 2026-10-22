@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 44 · Guanlong Cresta (Legendario)
+
+- **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9 studs y tiene 478 piezas. Es un tiranosaurio esbelto cubierto de plumas naranjas y blancas una a una, con plumas largas en el cuello y los brazos, cara crema, boca abierta con dientes y patas marrón oscuro. A lo largo del hocico lleva una cresta alta como un casco, en degradado amarillo, naranja y rojo; el borde rojo es Neon. Efectos: chispas naranjas (ritmo 25), brasas (ritmo 15), humo (ritmo 10), destellos en la cresta (ritmo 10) y luz naranja. **Animación:** `GlowMove = "bellow"`: se encabrita echando la cabeza atrás con la boca abierta, la cresta se enciende en blanco amarillento y da 3 destellos, cada uno con una explosión de chispas y brasas (onda naranja al primero).
+- **Dónde:** `ServerStorage.CreatureBuilders.GuanlongCresta` → `Models.Bichos["44"]`. Docs: `BICHOS_DINOSAURIOS.md`, `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base: el cuerpo se encabrita 0,38 rad y la cresta se enciende (Neon). Sin errores en la consola.
+- **Notas:** el siguiente es el 45 (Diplo Látigo, Legendario, 10,4 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 43 · Megalo Abuelo (Legendario)
 
 - **Qué:** Legendario muy detallado y fiel a su hoja de ChatGPT, con brillo dorado en el suelo y sin sonidos. Mide 9,6 studs y tiene 438 piezas. Es un gran terópodo veterano y erguido, marrón verdoso con rayas y bultos oscuros y barriga crema. Lleva sombrero de copa negro con cinta roja y hebilla dorada, monóculo dorado con cadena, pajarita roja con cuello blanco, bigote y patillas de escamas blancas y un bastón de hueso blanco con punta dorada en la mano derecha. Efectos: destellos dorados (ritmo 25), polvo de libro antiguo (ritmo 15), burbujas de té (ritmo 10) y luz cálida. **Animación:** `Bow`: hace girar el bastón soltando destellos, se quita el sombrero, hace una reverencia profunda llevándolo al pecho (explosión de destellos y estrellas y onda dorada), se incorpora y se lo vuelve a poner.
