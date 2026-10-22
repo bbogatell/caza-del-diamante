@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-22 · bbogatell (Claude) · Bichos 16, 17 y 18 · Celo Cazador, Kentro Pincho y Troodon Listillo (detallados)
+
+- **Qué:** los tres últimos Raros, con detalle y fieles a sus hojas de ChatGPT. Sin sonidos.
+  - **16 · Celo Cazador** (5,3 studs, 223 piezas): terópodo flaco naranja quemado con rayas marrón oscuro que envuelven el lomo, las patas, el cuello y la cola, escamas sueltas y barriga amarilla. Va agachado al acecho, con el cuello en S, la cabeza estrecha y la boca abierta con 38 dientecitos. Ojo amarillo con pupila de rendija, brazos con garras largas negras, 3 dedos y espolón. Le caen hojas de otoño encima (ritmo 5). Gira la cabeza a saltitos.
+  - **17 · Kentro Pincho** (5,5 studs, 226 piezas): cuadrúpedo amarillo arena con rayas y manchas marrones, cabeza baja con pico oscuro, dos filas de placas naranjas con borde en el cuello y los hombros que pasan a pinchos de hueso con la punta roja hacia las caderas y la cola, y dos pinchos enormes en los hombros. Destellos rojos en las puntas (ritmo 6) y polvo (ritmo 4). Cada pocos segundos da un coletazo de lado a lado.
+  - **18 · Troodon Listillo** (5,2 studs, 224 piezas): raptor cubierto de plumas verde azulado una a una, con cara y cuello gris claro. Cabeza grande y abombada con ojos enormes mirando al frente, gafas redondas negras (aros, puente y patillas), cresta de plumas y sonrisa con dientecitos. Brazos emplumados sujetando un libro rojo con emblema y bandas doradas, garra en hoz levantada y cola con plumas a los lados. Chispitas blancas (ritmo 6) y «?» amarillos que salen de la cabeza (ritmo 2). Cada pocos segundos levanta el libro para leerlo.
+- **Rig `Generic`:** nuevos atributos `HeadSnap` (cabeza a saltitos) y `TailWhip` (coletazo).
+- **Dónde:** `ServerStorage.CreatureBuilders.CeloCazador`, `KentroPincho` y `TroodonListillo` → `Models.Bichos["16"]`, `["17"]` y `["18"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributos y texturas nuevas), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play, con `/bicho 16/17/18 base` + `/abrir`: la cabeza del Celo gira 1,3 rad a saltitos, la punta de la cola del Kentro se mueve 2,1 studs en el coletazo y el libro del Troodon sube. Los tres pasean. Sin errores en la consola.
+- **Notas:** el siguiente es el 19 (Velocirraptor, el primer Épico, 6,6 studs).
+
 ## 2026-10-22 · bbogatell (Claude) · Bichos 14 y 15 · Iguano Pulgar e Ictio Saltarín (detallados)
 
 - **Qué:** dos Raros hechos con detalle, fieles a sus hojas de ChatGPT. Sin sonidos.
