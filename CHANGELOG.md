@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bichos 30 y 31 · Ptero Chispa y Archie de Luz (primeros Legendarios)
+
+- **Qué:** los dos primeros Legendarios, muy detallados, fieles a sus hojas de ChatGPT y con animación especial enérgica. Los dos llevan el brillo dorado en el suelo de su rareza. Sin sonidos.
+  - **30 · Ptero Chispa** (8 studs, 420 piezas): pterosaurio bebé chibi naranja y redondito cubierto de escamas sueltas naranjas, rojas y amarillas, con placas amarillas en la barriga y pinchitos rojos en el lomo. Cabeza enorme con ojos grandes y traviesos (iris, pupila y brillo), cejas, mofletes y pico amarillo abierto con lengua. En la cabeza lleva una llama viva en capas de Neon con lenguas de fuego. Alitas rojas de membrana con el borde amarillo y escamas, patitas con garras negras y una llama en la cola. Efectos: chispas de fuego (ritmo 20), humo claro (ritmo 10), brasas que suben (ritmo 10) y luz naranja. **Animación:** da dos saltitos, se echa atrás y escupe una llamarada larga por el pico, aleteando y moviendo la cabeza (onda en el suelo).
+  - **31 · Archie de Luz** (9 studs, 352 piezas): Archaeopteryx adulto y majestuoso de plumas blanco perla con las puntas doradas, en varias capas en las alas, el pecho, la barriga y la cola. Alas muy abiertas hacia arriba, pico dorado, ojos azul cielo, garras negras y aureola de Neon dorado sobre la cabeza. Efectos: plumas blancas que caen (ritmo 20), destellos dorados (ritmo 20), rayitos de luz (ritmo 5) y luz blanca cálida. Está hecho a partir del constructor del Archie (12). **Animación:** pliega las alas y se agacha, las abre de golpe hacia arriba en una explosión de luz (ráfaga de destellos, rayos y plumas, la luz se enciende con fuerza y sale la onda) y se queda arriba con la cabeza alta antes de volver.
+- **Rig `Generic`:** nuevos `FireBreath` (+ `FlameFx`) y `WingBurst` (+ `BurstFx` y `BurstLight`).
+- **Dónde:** `ServerStorage.CreatureBuilders.PteroChispa` y `ArchieDeLuz` → `Models.Bichos["30"]` y `["31"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md`, `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play con los dos en la base: captura del Chispa escupiendo fuego y del Archie de Luz en plena explosión de luz; el cuerpo del Archie se mueve 1,3 studs. Los saltitos del Chispa se agrandaron después de la prueba. Sin errores en la consola.
+- **Notas:** el siguiente es el 32 (Tricera Jefe, Legendario, 9,4 studs); su hoja de ChatGPT ya se ha pedido.
+
 ## 2026-10-22 · seguo970 (Claude) · Pala 8: Pala de Cuerno de Triceratops importada, texturizada y animada
 **Qué:** la pala 8 es ahora el modelo `Pala8_TriceratopsHorn`. La hoja es una gola de triceratops azul con rombos dorados, ribete y púas de hueso, y dos cuernos de marfil. El mango es de hueso con vendas de cuero y el pomo lleva una gema azul.
 - **Materiales de Roblox:**
