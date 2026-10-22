@@ -2,6 +2,31 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · seguo970 (Claude) · Pala 10: Pala de Garra de Raptor importada y animada
+**Qué:** la pala 10 es ahora el modelo `PalaGarraRaptor`: garra en hoz negra con el filo rojo, mango de hueso con tiras de cuero, colmillos, cuentas, plumas rojas, negras y a rayas, y empuñadura en forma de garra de reptil.
+- **Colores:** el archivo trae colores por vértice (el degradado negro-rojo de la hoja, las rayas de las plumas, las escamas) y en Roblox se ven, así que se usan tal cual con `Color` blanco y acabado brillante en la hoja y las garras.
+- **Animación:**
+  - las 10 piezas de plumas se mecen como con viento, desfasadas: el abanico de arriba ±4° y las que cuelgan ±7–8°;
+  - brillo rojo suave en la hoja que respira;
+  - brasas rojas saliendo de la hoja.
+- **Al sacarla:** estallido de brasas.
+- **Al cavar:** tierra y brasas rojas (sin temblor de cámara).
+
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L10`, a escala 1: ya mide 7 studs.
+- `Handle` invisible, con la mano izquierda encima de la empuñadura.
+- Las plumas van con Motor6D `ShovelOrbit`.
+- `ShovelFx`: `DIG_FX.L10 = clawDig`.
+- Original en `ServerStorage.PalaGarraRaptor`.
+
+**Probado:** en Play con `Debug "level" 10`:
+- la mano izquierda va a 0,65 del mango y la derecha a 3,44, bajo la hoja (3,69);
+- las plumas se mueven hasta 7,9°;
+- no hay errores en la consola.
+
+Captura en la mano.
+**Notas:** no se han hecho la estela al golpear ni las animaciones de personaje propias (el juego usa `DigAnim`). **Para próximas palas:** si el GLB trae colores por vértice, Roblox los muestra; basta con poner `Color` en blanco.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 50 · Giganoto Rey (Legendario)
 
 - **Qué:** el último Legendario, muy detallado y fiel a su hoja de ChatGPT, con brillo dorado intenso en el suelo (3 discos) y sin sonidos. Mide 11,5 studs (el mayor de los Legendarios) y tiene 419 piezas. Es un terópodo gigante gris oscuro con rayas rojas y bultos oscuros, barriga, garganta y mandíbula gris claro. Tiene el cráneo largo con dientes de sierra, una cresta de bultos sobre los ojos, cicatrices en el hocico y el costado, ojos naranja brillante (con brillo Neon) y brazos fuertes con garras negras. Efectos: anillo de rugido, polvo (ritmo 30), piedrecitas que saltan (ritmo 20), chispas rojas (ritmo 20) y luz roja. **Animación:** `Roar` (ángulo 1,0): se agacha cogiendo aire y ruge con la cabeza alzada y la boca muy abierta, temblando, con 3 anillos de rugido rojos, aliento, piedras que saltan y onda.
