@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 61 · Terrorave (Mítico), hecho desde cero
+
+- **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 12 studs y tiene 444 piezas. Es un ave gigante que no vuela, sobre **patas naranjas larguísimas y musculosas** dobladas en zigzag: muslo con plumas, rodilla delante, talón atrás, caña larga con escamas en anillo y pies con tres dedos largos y garras negras curvas. Tiene el cuerpo compacto cubierto de plumas gris oscuro una a una, con plumas largas y desordenadas en el lomo y un abanico de cola, alas diminutas, cuello grueso en S con una gorguera de plumas y la cabeza grande (se agranda ×1,45) con cresta desordenada, ojo rojo de mala cara y un **pico amarillo enorme y ganchudo como un hacha**, con la punta negra, abierto con la boca roja. **Aura de Mítico** gris oscuro. Efectos: plumas negras (ritmo 30), chispas rojas (ritmo 25), polvo (ritmo 25), zarpazos rojos (ritmo 3), aura (ritmo 20) y luz roja. Mueve la cabeza a saltitos. **Animación:** `Peck`: corre en el sitio a toda velocidad levantando polvo, se para, echa la cabeza atrás y da un picotazo brutal hacia abajo (zarpazos, chispas, polvo y onda) y sacude la cabeza.
+- **Rig `Generic`:** nuevo `Peck` (carrera en el sitio y picotazo).
+- **Dónde:** `ServerStorage.CreatureBuilders.Terrorave` → `Models.Bichos["61"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Peck`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: hace el picotazo y la pata se separa como mucho 0,42 studs de la cadera. Sin errores en la consola.
+- **Notas:** el siguiente es el 62 (Anqui Dorado, Mítico, 10,6 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 60 · Mosa Orca (Mítico), hecho desde cero
 
 - **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT (la primera de la cuenta nueva de ChatGPT); sin sonidos. Mide 11,4 studs y tiene 490 piezas. Es un mosasaurio musculoso y gordo que salta en diagonal desde una ola azul enrollada con espuma blanca y salpicaduras. El cuerpo hace un arco desde la cola, abajo detrás, hasta la cabeza, arriba delante, y está pintado como una orca: lomo negro brillante, barriga, garganta y mandíbula blancas, mancha blanca detrás del ojo amarillo y manchas blancas en los costados. Tiene una aleta dorsal negra alta, dos aletas pectorales grandes, cola con aleta horizontal y una cabeza grande (se agranda ×1,45) con la boca enorme abierta, roja por dentro y llena de dientes blancos. **Aura de Mítico** de agua azul. Efectos: salpicaduras (ritmo 40), espuma (ritmo 30), burbujas (ritmo 25), gotas (ritmo 25), aura (ritmo 20) y luz azul. **Animación:** `Breach` con `BreachSpin`: se hunde en la ola, salta fuera dando una vuelta entera en el aire y cae con un chapuzón enorme (salpicaduras, espuma y 2 ondas).
