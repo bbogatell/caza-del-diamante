@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 58 · Anqui Guindilla (Mítico), hecho desde cero
+
+- **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 10,4 studs (con la maza en alto) y tiene 530 piezas. Es un anquilosaurio enorme, muy ancho y bajo, pegado al suelo, rojo picante cubierto de bultos rojos con juntas oscuras. Lleva filas de pinchos amarillos triangulares como semillas por todo el lomo y pinchos grandes en los flancos, patas cortas y gruesas con garras oscuras y una cabeza ancha y baja con la frente acorazada, ojos ámbar brillantes y boca con colmillos. La cola larga sube en curva por detrás hasta una **guindilla gigante**: roja brillante con arrugas y brillo, cáliz verde y rabito verde curvado. **Aura de Mítico** naranja. Efectos: llamarada por la boca (a ráfagas), humo (ritmo 30), chispas (ritmo 30), brasas (ritmo 20), calor (ritmo 20), aura (ritmo 20) y luz naranja. **Animación:** `ChiliBlast`: se echa atrás, escupe una llamarada enorme temblando y luego pasa la guindilla por encima y la estampa contra el suelo (explosión de fuego, polvo y 2 ondas).
+- **Rig `Generic`:** nuevo `ChiliBlast` (llamarada + mazazo con la cola).
+- **Dónde:** `ServerStorage.CreatureBuilders.AnquiGuindilla` → `Models.Bichos["58"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `ChiliBlast`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la maza gira 0,96 rad en el golpe y la pata trasera se separa como mucho 0,37 studs de la cadera. Sin errores en la consola.
+- **Notas:** el siguiente es el 59 (Plesio Fantasma, Mítico, 11,6 studs); su hoja ya está hecha.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 57 · Ptero del Vacío (Mítico), hecho desde cero
 
 - **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 11,2 studs y tiene 658 piezas. Es un pterodáctilo negro con remaches y vetas moradas brillantes que flota sobre una roca con grietas moradas, con las patas colgando y garras blancas. Tiene el cuello largo hacia delante, un pico larguísimo y afilado que apunta hacia abajo, una cresta como una cuchilla hacia atrás con el borde morado y un **único ojo magenta** brillante en la frente. Las alas están **rotas en decenas de esquirlas** negras alargadas y puntiagudas con bordes morados brillantes, en abanico y en 3 capas que flotan separadas del cuerpo y se balancean. **Aura de Mítico** morada. Efectos: fragmentos girando (ritmo 15), humo morado (ritmo 40), chispas magenta (ritmo 25), destellos (ritmo 15), aura (ritmo 20) y luz morada. **Animación:** `WingBurst`: los fragmentos se juntan formando alas enteras y luego salen disparados con una explosión de energía del vacío (chispas, fragmentos, anillo magenta, destello de luz y onda).
