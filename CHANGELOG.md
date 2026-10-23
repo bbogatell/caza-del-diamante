@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 60 · Mosa Orca (Mítico), hecho desde cero
+
+- **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT (la primera de la cuenta nueva de ChatGPT); sin sonidos. Mide 11,4 studs y tiene 490 piezas. Es un mosasaurio musculoso y gordo que salta en diagonal desde una ola azul enrollada con espuma blanca y salpicaduras. El cuerpo hace un arco desde la cola, abajo detrás, hasta la cabeza, arriba delante, y está pintado como una orca: lomo negro brillante, barriga, garganta y mandíbula blancas, mancha blanca detrás del ojo amarillo y manchas blancas en los costados. Tiene una aleta dorsal negra alta, dos aletas pectorales grandes, cola con aleta horizontal y una cabeza grande (se agranda ×1,45) con la boca enorme abierta, roja por dentro y llena de dientes blancos. **Aura de Mítico** de agua azul. Efectos: salpicaduras (ritmo 40), espuma (ritmo 30), burbujas (ritmo 25), gotas (ritmo 25), aura (ritmo 20) y luz azul. **Animación:** `Breach` con `BreachSpin`: se hunde en la ola, salta fuera dando una vuelta entera en el aire y cae con un chapuzón enorme (salpicaduras, espuma y 2 ondas).
+- **Rig `Generic`:** nuevo atributo `BreachSpin` (vuelta entera en el aire durante el `Breach`).
+- **Dónde:** `ServerStorage.CreatureBuilders.MosaOrca` → `Models.Bichos["60"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (`BreachSpin`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el cuerpo sube 3,8 studs y gira 5 rad en el salto. Sin errores en la consola.
+- **Notas:** el siguiente es el 61 (Terrorave, Mítico, 12 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 59 · Plesio Fantasma (Mítico), hecho desde cero
 
 - **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 11,6 studs y tiene 520 piezas. Es un plesiosaurio grande y **semitransparente** (Neon azul fantasma pálido, transparencia 0,4) que **flota en el aire** sobre una niebla oscura. Tiene el cuerpo gordo con las costillas y la columna brillando por dentro, el cuello larguísimo en S hasta una cabeza con la mandíbula larga abierta llena de dientes y ojos blancos brillantes, cuatro aletas grandes como hojas (por paneles, con nervios brillantes), la cola deshaciéndose en humo y **cadenas grises translúcidas** enrolladas en el cuello y el cuerpo, colgando en bucles. **Aura de Mítico** azul pálido. Efectos: humo azul de la cola (ritmo 40), niebla (ritmo 30), orbes fantasma (ritmo 15), destellos (ritmo 15), aura (ritmo 20) y luz azul pálido. **Animación:** flota subiendo y bajando sin parar; `Phase`: se encoge hacia atrás y se desvanece casi del todo, flota invisible y reaparece de golpe lanzándose hacia delante con un grito fantasmal (anillo, humo, orbes y onda).
