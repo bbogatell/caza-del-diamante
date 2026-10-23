@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 51 · Raptor Duna (Mítico)
+
+- **Qué:** el primer Mítico, muy detallado y fiel a su hoja de ChatGPT, sin sonidos. Mide 10,6 studs y tiene 542 piezas. Es un raptor grande y fibroso cubierto de plumas arena dorada una a una, con rayas y puntas marrones. Lleva un pañuelo de beduino a cuadros azules y blancos envuelto en la cabeza y el cuello, con un nudo y dos puntas largas colgando por detrás. También lleva gafas de arena negras con montura de bronce y brillo, brazaletes de bronce con remaches en los brazos y las patas, garras negras con el filo de bronce y garras de hoz. **Aura de Mítico:** tres discos beige brillantes a ras de suelo y destellos que suben. Efectos: remolino de arena (ritmo 40), arena fina (ritmo 30), destellos de bronce (ritmo 15), polvo (ritmo 20), aura beige (ritmo 20) y luz amarilla fuerte. **Animación:** `Whirl`: se agacha, salta dando 2 vueltas enteras en el aire (gira todo el bicho, patas incluidas) dentro de un tornado de arena, aterriza levantando polvo y da un tajo con los dos brazos (zarpazos de bronce, chispas y onda).
+- **Dónde:** `ServerStorage.CreatureBuilders.RaptorDuna` → `Models.Bichos["51"]`. Docs: `GUIA_BICHOS.md` (atributo `Whirl` y cómo es el aura de los Míticos), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: gira 12,1 rad (2 vueltas) y la pata se separa como mucho 0,35 studs de la cadera. Sin errores en la consola.
+- **Notas:** el siguiente es el 52 (Escorpi Raptor, Mítico, 10,8 studs); su hoja ya está hecha y la del 53 se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Arreglo: el cuerpo ya no se despega de las patas en las animaciones especiales
 
 - **Qué:** en las animaciones que mueven el cuerpo (embestidas, cabezazos, saltos, cargas, embestidas de lado...) las patas traseras y las de los bípedos se quedaban clavadas en su sitio, y el cuerpo se separaba de ellas hasta 2-3 studs. Ahora cada pata va a donde la pose de acción lleva su cadera (desplazamiento y giro del cuerpo). Hacia abajo no se mueven, para no atravesar el suelo. Las patas delanteras con `FrontLeg` siguen igual (van con el cuerpo entero). Arregla todos los bichos a la vez, porque el cambio está en el rig.
