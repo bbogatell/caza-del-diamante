@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 53 · Dilo Venenoso (Mítico) + gola con todo el cuerpo
+
+- **Qué:** Mítico muy detallado y fiel a su hoja de ChatGPT, sin sonidos. Mide 11 studs y tiene 610 piezas. Es un dilofosaurio adulto y grande, verde selva con manchas y bultos verde oscuro, barriga y garganta crema, dos crestas rojas con borde blanco y la boca abierta llena de dientes, con baba de veneno verde. Lleva una gola enorme desplegada: 11 paneles por lado, morados brillantes (Neon) con lunares amarillos y puntas y pinchos rojos. **Aura de Mítico** morada a ras de suelo. Efectos: burbujas tóxicas (ritmo 30), gotas (ritmo 20), humo morado (ritmo 25), esporas (ritmo 15), aura morada (ritmo 20) y luz morada. **Animación:** `Frill`: se encabrita abriendo la gola de golpe, se lanza hacia delante con la boca muy abierta y escupe una bola de veneno grande (chorro de gotas, nube morada y verde, onda morada), y tiembla amenazante con la gola abierta antes de plegarla.
+- **Rig `Generic`:** la animación de la gola (`Frill`) ahora mueve todo el cuerpo: encabritarse, lanzarse, escupir con `SpitFx` y la onda, temblar. Antes solo daba un tirón de cabeza. También mejora al 13 (Dilo Abanico).
+- **Dónde:** `ServerStorage.CreatureBuilders.DiloVenenoso` → `Models.Bichos["53"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (`Frill` y `SpitFx`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base con el 53: se lanza hacia delante escupiendo y la pata sigue pegada a la cadera (0,5 studs como mucho). Sin errores en la consola. El 13 usa el mismo código, pero no lo he visto en Play: el comando de prueba con él pone un fósil por abrir.
+- **Notas:** el siguiente es el 54 (Raptigre, Mítico, 11 studs); su hoja ya está hecha y la del 55 se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 52 · Escorpi Raptor (Mítico)
 
 - **Qué:** Mítico muy detallado y fiel a su hoja de ChatGPT, sin sonidos. Mide 10,8 studs y tiene 502 piezas. Es un raptor acorazado de placas negras brillantes con borde y franjas rojas, barriga a segmentos, cuernos y placas rojas en la cabeza y ojos rojo anaranjado brillantes. En vez de manos tiene pinzas rojas enormes de escorpión: bandas de armadura, dedos con punta negra, dientes y pinchos. La cola segmentada (anillos rojos, placas, pinchos a los lados) sube y se curva por encima del lomo hasta un aguijón enorme verde veneno brillante. **Aura de Mítico** verde a ras de suelo. Efectos: gotas de veneno del aguijón (ritmo 30), burbujas tóxicas (ritmo 20), humo verde (ritmo 30), chispas (ritmo 15), aura verde (ritmo 20) y luz verde. **Animación:** `Sting`: chasquea las pinzas 3 veces, se echa atrás armando la cola y se lanza clavando el aguijón por encima de la cabeza (chorro de veneno, nube verde, polvo y onda), y bombea veneno 2 veces más.
