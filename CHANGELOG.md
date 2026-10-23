@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 63 · Rata Raptor Tóxica (Mítico), hecho desde cero
+
+- **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 11,2 studs y tiene 499 piezas. Es un raptor grande encorvado sobre una rejilla de alcantarilla con charcos tóxicos, gris oscuro de bloques cubierto de manchas verde neón. Tiene **cabeza de rata**: hocico largo y afilado con nariz rosa, bigotes largos, orejas grandes redondas rosa y gris, ojos verdes brillantes, dos dientes de roedor amarillos largos y la boca abierta con baba verde. Los brazos con garras van hacia delante, las patas son fuertes con garras oscuras y la **cola de rata es rosa, larga y por segmentos**. A la espalda lleva un **barril amarillo radiactivo** atado con correas de cuero marrón y hebillas, con el símbolo de radiactividad en los lados. **Aura de Mítico** verde. Efectos: burbujas verdes (ritmo 40), humo tóxico del barril (ritmo 40), gotas de baba (ritmo 20), chispas (ritmo 15), aura (ritmo 20) y luz verde. **Animación:** `Sniff`: olfatea con la cabeza baja de lado a lado, se encabrita chillando con la boca muy abierta y temblando, y el barril suelta una gran nube tóxica (chorro de baba y onda verde).
+- **Rig `Generic`:** nuevo `Sniff` (olfatear, chillar y nube tóxica).
+- **Dónde:** `ServerStorage.CreatureBuilders.RataRaptor` → `Models.Bichos["63"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Sniff`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la mandíbula se abre 0,7 rad en el chillido y la pata se separa como mucho 0,48 studs de la cadera. Sin errores en la consola.
+- **Notas:** ChatGPT sacó dos opciones para esta hoja; se usó la 1. El siguiente es el 64 (Gorilasaurio Cósmico, Mítico, 12,4 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 62 · Anqui Dorado (Mítico), hecho desde cero
 
 - **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 10,6 studs (con la cola en alto) y tiene 522 piezas. Es un anquilosaurio entero de oro (metal con reflejo 0,2) sobre un montón de monedas y lingotes de oro. Tiene el lomo como una cúpula de placas de oro, cada una con una gema roja, azul o verde incrustada, pinchos de oro en los flancos, patas de oro con garras negras, una cabeza ancha con la boca abierta y dientes y un ojo rojo. La cola se curva hacia atrás y hacia arriba hasta una maza en forma de **lingote de oro gigante**, con bordes biselados, gemas y sello. **Aura de Mítico** dorada. Efectos: monedas doradas que saltan (ritmo 40), destellos (ritmo 40), brillos de gemas (ritmo 20), polvo dorado (ritmo 30), rayos de luz, aura (ritmo 20) y luz dorada. **Animación:** `TailSlam`: levanta el lingote y lo estampa contra el suelo con una lluvia de monedas, destellos, una nube dorada y la onda.
