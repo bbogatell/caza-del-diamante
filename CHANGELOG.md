@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 62 · Anqui Dorado (Mítico), hecho desde cero
+
+- **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 10,6 studs (con la cola en alto) y tiene 522 piezas. Es un anquilosaurio entero de oro (metal con reflejo 0,2) sobre un montón de monedas y lingotes de oro. Tiene el lomo como una cúpula de placas de oro, cada una con una gema roja, azul o verde incrustada, pinchos de oro en los flancos, patas de oro con garras negras, una cabeza ancha con la boca abierta y dientes y un ojo rojo. La cola se curva hacia atrás y hacia arriba hasta una maza en forma de **lingote de oro gigante**, con bordes biselados, gemas y sello. **Aura de Mítico** dorada. Efectos: monedas doradas que saltan (ritmo 40), destellos (ritmo 40), brillos de gemas (ritmo 20), polvo dorado (ritmo 30), rayos de luz, aura (ritmo 20) y luz dorada. **Animación:** `TailSlam`: levanta el lingote y lo estampa contra el suelo con una lluvia de monedas, destellos, una nube dorada y la onda.
+- **Dónde:** `ServerStorage.CreatureBuilders.AnquiDorado` → `Models.Bichos["62"]`. Docs: `BICHOS_DINOSAURIOS.md`, `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base: el lingote gira 0,89 rad en el golpe. Sin errores en la consola.
+- **Notas:** el siguiente es el 63 (Rata Raptor Tóxica, Mítico, 11,2 studs); su hoja ya se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 61 · Terrorave (Mítico), hecho desde cero
 
 - **Qué:** Mítico muy detallado, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 12 studs y tiene 444 piezas. Es un ave gigante que no vuela, sobre **patas naranjas larguísimas y musculosas** dobladas en zigzag: muslo con plumas, rodilla delante, talón atrás, caña larga con escamas en anillo y pies con tres dedos largos y garras negras curvas. Tiene el cuerpo compacto cubierto de plumas gris oscuro una a una, con plumas largas y desordenadas en el lomo y un abanico de cola, alas diminutas, cuello grueso en S con una gorguera de plumas y la cabeza grande (se agranda ×1,45) con cresta desordenada, ojo rojo de mala cara y un **pico amarillo enorme y ganchudo como un hacha**, con la punta negra, abierto con la boca roja. **Aura de Mítico** gris oscuro. Efectos: plumas negras (ritmo 30), chispas rojas (ritmo 25), polvo (ritmo 25), zarpazos rojos (ritmo 3), aura (ritmo 20) y luz roja. Mueve la cabeza a saltitos. **Animación:** `Peck`: corre en el sitio a toda velocidad levantando polvo, se para, echa la cabeza atrás y da un picotazo brutal hacia abajo (zarpazos, chispas, polvo y onda) y sacude la cabeza.
