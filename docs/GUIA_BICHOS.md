@@ -1,6 +1,6 @@
 # Guía para hacer los bichos (para Claude)
 
-Así se han hecho los bichos 1 (Dodo Corriente), 2 (Compi), 3 (Proto Bebé) y 191 (Mecha Krakenoide). Sigue los pasos en este orden, **un bicho cada vez y por orden de la lista** (`BICHOS_DINOSAURIOS.md`). El siguiente es el **54**.
+Así se han hecho los bichos 1 (Dodo Corriente), 2 (Compi), 3 (Proto Bebé) y 191 (Mecha Krakenoide). Sigue los pasos en este orden, **un bicho cada vez y por orden de la lista** (`BICHOS_DINOSAURIOS.md`). El siguiente es el **55**.
 
 Reglas del repo: haz `git pull` antes de empezar, añade una entrada al principio del `CHANGELOG.md` por cada bicho, haz commit y push (formato en `CLAUDE.md`). Escribe al usuario en español.
 
@@ -31,6 +31,16 @@ Mira la imagen y fíjate en: silueta y pose, proporciones, colores exactos, dón
 ## 2. El modelo (en Studio, con código)
 
 Los modelos se construyen con un **módulo constructor** por bicho en `ServerStorage.CreatureBuilders.<NombreSinEspacios>` que usa `ServerStorage.CreatureBuilders.Kit`, y se guardan en `ServerStorage.Models.Bichos["<id>"]`. `Looks.creature` ya usa esa carpeta si el modelo existe (si no, saca un bicho genérico).
+
+### Cada bicho se hace desde cero y fiel a su hoja (OBLIGATORIO)
+
+**No copies el constructor de otro bicho cambiando colores y adornos:** salen todos con la misma silueta (pasó con los 37-54, que parecían el mismo dinosaurio). Antes de escribir código, estudia la hoja vista por vista (Frente, Lado, Espalda, 3/4) y apunta:
+- **La silueta de lado:** a qué altura está la cadera (largo de las patas), cuánto se inclina el cuerpo, si el cuello sube o va hacia delante, dónde queda la cabeza y cómo de larga y curvada es la cola.
+- **La forma de la cabeza:** felina, de cocodrilo, de pájaro... Mira el largo y el ancho del hocico, las orejas, los ojos, los colmillos y la boca.
+- **Las manos y los pies:** zarpas, pinzas, garras, cuántos dedos y de qué color.
+- **El dibujo:** si las rayas son anillos alrededor del cuerpo, manchas sueltas o placas; y qué zonas son blancas o claras.
+
+Luego compara la vista previa **de lado y de 3/4 de cerca** con la hoja y corrige las proporciones hasta que se parezcan. Puedes reutilizar funciones auxiliares (por ejemplo `seg`, `ring`, `fur` o `claw` del `Raptigre`), pero las medidas y las piezas son de cada bicho.
 
 ### Convenciones
 - `Kit.new(id)` devuelve `m, part, count`. El modelo tiene una `Root` invisible en (0,0,0) = **centro de la base, en el suelo**. **El frente del bicho mira a −Z**, +Y arriba. Las patas tocan y = 0.
