@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Bicho 52 · Escorpi Raptor (Mítico)
+
+- **Qué:** Mítico muy detallado y fiel a su hoja de ChatGPT, sin sonidos. Mide 10,8 studs y tiene 502 piezas. Es un raptor acorazado de placas negras brillantes con borde y franjas rojas, barriga a segmentos, cuernos y placas rojas en la cabeza y ojos rojo anaranjado brillantes. En vez de manos tiene pinzas rojas enormes de escorpión: bandas de armadura, dedos con punta negra, dientes y pinchos. La cola segmentada (anillos rojos, placas, pinchos a los lados) sube y se curva por encima del lomo hasta un aguijón enorme verde veneno brillante. **Aura de Mítico** verde a ras de suelo. Efectos: gotas de veneno del aguijón (ritmo 30), burbujas tóxicas (ritmo 20), humo verde (ritmo 30), chispas (ritmo 15), aura verde (ritmo 20) y luz verde. **Animación:** `Sting`: chasquea las pinzas 3 veces, se echa atrás armando la cola y se lanza clavando el aguijón por encima de la cabeza (chorro de veneno, nube verde, polvo y onda), y bombea veneno 2 veces más.
+- **Rig `Generic`:** nuevo `Sting` (picadura de escorpión).
+- **Dónde:** `ServerStorage.CreatureBuilders.EscorpiRaptor` → `Models.Bichos["52"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Sting`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la cola gira 0,95 rad en la picadura y la pata se separa como mucho 0,10 studs de la cadera. Sin errores en la consola.
+- **Notas:** el siguiente es el 53 (Dilo Venenoso, Mítico, 11 studs); su hoja ya está hecha y la del 54 se ha pedido.
+
 ## 2026-10-23 · bbogatell (Claude) · Bicho 51 · Raptor Duna (Mítico)
 
 - **Qué:** el primer Mítico, muy detallado y fiel a su hoja de ChatGPT, sin sonidos. Mide 10,6 studs y tiene 542 piezas. Es un raptor grande y fibroso cubierto de plumas arena dorada una a una, con rayas y puntas marrones. Lleva un pañuelo de beduino a cuadros azules y blancos envuelto en la cabeza y el cuello, con un nudo y dos puntas largas colgando por detrás. También lleva gafas de arena negras con montura de bronce y brillo, brazaletes de bronce con remaches en los brazos y las patas, garras negras con el filo de bronce y garras de hoz. **Aura de Mítico:** tres discos beige brillantes a ras de suelo y destellos que suben. Efectos: remolino de arena (ritmo 40), arena fina (ritmo 30), destellos de bronce (ritmo 15), polvo (ritmo 20), aura beige (ritmo 20) y luz amarilla fuerte. **Animación:** `Whirl`: se agacha, salta dando 2 vueltas enteras en el aire (gira todo el bicho, patas incluidas) dentro de un tornado de arena, aterriza levantando polvo y da un tajo con los dos brazos (zarpazos de bronce, chispas y onda).
