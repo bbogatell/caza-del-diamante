@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-23 · bbogatell (Claude) · Arreglo: el cuerpo ya no se despega de las patas en las animaciones especiales
+
+- **Qué:** en las animaciones que mueven el cuerpo (embestidas, cabezazos, saltos, cargas, embestidas de lado...) las patas traseras y las de los bípedos se quedaban clavadas en su sitio, y el cuerpo se separaba de ellas hasta 2-3 studs. Ahora cada pata va a donde la pose de acción lleva su cadera (desplazamiento y giro del cuerpo). Hacia abajo no se mueven, para no atravesar el suelo. Las patas delanteras con `FrontLeg` siguen igual (van con el cuerpo entero). Arregla todos los bichos a la vez, porque el cambio está en el rig.
+- **Rig `Generic`:** también trae `Whirl` (giro de torbellino de todo el bicho, patas incluidas, en una tormenta de arena; con `spinCF`), que se usará con el 51.
+- **Dónde:** `ReplicatedStorage.CreatureRigs` (`legShift`). Docs: `GUIA_BICHOS.md` (patas).
+- **Probado:** en Play con el Pachirino (embestida), el Uta Raptor (salto), el Sauro Pinchos (embestida de lado) y el Majunga Calvo (cabezazo): de lado o por encima de la pata, la cadera se separa como mucho 0,2-0,4 studs (respiración y temblores); antes eran 2-3 studs. Sin errores en la consola.
+- **Notas:** el siguiente bicho sigue siendo el 51 (Raptor Duna, primer Mítico).
+
 ## 2026-10-23 · seguo970 (Claude) · Pala 10: arregladas las normales al revés
 **Qué:** las mallas de la pala 10 venían con las normales al revés, así que partes de la pala salían huecas o mal iluminadas (el mango y las tiras casi no se veían). Ahora todas las piezas se ven sólidas y con la luz bien. Además, la hoja y las garras negras ya no salen azuladas por el reflejo del cielo.
 **Dónde:** `ReplicatedStorage.Models.Palas.L10`: `DoubleSided = true` en todas las MeshParts, y `Reflectance` 0,02 en `Blade` y `GripTalons` (antes 0,12).
