@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-24 · bbogatell (Claude) · Bicho 84 · Saturnosaurio (Cósmico), hecho desde cero y muy épico
+
+- **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 14,6 studs y tiene 677 piezas. Es un saurópodo robusto de bloques **a franjas amarillas, naranjas y marrones** como Saturno (bandas alrededor del cuerpo, el cuello, las patas y la cola). Tiene la **cabeza redonda como un planeta**, con franjas, un anillito, hocico, sonrisa y ojos brillantes. Lo rodea un **anillo de Saturno gigante** inclinado y semitransparente de 4 franjas crema y marrón, que **gira alrededor del cuerpo** y lo sigue. Tiene **lunas grises con cráteres**, asteroides y estrellas en órbita, sobre una roca espacial con cráteres. Efectos: asteroides en órbita (ritmo 20), polvo del anillo (ritmo 60), estrellas (ritmo 40), destellos (ritmo 40), nebulosa (ritmo 20), luz pulsante, lunas girando (ritmo 20) y **2 luces**. **Animaciones:** `Uncoil`: **el anillo y las lunas giran a toda velocidad** (8 veces más rápido) con polvo del anillo y 2 ondas; y `Stomp`: **pisa fuerte**.
+- **Dónde:** `ServerStorage.CreatureBuilders.Saturnosaurio` → `Models.Bichos["84"]`. Docs: `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el anillo gira alrededor del cuerpo y en el especial acelera hasta 26 studs/s; las lunas orbitan. Sin errores en la consola.
+- **Notas:** el siguiente es el 85 (Mapache-saurio Radiactivo); su hoja ya se ha pedido.
+
 ## 2026-10-24 · bbogatell (Claude) · Bicho 83 · Bronto Nebuloso (Cósmico), hecho desde cero y muy épico
 
 - **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 15,6 studs y tiene 650 piezas. Es un **brontosaurio enorme** con el cuello larguísimo hacia el cielo, la cola larga y las patas como columnas, y el **cuerpo semitransparente** en degradado morado, rosa y azul (bloques con transparencia 0,45). Dentro tiene **nebulosas** (nubes de neón translúcidas), estrellas y **16 planetas diminutos de colores**, uno de cada cuatro con anillos, que **giran dentro del cuerpo**. Tiene ojos brillantes y dedos de luz, y lo rodean **2 anillos de luz en órbita**, asteroides y estrellas, sobre una roca espacial con cráteres. Efectos: nubes de nebulosa (ritmo 60), estrellas en órbita (ritmo 40), polvo cósmico (ritmo 50), destellos (ritmo 40), cometas (ritmo 5), polvo al pisar (ritmo 20), **luz pulsante** y **2 luces**. **Animaciones:** `Uncoil` con `UncoilRear`: **levanta el cuello hacia el cielo y los planetas de su cuerpo giran a toda velocidad brillando**, con destellos y 2 ondas; y `Stomp`: **pisa fuerte** levantando polvo cósmico.
