@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-24 · bbogatell (Claude) · Bicho 74 · Mordisquitos #013 (Cósmico, bebé), hecho desde cero y muy épico
+
+- **Qué:** primer Cósmico, **muy épico**, hecho desde cero a partir de su hoja de ChatGPT (la pasó el usuario); sin sonidos. Mide 12 studs y tiene 741 piezas. Es un **T-Rex bebé chibi** verde menta con escamas de bloques, una **cabeza enorme** con pinchitos, **ojazos azules brillantes** con reflejos, el hocico con la boca abierta y dientecitos, y la barriga crema a rayas. Mordisquea un **hueso** del que cuelga **baba brillante** cian, y tiene bracitos, patitas con dedos, una colita con cresta, **pañal blanco** con cierres y un **collar rojo con una plaquita dorada «#013»** (SurfaceGui). Flota dentro de una **burbuja de laboratorio** transparente con reflejos, rodeada de **3 anillos metálicos inclinados** con remaches y luces cian que **orbitan** cada uno a su velocidad, y de **16 estrellas doradas en órbita**. Está sobre un **pedestal de laboratorio** con tiras de luz cian y morada, paneles, pantallas, abrazaderas doradas, tubos de ensayo con líquido brillante y cables. Efectos: estrellitas en órbita (ritmo 50), burbujas (ritmo 40), chispas del laboratorio (ritmo 30), destellos azul y morado (ritmo 40), baba brillante (ritmo 10), polvo cósmico (ritmo 30) y **2 luces** (cian y morada). **Animaciones:** flota subiendo y bajando (`Float`), mastica el hueso (`Chew`) y `Tumble`: se encoge, sube y **da 2 volteretas dentro de la burbuja riéndose** mientras los anillos giran 4 veces más rápido, con destellos en cada vuelta y una onda al acabar.
+- **Rig `Generic`:** nuevo rol `Ring` (piezas que orbitan sobre su `RingAxis` por `RingPivot` a `RingSpeed`) y nuevo `Tumble`.
+- **Dónde:** `ServerStorage.CreatureBuilders.Mordisquitos` → `Models.Bichos["74"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (rol `Ring`, `RingPivot`, `RingAxis`, `RingSpeed`, `Tumble`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: da las volteretas, los anillos orbitan, sube 1,2 studs flotando y las patas siguen al cuerpo (0,39). Sin errores en la consola.
+- **Notas:** se ha borrado el script temporal `ServerScriptService.VerUltimosBichos`. Las hojas se piden ahora con otra cuenta gratuita de ChatGPT (Bernat Bogatell Pascual). El siguiente es el 75 (Elasmo Leviatán).
+
 ## 2026-10-24 · bbogatell (Claude) · Bicho 73 · Amonites Ciudadela #007 (Mítico, evento), hecho desde cero y muy épico
 
 - **Qué:** Mítico de evento **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 13,5 studs y tiene 870 piezas. Es un **amonites colosal**. La concha es una espiral enorme con el borde de costillas a rayas marrón y crema, y en cada lado una espiral a rayas con costillas radiales. Encima lleva una **ciudadela medieval entera**:
