@@ -2,6 +2,22 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-24 · bbogatell (Claude) · Bicho 73 · Amonites Ciudadela #007 (Mítico, evento), hecho desde cero y muy épico
+
+- **Qué:** Mítico de evento **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 13,5 studs y tiene 870 piezas. Es un **amonites colosal**. La concha es una espiral enorme con el borde de costillas a rayas marrón y crema, y en cada lado una espiral a rayas con costillas radiales. Encima lleva una **ciudadela medieval entera**:
+  - murallas almenadas con ventanas;
+  - cuatro torres en las esquinas, dos en los lados, dos intermedias y una torre del homenaje alta, todas con **tejados cónicos azules**, aguja dorada y **bandera roja**;
+  - casitas con chimeneas;
+  - estandartes rojos con emblema dorado;
+  - una puerta con rastrillo y un **puente levadizo** con cadenas;
+  - decenas de **ventanas iluminadas** amarillas.
+
+  Delante está el cuerpo naranja con manchas, un **ojo amarillo grande** a cada lado y 10 **tentáculos** naranjas con ventosas que bajan hasta la arena y se enroscan hacia arriba (cuerpo y tentáculos agrandados ×1,45). Está sobre un **arrecife** con arena, corales de colores y algas, y tiene un **«#007» dorado flotando** encima (BillboardGui). **Aura de Mítico** dorada. Efectos: humo de las chimeneas (ritmo 30 entre las dos), pájaros (ritmo 5), destellos dorados (ritmo 40), burbujas (ritmo 20), aura (ritmo 20) y dos luces. **Animación:** `Citadel`: se levanta moviendo los tentáculos, las ventanas se encienden, salen anillos dorados de las torres como campanadas (sin sonido) y **baja el puente levadizo**, con una lluvia de destellos y una onda; luego lo vuelve a subir.
+- **Rig `Generic`:** nuevo rol `Bridge` (puente levadizo sobre `BridgePivot`), atributo de pieza `CitadelGlow` y nuevo `Citadel`.
+- **Dónde:** `ServerStorage.CreatureBuilders.AmonitesCiudadela` → `Models.Bichos["73"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (rol `Bridge`, `BridgePivot`, `CitadelGlow`, `Citadel`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el puente baja 1,51 rad y las ventanas cambian de color (0,57). Sin errores en la consola.
+- **Notas:** el siguiente es el 74 (Mordisquitos #013, primer Cósmico).
+
 ## 2026-10-24 · bbogatell (Claude) · Bicho 72 · Meganeura Gigante (Mítico), hecho desde cero y muy épico
 
 - **Qué:** Mítico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 10,4 studs y tiene 685 piezas. Es una **libélula gigantesca** posada en horizontal sobre un tocón de helecho gigante con musgo, lianas y helechos alrededor, en un pantano prehistórico con nenúfares, flores y un anillo verde brillante. Tiene unos **ojos compuestos enormes** azules brillantes, con un brillo interior y una rejilla de facetas. El tórax es verde metálico con rayas amarillas. El **abdomen es larguísimo**, con 11 segmentos verdes, azules y amarillos, anillos amarillos, manchas brillantes y pinzas al final. Tiene seis patas finas con espinas agarradas al tocón y **cuatro alas larguísimas transparentes** con una red de nervios negros (borde delantero grueso, nervios a lo largo y de través), paneles semitransparentes de colores del arcoíris y una mancha oscura cerca de la punta. La libélula se construye y luego se agranda ×1,6 desde el tocón. **Aura de Mítico** verde. Efectos: polvo brillante de las alas (ritmo 50), destellos arcoíris (ritmo 30), viento (ritmo 20), luciérnagas (ritmo 15), aura (ritmo 20) y dos luces. **Animación:** `Buzz`: con las alas zumbando despega, da **2 vueltas a toda velocidad** inclinándose en las curvas y dejando una **estela arcoíris** (`BuzzFx`), aterriza con una onda y abre las alas. Las alas aletean rápido siempre.
