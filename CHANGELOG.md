@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-25 · bbogatell (Claude) · Bicho 92 · Ptero Koi (Cósmico), hecho desde cero y muy épico
+
+- **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 14 studs y tiene 653 piezas. Es un pterosaurio grande con **escamas de pez koi** (blancas con **manchas naranjas y negras**), **bigotes de koi**, un pico largo, ojos dorados y una cresta de aleta transparente. Las **alas son aletas semitransparentes** abiertas a los lados (15 radios por ala, con paneles translúcidos y manchas de koi), lleva las patitas recogidas y tiene una **cola de velo larguísima** de 14 cintas transparentes que ondulan. Vuela sobre un **estanque japonés** con nenúfares y lotos, un **puentecito rojo**, farolillos de piedra encendidos y un cerezo, con pétalos, burbujas y estrellas en órbita. Efectos: pétalos (ritmo 60), burbujas (ritmo 40), destellos dorados (ritmo 40), agua flotante (ritmo 30), estrellas (ritmo 30), farolillos (ritmo 5), aura rosa y **2 luces**. **Animaciones:** flota (`Float`), bate las aletas (`WingFlap`) y `Buzz`: **nada en el aire en círculos dejando una estela de agua y pétalos** (`BuzzFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.PteroKoi` → `Models.Bichos["92"]`. Docs: `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: nada en círculos de unos 8 studs y las aletas baten 3,3 studs. Sin errores en la consola.
+- **Notas:** el siguiente es el 93 (Archelon Apilado); su hoja ya se ha pedido.
+
 ## 2026-10-25 · bbogatell (Claude) · Bicho 91 · Manta Ptero Titán (Cósmico), hecho desde cero y muy épico
 
 - **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 13,8 studs y tiene 704 piezas. Es un **pterosaurio enorme negro** que planea sobre una roca flotante con cristales azules. Tiene las **alas anchas y triangulares de una mantarraya gigante** (unos 21 studs de envergadura, una rejilla de 20×4 paneles por ala, con el borde de ataque curvo y la punta brillante) cubiertas de **circuitos de neón azul** con nodos luminosos. La barriga es blanca y el cuerpo tiene placas. La cabeza es larga, con un pico largo y una cresta con circuitos, y los ojos azules. Lleva las patitas recogidas y una **cola larguísima y fina** que ondea. Tiene estrellas en órbita. Efectos: estela de luz azul (ritmo 60), estrellas (ritmo 50), chispas (ritmo 40), destellos (ritmo 40), polvo cósmico (ritmo 30), corriente (ritmo 30), pulsos de los circuitos (ritmo 1) y **2 luces**. **Animaciones:** flota (`Float`), aletea despacio (`WingFlap`), `Buzz`: **vuela en círculos dejando una estela de luz** (`BuzzFx`); y `GlowMove = "flare"`: **los circuitos laten** (`GlowColor`).
