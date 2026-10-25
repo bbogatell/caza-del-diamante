@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-25 · bbogatell (Claude) · Bicho 89 · Yuty Nevado (Cósmico), hecho desde cero y muy épico
+
+- **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 15 studs y tiene 906 piezas. Es un **tiranosaurio enorme cubierto de plumas largas como un abrigo de piel**: cientos de plumas blanco nieve en capas, con **puntas azul hielo**, colgando por el cuerpo, el cuello, la cola, las patas y los brazos. Tiene una **cresta de neón azul claro** por el hocico y la cabeza, **ojos dorados**, la **boca abierta rugiendo** con dientes, encía y lengua, y **garras de hielo** brillantes en manos y pies. Está sobre un **glaciar** con bloques de hielo, picos de hielo con punta brillante y montones de nieve, con un aura azul y estrellas heladas en órbita. Efectos: ventisca (ritmo 80), copos (ritmo 60), vaho por la boca (ritmo 30), escarcha (ritmo 30), estrellas heladas (ritmo 20), destellos (ritmo 40), polvo de nieve (ritmo 30), aura (ritmo 20) y **2 luces**. **Animaciones:** `Roar`: **ruge levantando una ventisca helada** (`RoarFx` de nieve y copos); y `Shiver`: **sacude las plumas soltando copos** (`Breath`).
+- **Dónde:** `ServerStorage.CreatureBuilders.YutyNevado` → `Models.Bichos["89"]`. Docs: `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: se encabrita 0,42 rad con la mandíbula muy abierta, se sacude 0,64 studs de lado y la cadera se separa como mucho 0,7. Sin errores en la consola.
+- **Notas:** el siguiente es el 90 (Pachy Fracturado); su hoja ya se ha pedido.
+
 ## 2026-10-25 · bbogatell (Claude) · Bicho 88 · Megaterio (Cósmico), hecho desde cero y muy épico
 
 - **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 15,2 studs y tiene 668 piezas. Es un **perezoso gigante de pie**, enorme y **peludo**, con cientos de mechones largos marrón claro colgando por todo el cuerpo. Tiene la cara crema con **manchas oscuras en los ojos**, la **cara de sueño** (ojos medio cerrados y sonrisa) y la cabeza agrandada ×1,3. **Abraza un árbol entero** con sus brazos y sus **garras negras gigantes**. El árbol tiene tronco con corteza, raíces, ramas, **lianas** con hojas y una copa frondosa, y está en un claro de selva con helechos y flores. Un **«Zzz»** flota encima (BillboardGui) y hay estrellas en órbita. Efectos: «Zzz» (ritmo 10), hojas que caen (ritmo 50), estrellas en órbita (ritmo 30), luciérnagas (ritmo 30), destellos (ritmo 30), polvo (ritmo 20) y **2 luces**. **Animaciones:** `TreeShake`: **sacude el árbol** con lluvia de hojas; y `Yawn`: **bosteza enorme**.
