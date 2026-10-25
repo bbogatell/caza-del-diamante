@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-25 · bbogatell (Claude) · Bicho 87 · Helicoprion Sierra (Cósmico), hecho desde cero y muy épico
+
+- **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 13 studs y tiene 651 piezas. Es un **tiburón prehistórico grande** que nada en el aire, inclinado hacia arriba, sobre un arrecife de corales de colores. Es gris azulado de escamas de bloques, con la barriga blanca, **branquias y raya lateral de neón cian**, una aleta dorsal alta, aletas pectorales que reman con borde cian y la cola en media luna. Tiene ojos cian y dientes arriba, y la mandíbula de abajo es una **espiral de 44 dientes blancos con el filo de neón cian** sobre un disco que **gira como una sierra circular** pegada a la cabeza. Lo rodean **2 remolinos de agua y estrellas en órbita**. Efectos: chispas de la sierra (ritmo 80), burbujas (ritmo 40), estrellas (ritmo 30), corriente (ritmo 30), destellos (ritmo 30), gotas (ritmo 20), ondas y **2 luces**. **Animaciones:** flota (`Float`), `Uncoil`: **la sierra de dientes gira a toda velocidad** lanzando chispas; y `Chomp`: **embiste y muerde**.
+- **Dónde:** `ServerStorage.CreatureBuilders.HelicoprionSierra` → `Models.Bichos["87"]`. Docs: `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la sierra gira pegada a la cabeza y acelera en el especial, y embiste 1,65 studs. Sin errores en la consola.
+- **Notas:** el siguiente es el 88 (Megaterio); su hoja ya se ha pedido.
+
 ## 2026-10-25 · bbogatell (Claude) · Bicho 86 · Garra del Terror (Cósmico), hecho desde cero y muy épico
 
 - **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 15 studs y tiene 721 piezas. Es un **therizinosaurio gigante** erguido, **erizado de plumas negras con puntas moradas** por todo el cuerpo, el cuello, los brazos y la cola. Tiene el cuello largo con una cabeza pequeña de pico, ojos morados brillantes y una cresta de plumas, y los **brazos abiertos en pose amenazante**: cada mano tiene **tres garras larguísimas y curvas de neón morado**, como guadañas, con un filo claro. En las patas lleva uñas moradas. Está sobre **ruinas oscuras** con grietas moradas brillantes, entre **árboles muertos** y pilares, con un aura morada y estrellas en órbita. Efectos: estelas moradas de las garras (ritmo 50), plumas negras (ritmo 40), sombras (ritmo 30), destellos (ritmo 30), chispas (ritmo 30), estrellas en órbita (ritmo 20), aura (ritmo 20) y **2 luces**. **Animaciones:** `ArmStyle = "swipe"`: **cruza las garras y lanza un doble tajo** con estelas moradas (`SwipeFx`); y `Roar`: se encabrita y **ruge** con anillos morados.
