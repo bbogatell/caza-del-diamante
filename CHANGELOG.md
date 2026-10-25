@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-25 · bbogatell (Claude) · Bicho 93 · Archelon Apilado (Cósmico), hecho desde cero y muy épico
+
+- **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 15,4 studs y tiene 691 piezas. Son **tres tortugas marinas prehistóricas gigantes apiladas**, de la más grande abajo a la más pequeña arriba. Cada una tiene un **caparazón en cúpula** (verde, azul y turquesa) cubierto de **escudos en relieve con bordes dorados**, un reborde y un remate dorados, la piel gris verdoso, **aletas grandes** con manchas, el pico curvo y la **cara graciosa** (ojos grandes con brillo, cejas, sonrisa y lengua). Están sobre una **playa** con arena, olas, conchas y estrellas de mar, con burbujas y estrellas en órbita. Efectos: estrellas (ritmo 50), burbujas (ritmo 40), destellos (ritmo 40), gotas (ritmo 30), polvo (ritmo 20), ondas (ritmo 1) y **2 luces**. **Animaciones:** `Wobble`: **la torre se tambalea cada vez más y casi se cae**, con las aletas agitándose, destellos y ondas, y se recupera; y `HeadSnap`: **giran la cabeza**.
+- **Rig `Generic`:** nuevo `Wobble` (tambaleo de una torre, emisores `WobbleFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.ArchelonApilado` → `Models.Bichos["93"]`; `ReplicatedStorage.CreatureRigs`. Docs: `GUIA_BICHOS.md` (atributo `Wobble`), `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la tortuga de arriba se tambalea 1,65 studs a los lados. Sin errores en la consola.
+- **Notas:** ChatGPT sacó dos opciones para esta hoja; se usó la 1. El siguiente es el 94 (Diablillo Compsognato); su hoja ya se ha pedido.
+
 ## 2026-10-25 · bbogatell (Claude) · Bicho 92 · Ptero Koi (Cósmico), hecho desde cero y muy épico
 
 - **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 14 studs y tiene 653 piezas. Es un pterosaurio grande con **escamas de pez koi** (blancas con **manchas naranjas y negras**), **bigotes de koi**, un pico largo, ojos dorados y una cresta de aleta transparente. Las **alas son aletas semitransparentes** abiertas a los lados (15 radios por ala, con paneles translúcidos y manchas de koi), lleva las patitas recogidas y tiene una **cola de velo larguísima** de 14 cintas transparentes que ondulan. Vuela sobre un **estanque japonés** con nenúfares y lotos, un **puentecito rojo**, farolillos de piedra encendidos y un cerezo, con pétalos, burbujas y estrellas en órbita. Efectos: pétalos (ritmo 60), burbujas (ritmo 40), destellos dorados (ritmo 40), agua flotante (ritmo 30), estrellas (ritmo 30), farolillos (ritmo 5), aura rosa y **2 luces**. **Animaciones:** flota (`Float`), bate las aletas (`WingFlap`) y `Buzz`: **nada en el aire en círculos dejando una estela de agua y pétalos** (`BuzzFx`).
