@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-25 · bbogatell (Claude) · Bicho 88 · Megaterio (Cósmico), hecho desde cero y muy épico
+
+- **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 15,2 studs y tiene 668 piezas. Es un **perezoso gigante de pie**, enorme y **peludo**, con cientos de mechones largos marrón claro colgando por todo el cuerpo. Tiene la cara crema con **manchas oscuras en los ojos**, la **cara de sueño** (ojos medio cerrados y sonrisa) y la cabeza agrandada ×1,3. **Abraza un árbol entero** con sus brazos y sus **garras negras gigantes**. El árbol tiene tronco con corteza, raíces, ramas, **lianas** con hojas y una copa frondosa, y está en un claro de selva con helechos y flores. Un **«Zzz»** flota encima (BillboardGui) y hay estrellas en órbita. Efectos: «Zzz» (ritmo 10), hojas que caen (ritmo 50), estrellas en órbita (ritmo 30), luciérnagas (ritmo 30), destellos (ritmo 30), polvo (ritmo 20) y **2 luces**. **Animaciones:** `TreeShake`: **sacude el árbol** con lluvia de hojas; y `Yawn`: **bosteza enorme**.
+- **Dónde:** `ServerStorage.CreatureBuilders.Megaterio` → `Models.Bichos["88"]`. Docs: `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: el árbol se sacude 0,083 rad y la cabeza se mueve 1 stud en el bostezo. Sin errores en la consola.
+- **Notas:** el siguiente es el 89 (Yuty Nevado); su hoja ya se ha pedido.
+
 ## 2026-10-25 · bbogatell (Claude) · Bicho 87 · Helicoprion Sierra (Cósmico), hecho desde cero y muy épico
 
 - **Qué:** Cósmico **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 13 studs y tiene 651 piezas. Es un **tiburón prehistórico grande** que nada en el aire, inclinado hacia arriba, sobre un arrecife de corales de colores. Es gris azulado de escamas de bloques, con la barriga blanca, **branquias y raya lateral de neón cian**, una aleta dorsal alta, aletas pectorales que reman con borde cian y la cola en media luna. Tiene ojos cian y dientes arriba, y la mandíbula de abajo es una **espiral de 44 dientes blancos con el filo de neón cian** sobre un disco que **gira como una sierra circular** pegada a la cabeza. Lo rodean **2 remolinos de agua y estrellas en órbita**. Efectos: chispas de la sierra (ritmo 80), burbujas (ritmo 40), estrellas (ritmo 30), corriente (ritmo 30), destellos (ritmo 30), gotas (ritmo 20), ondas y **2 luces**. **Animaciones:** flota (`Float`), `Uncoil`: **la sierra de dientes gira a toda velocidad** lanzando chispas; y `Chomp`: **embiste y muerde**.
