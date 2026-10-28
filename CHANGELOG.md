@@ -2,6 +2,52 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-28 · seguo970 (Claude) · Palas 17 (Costilla de Gigante) y 18 (Sepulturero) montadas y animadas
+**Qué:** las dos palas son los modelos importados de sus prompts. Sin texturas subidas: solo materiales de Roblox y colores del prompt.
+
+**Pala 17, Costilla de Gigante:**
+- **Aspecto:** hueso marfil en Limestone (hoja de omóplato, mango de vértebras, calaveras y fragmentos), vendas de Slate oscuro, garras y dientes claros, y ojos de Neon verde con luz que pulsa.
+- **Pomo:** la mandíbula de la calavera se abre y cierra (0–12°) y se abre del todo al cavar.
+- **Calaverita flotante:** da una vuelta al mango cada 8 s, sube y baja, castañetea y deja una estela de fuego verde.
+- **Fragmentos:** 25 trozos de hueso flotan, giran sobre sí mismos y se desplazan un poco alrededor del mango.
+- **Efectos:** fuego verde en los bordes de la hoja (partículas y Beams con textura de llama), en el collar y en el pomo; niebla; polvo de hueso con chispas verdes; y polvo al sacarla.
+- **Al cavar:** polvo de hueso con una llamarada verde.
+
+**Pala 18, Sepulturero:**
+- **Aspecto:** hoja de hierro negro, mango de madera, cadenas de acero, cruz y calavera de piedra, y ojos Neon que cambian de color.
+- **Farol:** cuelga de la argolla del collar y siempre hacia abajo en el mundo, como un péndulo. Se balancea (±6°, 1,5 Hz), reacciona al moverse sin pasar de 35° y tiene la llama y la luz verde parpadeando, con chispas.
+- **Efectos:** fuego verde en la hoja, el pomo y las cadenas de abajo; niebla en el mango; almas verdes (humo) y motas flotando; y 5 piedrecitas oscuras girando alrededor del mango.
+- **Al cavar:** llamarada verde y almas que suben.
+
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L17`: ×1,3. La mano izquierda va sobre la calavera del pomo y la derecha queda bajo las garras del collar. La malla `Handle` del modelo se llama ahora `HandleMesh`.
+- `ReplicatedStorage.Models.Palas.L18`: ×1,15. La mano izquierda va sobre la cruz del pomo. El farol lleva el Motor6D `Farol` con la etiqueta `ShovelHang`.
+- `StarterPlayerScripts.ShovelFx`:
+  - `ShovelOrbit` acepta `Bob`/`BobPeriod`/`BobPhase`.
+  - Nuevo bloque `ShovelHang` (atributos HangDir, Sway, SwayHz, MaxTilt).
+  - Nuevas funciones `boneDig` (L17) y `soulDig` (L18).
+- Los modelos originales se han movido a `ServerStorage.Pala17_CostillaGigante` y `ServerStorage.Pala18_Sepulturero`.
+
+**Probado:** las dos en Play con `Debug "level" 17/18`:
+- Se agarran por el mango.
+- Las mandíbulas abren hacia fuera; la de la calaverita salía al revés y se ha corregido.
+- El farol cuelga recto (máximo 41° al caminar y cavar).
+- Los efectos de cavar salen.
+- Sin errores.
+
+En la 17 se han bajado las luces verdes, la niebla y los Beams, porque tapaban el hueso.
+
+No se ha mirado en la tienda, en móvil ni con otro jugador.
+
+**Notas:**
+- No se ha hecho lo siguiente:
+  - El escaparate con fondo carmesí en Workspace.
+  - La variable `VFX_QUALITY`.
+  - Los fragmentos que salen disparados al cavar (solo giran más rápido).
+  - El sonido.
+  - La KeyframeSequence propia: usan la animación de cavar del juego.
+- La pala 17 mide ~8,4 studs para que quepan las dos manos debajo de las garras.
+
 ## 2026-10-28 · seguo970 (Claude) · Pala 16: Pala de Diente de Megalodón montada y animada
 **Qué:** la pala 16 es el modelo `Pala16_MegalodonTooth`, que ya venía importado.
 - **El modelo:** la hoja es un diente de megalodón de color marfil con una raíz de piedra. El mango es una espina azul con vértebras de hueso y aletas de tiburón, y acaba en una cola de tiburón. Un pez payaso nada alrededor de la raíz de la hoja.
