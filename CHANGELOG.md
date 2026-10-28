@@ -25,9 +25,14 @@
 - La pala se equipa sin errores.
 - El pez se mueve y no se mete en la caja de la hoja (pasa como mínimo a 0,41).
 - El efecto de cavar sale.
+- Luego, mirándola en pantalla: el agarre está bien (manos en la espina) y el pez nada derecho, de perfil.
+- Los hilos de agua salían rectos, así que se ha cambiado el signo de `CurveSize1`. Ahora rodean el mango.
 
-**No se ha visto en pantalla:** Studio no dibujaba la vista 3D. Falta comprobar el agarre, que el pez no nade de lado y cómo quedan los hilos de agua.
-**Notas:** si el pez nada boca abajo o de lado, se arregla con el atributo `Roll` de `PezOrbita` (180 o ±90). No se ha añadido sonido de chapoteo ni temblor de cámara.
+No se ha mirado en la tienda, en móvil ni en la mano de otro jugador.
+**Notas:**
+- Si el pez se tuerce, se endereza con el atributo `Roll` de `PezOrbita`.
+- Beams: con las dos `Axis` en la tangente del giro, `CurveSize0` es positivo y `CurveSize1` es negativo.
+- El pez nada a unos 1,6 del eje, como pide el prompt; si se ve muy separado, baja `RadiusX`/`RadiusZ`. No se ha añadido sonido de chapoteo ni temblor de cámara.
 
 ## 2026-10-28 · seguo970 (Claude) · Pala 15: Pala de Coral Abisal montada y animada
 **Qué:** la pala 15 es el modelo `Pala15_CoralAbisal`, que ya venía importado en Workspace. Tiene una hoja de ramas de coral rojo, rosa, magenta y salmón, un mango de hueso con garras, una perla azul brillante abajo, agua en espiral alrededor del mango, 30 burbujas y 3 gotas.
