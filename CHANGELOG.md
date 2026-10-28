@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 22: sin lengua, con un diamante rojo flotando en la boca
+**Qué:** se han quitado la lengua y la bola roja de la garganta de la pala 22. En su lugar, un diamante rojo flota entre las mandíbulas: gira despacio, sube y baja, brilla por dentro y suelta destellos rojos. Los dos agujeros de la nariz eran de la misma pieza y también se han ido.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L22`:
+  - Ya no tiene `Mouth_Interior`. Las dos versiones (la original y la de la lengua fina) están en `ServerStorage` como `Mouth_Interior_L22_antigua` y `Mouth_Interior_L22_fina`.
+  - Piezas nuevas: `DiamanteBoca`, que es el diamante del juego (`ReplicatedStorage.Assets.Diamond`) sin textura, en Glass rojo #E00012 y de 0,55 studs; y `DiamanteBocaBrillo`, su núcleo Neon.
+  - El Motor6D `DiamanteFlota` lleva la etiqueta `ShovelOrbit`, con SpinSpeed 70 y Bob 0,05.
+**Probado:** en Play con `Debug "level" 22`. Visto de cerca: el diamante queda en la boca abierta, entre los dientes, sin tocar las mandíbulas. Al cavar sigue saliendo el efecto y no hay errores.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 22: lengua más fina y garganta más pequeña
 **Qué:** en la boca del T-Rex de la pala 22, la lengua es ahora fina y la bola roja de la garganta que había antes de la lengua es la mitad de grande, pegada al fondo de la boca.
 - **Lengua:** 0,12 de grosor (antes 0,27) y 0,15 de ancho (antes 0,26), sin mover la raíz ni la punta.
