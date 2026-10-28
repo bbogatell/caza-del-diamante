@@ -2,6 +2,33 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 19: Pala de Cuarzo montada y animada
+**Qué:** la pala 19 es el modelo `Pala19_Cuarzo.glb`: hoja de cristales rosas y cian, mango de roca morada casi negra con trenzado y setitas que brillan, y dos cristales que orbitan con su anillo.
+- **Materiales:**
+  - Roca: Basalt #2E1F45; el trenzado en un tono más claro.
+  - Cristales: Glass rosa y cian, con núcleos Neon que brillan desde dentro.
+  - Setas: sombrero Neon cian y tallo SmoothPlastic.
+  - Anillos: Neon lila.
+- **Animación:**
+  - Los dos cristales orbitan el mango a 0,6 rad/s, giran sobre su eje largo (1,5 rad/s) y suben y bajan. Cada anillo acompaña a su cristal.
+  - Los núcleos y las luces (rosa en la cabeza, cian en el collar y en el pomo) pulsan cada 2,4 s.
+  - Las setas parpadean un poco.
+- **Efectos:**
+  - Esporas cian que suben desde el mango.
+  - Destellos rosas y cian en la cabeza y esquirlas flotando alrededor de la hoja.
+  - Chispas eléctricas cian a lo largo del mango que salen a ratos.
+  - 25 esquirlas al sacarla.
+- **Al cavar:** esquirlas rosas y cian, polvo morado y un destello de la luz de la cabeza.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L19`: escala ×1,3 (6,8 studs). La mano izquierda va justo encima del pomo y la derecha queda bajo el collar. Los Attachments del prompt (Tip, HeadCenter, Pommel, OrbitCenter) están en el `Handle`.
+- `StarterPlayerScripts.ShovelFx`:
+  - Nuevo bloque `ShovelZap`: Beams que se encienden 0,25 s cada 1–3 s con una curva al azar.
+  - Nueva función `crystalDig` en `DIG_FX.L19`.
+  - `Crystals_Pink` añadida a la búsqueda de la hoja.
+- El modelo importado se ha movido a `ServerStorage.Pala19_Cuarzo`.
+**Probado:** en Play con `Debug "level" 19`: se equipa, las órbitas se mueven, las chispas y las partículas salen, y el efecto de cavar funciona. Sin errores. No se ha mirado en la tienda, en móvil ni con otro jugador.
+**Notas:** no se han hecho la animación propia de cavar (usa la del juego), el balanceo en la mano, el sonido ni el ajuste por calidad gráfica.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 22: el diamante de la boca apunta hacia fuera
 **Qué:** el diamante rojo de la boca de la pala 22 está en el mismo sitio, pero girado: la punta sale desde el fondo de la mandíbula hacia fuera de la boca, en vez de apuntar hacia abajo.
 **Dónde:** `ReplicatedStorage.Models.Palas.L22.DiamanteBoca` y `DiamanteBocaBrillo` (orientación), y el `C0` de su Motor6D `DiamanteFlota`. Sigue girando sobre su eje (ahora el eje de la punta).
