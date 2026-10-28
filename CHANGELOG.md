@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 22: el diamante de la boca apunta hacia fuera
+**Qué:** el diamante rojo de la boca de la pala 22 está en el mismo sitio, pero girado: la punta sale desde el fondo de la mandíbula hacia fuera de la boca, en vez de apuntar hacia abajo.
+**Dónde:** `ReplicatedStorage.Models.Palas.L22.DiamanteBoca` y `DiamanteBocaBrillo` (orientación), y el `C0` de su Motor6D `DiamanteFlota`. Sigue girando sobre su eje (ahora el eje de la punta).
+**Probado:** en Play. La punta queda alineada con la línea bisagra → diamante (0,99). Visto de lado: apunta a la abertura de la boca.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 22: sin lengua, con un diamante rojo flotando en la boca
 **Qué:** se han quitado la lengua y la bola roja de la garganta de la pala 22. En su lugar, un diamante rojo flota entre las mandíbulas: gira despacio, sube y baja, brilla por dentro y suelta destellos rojos. Los dos agujeros de la nariz eran de la misma pieza y también se han ido.
 **Dónde:**
