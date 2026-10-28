@@ -2,6 +2,32 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-28 · seguo970 (Claude) · Pala 15: Pala de Coral Abisal montada y animada
+**Qué:** la pala 15 es el modelo `Pala15_CoralAbisal`, que ya venía importado en Workspace. Tiene una hoja de ramas de coral rojo, rosa, magenta y salmón, un mango de hueso con garras, una perla azul brillante abajo, agua en espiral alrededor del mango, 30 burbujas y 3 gotas.
+- **Colores y materiales:** los del prompt. Coral en SmoothPlastic; hueso en Marble; perla y agua en Glass. Dentro de la perla hay una esfera Neon azul.
+- **Animación:**
+  - El agua gira alrededor del mango a 60°/s.
+  - Las burbujas y las gotas suben y bajan un poco.
+  - La luz azul de la perla pulsa (1,2–1,8 cada 2 s) y la luz rosa de la hoja respira (0,6–1,0).
+  - Suelta burbujas en la perla, en la hoja y a lo largo del mango, gotas que caen desde la hoja y destellos en la perla.
+  - Al sacarla hace una salpicadura de 15 burbujas.
+- **Al cavar:** sale una ráfaga de burbujas y gotas de agua, y la luz rosa de la hoja da un destello. Sin temblor de cámara.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L15`: escala ×1,35. La mano izquierda va justo encima de las garras. Los anclajes del JSON son Attachments en el `Handle`.
+- `StarterPlayerScripts.ShovelFx`: nueva función `coralDig` en `DIG_FX.L15`, `Blade_Core` añadida a la búsqueda de la hoja, y atributo `HoldUntil` para que `ShovelPulse` no pise el destello.
+- El modelo original se ha movido a `ServerStorage.Pala15_CoralAbisal`.
+**Probado:** en Play con `Debug "level" 15`:
+- Las dos manos quedan en el mango.
+- El agua gira y las burbujas se ven.
+- El golpe saca la ráfaga.
+- Sin errores en Output.
+
+No se ha mirado en la tienda, en móvil ni en la mano de otro jugador.
+**Notas:**
+- Sin texturas subidas, Highlight ni KeyframeSequence propia: usa la animación de cavar del juego.
+- Las burbujas usan la textura `sparkles_main` de Roblox.
+- Si va lenta en móvil, se puede poner `RenderFidelity = Automatic` en el coral.
+
 ## 2026-10-28 · seguo970 (Claude) · Pala 14: Pala de Magma importada y animada
 **Qué:** la pala 14 es ahora el modelo `PalaDeMagma.glb`: hoja de magma rojo-naranja-amarillo en un marco de bloques de roca negra con tornillos, lava goteando, mango de adoquines volcánicos con grietas de lava y 3 anillos de oro fundido, pomo de roca con banda de oro, y escombros y gotitas flotando.
 - **Colores:** los colores por vértice del archivo, que en Roblox se ven, con `Color` blanco. El oro es Foil.
