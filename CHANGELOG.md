@@ -2,6 +2,48 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-28 · seguo970 (Claude) · Pala 30 nueva: Pala Divina del Diamante (modelo nuevo, animada)
+**Qué:** la pala 30 es ahora el modelo nuevo `PalaDivinaDelDiamante.glb`. Tiene hoja, mango y pomo de diamante, un diamante pequeño brillando dentro de la hoja, alas de cristal, marco y doble halo de oro, gema estrella, cintas arcoíris, 9 planetas, colgantes de estrellas y un T-Rex galáctico diminuto.
+- **Materiales:**
+  - diamante: Glass sobre el atlas del archivo;
+  - diamante interior y gema: Neon;
+  - oro y anillos: Foil;
+  - planetas: SmoothPlastic con brillo;
+  - cintas y T-Rex: su textura del importador.
+- **Animación:**
+  - las alas ondean como una bandera: la onda va de la raíz a la punta, en espejo;
+  - el halo de fuera gira 20°/s y el de dentro −30°/s;
+  - los anillos del mango y las cintas giran alrededor de la pala;
+  - los planetas giran sobre sí mismos;
+  - los 6 colgantes hacen de péndulo;
+  - el diamante interior late cada 2,5 s;
+  - el T-Rex galáctico camina alrededor del mango (una vuelta cada 6 s), moviendo patas, bracitos, cola, cabeza y mandíbula.
+- **Efectos:**
+  - halo arcoíris con rayos dorados detrás de la hoja;
+  - destellos en la hoja, el halo y las alas;
+  - polvo de estrellas cayendo de las alas;
+  - una estrella fugaz de vez en cuando;
+  - rastro galáctico detrás del T-Rex;
+  - luces en la guarda y en el diamante interior;
+  - estallido arcoíris al sacarla.
+- El efecto al cavar sigue siendo el de las palas divinas.
+
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L30` se sustituye por el modelo nuevo. Los 44 huesos van bajo `RootPart`, soldada a un `Handle` invisible.
+- Huesos con la etiqueta `ShovelBone` (alas, colgantes, T-Rex) y piezas rígidas con los Motor6D del importador etiquetados `ShovelOrbit` (halos, anillos, cintas, planetas).
+- `ShovelFx`: los `ShovelBone` admiten `Pivot` (girar alrededor de un punto: así el T-Rex rodea el mango) y se busca `Blade_Diamond` para el efecto al cavar.
+- **Pala 30 anterior guardada:** `ServerStorage.CopiasPalas.L30_antigua`.
+- Original importado en `ServerStorage.PalaDivinaDelDiamante`.
+
+**Probado:** en Play con `Debug "level" 30`:
+- la mano izquierda va encima del pomo y la derecha bajo la guarda;
+- las alas se mueven hasta unos 15° y los muslos del T-Rex unos 25°;
+- el T-Rex recorre 2 studs en 1,6 s alrededor del mango, y el halo gira;
+- no hay errores en la consola.
+
+Capturas en la mano y de cerca del T-Rex.
+**Notas:** la textura del atlas se ve bien en Play. No se ha probado en móvil (alas con 20 huesos y T-Rex con 17).
+
 ## 2026-10-25 · bbogatell (Claude) · Bicho 111 · Tralalerodonte (Secreto), hecho desde cero y muy épico
 
 - **Qué:** Secreto **muy épico y gracioso**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 16,6 studs y tiene 540 piezas. Es un **tiburón-dinosaurio gigante** azul tiburón con la barriga blanca (pectorales y abdominales), branquias, aletas, una **aleta dorsal** grande y cola de tiburón con aleta en media luna. Está **de pie sobre tres patas musculosas** (dos delante y una detrás) con **zapatillas deportivas azul eléctrico**: suela blanca, puntera, lengüeta, cordones y el logo en los lados. Lleva **gafas de sol** negras con brillo, una sonrisa llena de dientes afilados y una **cadena de oro** gruesa con un colgante de diente de tiburón. Está en una **playa de noche** con arena, olas con espuma, conchas, estrellas de mar, una tabla de surf con un rayo y dos palmeras con cocos. Lleva lo de todos los Secretos: `Highlight` negro y morado, humo negro a ras de suelo (ritmo 60) y niebla morada (ritmo 40). Sus efectos: notas musicales (ritmo 40), agua (ritmo 50), destellos dorados (ritmo 40), burbujas (ritmo 40), confeti (ritmo 30), ondas de baile (ritmo 2), gotas y **2 luces**. **Animaciones:** las tres patas son `FrontLeg` y giran con el cuerpo; `Dance`: **baila moviendo las tres patas con sus zapatillas** (`DanceFx`); y `Tumble`: **salta haciendo un mortal y cae de pie** (`TumbleFx`).
