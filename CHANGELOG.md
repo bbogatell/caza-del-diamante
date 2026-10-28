@@ -2,6 +2,32 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-28 · seguo970 (Claude) · Pala 14: Pala de Magma importada y animada
+**Qué:** la pala 14 es ahora el modelo `PalaDeMagma.glb`: hoja de magma rojo-naranja-amarillo en un marco de bloques de roca negra con tornillos, lava goteando, mango de adoquines volcánicos con grietas de lava y 3 anillos de oro fundido, pomo de roca con banda de oro, y escombros y gotitas flotando.
+- **Colores:** los colores por vértice del archivo, que en Roblox se ven, con `Color` blanco. El oro es Foil.
+- **Animación:**
+  - el magma de la hoja y la lava del mango, del pomo y de las coladas laten entre su color y un tono más cálido, desfasados;
+  - luz naranja en la hoja que respira (1,6–2,4 cada 1,5 s) y otra más suave en el pomo;
+  - los escombros y las gotitas flotantes orbitan alrededor del mango, cada grupo en un sentido;
+  - brasas subiendo, calor tenue;
+  - gotas de lava que caen de las coladas y de los anillos de oro (siempre hacia abajo).
+- **Al sacarla:** estallido de brasas.
+- **Al cavar:** brasas y salpicadura de gotas de lava (sin temblor de cámara).
+
+**Dónde:**
+- Nuevo `ReplicatedStorage.Models.Palas.L14`, a escala 1,35 (8,4 studs) para que las manos quepan entre el pomo y el collar.
+- `FX_Debris` y `FX_LavaDroplets` van con Motor6D `ShovelOrbit`; el magma y la lava con `ShovelColor`.
+- `ShovelFx`: `DIG_FX.L14 = magmaDig`, y se busca `Blade_Magma` para el efecto.
+- Original en `ServerStorage.PalaDeMagma`.
+
+**Probado:** en Play con `Debug "level" 14`:
+- la mano izquierda va encima del pomo y la derecha al borde del collar;
+- la luz late, el color de la hoja cambia y los escombros giran;
+- no hay errores en la consola.
+
+Captura en la mano.
+**Notas:** antes se había mandado otra versión de esta pala (`PalaMagma`, OBJ de 10 piezas); el importador la juntó en una sola pieza y no se usa. Para eso queda `tools/obj_a_glb.py`, que pasa un OBJ de varias piezas a GLB con Blender sin juntarlas.
+
 ## 2026-10-28 · seguo970 (Claude) · Pala 30: planetas de la cabeza colocados en espejo
 **Qué:** los 4 planetas grandes de la cabeza de la pala 30 estaban a distancias muy distintas de la hoja (de 0,7 a 1,7 studs). Ahora van en espejo, dos a cada lado: los dos rosas arriba a 1,33 studs del centro de la hoja, y el azul y el morado abajo a 1,59. Siguen girando sobre sí mismos con sus anillos.
 **Dónde:** `ReplicatedStorage.Models.Palas.L30`: `Planet_*_Head` y `PlanetRing_*_Head` (posición y `C0` de su Motor6D). **Copia de antes:** `ServerStorage.CopiasPalas.L30_v1`.
