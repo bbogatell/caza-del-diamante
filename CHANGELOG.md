@@ -2,6 +2,41 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-28 · seguo970 (Claude) · Pala 22: Pala del Guardián Rex montada y animada
+**Qué:** la pala 22 es el modelo `Pala22_GuardianRex.glb`, la versión de las 23:43, no la del zip. Es una cabeza de T-Rex de oro con la boca abierta y los ojos rojos, un mango de oro con rubíes, una melena de plumas rojas y un pomo de garra con rubí. A su alrededor orbitan 5 rubíes con anillo y 7 monedas.
+- **Materiales:**
+  - Oro: Foil #FFC247.
+  - Rubíes: Glass rojo; los que orbitan llevan dentro un núcleo Neon.
+  - Ojos: Neon.
+  - Boca: Neon rojo oscuro.
+  - Plumas: rojo; el cañón de las plumas en Foil.
+- **Animación:**
+  - La mandíbula respira (±4° cada 3 s).
+  - Las dos capas de la melena ondulan ±3°, desfasadas.
+  - Los rubíes y las monedas orbitan el mango a 0,5 rad/s; giran sobre sí mismos (las monedas a 3 rad/s) y suben y bajan. Cada anillo acompaña a su rubí.
+  - Los ojos cambian de brillo y las luces rojas pulsan cada 2 s.
+- **Efectos:** chispas doradas alrededor de la cabeza, monedas brillantes, brasas rojas, destellos sobre los rubíes y una ráfaga dorada al sacarla.
+- **Al cavar:** la mandíbula muerde (se cierra 18°) y salen lluvia de monedas y chispas doradas. Sin temblor de cámara.
+
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L22`: escala ×1,4 (unos 7,2 studs). La mano izquierda va justo encima de la garra del pomo.
+- Los Attachments del prompt (ojos, boca, bisagra, melena, punta, rubí del pomo) están en el `Handle`. El JSON `_info.json` no venía, así que están sacados de la geometría.
+- `StarterPlayerScripts.ShovelFx`: nueva función `coinDig` en `DIG_FX.L22` y `Skull_Gold` añadida a la búsqueda de la hoja.
+- El modelo importado está en `ServerStorage.Pala22_GuardianRex`. Se había importado dos veces y la copia sobrante se ha borrado.
+
+**Probado:** en Play con `Debug "level" 22`:
+- Se equipa.
+- La mandíbula cierra hacia el cráneo.
+- Las órbitas y la melena se mueven.
+- El efecto de cavar sale.
+- Sin errores.
+
+No se ha mirado en la tienda, en móvil ni con otro jugador.
+
+**Notas:**
+- La melena cubre casi toda la mitad de arriba del mango, así que la mano derecha queda entre las plumas. Para que las dos manos quepan por debajo, la pala tendría que medir unos 12 studs.
+- No se ha añadido el Highlight de contorno oscuro (no queremos contornos) ni el temblor de cámara, el sonido o el balanceo en la mano.
+
 ## 2026-10-28 · seguo970 (Claude) · Palas 17 (Costilla de Gigante) y 18 (Sepulturero) montadas y animadas
 **Qué:** las dos palas son los modelos importados de sus prompts. Sin texturas subidas: solo materiales de Roblox y colores del prompt.
 
