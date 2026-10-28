@@ -2,6 +2,33 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-28 · seguo970 (Claude) · Pala 16: Pala de Diente de Megalodón montada y animada
+**Qué:** la pala 16 es el modelo `Pala16_MegalodonTooth`, que ya venía importado.
+- **El modelo:** la hoja es un diente de megalodón de color marfil con una raíz de piedra. El mango es una espina azul con vértebras de hueso y aletas de tiburón, y acaba en una cola de tiburón. Un pez payaso nada alrededor de la raíz de la hoja.
+- **Colores:** los del prompt, con SmoothPlastic y Basalt en la raíz. Sin texturas subidas.
+- **Pez payaso:** da una vuelta en elipse cada 4 s, sube y baja ±0,75 y mira hacia donde nada, moviendo un poco el cuerpo. Al sacar la pala sale nadando desde la punta. Si el jugador está quieto, de vez en cuando se para y da una vuelta rápida.
+- **Efectos:**
+  - Tres hilos de agua cian (Beams) giran alrededor del mango y la raíz.
+  - Salen burbujas por la punta, la raíz y la cola, y gotitas a ráfagas.
+  - Motas rojas y blancas flotan alrededor.
+  - Una luz cian suave pulsa en la hoja.
+  - Al sacarla salen 15 burbujas.
+- **Al cavar:** sale el mismo chapoteo de burbujas, gotas y destello que en la pala 15, sin temblor de cámara.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L16`: escala ×1,25. La mano izquierda va sobre el final de la espina, cerca de la cola. El pez lleva el Motor6D `PezOrbita` con la etiqueta `ShovelFish`. Los hilos de agua están en la pieza `AguaGiro`, que tiene un `ShovelOrbit`.
+- `StarterPlayerScripts.ShovelFx`:
+  - Nuevo bloque `ShovelFish` (atributos RadiusX/RadiusZ, Bob, Period, Wiggle, WiggleHz, TipY, Roll).
+  - `DIG_FX.L16 = coralDig` y `Blade_Tooth` en la búsqueda de la hoja.
+  - `ShovelPulse` en emisores ya no baja de 0, así que un `Min` negativo hace pausas entre ráfagas.
+- El modelo original se ha movido a `ServerStorage.Pala16_MegalodonTooth`.
+**Probado:** en Play con `Debug "level" 16`:
+- La pala se equipa sin errores.
+- El pez se mueve y no se mete en la caja de la hoja (pasa como mínimo a 0,41).
+- El efecto de cavar sale.
+
+**No se ha visto en pantalla:** Studio no dibujaba la vista 3D. Falta comprobar el agarre, que el pez no nade de lado y cómo quedan los hilos de agua.
+**Notas:** si el pez nada boca abajo o de lado, se arregla con el atributo `Roll` de `PezOrbita` (180 o ±90). No se ha añadido sonido de chapoteo ni temblor de cámara.
+
 ## 2026-10-28 · seguo970 (Claude) · Pala 15: Pala de Coral Abisal montada y animada
 **Qué:** la pala 15 es el modelo `Pala15_CoralAbisal`, que ya venía importado en Workspace. Tiene una hoja de ramas de coral rojo, rosa, magenta y salmón, un mango de hueso con garras, una perla azul brillante abajo, agua en espiral alrededor del mango, 30 burbujas y 3 gotas.
 - **Colores y materiales:** los del prompt. Coral en SmoothPlastic; hueso en Marble; perla y agua en Glass. Dentro de la perla hay una esfera Neon azul.
