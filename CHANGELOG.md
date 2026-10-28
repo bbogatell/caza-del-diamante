@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-28 · seguo970 (Claude) · Pala 22: normales al revés arregladas
+**Qué:** la pala 22 tenía las normales al revés y se veía hueca desde algunos ángulos. Ahora se ve sólida.
+**Dónde:** `ReplicatedStorage.Models.Palas.L22`: `DoubleSided = true` en las 35 MeshParts. Es el mismo arreglo que en la pala 10.
+**Probado:** en Play con `Debug "level" 22`. Se ve sólida, también la cabeza vista de lado.
+
 ## 2026-10-28 · seguo970 (Claude) · Pala 22: Pala del Guardián Rex montada y animada
 **Qué:** la pala 22 es el modelo `Pala22_GuardianRex.glb`, la versión de las 23:43, no la del zip. Es una cabeza de T-Rex de oro con la boca abierta y los ojos rojos, un mango de oro con rubíes, una melena de plumas rojas y un pomo de garra con rubí. A su alrededor orbitan 5 rubíes con anillo y 7 monedas.
 - **Materiales:**
