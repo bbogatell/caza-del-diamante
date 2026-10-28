@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 22: lengua más fina y garganta más pequeña
+**Qué:** en la boca del T-Rex de la pala 22, la lengua es ahora fina y la bola roja de la garganta que había antes de la lengua es la mitad de grande, pegada al fondo de la boca.
+- **Lengua:** 0,12 de grosor (antes 0,27) y 0,15 de ancho (antes 0,26), sin mover la raíz ni la punta.
+- **Garganta:** ×0,5.
+**Dónde:**
+- La pieza `ReplicatedStorage.Models.Palas.L22.Mouth_Interior` es la nueva, hecha con `tools/modelos/L22/lengua_fina.py` (Blender) a partir del GLB e importada como `Pala22_Lengua.glb`.
+- La pieza antigua está guardada en `ServerStorage.Mouth_Interior_L22_antigua`.
+**Probado:** visto en Studio (Edit) con una copia de la pala. No se ha probado en Play después del cambio, pero la pieza va soldada al `Handle` igual que antes.
+
 ## 2026-10-28 · seguo970 (Claude) · Pala 22: normales al revés arregladas
 **Qué:** la pala 22 tenía las normales al revés y se veía hueca desde algunos ángulos. Ahora se ve sólida.
 **Dónde:** `ReplicatedStorage.Models.Palas.L22`: `DoubleSided = true` en las 35 MeshParts. Es el mismo arreglo que en la pala 10.
