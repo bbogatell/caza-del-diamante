@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-28 · seguo970 (Claude) · Pala 30: planetas de la cabeza colocados en espejo
+**Qué:** los 4 planetas grandes de la cabeza de la pala 30 estaban a distancias muy distintas de la hoja (de 0,7 a 1,7 studs). Ahora van en espejo, dos a cada lado: los dos rosas arriba a 1,33 studs del centro de la hoja, y el azul y el morado abajo a 1,59. Siguen girando sobre sí mismos con sus anillos.
+**Dónde:** `ReplicatedStorage.Models.Palas.L30`: `Planet_*_Head` y `PlanetRing_*_Head` (posición y `C0` de su Motor6D). **Copia de antes:** `ServerStorage.CopiasPalas.L30_v1`.
+**Probado:** captura de frente de la pala sola.
+
 ## 2026-10-28 · seguo970 (Claude) · Pala 30 nueva: Pala Divina del Diamante (modelo nuevo, animada)
 **Qué:** la pala 30 es ahora el modelo nuevo `PalaDivinaDelDiamante.glb`. Tiene hoja, mango y pomo de diamante, un diamante pequeño brillando dentro de la hoja, alas de cristal, marco y doble halo de oro, gema estrella, cintas arcoíris, 9 planetas, colgantes de estrellas y un T-Rex galáctico diminuto.
 - **Materiales:**
