@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 19: normales al revés arregladas
+**Qué:** la pala 19 (Cuarzo) tenía las normales al revés y le faltaban caras desde algunos ángulos. Ahora se ve sólida.
+**Dónde:** `ReplicatedStorage.Models.Palas.L19`: `DoubleSided = true` en las 14 MeshParts. Es el mismo arreglo que en las palas 10, 15 y 22.
+**Probado:** en Play con `Debug "level" 19`, vista de lado. Los cristales y la roca se ven enteros.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 18: hoja y calavera del pomo enderezadas
 **Qué:** en la pala 18 (Sepulturero), la hoja estaba inclinada hacia un lado respecto al mango y la calavera del pomo estaba torcida. Ahora las dos van rectas con el mango.
 - **Hoja:** la hoja, su calavera, el collar y los tornillos se han girado 7,3° para que queden alineados con el mango. La calavera de la hoja queda justo en el eje.
