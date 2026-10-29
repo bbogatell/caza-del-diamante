@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 18: hoja más grande
+**Qué:** la hoja de la pala 18 (Sepulturero) es un 30 % más grande. Crece desde su base en el collar, así que sigue unida, y su calavera crece con ella. El mango, el collar, las cadenas y el farol no cambian.
+**Dónde:** `ReplicatedStorage.Models.Palas.L18`:
+- `Blade`, `BladeSkull` y `BladeSkullEyes` escaladas ×1,3 (la hoja pasa de 1,76 × 2,11 a 2,29 × 2,74).
+- Los Attachments `FuegoHoja1-4` del `Handle` se han movido con ella.
+- Copia de antes en `ServerStorage.CopiasPalas.L18_hoja_pequena`.
+**Probado:** en Play con `Debug "level" 18`. La hoja se ve más grande y unida al collar, y el farol cuelga sin tocarla.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 21 sin barras en la hoja; diamante de la pala 22 invertido
 **Qué:**
 - **Pala 21 (Rúnica del Templo):** se han quitado las 4 barras oscuras a lo largo de la hoja (dos delante y dos detrás). Las fosas nasales de la calavera del pomo, que estaban en la misma pieza, se han vuelto a poner.
