@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 12: más grande
+**Qué:** la pala 12 (Hielo Glacial, la del mamut dentro) era la más pequeña de todas (5,6 studs). Ahora es un 30 % más grande (7,3 studs), como las demás. Se agarra igual: crece desde la mano izquierda.
+**Dónde:** `ReplicatedStorage.Models.Palas.L12`:
+- Escala ×1,3 alrededor de la mano izquierda, así que queda a ×1,62 del archivo. El `Handle` no se mueve.
+- Se han recalculado el `C0` y los atributos `Pivot`/`Bob` de la ventisca, y se han movido los Attachments.
+- Copia de antes en `ServerStorage.CopiasPalas.L12_pequena`.
+**Probado:** en Play con `Debug "level" 12`. Las dos manos quedan en el mango, la ventisca gira y el efecto de cavar sale.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 19: normales al revés arregladas
 **Qué:** la pala 19 (Cuarzo) tenía las normales al revés y le faltaban caras desde algunos ángulos. Ahora se ve sólida.
 **Dónde:** `ReplicatedStorage.Models.Palas.L19`: `DoubleSided = true` en las 14 MeshParts. Es el mismo arreglo que en las palas 10, 15 y 22.
