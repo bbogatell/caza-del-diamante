@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 15: hoja de coral más grande
+**Qué:** la hoja nueva de la pala 15 es un 20 % más grande. Crece desde la base, así que sigue unida al mango.
+**Dónde:** `ReplicatedStorage.Models.Palas.L15`:
+- Las piezas `Coral_Rojo/Rosa/Salmon/Lamina/Union` y `Gotas_Agua` se han escalado ×1,2 desde la base, en lo alto del hueso. En total quedan a ×1,81 del archivo: unos 3,1 de alto y 2,75 de ancho.
+- `BladeCenter` y `BladeTip` se han movido con ellas.
+**Probado:** en Play con `Debug "level" 15`. La hoja se ve más grande y no queda ningún hueco con el mango.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 15: hoja de coral nueva
 **Qué:** la pala 15 (Coral Abisal) tiene la hoja nueva de `HojaCoral.glb`: un abanico de ramas rojas, rosa fucsia y salmón con una lámina oscura detrás, un casquillo metido en el mango y tres gotas de agua de cristal colgando. El mango, el collar, el pomo, la perla, el agua en espiral, las burbujas y los efectos no cambian.
 **Dónde:**
