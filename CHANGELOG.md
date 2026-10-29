@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 14: goteos de lava hacia abajo
+**Qué:** en la pala 14 (Magma), los goteos fijos del modelo apuntaban hacia arriba al llevarla en la mano. Ahora cuelgan hacia abajo. Las gotitas que caen (partículas) siguen cayendo hacia abajo como antes.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L14`: toda la pala gira 180° alrededor del eje del mango. Las piezas soldadas se han movido con las soldaduras desactivadas un momento, y el `C0` de los Motor6D de los escombros y las gotas que flotan se ha girado igual.
+- Copia de antes en `ServerStorage.CopiasPalas.L14_antes_girar`.
+**Probado:** en Play con `Debug "level" 14`. Los goteos quedan en el borde de abajo de la hoja y cuelgan; los de los anillos de oro también.
+**Notas:** en Roblox no se puede poner una malla en espejo, así que se ha girado sobre el mango. La cara de la hoja que se veía delante ahora queda detrás.
+
 ## 2026-10-29 · seguo970 (Claude) · Palas 11, 12 y 13 (Colmillo de Mamut, Hielo Glacial, Obsidiana) montadas y animadas
 **Qué:** las tres palas son los modelos de `palas_roblox/`, con los materiales y colores de sus manifests.
 
