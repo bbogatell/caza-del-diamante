@@ -2,6 +2,56 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Palas 25, 26 y 27 montadas y animadas
+**Qué:** las tres palas son los modelos de `Palas_25-27_Roblox/`, con los colores y materiales de sus `_info.json`. Todas tienen dos anillos de energía rosas que giran sobre su propio eje en sentidos contrarios. Cada anillo lleva una estela rosa-morada que lo recorre y su transparencia pulsa.
+
+**Pala 25, Fracturada:**
+- **Aspecto:** 51 fragmentos de piedra negra (Basalt) con un borde Neon rosa muy tenue. Los rayos rosas y morados y el núcleo de energía parpadean.
+- **Fragmentos:** cada uno flota alrededor de su sitio con su propio ritmo (±0,04 studs, ±4,6°).
+- **Efectos:** esquirlas que orbitan y saltan a la deriva, chispas y 4 rayos (Beams) entre fragmentos de la hoja que saltan a ratos.
+- **Al cavar:** los fragmentos se separan un 30 % y vuelven de golpe, con un destello rosa y una ráfaga de esquirlas.
+
+**Pala 26, Vacío:**
+- **Aspecto:** obsidiana negra brillante con bordes Neon morados.
+- **Portal:** la espiral gira a 0,6 rad/s y las estrellas a 0,3 rad/s, el fondo pulsa, las partículas se absorben hacia el centro y cae polvo de estrellas.
+- **Ojos:** 12 ojos amarillos que se abren uno tras otro, del pomo hacia arriba, al sacar la pala. Luego parpadean al azar y se abren del todo al cavar.
+- **Efectos:** relámpagos morados en el marco y el mango, y obsidiana que orbita.
+- **Al cavar:** las partículas se absorben hacia el punto de impacto, seguido de un destello morado oscuro.
+
+**Pala 27, Meteorito:**
+- **Aspecto:** roca volcánica con grietas de lava que cambian de color, llamas de entrada en la atmósfera, mango de metal estelar con cristal azul y una estrella en el cuello que gira y destella.
+- **Asteroides:** 3 asteroides orbitan, cada uno con su lava.
+- **Efectos:** llamas que salen hacia atrás, brasas, cometas cruzando y polvo de estrellas morado en el mango.
+- **Al cavar:** impacto de meteorito, con una onda naranja en el suelo, rocas que saltan y un destello.
+
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L25`, `L26` y `L27`:
+
+  | Pala | Escala | Largo | Mano izquierda |
+  |---|---|---|---|
+  | L25 | ×1,45 | 7,8 studs | encima del pomo |
+  | L26 | ×1,35 | 7,8 studs | encima del pomo |
+  | L27 | ×1,3 | 7,0 studs | encima del pomo |
+
+  Los Attachments del JSON están en el `Handle`. Los ejes de los anillos están sacados de la malla con Blender.
+- `StarterPlayerScripts.ShovelFx`:
+  - `ShovelOrbit` acepta `Spread`: lo que se aparta la pieza al cavar.
+  - Nuevo bloque `ShovelEye`: los ojos que se abren y parpadean, con los atributos `Eye` y `OpenY`.
+  - Nuevas funciones `shardDig`, `voidDig` y `meteorDig`.
+- Las importaciones están en `ServerStorage` como `L25_importada`, `L26_importada` y `L27_importada`.
+
+**Probado:** en Play con `Debug "level" 25/26/27`.
+- Las tres se equipan, el efecto de cavar sale y no hay errores.
+- En la 25, los fragmentos se separan al cavar.
+- En la 26, los ojos se abren.
+- La 25 se veía demasiado rosa y la 27 demasiado amarilla. Se han bajado el brillo del contorno, las llamas y las luces.
+- No se han mirado en la tienda, en móvil ni con otro jugador.
+
+**Notas:**
+- Las pupilas de la 26 no siguen a la cámara.
+- Las llamas de la 27 no cambian de escala: solo de transparencia.
+- No hay sonidos, balanceo en la mano ni ajuste por calidad gráfica.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 18: hoja más grande
 **Qué:** la hoja de la pala 18 (Sepulturero) es un 30 % más grande. Crece desde su base en el collar, así que sigue unida, y su calavera crece con ella. El mango, el collar, las cadenas y el farol no cambian.
 **Dónde:** `ReplicatedStorage.Models.Palas.L18`:
