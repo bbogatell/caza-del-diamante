@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 15: hoja de coral nueva
+**Qué:** la pala 15 (Coral Abisal) tiene la hoja nueva de `HojaCoral.glb`: un abanico de ramas rojas, rosa fucsia y salmón con una lámina oscura detrás, un casquillo metido en el mango y tres gotas de agua de cristal colgando. El mango, el collar, el pomo, la perla, el agua en espiral, las burbujas y los efectos no cambian.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L15`:
+  - Se han quitado las 10 piezas de la hoja vieja (`Coral_*_A/B`, `Blade_Core`, `Blade_Tip`).
+  - Piezas nuevas: `Coral_Rojo`, `Coral_Rosa`, `Coral_Salmon`, `Coral_Lamina`, `Coral_Union` y `Gotas_Agua`. Van escaladas ×1,51 para que midan lo mismo que la vieja (2,61 de alto), con la base en lo alto del hueso del mango y soldadas al `Handle`.
+  - Los Attachments `BladeCenter` y `BladeTip` (luz rosa, burbujas, gotas) se han movido al centro y a la punta nuevos.
+- `StarterPlayerScripts.ShovelFx`: la búsqueda de la hoja usa `Coral_Lamina` en vez de `Blade_Core`.
+- La pala con la hoja vieja está en `ServerStorage.CopiasPalas.L15_hoja_vieja` y la importación en `ServerStorage.HojaCoral`.
+**Probado:** en Play con `Debug "level" 15`. La hoja queda unida al mango, sin hueco. El efecto de cavar sale y no hay errores.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 15: sin partes transparentes
 **Qué:** en la pala 15 (Coral Abisal) había trozos del coral y del mango que se veían transparentes desde algunos ángulos, porque las caras de la malla estaban al revés. Ahora se ven sólidos.
 **Dónde:** `ReplicatedStorage.Models.Palas.L15`: `DoubleSided = true` en las 14 MeshParts sólidas. Es el mismo arreglo que en las palas 10 y 22. La perla y el agua en espiral son de cristal a propósito y no se han tocado.
