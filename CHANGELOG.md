@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 17: la calaverita mira hacia donde avanza
+**Qué:** la calaverita que orbita el mango de la pala 17 miraba casi hacia el mango. Ahora mira siempre hacia delante, en la dirección en la que se mueve, como si nadara alrededor de la pala. La órbita, el castañeteo y la estela no cambian.
+**Dónde:** `ReplicatedStorage.Models.Palas.L17`:
+- Las piezas `FloatSkull_*` se han girado −53° sobre sí mismas.
+- Se han recalculado el `C0`, `Pivot` y `Axis` de `CalaveritaOrbita` (mismo centro de órbita) y el `C0` y `Pivot` de `CalaveritaMandibula` (misma bisagra).
+- Copia de antes en `ServerStorage.CopiasPalas.L17_calavera_antes`.
+**Probado:** en Play con `Debug "level" 17`, midiendo durante 2 s mientras orbita: el hocico apunta todo el rato hacia donde avanza (1,00 en las 20 medidas).
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 15: hoja de coral más grande
 **Qué:** la hoja nueva de la pala 15 es un 20 % más grande. Crece desde la base, así que sigue unida al mango.
 **Dónde:** `ReplicatedStorage.Models.Palas.L15`:
