@@ -2,6 +2,29 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-30 · seguo970 (Claude) · Bicho 150 · Gigantosaurio Titán (Eterno), hecho desde cero y muy épico
+
+- **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 24,4 studs y tiene 1.010 piezas.
+  - **Cuerpo:** **giganotosaurio colosal de bloques de piedra gris** partidos por **vetas de lava de neón naranja**.
+  - **Lomo:** lleva una **cordillera de montañas** de picos de roca, con cumbres de lava y lava que baja por los lados.
+  - **Detalles:** tiene una **cicatriz blanca de zarpazo** en el costado, **cadenas oxidadas rotas** cruzando el pecho y colgando de los brazos (con grilletes), y **garras de piedra**.
+  - **Cabeza:** la cabeza ruge con dientes blancos y ojos de lava.
+  - **Pedestal:** está sobre una **roca volcánica con ríos de lava** que caen por los lados.
+  - **Lo de los Eternos:** **3 anillos de energía** naranjas (`Ring`), **polvo de luz** que sube (ritmo 100), **pulso** en el suelo cada 4 s, un `Beam` de luz al cielo y **2 luces** (`PointLight` de radio 16 y `SpotLight` hacia arriba).
+  - **Efectos:** temblor (ritmo 100), rocas que caen (ritmo 30), lava de los picos (ritmo 80), humo (ritmo 80), ceniza (ritmo 60), brasas (ritmo 80), chispas (ritmo 60), polvo (ritmo 100), rugido, grietas brillantes en el suelo, anillos naranjas y relámpagos (ritmo 2).
+  - **Animaciones:**
+    - Los brazos son `Arm` y tiene `NoWander`.
+    - `Stomp`: **levanta una pata y pisa haciendo temblar el suelo** (`StompFx`).
+    - `Roar`: **ruge** (`RoarFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.GigantosaurioTitan` → `Models.Bichos["150"]`. Docs: `BICHOS_DINOSAURIOS.md` y `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base:
+  - La cabeza se mueve 7,6 studs, el pie 2 (pisotón) y los anillos giran.
+  - La cola se balancea y parpadea.
+  - Sin errores en la consola.
+- **Notas:**
+  - Se ha bajado un poco la luz naranja, que teñía de rojo el cuerpo.
+  - La ficha del 151 (Pegasaurio) ya está pedida.
+
 ## 2026-10-30 · seguo970 (Claude) · Bicho 149 · Rinoceronte Lanudo Oso (Eterno), hecho desde cero y muy épico
 
 - **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 23,4 studs y tiene 991 piezas.
