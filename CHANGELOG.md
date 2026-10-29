@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · bbogatell (Claude) · Bicho 130 · Mosa Abisal Luminoso (Secreto), hecho desde cero y muy épico
+
+- **Qué:** Secreto **muy épico y amenazador**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 17,6 studs y tiene 536 piezas. Es un **mosasaurio colosal negro azulado** de bloques que nada sobre el abismo, cubierto de **puntos bioluminiscentes** azules. Tiene una **antena de pez abisal** en la frente (un tallo curvo con una **luz amarilla de neón** colgando delante de la boca), la boca abierta con **dientes blancos que brillan**, ojos amarillos, cuatro aletas y una cola de pez con puntos de luz. El fondo del abismo es casi negro, con rocas, fumarolas encendidas y **corales rosas y cian que brillan**, y un **banco de peces pequeños** da vueltas. Lleva lo de todos los Secretos: `Highlight` negro y morado, humo negro a ras de suelo (ritmo 60) y niebla morada (ritmo 40). Sus efectos: burbujas (ritmo 80), puntos de luz (ritmo 60), destellos (ritmo 50), polvo abisal (ritmo 60), corriente (ritmo 30), orbes (ritmo 20), luz oscilante, ondas, peces pequeños y **2 luces**. **Animaciones:** flota (`Float`) y las aletas son `Wing`; `GlowMove = "flare"`: **la luz de la antena se enciende y atrae peces** (`GlowColor` en la bola, `GlowFx`); y `Chomp`: **se lanza con un mordisco brutal** (`ChompFx`). No se pasea (`NoWander`).
+- **Dónde:** `ServerStorage.CreatureBuilders.MosaAbisal` → `Models.Bichos["130"]`. Docs: `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la luz de la antena cambia de color (0,84) y la mandíbula se mueve 43° al morder. Sin errores en la consola.
+- **Notas:** el siguiente es el 131 (Mecha-Mordedor); su hoja ya se ha pedido.
+
 ## 2026-10-29 · seguo970 (Claude) · Palas 25, 26 y 27 montadas y animadas
 **Qué:** las tres palas son los modelos de `Palas_25-27_Roblox/`, con los colores y materiales de sus `_info.json`. Todas tienen dos anillos de energía rosas que giran sobre su propio eje en sentidos contrarios. Cada anillo lleva una estela rosa-morada que lo recorre y su transparencia pulsa.
 
