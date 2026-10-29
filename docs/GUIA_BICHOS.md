@@ -1,6 +1,6 @@
 # Guía para hacer los bichos (para Claude)
 
-Así se han hecho los bichos 1 (Dodo Corriente), 2 (Compi), 3 (Proto Bebé) y 191 (Mecha Krakenoide). Sigue los pasos en este orden, **un bicho cada vez y por orden de la lista** (`BICHOS_DINOSAURIOS.md`). El siguiente es el **140**.
+Así se han hecho los bichos 1 (Dodo Corriente), 2 (Compi), 3 (Proto Bebé) y 191 (Mecha Krakenoide). Sigue los pasos en este orden, **un bicho cada vez y por orden de la lista** (`BICHOS_DINOSAURIOS.md`). El siguiente es el **141**.
 
 Reglas del repo: haz `git pull` antes de empezar, añade una entrada al principio del `CHANGELOG.md` por cada bicho, haz commit y push (formato en `CLAUDE.md`). Escribe al usuario en español.
 
