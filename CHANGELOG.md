@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · bbogatell (Claude) · Bicho 112 · Jefe Esqueleto Cósmico (Secreto), hecho desde cero y muy épico
+
+- **Qué:** Secreto **muy épico e imponente**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 17,6 studs y tiene 451 piezas. Es un **esqueleto colosal de T-Rex** de huesos blanco hueso: columna con pinchos, pelvis, patas de huesos con rótulas y garras, bracitos, cola de vértebras con costillitas y un cráneo enorme (×1,25) con fenestras, dientes grandes y las fauces abiertas con brillo morado. Tiene las **costillas abiertas** y **dentro del pecho una galaxia que gira** (núcleo brillante y cuatro brazos de estrellas de neón morado, azul y blanco), y **ojos cian de neón** con llamas cian. Lleva **fragmentos de armadura cósmica** (placas oscuras con borde de neón y un cristal) en hombros, lomo, cráneo, patas y cola. Está sobre un **asteroide flotante** con cráteres que brillan, cristales y rocas por debajo, con **planetas en órbita** (dos con anillo) y asteroides pequeños girando. Lleva lo de todos los Secretos: `Highlight` negro y morado, humo negro a ras de suelo (ritmo 60) y niebla morada (ritmo 40). Sus efectos: estrellas saliendo del pecho (ritmo 80), polvo cósmico (ritmo 60), polvo de hueso (ritmo 40), cometas (ritmo 5), nebulosa (ritmo 30), destellos (ritmo 40), llamas cian en los ojos (ritmo 30), rugido y **2 luces**. **Animaciones:** la galaxia es un `Ring` con `RingFollow = "body"`; `Roar`: **ruge y la galaxia del pecho explota en estrellas** (`RoarFx` en el pecho); y `Stomp`: **pisotón cósmico** (`StompFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.EsqueletoCosmico` → `Models.Bichos["112"]`. Docs: `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: la galaxia gira dentro del pecho (las estrellas se mueven 4,2 studs respecto al cuerpo), los planetas dan la vuelta y la cabeza se mueve al caminar y rugir. Sin errores en la consola.
+- **Notas:** el siguiente es el 113 (Espino Cósmico); su hoja ya se ha pedido.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 19: Pala de Cuarzo montada y animada
 **Qué:** la pala 19 es el modelo `Pala19_Cuarzo.glb`: hoja de cristales rosas y cian, mango de roca morada casi negra con trenzado y setitas que brillan, y dos cristales que orbitan con su anillo.
 - **Materiales:**
