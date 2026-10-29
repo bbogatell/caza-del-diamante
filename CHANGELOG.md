@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 15: sin partes transparentes
+**Qué:** en la pala 15 (Coral Abisal) había trozos del coral y del mango que se veían transparentes desde algunos ángulos, porque las caras de la malla estaban al revés. Ahora se ven sólidos.
+**Dónde:** `ReplicatedStorage.Models.Palas.L15`: `DoubleSided = true` en las 14 MeshParts sólidas. Es el mismo arreglo que en las palas 10 y 22. La perla y el agua en espiral son de cristal a propósito y no se han tocado.
+**Probado:** en Play con `Debug "level" 15`. Comparado desde el mismo ángulo antes y después: ya no se ve a través del coral.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 14: goteos de lava hacia abajo
 **Qué:** en la pala 14 (Magma), los goteos fijos del modelo apuntaban hacia arriba al llevarla en la mano. Ahora cuelgan hacia abajo. Las gotitas que caen (partículas) siguen cayendo hacia abajo como antes.
 **Dónde:**
