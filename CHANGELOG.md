@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 18: hoja y calavera del pomo enderezadas
+**Qué:** en la pala 18 (Sepulturero), la hoja estaba inclinada hacia un lado respecto al mango y la calavera del pomo estaba torcida. Ahora las dos van rectas con el mango.
+- **Hoja:** la hoja, su calavera, el collar y los tornillos se han girado 7,3° para que queden alineados con el mango. La calavera de la hoja queda justo en el eje.
+- **Pomo:** la cruz y su calavera se han girado 8° para ponerlas rectas.
+- **Calavera del pomo:** se ha girado 8,7° para que mire de frente, igual que la de la hoja.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L18`: piezas `Blade`, `BladeSkull`, `BladeSkullEyes`, `Collar`, `Bolts`, `Pommel`, `PommelSkull` y `PommelSkullEyes`. Las inclinaciones se midieron con Blender sobre el GLB (eje principal de cada pieza).
+- Copia de antes en `ServerStorage.CopiasPalas.L18_antes_enderezar`.
+**Probado:** en Play con `Debug "level" 18`, vista de frente con el mango vertical: la hoja y el pomo quedan rectos con el mango y la calavera del pomo mira de frente.
+**Notas:** el farol sigue colgando de su argolla, que se ha movido muy poco al girar el collar.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 17: la calaverita mira hacia donde avanza
 **Qué:** la calaverita que orbita el mango de la pala 17 miraba casi hacia el mango. Ahora mira siempre hacia delante, en la dirección en la que se mueve, como si nadara alrededor de la pala. La órbita, el castañeteo y la estela no cambian.
 **Dónde:** `ReplicatedStorage.Models.Palas.L17`:
