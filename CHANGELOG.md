@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Bicho 147 · Gigantopithecus Rey (Eterno), hecho desde cero y muy épico
+
+- **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 22,6 studs y tiene 1.231 piezas.
+  - **Cuerpo:** es un **gigantopithecus colosal de pie**, de pelo marrón oscuro hecho de cientos de bloques de pelo sueltos. Tiene la **cara, el pecho (pectorales y abdominales), las manos y los pies grises**, brazos enormes y un pecho ancho.
+  - **Cabeza (×1,25):** cejas marcadas, colmillos y ojos ámbar, con una **corona de huesos de dinosaurio** sobre una banda de oro con gemas.
+  - **Ropa y adornos:** lleva una **capa roja** de escamas por la espalda con **cuello de piel blanca** y un **broche de oro**. En la palma de la mano izquierda, levantada, sujeta un **T-Rex diminuto** con la boca abierta.
+  - **Pedestal:** está sobre unas **ruinas de la selva**: bloques de piedra, **runas de neón dorado**, musgo, helechos, escalones y **lianas que cuelgan y se mueven** (`Tree`).
+  - **Lo de los Eternos:** **3 anillos de energía** dorados (`Ring`), **polvo de luz** que sube (ritmo 100), **pulso** en el suelo cada 4 s, un `Beam` de luz del pecho al cielo y **2 luces** (`PointLight` de radio 16 y `SpotLight` hacia arriba).
+  - **Efectos:** ondas al golpearse el pecho (ritmo 1), runas (ritmo 30), polvo (ritmo 100), hojas de selva (ritmo 80), destellos dorados (ritmo 80), piedras (ritmo 20), rayos de luz (ritmo 3), niebla de selva (ritmo 60), anillos dorados y el rugido.
+  - **Animaciones:**
+    - Los brazos son patas `FrontLeg` y tiene `NoWander`, porque está sobre su pedestal.
+    - `ChestBeat`: **se levanta y se golpea el pecho 6 veces**, con ondas doradas (`BeatFx`), y ruge.
+    - `GlowMove "flare"`: **las runas del pedestal y las gemas de la corona se encienden** (`GlowColor`, `GlowFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.GigantopithecusRey` → `Models.Bichos["147"]`. Docs: `BICHOS_DINOSAURIOS.md` y `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base:
+  - La cabeza se mueve 2,7 studs, el brazo 10 studs (golpe de pecho) y los anillos 13,5.
+  - Parpadea y las runas se encienden.
+  - Sin errores en la consola.
+- **Notas:**
+  - Las lianas se mueven muy poco (0,03 studs).
+  - La ficha del 148 (Titanoboa del Vacío) ya está pedida en el mismo chat de ChatGPT, de la cuenta de seguo970.
+
 ## 2026-10-29 · bbogatell (Claude) · Bicho 146 · Dragón Fracturado (Eterno), hecho desde cero y muy épico
 
 - **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 23 studs y tiene 688 piezas. Es un **raptor-dragón colosal con alas, de piedra negra**, con el **cuerpo partido en decenas de trozos que flotan separados**. Los trozos tienen bordes rosas y morados y los une **energía de neón rosa**: una columna de energía en el cuerpo y núcleos en cada pata, brazo, ala, cuello y cola. En el pecho brilla un núcleo de energía. Las **alas** son varillas de energía con fragmentos flotando entre ellas. La cabeza (×1,25) está agrietada, con la boca abierta y colmillos rosas, **ojos rosas de neón** y cuernos. Está sobre un **altar de piedra negra roto** con grietas rosas, columnas rotas y fragmentos flotando. Lleva lo de los Eternos: **3 anillos de energía** rosa y morados (`Ring`), **polvo de luz** que sube (ritmo 100), **pulso** en el suelo cada 4 s, `Beam` de luz vertical desde el pecho al cielo y **2 luces** (`PointLight` de radio 16 y `SpotLight` hacia arriba). Sus efectos: trozos girando, rayos de energía entre los fragmentos, chispas (ritmo 120), polvo de cristal (ritmo 100), destellos (ritmo 80), humo (ritmo 60), estrellas (ritmo 60), relámpagos (ritmo 3), distorsión y anillos rosa. **Animaciones:** las alas son `Wing` y los brazos `Arm`. `Shatter`: **los trozos se separan y vuelven a juntarse con un estallido** (los fragmentos del cuerpo son partes `Spike`, sus bordes llevan `ShatterGlow`, y hay `ShatterFx` y `ShatterLight`). `Uncoil`: **ruge lanzando un rayo de energía rosa** (partes `CosmicBeam` en la boca, `BeamFx`).
