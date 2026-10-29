@@ -2,6 +2,7 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+<<<<<<< Updated upstream
 ## 2026-10-29 · bbogatell (Claude) · Bicho 129 · Gliptodonte Esqueleto (Secreto), hecho desde cero y muy épico
 
 - **Qué:** Secreto **muy épico y amenazador**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 16,4 studs y tiene 558 piezas. Es el **esqueleto de un armadillo gigante** a cuatro patas, con **huesos blancos a la vista** (patas, columna, costillas, pelvis y cráneo), bajo un **caparazón en cúpula de placas hexagonales gris piedra**, intacto pero **agrietado**. Dentro arde un **fuego fantasma verde neón** que sale por las grietas, la boca y los ojos. La cola de vértebras acaba en una **maza de hueso con pinchos**. Está en un **yacimiento de fósiles en el desierto de noche** con huesos, un cráneo, rocas, pico, pala, farol y bandera. Lleva lo de todos los Secretos: `Highlight` negro y morado, humo negro a ras de suelo (ritmo 60) y niebla morada (ritmo 40). Sus efectos: polvo de huesos (ritmo 60), fuego verde (ritmo 60), niebla (ritmo 40), destellos (ritmo 30), piedrecitas (ritmo 20), calaveritas (ritmo 3), luz, ondas y **2 luces**. **Animaciones:** `GlowMove = "flare"`: **el fuego del caparazón se aviva y sale por las grietas** (`GlowColor` en el fuego y las grietas, `GlowFx`); y `TailSlam`: **golpea el suelo con la maza de huesos** (`SlamFx`).
@@ -127,6 +128,48 @@
 - **Dónde:** `ServerStorage.CreatureBuilders.EsqueletoCosmico` → `Models.Bichos["112"]`. Docs: `BICHOS_DINOSAURIOS.md`.
 - **Probado:** en Play en la base: la galaxia gira dentro del pecho (las estrellas se mueven 4,2 studs respecto al cuerpo), los planetas dan la vuelta y la cabeza se mueve al caminar y rugir. Sin errores en la consola.
 - **Notas:** el siguiente es el 113 (Espino Cósmico); su hoja ya se ha pedido.
+=======
+## 2026-10-29 · seguo970 (Claude) · Palas 11, 12 y 13 (Colmillo de Mamut, Hielo Glacial, Obsidiana) montadas y animadas
+**Qué:** las tres palas son los modelos de `palas_roblox/`, con los materiales y colores de sus manifests.
+
+**Pala 11, Colmillo de Mamut:**
+- **Aspecto:** hoja de hueso con relieve de helecho y borde de hielo (Glass), y mango de colmillo de marfil. Lleva pelo rojizo (Fabric), correas de cuero, colmillos colgantes, casquillos de bronce, cuentas azules y copos Neon.
+- **Efectos:** copos de nieve y vaho alrededor de la hoja, luz azul suave y un borde de hielo que cambia de brillo.
+
+**Pala 12, Hielo Glacial:**
+- **Aspecto:** hoja, mango, carámbanos y pomo de hielo (Glass), con un núcleo Neon blanco que pulsa, anillos de escarcha (Ice) y el mamut congelado dentro del mango.
+- **Efectos:** una ventisca de copos y neblina que gira alrededor de la hoja, destellos en el cristal y una luz blanco-azulada.
+
+**Pala 13, Obsidiana:**
+- **Aspecto:** hoja y garras de obsidiana negra brillante, y mango, pomo y collar de basalto con cuerda y correas.
+- **Efectos:** las grietas de lava Neon pasan de naranja a amarillo; salen brasas y humo oscuro de la hoja y hay una luz naranja.
+
+**Al cavar:**
+- 11 y 12: ráfaga de nieve y escarcha, y destello de la luz de la hoja.
+- 13: brasas y gotas de lava, y una estela de fuego en la hoja durante 0,35 s.
+- Las tres sueltan partículas de su elemento al sacarlas.
+- Sin temblor de cámara.
+
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L11`, `L12` y `L13`:
+
+  | Pala | Escala | Largo | Mano izquierda |
+  |---|---|---|---|
+  | L11 | ×1,6 | 6,8 studs | hacia el final del colmillo |
+  | L12 | ×1,25 | 5,5 studs | encima del pomo |
+  | L13 | ×1,6 | 7,3 studs | encima del pomo |
+
+  Las escalas permiten que las dos manos quepan por debajo del pelo, el collar y las garras. Los puntos del manifest son Attachments en el `Handle`.
+- `StarterPlayerScripts.ShovelFx`: nuevas funciones `frostDig` (L11, L12) y `lavaDig` (L13), y las hojas añadidas a la búsqueda.
+- Los modelos importados están en `ServerStorage`.
+
+**Probado:** en Play con `Debug "level" 11/12/13`:
+- Las tres se equipan y sueltan su efecto al cavar, sin errores.
+- La 12 se veía turbia porque el cristal transparente cogía el verde del suelo, así que se ha bajado la transparencia del hielo.
+- No se han mirado en la tienda, en móvil ni con otro jugador.
+
+**Notas:** no se han subido texturas ni hecho animaciones propias (idle en el hombro, cavar): usan las del juego. Tampoco tienen sonido ni temblor de cámara.
+>>>>>>> Stashed changes
 
 ## 2026-10-29 · seguo970 (Claude) · Pala 19: Pala de Cuarzo montada y animada
 **Qué:** la pala 19 es el modelo `Pala19_Cuarzo.glb`: hoja de cristales rosas y cian, mango de roca morada casi negra con trenzado y setitas que brillan, y dos cristales que orbitan con su anillo.
