@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-30 · seguo970 (Claude) · Bicho 149 · Rinoceronte Lanudo Oso (Eterno), hecho desde cero y muy épico
+
+- **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 23,4 studs y tiene 991 piezas.
+  - **Cuerpo:** **rinoceronte lanudo colosal con cuerpo de oso**, **de pie sobre las patas traseras y rugiendo**. Es de pelo marrón rojizo hecho de cientos de bloques sueltos, con la barriga y el morro color canela.
+  - **Cabeza (×1,35):** morro de rinoceronte con un **cuerno de hueso gigante y curvo** y otro más pequeño detrás, **ojos azules brillantes** y la boca abierta con colmillos y lengua.
+  - **Brazos y patas:** **armadura de cristales de hielo** en los dos hombros y **garras de oso negras enormes** en las manos y los pies.
+  - **Pedestal:** está sobre un **glaciar** de bloques de hielo con nieve y carámbanos.
+  - **Lo de los Eternos:** **3 anillos de energía** blancos y azules (`Ring`), **polvo de luz** que sube (ritmo 100), **pulso** en el suelo cada 4 s, un `Beam` de luz del pecho al cielo y **2 luces** (`PointLight` de radio 16 y `SpotLight` hacia arriba).
+  - **Efectos:** nieve (ritmo 120), aliento helado (ritmo 80), escarcha (ritmo 60), ventisca (ritmo 100), piedras de hielo (ritmo 20), rugido, destellos (ritmo 60), temblor al pisar (ritmo 60), carámbanos que caen (ritmo 10), anillos blancos y niebla (ritmo 60).
+  - **Animaciones:**
+    - Los brazos son `Arm` y tiene `NoWander`.
+    - `ArmRaise` con `ArmStyle "swipe"`: **da un doble zarpazo enorme** (`SwipeFx`).
+    - `Roar`: **ruge** con aliento helado (`RoarFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.RinoLanudoOso` → `Models.Bichos["149"]`. Docs: `BICHOS_DINOSAURIOS.md` y `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base:
+  - El zarpazo mueve la garra 12,4 studs y la cabeza 7,5.
+  - La mandíbula se abre al rugir, parpadea y los anillos giran.
+  - Sin errores en la consola.
+- **Notas:**
+  - Las fichas ahora se piden con la cuenta «Seguo Si» de ChatGPT, porque la otra se quedó sin imágenes.
+  - La del 150 (Gigantosaurio Titán) ya está pedida.
+
 ## 2026-10-29 · seguo970 (Claude) · Bicho 148 · Titanoboa del Vacío (Eterno), hecho desde cero y muy épico
 
 - **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 22 studs y tiene 1.140 piezas.
