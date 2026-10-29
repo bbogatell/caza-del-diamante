@@ -2,6 +2,26 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Bicho 148 · Titanoboa del Vacío (Eterno), hecho desde cero y muy épico
+
+- **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 22 studs y tiene 1.140 piezas.
+  - **Cuerpo:** es una **titanoboa colosal de escamas negras** en bloques, con **constelaciones** (puntos dorados, estrellitas blancas de neón y líneas entre ellas) y **bordes de neón morado** por debajo.
+  - **Postura:** sube **enroscada en espiral** desde una **roca flotante del vacío**, con cristales morados, musgo dorado y rocas flotando alrededor.
+  - **Portales:** su cuerpo atraviesa **4 portales de neón morado** que **giran** (`Ring`), con el vacío oscuro dentro.
+  - **Cabeza (×1,4):** de cobra, con capucha de bordes morados, la **boca abierta**, colmillos, **lengua bífida rosa** y **ojos morados brillantes**. Lleva una **corona de estrellas doradas** con una **gran estrella blanca** encima.
+  - **Lo de los Eternos:** **3 anillos de energía** morados (`Ring`), **polvo de luz** que sube (ritmo 100), **pulso** en el suelo cada 4 s, un `Beam` de luz desde la roca al cielo y **2 luces** (`PointLight` de radio 16 y `SpotLight` hacia arriba).
+  - **Efectos:** portales girando (ritmo 80), estrellas (ritmo 120), polvo cósmico (ritmo 100), nebulosa (ritmo 40), destellos (ritmo 80), cometas (ritmo 5), escamas brillantes (ritmo 40), distorsión, siseo (anillos que salen de la boca), anillos morados y niebla del vacío (ritmo 60).
+  - **Animaciones:**
+    - Tiene `NoWander`.
+    - `Phase`: **se desvanece dentro de un portal y sale de golpe** lanzándose con la boca abierta (`PhaseFx`).
+    - `Chew`: **saca la lengua**, que es una pieza `Snack`.
+- **Dónde:** `ServerStorage.CreatureBuilders.TitanoboaVacio` → `Models.Bichos["148"]`. Docs: `BICHOS_DINOSAURIOS.md` y `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base:
+  - La cabeza se mueve 8,2 studs con la embestida, los portales giran y los anillos se mueven.
+  - Parpadea, saca la lengua y se desvanece (95 %).
+  - Sin errores en la consola.
+- **Notas:** la ficha del 149 (Rinoceronte Lanudo Oso) ya está pedida en el mismo chat de ChatGPT.
+
 ## 2026-10-29 · seguo970 (Claude) · Bicho 147 · Gigantopithecus Rey (Eterno), hecho desde cero y muy épico
 
 - **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 22,6 studs y tiene 1.231 piezas.
