@@ -2,6 +2,59 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Palas 20, 21, 23 y 24 montadas y animadas
+**Qué:** las cuatro palas son los modelos de `Palas_20-24_Roblox/`, con los colores y materiales de sus `_info.json`. Todas las piezas son `DoubleSided`.
+
+**Pala 20, Geoda Arcoíris:**
+- **Aspecto:** geoda gris (Slate) llena de cristales de colores (Glass). Cada color tiene dentro una capa Neon que brilla por turnos, como un barrido de arcoíris. El mango es de cristal con el fósil dentro (flota un poco), con anillos de oro y un pomo de gema.
+- **Órbita:** 3 cristales orbitan con su halo, que va cambiando de color.
+- **Efectos:** destellos arcoíris, esquirlas y estrellitas.
+- **Al cavar:** esquirlas de todos los colores.
+
+**Pala 21, Rúnica del Templo:**
+- **Aspecto:** piedra arenisca con runas Neon doradas que laten cada 3 s, el disco solar de oro (gira despacio, 0,2 rad/s) y la calavera de T-Rex con ojo dorado.
+- **Órbita:** 3 runas de piedra con su glifo y su halo.
+- **Efectos:** polvo dorado que cae, destellos y chispas girando alrededor del disco.
+- **Al cavar:** polvo dorado.
+
+**Pala 23, Pluma de Quetzal:**
+- **Aspecto:** ala de plumas blancas, rojas, amarillas y naranjas que respira (cada capa oscila ±4°, desfasadas). El mango es de nubes (Fabric) y el pomo una pluma gigante de oro.
+- **Órbita:** 5 plumas que giran sobre sí mismas, 2 nubecitas y el pequeño arcoíris.
+- **Efectos:** brasas, plumitas que caen girando y 3 remolinos de viento alrededor del mango.
+- **Al cavar:** plumas y una ráfaga de viento.
+
+**Pala 24, Tormenta:**
+- **Aspecto:** nube de tormenta con rayos Neon amarillos y azules que parpadean, pararrayos plateado y cristal azul en el pomo.
+- **Pterosaurio:** da vueltas a 1,1 rad/s en una órbita algo inclinada, mira hacia donde vuela, bate las alas y deja una estela amarilla y azul.
+- **Efectos:** lluvia inclinada, rayos (Beams) que saltan dentro de la nube, chispas subiendo por el pararrayos, una luz azul y un relámpago amarillo que parpadea.
+- **Al cavar:** un rayo en zigzag de la nube al suelo, un destello blanco y chispas.
+
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L20`, `L21`, `L23` y `L24`:
+
+  | Pala | Escala | Largo | Mano izquierda |
+  |---|---|---|---|
+  | L20 | ×1,3 | 6,7 studs | encima del pomo |
+  | L21 | ×1,4 | 7,2 studs | encima del pomo |
+  | L23 | ×1,4 | 7,7 studs | encima del pomo |
+  | L24 | ×1,35 | 7,6 studs | encima del pomo |
+
+  Los Attachments del JSON están en el `Handle`. Las órbitas, alas, disco y pterosaurio van con Motor6D (`ShovelOrbit`).
+- `StarterPlayerScripts.ShovelFx`:
+  - Nuevas funciones `burst`, `rainbowDig`, `goldDig`, `featherDig` y `stormDig`.
+  - Las hojas nuevas añadidas a la búsqueda.
+- Las importaciones están en `ServerStorage` como `L20_importada`, `L21_importada`, etc.
+
+**Probado:** en Play con `Debug "level" 20/21/23/24`:
+- Las cuatro se equipan y se ven en la mano.
+- Las órbitas se mueven y el efecto de cavar sale.
+- El pterosaurio mira hacia donde vuela (0,98 en el plano de la órbita).
+- Sin errores.
+
+No se han mirado en la tienda, en móvil ni con otro jugador.
+
+**Notas:** no se han hecho los Highlight de contorno (no queremos contornos), el balanceo en la mano, los sonidos, el ajuste por calidad gráfica ni la animación propia de cavar. En la 21, la mandíbula del T-Rex no se mueve: es la misma pieza que la calavera.
+
 ## 2026-10-29 · seguo970 (Claude) · Pala 12: más grande
 **Qué:** la pala 12 (Hielo Glacial, la del mamut dentro) era la más pequeña de todas (5,6 studs). Ahora es un 30 % más grande (7,3 studs), como las demás. Se agarra igual: crece desde la mano izquierda.
 **Dónde:** `ReplicatedStorage.Models.Palas.L12`:
