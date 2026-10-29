@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-29 · seguo970 (Claude) · Pala 21 sin barras en la hoja; diamante de la pala 22 invertido
+**Qué:**
+- **Pala 21 (Rúnica del Templo):** se han quitado las 4 barras oscuras a lo largo de la hoja (dos delante y dos detrás). Las fosas nasales de la calavera del pomo, que estaban en la misma pieza, se han vuelto a poner.
+- **Pala 22 (Guardián Rex):** el diamante de la boca se ha girado 180°. La punta, que salía hacia fuera de la boca, ahora apunta hacia el fondo de la mandíbula. Está en el mismo sitio.
+**Dónde:**
+- `ReplicatedStorage.Models.Palas.L21`: se ha borrado `Grooves_Dark` y hay dos bolitas nuevas `FosaNasal1/2`. Copia de antes en `ServerStorage.CopiasPalas.L21_con_barras`.
+- `ReplicatedStorage.Models.Palas.L22`: `DiamanteBoca` y `DiamanteBocaBrillo` girados 180°, y el `C0` de `DiamanteFlota` cambiado.
+**Probado:** en Play.
+- La hoja de la 21 se ve sin barras.
+- En la 22, la punta del diamante apunta ahora hacia la bisagra (−0,99; antes +0,99).
+
 ## 2026-10-29 · seguo970 (Claude) · Palas 20, 21, 23 y 24 montadas y animadas
 **Qué:** las cuatro palas son los modelos de `Palas_20-24_Roblox/`, con los colores y materiales de sus `_info.json`. Todas las piezas son `DoubleSided`.
 
