@@ -2,6 +2,30 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-30 · seguo970 (Claude) · Bicho 152 · Diplodocus Esqueleto Jinete (Eterno), hecho desde cero y muy épico
+
+- **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 24 studs y tiene 638 piezas.
+  - **Esqueleto:** **esqueleto colosal de diplodocus** de huesos blancos: vértebras una a una, costillar completo, pelvis, omóplatos y patas de hueso.
+  - **Armadura:** **armadura negra** con púas en los muslos, grebas con brillo verde y gualdrapa con borde de neón verde.
+  - **Cuello y cola:** el cuello es largo y lleva collares de armadura. La cola es larga y tiene púas.
+  - **Cráneo (×1,45):** lleva yelmo negro con cuernos y **ojos de neón verde**.
+  - **Estandartes:** **estandartes verdes con calaveras** en mástiles, en los costados y en el cuello.
+  - **Jinete:** lo monta un **esqueleto de raptor caballero** con armadura negra, capa verde, yelmo con penacho de neón y escudo. Levanta una **lanza gigante con punta de neón verde** y un estandarte.
+  - **Pedestal:** está sobre un **cementerio antiguo** con lápidas, cruces, velas encendidas, losas y una verja de hierro.
+  - **Lo de los Eternos:** **3 anillos de energía** verdes (`Ring`), **polvo de luz** que sube (ritmo 100), **pulso** en el suelo cada 4 s, un `Beam` de luz al cielo y **2 luces** (`PointLight` de radio 16 y `SpotLight` hacia arriba).
+  - **Efectos:** fuego verde fantasma (en el lomo y en la punta de la lanza), niebla (ritmo 100), polvo de hueso (ritmo 80), almas que suben (ritmo 20), destellos verdes (ritmo 60), cuervos (ritmo 5), ceniza (ritmo 60), relámpagos verdes (ritmo 2), anillos verdes y susurros.
+  - **Animaciones:**
+    - Las patas son de cuadrúpedo, con las delanteras `FrontLeg`. Tiene `NoWander`.
+    - `ArmRaise`: el brazo del jinete (`Arm`) **alza la lanza**.
+    - `Charge`: **el jinete carga con la lanza**, con ráfagas de fuego verde (`ChargeFx`, `StompFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.DiplodocusJinete` → `Models.Bichos["152"]`. Docs: `BICHOS_DINOSAURIOS.md` y `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base:
+  - La lanza se mueve 7 studs, la cabeza 8,7 y el cuerpo 3,8 en la carga.
+  - Las patas, los anillos y el parpadeo funcionan.
+  - Sin errores en la consola.
+  - Después se engordaron el cuello y el cráneo, que solo se ha mirado en Edit.
+- **Notas:** fichas con la cuenta «User» de ChatGPT. La del 153 (Mantis Jurásica Nuclear) ya está pedida.
+
 ## 2026-10-30 · seguo970 (Claude) · Bicho 151 · Pegasaurio (Eterno), hecho desde cero y muy épico
 
 - **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 24,6 studs y tiene 981 piezas.
