@@ -2,6 +2,27 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-10-30 · seguo970 (Claude) · Bicho 151 · Pegasaurio (Eterno), hecho desde cero y muy épico
+
+- **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 24,6 studs y tiene 981 piezas.
+  - **Cuerpo:** **saurópodo esbelto y colosal** de bloques blanco perla.
+  - **Alas:** **alas de pegaso inmensas** abiertas, hechas de 5 filas de plumas blancas con **bordes dorados** y plumas doradas encima del brazo del ala.
+  - **Cuello:** cuello largo con **crin blanca y azul cielo** que cae por detrás.
+  - **Armadura:** **armadura celestial dorada** (peto con gema azul, placas laterales, anillos en cuello, patas y cola) y **pezuñas de oro**.
+  - **Cabeza (×1,3):** cresta dorada, gema, mechones de crin y ojos azules, con un **halo de luz** encima.
+  - **Pedestal:** está sobre una **nube** con un suelo de mármol con borde dorado y **columnas griegas**.
+  - **Lo de los Eternos:** **3 anillos de energía** dorados (`Ring`), **polvo de luz** que sube (ritmo 100), **pulso** en el suelo cada 4 s, un `Beam` de luz al cielo y **2 luces** (`PointLight` de radio 16 y `SpotLight` hacia arriba).
+  - **Efectos:** nubes (ritmo 80), plumas (ritmo 100), arcoíris (ritmo 30), destellos dorados (ritmo 100), estrellas (ritmo 60), rayos celestiales, viento (ritmo 60), purpurina arcoíris (ritmo 80), notas de arpa (ritmo 5), anillos dorados y halo de luz.
+  - **Animaciones:**
+    - Las alas son `Wing` y baten despacio. Las patas son de cuadrúpedo, con las delanteras `FrontLeg`. Tiene `NoWander`.
+    - `TakeOff`: **bate las alas y alza el vuelo**, con una ráfaga de plumas y destellos (`TakeOffFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.Pegasaurio` → `Models.Bichos["151"]`. Docs: `BICHOS_DINOSAURIOS.md` y `GUIA_BICHOS.md`.
+- **Probado:** en Play en la base:
+  - Las alas se mueven 7,6 studs, la cabeza 8,8 y el cuerpo sube 4,3 al alzar el vuelo.
+  - Parpadea.
+  - Sin errores en la consola.
+- **Notas:** la ficha de este bicho salió con la cuenta «Seguo Si» antes de que se le acabaran las imágenes. El 152 (Diplodocus Esqueleto Jinete) necesita otra cuenta.
+
 ## 2026-10-30 · seguo970 (Claude) · Bicho 150 · Gigantosaurio Titán (Eterno), hecho desde cero y muy épico
 
 - **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 24,4 studs y tiene 1.010 piezas.
