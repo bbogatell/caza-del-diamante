@@ -2,6 +2,32 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 173 · Mecha-Rex Omega (Divino), hecho desde cero y muy épico
+
+**Qué:** el bicho 173, construido desde cero siguiendo su ficha de ChatGPT: un T-Rex robot colosal de guerra en metal plateado y azul. Tiene:
+- blindaje en capas con tiras de luz roja de neón;
+- dos cañones láser en cada hombro, con bobinas y puntas azules;
+- dos propulsores en la espalda con fuego azul;
+- el pecho abierto con un núcleo de energía azul y costillas metálicas;
+- mandíbula hidráulica con pistones y visores rojos;
+- patas con pistones y garras, y bracitos con pinzas.
+
+La base es una plataforma de lanzamiento futurista: paneles hexagonales con juntas de neón, luces de alarma, franjas de peligro y dos torres de celosía con balizas.
+
+Extras de Divino: halo, columna de luz, 4 anillos de energía, onda de choque cada 3 s, purpurina 150 y 3 luces.
+
+Partículas: fuego de propulsores 250, chispas 200, humo 150, vapor hidráulico 100, destellos 150, casquillos 20, rayos 5, luces de alarma y brillo del núcleo.
+
+Animaciones:
+- Uncoil: dispara los cañones láser (CosmicBeam y BeamFx).
+- Roar: ruge con el núcleo a tope (RoarFx).
+
+**Dónde:** `ServerStorage.CreatureBuilders.MechaRexOmega` (Kit.new(173)) y `ServerStorage.Models.Bichos.173`. Tiene 582 piezas y mide 31 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, los láseres se encienden (transparencia hasta 0,2), la mandíbula se abre unos 23° y no hay ningún error (aparte de los avisos de DataStore de Studio).
+
+**Notas:** los rayos láser son piezas ocultas que salen hacia delante, así que la caja del modelo es larga en Z, pero no suben por encima de la altura.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 172 · Aetheron, Braquio del Éter (Divino), hecho desde cero y muy épico
 
 **Qué:** el bicho 172, construido desde cero siguiendo su ficha de ChatGPT: un braquiosaurio colosal hecho de nubes blancas y luz dorada. Tiene:
