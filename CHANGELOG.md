@@ -2,6 +2,26 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 176 · Triceratopsina Pizzerina (Brainrot), hecho desde cero
+
+**Qué:** el bicho 176, construido desde cero siguiendo su ficha de ChatGPT: un triceratops verde rechoncho. Tiene:
+- la GOLA convertida en una PIZZA entera (borde de masa en dos tonos, tomate, queso, 9 pepperonis, trozos de queso y cortes);
+- queso fundido que gotea por debajo;
+- un gorro de chef alto y blanco entre los cuernos;
+- ojos medio dormidos de meme y la boca abierta con la lengua fuera.
+
+Partículas: gotas de queso (6) y vapor (6).
+
+Animaciones:
+- la pizza de la gola gira (Ring siguiendo la cabeza, eje Z);
+- Waddle.
+
+**Dónde:** `ServerStorage.CreatureBuilders.TriceratopsinaPizzerina` (Kit.new(176)) y `ServerStorage.Models.Bichos.176`. Tiene 120 piezas y mide 6 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, mueve la cabeza y no hay ningún error.
+
+**Notas:** no lleva pedestal, como los bichos baratos. La cuenta de ChatGPT de la pestaña seed ya ha llegado al límite de imágenes de hoy.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 175 · Raptorino Tralalerino (Brainrot), hecho desde cero
 
 **Qué:** el bicho 175, el primer Brainrot, construido desde cero siguiendo su ficha de ChatGPT: un raptor de bloques azul celeste. Tiene:
