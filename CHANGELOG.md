@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 184 · Cocodonte (Mutante), hecho desde cero
+
+**Qué:** el bicho 184, construido desde cero siguiendo su ficha de ChatGPT: un COCODRILO COLOSAL verde oscuro. Tiene:
+- DIENTES BLANCOS QUE SALEN POR TODAS PARTES: en las fauces, torcidos hacia los lados, en las mejillas, en las patas y en filas por el LOMO y la cola;
+- BULTOS ROJIZOS que palpitan;
+- grietas verdes brillantes;
+- ojos amarillos y las fauces enormes abiertas, con lengua y baba;
+- contorno verde (Highlight);
+- como base, una alcantarilla de laboratorio con rejilla, baba y dos tuberías rotas que la derraman.
+
+Partículas: baba 60, burbujas 50, vapor 40, gotas 40, moscas 10, palpitaciones y aura verde.
+
+Animaciones:
+- GlowMove "bellow": los bultos palpitan (GlowFx);
+- Chomp: abre las fauces y muerde.
+
+**Dónde:** `ServerStorage.CreatureBuilders.Cocodonte` (Kit.new(184)) y `ServerStorage.Models.Bichos.184`. Tiene 274 piezas y mide 14 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, los bultos cambian de color, la mandíbula se abre hasta unos 61° y no hay ningún error.
+
+**Notas:** es muy largo, de unos 34 studs, porque es un cocodrilo bajo con la altura marcada en 14.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 183 · Reptador Mutante (Mutante), hecho desde cero
 
 **Qué:** el bicho 183, construido desde cero siguiendo su ficha de ChatGPT: una criatura de SEIS PATAS. Tiene:
