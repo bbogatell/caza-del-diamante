@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 153 · Mantis Jurásica Nuclear (Eterno), hecho desde cero y muy épico
+
+- **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 22 studs y tiene 409 piezas. Es una **mantis religiosa colosal verde lima**, de pie y amenazante, con las **guadañas gigantes de acero plateado** alzadas por encima de la cabeza. Las guadañas son curvas, con el filo de neón, dientes y púas en los fémures. Tiene el **abdomen brillando como un reactor** verde de neón, con bandas de blindaje y respiraderos, y un núcleo también en el pecho. En el tórax lleva **placas de blindaje** grises con remaches. Tiene cuatro patas articuladas, **alas traslúcidas** con venas de neón plegadas sobre el lomo y una **cabeza triangular** con enormes **ojos rojos**, antenas largas, palpos y mandíbulas. Está en las **ruinas de un laboratorio nuclear**: suelo de placas de metal, charcos verdes radiactivos, **barriles amarillos** con símbolo de radiación, tuberías con válvulas y torres de refrigeración rotas. Lleva lo de los Eternos: **3 anillos de energía** verdes (`Ring`), **polvo de luz** que sube (ritmo 100), **pulso** en el suelo cada 4 s, `Beam` de luz vertical desde el pecho al cielo y **2 luces** (`PointLight` de radio 16 en el reactor y `SpotLight` hacia arriba). Sus efectos: radiación (ritmo 150), rayos (ritmo 5), chispas (ritmo 100), vapor (ritmo 80), burbujas (ritmo 60), destellos (ritmo 80), cortes de guadaña (ritmo 2), esporas (ritmo 60), humo verde (ritmo 60), distorsión y anillos verdes. **Animaciones:** las guadañas son `Arm`, las patas `Leg` y las alas `Wing`. `ArmRaise` con `ArmStyle "swipe"`: **da un tajo doble con las guadañas** (`SwipeFx`). `GlowMove "flare"`: **el reactor del abdomen se sobrecarga y explota en luz** (`GlowColor`, `GlowFx`).
+- **Dónde:** `ServerStorage.CreatureBuilders.MantisNuclear` → `Models.Bichos["153"]`. Docs: `BICHOS_DINOSAURIOS.md`.
+- **Probado:** en Play en la base: las guadañas, las patas, las alas, la cabeza y los anillos se mueven, y el reactor se ilumina. Sin errores en la consola.
+- **Notas:** una cuchilla salía en posición NaN (un vector de longitud cero) y rompía el tamaño del modelo; se ha corregido. El siguiente es el 154 (Plesio Eléctrico Luminoso); su hoja ya se ha pedido.
+
 ## 2026-10-30 · seguo970 (Claude) · Bicho 152 · Diplodocus Esqueleto Jinete (Eterno), hecho desde cero y muy épico
 
 - **Qué:** Eterno **muy épico y legendario**, hecho desde cero a partir de su hoja de ChatGPT, sin sonidos. Mide 24 studs y tiene 638 piezas.
