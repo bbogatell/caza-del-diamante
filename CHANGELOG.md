@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 177 · Pterodattilo Spaghettini (Brainrot), hecho desde cero
+
+**Qué:** el bicho 177, construido desde cero siguiendo su ficha de ChatGPT: un pterodáctilo grande color pasta. Tiene:
+- ALAS HECHAS DE ESPAGUETIS (cortinas de fideos colgando del brazo, con enredos cruzados y gotas de salsa de tomate);
+- una ALBÓNDIGA GIGANTE con salsa y una hoja de albahaca en la cabeza;
+- ojos saltones y el pico largo abierto con la lengua;
+- un TENEDOR ENORME plateado en la pata, con pasta enrollada;
+- debajo, flotando, un plato blanco de espaguetis con salsa y albóndigas.
+
+Partículas: gotas de tomate 20, parmesano 20, vapor 15, destellos 10 y luz cálida.
+
+Animaciones:
+- aletea con las alas de espagueti (Wing);
+- flota sobre el plato (Float);
+- enrolla pasta con el tenedor (ArmRaise).
+
+**Dónde:** `ServerStorage.CreatureBuilders.PterodattiloSpaghettini` (Kit.new(177)) y `ServerStorage.Models.Bichos.177`. Tiene 187 piezas y mide 8 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Las alas, la cabeza y el tenedor se mueven y no hay ningún error.
+
+**Notas:** la ficha se ha hecho con una cuenta nueva de ChatGPT, en un chat nuevo con el prompt de estilo completo.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 176 · Triceratopsina Pizzerina (Brainrot), hecho desde cero
 
 **Qué:** el bicho 176, construido desde cero siguiendo su ficha de ChatGPT: un triceratops verde rechoncho. Tiene:
