@@ -2,6 +2,30 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 171 · Cthulhu Luminoso (Divino), hecho desde cero y muy épico
+
+**Qué:** el bicho 171, un Cthulhu-plesiosaurio abisal todo bioluminiscente, construido desde cero siguiendo su ficha de ChatGPT. Tiene:
+- un cuerpo ancho y encorvado sobre cuatro aletas enormes;
+- alas de murciélago abiertas con runas;
+- una cabeza de calamar con una barba de 14 tentáculos luminosos y ojos violeta;
+- dibujos neón turquesa y rosa por todo el cuerpo (bandas, anillos de glifos y espirales);
+- una corona dorada con gemas;
+- ruinas hundidas brillantes como base, con pilares, corales y losas con glifos.
+
+Lleva los extras de Divino: halo gigante (RingFollow head), columna de luz, 4 anillos de energía, onda de choque cada 3 s, purpurina 150 y 3 luces.
+
+Partículas de la ficha: pulsos de luz, burbujas brillantes (250), orbes (60), polvo bioluminiscente (200), destellos (150), runas (30), tinta luminosa (80) y ojos en el aire.
+
+Animaciones:
+- GlowMove "bellow": todo el cuerpo se ilumina en ondas.
+- WingBurst: abre las alas y lanza tinta luminosa.
+
+**Dónde:** `ServerStorage.CreatureBuilders.CthulhuLuminoso` (Kit.new(171)) y `ServerStorage.Models.Bichos.171`. Tiene 901 piezas y mide 30,4 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Se mueve, las alas aletean, los dibujos cambian de color en ondas y no hay ningún error (aparte de los avisos de DataStore de Studio). Se probó así porque los comandos de chat no respondían en esa sesión.
+
+**Notas:** está hecho desde cero, sin copiar el 165 (CthulhuPlesiosaurio). El SpotDown queda por debajo del halo para no pasarse de altura.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 170 · Dientes de Sable Divino (Divino), hecho desde cero y muy épico
 
 - **Qué:** Divino **muy épico**, hecho desde cero a partir de su hoja de ChatGPT; sin sonidos. Mide 27,4 studs y tiene 471 piezas. Es un **smilodon colosal y majestuoso** que avanza sobre las cuatro patas, de **pelaje dorado con rayas blancas**. Tiene **colmillos de cristal cian de neón** muy largos, una **melena de luz** blanca de neón en tres capas alrededor de la cabeza (×1,3) y ojos cian. Lleva **armadura de guerrero celestial** dorada con gemas cian: yelmo, peto, hombreras, placas en el lomo y en las patas, y grebas. Tiene **garras de diamante** brillantes. Está en una **cima de montaña celestial** de roca blanca sobre las nubes, con columnas de capitel dorado. Lleva lo de los Divinos: **halo doble** que gira sobre la cabeza, **columna de luz** desde el cielo (`Beam`), purpurina (ritmo 150), **onda de choque cada 3 s**, **4 anillos de energía** dorados y cian (`Ring`) y **3 luces potentes** (`PointLight` de radio 24, un `SpotLight` hacia arriba y otro hacia el bicho). Sus efectos: brillos (ritmo 200), destellos de cristal (ritmo 150), polvo dorado (ritmo 150), zarpazos de luz (ritmo 5), rugido, estrellas (ritmo 80), orbes (ritmo 40) y anillos. **Animaciones:** las cuatro patas son `Leg`. `Pounce`: **da un zarpazo de luz con las garras de diamante** (`SwipeFx`). `GlowMove "flare"` con `Roar`: **ruge y la melena estalla en luz** (melena con `GlowColor`, `GlowFx`, `RoarFx`).
