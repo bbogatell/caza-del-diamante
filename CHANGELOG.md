@@ -2,6 +2,27 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 183 · Reptador Mutante (Mutante), hecho desde cero
+
+**Qué:** el bicho 183, construido desde cero siguiendo su ficha de ChatGPT: una criatura de SEIS PATAS. Tiene:
+- CUERPO DE COCODRILO gris verdoso, partido por VENAS VERDES DE NEÓN en el cuerpo, las patas, la cola y la cabeza;
+- una CRESTA DE HUESOS por el lomo y la cola;
+- ojos rojos y las fauces de cocodrilo abiertas con colmillos y baba;
+- como base, una rejilla de laboratorio con charcos de baba y un barril volcado que derrama baba.
+
+Partículas: baba 40, vapor verde 40, burbujas 30, esporas 20 y aura verde.
+
+Animaciones:
+- corretea con las seis patas (StepRate rápido);
+- GlowMove "flare": las venas brillan (GlowFx);
+- Roar con RoarFx.
+
+**Dónde:** `ServerStorage.CreatureBuilders.ReptadorMutante` (Kit.new(183)) y `ServerStorage.Models.Bichos.183`. Tiene 213 piezas y mide 11 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, las venas cambian de brillo y no hay ningún error.
+
+**Notas:** es largo, de unos 25 studs, porque es un cocodrilo bajo con la altura marcada en 11.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 182 · Sapo-saurio (Mutante), hecho desde cero
 
 **Qué:** el bicho 182, construido desde cero siguiendo su ficha de ChatGPT: un SAPO ENORME verde. Tiene:
