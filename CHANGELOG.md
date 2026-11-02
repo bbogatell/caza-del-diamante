@@ -2,6 +2,27 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 181 · Larva-saurio (Mutante), hecho desde cero
+
+**Qué:** el bicho 181, el primer Mutante, construido desde cero siguiendo su ficha de ChatGPT: un GUSANO GORDO Y SEGMENTADO verde pálido. Tiene:
+- 9 segmentos con rebordes que forman una espiral en el suelo y suben hasta un torso erguido;
+- MANCHAS MORADAS, bultos y venas;
+- CABEZA DE DINOSAURIO con ojos negros, la boca abierta con dientes y baba que gotea;
+- dos bracitos con garras;
+- como base, un charco de baba verde tóxica con un tubo de ensayo roto y cristales.
+
+Partículas: babas 20, burbujas 20 y moscas 5.
+
+Animaciones:
+- se retuerce (TailSway, Waddle);
+- escupe baba (FireBreath con FlameFx verde).
+
+**Dónde:** `ServerStorage.CreatureBuilders.LarvaSaurio` (Kit.new(181)) y `ServerStorage.Models.Bichos.181`. Tiene 133 piezas y mide 8 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). La cola y la cabeza se mueven y no hay ningún error.
+
+**Notas:** —
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 180 · Brachio Fragolini (Brainrot), hecho desde cero
 
 **Qué:** el bicho 180, el último Brainrot, construido desde cero siguiendo su ficha de ChatGPT: un braquiosaurio gigante. Tiene:
