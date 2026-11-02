@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 185 · Krakenoide (Mutante), hecho desde cero
+
+**Qué:** el bicho 185, construido desde cero siguiendo su ficha de ChatGPT: una MASA COLOSAL DE TENTÁCULOS morado oscuro. Tiene:
+- 10 tentáculos que suben y se enroscan alrededor, con VENTOSAS ROSAS;
+- OJOS AMARILLOS repartidos por los tentáculos;
+- una CABEZA DE MOSASAURIO grande en el centro, con las fauces abiertas llenas de dientes, ojos amarillos y baba;
+- un manto con manchas;
+- como base, un tanque de contención roto con agua verde tóxica, cristales rotos, tornillos y baba que se derrama.
+
+Partículas: tinta 80, baba 80, burbujas 80, ojos que parpadean, niebla 60, gotas 60, esporas 40, relámpagos verdes 3, anillos y pulsos.
+
+Animaciones:
+- los tentáculos se retuercen (Arm con ArmRaise);
+- GlowMove "flare": los ojos se encienden a la vez (GlowFx);
+- Roar: lanza tinta y ruge (RoarFx, nube de tinta).
+
+**Dónde:** `ServerStorage.CreatureBuilders.Krakenoide` (Kit.new(185)) y `ServerStorage.Models.Bichos.185`. Tiene 448 piezas y mide 18 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Los tentáculos y la cabeza se mueven, los ojos cambian de brillo y no hay ningún error.
+
+**Notas:** lleva NoWander, porque es una masa que no camina. No tiene nada que ver con el 191 Mecha Krakenoide, que ya estaba hecho.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 184 · Cocodonte (Mutante), hecho desde cero
 
 **Qué:** el bicho 184, construido desde cero siguiendo su ficha de ChatGPT: un COCODRILO COLOSAL verde oscuro. Tiene:
