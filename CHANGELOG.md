@@ -2,6 +2,29 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 178 · Stegoccino Cappuccino (Brainrot), hecho desde cero
+
+**Qué:** el bicho 178, construido desde cero siguiendo su ficha de ChatGPT: un estegosaurio color galleta. Tiene:
+- el CUERPO hecho de una TAZA DE CAPUCHINO gigante blanca, con asa, café, espuma crema, un CORAZÓN dibujado y un chorrito por el lado;
+- 11 PLACAS DE GALLETA con puntitos que se abren en abanico desde el borde;
+- una CUCHARILLA plateada que remueve dando vueltas a la taza;
+- 10 granos de café en órbita;
+- ojos saltones, mofletes rosas y lengua;
+- como base, un platito blanco lleno de granos de café.
+
+Partículas: vapor de café 40, aroma en espiral 20, corazones 10, azúcar 30, destellos 20, granos 15 y aura marrón.
+
+Animaciones:
+- la cucharilla remueve (Ring siguiendo el cuerpo);
+- los granos orbitan;
+- Waddle.
+
+**Dónde:** `ServerStorage.CreatureBuilders.StegoccinoCappuccino` (Kit.new(178)) y `ServerStorage.Models.Bichos.178`. Tiene 230 piezas y mide 10 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, la cucharilla da la vuelta entera a la taza (pasa por los 12 sectores) y no hay ningún error.
+
+**Notas:** —
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 177 · Pterodattilo Spaghettini (Brainrot), hecho desde cero
 
 **Qué:** el bicho 177, construido desde cero siguiendo su ficha de ChatGPT: un pterodáctilo grande color pasta. Tiene:
