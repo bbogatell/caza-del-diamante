@@ -2,6 +2,29 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 180 · Brachio Fragolini (Brainrot), hecho desde cero
+
+**Qué:** el bicho 180, el último Brainrot, construido desde cero siguiendo su ficha de ChatGPT: un braquiosaurio gigante. Tiene:
+- el CUERPO hecho de una FRESA COLOSAL roja con unas 110 semillas amarillas y un brillo;
+- cuello largo y patas rojas con semillas;
+- una CORONA DE HOJAS verde lima con rabito;
+- NATA MONTADA a lo largo del lomo, el cuello y la cola;
+- ojos saltones con mofletes rosas y la boca abierta;
+- 8 fresitas que orbitan y un anillo de energía rosa;
+- como base, una tarta de dos pisos con nata, mermelada y fresas.
+
+Partículas: fresas que caen 30, corazones 40, brillos rosa 80, azúcar glas 60, nata 20, mariposas 10, destellos 40 y arcoíris pastel.
+
+Animaciones:
+- las fresas giran a su alrededor (Ring);
+- Waddle.
+
+**Dónde:** `ServerStorage.CreatureBuilders.BrachioFragolini` (Kit.new(180)) y `ServerStorage.Models.Bichos.180`. Tiene 622 piezas y mide 14 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, las fresas dan la vuelta completa (12 sectores) y no hay ningún error.
+
+**Notas:** con este quedan hechos todos los Brainrot (175-180).
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 179 · Bombardino Rexodilo (Brainrot), hecho desde cero
 
 **Qué:** el bicho 179, construido desde cero siguiendo su ficha de ChatGPT: un T-Rex cocodrilo enorme verde militar convertido en AVIÓN BOMBARDERO. Tiene:
