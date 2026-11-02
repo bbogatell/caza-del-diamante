@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 182 · Sapo-saurio (Mutante), hecho desde cero
+
+**Qué:** el bicho 182, construido desde cero siguiendo su ficha de ChatGPT: un SAPO ENORME verde. Tiene:
+- CABEZA DE CERATOPSIO, con gola rodeada de verrugas naranjas, dos cuernos en la frente y uno en la nariz;
+- VERRUGAS NARANJAS por el cuerpo, la cabeza y los muslos;
+- barriga y papada color crema;
+- ojos negros saltones;
+- una LENGUA ROSA LARGUÍSIMA que cuelga hasta la charca, con baba;
+- como base, una charca tóxica verde con nenúfares podridos.
+
+Partículas: burbujas tóxicas 30, gotas 20, vapor 15 y salpicadura de baba al saltar.
+
+Animaciones:
+- Pounce: salta y salpica (SwipeFx);
+- Waddle.
+
+**Dónde:** `ServerStorage.CreatureBuilders.SapoSaurio` (Kit.new(182)) y `ServerStorage.Models.Bichos.182`. Tiene 153 piezas y mide 9 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). El cuerpo y la cabeza se mueven y no hay ningún error.
+
+**Notas:** —
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 181 · Larva-saurio (Mutante), hecho desde cero
 
 **Qué:** el bicho 181, el primer Mutante, construido desde cero siguiendo su ficha de ChatGPT: un GUSANO GORDO Y SEGMENTADO verde pálido. Tiene:
