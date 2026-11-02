@@ -2,6 +2,30 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 179 · Bombardino Rexodilo (Brainrot), hecho desde cero
+
+**Qué:** el bicho 179, construido desde cero siguiendo su ficha de ChatGPT: un T-Rex cocodrilo enorme verde militar convertido en AVIÓN BOMBARDERO. Tiene:
+- escamas con placas en el lomo;
+- ALAS GRISES con ESTRELLAS BLANCAS, flaps y remaches;
+- dos MOTORES con hélices de 4 palas que GIRAN de verdad (Ring siguiendo el cuerpo);
+- TREN DE ATERRIZAJE en las patas, con puntales, pistones y ruedas;
+- estrellas pintadas en el cuerpo y alerones de cola;
+- una CABINA de cristal sobre la cabeza;
+- un hocico largo de cocodrilo con dientes y ojos saltones;
+- como base, una pista militar con líneas, conos y una torre de control.
+
+Partículas: humo de motores 60, estelas 40, chispas 30, nubes 20, destellos 30, casquillos 10 y brillo verde, además de un Highlight verde (contorno).
+
+Animaciones:
+- las hélices giran;
+- TakeOff: despega y suelta casquillos.
+
+**Dónde:** `ServerStorage.CreatureBuilders.BombardinoRexodilo` (Kit.new(179)) y `ServerStorage.Models.Bichos.179`. Tiene 260 piezas y mide 12 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, despega (la cabeza sube unos 3,5 studs), las hélices dan la vuelta completa (12 sectores) y no hay ningún error.
+
+**Notas:** con esta ficha la cuenta nueva de ChatGPT también ha llegado al límite de imágenes de hoy.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 178 · Stegoccino Cappuccino (Brainrot), hecho desde cero
 
 **Qué:** el bicho 178, construido desde cero siguiendo su ficha de ChatGPT: un estegosaurio color galleta. Tiene:
