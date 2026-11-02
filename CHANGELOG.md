@@ -2,6 +2,32 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 172 · Aetheron, Braquio del Éter (Divino), hecho desde cero y muy épico
+
+**Qué:** el bicho 172, construido desde cero siguiendo su ficha de ChatGPT: un braquiosaurio colosal hecho de nubes blancas y luz dorada. Tiene:
+- patas delanteras largas;
+- armadura celestial dorada con gemas azules;
+- una ESCALERA DE LUZ en espiral por todo el cuello (34 peldaños);
+- alas de plumas de luz en los hombros (3 filas de plumas);
+- casco dorado con alas y gema;
+- TRES HALOS sobre la cabeza que siguen a la cabeza y giran en sentidos alternos;
+- como base, un templo de mármol y oro con columnas, escalinata y un mar de nubes.
+
+Extras de Divino: columna de luz, 4 anillos de energía, onda de choque cada 3 s, purpurina 150 y 3 luces.
+
+Partículas: nubes 150, rayos de sol, estrellas 200, plumas de luz 150, polvo dorado 200, arcoíris, orbes 60 y notas celestiales 10.
+
+Animaciones:
+- GlowMove "flare": la escalera de luz brilla y suben estrellas.
+- WingBurst: abre las alas de luz.
+- Rear: se alza sobre las patas traseras.
+
+**Dónde:** `ServerStorage.CreatureBuilders.AetheronBraquio` (Kit.new(172)) y `ServerStorage.Models.Bichos.172`. Tiene 780 piezas y mide 31,4 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Se mueve, la cabeza sube unos 3 studs al alzarse, la escalera cambia de brillo y no hay ningún error (aparte de los avisos de DataStore de Studio).
+
+**Notas:** las luces van más suaves que en otros Divinos porque el blanco de las nubes se quemaba con el brillo. El SpotDown queda por debajo de los halos.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 171 · Cthulhu Luminoso (Divino), hecho desde cero y muy épico
 
 **Qué:** el bicho 171, un Cthulhu-plesiosaurio abisal todo bioluminiscente, construido desde cero siguiendo su ficha de ChatGPT. Tiene:
