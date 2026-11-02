@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 175 · Raptorino Tralalerino (Brainrot), hecho desde cero
+
+**Qué:** el bicho 175, el primer Brainrot, construido desde cero siguiendo su ficha de ChatGPT: un raptor de bloques azul celeste. Tiene:
+- barriga crema;
+- ojos saltones enormes que miran cada uno a un lado;
+- una sonrisa abierta con lengua rosa y dientes;
+- TRES PATAS con zapatillas blancas con rayas, suela y cuello rojos y cordones;
+- baila sobre una sola pata mientras las otras dos patean en el aire;
+- bracitos saludando y cola levantada.
+
+Partículas: notas musicales de colores, ritmo 4.
+
+Animaciones:
+- Waddle: baila.
+- Whirl: da una vuelta y patea, con WhirlFx.
+
+**Dónde:** `ServerStorage.CreatureBuilders.RaptorinoTralalerino` (Kit.new(175)) y `ServerStorage.Models.Bichos.175`. Tiene 101 piezas y mide 5 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Se mueve, baila y no hay ningún error.
+
+**Notas:** no lleva pedestal, como los demás bichos baratos. Las notas usan la textura de destellos con colores chillones, porque Roblox no trae una textura de nota musical.
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 174 · T-Rex Galáctico (Divino), hecho desde cero y muy épico
 
 **Qué:** el bicho 174, el más valioso del juego, construido desde cero siguiendo su ficha de ChatGPT: el T-Rex definitivo rugiendo triunfal. Tiene:
