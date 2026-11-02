@@ -2,6 +2,33 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-02 · bbogatell (Claude) · Bicho 174 · T-Rex Galáctico (Divino), hecho desde cero y muy épico
+
+**Qué:** el bicho 174, el más valioso del juego, construido desde cero siguiendo su ficha de ChatGPT: el T-Rex definitivo rugiendo triunfal. Tiene:
+- el cuerpo hecho de galaxia (morado y azul profundo, con estrellas blancas de neón y nebulosas rosa y azul dentro);
+- armadura cósmica dorada en capas con cristales de estrella y un orbe de galaxia en el pecho;
+- una mano levantada sosteniendo un AGUJERO NEGRO con disco de acreción;
+- una corona de 6 planetas que orbita la cabeza (Ring follow head);
+- dos anillos de Saturno que giran alrededor del torso (Ring follow body);
+- una capa de estrellas que cae por la espalda;
+- ojos de sol y dientes blancos de neón;
+- como base, un trozo de planeta flotante con grietas cósmicas y cristales de estrella.
+
+Extras de Divino: halo galáctico, columna de luz, 4 anillos de energía arcoíris, onda de choque cada 3 s, purpurina 150 y 3 luces.
+
+Partículas: estrellas 300, nebulosas 150, polvo cósmico arcoíris 300, el agujero negro absorbiendo partículas 200 (emisor esférico hacia dentro), supernovas 3, cometas 10, meteoritos 10, rayos de luz, destellos 200, auroras y constelaciones.
+
+Animaciones:
+- GlowMove "flare": la galaxia brilla y estalla una supernova.
+- Roar con RoarFx.
+- Stomp: temblor.
+
+**Dónde:** `ServerStorage.CreatureBuilders.TRexGalactico` (Kit.new(174)) y `ServerStorage.Models.Bichos.174`. Tiene 924 piezas y mide 32 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, los planetas orbitan, las estrellas cambian de brillo y no hay ningún error (aparte de los avisos de DataStore de Studio).
+
+**Notas:** con este bicho quedan hechos todos los Divinos. Todavía falta en los scripts del juego la aparición especial «al aparecer» (explosión de estrellas, lluvia de cometas y onda enorme).
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 173 · Mecha-Rex Omega (Divino), hecho desde cero y muy épico
 
 **Qué:** el bicho 173, construido desde cero siguiendo su ficha de ChatGPT: un T-Rex robot colosal de guerra en metal plateado y azul. Tiene:
