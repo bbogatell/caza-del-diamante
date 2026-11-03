@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · seguo970 (Claude) · Fósil Épico nuevo (según su ficha de ChatGPT)
+**Qué:** Los 5 fósiles Épico siguen ahora su ficha de geoda de amatista. La base es de ladrillos con studs (capa de abajo morado oscuro, encima gris oscuro, gris y lila), con racimos de cristales de amatista y destellos morados flotando. El III y el ★★ llevan detrás el arco de la geoda partida (corteza gris y lila, forro de cristales y fondo morado). Encima: I, huevo de piedra agrietado; II, cuerno marfil con punta de amatista brillante; III, **cráneo de triceratops** (gola con pinchos y gemas, cuernos de ceja y de nariz, pico ganchudo, ojos de amatista); ★, huevo de amatista con marco dorado; ★★, el cráneo con corona dorada de gemas.
+**Dónde:** `ServerStorage.FossilBuilder` (función nueva `buildEpic`; `FB.build` la usa para «Épico») y `ServerStorage.Models.Fosiles.E-I/E-II/E-III/E-S1/E-S2` (regenerados).
+**Probado:** las 5 vistas de cerca en Edit. En Play salen con su cartel en la base.
+**Notas:** en Play la `PointLight` de rareza que pone `Looks` (brillo 1,5, alcance 15, en el `Root`) satura mucho los colores, sobre todo con varios fósiles juntos. Pasa en todas las rarezas; no lo he tocado.
+
 ## 2026-11-03 · seguo970 (Claude) · Fósil Raro nuevo (según su ficha de ChatGPT)
 **Qué:** Los 5 fósiles Raro siguen ahora su ficha del fondo del mar. La base es una losa de ladrillos con studs (capa de abajo azul marino, encima roca gris azulada y arena, con terrazas detrás), con corales rosa y naranja, algas verdes onduladas, conchas, una estrella de mar y burbujas. Encima: I, amonites azul de piedra; II, vértebra marfil; III, **cráneo de mosasaurio** con ojos y gemas de zafiro y la mandíbula abierta con dientes; ★, amonites de zafiro con aro plateado y cristales; ★★, Corazón del Océano: perla azul brillante dentro de una concha abierta, con cristales y burbujas.
 **Dónde:** `ServerStorage.FossilBuilder` (función nueva `buildRare`; `FB.build` la usa para «Raro») y `ServerStorage.Models.Fosiles.R-I/R-II/R-III/R-S1/R-S2` (regenerados).
