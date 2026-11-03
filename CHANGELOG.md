@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · seguo970 (Claude) · Fósil Poco común nuevo (según su ficha de ChatGPT)
+**Qué:** Los 5 fósiles Poco común siguen ahora su ficha. La base es una losa de piedra con musgo hecha de ladrillos con studs (capa de abajo gris oscuro, encima bloques grises y verde musgo, con terrazas que suben hacia atrás a la izquierda), con rocas grises, setas rojas con puntos blancos y helechos de bloques. Encima: I, losa de piedra de pie con un helecho grabado; II, diente de raptor marfil curvo; III, **garra** grande curva de marfil con la punta esmeralda y un grupo de cristales verdes; ★, helecho esmeralda brillante (neón) con cristales; ★★, colmillo de jade en media luna con cristales.
+**Dónde:** `ServerStorage.FossilBuilder` (función nueva `buildUncommon`; `FB.build` la usa para «Poco común») y `ServerStorage.Models.Fosiles.PC-I/PC-II/PC-III/PC-S1/PC-S2` (regenerados).
+**Probado:** las 5 vistas de cerca en Edit; en Play salen con su cartel en la base.
+**Notas:** la garra y el colmillo se dibujan con `arc()`, que va en espejo para que la punta quede a la derecha mirando desde el frente (−Z).
+
 ## 2026-11-03 · seguo970 (Claude) · Fósil Común nuevo (según su ficha de ChatGPT)
 **Qué:** Los 5 fósiles comunes siguen ahora la ficha de seguo970. La base es una losa de tierra de ladrillos con studs (capa de abajo oscura, dos marrones encima) con un montículo detrás, piedras grises y matas de hierba. Encima: I, huella de 3 dedos hundida en la tierra; II, huesito marfil; III, **cráneo de dodo** grande (pico ganchudo hacia abajo, cuenca del ojo oscura, mandíbula con dientes); ★, huella de oro con pepitas de oro; ★★, huevo moteado en un nido de ramitas con pepitas.
 **Dónde:** `ServerStorage.FossilBuilder` (función nueva `buildCommon`; `FB.build` la usa para la rareza Común en vez del objeto genérico) y `ServerStorage.Models.Fosiles.C-I/C-II/C-III/C-S1/C-S2` (regenerados; el resto de rarezas no se ha tocado).
