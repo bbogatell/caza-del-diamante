@@ -2,6 +2,29 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 193 · Dragosaurio Aurora Bebé (Evento), hecho desde cero
+
+**Qué:** el bicho 193, el primero de Evento, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO BEBÉ chibi muy mono, blanco y azul hielo. Tiene:
+- ojazos azules con brillos, mofletes rosas y la boquita abierta;
+- una cresta de CRISTALES DE HIELO en la cabeza y el lomo;
+- marcas de copo de nieve;
+- ALITAS azul hielo y una COLA ESPONJOSA con cristales y una borla brillante;
+- una AURORA BOREAL ENORME detrás, con 3 capas de cortinas verdes, rosas y moradas de neón que ondulan;
+- como base, un pequeño glaciar con nieve, bloques de hielo y cristales.
+
+Partículas: cortinas de aurora 40, copos 60, destellos 50, estrellas 40, vaho 20, corazones 10 y luz pulsante.
+
+Animaciones:
+- aletea con las alitas (Wing);
+- GlowMove "flare": la aurora brilla y salen corazones (GlowFx);
+- Waddle.
+
+**Dónde:** `ServerStorage.CreatureBuilders.DragosaurioAuroraBebe` (Kit.new(193)) y `ServerStorage.Models.Bichos.193`. Tiene 234 piezas y mide 12 studs contando la aurora.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Las alas y la cabeza se mueven, la aurora cambia de brillo y no hay ningún error.
+
+**Notas:** las cortinas de la aurora son de la base (Role Base), así que no se mueven con el bicho.
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 192 · Mecha Escamaterror (Mutante), hecho desde cero
 
 **Qué:** el bicho 192, el último Mecha, construido desde cero siguiendo su ficha de ChatGPT: el Escamaterror convertido en ROBOT DE GUERRA COLOSAL, erguido sobre dos patas. Tiene:
