@@ -2,6 +2,29 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 198 · Dragosaurio Ascua (Evento), hecho desde cero · LISTA COMPLETA
+
+**Qué:** el bicho 198, el último de la lista, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO COLOSAL DE FUEGO, rojo y naranja. Tiene:
+- ARMADURA DE ROCA FUNDIDA partida por vetas de lava que brillan, con llamas en el lomo y un núcleo de fuego en el pecho;
+- las ALAS ABIERTAS POR COMPLETO HECHAS DE LLAMAS: 3 filas de plumas de fuego naranjas, rojas y de lava con puntas amarillas;
+- una COLA DE LAVA con costra y llamas;
+- una CORONA DE LLAMAS;
+- ojos ardientes, cuernos y garras incandescentes;
+- como base, un volcán en erupción con ríos de lava, peñascos, un cono con cráter y una COLUMNA DE FUEGO (Beam).
+
+Partículas: fuego enorme 250, brasas 200, explosiones 5, humo 120, ceniza 100, lava 80, chispas 150, calor, rocas incandescentes 10, relámpagos rojos 3, anillos de fuego y pulsos.
+
+Animaciones:
+- WingBurst: las alas de fuego estallan en llamas (BurstFx);
+- FireBreath: escupe fuego y ruge (FlameFx);
+- Stomp: temblor.
+
+**Dónde:** `ServerStorage.CreatureBuilders.DragosaurioAscua` (Kit.new(198)) y `ServerStorage.Models.Bichos.198`. Tiene 375 piezas y mide 22 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Las alas, la cabeza y las patas se mueven y no hay ningún error.
+
+**Notas:** con este quedan hechos LOS 198 BICHOS de docs/BICHOS_DINOSAURIOS.md: hay un modelo en `ServerStorage.Models.Bichos` para cada número del 1 al 198. Queda pendiente en los scripts del juego la aparición especial de los Divinos y del 174 (temblor de cámara, explosión al aparecer).
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 197 · Dragosaurio del Vacío (Evento), hecho desde cero
 
 **Qué:** el bicho 197, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO COLOSAL negro espacial salpicado de estrellas, con bordes morados de neón. Tiene:
