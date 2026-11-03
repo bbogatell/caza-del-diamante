@@ -53,5 +53,6 @@
 - **Regla de estilo:** solo el interior de las parcelas y el campo dentro de la barrera llevan material realista; todo lo demás, textura de studs `rbxassetid://6348166067`.
 - `workspace.Mountains` (fuera de `Map`): montañas de fondo de bloques con studs (hierba/roca/nieve), solo decorado (sin colisión). `Mountains.Fill`: bloques que tapan restos de terreno detrás de las paredes del lobby y en las esquinas. Sustituyen al terreno liso de alrededor; copia del terreno original en `ServerStorage.MountainsBackup`. `Finale.buildHell` las borra.
 - `ServerStorage.Models.Bichos|Fosiles|Palas`: aquí se dejan los modelos finales con el id como nombre; si no hay, el juego genera uno provisional.
+- `ServerStorage.FossilBuilder`: genera los 60 modelos de `Models.Fosiles`. Hay un diseño por rareza y el objeto de encima depende del `look` de cada fósil. Para rehacerlos: `require(game.ServerStorage.FossilBuilder).buildAll()`. Borra y vuelve a crear los 60, así que si hay modelos hechos a mano quítalos antes.
 - **StreamingEnabled** está activado: en el cliente, buscar las piezas del mapa con `WaitForChild`/`FindFirstChild`.
 - `ServerStorage.Finale`: plataforma del cielo y el infierno (con `HellBounds`). `ServerStorage.MapAssets`: modelos del Creator Store (sin scripts).

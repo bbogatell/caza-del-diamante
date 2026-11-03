@@ -2,6 +2,33 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · seguo970 (Claude) · Un diseño de fósil para cada rareza
+
+**Qué:** cada una de las 12 rarezas tiene ahora su propio diseño de fósil. Antes todos eran la misma roca de studs con un relieve. Encima de cada base va el objeto propio del fósil: huella, hueso, cráneo, huevo, orbe, cristal, cofre, diente, garra, cuerno, helecho, amonites, ámbar, roca, pizza, taza, vial o cápsula. Los niveles I, II y III llevan más detalle según suben, y los ★ y ★★ llevan gemas y anillos de más.
+
+| Rareza | Diseño |
+|---|---|
+| Común | Terrón de tierra con piedrecitas y hierba. |
+| Poco común | Piedra con musgo, helechos y esmeraldas. |
+| Raro | Roca marina azul sobre arena, con corales, conchas y zafiros. |
+| Épico | Geoda abierta con amatistas de neón alrededor. |
+| Legendario | Altar dorado escalonado, con columnas, vetas y pepitas de oro. |
+| Mítico | Roca volcánica negra con grietas de lava y un charco de lava. |
+| Cósmico | Meteorito con estrellas de neón y anillos en órbita. |
+| Secreto | Altar de obsidiana con runas moradas, púas y cadena. |
+| Eterno | Santuario blanco con cristales y un anillo rúnico dorado flotando. |
+| Divino | Nube con disco de oro, alitas, halo y rayos de luz. |
+| Brainrot | Bloque de caramelo arcoíris con virutas, ojos saltones y una cereza. |
+| Mutante | Cápsula de contención con baba tóxica, tuberías y franjas de peligro. |
+
+**Dónde:**
+- Módulo nuevo `ServerStorage.FossilBuilder`. `buildAll()` crea los 60 modelos en `ServerStorage.Models.Fosiles.<id>`, que `Looks.fossil` ya usaba si existían.
+- `Looks` no cambia: sigue añadiendo la luz, las partículas de rareza, el contorno de los raros y el letrero.
+
+**Probado:**
+- En Edit, vista del III de cada rareza.
+- En Play, con `/fosil … base`: C-III, M-S2, CO-S1, B-II, MU-S2 y D-III. Salen en la base con su diseño, el temporizador y el letrero, sin errores.
+- No se han mirado los 60 uno a uno ni cómo se ven al llevarlos encima.
 ## 2026-11-03 · bbogatell (Claude) · Bichos: caras que parpadean (z-fighting) y humo que parpadea, arreglados en los 198
 
 **Qué:**
