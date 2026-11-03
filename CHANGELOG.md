@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · seguo970 (Claude) · Fósil Raro nuevo (según su ficha de ChatGPT)
+**Qué:** Los 5 fósiles Raro siguen ahora su ficha del fondo del mar. La base es una losa de ladrillos con studs (capa de abajo azul marino, encima roca gris azulada y arena, con terrazas detrás), con corales rosa y naranja, algas verdes onduladas, conchas, una estrella de mar y burbujas. Encima: I, amonites azul de piedra; II, vértebra marfil; III, **cráneo de mosasaurio** con ojos y gemas de zafiro y la mandíbula abierta con dientes; ★, amonites de zafiro con aro plateado y cristales; ★★, Corazón del Océano: perla azul brillante dentro de una concha abierta, con cristales y burbujas.
+**Dónde:** `ServerStorage.FossilBuilder` (función nueva `buildRare`; `FB.build` la usa para «Raro») y `ServerStorage.Models.Fosiles.R-I/R-II/R-III/R-S1/R-S2` (regenerados).
+**Probado:** vistos de cerca en Edit el II, el III, el ★ y el ★★ (el I es el mismo amonites con colores de piedra). En Play salen los 5 con su cartel y sus piezas, comprobado desde el servidor; la captura de Play salió negra porque Studio no estaba delante.
+**Notas:** el hocico del cráneo apunta a −X (a la derecha mirando desde el frente).
+
 ## 2026-11-03 · seguo970 (Claude) · Fósil Poco común nuevo (según su ficha de ChatGPT)
 **Qué:** Los 5 fósiles Poco común siguen ahora su ficha. La base es una losa de piedra con musgo hecha de ladrillos con studs (capa de abajo gris oscuro, encima bloques grises y verde musgo, con terrazas que suben hacia atrás a la izquierda), con rocas grises, setas rojas con puntos blancos y helechos de bloques. Encima: I, losa de piedra de pie con un helecho grabado; II, diente de raptor marfil curvo; III, **garra** grande curva de marfil con la punta esmeralda y un grupo de cristales verdes; ★, helecho esmeralda brillante (neón) con cristales; ★★, colmillo de jade en media luna con cristales.
 **Dónde:** `ServerStorage.FossilBuilder` (función nueva `buildUncommon`; `FB.build` la usa para «Poco común») y `ServerStorage.Models.Fosiles.PC-I/PC-II/PC-III/PC-S1/PC-S2` (regenerados).
