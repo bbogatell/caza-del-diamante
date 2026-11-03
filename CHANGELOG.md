@@ -2,6 +2,29 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 197 · Dragosaurio del Vacío (Evento), hecho desde cero
+
+**Qué:** el bicho 197, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO COLOSAL negro espacial salpicado de estrellas, con bordes morados de neón. Tiene:
+- AGUJEROS EN EL CUERPO por los que se ve EL ESPACIO: 4 portales con borde morado y una galaxia en espiral rosa, azul y morada que GIRA dentro (Ring siguiendo el cuerpo);
+- ALAS DE VACÍO con grietas de energía morada y estrellas;
+- CUERNOS DE CRISTAL OSCURO con puntas de neón;
+- crestas de cristal en el lomo;
+- ojos morados brillantes;
+- como base, una roca flotando en el espacio con un portal morado de anillos, fragmentos y rocas flotantes, además de una columna morada.
+
+Partículas: estrellas 150, portales pequeños 20, destellos 100, polvo cósmico 100, nebulosa 40, cometas 5, distorsión, relámpagos morados 3, absorción (emisor esférico hacia dentro), anillos morados y pulsos.
+
+Animaciones:
+- las galaxias de los agujeros giran;
+- GlowMove "flare": los agujeros absorben estrellas y brillan (GlowFx);
+- Roar: abre las alas y ruge (RoarFx).
+
+**Dónde:** `ServerStorage.CreatureBuilders.DragosaurioVacio` (Kit.new(197)) y `ServerStorage.Models.Bichos.197`. Tiene 455 piezas y mide 19 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Las alas y la cabeza se mueven, las galaxias cambian de brillo y no hay ningún error.
+
+**Notas:** —
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 196 · Dragosaurio Taladro (Evento), hecho desde cero
 
 **Qué:** el bicho 196, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO COLOSAL amarillo minero y negro SALIENDO DE UN AGUJERO en el suelo de una mina. Tiene:
