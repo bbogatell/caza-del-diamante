@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 196 · Dragosaurio Taladro (Evento), hecho desde cero
+
+**Qué:** el bicho 196, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO COLOSAL amarillo minero y negro SALIENDO DE UN AGUJERO en el suelo de una mina. Tiene:
+- un TALADRO GIGANTE plateado en el hocico, con espiral, que GIRA (Ring siguiendo la cabeza);
+- GARRAS DE PICO DE MINERO en guanteletes;
+- un CASCO DE MINERO con LINTERNA encendida (SpotLight);
+- blindaje de minero en bandas con remaches y ojos naranjas;
+- la cola enroscada saliendo del agujero;
+- alrededor del agujero, rocas, grietas brillantes, gemas de colores, vías de mina y un puntal de madera con farol.
+
+Partículas: chispas del taladro 150, rocas que saltan 30, polvo 100, gemas que salen 10, humo 50, destellos 50, luz de la linterna y anillos.
+
+Animaciones:
+- el taladro gira;
+- Pounce: excava y salen gemas (SwipeFx).
+
+**Dónde:** `ServerStorage.CreatureBuilders.DragosaurioTaladro` (Kit.new(196)) y `ServerStorage.Models.Bichos.196`. Tiene 192 piezas y mide 17 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). El taladro da la vuelta completa (12 sectores), los brazos se mueven y no hay ningún error.
+
+**Notas:** lleva NoWander, porque está metido en su agujero.
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 195 · Dragosaurio Chamuscado (Evento), hecho desde cero
 
 **Qué:** el bicho 195, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO ENORME de escamas quemadas, negras y gris carbón. Tiene:
