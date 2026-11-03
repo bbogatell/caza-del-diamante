@@ -2,6 +2,29 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 189 · Mecha Reptador (Mutante), hecho desde cero
+
+**Qué:** el bicho 189, construido desde cero siguiendo su ficha de ChatGPT: el Reptador Mutante convertido en ROBOT. Tiene:
+- cuerpo de cocodrilo blindado gris metal y negro, con tiras de luz roja de neón, aletas y un núcleo rojo en el pecho;
+- SEIS PATAS MECÁNICAS DE ARAÑA, con rodillas altas, pistones y luces;
+- un CAÑÓN GATLING en el lomo cuyos 6 cañones GIRAN (Ring), con caja y cinta de munición;
+- la cola de segmentos enroscada hacia arriba, acabada en cuchilla;
+- cabeza de cocodrilo robot con ojos rojos y la boca brillante;
+- como base, un hangar militar con luces de alarma rojas, una diana roja y franjas de peligro.
+
+Partículas: chispas 100, humo 60, casquillos 20, fogonazos del cañón 5, vapor 40, luces de alarma, destellos 50, polvo 40 y ondas.
+
+Animaciones:
+- el gatling gira;
+- corretea con las patas de araña (StepRate rápido);
+- Uncoil: dispara el gatling (CosmicBeam y BeamFx).
+
+**Dónde:** `ServerStorage.CreatureBuilders.MechaReptador` (Kit.new(189)) y `ServerStorage.Models.Bichos.189`. Tiene 220 piezas y mide 16 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, los cañones giran, dispara (el rayo llega a transparencia 0,1) y no hay ningún error.
+
+**Notas:** —
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 188 · Mecha Sapo-saurio (Mutante), hecho desde cero
 
 **Qué:** el bicho 188, construido desde cero siguiendo su ficha de ChatGPT: el Sapo-saurio convertido en SAPO ROBOT plateado y naranja. Tiene:
