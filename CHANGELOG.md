@@ -2,6 +2,27 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 195 · Dragosaurio Chamuscado (Evento), hecho desde cero
+
+**Qué:** el bicho 195, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO ENORME de escamas quemadas, negras y gris carbón. Tiene:
+- GRIETAS DE BRASAS naranjas de neón en zigzag por todo el cuerpo;
+- pinchos carbonizados y el pecho que brilla;
+- ojos rojos;
+- ALAS ROTAS Y HUMEANTES, con agujeros que echan humo, un dedo partido con la punta en brasa y bordes quemados;
+- como base, un campo de rocas volcánicas quemadas con vetas de lava y peñascos con brasas.
+
+Partículas: humo 100, brasas 80, ceniza 80, chispas 60, fuego pequeño 40, calor, grietas brillantes, rocas 10 y aura naranja.
+
+Animaciones:
+- GlowMove "flare": las grietas se encienden (GlowFx);
+- WingBurst: sacude las alas rotas y suelta ceniza (BurstFx).
+
+**Dónde:** `ServerStorage.CreatureBuilders.DragosaurioChamuscado` (Kit.new(195)) y `ServerStorage.Models.Bichos.195`. Tiene 377 piezas y mide 15 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Las alas y la cabeza se mueven, las grietas cambian de brillo y no hay ningún error.
+
+**Notas:** —
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 194 · Dragosaurio Sombra (Evento), hecho desde cero
 
 **Qué:** el bicho 194, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-RAPTOR ENORME HECHO DE SOMBRA negra. Tiene:
