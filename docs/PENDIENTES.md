@@ -10,6 +10,7 @@
 - [ ] Revisar las normas de Roblox sobre el premio en Robux y redactar las condiciones del premio.
 - [ ] Subir los paquetes de monedas con Robux (5K/50K/500K se han quedado cortos con los precios nuevos).
 - [ ] Borrar `StarterPlayerScripts.DebugLevelKey` (o dejarlo, solo funciona en Studio).
+- [ ] Borrar `workspace.PasarelaFosiles` (seguo970, 03/11): pasarela flotante (y = 300) con los 60 fósiles en fila para revisarlos. Su script solo lleva al jugador allí en Studio, pero las piezas se publicarían igual.
 
 ## Bugs / a medias
 - [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
