@@ -2,6 +2,27 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 190 · Mecha Cocodonte (Mutante), hecho desde cero
+
+**Qué:** el bicho 190, construido desde cero siguiendo su ficha de ChatGPT: el Cocodonte convertido en COCODRILO ROBOT COLOSAL. Tiene:
+- BLINDAJE CON REMACHES verde militar y plateado, con crestas y tiras de luz amarilla de neón;
+- MANDÍBULAS DE SIERRA: filas de dientes de sierra arriba y abajo, y dos SIERRAS CIRCULARES que GIRAN en las comisuras (Ring siguiendo la cabeza);
+- un TANQUE DE COMBUSTIBLE doble amarillo en la espalda, con bandas, tapones, franjas y un tubo hasta el cuello;
+- ojos amarillos y rodillas con luz;
+- como base, un taller de robots con caja de herramientas, llave inglesa, focos amarillos y franjas de peligro.
+
+Partículas: chispas de la sierra 150, humo 80, vapor 60, aceite 20, destellos 60, luces, polvo 60, virutas 40, anillos y pulsos.
+
+Animaciones:
+- las sierras giran;
+- Chomp: muerde con las mandíbulas de sierra.
+
+**Dónde:** `ServerStorage.CreatureBuilders.MechaCocodonte` (Kit.new(190)) y `ServerStorage.Models.Bichos.190`. Tiene 357 piezas y mide 18 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, las sierras dan la vuelta completa (12 sectores), la mandíbula se abre hasta unos 58° y no hay ningún error.
+
+**Notas:** el 191 (Mecha Krakenoide) ya estaba hecho, así que el siguiente es el 192.
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 189 · Mecha Reptador (Mutante), hecho desde cero
 
 **Qué:** el bicho 189, construido desde cero siguiendo su ficha de ChatGPT: el Reptador Mutante convertido en ROBOT. Tiene:
