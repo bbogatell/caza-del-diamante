@@ -2,6 +2,29 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 187 · Mecha Larva-saurio (Mutante), hecho desde cero
+
+**Qué:** el bicho 187, el primer Mecha, construido desde cero siguiendo su ficha de ChatGPT: la Larva-saurio convertida en GUSANO ROBOT. Tiene:
+- 8 segmentos metálicos plateados y verdes, con anillos de neón verde, placas, remaches y luces en la barriga;
+- ORUGAS DE TANQUE en lugar de patas: dos unidades con eslabones, luces y 5 ruedas cada una que GIRAN (Ring siguiendo el cuerpo);
+- tubos de escape y bracitos robot;
+- cabeza de dinosaurio robot con ojos verdes de neón, rejillas y una ANTENA con luz;
+- MANDÍBULA DE PINZA: dos garras curvas con dientes;
+- como base, una plataforma de fábrica robótica con franjas de peligro, luces verdes y dos brazos mecánicos.
+
+Partículas: chispas 60, humo de escape 50, vapor 30, luces parpadeantes, aceite 10, destellos 30 y polvo de las orugas 30.
+
+Animaciones:
+- las ruedas de las orugas giran;
+- Chomp: cierra la pinza y suelta chispas;
+- se retuerce (TailSway, Waddle).
+
+**Dónde:** `ServerStorage.CreatureBuilders.MechaLarvaSaurio` (Kit.new(187)) y `ServerStorage.Models.Bichos.187`. Tiene 221 piezas y mide 12 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Las ruedas dan la vuelta completa (12 sectores), la pinza se abre hasta unos 62° y no hay ningún error.
+
+**Notas:** —
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 186 · Escamaterror (Mutante), hecho desde cero
 
 **Qué:** el bicho 186, el último Mutante orgánico, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO COLOSAL negro. Tiene:
