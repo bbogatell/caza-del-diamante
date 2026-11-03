@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 188 · Mecha Sapo-saurio (Mutante), hecho desde cero
+
+**Qué:** el bicho 188, construido desde cero siguiendo su ficha de ChatGPT: el Sapo-saurio convertido en SAPO ROBOT plateado y naranja. Tiene:
+- blindaje en placas con rejillas azules y tornillos;
+- una CABEZA DE CERATOPSIO metálica con gola de pinchos, tres cuernos y OJOS AZULES DE NEÓN;
+- PATAS DE RESORTE HIDRÁULICO: muelles en espiral con pistón y pies con luces;
+- una LENGUA MECÁNICA EXTENSIBLE de eslabones que acaba en una pinza;
+- un CAÑÓN gordo en el lomo sobre una torreta, con bobinas azules;
+- como base, una plataforma de pruebas robótica con luces azules y franjas de peligro.
+
+Partículas: chispas 80, vapor de los resortes 50, humo 40, destellos 40, rayos 3, luces, polvo al saltar 40 y ondas.
+
+Animaciones:
+- Pounce: salta con los resortes (SwipeFx de polvo);
+- Uncoil: dispara el cañón (CosmicBeam y BeamFx).
+
+**Dónde:** `ServerStorage.CreatureBuilders.MechaSapoSaurio` (Kit.new(188)) y `ServerStorage.Models.Bichos.188`. Tiene 263 piezas y mide 14 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Anda, el cañón dispara (el rayo llega a transparencia 0,1) y no hay ningún error.
+
+**Notas:** —
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 187 · Mecha Larva-saurio (Mutante), hecho desde cero
 
 **Qué:** el bicho 187, el primer Mecha, construido desde cero siguiendo su ficha de ChatGPT: la Larva-saurio convertida en GUSANO ROBOT. Tiene:
