@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · seguo970 (Claude) · Fósil Común nuevo (según su ficha de ChatGPT)
+**Qué:** Los 5 fósiles comunes siguen ahora la ficha de seguo970. La base es una losa de tierra de ladrillos con studs (capa de abajo oscura, dos marrones encima) con un montículo detrás, piedras grises y matas de hierba. Encima: I, huella de 3 dedos hundida en la tierra; II, huesito marfil; III, **cráneo de dodo** grande (pico ganchudo hacia abajo, cuenca del ojo oscura, mandíbula con dientes); ★, huella de oro con pepitas de oro; ★★, huevo moteado en un nido de ramitas con pepitas.
+**Dónde:** `ServerStorage.FossilBuilder` (función nueva `buildCommon`; `FB.build` la usa para la rareza Común en vez del objeto genérico) y `ServerStorage.Models.Fosiles.C-I/C-II/C-III/C-S1/C-S2` (regenerados; el resto de rarezas no se ha tocado).
+**Probado:** en Play los 5 aparecen con su cartel en la base. Vistos de cerca en Edit: la huella, el hueso, el cráneo y la huella de oro. El nido ★★ solo se vio de lejos.
+**Notas:** el cráneo va escalado ×1,3 dentro de `buildCommon` (`local k = 1.3`). `buildAll()` regenera también estos cinco igual.
+
 ## 2026-11-03 · seguo970 (Claude) · Un diseño de fósil para cada rareza
 
 **Qué:** cada una de las 12 rarezas tiene ahora su propio diseño de fósil. Antes todos eran la misma roca de studs con un relieve. Encima de cada base va el objeto propio del fósil: huella, hueso, cráneo, huevo, orbe, cristal, cofre, diente, garra, cuerno, helecho, amonites, ámbar, roca, pizza, taza, vial o cápsula. Los niveles I, II y III llevan más detalle según suben, y los ★ y ★★ llevan gemas y anillos de más.
