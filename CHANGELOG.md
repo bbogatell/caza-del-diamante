@@ -2,6 +2,30 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 186 · Escamaterror (Mutante), hecho desde cero
+
+**Qué:** el bicho 186, el último Mutante orgánico, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO COLOSAL negro. Tiene:
+- ESCAMAS AFILADAS COMO CUCHILLOS con bordes verdes de neón por el cuerpo, las patas, las alas, la cola y la cabeza;
+- grietas verdes brillantes;
+- CUATRO OJOS ROJOS de neón;
+- una BOCA PARTIDA EN TRES: la mandíbula de arriba y dos mitades de abajo que se abren, con dientes y carne roja;
+- ALAS DE CARNE ROJA con venas y pinchos de hueso;
+- garras de hueso;
+- como base, las ruinas de un laboratorio destruido con escombros, baba, una tubería rota y una COLUMNA VERDE de luz (Beam).
+
+Partículas: vapor tóxico 150, chispas verdes 100, baba 100, burbujas 80, esporas 60, relámpagos verdes 5, niebla 80, gotas 40, anillos verdes y pulsos.
+
+Animaciones:
+- Roar: abre la boca en tres y ruge (RoarFx);
+- WingBurst: despliega las alas y lanza vapor tóxico (BurstFx);
+- Stomp: temblor.
+
+**Dónde:** `ServerStorage.CreatureBuilders.Escamaterror` (Kit.new(186)) y `ServerStorage.Models.Bichos.186`. Tiene 447 piezas y mide 22 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Las alas y la cabeza se mueven, la boca se abre hasta unos 64° y no hay ningún error.
+
+**Notas:** con este quedan hechos los 6 Mutantes orgánicos (181-186). Los siguientes son los Mecha (187-192; el 191 ya estaba hecho).
+
 ## 2026-11-02 · bbogatell (Claude) · Bicho 185 · Krakenoide (Mutante), hecho desde cero
 
 **Qué:** el bicho 185, construido desde cero siguiendo su ficha de ChatGPT: una MASA COLOSAL DE TENTÁCULOS morado oscuro. Tiene:
