@@ -15,6 +15,8 @@
 - [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
 - [ ] **Pala 29 nueva** (seguo970, 21/10): puesta, texturizada y animada. Falta verla en la tienda, en móvil y en la mano de otro jugador. La capa ya se mueve como tela (huesos `ShovelBone`).
 
+- [ ] **Luz de rareza de los fósiles demasiado fuerte** (seguo970, 03/11): en Play la `PointLight` que pone `Looks` a cada fósil (brillo 1,5, alcance 15) quema los colores; los diseños claros (Eterno, Divino, Brainrot) se ven casi blancos. Bajar el brillo o quitarla en las rarezas bajas.
+
 ## Sin probar
 - [ ] **Pala 28 (Pala Galáctica)** (seguo970, 21/10): seguo970 la ha visto en Play y se ve bien. Falta mirarla en la tienda, en móvil y en la mano de otro jugador. Del prompt quedan sin hacer el «aparecer» de anillos y halo al sacarla y la flotación de ±0,05 (casi no se vería).
 - [ ] Pala 30 importada (`Models.Palas.L30`, animada): rendimiento en móvil y verla en la mano de otro jugador. En la tienda se ve pálida sobre su tarjeta.

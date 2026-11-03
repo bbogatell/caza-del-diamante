@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · seguo970 (Claude) · Fósiles Brainrot y Mutante nuevos (según sus fichas de ChatGPT) — rarezas completas
+**Qué:** Con estas dos, las 12 rarezas tienen ya su diseño hecho a partir de una ficha de ChatGPT.
+- **Brainrot (pista de baile de caramelo):** losetas de colores con studs, borde de bastones de caramelo, ojos saltones, gominolas, ositos de goma y notas musicales; el III y el ★★ llevan además piruletas gigantes y un altavoz con ojos. Encima: I huevo disco de espejitos con ojos, II porción de pizza fosilizada con pepperoni y ojos, III **Cappuccino Jurásico** (taza sonriente con ojos saltones, brazos, cucharilla de hueso, espuma y bailarina), ★ bola disco colgando con un cráneo dentro y rayos de colores, ★★ pizza de oro con pepperoni de rubí, gafas de sol y corona.
+- **Mutante (laboratorio de contención):** plataforma de metal con franjas de peligro, rejilla, charcos de ácido, barriles tóxicos y tubos de ensayo; el III y el ★★ llevan detrás la pared del laboratorio (pantalla con dino, alarmas, tuberías y brazo robótico amarillo). Cada uno va sobre un pedestal con franjas de peligro. Encima: I vial con un hueso, II cápsula con embrión de dino, III **Núcleo Mecha** (esfera verde en una jaula de metal con mangueras), ★ tanque de clonación con dino y cable, ★★ reactor Omega con anillos de energía, chispas, alarmas y símbolo de radiación.
+**Dónde:** `ServerStorage.FossilBuilder` (funciones nuevas `buildBrainrot` y `buildMutant`) y `ServerStorage.Models.Fosiles.B-*`, `MU-*` (regenerados).
+**Probado:** las 10 vistas en Edit. En Play se crean los **60 fósiles** sin errores, 5 por cada diseño.
+**Notas:** el problema de la luz de rareza sigue: en Play la `PointLight` de `Looks` quema mucho los colores claros (Brainrot, Eterno y Divino casi blancos). Se arregla bajando su brillo (pendiente).
+
 ## 2026-11-03 · seguo970 (Claude) · Fósiles Mítico, Cósmico, Secreto, Eterno y Divino nuevos (según sus fichas de ChatGPT)
 **Qué:** Claude generó las fichas en ChatGPT y construyó cada rareza a partir de ellas, con la misma base de ladrillos con studs que las anteriores.
 - **Mítico (volcán):** basalto con grietas de lava, rocas negras y brasas; el III y el ★★ llevan detrás un cono de volcán con lava y humo. Encima: I ámbar rojo con un bicho dentro, II garra chamuscada con punta de rubí, III **corazón de lava** (esfera de bloques negros con lava entre ellos), ★ ámbar de fénix con pluma y alas de fuego, ★★ corazón en un cráter con anillo y corona de llamas.
