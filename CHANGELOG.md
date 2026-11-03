@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · seguo970 (Claude) · Fósiles revisados en una pasarela (ya borrada)
+**Qué:** Se montó una pasarela flotante con los 60 fósiles en fila para que seguo970 los recorriera en Play. Le gustaron todos sin cambios y se borró después.
+**Dónde:** `workspace.PasarelaFosiles` (temporal, ya borrada). No queda nada de pruebas en `workspace`, y los 60 modelos siguen en `ServerStorage.Models.Fosiles`.
+**Probado:** recorrida en Play por seguo970.
+
 ## 2026-11-03 · seguo970 (Claude) · Fósiles Brainrot y Mutante nuevos (según sus fichas de ChatGPT) — rarezas completas
 **Qué:** Con estas dos, las 12 rarezas tienen ya su diseño hecho a partir de una ficha de ChatGPT.
 - **Brainrot (pista de baile de caramelo):** losetas de colores con studs, borde de bastones de caramelo, ojos saltones, gominolas, ositos de goma y notas musicales; el III y el ★★ llevan además piruletas gigantes y un altavoz con ojos. Encima: I huevo disco de espejitos con ojos, II porción de pizza fosilizada con pepperoni y ojos, III **Cappuccino Jurásico** (taza sonriente con ojos saltones, brazos, cucharilla de hueso, espuma y bailarina), ★ bola disco colgando con un cráneo dentro y rayos de colores, ★★ pizza de oro con pepperoni de rubí, gafas de sol y corona.
