@@ -2,6 +2,30 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 192 · Mecha Escamaterror (Mutante), hecho desde cero
+
+**Qué:** el bicho 192, el último Mecha, construido desde cero siguiendo su ficha de ChatGPT: el Escamaterror convertido en ROBOT DE GUERRA COLOSAL, erguido sobre dos patas. Tiene:
+- ESCAMAS DE ACERO negras y plateadas con pinchos de borde verde y tiras de luz verde de neón;
+- ALAS DE REACTOR con cuchillas, paneles de FUEGO AZUL y propulsores;
+- un LÁSER VERDE en la boca (CosmicBeam, con partículas que se cargan hacia dentro);
+- MISILES EN LOS HOMBROS: dos lanzadores de 4 misiles con punta roja;
+- un NÚCLEO DE REACTOR verde en el pecho, con marco;
+- patas enormes con pistones y garras, brazos robot, cola de segmentos y ojos rojos;
+- como base, una base militar destruida con escombros, luces de alarma, bidones en llamas, franjas de peligro y una COLUMNA DE LUZ verde.
+
+Partículas: fuego de los reactores 250, chispas 200, humo 150, láser que se carga, misiles de humo 5, vapor 100, destellos 150, relámpagos 5, luces de alarma, anillos verdes, pulsos y fuego del suelo.
+
+Animaciones:
+- WingBurst: enciende los reactores de las alas (BurstFx de fuego azul);
+- Uncoil: carga y dispara el láser de la boca;
+- Stomp: temblor.
+
+**Dónde:** `ServerStorage.CreatureBuilders.MechaEscamaterror` (Kit.new(192)) y `ServerStorage.Models.Bichos.192`. Tiene 453 piezas y mide 24 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Las alas y la cabeza se mueven, el láser se dispara (transparencia hasta 0,1) y no hay ningún error.
+
+**Notas:** con este quedan hechos todos los Mutantes y Mecha (181-192). Los siguientes son los de Evento (193-198).
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 190 · Mecha Cocodonte (Mutante), hecho desde cero
 
 **Qué:** el bicho 190, construido desde cero siguiendo su ficha de ChatGPT: el Cocodonte convertido en COCODRILO ROBOT COLOSAL. Tiene:
