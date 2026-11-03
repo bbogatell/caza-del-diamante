@@ -2,6 +2,29 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bicho 194 · Dragosaurio Sombra (Evento), hecho desde cero
+
+**Qué:** el bicho 194, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-RAPTOR ENORME HECHO DE SOMBRA negra. Tiene:
+- los BORDES DESHACIÉNDOSE EN HUMO: jirones semitransparentes por el cuerpo, las patas, la cola y la cabeza;
+- costuras moradas tenues;
+- OJOS MORADOS DE NEÓN que brillan;
+- ALAS DE SOMBRA rasgadas, con huecos, borde morado y jirones;
+- garras de raptor con la garra en hoz y la boca abierta que brilla en morado;
+- contorno morado (Highlight);
+- como base, unas ruinas oscuras con pilares rotos, runas moradas y una LUNA MORADA detrás.
+
+Partículas: humo negro 100, sombras 60, destellos morados 50, ojos en la niebla, niebla 60, estrellas negras 30 y distorsión.
+
+Animaciones:
+- WingBurst: se deshace en una nube de humo y reaparece (BurstFx);
+- Roar: abre las alas y ruge (RoarFx).
+
+**Dónde:** `ServerStorage.CreatureBuilders.DragosaurioSombra` (Kit.new(194)) y `ServerStorage.Models.Bichos.194`. Tiene 264 piezas y mide 14 studs.
+
+**Probado:** en Play colocado en la base (Looks.creature + etiqueta BaseCreature). Las alas, la cabeza y las patas se mueven y no hay ningún error.
+
+**Notas:** —
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 193 · Dragosaurio Aurora Bebé (Evento), hecho desde cero
 
 **Qué:** el bicho 193, el primero de Evento, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO BEBÉ chibi muy mono, blanco y azul hielo. Tiene:
