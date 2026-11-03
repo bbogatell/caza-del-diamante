@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · seguo970 (Claude) · Fósil Legendario nuevo (según su ficha de ChatGPT)
+**Qué:** Los 5 fósiles Legendario siguen ahora su ficha de santuario de oro. La base es de ladrillos con studs (capa de abajo marrón oscuro con un ribete dorado, encima arenisca, con un escalón de altar detrás y una alfombra roja con bordes de oro por el centro), con montones de monedas, rubíes, lingotes y destellos dorados. El III y el ★★ llevan detrás el templo: dos columnas con capiteles de oro, una pared de ladrillo, un arco con un sol dorado y dos antorchas. Encima: I, hueso de oro sobre un cojín rojo con borlas; II, huevo de oro grabado sobre un soporte de piedra; III, **cráneo de T-Rex de oro** con ojos de rubí, mandíbula abierta y corona de rey; ★, lingote gigante con un hueso grabado; ★★, trono de huesos con cojín rojo y un cráneo de oro pequeño arriba.
+**Dónde:** `ServerStorage.FossilBuilder` (función nueva `buildLegendary`; `FB.build` la usa para «Legendario») y `ServerStorage.Models.Fosiles.L-I/L-II/L-III/L-S1/L-S2` (regenerados).
+**Probado:** las 5 vistas de cerca en Edit. En Play salen con su cartel en la base.
+
 ## 2026-11-03 · seguo970 (Claude) · Fósil Épico nuevo (según su ficha de ChatGPT)
 **Qué:** Los 5 fósiles Épico siguen ahora su ficha de geoda de amatista. La base es de ladrillos con studs (capa de abajo morado oscuro, encima gris oscuro, gris y lila), con racimos de cristales de amatista y destellos morados flotando. El III y el ★★ llevan detrás el arco de la geoda partida (corteza gris y lila, forro de cristales y fondo morado). Encima: I, huevo de piedra agrietado; II, cuerno marfil con punta de amatista brillante; III, **cráneo de triceratops** (gola con pinchos y gemas, cuernos de ceja y de nariz, pico ganchudo, ojos de amatista); ★, huevo de amatista con marco dorado; ★★, el cráneo con corona dorada de gemas.
 **Dónde:** `ServerStorage.FossilBuilder` (función nueva `buildEpic`; `FB.build` la usa para «Épico») y `ServerStorage.Models.Fosiles.E-I/E-II/E-III/E-S1/E-S2` (regenerados).
