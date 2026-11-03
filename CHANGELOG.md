@@ -2,6 +2,19 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-03 · bbogatell (Claude) · Bichos: caras que parpadean (z-fighting) y humo que parpadea, arreglados en los 198
+
+**Qué:**
+- **Z-fighting:** había muchas piezas con una cara exactamente en el mismo plano que otra de distinto color o material, y en pantalla parpadeaban. Nueva función `Kit.unZFight(m)`: busca en el modelo las caras planas (bloques, cuñas y tapas de cilindros) que miran al mismo lado, están en el mismo plano (a menos de 0,004) y se solapan, y solo si se ven distintas (color, material o transparencia). A cada cara le da una «capa»: las que se tocan, capas distintas, empezando por las grandes, así el detalle queda encima del cuerpo y una cadena de paneles alterna 0/1. Cada capa ensancha la pieza 0,015 por lado en ese eje. Pasada en los 198 modelos: de **28.648** parejas que parpadeaban quedan **378** (casi todas en sitios tapados). La mayoría de piezas crecen 0,015 por lado; como mucho, 43 piezas 0,075 por lado.
+- **Humo y niebla que parpadeaban:** casi todos los emisores de humo nacían ya medio visibles (transparencia 0,4 en el instante 0), así que cada partícula aparecía de golpe. Nueva función `Kit.softParticles(m)`: a las partículas suaves (humo, almas, orbes, y cualquiera de tamaño ≥ 0,5) les añade una entrada suave (el primer 15 % de su vida) y una salida que termina en 1. Aplicado a 1.063 emisores.
+- `Kit.finish` ahora llama a las dos funciones, así que los bichos nuevos o reconstruidos ya salen arreglados.
+
+**Dónde:** `ServerStorage.CreatureBuilders.Kit` (unZFight, softParticles, finish) y los 198 modelos de `ServerStorage.Models.Bichos`. Copia de los modelos de antes en `ServerStorage.CopiasSeguridad.2026-11-03_Bichos_antes_zfighting`.
+
+**Probado:** en Play, con los 198 en fila: se ven igual que antes, sin piezas raras, y no hay ningún error.
+
+**Notas:** también hay un script temporal `ServerScriptService.TEMP_ExpoBichos`, que solo funciona en Studio: monta una plataforma en el cielo con los 198 bichos en fila para verlos todos y te da velocidad alta, cambiando solo el atributo SpeedStat, sin tocar los datos guardados. No es parte del juego: se puede borrar cuando ya no haga falta.
+
 ## 2026-11-03 · bbogatell (Claude) · Bicho 198 · Dragosaurio Ascua (Evento), hecho desde cero · LISTA COMPLETA
 
 **Qué:** el bicho 198, el último de la lista, construido desde cero siguiendo su ficha de ChatGPT: un DRAGÓN-DINOSAURIO COLOSAL DE FUEGO, rojo y naranja. Tiene:
