@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-04 · bbogatell (Claude) · Exposición temporal: ahora enseña los fósiles
+
+**Qué:** el script temporal de la exposición (antes `TEMP_ExpoBichos`) ya no pone los 198 bichos: ahora pone en fila los 60 fósiles de `Config.FOSSILS`, en su orden, con `Looks.fossil`. Cada uno lleva un cartel con su id, su nombre y su rareza. La plataforma sigue igual (gris oscuro, lisa, en el cielo) y te pone ahí con velocidad alta.
+
+**Dónde:** `ServerScriptService.TEMP_Expo` (cambia de nombre), que solo funciona en Studio. No toca nada del juego ni los datos guardados.
+
+**Probado:** en Play salen los 60 fósiles, en una fila de 773 studs, y no hay ningún error.
+
+**Notas:** es temporal; se borra cuando ya no haga falta.
+
 ## 2026-11-03 · seguo970 (Claude) · Fósiles revisados en una pasarela (ya borrada)
 **Qué:** Se montó una pasarela flotante con los 60 fósiles en fila para que seguo970 los recorriera en Play. Le gustaron todos sin cambios y se borró después.
 **Dónde:** `workspace.PasarelaFosiles` (temporal, ya borrada). No queda nada de pruebas en `workspace`, y los 60 modelos siguen en `ServerStorage.Models.Fosiles`.
