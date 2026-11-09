@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-09 · seguo970 (Claude) · Menos brillo en los fósiles Eternos
+**Qué:** los 5 fósiles Eternos ya no se ven casi blancos: su luz de rareza es mucho más suave y se distinguen los azules del hielo.
+**Dónde:** `ServerScriptService.DiamondServer.Looks` (en `fossil`, justo después de `rarityEffects`).
+**Probado:** en Play salen los 5 con la luz nueva y se ven bien sus colores. Un fósil Divino sigue con su brillo de antes (1,35).
+**Notas:** la `PointLight` de los Eternos pasa a brillo 0,4 y alcance 10. Solo cambia la luz: las partículas y las piezas de neón siguen igual.
+
 ## 2026-11-04 · bbogatell (Claude) · Exposición temporal: ahora enseña los fósiles
 
 **Qué:** el script temporal de la exposición (antes `TEMP_ExpoBichos`) ya no pone los 198 bichos: ahora pone en fila los 60 fósiles de `Config.FOSSILS`, en su orden, con `Looks.fossil`. Cada uno lleva un cartel con su id, su nombre y su rareza. La plataforma sigue igual (gris oscuro, lisa, en el cielo) y te pone ahí con velocidad alta.
