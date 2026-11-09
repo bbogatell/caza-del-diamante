@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-09 · seguo970 (Claude) · Brillo de los fósiles progresivo por rareza
+**Qué:** la luz de los fósiles sube poco a poco con la rareza: Común es el que menos brilla y Mutante el que más. Todos los fósiles de una rareza brillan igual; antes el brillo iba a saltos y dependía también de la variante.
+**Dónde:** `ServerScriptService.DiamondServer.Looks` (en `fossil`, justo después de `rarityEffects`; sustituye al `if` de Eterno, Divino, Brainrot y Mutante).
+**Probado:** en Play los 60 fósiles dan los valores esperados, de 0,10 a 0,65. Vistos en pantalla los III de Secreto, Eterno y Mutante.
+**Notas:** brillo `0,05 + índice × 0,05` (Común 0,10 … Eterno 0,50 … Mutante 0,65) y alcance `5,5 + índice × 0,55` (de 6,1 a 12,1). Solo cambia la luz: las partículas y el neón siguen igual.
+
 ## 2026-11-09 · seguo970 (Claude) · Menos brillo en los fósiles Divino, Brainrot y Mutante
 **Qué:** los fósiles Divino, Brainrot y Mutante llevan ahora la misma luz suave que los Eternos, así que ya se ven sus colores en vez de casi blanco.
 **Dónde:** `ServerScriptService.DiamondServer.Looks` (en `fossil`, justo después de `rarityEffects`).
