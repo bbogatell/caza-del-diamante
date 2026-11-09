@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-09 · seguo970 (Claude) · La exposición de fósiles ya no te lleva allí al empezar
+**Qué:** al empezar la partida en Studio ya no te manda a la plataforma de los fósiles: apareces en el lobby, como en el juego normal. La plataforma con los 60 fósiles sigue en el cielo.
+**Dónde:** `ServerScriptService.TEMP_Expo` (quitado el paso que te colocaba en la plataforma).
+**Probado:** en Play apareces en tu parcela del lobby, en (−60, 21, −275), y `workspace.TEMP_Expo` sigue con los 60 fósiles.
+**Notas:** el script sigue dando velocidad alta (`SpeedStat` 25000) y quitando el tutorial mientras exista; solo funciona en Studio. La plataforma está en (−1500, 500, 0).
+
 ## 2026-11-09 · seguo970 (Claude) · Brillo de los fósiles progresivo por rareza
 **Qué:** la luz de los fósiles sube poco a poco con la rareza: Común es el que menos brilla y Mutante el que más. Todos los fósiles de una rareza brillan igual; antes el brillo iba a saltos y dependía también de la variante.
 **Dónde:** `ServerScriptService.DiamondServer.Looks` (en `fossil`, justo después de `rarityEffects`; sustituye al `if` de Eterno, Divino, Brainrot y Mutante).
