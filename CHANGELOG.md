@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-09 · seguo970 (Claude) · Tapado el hueco a los dos lados de la puerta del carril
+**Qué:** entre el fondo del lobby y la primera plaza del carril quedaba una zanja de terreno rocoso a cada lado de la puerta. Ahora el suelo de hierba con studs llega hasta la pared y los acantilados del carril continúan hasta el lobby.
+**Dónde:** `workspace.Map.Lane.Gateway.GapFill` (carpeta nueva con 12 piezas, z −520…−507: 4 de suelo y, a cada lado, acantilados y montaña).
+**Probado:** capturas de los dos lados y andando en Play desde la plaza y el camino hasta el relleno y contra los acantilados.
+**Notas:** está en `Gateway` y no en `Plot01`, para que `LaneKit.buildPlot(1)` no lo borre.
+
 ## 2026-11-09 · seguo970 (Claude) · Ya no se cae al vacío por los lados de la escalera del campo
 **Qué:** las paredes de la escalera que baja al campo ahora frenan al jugador; antes se podía salir por un lado y caer al vacío bajo la plaza final.
 **Dónde:** `workspace.Map.Field.Stairs` (dos piezas invisibles nuevas `StairCollider`, en x ±17). Las `SideWall` visibles siguen igual.
