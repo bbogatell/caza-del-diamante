@@ -19,6 +19,8 @@
 - [x] **Luz de rareza de los fósiles demasiado fuerte** (seguo970, 09/11): ahora es progresiva por rareza, de 0,10 (Común) a 0,65 (Mutante), en `Looks.fossil`.
 
 ## Sin probar
+- [ ] **Podio de los más ricos** (bbogatell, 09/11): verlo con 2-3 jugadores y con el ranking global real (`DiamondHunt_Coins_v1`, solo funciona publicado).
+- [ ] Fósiles de estrella sueltos: que desaparezcan a los 300 s (`FOSSIL.looseLifeStar`).
 - [ ] **Pala 28 (Pala Galáctica)** (seguo970, 21/10): seguo970 la ha visto en Play y se ve bien. Falta mirarla en la tienda, en móvil y en la mano de otro jugador. Del prompt quedan sin hacer el «aparecer» de anillos y halo al sacarla y la flotación de ±0,05 (casi no se vería).
 - [ ] Pala 30 importada (`Models.Palas.L30`, animada): rendimiento en móvil y verla en la mano de otro jugador. En la tienda se ve pálida sobre su tarjeta.
 - [ ] Con **2 jugadores**: el bate (empuje y tirar el fósil), la trampa y el hielo sobre otro jugador.

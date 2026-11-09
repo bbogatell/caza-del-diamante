@@ -2,6 +2,32 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-09 · bbogatell (Claude) · Sonido de tierra, fósiles que desaparecen, probabilidad por pala, nombres de zona, 2.º tutorial, cinta, podio de los más ricos y diamante gigante
+**Qué:**
+- **Tierra:** al cavar ya no sale el texto «+N tierra», solo los iconitos que vuelan al contador, y cada icono que llega suena con el «pop» de recoger un objeto de Minecraft (`UI.SOUNDS.dirtPickup` = 134602992766192, «minecraft item pickup»).
+- **Fósiles sueltos:** los de estrella (★ y ★★) ya no se quedan para siempre: desaparecen a los 300 s (los normales siguen a los 120 s) y cuentan para el tope de 12 sueltos. No se ve ninguna cuenta atrás.
+- **Probabilidad de fósil según la pala (oculta):** `Config.fossilChance(level)`: 10 % con la Pala 1 y baja en curva hasta el 2 % de antes con la Pala 30 (pala 5: 7,5 %, 10: 5,2 %, 15: 3,5 %, 20: 2,6 %). Ajustable con `FOSSIL.firstChance` y `FOSSIL.chanceCurve`.
+- **Carril:** quitados los 15 arcos con el nombre de la parcela. Al entrar en una parcela sale su nombre arriba, pequeño, y se va en unos 3 s, con un emoji cada vez más preocupado (😄 … 😱 💀), como «Roba un huevo».
+- **Segundo tutorial:** al acabar el primero, la primera vez que tienes 1.000 de tierra (lo que cuesta un fósil Común) sale la tarjeta «¡Ya tienes tierra! Ve a la máquina» con flechas hasta la Máquina de Fósiles; allí «Canjea tu tierra [E]» y, con la ventana abierta, «Compra un fósil Común». Termina al comprar (banner «¡ASÍ SE COMPRAN FÓSILES!») o con Saltar.
+- **Cinta:** la primera mejora (Cinta Sci-Fi) baja de 15.000 a 3.000.
+- **Podio de los más ricos:** en el sitio del cartel TOP NIVEL hay un podio de bloques (oro, plata y bronce) con los 3 jugadores con más dinero de todo el juego: su avatar (×1,8), su nombre, su dinero y una pose de emote de Roblox (Superhero Reveal, Stadium, Salute). Quitados los carteles TOP NIVEL y GANADOR.
+- **Campo del diamante:** encima, un diamante gigante (60 studs) que flota y gira, con brillo y destellos, y un texto enorme «$10.000 ROBUX».
+
+**Dónde:** `DiamondClient.UIKit` (sonido), `DiamondClient.Fx` (`flyIcons`), `DiamondClient.Main` (`handlers.Swing`, `Tutorial2Done`), `DiamondClient.Menus` (`isOpen(name)`), `DiamondClient.Tutorial`, `StarterPlayerScripts.LaneFx`, `ReplicatedStorage.Config` (`FOSSIL.firstChance/chanceCurve/looseLifeStar`, `fossilChance`, `ZONE_EMOJI`, precio de la Cinta Sci-Fi), `DiamondServer.Fossils`, `DiamondServer.Tutorial`, `DiamondServer.Data` (`DiamondHunt_Coins_v1`, `topRich`), `DiamondServer.Podium` (nuevo), `DiamondServer.Main` (quitado el código del cartel TOP NIVEL, `Tut2Skip`, arranca `Podium`), `ServerStorage.LaneKit` (ya no pone arcos), `Map.Lobby.Podium`, `Map.Field.PrizeShow`. Copias: `ServerStorage.LaneArchesBackup` (arcos), `ServerStorage.LobbyBoardsBackup` (carteles TOP NIVEL y GANADOR y una jardinera que estaba en el sitio del podio).
+
+**Probado en Play:**
+- Cavando en la parcela 1: sube la tierra, vuelan los iconos, suena el pop y no sale el número.
+- El aviso «😀 Pantano Jurásico» al entrar en la parcela 2.
+- El segundo tutorial completo: con /tierra 1200 sale la tarjeta y las flechas a la máquina; al llegar cambia el texto; al comprar un C-I se cierra.
+- El podio contigo en el 1.º, con la pose congelada y el nombre y el dinero.
+- Ningún error.
+
+**Sin probar:**
+- El podio con 2 o 3 jugadores y con el ranking global real (en Studio el DataStore está apagado; ahí salen los del servidor).
+- Que los fósiles de estrella desaparezcan a los 300 s.
+
+**Notas:** el texto del campo dice «$10.000 ROBUX» tal cual se pidió. El cartel flotante de la estatua del lobby (cuenta atrás y premio) no se ha tocado.
+
 ## 2026-11-09 · seguo970 (Claude) · La exposición de fósiles ya no te lleva allí al empezar
 **Qué:** al empezar la partida en Studio ya no te manda a la plataforma de los fósiles: apareces en el lobby, como en el juego normal. La plataforma con los 60 fósiles sigue en el cielo.
 **Dónde:** `ServerScriptService.TEMP_Expo` (quitado el paso que te colocaba en la plataforma).
