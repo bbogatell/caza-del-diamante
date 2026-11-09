@@ -2,6 +2,21 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-09 · bbogatell (Claude) · Podio nuevo: el trono de los dinosaurios, detrás del diamante
+**Qué:** el podio de los 3 más ricos se ha rehecho según la imagen de concepto del usuario y se ha movido al centro del lobby, detrás de la estatua del diamante. Es un monumento de bloques con studs:
+- **1.º:** sobre una calavera de T-Rex dorada gigante con las fauces abiertas, cristales de ámbar alrededor (uno con un mosquito dentro) y una corona con un diamante flotando encima.
+- **2.º:** sobre una calavera de tricerátops de plata con la gola llena de gemas.
+- **3.º:** sobre un estegosaurio de bronce.
+- **Base:** roca volcánica con vetas y cascadas de lava, escalinatas y fósiles incrustados.
+- **Arco:** el esqueleto de un T-Rex gigante con su calavera de perfil y el cartel «🏆 LOS MÁS RICOS 🏆».
+- **Alrededor:** estandartes rojos con una huella de dinosaurio dorada, antorchas, cofres abiertos con oro y gemas, huevos de dinosaurio rotos llenos de monedas, montones de monedas, palmeras y focos sobre los ganadores.
+
+**Dónde:** `ServerStorage.PodiumBuilder` (nuevo, lo construye en Edit), `workspace.Map.Lobby.Podium` (682 piezas, en (0, 18, −160)), `DiamondServer.Podium` (avatares ×2,3; se colocan desde la raíz y la altura de las piernas, porque la caja del modelo no es fiable con accesorios; busca la base por `PrimaryPart`). Copias de los podios anteriores en `ServerStorage.LobbyBoardsBackup` (`Podium_v1`, `Podium_v2`). Quitadas unas flores que quedaban debajo.
+
+**Probado:** en Play con 3 avatares de prueba (Roblox, builderman y Shedletsky, metidos a mano solo en esa partida): cada uno de pie en su sitio, con su pose, nombre y dinero; sin errores.
+
+**Notas:** desde justo delante de la estatua, su cartel flotante (cuenta atrás y 10.000 Robux) tapa parte del centro del podio; desde los lados se ve entero.
+
 ## 2026-11-09 · bbogatell (Claude) · Sonido de tierra, fósiles que desaparecen, probabilidad por pala, nombres de zona, 2.º tutorial, cinta, podio de los más ricos y diamante gigante
 **Qué:**
 - **Tierra:** al cavar ya no sale el texto «+N tierra», solo los iconitos que vuelan al contador, y cada icono que llega suena con el «pop» de recoger un objeto de Minecraft (`UI.SOUNDS.dirtPickup` = 134602992766192, «minecraft item pickup»).
