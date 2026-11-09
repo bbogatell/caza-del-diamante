@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-09 · seguo970 (Claude) · Clipping del mapa arreglado (caras que parpadeaban)
+**Qué:** casi todas las caras solapadas que cambiaban de color según desde dónde se miraban ya no parpadean: en la puerta del carril, el final del carril, los carteles de las 15 parcelas, los acantilados del lobby, la tienda de estelas, las escaleras y las flores. De 863 solapes visibles quedan 112.
+**Dónde:** piezas de `workspace.Map` (salen o entran entre 0,06 y 0,3 studs, en la cara que chocaba; no cambian color ni material) y `ServerStorage.LaneKit` (carteles: `Board` de 19,88 de ancho y `Frame` de 2,12 de fondo). Copia de antes en `ServerStorage.MapBackup_Clipping` (19.190 piezas).
+**Probado:** medición geométrica antes y después; capturas de la puerta (antes y después), los carteles y el final del carril. En Play se anda bien por la puerta, la plaza final y el lobby, sin errores nuevos en la consola (solo los avisos normales de DataStore).
+**Notas:** quedan 45 que se notan y 67 con el color casi igual (no se aprecian). De los 45, 15 son del `Lobby.Podium`, que no se ha tocado porque bbogatell lo rehízo hoy y `PodiumBuilder` lo regeneraría; los demás son flores y piezas sueltas. No se han tocado `PlotFrames` (lo usan scripts), `Bounds`, `SkyLimit` ni `Field.Barrier`. No cubre piezas giradas, cilindros ni cuñas. En la puerta se bajaron 0,08 los `Path` de `Lane.Gateway` para que la hierba y la canaleta sigan viéndose como antes.
+
 ## 2026-11-09 · bbogatell (Claude) · Podio nuevo: el trono de los dinosaurios, detrás del diamante
 **Qué:** el podio de los 3 más ricos se ha rehecho según la imagen de concepto del usuario y se ha movido al centro del lobby, detrás de la estatua del diamante. Es un monumento de bloques con studs:
 - **1.º:** sobre una calavera de T-Rex dorada gigante con las fauces abiertas, cristales de ámbar alrededor (uno con un mosquito dentro) y una corona con un diamante flotando encima.
