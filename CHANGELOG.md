@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-09 · seguo970 (Claude) · Ya no se cae al vacío por los lados de la escalera del campo
+**Qué:** las paredes de la escalera que baja al campo ahora frenan al jugador; antes se podía salir por un lado y caer al vacío bajo la plaza final.
+**Dónde:** `workspace.Map.Field.Stairs` (dos piezas invisibles nuevas `StairCollider`, en x ±17). Las `SideWall` visibles siguen igual.
+**Probado:** en Play, andando hacia los dos lados en varios puntos de la escalera y por la rendija de abajo: el jugador se queda dentro. Se sube, se baja y se cruza por arriba bien.
+
 ## 2026-11-09 · seguo970 (Claude) · Clipping del mapa arreglado (caras que parpadeaban)
 **Qué:** casi todas las caras solapadas que cambiaban de color según desde dónde se miraban ya no parpadean: en la puerta del carril, el final del carril, los carteles de las 15 parcelas, los acantilados del lobby, la tienda de estelas, las escaleras y las flores. De 863 solapes visibles quedan 112.
 **Dónde:** piezas de `workspace.Map` (salen o entran entre 0,06 y 0,3 studs, en la cara que chocaba; no cambian color ni material) y `ServerStorage.LaneKit` (carteles: `Board` de 19,88 de ancho y `Frame` de 2,12 de fondo). Copia de antes en `ServerStorage.MapBackup_Clipping` (19.190 piezas).

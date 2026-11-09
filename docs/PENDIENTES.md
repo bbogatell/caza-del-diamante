@@ -18,7 +18,7 @@
 
 - [x] **Luz de rareza de los fósiles demasiado fuerte** (seguo970, 09/11): ahora es progresiva por rareza, de 0,10 (Común) a 0,65 (Mutante), en `Looks.fossil`.
 
-- [ ] **Se puede caer al vacío desde la escalera del campo** (seguo970, 09/11): las `SideWall` de `Map.Field.Stairs` (x ±17, z −3058) no tienen colisión y debajo de la plaza final no hay nada. Bajando la escalera y saliendo por un lado se cae (visto en Play en x 24, z −3071).
+- [x] **Se podía caer al vacío desde la escalera del campo** (seguo970, 09/11): tapado con dos `StairCollider` invisibles en `Map.Field.Stairs`.
 - [ ] Borrar `ServerStorage.MapBackup_Clipping` (seguo970, 09/11) cuando se confirme que el mapa está bien tras quitar el z-fighting.
 - [ ] Z-fighting pendiente en `Lobby.Podium` (15 caras, bbogatell): corregirlo en `PodiumBuilder`.
 
