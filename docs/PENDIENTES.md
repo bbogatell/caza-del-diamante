@@ -16,7 +16,7 @@
 - [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
 - [ ] **Pala 29 nueva** (seguo970, 21/10): puesta, texturizada y animada. Falta verla en la tienda, en móvil y en la mano de otro jugador. La capa ya se mueve como tela (huesos `ShovelBone`).
 
-- [ ] **Luz de rareza de los fósiles demasiado fuerte** (seguo970, 03/11): en Play la `PointLight` que pone `Looks` a cada fósil (brillo 1,5, alcance 15) quema los colores; los diseños claros (Divino, Brainrot) se ven casi blancos. Eterno ya está arreglado (09/11). Bajar el brillo o quitarla en las rarezas bajas.
+- [x] **Luz de rareza de los fósiles demasiado fuerte** (seguo970, 09/11): bajada en Eterno, Divino, Brainrot y Mutante (brillo 0,4, alcance 10). Si otras rarezas (Secreto y Cósmico llegan a 3 y 2,7) también se ven quemadas, se añaden en el mismo `if` de `Looks`.
 
 ## Sin probar
 - [ ] **Pala 28 (Pala Galáctica)** (seguo970, 21/10): seguo970 la ha visto en Play y se ve bien. Falta mirarla en la tienda, en móvil y en la mano de otro jugador. Del prompt quedan sin hacer el «aparecer» de anillos y halo al sacarla y la flotación de ±0,05 (casi no se vería).

@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-09 · seguo970 (Claude) · Menos brillo en los fósiles Divino, Brainrot y Mutante
+**Qué:** los fósiles Divino, Brainrot y Mutante llevan ahora la misma luz suave que los Eternos, así que ya se ven sus colores en vez de casi blanco.
+**Dónde:** `ServerScriptService.DiamondServer.Looks` (en `fossil`, justo después de `rarityEffects`).
+**Probado:** en Play, las 4 rarezas (20 fósiles) dan brillo 0,4 y las demás siguen como estaban. Vistos en pantalla los III de Divino, Brainrot y Mutante.
+**Notas:** brillo 0,4 y alcance 10. Solo cambia la luz: las partículas y el neón siguen igual.
+
 ## 2026-11-09 · seguo970 (Claude) · Menos brillo en los fósiles Eternos
 **Qué:** los 5 fósiles Eternos ya no se ven casi blancos: su luz de rareza es mucho más suave y se distinguen los azules del hielo.
 **Dónde:** `ServerScriptService.DiamondServer.Looks` (en `fossil`, justo después de `rarityEffects`).
