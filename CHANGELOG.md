@@ -2,6 +2,21 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Versión sencilla (LOD) de los 198 bichos, aún sin usar (fase 3A)
+**Qué:** cada bicho tiene ahora una versión sencilla de bloques con studs para verse de lejos: de media 21 piezas en vez de 515. Todavía **no se usa en el juego** (eso es la fase 3B); para el jugador no cambia nada.
+**Dónde:** `ServerStorage.CreatureLodBuilder` (nuevo: `build(model)` y `buildAll()`) y `ServerStorage.Models.BichosLod.<id>` (198 modelos nuevos). No se han tocado los bichos originales ni ningún script del juego.
+**Cómo funciona:**
+- Agrupa las piezas por su `Role`. Brazos, patas, alas y cuernos van separados por lado; los tentáculos del Mecha Krakenoide, por sectores.
+- Parte los grupos según la posición y el color, hasta 22 bloques.
+- Cada grupo es un bloque con su color dominante, del tamaño que ocupan sus piezas. Las extremidades largas o planas van giradas a lo largo.
+- Los anillos (`Ring`) se quitan, salvo cuando son la forma del bicho (p. ej. el 75, que es un tornado).
+- Mismo `Root` que el original. Sin colisión, sin sombra, sin partículas, sin luces y sin la etiqueta `CreatureRig`.
+**Probado:** 198 generados, sin fallos. Comparados con su original en capturas a 60 y 120 studs: 1, 2, 20, 50, 75, 80, 91, 154, 174, 188, 191 y 196. 120 y 140 se generaron con el resto pero no se miraron.
+**Notas:**
+- Con 96 bichos de media en el lobby se pasaría de unas 49.400 a unas 2.000 piezas.
+- Los que peor quedan son los de formas raras o con muchos adornos: 174 (los anillos y el aura no salen), 191 (tentáculos como palos), 196 (pierde casi todo el amarillo) y 17/16/154 (más estrechos o bajos que el original).
+- De lejos se reconocen por la forma y el color; de cerca no se parecen. Por eso solo deben usarse lejos.
+
 ## 2026-11-10 · seguo970 (Claude) · Bichos: partículas y luces según la distancia + «Modo rendimiento»
 **Qué:** los bichos ya no sueltan cientos de partículas por segundo. De cerca cada bicho emite como máximo 80 partículas por segundo en total (antes hasta 1.342); de lejos se le apagan las partículas continuas y las luces. Nueva opción en Ajustes, «⚡ Modo rendimiento», que viene encendida en móviles y tabletas: menos distancia de efectos, tope de 25 partículas por segundo y menos luces.
 **Dónde:**
