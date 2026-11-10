@@ -2,6 +2,37 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Bichos lejanos en versión sencilla; el modelo completo solo de cerca (fase 3B)
+**Qué:** los bichos de las bases se ven con su versión sencilla (unas 21 piezas) y cada jugador recibe el modelo completo, animado y con efectos, solo de los que tiene cerca. Así un móvil ya no carga las ~500 piezas de cada bicho lejano. De cerca se ven igual que antes, con su cartel y su brillo de siempre.
+**Dónde:**
+- `DiamondServer.Looks`: nuevas `Looks.creatureLod(b)`, que es la versión sencilla con el `Root`, el cartel, el brillo de rareza y los atributos `CreatureId` y `Lod`, y `Looks.creatureFull(b)`, el completo sin cartel ni brillo.
+- `DiamondServer.Bases`: los bichos de las bases salen con `creatureLod`, igual que `/llenar` en `DiamondServer.Main`.
+- `DiamondServer.Main`: nuevas peticiones `CreatureFull` y `CreatureFullDone`. `CreatureFull` comprueba que sea un `BaseCreature` y que el jugador esté a menos de 250 studs, con un máximo de 30 copias en camino.
+- `StarterPlayerScripts.CreatureSwap` (nuevo).
+**Cómo:**
+- Cuando un bicho está a menos de 70 studs de la cámara (45 con Modo rendimiento), el cliente pide el completo.
+- El servidor lo deja en `PlayerGui.CreatureFull` del jugador, que solo le llega a él.
+- El cliente lo clona en `workspace.CreatureFull` y oculta los bloques en local, sin cambiar nada en el servidor; la copia del servidor se borra al momento.
+- Al pasar de 90 studs (60 con Modo rendimiento) se borra el completo y vuelven los bloques.
+- `CreatureAnim` y `CreatureLOD` lo animan como siempre. Vender sigue en el `Root` de la versión sencilla, que siempre está.
+**Probado** en Play con 12 bichos pesados en la base:
+- De cerca están los 12 completos y animados; lejos, 0 completos y los sencillos a la vista; al volver, otra vez completos, sin bichos dobles.
+- Vender de cerca y vender antes de que llegue el completo funcionan, y el completo desaparece con él.
+- Con `/llenar 12` (96 bichos), piezas en el cliente:
+
+  | | Antes (todo completo) | Ahora |
+  |---|---|---|
+  | En tu base | 63.574 | 24.641 |
+  | En el centro del lobby (37 completos cerca) | 62.449 | 38.163 |
+
+- La memoria total de Studio no sirve para comparar (sube y baja con el servidor y el editor en el mismo proceso).
+- Consola sin errores nuevos.
+- No probado: 2 jugadores a la vez ni un móvil real.
+**Notas:**
+- Al acercarse el completo tarda una fracción de segundo en llegar (se piden 2 a la vez, los más cercanos primero).
+- Los bichos completos ya no existen en el servidor, solo en cada cliente: si algo nuevo necesita el modelo completo en el servidor, hay que tenerlo en cuenta.
+- Robar, bate, hielo y trampa no usan el modelo del bicho (solo hay referencias en `Bases`).
+
 ## 2026-11-10 · seguo970 (Claude) · Versión sencilla (LOD) de los 198 bichos, aún sin usar (fase 3A)
 **Qué:** cada bicho tiene ahora una versión sencilla de bloques con studs para verse de lejos: de media 21 piezas en vez de 515. Todavía **no se usa en el juego** (eso es la fase 3B); para el jugador no cambia nada.
 **Dónde:** `ServerStorage.CreatureLodBuilder` (nuevo: `build(model)` y `buildAll()`) y `ServerStorage.Models.BichosLod.<id>` (198 modelos nuevos). No se han tocado los bichos originales ni ningún script del juego.

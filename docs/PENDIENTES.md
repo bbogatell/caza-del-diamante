@@ -32,7 +32,7 @@
 - [ ] Guardado real de la base y la velocidad (DataStore apagado en Studio) y que los fósiles se abran estando desconectado.
 - [ ] Cuenta atrás, grietas y temblor de los fósiles vistos en pantalla.
 - [ ] Rendimiento del carril con StreamingEnabled en móvil (radio de carga bajado a 320 el 10/11: mirar que no aparezcan cosas de golpe al correr por el carril).
-- [ ] **Optimización móvil pendiente** (seguo970, 10/11): bichos de las bases (hasta 96 en el lobby, media de 515 piezas; las partículas y luces ya van por distancia con `CreatureLOD`, las versiones sencillas ya están hechas en `ServerStorage.Models.BichosLod` (fase 3A, 10/11); falta la **fase 3B**: usarlas para los bichos lejanos y cambiar al modelo completo al acercarse) y tienda de palas (30 vistas 3D cuyas 323 piezas orbitales se animan cada fotograma aunque la tienda esté cerrada).
+- [ ] **Optimización móvil pendiente** (seguo970, 10/11): bichos de las bases (hasta 96 en el lobby, media de 515 piezas; las partículas y luces ya van por distancia con `CreatureLOD`, hecho: versión sencilla de lejos y completo de cerca, fases 3A y 3B, 10/11; falta probarlo con 2 o más jugadores y en un móvil real, sobre todo que no tarde al acercarse) y tienda de palas (30 vistas 3D cuyas 323 piezas orbitales se animan cada fotograma aunque la tienda esté cerrada).
 - [ ] Ajustes en móvil (barra de volumen con el dedo).
 - [ ] Probar la progresión jugando de verdad (sin trucos): el ritmo de las primeras palas (la 2 cuesta 2.200 y un bicho común da 3 💰/s).
 - [ ] Montañas de bloques (`workspace.Mountains`): rendimiento en móvil y que desaparezcan bien en la cinemática final / paso al infierno.
