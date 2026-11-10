@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Optimización para móviles: radio de carga y texturas; exposición de fósiles borrada
+**Qué:** el juego pesa menos en móviles. El móvil carga menos mapa a la vez y se quitaron las texturas de studs que nunca se ven. Por fuera el mapa se ve igual. También se borró la exposición temporal de los 60 fósiles (solo existía en Studio).
+**Dónde:**
+- `Workspace.StreamingTargetRadius`: de 1024 a 320.
+- `workspace.Map` y `workspace.Mountains`: 24.395 `Texture` borradas, de 79.691 a 55.296. Son 23.453 caras tapadas por otro bloque o por terreno y 942 tiras de menos de 0,6 studs. Cada pieza guarda en `NoStudFaces` las caras que perdieron la textura.
+- `ServerScriptService.TEMP_Expo`: borrado.
+**Probado:** capturas del lobby antes y después (iguales) y de cerca en el carril. En Play, en el lobby el cliente tiene 12.983 piezas cargadas (antes 19.375) y 20.413 texturas (antes 60.340). En medio del carril carga 2.733 piezas y el jugador se queda de pie en el suelo. La consola solo muestra los avisos normales de DataStore. Falta probarlo en un móvil de verdad.
+**Notas:** no se han tocado los bichos de las bases ni la tienda de palas (se harán más adelante). Como ya no hay exposición, al empezar en Studio vuelve a salir el tutorial.
+
 ## 2026-11-09 · seguo970 (Claude) · Tapado el hueco a los dos lados de la puerta del carril
 **Qué:** entre el fondo del lobby y la primera plaza del carril quedaba una zanja de terreno rocoso a cada lado de la puerta. Ahora el suelo de hierba con studs llega hasta la pared y los acantilados del carril continúan hasta el lobby.
 **Dónde:** `workspace.Map.Lane.Gateway.GapFill` (carpeta nueva con 12 piezas, z −520…−507: 4 de suelo y, a cada lado, acantilados y montaña).

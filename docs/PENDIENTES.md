@@ -31,7 +31,8 @@
 - [ ] El evento del diamante y la cinemática final con el campo en su sitio nuevo (z −3208).
 - [ ] Guardado real de la base y la velocidad (DataStore apagado en Studio) y que los fósiles se abran estando desconectado.
 - [ ] Cuenta atrás, grietas y temblor de los fósiles vistos en pantalla.
-- [ ] Rendimiento del carril con StreamingEnabled en móvil.
+- [ ] Rendimiento del carril con StreamingEnabled en móvil (radio de carga bajado a 320 el 10/11: mirar que no aparezcan cosas de golpe al correr por el carril).
+- [ ] **Optimización móvil pendiente** (seguo970, 10/11): bichos de las bases (hasta 96 en el lobby, media de 515 piezas y unas 310 partículas/s cada uno; es lo que más pesa) y tienda de palas (30 vistas 3D cuyas 323 piezas orbitales se animan cada fotograma aunque la tienda esté cerrada).
 - [ ] Ajustes en móvil (barra de volumen con el dedo).
 - [ ] Probar la progresión jugando de verdad (sin trucos): el ritmo de las primeras palas (la 2 cuesta 2.200 y un bicho común da 3 💰/s).
 - [ ] Montañas de bloques (`workspace.Mountains`): rendimiento en móvil y que desaparezcan bien en la cinemática final / paso al infierno.
