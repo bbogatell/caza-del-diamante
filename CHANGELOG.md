@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Exposición temporal de los 198 bichos (para ver cómo se ven de lejos)
+**Qué:** al empezar en Studio apareces en una parcela larga en el cielo con los 198 bichos en dos filas, en orden de número. Cada uno lleva su cartel y te pone con velocidad alta. De cerca se ven completos y de lejos en su versión sencilla, igual que en las bases.
+**Dónde:** `ServerScriptService.TEMP_ExpoBichos` (nuevo, solo funciona en Studio). Crea `workspace.TEMP_ExpoBichos` en (−1500, 500, 0): 3.806 studs de largo, 400 de ellos vacíos al final para alejarse y mirar atrás.
+**Probado:** en Play salen los 198 sin errores y te pone al principio de la parcela; los cercanos se cargan completos.
+**Notas:** es temporal; bórralo cuando acabes de mirarlo. Mientras exista, al empezar en Studio no sales en el lobby ni sale el tutorial.
+
 ## 2026-11-10 · seguo970 (Claude) · Bichos lejanos en versión sencilla; el modelo completo solo de cerca (fase 3B)
 **Qué:** los bichos de las bases se ven con su versión sencilla (unas 21 piezas) y cada jugador recibe el modelo completo, animado y con efectos, solo de los que tiene cerca. Así un móvil ya no carga las ~500 piezas de cada bicho lejano. De cerca se ven igual que antes, con su cartel y su brillo de siempre.
 **Dónde:**
