@@ -2,6 +2,22 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Bichos completos en un radio más grande
+**Qué:** los bichos se ven completos desde más lejos. Ahora cambian a la versión sencilla más allá de 160 studs; antes era a 70-90.
+**Dónde:** `StarterPlayerScripts.CreatureSwap`:
+- Normal: se cargan completos a 130 studs y vuelven a sencillos a 160 (antes 70 y 90).
+- Modo rendimiento: 70 y 90 (antes 45 y 60).
+**Probado:** en Play, en la parcela larga, los completos llegan hasta la fila que toca y el resto se ve sencillo. Con `/llenar 12` (96 bichos), de pie en tu base:
+
+| Modo | Bichos completos | Piezas en el cliente |
+|---|---|---|
+| Antes de este cambio | 13 | 24.641 |
+| Ahora, normal | 26 | 33.364 |
+| Ahora, Modo rendimiento | 18 | 27.914 |
+| Todo completo (sin optimizar) | 96 | 63.574 |
+
+**Notas:** `CreatureAnim` solo anima los bichos a menos de 120 studs, así que los que están entre 120 y 160 se ven completos pero quietos. Las partículas siguen apagándose a 90 (`CreatureLOD`).
+
 ## 2026-11-10 · seguo970 (Claude) · Exposición temporal de los 198 bichos (para ver cómo se ven de lejos)
 **Qué:** al empezar en Studio apareces en una parcela larga en el cielo con los 198 bichos en dos filas, en orden de número. Cada uno lleva su cartel y te pone con velocidad alta. De cerca se ven completos y de lejos en su versión sencilla, igual que en las bases.
 **Dónde:** `ServerScriptService.TEMP_ExpoBichos` (nuevo, solo funciona en Studio). Crea `workspace.TEMP_ExpoBichos` en (−1500, 500, 0): 3.806 studs de largo, 400 de ellos vacíos al final para alejarse y mirar atrás.
