@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Borrada la exposición temporal de los 198 bichos
+**Qué:** ya no existe la parcela larga con los bichos en fila; al empezar en Studio vuelves a salir en el lobby y vuelve el tutorial.
+**Dónde:** borrado `ServerScriptService.TEMP_ExpoBichos` (la parcela y los bichos los creaba ese script al empezar; no había nada guardado en `workspace`).
+**Probado:** no queda nada en `workspace` ni en `ServerScriptService`.
+
 ## 2026-11-10 · seguo970 (Claude) · Más distancia con los bichos completos (quietos)
 **Qué:** los bichos se ven completos hasta mucho más lejos.
 - Hasta 120 studs: completos y animados.

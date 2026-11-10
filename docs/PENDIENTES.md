@@ -10,7 +10,7 @@
 - [ ] Revisar las normas de Roblox sobre el premio en Robux y redactar las condiciones del premio.
 - [ ] Subir los paquetes de monedas con Robux (5K/50K/500K se han quedado cortos con los precios nuevos).
 - [ ] Borrar `StarterPlayerScripts.DebugLevelKey` (o dejarlo, solo funciona en Studio).
-- [ ] Borrar `ServerScriptService.TEMP_ExpoBichos` (seguo970, 10/11): parcela larga de prueba con los 198 bichos. Solo funciona en Studio, pero mientras exista te manda allí al empezar.
+- [x] Borrar `ServerScriptService.TEMP_ExpoBichos` (seguo970, 10/11): borrado.
 - [x] Borrar `workspace.PasarelaFosiles` (seguo970, 03/11): borrada después de que seguo970 revisara los 60 fósiles en ella.
 
 ## Bugs / a medias
