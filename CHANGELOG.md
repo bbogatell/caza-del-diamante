@@ -2,6 +2,22 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Más distancia con los bichos completos (quietos)
+**Qué:** los bichos se ven completos hasta mucho más lejos.
+- Hasta 120 studs: completos y animados.
+- De 120 a 260 studs: completos pero quietos.
+- Más allá: la versión sencilla.
+
+Con «Modo rendimiento» (por defecto en móviles) no cambia: 70 y 90.
+**Dónde:**
+- `StarterPlayerScripts.CreatureSwap`: se cargan completos a 230 studs y vuelven a sencillos a 260 (antes 130 y 160).
+- `DiamondServer.Main` (`CreatureFull`): se aceptan bichos hasta a 330 studs del jugador (antes 250) y hasta 40 copias en camino (antes 30).
+**Probado:**
+- En la parcela larga se ven completos hasta unos 200 studs.
+- Con `/llenar 12` (96 bichos), en tu base: 85 completos y 58.281 piezas en el cliente (antes de este cambio 26 y 33.364; sin optimizar, 96 y 63.574).
+- Consola sin errores nuevos.
+**Notas:** en PC, con el lobby lleno, casi todos los bichos salen completos, así que ahí ya casi no se ahorra. En móviles sigue ahorrando porque el Modo rendimiento usa 70 y 90.
+
 ## 2026-11-10 · seguo970 (Claude) · Bichos completos en un radio más grande
 **Qué:** los bichos se ven completos desde más lejos. Ahora cambian a la versión sencilla más allá de 160 studs; antes era a 70-90.
 **Dónde:** `StarterPlayerScripts.CreatureSwap`:
