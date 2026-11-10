@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Lobby: la pared invisible de los lados, pegada a la pared de verdad
+**Qué:** en los laterales del lobby ya no te paras antes de llegar a la pared: chocas contra las piedras, sin pared invisible delante.
+**Dónde:** `Map.Bounds` (los `MapBound` de los lados del lobby y `BoundPocketE/W`): su cara de dentro pasa a |x| = 146,5. Antes estaban en 130, 143-144, 145 y 156-158 según el tramo; los ladrillos de la pared empiezan en 146,6-147,4. La cara de fuera no se mueve.
+**Probado:** en Play, a velocidad máxima, corriendo hacia los dos lados en 8 puntos del lobby: siempre se para en |x| ≈ 145,3, pegado a la pared, sin atravesarla ni caerse. Lo comprueba también una captura.
+
 ## 2026-11-10 · seguo970 (Claude) · Bordes del mapa con colisión de verdad
 **Qué:** las paredes del borde del mapa ya no se atraviesan a medias ni dejan caer al vacío al correr muy rápido. Al chocar te paras en seco, como contra cualquier pared. Solo se han tocado los bordes: lo demás del mapa (decorado, carteles, etc.) sigue igual y se puede atravesar como antes.
 **Dónde:**
