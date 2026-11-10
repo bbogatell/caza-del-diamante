@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Se ve todo el mapa: radio de carga a 3600
+**Qué:** desde cualquier sitio se carga el mapa entero, del lobby al campo del final: ya no aparecen trozos de golpe al avanzar.
+**Dónde:** `Workspace.StreamingTargetRadius`: de 320 a 3600.
+**Probado:** en Play el cliente tiene las mismas 24.840 piezas en el lobby, a mitad del carril y al final, o sea, todo el mapa. La simulación va a 59/s. Los FPS de dibujo no se pueden medir desde las herramientas (Studio los da siempre en 15, también sin cambios): hay que mirarlos con Shift+F5.
+**Notas:** deshace la bajada a 320 que se hizo para los móviles de gama baja: en el lobby el móvil vuelve a cargar todo el mapa (unas 24.800 piezas en vez de ~13.000 de mapa). Los bichos no cambian: siguen en versión sencilla de lejos.
+
 ## 2026-11-10 · seguo970 (Claude) · Carteles de las parcelas: «NECESITAS LA PALA X» en amarillo claro
 **Qué:** en el cartel de cada parcela, la línea «⛏️ NECESITAS LA PALA X» ya no sale en marrón oscuro, casi negro con su borde: ahora es amarillo claro con el mismo borde oscuro y se lee bien. El nombre de la pala sigue en el color de su rareza.
 **Dónde:** `ServerScriptService.DiamondServer.Lane` (texto del cartel `ShovelSign`, `TextColor3` de (60, 40, 30) a (255, 220, 70)).
