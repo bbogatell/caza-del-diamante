@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Bordes del mapa con colisión de verdad
+**Qué:** las paredes del borde del mapa ya no se atraviesan a medias ni dejan caer al vacío al correr muy rápido. Al chocar te paras en seco, como contra cualquier pared. Solo se han tocado los bordes: lo demás del mapa (decorado, carteles, etc.) sigue igual y se puede atravesar como antes.
+**Dónde:**
+- Paredes invisibles del borde (eran de 4 studs de grosor): ahora tienen 44 de grosor hacia fuera y llegan hasta y = −60. Son `Map.Bounds.MapBound` (lobby), `Map.Lane.PlotNN.Cliffs.Bound` (los dos lados del carril) y `Map.Lane.FieldEnd.Bound` (el final). La cara de dentro no se ha movido; cada una guarda su tamaño y posición anteriores en los atributos `OldSize` y `OldPos`.
+- Nuevas en `Map.Bounds`: `BoundLinkE` y `BoundLinkW`, que unen las paredes del lobby con las del carril detrás de los acantilados del fondo, y `BoundPocketE` y `BoundPocketW`, que tapan un hueco junto a la esquina del fondo del lobby por donde se caía.
+- Todas sin `CanQuery`, para que la cámara no choque con ellas.
+**Probado:** en Play, a la velocidad máxima (400), corriendo contra las paredes en 12 direcciones desde 10 sitios (lobby y sus esquinas, puerta, carril, final): 120 pruebas sin atravesar nada ni caer. La primera prueba encontró la caída de la esquina, que es lo que tapan `BoundPocket`.
+**Notas:** no se ha tocado la barrera del campo del diamante (`Field.Barrier`) ni el techo (`SkyLimit`).
+
 ## 2026-11-10 · seguo970 (Claude) · Borrada la exposición temporal de los 198 bichos
 **Qué:** ya no existe la parcela larga con los bichos en fila; al empezar en Studio vuelves a salir en el lobby y vuelve el tutorial.
 **Dónde:** borrado `ServerScriptService.TEMP_ExpoBichos` (la parcela y los bichos los creaba ese script al empezar; no había nada guardado en `workspace`).
