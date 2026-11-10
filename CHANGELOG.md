@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Carteles de las parcelas: «NECESITAS LA PALA X» en amarillo claro
+**Qué:** en el cartel de cada parcela, la línea «⛏️ NECESITAS LA PALA X» ya no sale en marrón oscuro, casi negro con su borde: ahora es amarillo claro con el mismo borde oscuro y se lee bien. El nombre de la pala sigue en el color de su rareza.
+**Dónde:** `ServerScriptService.DiamondServer.Lane` (texto del cartel `ShovelSign`, `TextColor3` de (60, 40, 30) a (255, 220, 70)).
+**Probado:** en Play, cartel de la parcela 1 (captura) y color comprobado en las 15 parcelas.
+
 ## 2026-11-10 · seguo970 (Claude) · Lobby: la pared invisible de los lados, pegada a la pared de verdad
 **Qué:** en los laterales del lobby ya no te paras antes de llegar a la pared: chocas contra las piedras, sin pared invisible delante.
 **Dónde:** `Map.Bounds` (los `MapBound` de los lados del lobby y `BoundPocketE/W`): su cara de dentro pasa a |x| = 146,5. Antes estaban en 130, 143-144, 145 y 156-158 según el tramo; los ladrillos de la pared empiezan en 146,6-147,4. La cara de fuera no se mueve.
