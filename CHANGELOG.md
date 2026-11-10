@@ -2,6 +2,22 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · seguo970 (Claude) · Bichos: partículas y luces según la distancia + «Modo rendimiento»
+**Qué:** los bichos ya no sueltan cientos de partículas por segundo. De cerca cada bicho emite como máximo 80 partículas por segundo en total (antes hasta 1.342); de lejos se le apagan las partículas continuas y las luces. Nueva opción en Ajustes, «⚡ Modo rendimiento», que viene encendida en móviles y tabletas: menos distancia de efectos, tope de 25 partículas por segundo y menos luces.
+**Dónde:**
+- `StarterPlayer.StarterPlayerScripts.CreatureLOD` (nuevo, solo cliente). Actúa sobre los modelos con la etiqueta `CreatureRig`.
+- Ajuste `perf`: en `DiamondServer.Main` (`SETTING_KEYS`), `DiamondClient.UIKit` (valor inicial según el dispositivo), `DiamondClient.Main` (pone el atributo `PerfMode` en el jugador) y `DiamondClient.Menus` (la fila nueva en Ajustes).
+**Probado:** en Play con 6 bichos de los más pesados en la base (174, 163, 162, 164, 161 y uno común):
+- Normal: 80 partículas/s cada uno, con sus luces.
+- Modo rendimiento: 25 partículas/s y sin luces.
+- Al alejarse 130 studs: todo apagado.
+- Al volver: se encienden otra vez.
+El ajuste se guarda en el servidor. No se ha visto la fila de Ajustes en pantalla (la ventana se cerraba en la prueba), pero existe y tiene su botón ON/OFF.
+**Notas:**
+- Distancias desde la cámara: normal 90 (luces 90); rendimiento 55 (luces 35).
+- Los emisores de ráfaga (Rate 0, los que lanzan los rigs con `:Emit`) y los que llevan alguna etiqueta no se tocan.
+- No se cambia ningún modelo de `ServerStorage.Models.Bichos`.
+
 ## 2026-11-10 · seguo970 (Claude) · Optimización para móviles: radio de carga y texturas; exposición de fósiles borrada
 **Qué:** el juego pesa menos en móviles. El móvil carga menos mapa a la vez y se quitaron las texturas de studs que nunca se ven. Por fuera el mapa se ve igual. También se borró la exposición temporal de los 60 fósiles (solo existía en Studio).
 **Dónde:**
