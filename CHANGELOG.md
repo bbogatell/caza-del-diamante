@@ -2,6 +2,36 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-10 · bbogatell (Claude) · Cinemática al entrar, sin final del infierno, venta más baja, bichos top más grandes y cuenta atrás de rellenado
+**Qué:**
+- **Cinemática al entrar** (unos 6 s, botón «Saltar ⏭»):
+  - vuela por el final del carril hasta el campo del diamante («LA CAZA DEL DIAMANTE · Al final del camino…»);
+  - después gira alrededor del diamante gigante con el cartel «$10.000 ROBUX» («El primero que encuentre el diamante, ¡gana!»);
+  - luego salen la bienvenida y el diario, como antes. El tutorial espera a que acabe.
+- **Fuera el final del infierno:** ya no hay cinemática final ni cambio al infierno. Cuando alguien encuentra el diamante, sale confeti y un cartel para todos («👑 ¡X HA ENCONTRADO EL DIAMANTE!») y todo el mundo sigue cavando y sacando fósiles.
+- **Vender bichos:** da lo que generan en 20 s en vez de 60 s.
+- **Bichos top más grandes:** los que generan más de 1B/s se escalan × (ingresos / 1B) ^ 0,3. Por ejemplo:
+  - Erizosaurio Tóxico (1,8B): de 19 a 22,5 studs;
+  - Gigantosaurio Esqueleto (4B): de 26 a 39;
+  - T-Rex Galáctico (9B): de 32 a 62.
+
+  Los de menos de 1B/s no cambian.
+- **Parcelas del carril:** se rellenan cada 8 min en vez de 5 (o antes si se cava el 80 %, como antes). Mientras estás en una parcela ya cavada, debajo del reloj del evento sale pequeño «🔄 Se rellena en m:ss».
+
+**Dónde:**
+- Cinemática: `DiamondClient.Cinematic` (`intro`), `DiamondClient.Main` (arranque, `handlers.WinnerFound`, quitado `handlers.Finale`) y `DiamondClient.Tutorial` (espera con `IntroPlaying`).
+- Final: `DiamondServer.Main` (`Event.onWinner` solo avisa). El módulo `DiamondServer.Finale` y `ServerStorage.Finale` (plataforma del cielo e infierno) se han movido a `ServerStorage.CopiasSeguridad` (`…_desactivado_2026-11-10`).
+- Economía y tamaño: `ReplicatedStorage.Config` (`BASE.sellMult` 20, `LANE.regenTime` 480, `CREATURE_BIG` y `creatureScale`) y `DiamondServer.Looks` (escala en `creature` y `creatureLod`).
+- Rellenado: `DiamondServer.Lane` (atributo `PlotNextRegen_<n>`) y `StarterPlayerScripts.LaneFx` (la cuenta atrás).
+
+**Probado:** en Play:
+- la cinemática entera (capturas de las dos tomas); al acabar la cámara vuelve a ti y el HUD reaparece;
+- cavando en la parcela 1 sale «🔄 Se rellena en 6:38»;
+- los tamaños de 4 bichos y el precio de venta (T-Rex Galáctico: 180B);
+- ningún error.
+
+**Sin probar:** que alguien encuentre el diamante de verdad (el aviso `WinnerFound`), ni la cinemática en móvil.
+
 ## 2026-11-10 · seguo970 (Claude) · Se ve todo el mapa: radio de carga a 3600
 **Qué:** desde cualquier sitio se carga el mapa entero, del lobby al campo del final: ya no aparecen trozos de golpe al avanzar.
 **Dónde:** `Workspace.StreamingTargetRadius`: de 320 a 3600.

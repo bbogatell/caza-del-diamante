@@ -24,19 +24,20 @@
 - [ ] Z-fighting pendiente en `Lobby.Podium` (15 caras, bbogatell): corregirlo en `PodiumBuilder`.
 
 ## Sin probar
+- [ ] Cinemática de entrada (bbogatell, 10/11) en móvil: el botón «Saltar» y que no tape nada al acabar.
 - [ ] **Podio de los más ricos** (bbogatell, 09/11): verlo con 2-3 jugadores y con el ranking global real (`DiamondHunt_Coins_v1`, solo funciona publicado).
 - [ ] Fósiles de estrella sueltos: que desaparezcan a los 300 s (`FOSSIL.looseLifeStar`).
 - [ ] **Pala 28 (Pala Galáctica)** (seguo970, 21/10): seguo970 la ha visto en Play y se ve bien. Falta mirarla en la tienda, en móvil y en la mano de otro jugador. Del prompt quedan sin hacer el «aparecer» de anillos y halo al sacarla y la flotación de ±0,05 (casi no se vería).
 - [ ] Pala 30 importada (`Models.Palas.L30`, animada): rendimiento en móvil y verla en la mano de otro jugador. En la tienda se ve pálida sobre su tarjeta.
 - [ ] Con **2 jugadores**: el bate (empuje y tirar el fósil), la trampa y el hielo sobre otro jugador.
-- [ ] El evento del diamante y la cinemática final con el campo en su sitio nuevo (z −3208).
+- [ ] El evento del diamante con el campo en su sitio nuevo (z −3208) y el aviso `WinnerFound` (ya no hay cinemática final ni infierno).
 - [ ] Guardado real de la base y la velocidad (DataStore apagado en Studio) y que los fósiles se abran estando desconectado.
 - [ ] Cuenta atrás, grietas y temblor de los fósiles vistos en pantalla.
 - [ ] Rendimiento del carril con StreamingEnabled en móvil (radio de carga bajado a 320 el 10/11: mirar que no aparezcan cosas de golpe al correr por el carril).
 - [ ] **Optimización móvil pendiente** (seguo970, 10/11): bichos de las bases (hasta 96 en el lobby, media de 515 piezas; las partículas y luces ya van por distancia con `CreatureLOD`, hecho: versión sencilla de lejos y completo de cerca, fases 3A y 3B, 10/11; falta probarlo con 2 o más jugadores y en un móvil real, sobre todo que no tarde al acercarse. Prueba del 10/11 con `/llenar 12` (96 bichos): en PC el cliente tiene 59-63k piezas (casi todo completo), con Modo rendimiento 29k en tu base y 42k en el centro; la simulación va a 60 Hz. Los FPS de dibujo no se pudieron medir porque Studio los limita a 15 desde las herramientas: hay que mirarlos a mano con Shift+F5 en Studio o en el móvil) y tienda de palas (30 vistas 3D cuyas 323 piezas orbitales se animan cada fotograma aunque la tienda esté cerrada).
 - [ ] Ajustes en móvil (barra de volumen con el dedo).
 - [ ] Probar la progresión jugando de verdad (sin trucos): el ritmo de las primeras palas (la 2 cuesta 2.200 y un bicho común da 3 💰/s).
-- [ ] Montañas de bloques (`workspace.Mountains`): rendimiento en móvil y que desaparezcan bien en la cinemática final / paso al infierno.
+- [ ] Montañas de bloques (`workspace.Mountains`): rendimiento en móvil (ya no hay paso al infierno).
 
 ## Ideas / mejoras
 - [x] Mejorar la base para agrandarla (seguo970, 19/10): 2 niveles con monedas. Falta probar con 2 jugadores y al salir/volver, y ajustar los precios.
