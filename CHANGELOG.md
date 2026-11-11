@@ -2,6 +2,19 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · seguo970 (Claude) · Lobby sin plaza gris; diamante centrado
+**Qué:**
+- Quitada la plaza gris del centro del lobby (con su anillo dorado y el trozo de camino gris que tenía debajo), los caminitos que iban a la Recompensa diaria, a las Estelas y a la máquina de tierra, el camino corto a las bases y un borde suelto de la antigua fuente. Ahora todo eso es césped.
+- La Recompensa diaria, las Estelas y la máquina de tierra no se han movido ni tocado (siguen con sus plataformas).
+- El suelo de alrededor del podio, que no seguía el damero, ahora sigue el mismo patrón que el resto. Todo el césped del lobby usa un solo damero de casillas de 8×8.
+- El diamante con su pedestal se ha movido 8 studs hacia las bases, al centro entre los puestos.
+**Dónde:**
+- `Lobby.PlazaLayout`: quitados `Floor`, `StatueRing` y de `ShopPads` los `Path`, `PathBases` y un `PadBorder` suelto.
+- `Lobby.Floor`: el rectángulo x[−64, 64] · z[−268, −140] rehecho con 256 baldosas `Grass` de 8×8 (antes eran 574 piezas mezcladas). Colores: casilla par/impar con bordes en x = 8k y z = 8k + 4.
+- `Lobby.Statue`: de z −205 a −213.
+- Copias en `ServerStorage.LobbyCleanupBackup` (`Plaza_11-11` y `SueloCentro_11-11`).
+**Probado:** en Play el diamante gira en su sitio nuevo y se anda por la zona sin tropezar; captura desde arriba. Consola sin errores nuevos.
+
 ## 2026-11-11 · seguo970 (Claude) · Lobby más limpio y podio minimalista
 **Qué:**
 - **Quitado del lobby:** la línea gris del borde del suelo, los arbustos y pinos, la barandilla roja y blanca, los rectángulos con flores de alrededor del diamante, la fuente con su plataforma, los setos y las 14 farolas.
