@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · Paredes de una sola pieza por tramo (misma textura de cuadros)
+**Qué:** las paredes planas se ven igual (cuadros de dos tonos con studs), pero cada tramo es ahora una sola pieza en vez de muchos cuadrados. `Map.Walls` pasa de 1.505 piezas a 89 (42 paredes, sus remates y los 5 faldones del campo).
+**Cómo:** cada pared lleva dos texturas: los studs y, encima, al 50 % de transparencia, una imagen de cuadros 2×2 que he subido a Roblox (rbxassetid://78936773448807). El tono de la imagen está calculado para que la mezcla dé el mismo segundo color de antes.
+**Dónde:** `workspace.Map.Walls`. Copia de las paredes de cuadraditos en `ServerStorage.WallsTilesBackup`.
+**Probado:** vistas del lobby y del carril en Edit y en Play (los cuadros se ven, también en partida). En Play te sigues parando en la pared del carril (x ≈ 103,4) y en la del fondo del campo (z ≈ −3383). Ningún error.
+**Notas:** las texturas de cuadros de la galería de Roblox no cargaban, por eso se ha subido una propia.
+
 ## 2026-11-11 · bbogatell (Claude) · Arreglado: hueco junto a la pared del fondo del campo del diamante
 **Qué:** al fondo del campo había una franja de 6 studs sin suelo entre el final del césped (z −3384) y la pared nueva (empezaba en −3390), y te caías por ahí. Además, a los lados y al fondo del campo el suelo está más bajo que la base de las paredes, así que quedaban rendijas por debajo.
 **Dónde:** `Map.Walls.Field`: la pared `Back` se ha movido 6 studs hacia dentro y las 5 paredes del campo tienen un faldón (`Skirt`) que llega hasta y = −20.
