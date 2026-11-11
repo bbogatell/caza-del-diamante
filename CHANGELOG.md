@@ -2,6 +2,24 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · seguo970 (Claude) · Lobby: avenida hacia las bases, puerta sin pasadizo gris y más fondo
+**Qué:**
+- **Puerta del carril:** ya no tiene el pasadizo gris (pilares, techo, bandas doradas, dintel con el cartel «PARCELAS · FÓSILES» y antorchas). Ahora son dos paredes como las del lobby (marrones con remate verde) y el suelo es el césped en damero. Se sigue pasando igual.
+- **Avenida:** la Recompensa diaria, el diamante y el podio van en fila a la derecha; las Estelas y la máquina de tierra, a la izquierda. Todos miran al centro, y la avenida queda libre desde la aparición hasta las bases. El podio está girado: los avatares miran a la avenida.
+- **Más fondo:** el lobby es 32 studs más largo por detrás y la fila de bases del fondo se ha retrasado 20. Con la base al máximo, la del fondo llega a z −130 (pared en −109) y no choca con la cinta de la otra fila.
+**Dónde:**
+- `Lane.Gateway`: quitados `Roof`, `Pillar`, `Band`, `Lintel`, `Board` y `Torch`. Nuevo `GateWalls`. Los `Path` pasan a baldosas `Floor` de césped.
+- `Walls.Lobby` (pared del fondo +32; laterales alargados) y `Map.Bounds` (igual).
+- `Lobby.Floor`: 152 baldosas nuevas.
+- `Lobby.PlotFrames`: fila del fondo a z −175.
+- Estelas (−48, −440), Diario (48, −440), máquina (−48, −396), estatua (48, −396), podio (48, −355, girado 90°), aparición (0, −440); cada puesto lleva su plataforma.
+- Copia de todo lo de antes en `ServerStorage.LobbyAvenueBackup`.
+**Probado:**
+- En Play, el avatar del podio sale encima mirando a la avenida y los botones de los 3 puestos funcionan en su sitio nuevo.
+- La base al máximo cabe.
+- La puerta deja pasar: rayos sin choque hasta el carril y suelo en todo el pasillo.
+- No hay errores nuevos.
+
 ## 2026-11-11 · seguo970 (Claude) · Bases giradas: la entrada mira al diamante
 **Qué:** las 8 bases tienen ahora la entrada hacia el diamante y la puerta, en vez de hacia la pared del fondo. La cinta de correr y el cartel de «agrandar base» salen delante de la entrada, mirando al diamante. Al agrandar la base, crece hacia la pared.
 **Dónde:**
