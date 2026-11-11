@@ -2,6 +2,23 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · seguo970 (Claude) · Bases giradas: la entrada mira al diamante
+**Qué:** las 8 bases tienen ahora la entrada hacia el diamante y la puerta, en vez de hacia la pared del fondo. La cinta de correr y el cartel de «agrandar base» salen delante de la entrada, mirando al diamante. Al agrandar la base, crece hacia la pared.
+**Dónde:**
+- `ReplicatedStorage.Config` (`BASE.facing = -1`, nuevo): lado al que mira la entrada. Todos los desplazamientos de `BASE` (cinta, cartel) son en el espacio de la base y se multiplican por él.
+- `DiamondServer.Bases`: dentro/fuera, posición de bichos y fósiles, valla, crecimiento y cartel.
+- `DiamondServer.Training`: cinta y su cartel.
+- `DiamondClient.Main`: la comprobación de «estás en tu base» al cavar.
+- `Lobby.PlotFrames.*.Fence`: girada 180° la valla de las bases sin dueño.
+**Probado:** en Play:
+- La base 1 tiene la entrada hacia el diamante; la cinta va en z −242…−228 y el cartel mira hacia el diamante.
+- Ampliar la base (`Debug baseLevel 3`) la alarga hacia la pared (z −220…−150) con la valla bien.
+- 3 bichos puestos con `/bicho … base` y `/abrir` quedan dentro de la base.
+- Captura y consola sin errores nuevos.
+**Notas:**
+- Las posiciones guardadas de los bichos (`ox`, `oz`) son en el espacio de la base, así que siguen valiendo: solo quedan girados con la base.
+- Para volver a la orientación de antes: `facing = 1` y volver a girar las vallas de `PlotFrames`.
+
 ## 2026-11-11 · seguo970 (Claude) · Lobby al revés: bases al fondo, diamante y puestos junto a la puerta
 **Qué:**
 - Las 8 bases están ahora en la mitad del lobby del lado del fondo (donde estaba el diamante).
