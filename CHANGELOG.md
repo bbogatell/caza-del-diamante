@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · seguo970 (Claude) · Fuera el terreno de alrededor del mapa y los bloques sueltos junto a la puerta
+**Qué:** alrededor del mapa ya no hay terreno de tierra y roca gris: por fuera de las paredes solo se ve cielo. También se han quitado los bloques que asomaban por fuera junto a la puerta del carril: uno alto oscuro, uno verde y uno marrón a cada lado, más un bloque verde pequeño.
+**Dónde:**
+- Terreno: borrado todo menos el de los hoyos de cavar del carril (|x| ≤ 60, z −3040…−520) y el del campo del diamante (|x| ≤ 130, z −3340…−3080), que es el que se excava. Celdas de terreno: de 1.070.200 a 278.480. Copia en `ServerStorage.TerrenoAlrededorBackup` (TerrainRegion; se recupera con `Terrain:PasteRegion`).
+- `Map.Lane.Gateway.GapFill`: quitados `Mountain`, `Cliff1`, `Cliff2` y `Cliff3` de cada lado (copia en `ServerStorage.GapFillBlocksBackup`). Quedan los 4 `Fill` de suelo, que no se ven.
+**Probado:** queda terreno en el hoyo de la parcela 1 y en el campo. Las paredes invisibles siguen cerrando los lados de la puerta (rayos desde dentro). Captura general: el mapa flota sobre el cielo, sin nada alrededor.
+
 ## 2026-11-11 · seguo970 (Claude) · Lobby sin plaza gris; diamante centrado
 **Qué:**
 - Quitada la plaza gris del centro del lobby (con su anillo dorado y el trozo de camino gris que tenía debajo), los caminitos que iban a la Recompensa diaria, a las Estelas y a la máquina de tierra, el camino corto a las bases y un borde suelto de la antigua fuente. Ahora todo eso es césped.
