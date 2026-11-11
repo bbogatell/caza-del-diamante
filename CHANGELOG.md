@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · seguo970 (Claude) · Lobby: césped verde claro en damero
+**Qué:** todo el césped del lobby es ahora un damero de dos verdes lima claros (como el de la foto de referencia que pasó seguo970). Antes eran muchos verdes oscuros sueltos. Los caminos grises, la plaza, las bases y la tierra no cambian.
+**Dónde:** `workspace.Map.Lobby.Floor` (las 1.859 piezas `Grass`; colores (139, 214, 64) y (122, 199, 52), alternando cada 8 studs). Cada pieza guarda su color anterior en el atributo `OldColor`.
+**Probado:** capturas desde arriba y a ras de suelo.
+
 ## 2026-11-11 · bbogatell (Claude) · Paredes de una sola pieza por tramo (misma textura de cuadros)
 **Qué:** las paredes planas se ven igual (cuadros de dos tonos con studs), pero cada tramo es ahora una sola pieza en vez de muchos cuadrados. `Map.Walls` pasa de 1.505 piezas a 89 (42 paredes, sus remates y los 5 faldones del campo).
 **Cómo:** cada pared lleva dos texturas: los studs y, encima, al 50 % de transparencia, una imagen de cuadros 2×2 que he subido a Roblox (rbxassetid://78936773448807). El tono de la imagen está calculado para que la mezcla dé el mismo segundo color de antes.
