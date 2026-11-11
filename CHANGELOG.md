@@ -2,6 +2,21 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · seguo970 (Claude) · Lobby al revés: bases al fondo, diamante y puestos junto a la puerta
+**Qué:**
+- Las 8 bases están ahora en la mitad del lobby del lado del fondo (donde estaba el diamante).
+- El diamante, el podio, la Recompensa diaria, las Estelas, la máquina de tierra y el punto de aparición están en la mitad de la puerta del carril.
+- Quitados todos los caminos grises del lobby, que ahora son césped en el mismo damero.
+- Es una primera colocación: seguo970 dirá si algo va en otro sitio.
+**Dónde:**
+- `Lobby.PlotFrames`: +110 en z (filas en z −195 y −287).
+- `Daily`, `TrailShop`, `FossilMachine`, `Statue`, `Podium`, `PlazaLayout` y `LobbySpawn`: −190 en z.
+- `Lobby.Floor`: 376 `Path` pasadas a `Grass`; 133 baldosas nuevas donde estaban las bases (que no tenían suelo debajo). Todo recoloreado con el damero de 8×8.
+- No se ha cambiado ningún script: las bases, la cinta y los carteles se colocan a partir de la posición del `Floor`/`Platform` de cada base.
+- Copia de todo lo de antes en `ServerStorage.LobbySwapBackup`.
+**Probado:** en Play apareces junto a la puerta. Te toca la base 1 en su sitio nuevo con su cartel; la cinta de correr y el cartel de mejora salen delante de la base, sin chocar con la pared (cinta en z −163…−149). Ampliar la base con `Debug baseLevel 3` funciona. Sin errores nuevos.
+**Notas:** las bases siguen con la entrada mirando a +Z, o sea, hacia la pared del fondo y no hacia el diamante (los scripts dan por hecho esa orientación; girarlas pide cambiar `Bases`, `Training` y `Config.BASE`).
+
 ## 2026-11-11 · seguo970 (Claude) · Fuera el terreno de alrededor del mapa y los bloques sueltos junto a la puerta
 **Qué:** alrededor del mapa ya no hay terreno de tierra y roca gris: por fuera de las paredes solo se ve cielo. También se han quitado los bloques que asomaban por fuera junto a la puerta del carril: uno alto oscuro, uno verde y uno marrón a cada lado, más un bloque verde pequeño.
 **Dónde:**
