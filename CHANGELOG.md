@@ -2,6 +2,19 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · Arreglado: tras encontrar el diamante seguías en el hoyo con el diamante al lado
+**Qué:** al acabar la cinemática del ganador, quien estaba dentro del campo del diamante (el ganador siempre) vuelve a su base en vez de al hoyo, que además queda cerrado detrás de la muralla nueva. El diamante desenterrado y su rayo de luz ya no se quedan en el campo.
+**Dónde:**
+- `DiamondServer.Finale`: parámetro `home`; quien estaba más allá de z −3070 va a su base.
+- `DiamondServer.Main`: le pasa `Plots.spotOf`.
+- `DiamondServer.Event`: la variable `revealed` estaba declarada más abajo que `Event.finish`, así que el diamante desenterrado nunca se borraba.
+- `DiamondServer.PostHunt`: borra `HiddenDiamond` y `DiamondBeam` si quedan.
+
+**Probado:** en Play, el caso real:
+- `/empezar`, cavar hasta el diamante (sale «revealed») y recogerlo con la E;
+- después de la cinemática el jugador está en su base, con la pala y la cámara normal (servidor y cliente);
+- no queda ningún diamante fuera del lobby y no hay errores.
+
 ## 2026-11-11 · bbogatell (Claude) · El lobby después de la caza: estatua de piedra del ganador y portón con la próxima caza
 **Qué:** cuando alguien encuentra el diamante (al acabar la cinemática del ganador, y en todos los servidores que se abran después) el juego cambia así:
 - **Lobby:** la estatua del diamante pasa a ser la **estatua de piedra del ganador**: su avatar gigante en piedra con los brazos en alto y el diamante de verdad (azul, brillando) encima, sobre un pedestal de piedra con su nombre grabado en los 4 lados («NOMBRE · ENCONTRÓ EL DIAMANTE»). Desaparecen el diamante que giraba y su cartel de cuenta atrás.
