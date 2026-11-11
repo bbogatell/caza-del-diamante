@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · Arreglado: hueco junto a la pared del fondo del campo del diamante
+**Qué:** al fondo del campo había una franja de 6 studs sin suelo entre el final del césped (z −3384) y la pared nueva (empezaba en −3390), y te caías por ahí. Además, a los lados y al fondo del campo el suelo está más bajo que la base de las paredes, así que quedaban rendijas por debajo.
+**Dónde:** `Map.Walls.Field`: la pared `Back` se ha movido 6 studs hacia dentro y las 5 paredes del campo tienen un faldón (`Skirt`) que llega hasta y = −20.
+**Probado:**
+- Revisado con rayos todo el borde del mapa (lobby, carril y campo), 901 puntos junto a las paredes: en todos hay suelo y ningún hueco.
+- En Play, corriendo contra la pared del fondo en 3 sitios te paras en ella (z ≈ −3383) sin caer; también contra las de los lados.
+
 ## 2026-11-11 · bbogatell (Claude) · Paredes planas en todo el mapa (sin montañas ni decoración de fuera)
 **Qué:** como en «Roba un huevo», el mapa ya no tiene montañas ni acantilados de bloques ni decoración fuera de los límites. Todo queda cerrado por paredes planas a cuadros de dos tonos con un remate arriba:
 - **Lobby:** naranja arena con remate verde.
