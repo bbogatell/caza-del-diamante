@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · Arreglado: el botón «Saltar» del tutorial no hacía nada
+**Qué:** el botón «Saltar ⏭» de la tarjeta del tutorial vuelve a funcionar: el primer clic pregunta «¿Seguro?» y el segundo lo salta.
+**Dónde:** `DiamondClient.Tutorial` (el clic del botón).
+**Probado:** en Play, con dos clics de ratón sobre el botón, el tutorial se salta y la tarjeta desaparece.
+**Notas:** el fallo venía del cambio del 9/11 (segundo tutorial): el botón elegía qué tutorial saltar con la variable `step`, que está declarada más abajo en el script y ahí siempre valía nil, así que siempre pedía saltar el de la máquina. Ahora mira el atributo `Tutorial` del jugador.
+
 ## 2026-11-11 · bbogatell (Claude) · Textos en pantalla cortos y más pequeños
 **Qué:**
 - **Textos:** todos los carteles y avisos que salen en pantalla son ahora de una o dos palabras, sin explicaciones. Por ejemplo:
