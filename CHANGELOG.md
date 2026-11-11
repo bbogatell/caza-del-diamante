@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · seguo970 (Claude) · Vuelve el cartel «PARCELAS · FÓSILES» a la puerta
+**Qué:** el cartel de la puerta del carril vuelve, ahora encima de la abertura entre las dos paredes nuevas (arriba a ras de ellas), mirando al lobby.
+**Dónde:** `Lane.Gateway.Board`, sacado de `ServerStorage.LobbyAvenueBackup`; x[−45, 45], y[55, 66].
+**Probado:** captura desde el lobby. Por debajo quedan 37 studs de paso.
+
 ## 2026-11-11 · seguo970 (Claude) · Lobby: avenida hacia las bases, puerta sin pasadizo gris y más fondo
 **Qué:**
 - **Puerta del carril:** ya no tiene el pasadizo gris (pilares, techo, bandas doradas, dintel con el cartel «PARCELAS · FÓSILES» y antorchas). Ahora son dos paredes como las del lobby (marrones con remate verde) y el suelo es el césped en damero. Se sigue pasando igual.
