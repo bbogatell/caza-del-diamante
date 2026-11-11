@@ -2,6 +2,26 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · Textos en pantalla cortos y más pequeños
+**Qué:**
+- **Textos:** todos los carteles y avisos que salen en pantalla son ahora de una o dos palabras, sin explicaciones. Por ejemplo:
+  - «🥚 ¡ÉPICO!» en vez de «🥚 ¡FÓSIL ÉPICO!» con instrucciones;
+  - «🏠 ¡A tu base!» sin el «🐢 Vas más lento · 🏏 ¡que no te peguen!»;
+  - «✅ ¡A salvo!»; «🔒 Pala 5»; «💰 +1,2K»; «🔄 ¡Se rellena!»; «👑 ¡X lo encontró!».
+- **Bienvenida:** quitado el cartel de bienvenida (ya lo dice la cinemática).
+- **Final del tutorial:** la ventana es pequeña: «🎉 ¡LISTO!», el premio y «¡A jugar!», sin las 3 filas de explicaciones.
+- **Tamaño:** los carteles grandes (`Fx.banner`) ocupan menos (máx. 44 px el título, 20 px el subtítulo), y los avisos (`Fx.toast`) y los textos de la cinemática también son más pequeños.
+- **Emoji de la trampa:** 🪤 no se ve en Roblox y se ha cambiado por 🐻, también en la tienda.
+
+**Dónde:**
+- Cliente: `DiamondClient.Fx` (`banner`, `toast`), `DiamondClient.Main`, `DiamondClient.Menus`, `DiamondClient.Tutorial` (resumen final) y `DiamondClient.Cinematic` (`caption` y textos de la intro).
+- Servidor (mensajes): `DiamondServer.Lane`, `DiamondServer.Fossils`, `DiamondServer.Bases`, `DiamondServer.Training`, `DiamondServer.Main` y `DiamondServer.Items`.
+- `ReplicatedStorage.Config` (iconos de las trampas).
+
+**Probado:** en Play salen bien «🥚 ¡ÉPICO!», el aviso «🏠 Ya llevas uno» y la ventana «¡LISTO!» del final del tutorial. Ningún error.
+
+**Notas:** los comandos de prueba (/dinero, /fosil…) no se han tocado.
+
 ## 2026-11-10 · bbogatell (Claude) · Cinemática al entrar, sin final del infierno, venta más baja, bichos top más grandes y cuenta atrás de rellenado
 **Qué:**
 - **Cinemática al entrar** (unos 6 s, botón «Saltar ⏭»):
