@@ -2,6 +2,19 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · seguo970 (Claude) · Lobby más limpio y podio minimalista
+**Qué:**
+- **Quitado del lobby:** la línea gris del borde del suelo, los arbustos y pinos, la barandilla roja y blanca, los rectángulos con flores de alrededor del diamante, la fuente con su plataforma, los setos y las 14 farolas.
+- **Suelo:** donde estaban esas cosas, y bajo el antiguo podio, ahora hay césped en damero como el resto. El suelo llega hasta las paredes.
+- **Podio nuevo:** 3 bloques con studs, sin decoración. Oro en el centro (el más alto, con un «1»), plata a la derecha («2») y bronce a la izquierda («3»). Los avatares de los 3 más ricos salen encima, como antes.
+**Dónde:**
+- `workspace.Map.Lobby`: borrado `Props.Gutter`, `Props.Flowers` y las 72 piezas `Props.Rail`. En `PlazaLayout`, borrado `Hedges`, `FlowerBeds`, `Fountain`, `Lamps` y la plataforma de la fuente de `ShopPads`.
+- `Lobby.Podium`: rehecho (`First`, `Second`, `Third`, `Spot1-3`, `Characters`; `PrimaryPart` = `First`).
+- `Lobby.Floor`: baldosas del borde estiradas hasta |x| = 148 y z = −463. Las 176 baldosas blancas sueltas de la plaza antigua pasan a césped (guardan `OldColor`).
+- Terreno: quitado el que había debajo del suelo del lobby (asomaba en manchas marrones).
+- Copia de todo lo quitado en `ServerStorage.LobbyCleanupBackup` (incluido el terreno y el podio antiguo). `ServerStorage.PodiumBuilder` queda marcado como obsoleto: rehace el monumento antiguo.
+**Probado:** en Play el avatar del 1.º sale de pie encima del bloque de oro, mirando al lobby. Se anda por todo el lobby y la pared lateral sigue frenando. Capturas desde arriba y de cerca. Consola sin errores nuevos.
+
 ## 2026-11-11 · seguo970 (Claude) · Lobby: césped verde claro en damero
 **Qué:** todo el césped del lobby es ahora un damero de dos verdes lima claros (como el de la foto de referencia que pasó seguo970). Antes eran muchos verdes oscuros sueltos. Los caminos grises, la plaza, las bases y la tierra no cambian.
 **Dónde:** `workspace.Map.Lobby.Floor` (las 1.859 piezas `Grass`; colores (139, 214, 64) y (122, 199, 52), alternando cada 8 studs). Cada pieza guarda su color anterior en el atributo `OldColor`.
