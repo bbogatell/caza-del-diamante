@@ -2,6 +2,31 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · Paredes planas en todo el mapa (sin montañas ni decoración de fuera)
+**Qué:** como en «Roba un huevo», el mapa ya no tiene montañas ni acantilados de bloques ni decoración fuera de los límites. Todo queda cerrado por paredes planas a cuadros de dos tonos con un remate arriba:
+- **Lobby:** naranja arena con remate verde.
+- **Parcelas del carril:** cada una con el color de su bioma.
+- **Campo del diamante:** verde.
+
+**Quitado:**
+- `workspace.Mountains`, `Map.FrontMountains` y los acantilados del lobby (`Cliffs`: Back, West, East).
+- La cascada y las flores de fuera de los límites.
+- Los acantilados de las 15 parcelas (menos la barrera invisible `Bound`) y la decoración de las parcelas que quedaba fuera del paseo.
+- Las montañas, remates y acantilados del final del carril.
+
+En total 3.589 objetos; el mapa pasa de unas 25.000 piezas a 16.000.
+
+**Dónde:**
+- `workspace.Map.Walls` (nuevo, 1.500 piezas).
+- Copia de todo lo quitado en `ServerStorage.DecoracionExteriorBackup`. ServerStorage no se envía a los jugadores, así que no afecta al rendimiento. Para volver atrás, cada pieza tiene el atributo `From` con la ruta de donde estaba.
+
+**Probado:**
+- Vistas del lobby, del carril, del final y de la puerta del lobby al carril.
+- En Play, al correr contra la pared del carril te paras en ella (x ≈ 103,4).
+- Ningún error.
+
+**Notas:** si se rehace una parcela con `LaneKit.buildPlot`, volverían a salir sus acantilados.
+
 ## 2026-11-11 · bbogatell (Claude) · Lobby: plaza redistribuida con simetría
 **Qué:** la zona central del lobby (entre el podio y las bases) es ahora simétrica, en espejo a ambos lados del eje podio → estatua → aparición → bases:
 - **Plaza:** más grande, de baldosas en damero de dos grises con borde. Alrededor de la estatua hay un anillo dorado.
