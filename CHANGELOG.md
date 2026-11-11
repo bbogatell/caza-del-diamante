@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · Cuenta atrás de la caza a 30 días
+**Qué:** la barrera del campo del diamante se abre el 11 de diciembre de 2026 a las 18:00 UTC (19:00 en Madrid), 30 días a partir de hoy. Antes la fecha era el 25/10, que ya había pasado, así que el juego estaba en modo «¡CAVA!» sin cuenta atrás. Ahora arriba sale «LA BARRERA SE ABRE EN 30 días…».
+**Dónde:** `ReplicatedStorage.Config` (`EVENT_TIME`).
+**Probado:** en Play, estado `Waiting` y faltan 30,06 días; captura del reloj de arriba.
+**Notas:** en `PENDIENTES` sigue «Confirmar fecha y hora definitivas del evento».
+
 ## 2026-11-11 · bbogatell (Claude) · Arreglado: tras encontrar el diamante seguías en el hoyo con el diamante al lado
 **Qué:** al acabar la cinemática del ganador, quien estaba dentro del campo del diamante (el ganador siempre) vuelve a su base en vez de al hoyo, que además queda cerrado detrás de la muralla nueva. El diamante desenterrado y su rayo de luz ya no se quedan en el campo.
 **Dónde:**
