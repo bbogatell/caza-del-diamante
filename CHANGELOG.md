@@ -2,6 +2,27 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · Vuelve la cinemática del ganador (sin derrumbe ni infierno)
+**Qué:** cuando alguien encuentra el diamante vuelve la cinemática del ganador:
+- el diamante sale de la tierra;
+- el ganador aparece bailando en la plataforma del cielo con el diamante al lado;
+- el diamante explota en «10.000 ROBUX», con lluvia de Robux, fuegos artificiales y confeti.
+
+Después, en vez del derrumbe y el infierno, todo el mundo vuelve justo a donde estaba, con sus herramientas, y sigue jugando (cavar, fósiles…). Dura 18 s.
+
+**Dónde:**
+- `ServerScriptService.DiamondServer.Finale`: recuperado de la copia, sin la parte del infierno, y con el regreso de los jugadores.
+- `ServerStorage.Finale.SkyPlatform` (recuperada).
+- `DiamondServer.Main` (`Event.onWinner` → `Finale.run` con la función que devuelve pala y objetos).
+- `DiamondClient.Main` (`handlers.Finale`, quitado `WinnerFound`) y `DiamondClient.Cinematic` (`play` acaba con un fundido tras el premio).
+- El infierno sigue guardado en `ServerStorage.CopiasSeguridad.FinaleInfierno_desactivado_2026-11-10`.
+
+**Probado:** en Play, lanzando el final con el jugador como ganador:
+- se ven el diamante saliendo, el baile en la plataforma, la explosión y el premio;
+- al acabar el jugador está exactamente donde estaba (también en el cliente), con la pala, la cámara normal y el HUD, sin infierno y sin errores.
+
+**Notas:** la primera prueba dejó al jugador caer desde la plataforma (el cliente manda en la posición de su personaje). Ahora se le coloca mientras aún está anclado y otra vez al soltarlo. Sin probar: con varios jugadores y con un ganador de otro servidor.
+
 ## 2026-11-11 · bbogatell (Claude) · Arreglado: el botón «Saltar» del tutorial no hacía nada
 **Qué:** el botón «Saltar ⏭» de la tarjeta del tutorial vuelve a funcionar: el primer clic pregunta «¿Seguro?» y el segundo lo salta.
 **Dónde:** `DiamondClient.Tutorial` (el clic del botón).
