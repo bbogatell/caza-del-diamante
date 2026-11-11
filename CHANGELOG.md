@@ -14,7 +14,7 @@
 - Los acantilados de las 15 parcelas (menos la barrera invisible `Bound`) y la decoración de las parcelas que quedaba fuera del paseo.
 - Las montañas, remates y acantilados del final del carril.
 
-En total 3.589 objetos; el mapa pasa de unas 25.000 piezas a 16.000.
+En total 3.589 objetos (modelos y piezas). Ahora quedan unas 11.400 piezas en el `workspace`, contando ya las paredes nuevas.
 
 **Dónde:**
 - `workspace.Map.Walls` (nuevo, 1.500 piezas).
