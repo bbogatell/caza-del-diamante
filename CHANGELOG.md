@@ -2,6 +2,22 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · Lobby: plaza redistribuida con simetría
+**Qué:** la zona central del lobby (entre el podio y las bases) es ahora simétrica, en espejo a ambos lados del eje podio → estatua → aparición → bases:
+- **Plaza:** más grande, de baldosas en damero de dos grises con borde. Alrededor de la estatua hay un anillo dorado.
+- **Plataformas:** 4 iguales con su camino a la plaza, 2 a cada lado: Diario y Tienda de Estelas delante, y detrás la Máquina de Fósiles a la izquierda y una **fuente nueva** con un diamante a la derecha.
+- **Decoración:** 4 parterres de flores en las esquinas de la plaza, setos a los lados y 14 farolas colocadas por parejas.
+- **Quitado:** las flores sueltas, jardineras y pinos que había repartidos por esa zona, y el borde antiguo de la plaza.
+
+**Dónde:**
+- `workspace.Map.Lobby.PlazaLayout` (nuevo: suelo, anillo, plataformas, parterres, setos, farolas y fuente).
+- Movidos: `Daily`, `TrailShop` y `FossilMachine` (girada para mirar a la plaza).
+- Quitado: flores de `Props.Flowers` y piezas de `Floor`.
+- Copia de todo lo de antes en `ServerStorage.LobbyLayoutBackup`.
+
+**Probado:** en Play, comprar un fósil en la máquina en su sitio nuevo funciona; los botones del Diario, las Estelas y la máquina están delante de cada puesto, mirando a la plaza. Ningún error.
+**Notas:** pendiente de que el usuario lo mire y dé su opinión.
+
 ## 2026-11-11 · bbogatell (Claude) · Cuenta atrás de la caza a 30 días
 **Qué:** la barrera del campo del diamante se abre el 11 de diciembre de 2026 a las 18:00 UTC (19:00 en Madrid), 30 días a partir de hoy. Antes la fecha era el 25/10, que ya había pasado, así que el juego estaba en modo «¡CAVA!» sin cuenta atrás. Ahora arriba sale «LA BARRERA SE ABRE EN 30 días…».
 **Dónde:** `ReplicatedStorage.Config` (`EVENT_TIME`).
