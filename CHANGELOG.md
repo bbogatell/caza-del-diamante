@@ -2,6 +2,30 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-11 · bbogatell (Claude) · El lobby después de la caza: estatua de piedra del ganador y portón con la próxima caza
+**Qué:** cuando alguien encuentra el diamante (al acabar la cinemática del ganador, y en todos los servidores que se abran después) el juego cambia así:
+- **Lobby:** la estatua del diamante pasa a ser la **estatua de piedra del ganador**: su avatar gigante en piedra con los brazos en alto y el diamante de verdad (azul, brillando) encima, sobre un pedestal de piedra con su nombre grabado en los 4 lados («NOMBRE · ENCONTRÓ EL DIAMANTE»). Desaparecen el diamante que giraba y su cartel de cuenta atrás.
+- **Final del carril:** desaparecen el diamante gigante con «$10.000 ROBUX», el marcador, el arco y la escalera del campo. En su lugar hay una muralla de piedra con torres, antorchas y un portón cerrado con un candado de oro y cadenas, y encima el cartel «🔒 PRÓXIMA CAZA» con la cuenta atrás.
+- **Reloj de arriba:** «🔒 PRÓXIMA CAZA EN» con días, horas, minutos y segundos.
+- **Cinemática de entrada:** gira alrededor de la estatua del ganador («👑 nombre») y acaba en el portón cerrado («🔒 Próxima caza»).
+- **Próxima caza:** 30 días después de encontrarse el diamante (`Config.NEXT_HUNT_DAYS`, para cambiarlo). Se calcula con la hora guardada del hallazgo, así que todos los servidores muestran la misma.
+
+**Dónde:**
+- Servidor: `DiamondServer.PostHunt` (nuevo), `DiamondServer.Event` (`NextHuntAt`) y `DiamondServer.Main` (`Event.onWinner` aplica `PostHunt`; comando `/finalizar`).
+- Modelos: `ServerStorage.PostHunt` (`Gate` y `StonePedestal`, nuevos).
+- `ReplicatedStorage.Config` (`NEXT_HUNT_DAYS`).
+- Cliente: `DiamondClient.HUD` (reloj), `StarterPlayerScripts.StatueBoard` (reescrito: ya no se queda esperando el cartel del lobby y rellena el del portón), `DiamondClient.Main` (giro del diamante del lobby) y `DiamondClient.Cinematic` (intro).
+
+**Probado:** en Play con `/finalizar` (con la cinemática del ganador) y `/finalizar ya`:
+- sale la estatua de piedra con el nombre grabado y el diamante encima;
+- el portón muestra la cuenta atrás en marcha («29d 23:59:36») y el reloj de arriba también;
+- el campo ya no tiene el diamante, el marcador ni el arco;
+- ningún error.
+
+**Sin probar:** la cinemática de entrada en un servidor que ya ha terminado (en Studio no se guarda el final, así que no se puede volver a entrar con él), ni con un ganador de otro servidor.
+
+**Notas:** todo esto se hace en la partida (no cambia el lugar en Studio), así que no hay nada que deshacer si se reinicia el evento. La estatua usa el avatar del ganador con la pose «cheer» de Roblox congelada.
+
 ## 2026-11-11 · bbogatell (Claude) · Vuelve la cinemática del ganador (sin derrumbe ni infierno)
 **Qué:** cuando alguien encuentra el diamante vuelve la cinemática del ganador:
 - el diamante sale de la tierra;

@@ -18,6 +18,7 @@
 | `/tierra <cantidad>` | Te da tierra para la máquina: `/tierra 5000`, `/tierra 2m`. |
 | `/dinero <cantidad>` | Te da monedas: `/dinero 5000`, `/dinero 2.5m`, `/dinero 1b`, `/dinero 3t`. |
 | `/empezar` | Abre la barrera del evento del diamante ya. |
+| `/finalizar` · `/finalizar ya` | Hace como si TÚ encontraras el diamante (no guarda nada: `Event.finish`, no `Event.claim`). Con cinemática del ganador, o `ya` sin ella (como en un servidor que arranca después del final). Luego se ve el lobby de después de la caza (`PostHunt`). |
 | `/rayosx` | Muestra dónde está el diamante escondido. |
 | `/tutorial` | Empieza el tutorial otra vez desde el paso 1. |
 
