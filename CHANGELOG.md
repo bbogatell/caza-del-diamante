@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · El final del pasillo de la puerta, 6 studs más hacia el lobby
+**Qué:** las paredes del pasillo de la puerta y las copias de la pared del fondo que hay detrás acababan donde empieza la parcela 1. Ahora acaban 6 studs antes, más cerca del lobby, en los dos lados.
+**Dónde:** `Lane.Gateway.SideWalls` (pared y remate): ahora van de z −461 a −514, con 4 cuadros de 13,25 por fila (mismo orden de colores que antes). `Walls.Lobby.BackECopy/BackWCopy`: movidas a z −514..−508.
+**Probado:** capturas desde el lado de la parcela; rayos hacia abajo: el suelo que queda al descubierto no tiene huecos. No probado en Play.
+
 ## 2026-11-12 · seguo970 (Claude) · Copia de la pared del fondo detrás del lobby
 **Qué:** detrás de la pared del fondo del lobby, a cada lado del pasillo de la puerta, había un hueco abierto de hierba hacia la parcela 1. Ahora hay ahí una copia de la pared del fondo (mismo color, cuadros y remate verde) que lo cierra por detrás, en los dos lados.
 **Dónde:** `Walls.Lobby.BackECopy` y `BackWCopy` (nuevas, pared y remate): x ±44..±104, z −520..−514, 4 cuadros de 15 por fila.
