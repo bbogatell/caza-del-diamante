@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Quitadas las paredes de detrás del lobby
+**Qué:** se quitan, en los dos lados, las dos copias de la pared del fondo que se habían puesto detrás del lobby, junto al pasillo de la puerta. Lo pidió seguo970 porque no quedaban donde quería. Vuelve a verse el hueco de hierba entre el pasillo y la pared de la parcela 1.
+**Dónde:** `Walls.Lobby.BackECopy/BackWCopy` movidas a `ServerStorage.ParedesDetrasBackup`, por si se quieren recuperar. Las paredes del pasillo (`Lane.Gateway.SideWalls`) siguen de z −461 a −520.
+**Probado:** captura desde la parcela 1.
+
 ## 2026-11-12 · seguo970 (Claude) · Pared de detrás: 0,4 studs hacia el lobby
 **Qué:** la pared de detrás del lobby (vista desde la parcela 1) se mete todavía menos: 0,4 studs hacia el lobby, en vez de los 3 de antes (también se probaron 1,5 y 0,75). La pared del pasillo sobresale 0,4 studs por delante. Es así en los dos lados.
 **Dónde:** `Walls.Lobby.BackECopy/BackWCopy`: z −519,6..−513,6.
