@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Paredes del lobby con cuadros enteros y simétricos
+**Qué:** en las paredes marrones del lobby y del pasillo de la puerta, los cuadros ya no salen cortados ni unos más largos que otros. Cada pared tiene cuadros enteros de unos 16 studs, siempre 3 filas en altura, que empiezan y acaban justo en sus bordes.
+**Dónde:**
+- `Walls.Lobby` (los 5 tramos), `Walls.Link` y `Lane.Gateway.GateWalls`: la textura de cuadros (`StudsPerTileU/V`) se ajusta en cada cara para que entre un número exacto de cuadros, con los desplazamientos a 0.
+- Para que la cara visible sea la pared entera, la pared del fondo pasa a x[−146,5, 146,5] y las del lado de la puerta `BackE`/`BackW` a x[51, 146,5] (de −51 a −146,5 la del oeste). Hay 4 bloques `Corner` nuevos, sin cuadros, en las esquinas.
+- Copia de antes en `ServerStorage.ParedesLobbyBackup`.
+**Probado:** capturas de la esquina del fondo y del pasillo de la puerta.
+
 ## 2026-11-12 · seguo970 (Claude) · Quitado el cartel de la puerta
 **Qué:** fuera el cartel de encima de la puerta del carril («PARCELAS · FÓSILES» por un lado y «VOLVER AL LOBBY» por el otro).
 **Dónde:** borrado `Lane.Gateway.Board`. Copia en `ServerStorage.LobbyAvenueBackup.Gateway.Board`.
