@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Puestos del lobby pegados a la pared del fondo, mirando al spawn
+**Qué:** al aparecer y mirar hacia el pasillo de las parcelas, ahora ves los 5 puestos pegados a la pared del fondo, a los dos lados del pasillo, mirándote. A la derecha, de dentro afuera: la caza del diamante (estatua), la recompensa diaria y el podio. A la izquierda: la máquina de fósiles y la tienda de Estelas.
+**Dónde:** `Lobby.Statue`, `Lobby.Daily`, `Lobby.Podium`, `Lobby.FossilMachine`, `Lobby.TrailShop` y sus plataformas de `Lobby.PlazaLayout.ShopPads`: ahora en z −460..−425. El podio y la máquina se han girado para que miren a +Z. Copia de antes en `ServerStorage.TiendasParedBackup`.
+**Probado:** capturas desde el spawn. Ningún script usa las posiciones antiguas. No probado en Play (que los avisos de «pulsa E» y el podio con avatares funcionen igual).
+
 ## 2026-11-12 · seguo970 (Claude) · Huecos junto al pasillo de la puerta cerrados con pared verde
 **Qué:** al principio de la parcela 1, entre la pared del pasillo de la puerta y la pared verde de la parcela, quedaban dos huecos sin pared. Ahora están cerrados con la misma pared verde de la parcela (mismo color, cuadros y remate), a ras del final del pasillo.
 **Dónde:** `Walls.Lane.Plot01.GapE` y `GapW` (nuevas, pared y remate): x ±44..±104, z −520..−514, 4 cuadros de 15.
