@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Pared de detrás: 1,5 studs hacia el lobby
+**Qué:** la pared de detrás del lobby (vista desde la parcela 1) se mete todavía menos: 1,5 studs hacia el lobby en vez de 3. La pared del pasillo sobresale 1,5 studs por delante. Es así en los dos lados.
+**Dónde:** `Walls.Lobby.BackECopy/BackWCopy`: z −518,5..−512,5.
+**Probado:** captura desde la parcela 1. No probado en Play.
+
 ## 2026-11-12 · seguo970 (Claude) · Pared de detrás: 3 studs hacia el lobby en vez de 6
 **Qué:** la pared de detrás del lobby (vista desde la parcela 1) ya no se mete tanto: ahora está 3 studs hacia el lobby en vez de 6. La pared del pasillo sobresale 3 studs por delante. Es así en los dos lados.
 **Dónde:** `Walls.Lobby.BackECopy/BackWCopy`: z −517..−511.
