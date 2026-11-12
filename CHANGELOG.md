@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · bbogatell (Claude) · Interfaz animada: rayas, arcoíris, destellos y chispas
+**Qué:** las tiendas, ventanas y botones ahora se mueven solos, para dar más «dopamina»:
+- Las rayas blancas de botones y carteles se deslizan sin parar.
+- Lo multicolor (¡Nuevo!, ¡EVENTO!, marcos arcoíris, MEJORAR…) va cambiando y fluyendo de color.
+- Cada botón tiene cada 3-5 s un destello blanco que lo cruza.
+- Chispas doradas (imagen nueva) aparecen, crecen, giran y se apagan: muchas en lo arcoíris y en las cartas «Los mejores», bastantes en los botones grandes y alguna de vez en cuando en botones, iconos e imágenes grandes (fósiles, bichos).
+- Los iconos de las cartas «respiran» (suben y bajan de tamaño un 4 %).
+**Dónde:** nuevo `DiamondClient.UIFx` (lo arranca `DiamondClient.Main` con `UIFx.attach(hudGui)` y `UIFx.attach(menuGui)`); no hace falta tocar cada ventana: reconoce las piezas por su forma (`Stripes`, `UIGradient` de ≥4 colores, `UIStroke` `TopGlow`, botones, iconos). Chispa: rbxassetid://80072353946983. `docs/ARQUITECTURA.md` actualizado.
+**Probado:** Play en Studio con la tienda y la máquina abiertas: los arcoíris cambian de color, se ve el destello en los botones de precio y salen chispas en el cartel destacado y en las cartas; sin errores en la consola. Los fps de Studio eran los mismos (14) con y sin menús, así que no se nota en el rendimiento.
+**Notas:** solo se anima lo que está en una ventana abierta y en pantalla (lo que queda fuera al desplazar una lista no saca chispas). Máximo 45 chispas a la vez. Primera versión usaba tablas débiles y perdía casi todo: ya corregido.
+
 ## 2026-11-12 · bbogatell (Claude) · Las ventanas ya no se cierran al pulsar dentro fuera de un botón
 **Qué:** antes, en la tienda, la máquina de fósiles, el diario, los rastros y los ajustes, pulsar en una zona de la ventana que no fuera un botón (cabecera, fondo de un cartel, texto…) cerraba la ventana. Ahora solo se cierra al pulsar fuera de la ventana (o en la X).
 **Dónde:** `DiamondClient.Menus` → `Menus.build`: el fondo oscuro `Dim` (botón a pantalla completa que recibía esos clics) comprueba con `inside()` si el clic cae dentro de la ventana abierta o de alguno de sus elementos visibles; si es así, no cierra. Lo que un marco con `ClipsDescendants` esconde (la parte desplazada de una lista) no cuenta como dentro.
