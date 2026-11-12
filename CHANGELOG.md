@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Sin mancha oscura en las esquinas del pasillo de la puerta
+**Qué:** en la entrada del pasillo, la pared del fondo del lobby y la pared del pasillo se solapaban, y salía un recuadro más oscuro en cada esquina. Ahora ya no se solapan y el color es el de la pared.
+**Dónde:** `Walls.Lobby.BackE/BackW` (pared y remate): ahora empiezan en x ±44, donde acaba la pared del pasillo. Cada cara grande queda con 6 cuadros de 17,08.
+**Probado:** captura desde el lobby.
+
 ## 2026-11-12 · seguo970 (Claude) · Pasillo de la puerta: el mismo orden de cuadros en las dos paredes
 **Qué:** la pared derecha del pasillo empezaba la fila de arriba con un cuadro oscuro y la izquierda con uno claro. Ahora las dos empiezan igual (claro, oscuro, claro, oscuro), en espejo.
 **Dónde:** `Lane.Gateway.SideWalls.Wall` de la derecha (x +41): textura de cuadros desplazada un cuadro (`OffsetStudsU`).
