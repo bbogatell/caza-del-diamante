@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · bbogatell (Claude) · Las ventanas ya no se cierran al pulsar dentro fuera de un botón
+**Qué:** antes, en la tienda, la máquina de fósiles, el diario, los rastros y los ajustes, pulsar en una zona de la ventana que no fuera un botón (cabecera, fondo de un cartel, texto…) cerraba la ventana. Ahora solo se cierra al pulsar fuera de la ventana (o en la X).
+**Dónde:** `DiamondClient.Menus` → `Menus.build`: el fondo oscuro `Dim` (botón a pantalla completa que recibía esos clics) comprueba con `inside()` si el clic cae dentro de la ventana abierta o de alguno de sus elementos visibles; si es así, no cierra. Lo que un marco con `ClipsDescendants` esconde (la parte desplazada de una lista) no cuenta como dentro.
+**Probado:** Play en Studio con clics de ratón reales: máquina → clic en el texto de arriba y entre cartas: sigue abierta; clic fuera: se cierra. Tienda → clic en la cabecera, en el fondo del cartel y en el título «DESTACADO»: sigue abierta; clic debajo de la tienda: se cierra.
+**Notas:** no he probado en móvil (táctil), pero usa la misma posición del toque.
+
 ## 2026-11-12 · bbogatell (Claude) · Iconos de fósil por rareza en la máquina de fósiles
 **Qué:** cada carta de la máquina de fósiles lleva ahora la imagen de su fósil en vez del emoji 🦴. Se han hecho con ChatGPT 9 iconos nuevos (cráneo de dinosaurio en piedra, como los de la tienda): Común (piedra gris), Poco común (musgo y esmeraldas), Raro (zafiro y amonites), Épico (amatista), Legendario (oro y corona), Mítico (lava), Cósmico (galaxia), Brainrot (bola disco, pizza y cappuccino) y Mutante (tóxico con tubos). Secreto, Eterno y Divino reutilizan los que ya había en la tienda (no se han rehecho). Las tarjetas del diario con fósil (días 4 y 7) usan también el icono de su rareza.
 **Dónde:** `DiamondClient.Menus` → `SHOP_IMG.fossil[rareza]` (ids rbxassetid), cartas de `buildMachine` y `rewardList`.
