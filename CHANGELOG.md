@@ -8,6 +8,11 @@
 **Probado:** Play en Studio con clics de ratón reales: máquina → clic en el texto de arriba y entre cartas: sigue abierta; clic fuera: se cierra. Tienda → clic en la cabecera, en el fondo del cartel y en el título «DESTACADO»: sigue abierta; clic debajo de la tienda: se cierra.
 **Notas:** no he probado en móvil (táctil), pero usa la misma posición del toque.
 
+## 2026-11-12 · seguo970 (Claude) · Suelo del lobby con el patrón siempre seguido
+**Qué:** el suelo de cuadros del lobby se rompía en algunos sitios: había piezas de muchos tamaños (4×4, 12×8, tiras de 1×26…) y algunas se pisaban. Ahora todo el lobby y el pasillo de la puerta, hasta la parcela 1, son cuadros iguales de 8×8 que siguen el mismo ajedrez sin cortes.
+**Dónde:** `Lobby.Floor` (rehecho: 1482 baldosas) y `Lane.Gateway.FloorTiles` (nuevo: 182 baldosas). Quitados `Lane.Gateway.Floor` y `GapFill`. Copia de todo lo de antes en `ServerStorage.SueloLobbyBackup`.
+**Probado:** comprobación por script (todas las baldosas en la rejilla y con su color; ningún hueco con rayos) y captura desde el spawn hacia el pasillo. Hay menos piezas que antes (1664 en vez de 2574).
+
 ## 2026-11-12 · bbogatell (Claude) · Iconos de fósil por rareza en la máquina de fósiles
 **Qué:** cada carta de la máquina de fósiles lleva ahora la imagen de su fósil en vez del emoji 🦴. Se han hecho con ChatGPT 9 iconos nuevos (cráneo de dinosaurio en piedra, como los de la tienda): Común (piedra gris), Poco común (musgo y esmeraldas), Raro (zafiro y amonites), Épico (amatista), Legendario (oro y corona), Mítico (lava), Cósmico (galaxia), Brainrot (bola disco, pizza y cappuccino) y Mutante (tóxico con tubos). Secreto, Eterno y Divino reutilizan los que ya había en la tienda (no se han rehecho). Las tarjetas del diario con fósil (días 4 y 7) usan también el icono de su rareza.
 **Dónde:** `DiamondClient.Menus` → `SHOP_IMG.fossil[rareza]` (ids rbxassetid), cartas de `buildMachine` y `rewardList`.
