@@ -2,6 +2,31 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · bbogatell (Claude) · Tienda nueva, copiada de «Roba un huevo»
+**Qué:** la tienda es ahora una sola ventana con scroll (cabecera verde «Tienda», X roja, fondo oscuro con studs) y una barra a la derecha para saltar a cada sección: Destacado, Palas, Velocidad, Dinero y Objetos.
+- **Destacado:** «FÓSIL DE EVENTO» de tiempo limitado (¡Nuevo!, cuenta atrás hasta el 26/11) con los 6 Dragosaurios y su probabilidad (39 / 24 / 18 / 12 / 6,5 / 0,5 %, el último en marco arcoíris). Se compra en packs de 50 (3.499, con el precio tachado), 10 (799), 3 (249) y 1 (99). Debajo, 3 fósiles raros (Secreto, Eterno y Divino) que cambian cada 3 días, con «Se reabastece en…».
+- **Palas:** ya no salen las 30. Un solo cartel «MEJORAR PALA!» con tu pala ➜ la siguiente y su precio; se actualiza al comprar.
+- **Velocidad:** «DOBLA tu VELOCIDAD» (x1 ▶ x2 con el siguiente multiplicador), «MEJORAR CINTA DE CORRER!» (Robux o dinero) y 6 packs de velocidad al instante (+10K, +50K, +250K, +1M, +5M y +25M por 79 a 2.999 Robux).
+- **Dinero:** 3 + 2 packs (1M, 100M, 10B, 1T y 100T: los de siempre, con sus precios).
+- **Objetos:** x2 Monedas, Alfombra, Trampas y Hielos.
+- **Regalar:** cada oferta de Robux tiene un botón de regalo morado para comprarla a otro jugador del servidor.
+- **Tienda de estelas:** mismo estilo; las estelas de dinero también se pueden comprar con Robux (segundo botón morado).
+
+Los fósiles comprados van a tu base. Si está llena, esperan en una cola (`p.fossilQueue`) y se colocan solos cuando hay sitio.
+
+**Dónde:**
+- `DiamondClient.Menus` (tienda y estelas reescritas; `SHOP_IMG` = placeholders de las imágenes). Copia de antes en `ServerStorage.CopiasSeguridad.Menus_antes_tienda_2026-11-11`.
+- `ReplicatedStorage.Config`: `SHOP`, `restockOffer` y los productos nuevos `Featured1/3/10/50`, `Restock1-3`, `SpeedPack1-6` y `TrailR2-16` (id 0: simulados en Studio).
+- `DiamondServer.Main`: `grantProduct`, regalos y cola de fósiles.
+
+**Probado:** en Play, con capturas de todas las secciones:
+- comprar un pack de velocidad (+10.000 SpeedStat);
+- comprar 3 fósiles de evento y un fósil reabastecido: van a la base y al abrirse salen Dragosaurios (195, 193, 195);
+- el salto de la barra lleva a cada sección;
+- ningún error.
+
+**Sin probar:** regalar con 2 jugadores y las compras reales (faltan los ids de los productos).
+
 ## 2026-11-12 · seguo970 (Claude) · Paredes de la puerta: los extremos con la textura del lobby
 **Qué:** los extremos de las dos paredes del pasillo de la puerta (la cara que da al lobby y la que da al carril) se veían lisos. Ahora tienen la misma textura de cuadros con studs que el resto de paredes.
 **Dónde:** `Lane.Gateway.GateWalls.Wall` (las dos): añadidas las texturas en las caras `Front` y `Back`.
