@@ -16,6 +16,17 @@
 **Probado:** Play en Studio: ventana del diario con las 7 tarjetas nuevas; reclamar día 1 → Traps=2, Coins=0. El reparto del fósil (días 4 y 7) usa la misma función que la tienda, ya probada; no lo he forzado en Play.
 **Notas:** los ids no cambian (los guardados siguen valiendo). Los modelos con `look = "egg"` siguen teniendo forma de huevo; solo se ha cambiado el texto. Las copias en ServerStorage no se han tocado.
 
+## 2026-11-12 · seguo970 (Claude) · Lobby más corto por delante
+**Qué:** el lobby se ha acortado 49 studs por el lado de detrás de las bases, hasta la línea que marcó seguo970. La pared del fondo (la de detrás de la segunda fila de bases) está ahora a unos 50 studs de esas bases. Detrás de ellas sigue habiendo sitio para «Base enorme» (crece 20).
+**Dónde:**
+- `Walls.Lobby.Front`: movida a z −158..−152.
+- `Walls.Lobby.East/West`: ahora van de −461 a −158, con 18 cuadros de 16,83.
+- `Lobby.Floor`: se quitaron 188 baldosas y se recortaron 36.
+- `Bounds.MapBound` de delante: ahora en z −158..−114.
+- Copia de antes en `ServerStorage.LobbyCortoBackup`.
+**Probado:** capturas, rayos (el suelo que queda no tiene huecos) y Play: apareces y se te asigna una base, y solo salen los avisos normales del DataStore.
+**Notas:** `workspace.Scene` y `workspace.Guadana_NeonArcoiris` (z ≈ −121/−127) no son del mapa y quedan fuera de la pared nueva, flotando. Parecen pruebas de bbogatell y no se han tocado.
+
 ## 2026-11-12 · seguo970 (Claude) · Bases del lobby más cerca de los puestos
 **Qué:** las 8 bases del lobby (las dos filas) se han acercado 60 studs hacia los puestos y la puerta, hasta la línea que marcó seguo970. La primera fila acaba ahora en z −372. Entre las dos filas queda el mismo espacio de antes y detrás de la segunda fila hay más sitio libre.
 **Dónde:** `Lobby.PlotFrames` (Plot1-8): ahora en z −235 (fila de atrás) y −347 (fila de delante). Copia de antes en `ServerStorage.PlotFramesAntesDeAcercar`.
