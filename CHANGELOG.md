@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Huecos junto al pasillo de la puerta cerrados con pared verde
+**Qué:** al principio de la parcela 1, entre la pared del pasillo de la puerta y la pared verde de la parcela, quedaban dos huecos sin pared. Ahora están cerrados con la misma pared verde de la parcela (mismo color, cuadros y remate), a ras del final del pasillo.
+**Dónde:** `Walls.Lane.Plot01.GapE` y `GapW` (nuevas, pared y remate): x ±44..±104, z −520..−514, 4 cuadros de 15.
+**Probado:** captura desde la parcela 1. No probado en Play.
+
 ## 2026-11-12 · seguo970 (Claude) · Quitadas las paredes de detrás del lobby
 **Qué:** se quitan, en los dos lados, las dos copias de la pared del fondo que se habían puesto detrás del lobby, junto al pasillo de la puerta. Lo pidió seguo970 porque no quedaban donde quería. Vuelve a verse el hueco de hierba entre el pasillo y la pared de la parcela 1.
 **Dónde:** `Walls.Lobby.BackECopy/BackWCopy` movidas a `ServerStorage.ParedesDetrasBackup`, por si se quieren recuperar. Las paredes del pasillo (`Lane.Gateway.SideWalls`) siguen de z −461 a −520.
