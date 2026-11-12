@@ -2,7 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
-<<<<<<< HEAD
+## 2026-11-12 · seguo970 (Claude) · Extremo de la pared de la abertura con los cuadros del lobby
+**Qué:** el canto de la pared del lobby junto a la abertura hacia el carril tenía los cuadros a otra escala. Ahora usa el mismo tamaño de cuadro que el resto de las paredes del lobby.
+**Dónde:** `Walls.Lobby.BackE/BackW.Wall`: textura de cuadros de las caras `Left`/`Right` a 32×32.
+**Probado:** captura desde el carril.
+
 ## 2026-11-12 · bbogatell (Claude) · Imágenes de la tienda hechas con ChatGPT
 **Qué:** la tienda ya tiene sus 24 imágenes de verdad en vez de emojis:
 - los 6 Dragosaurios de evento del fósil destacado;
@@ -15,12 +19,6 @@
 Se hicieron en 4 hojas de 6 con ChatGPT (cuenta gratis, fondo transparente), se recortaron una a una y se subieron a Roblox.
 **Dónde:** `DiamondClient.Menus` (tabla `SHOP_IMG` con los rbxassetid). El cartel de la cinta enseña el icono grande mientras no haya una imagen por cada cinta.
 **Probado:** en Play se ven todas las secciones con sus imágenes y no hay ningún error.
-=======
-## 2026-11-12 · seguo970 (Claude) · Extremo de la pared de la abertura con los cuadros del lobby
-**Qué:** el canto de la pared del lobby junto a la abertura hacia el carril tenía los cuadros a otra escala. Ahora usa el mismo tamaño de cuadro que el resto de las paredes del lobby.
-**Dónde:** `Walls.Lobby.BackE/BackW.Wall`: textura de cuadros de las caras `Left`/`Right` a 32×32.
-**Probado:** captura desde el carril.
->>>>>>> 45d5ecc (Canto de la pared de la abertura con los cuadros del lobby)
 
 ## 2026-11-12 · seguo970 (Claude) · Puerta del carril sin pasillo: el lobby da directo al carril
 **Qué:** la pared que había a cada lado de la puerta, en el lado del carril, se ha pegado a la pared del fondo del lobby y ahora son una sola pared. Ya no hay pasillo: del lobby se sale por una abertura de 76 studs directamente a la entrada del carril, que ahora empieza pegada al lobby, con el mismo césped en damero.
