@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Pasillo de la puerta: sin rendijas y todo en verde claro
+**Qué:** en el pasillo de la puerta del carril había una rendija de 2 studs a cada lado (x ±32…34) por la que se podía caer; ya está tapada. Las franjas de verde oscuro de las esquinas, al final del pasillo, ahora tienen el mismo damero verde claro del lobby, que llega hasta la plaza de la parcela 1.
+**Dónde:** `Lane.Gateway` (baldosas `Floor` del borde: de 4 a 6 studs de ancho) y `Lane.Gateway.GapFill` (los 4 `Fill` rehechos en 36 trozos con los colores del damero).
+**Probado:** rayos hacia abajo cada medio stud por todo el pasillo: ningún punto sin suelo. Captura desde arriba.
+
 ## 2026-11-11 · seguo970 (Claude) · Vuelve el cartel «PARCELAS · FÓSILES» a la puerta
 **Qué:** el cartel de la puerta del carril vuelve, ahora encima de la abertura entre las dos paredes nuevas (arriba a ras de ellas), mirando al lobby.
 **Dónde:** `Lane.Gateway.Board`, sacado de `ServerStorage.LobbyAvenueBackup`; x[−45, 45], y[55, 66].
