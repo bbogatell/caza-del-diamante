@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Copia de la pared del fondo detrás del lobby
+**Qué:** detrás de la pared del fondo del lobby, a cada lado del pasillo de la puerta, había un hueco abierto de hierba hacia la parcela 1. Ahora hay ahí una copia de la pared del fondo (mismo color, cuadros y remate verde) que lo cierra por detrás, en los dos lados.
+**Dónde:** `Walls.Lobby.BackECopy` y `BackWCopy` (nuevas, pared y remate): x ±44..±104, z −520..−514, 4 cuadros de 15 por fila.
+**Probado:** capturas desde arriba de los dos lados. No probado en Play.
+
 ## 2026-11-12 · seguo970 (Claude) · Deshecho: esquinas del pasillo de la puerta
 **Qué:** se deshace el cambio de abajo («Sin mancha oscura en las esquinas…») a petición de seguo970. Las paredes del fondo vuelven a estar como antes.
 **Dónde:** `Walls.Lobby.BackE/BackW` (pared y remate): vuelven a empezar en x ±38. Cada cara grande vuelve a tener 7 cuadros de 15,50 (`StudsPerTileU = 31`).
