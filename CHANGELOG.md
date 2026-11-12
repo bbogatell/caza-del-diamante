@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Paredes de la puerta: los extremos con la textura del lobby
+**Qué:** los extremos de las dos paredes del pasillo de la puerta (la cara que da al lobby y la que da al carril) se veían lisos. Ahora tienen la misma textura de cuadros con studs que el resto de paredes.
+**Dónde:** `Lane.Gateway.GateWalls.Wall` (las dos): añadidas las texturas en las caras `Front` y `Back`.
+**Probado:** captura desde el lobby.
+
 ## 2026-11-12 · seguo970 (Claude) · Pasillo de la puerta: sin muesca en las esquinas del final
 **Qué:** al final del pasillo, en el lado del carril, las dos paredes se quedaban 6 studs cortas y dejaban una muesca en cada esquina. Ahora llegan hasta las paredes del carril.
 **Dónde:** `Lane.Gateway.GateWalls` (`Wall` y `Cap` de los dos lados: ahora de z −520 a −461).
