@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Pared de detrás 6 studs hacia el lobby, pegada a la del pasillo
+**Qué:** la pared de detrás del lobby (vista desde la parcela 1) se ha movido 6 studs hacia el lobby, hasta donde marcó seguo970 en la foto. La pared del pasillo de la puerta vuelve a acabar donde empieza la parcela y sobresale por delante. Es así en los dos lados.
+**Dónde:** `Walls.Lobby.BackECopy/BackWCopy`: x ±44..±104, z −514..−508, con 4 cuadros de 15. `Lane.Gateway.SideWalls` (pared y remate): otra vez hasta z −520, con 4 cuadros de 14,75.
+**Probado:** captura desde la parcela 1. No probado en Play.
+
 ## 2026-11-12 · bbogatell (Claude) · Fósiles comprados buscan el sitio más libre de la base
 **Qué:** al comprar varios fósiles (packs x3/x10/x50) salían todos pegados en la misma fila. Ahora cada fósil nuevo recorre todo el suelo útil de la base (rejilla de 3 studs, ±(half-5), incluida la ampliación trasera `extraOf`) y se coloca en el punto más alejado de todo lo que ya hay (fósiles y bichos). Con la base vacía, el primero va al centro. Si ningún punto está a ≥ `BASE.minGap`, devuelve «No queda sitio» como antes.
 **Dónde:** `ServerScriptService.DiamondServer.Bases` → `Bases.put`.
