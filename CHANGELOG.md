@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Paredes a los lados de la abertura hacia el carril
+**Qué:** a cada lado de la abertura del lobby hacia el carril hay ahora una pared igual que la del fondo del lobby, girada 90°. Va desde la pared del fondo hasta el carril, así que vuelve a haber un pasillo, esta vez con las paredes del mismo patrón que el resto.
+**Dónde:** `Lane.Gateway.SideWalls` (nuevo): pared y remate copiados de `Walls.Lobby.BackE/BackW`, en x ±38…44 y z −520…−467, con 3 cuadros de 17,7 por fila.
+**Probado:** captura desde el lobby.
+
 ## 2026-11-12 · seguo970 (Claude) · Extremo de la pared de la abertura con los cuadros del lobby
 **Qué:** el canto de la pared del lobby junto a la abertura hacia el carril tenía los cuadros a otra escala. Ahora usa el mismo tamaño de cuadro que el resto de las paredes del lobby.
 **Dónde:** `Walls.Lobby.BackE/BackW.Wall`: textura de cuadros de las caras `Left`/`Right` a 32×32.
