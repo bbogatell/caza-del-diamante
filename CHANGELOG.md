@@ -2,6 +2,10 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Quitado el cartel de la puerta
+**Qué:** fuera el cartel de encima de la puerta del carril («PARCELAS · FÓSILES» por un lado y «VOLVER AL LOBBY» por el otro).
+**Dónde:** borrado `Lane.Gateway.Board`. Copia en `ServerStorage.LobbyAvenueBackup.Gateway.Board`.
+
 ## 2026-11-12 · seguo970 (Claude) · Punto de aparición invisible
 **Qué:** el bloque amarillo de delante de la puerta de las parcelas era el punto de aparición del lobby. Ya no se ve ni se tropieza con él, pero se sigue apareciendo ahí.
 **Dónde:** `Lobby.LobbySpawn` (`Transparency` 1, `CanCollide` desactivado, textura invisible).
