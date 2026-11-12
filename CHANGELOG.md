@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Pasillo de la puerta: sin muesca en las esquinas del final
+**Qué:** al final del pasillo, en el lado del carril, las dos paredes se quedaban 6 studs cortas y dejaban una muesca en cada esquina. Ahora llegan hasta las paredes del carril.
+**Dónde:** `Lane.Gateway.GateWalls` (`Wall` y `Cap` de los dos lados: ahora de z −520 a −461).
+**Probado:** captura desde el carril mirando al pasillo.
+
 ## 2026-11-12 · seguo970 (Claude) · Pasillo de la puerta: sin rendijas y todo en verde claro
 **Qué:** en el pasillo de la puerta del carril había una rendija de 2 studs a cada lado (x ±32…34) por la que se podía caer; ya está tapada. Las franjas de verde oscuro de las esquinas, al final del pasillo, ahora tienen el mismo damero verde claro del lobby, que llega hasta la plaza de la parcela 1.
 **Dónde:** `Lane.Gateway` (baldosas `Floor` del borde: de 4 a 6 studs de ancho) y `Lane.Gateway.GapFill` (los 4 `Fill` rehechos en 36 trozos con los colores del damero).
