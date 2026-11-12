@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Pasillo de la puerta: el mismo orden de cuadros en las dos paredes
+**Qué:** la pared derecha del pasillo empezaba la fila de arriba con un cuadro oscuro y la izquierda con uno claro. Ahora las dos empiezan igual (claro, oscuro, claro, oscuro), en espejo.
+**Dónde:** `Lane.Gateway.SideWalls.Wall` de la derecha (x +41): textura de cuadros desplazada un cuadro (`OffsetStudsU`).
+**Probado:** captura desde el lobby.
+
 ## 2026-11-12 · bbogatell (Claude) · Tope de velocidad ×3 (400 → 1200) y no se puede comprar más al llegar; aviso al comprar fósiles
 **Qué:**
 - **Tope de velocidad:** antes no se podía correr a más de 400. Ahora el tope es 1200. Hasta 400 todo sigue igual (misma curva). A partir de ahí la velocidad sigue subiendo, de 400 a 1200, mientras la velocidad entrenada se multiplica por 1.000:
