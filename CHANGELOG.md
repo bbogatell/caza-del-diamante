@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · bbogatell (Claude) · Iconos de fósil por rareza en la máquina de fósiles
+**Qué:** cada carta de la máquina de fósiles lleva ahora la imagen de su fósil en vez del emoji 🦴. Se han hecho con ChatGPT 9 iconos nuevos (cráneo de dinosaurio en piedra, como los de la tienda): Común (piedra gris), Poco común (musgo y esmeraldas), Raro (zafiro y amonites), Épico (amatista), Legendario (oro y corona), Mítico (lava), Cósmico (galaxia), Brainrot (bola disco, pizza y cappuccino) y Mutante (tóxico con tubos). Secreto, Eterno y Divino reutilizan los que ya había en la tienda (no se han rehecho). Las tarjetas del diario con fósil (días 4 y 7) usan también el icono de su rareza.
+**Dónde:** `DiamondClient.Menus` → `SHOP_IMG.fossil[rareza]` (ids rbxassetid), cartas de `buildMachine` y `rewardList`.
+**Probado:** Play en Studio: la máquina muestra las 12 cartas con su imagen (todas `IsLoaded = true`).
+**Notas:** si falta una imagen, la carta vuelve al emoji de antes.
+
 ## 2026-11-12 · bbogatell (Claude) · Diario sin dinero (objetos + fósiles) y fuera los «huevos»
 **Qué:**
 - Recompensas diarias: ya no dan monedas. Día 1: 2 trampas · Día 2: 2 hielos · Día 3: 3 trampas · Día 4: fósil Raro (R-III) · Día 5: 3 hielos · Día 6: 4 trampas + 4 hielos · Día 7: fósil Épico (E-III) + 5 trampas + 5 hielos. Las tarjetas muestran la imagen de cada recompensa con su cantidad (fósil = 🦴 + rareza). El fósil va a la base como los de la tienda (o a la cola si está llena).
