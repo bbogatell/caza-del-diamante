@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Deshecho: esquinas del pasillo de la puerta
+**Qué:** se deshace el cambio de abajo («Sin mancha oscura en las esquinas…») a petición de seguo970. Las paredes del fondo vuelven a estar como antes.
+**Dónde:** `Walls.Lobby.BackE/BackW` (pared y remate): vuelven a empezar en x ±38. Cada cara grande vuelve a tener 7 cuadros de 15,50 (`StudsPerTileU = 31`).
+**Probado:** captura desde el lobby.
+
 ## 2026-11-12 · seguo970 (Claude) · Sin mancha oscura en las esquinas del pasillo de la puerta
 **Qué:** en la entrada del pasillo, la pared del fondo del lobby y la pared del pasillo se solapaban, y salía un recuadro más oscuro en cada esquina. Ahora ya no se solapan y el color es el de la pared.
 **Dónde:** `Walls.Lobby.BackE/BackW` (pared y remate): ahora empiezan en x ±44, donde acaba la pared del pasillo. Cada cara grande queda con 6 cuadros de 17,08.
