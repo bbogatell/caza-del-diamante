@@ -27,6 +27,11 @@
 
 **Notas:** la compra de fósiles funciona en Studio. En el juego publicado ninguna compra con Robux funciona todavía, porque los productos tienen id 0 (hay que crearlos en Roblox).
 
+## 2026-11-12 · seguo970 (Claude) · Paredes del pasillo de la puerta, a ras de la pared del lobby
+**Qué:** las paredes a los lados de la abertura empezaban 6 studs por detrás de la pared del fondo del lobby. Ahora llegan hasta su cara de dentro y quedan a ras, sin escalón.
+**Dónde:** `Lane.Gateway.SideWalls`: ahora van de z −520 a −461 (remate hasta −460,5), con 4 cuadros de 14,75 por fila.
+**Probado:** captura desde el lobby.
+
 ## 2026-11-12 · seguo970 (Claude) · Paredes a los lados de la abertura hacia el carril
 **Qué:** a cada lado de la abertura del lobby hacia el carril hay ahora una pared igual que la del fondo del lobby, girada 90°. Va desde la pared del fondo hasta el carril, así que vuelve a haber un pasillo, esta vez con las paredes del mismo patrón que el resto.
 **Dónde:** `Lane.Gateway.SideWalls` (nuevo): pared y remate copiados de `Walls.Lobby.BackE/BackW`, en x ±38…44 y z −520…−467, con 3 cuadros de 17,7 por fila.
