@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · bbogatell (Claude) · Ruleta de premios en el lobby (en lugar del diamante pequeño)
+**Qué:**
+- Quitado (de momento) el diamante pequeño del lobby con el cartel «LA CAZA DEL DIAMANTE». En su sitio hay una **ruleta** 3D hecha a mano: escalones con studs (azul, blanco, dorado), soporte dorado, rueda de 8 colores con aro dorado, bombillas que parpadean, flecha roja y cartel «✨ RULETA ✨». El modelo no gira.
+- Al pulsar «Girar la ruleta» se abre la **ventana de la ruleta**: la rueda con los premios (imagen de cada uno), luces que persiguen mientras gira, flecha que da golpecitos en cada casilla con un «tic», frenada suave de ~5 s, confeti, destello y cartel con el premio. Quieta, gira despacio.
+- **Giros:** 1 gratis cada semana (se reinicia cada 7 días, con cuenta atrás «Gratis en Xd Yh») + giros comprados: +1 (49 R$), +3 (129 R$), +10 (349 R$), en la ventana y en la tienda (sección Objetos, con regalo).
+- **Premios (sin dinero):** 3 Trampas 20 % · Fósil Raro 20 % · 3 Hielos 20 % · Fósil Épico 14 % · 5 Trampas + 5 Hielos 11 % · Fósil Legendario 8 % · Fósil Mítico 5 % · Fósil de Evento 2 %. El servidor decide el premio; los fósiles van a la base al parar la rueda (o a la cola si está llena).
+- Imágenes nuevas: cara de la ruleta y flecha (hechas con código), 3 iconos de packs de giros (ChatGPT).
+**Dónde:** `Config.WHEEL`, `Config.PRODUCTS.Spin1/3/10`; `DiamondServer.Data` (`wheelWeek`, `wheelSpins` → atributos `WheelWeek`, `WheelSpins`); `DiamondServer.Main` (`handlers.SpinWheel`, rama `prod.spins` en `grantProduct`); `DiamondClient.Menus` (`buildWheel`, `Menus.refreshWheel`, cartas de giros en la tienda, `SHOP_IMG.spins`); `DiamondClient.Main` (prompt `WheelPrompt` y bombillas); `Map.Lobby.Wheel`. El diamante está guardado en `ServerStorage.LobbyStatueBackup`; `Lobby.Statue` queda vacío (lo buscan `Main`, `Cinematic` y `PostHunt`). `Main` ya no espera 20 s al diamante.
+**Probado:** Play en Studio: la ventana se abre; giro gratis → 3 trampas y pasa a «Sin giros · Gratis en 6d 13h»; compra simulada de 3 giros → «Giros: 3»; otro giro → cae en Fósil Raro con confeti y el fósil R-II aparece en la base. Las cartas de giros salen en la tienda con su precio.
+**Notas:** los productos tienen id 0 (en Studio se simulan; ver PENDIENTES). Pendiente decidir dónde va la estatua del ganador tras la caza (PostHunt la pone en este sitio). No se usó ninguna ruleta de la galería: las gratis traían scripts de cuentas dudosas y no pegaban con el estilo.
+
 ## 2026-11-12 · bbogatell (Claude) · Fuera el «tienes X» de las ofertas de 3 trampas y 3 hielos
 **Qué:** las cartas de la tienda «3 Trampas» y «3 Hielos» ya no añaden «· tienes X» al nombre.
 **Dónde:** `DiamondClient.Menus` → `Menus.refreshShop` (textos de `shop.cards.Traps3` y `Freeze3`).

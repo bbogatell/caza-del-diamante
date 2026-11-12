@@ -3,6 +3,7 @@
 > Marca con `[x]` lo terminado y pon quién lo hizo.
 
 ## Por hacer antes de lanzar
+- Crear en el Creator Dashboard los productos de giros de la ruleta `Spin1` (49 R$), `Spin3` (129 R$) y `Spin10` (349 R$) y poner sus ids en `Config.PRODUCTS` (ahora id 0: en Studio se simulan, en el juego publicado salen «Próximamente»).
 - [ ] Confirmar fecha y hora definitivas del evento (`Config.EVENT_TIME`).
 - [ ] Crear los productos nuevos de la tienda (12/11): `Featured1/3/10/50`, `Restock1-3`, `SpeedPack1-6`, `TrailR2-16`.
 - [ ] Imágenes de la tienda que faltan (`Menus` → `SHOP_IMG`): iconos de la barra de la derecha, botón de regalo, una imagen por cinta de correr (para «tu cinta ➜ la siguiente») y las estelas. Las 24 principales ya están (12/11).
@@ -16,6 +17,7 @@
 - [x] Borrar `workspace.PasarelaFosiles` (seguo970, 03/11): borrada después de que seguo970 revisara los 60 fósiles en ella.
 
 ## Bugs / a medias
+- **Estatua del ganador vs. ruleta:** al acabar la caza, `DiamondServer.PostHunt` pone la estatua de piedra del ganador (`ServerStorage.PostHunt.StonePedestal`) en el sitio donde estaba el diamante del lobby, que ahora ocupa la ruleta (`Lobby.Wheel`). Hay que decidir dónde va la estatua (o si la ruleta se mueve) antes del 11/12.
 - [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
 - [ ] **Pala 29 nueva** (seguo970, 21/10): puesta, texturizada y animada. Falta verla en la tienda, en móvil y en la mano de otro jugador. La capa ya se mueve como tela (huesos `ShovelBone`).
 
