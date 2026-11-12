@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · bbogatell (Claude) · Diario sin dinero (objetos + fósiles) y fuera los «huevos»
+**Qué:**
+- Recompensas diarias: ya no dan monedas. Día 1: 2 trampas · Día 2: 2 hielos · Día 3: 3 trampas · Día 4: fósil Raro (R-III) · Día 5: 3 hielos · Día 6: 4 trampas + 4 hielos · Día 7: fósil Épico (E-III) + 5 trampas + 5 hielos. Las tarjetas muestran la imagen de cada recompensa con su cantidad (fósil = 🦴 + rareza). El fósil va a la base como los de la tienda (o a la cola si está llena).
+- Todo lo que decía «huevo» ahora dice fósil: Huevo Petrificado → Fósil Petrificado, Huevo de Amatista → Fósil de Amatista, Huevo de Oro → Fósil de Oro, Huevo Rúnico → Fósil Rúnico, Huevo del Origen → Fósil del Origen, Huevo Divino → **Fósil Sagrado** (para no confundirlo con la oferta «Fósil Divino» de la tienda), Huevo Disco → Fósil Disco. El emoji 🥚 pasa a 🦴 en avisos, tienda, máquina, tutorial y el cartel de la máquina.
+**Dónde:** `Config.DAILY`, `Config.Fossils`, `Config.PRODUCTS` (iconos); `DiamondServer.Main` (`handlers.ClaimDaily` usa `Items.grant` y `giveFossils` vía `giveFossilsRef`; toasts); `DiamondClient.Menus` (`rewardList`, tarjetas del diario, máquina); `DiamondClient.Main` y `Tutorial` (emoji); `workspace.Map.Lobby.FossilMachine.Sign`; `docs/PARCELAS_Y_FOSILES.md`.
+**Probado:** Play en Studio: ventana del diario con las 7 tarjetas nuevas; reclamar día 1 → Traps=2, Coins=0. El reparto del fósil (días 4 y 7) usa la misma función que la tienda, ya probada; no lo he forzado en Play.
+**Notas:** los ids no cambian (los guardados siguen valiendo). Los modelos con `look = "egg"` siguen teniendo forma de huevo; solo se ha cambiado el texto. Las copias en ServerStorage no se han tocado.
+
 ## 2026-11-12 · seguo970 (Claude) · Bases del lobby más cerca de los puestos
 **Qué:** las 8 bases del lobby (las dos filas) se han acercado 60 studs hacia los puestos y la puerta, hasta la línea que marcó seguo970. La primera fila acaba ahora en z −372. Entre las dos filas queda el mismo espacio de antes y detrás de la segunda fila hay más sitio libre.
 **Dónde:** `Lobby.PlotFrames` (Plot1-8): ahora en z −235 (fila de atrás) y −347 (fila de delante). Copia de antes en `ServerStorage.PlotFramesAntesDeAcercar`.

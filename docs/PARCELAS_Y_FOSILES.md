@@ -270,7 +270,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 
 ### Épico (morado) · parcelas 2-5
 
-**E-I. Huevo Petrificado** · 3 studs · 3 min · mitad baja de Épico
+**E-I. Fósil Petrificado** · 3 studs · 3 min · mitad baja de Épico
 - Huevo de dinosaurio de piedra morada con grietas. 1 emisor de polvo morado.
 
 **E-II. Cuerno Amatista** · 4 studs · 5 min · cualquier Épico
@@ -284,7 +284,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 **L-I. Hueso Dorado** · 3 studs · 8 min · mitad baja de Legendario
 - Roca con un hueso largo dorado incrustado. 1 emisor de destellos dorados.
 
-**L-II. Huevo de Oro** · 4 studs · 12 min · cualquier Legendario
+**L-II. Fósil de Oro** · 4 studs · 12 min · cualquier Legendario
 - Huevo de dinosaurio de oro con dibujos en relieve, medio enterrado en roca. 3 emisores (destellos, monedas y polvo dorado) y luz dorada.
 
 **L-III. Cráneo del Rey Dorado** · 5,5 studs · 18 min · mitad alta de Legendario (10 % de Mítico)
@@ -328,7 +328,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 **ET-I. Cristal Eterno** · 4,5 studs · 3 h · mitad baja de Eterno
 - Cristal cian gigante con un fósil de dinosaurio dentro. 3 emisores (destellos, polvo de luz y escarcha) y luz cian.
 
-**ET-II. Huevo Rúnico** · 5,5 studs · 5 h · cualquier Eterno
+**ET-II. Fósil Rúnico** · 5,5 studs · 5 h · cualquier Eterno
 - Huevo de dinosaurio blanco con runas cian brillantes que giran y un anillo de energía alrededor. 4 emisores y un anillo de energía girando.
 
 **ET-III. Núcleo Eterno** · 7 studs · 8 h · mitad alta de Eterno (10 % de Divino)
@@ -339,7 +339,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 **D-I. Ámbar Celestial** · 5 studs · 8 h · mitad baja de Divino
 - Gota de ámbar dorado gigante con una pluma de ángel dentro y una aureola pequeña encima. 4 emisores (destellos dorados, plumas, arcoíris y rayos) y luz dorada.
 
-**D-II. Huevo Divino** · 6 studs · 12 h · cualquier Divino
+**D-II. Fósil Sagrado** · 6 studs · 12 h · cualquier Divino
 - Huevo de oro y mármol blanco con alas pequeñas de luz, una aureola y gemas arcoíris. 5 emisores, halo y columna de luz pequeña.
 
 **D-III. Corona del Primer Rey** · 8 studs · 18 h · mitad alta de Divino (10 %: el mejor Divino de su mitad)
@@ -348,7 +348,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 
 ### Brainrot (colores chillones) · parcelas 3-12
 
-**B-I. Huevo Disco** · 3 studs · 2 min · mitad baja de Brainrot
+**B-I. Fósil Disco** · 3 studs · 2 min · mitad baja de Brainrot
 - Huevo de dinosaurio con rayas de colores chillones y una bola de discoteca pequeña encima. 1 emisor de confeti.
 
 **B-II. Pizza Fosilizada** · 4 studs · 10 min · cualquier Brainrot
@@ -419,7 +419,7 @@ Son los 6 **Dragosaurios** de la rareza Evento y los bichos «de evento» con n�
 
 ### Épico → da Mítico
 
-**E-★. Huevo de Amatista** · 45 min
+**E-★. Fósil de Amatista** · 45 min
 - Huevo de dinosaurio de amatista facetada con un embrión brillando dentro. 8 emisores y luz morada.
 
 **E-★★. Cráneo Coronado** · 1 h
@@ -464,7 +464,7 @@ Dos rarezas por encima de Eterno ya no queda ninguna rareza normal, así que est
 **ET-★. Cristal del Tiempo** · 16 h
 - Reloj de arena gigante de cristal cian con huesos de dinosaurio como arena y tres anillos girando. 12 emisores. **50 % bicho de Evento (cualquiera), 50 % Divino (cualquiera).**
 
-**ET-★★. Huevo del Origen** · 18 h
+**ET-★★. Fósil del Origen** · 18 h
 - Huevo colosal de luz cian con runas eternas, dentro de un nido de cristal. 13 emisores, anillos y columna de luz. **100 % bicho de Evento (mitad alta).**
 
 ### Divino → da bicho de Evento
