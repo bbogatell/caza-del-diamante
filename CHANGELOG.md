@@ -2,6 +2,31 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · bbogatell (Claude) · Tope de velocidad ×3 (400 → 1200) y no se puede comprar más al llegar; aviso al comprar fósiles
+**Qué:**
+- **Tope de velocidad:** antes no se podía correr a más de 400. Ahora el tope es 1200. Hasta 400 todo sigue igual (misma curva). A partir de ahí la velocidad sigue subiendo, de 400 a 1200, mientras la velocidad entrenada se multiplica por 1.000:
+  - ~2,8·10¹⁴ → 400;
+  - 10¹⁵ → 548;
+  - 10¹⁶ → 815;
+  - 10¹⁷ → 1081;
+  - 2,8·10¹⁷ → 1200.
+- **Al llegar al tope:** la velocidad entrenada ya no sube (ni en la cinta, ni con packs, ni con /velocidad). No se pueden comprar packs de velocidad ni multiplicadores («🏁 Velocidad al máximo»; tampoco regalárselos a quien ya está al máximo). En la tienda esos botones ponen «🏁 MÁXIMO».
+- **Fósiles comprados:** al comprar fósiles en la tienda sale un aviso «🥚 +N fósiles en tu base», o «🏠 Base llena: N esperan sitio» si no caben.
+
+**Dónde:**
+- `ReplicatedStorage.Config`: `TRAINING.walkCap` 1200, `walkSoftCap`, `walkCapDecades`, `speedStatSoft`, `speedStatCap` y `walkSpeedOf`.
+- `DiamondServer.Training` (los pasos se paran en el tope).
+- `DiamondServer.Main` (`BuyRobux`, `grantProduct`, /velocidad y avisos de fósiles).
+- `DiamondClient.Menus`.
+
+**Probado:** en Play:
+- /velocidad 10¹⁵ da WalkSpeed 548; con 10¹⁸ se queda en el tope (2,77·10¹⁷ → 1200) y comprar un pack o el x2 da «Velocidad al máximo»;
+- a 1200 te paras contra las paredes del lobby y del carril;
+- comprar un fósil haciendo clic en el botón de la tienda lo pone en la base;
+- ningún error.
+
+**Notas:** la compra de fósiles funciona en Studio. En el juego publicado ninguna compra con Robux funciona todavía, porque los productos tienen id 0 (hay que crearlos en Roblox).
+
 ## 2026-11-12 · seguo970 (Claude) · Paredes a los lados de la abertura hacia el carril
 **Qué:** a cada lado de la abertura del lobby hacia el carril hay ahora una pared igual que la del fondo del lobby, girada 90°. Va desde la pared del fondo hasta el carril, así que vuelve a haber un pasillo, esta vez con las paredes del mismo patrón que el resto.
 **Dónde:** `Lane.Gateway.SideWalls` (nuevo): pared y remate copiados de `Walls.Lobby.BackE/BackW`, en x ±38…44 y z −520…−467, con 3 cuadros de 17,7 por fila.
