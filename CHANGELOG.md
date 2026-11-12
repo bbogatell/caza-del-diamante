@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · bbogatell (Claude) · Fósiles comprados buscan el sitio más libre de la base
+**Qué:** al comprar varios fósiles (packs x3/x10/x50) salían todos pegados en la misma fila. Ahora cada fósil nuevo recorre todo el suelo útil de la base (rejilla de 3 studs, ±(half-5), incluida la ampliación trasera `extraOf`) y se coloca en el punto más alejado de todo lo que ya hay (fósiles y bichos). Con la base vacía, el primero va al centro. Si ningún punto está a ≥ `BASE.minGap`, devuelve «No queda sitio» como antes.
+**Dónde:** `ServerScriptService.DiamondServer.Bases` → `Bases.put`.
+**Probado:** Play en Studio, compra simulada de `Featured10`: los 10 fósiles quedan repartidos por toda la base (X -114…-75, Z -155…-194), separados y dentro de la valla.
+**Notas:** no cambia `Bases.place` (colocación manual del jugador).
+
 ## 2026-11-12 · seguo970 (Claude) · El final del pasillo de la puerta, 6 studs más hacia el lobby
 **Qué:** las paredes del pasillo de la puerta y las copias de la pared del fondo que hay detrás acababan donde empieza la parcela 1. Ahora acaban 6 studs antes, más cerca del lobby, en los dos lados.
 **Dónde:** `Lane.Gateway.SideWalls` (pared y remate): ahora van de z −461 a −514, con 4 cuadros de 13,25 por fila (mismo orden de colores que antes). `Walls.Lobby.BackECopy/BackWCopy`: movidas a z −514..−508.
