@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Punto de aparición invisible
+**Qué:** el bloque amarillo de delante de la puerta de las parcelas era el punto de aparición del lobby. Ya no se ve ni se tropieza con él, pero se sigue apareciendo ahí.
+**Dónde:** `Lobby.LobbySpawn` (`Transparency` 1, `CanCollide` desactivado, textura invisible).
+**Probado:** en Play, al reaparecer sales en (4, −437), encima del césped.
+
 ## 2026-11-12 · bbogatell (Claude) · Tienda nueva, copiada de «Roba un huevo»
 **Qué:** la tienda es ahora una sola ventana con scroll (cabecera verde «Tienda», X roja, fondo oscuro con studs) y una barra a la derecha para saltar a cada sección: Destacado, Palas, Velocidad, Dinero y Objetos.
 - **Destacado:** «FÓSIL DE EVENTO» de tiempo limitado (¡Nuevo!, cuenta atrás hasta el 26/11) con los 6 Dragosaurios y su probabilidad (39 / 24 / 18 / 12 / 6,5 / 0,5 %, el último en marco arcoíris). Se compra en packs de 50 (3.499, con el precio tachado), 10 (799), 3 (249) y 1 (99). Debajo, 3 fósiles raros (Secreto, Eterno y Divino) que cambian cada 3 días, con «Se reabastece en…».
