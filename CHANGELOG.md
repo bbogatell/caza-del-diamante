@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Bases del lobby más cerca de los puestos
+**Qué:** las 8 bases del lobby (las dos filas) se han acercado 60 studs hacia los puestos y la puerta, hasta la línea que marcó seguo970. La primera fila acaba ahora en z −372. Entre las dos filas queda el mismo espacio de antes y detrás de la segunda fila hay más sitio libre.
+**Dónde:** `Lobby.PlotFrames` (Plot1-8): ahora en z −235 (fila de atrás) y −347 (fila de delante). Copia de antes en `ServerStorage.PlotFramesAntesDeAcercar`.
+**Probado:** Play en Studio: la base se asigna y su cinta sale en su sitio nuevo. Por cuentas, la cinta de la primera fila acaba en z ≈ −393, a 35 studs de las plataformas de los puestos. No probado con varios jugadores ni con «Base grande/enorme».
+
 ## 2026-11-12 · seguo970 (Claude) · Puestos del lobby pegados a la pared del fondo, mirando al spawn
 **Qué:** al aparecer y mirar hacia el pasillo de las parcelas, ahora ves los 5 puestos pegados a la pared del fondo, a los dos lados del pasillo, mirándote. A la derecha, de dentro afuera: la caza del diamante (estatua), la recompensa diaria y el podio. A la izquierda: la máquina de fósiles y la tienda de Estelas.
 **Dónde:** `Lobby.Statue`, `Lobby.Daily`, `Lobby.Podium`, `Lobby.FossilMachine`, `Lobby.TrailShop` y sus plataformas de `Lobby.PlazaLayout.ShopPads`: ahora en z −460..−425. El podio y la máquina se han girado para que miren a +Z. Copia de antes en `ServerStorage.TiendasParedBackup`.
