@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Pared junto a la puerta (lado del carril) con cuadros enteros
+**Qué:** las dos paredes marrones que se ven desde el carril a los lados de la puerta tenían el último cuadro cortado, porque la pared del carril tapaba un trozo. Ahora cada una tiene 3 cuadros enteros por fila.
+**Dónde:** `Walls.Link.E` y `Walls.Link.W` (pared y remate): recortadas a x 51…104, donde empieza la pared del carril, con la textura ajustada a 3 cuadros de 17,7.
+**Probado:** captura desde el carril.
+
 ## 2026-11-12 · seguo970 (Claude) · Paredes del lobby con cuadros enteros y simétricos
 **Qué:** en las paredes marrones del lobby y del pasillo de la puerta, los cuadros ya no salen cortados ni unos más largos que otros. Cada pared tiene cuadros enteros de unos 16 studs, siempre 3 filas en altura, que empiezan y acaban justo en sus bordes.
 **Dónde:**
