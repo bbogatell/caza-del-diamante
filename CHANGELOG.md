@@ -2,17 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
-<<<<<<< HEAD
 ## 2026-11-12 · bbogatell (Claude) · Fuera la Alfombra Mágica; los fósiles de la tienda se llaman por su rareza
 **Qué:** la Alfombra Mágica ya no existe: ni en la tienda ni como pase, y si alguien la tenía en la mochila se le quita. En la tienda, los 3 fósiles que se reabastecen se llaman «Fósil Secreto», «Fósil Eterno» y «Fósil Divino» (antes salía el nombre propio del fósil, por ejemplo «Huevo del Origen»).
 **Dónde:** `DiamondServer.Items` (sin herramienta ni modelo de alfombra), `DiamondServer.Main` (/objetos), `ReplicatedStorage.Config` (quitados `ITEMS.carpet` y el pase `MagicCarpet`) y `DiamondClient.Menus`. El script `CarpetFly` y el `Items` de antes están en `ServerStorage.CopiasSeguridad`.
 **Probado:** sin probar en Play todavía (no queda ninguna referencia a la alfombra en los scripts).
-=======
+
 ## 2026-11-12 · seguo970 (Claude) · Pared de la puerta (lado del carril) de una sola pieza
 **Qué:** la pared que se ve desde el carril a cada lado de la puerta eran dos piezas juntas: el extremo de la pared del pasillo y la pared de unión. Por eso el patrón no cuadraba. Ahora es una sola pared con 4 cuadros enteros por fila.
 **Dónde:** `Walls.Link.E/W` (pared y remate): ahora van de x 38 a 104, con 4 cuadros de 16,5. `Lane.Gateway.GateWalls` (pared y remate): acaban en z −514, detrás de la de unión; sus lados tienen 3 cuadros de 17,7.
 **Probado:** captura desde el carril, con los dos lados.
->>>>>>> d56b28a (Pared de la puerta (lado carril) de una sola pieza)
 
 ## 2026-11-12 · seguo970 (Claude) · Pared junto a la puerta (lado del carril) con cuadros enteros
 **Qué:** las dos paredes marrones que se ven desde el carril a los lados de la puerta tenían el último cuadro cortado, porque la pared del carril tapaba un trozo. Ahora cada una tiene 3 cuadros enteros por fila.
