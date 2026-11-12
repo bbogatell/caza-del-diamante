@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · bbogatell (Claude) · Fuera el «tienes X» de las ofertas de 3 trampas y 3 hielos
+**Qué:** las cartas de la tienda «3 Trampas» y «3 Hielos» ya no añaden «· tienes X» al nombre.
+**Dónde:** `DiamondClient.Menus` → `Menus.refreshShop` (textos de `shop.cards.Traps3` y `Freeze3`).
+**Probado:** Play en Studio, sección Objetos de la tienda: pone «3 Trampas» y «3 Hielos».
+
 ## 2026-11-12 · bbogatell (Claude) · Interfaz animada: rayas, arcoíris, destellos y chispas
 **Qué:** las tiendas, ventanas y botones ahora se mueven solos, para dar más «dopamina»:
 - Las rayas blancas de botones y carteles se deslizan sin parar.
