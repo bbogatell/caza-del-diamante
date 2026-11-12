@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-12 · seguo970 (Claude) · Puerta del carril sin pasillo: el lobby da directo al carril
+**Qué:** la pared que había a cada lado de la puerta, en el lado del carril, se ha pegado a la pared del fondo del lobby y ahora son una sola pared. Ya no hay pasillo: del lobby se sale por una abertura de 76 studs directamente a la entrada del carril, que ahora empieza pegada al lobby, con el mismo césped en damero.
+**Dónde:**
+- `Walls.Lobby.BackE/BackW`: ahora llegan hasta x ±38, con 7 cuadros de 15,5 y cuadros también en el extremo de la abertura.
+- Quitados `Walls.Link` y `Lane.Gateway.GateWalls`.
+- `Walls.Lane.Plot01.East/West`: alargadas hasta z −467, la pared del lobby.
+- `Lane.Gateway`: 80 baldosas nuevas de suelo en x ±38…104, z −507…−467.
+- Copia de antes en `ServerStorage.PuertaJuntaBackup`.
+**Probado:** rayos hacia abajo en toda la zona sin ningún hueco; en Play, corriendo hacia los lados y las esquinas, las paredes del carril frenan (x ±102) sin caer. Captura desde el carril.
+
 ## 2026-11-12 · bbogatell (Claude) · Fuera la Alfombra Mágica; los fósiles de la tienda se llaman por su rareza
 **Qué:** la Alfombra Mágica ya no existe: ni en la tienda ni como pase, y si alguien la tenía en la mochila se le quita. En la tienda, los 3 fósiles que se reabastecen se llaman «Fósil Secreto», «Fósil Eterno» y «Fósil Divino» (antes salía el nombre propio del fósil, por ejemplo «Huevo del Origen»).
 **Dónde:** `DiamondServer.Items` (sin herramienta ni modelo de alfombra), `DiamondServer.Main` (/objetos), `ReplicatedStorage.Config` (quitados `ITEMS.carpet` y el pase `MagicCarpet`) y `DiamondClient.Menus`. El script `CarpetFly` y el `Items` de antes están en `ServerStorage.CopiasSeguridad`.
