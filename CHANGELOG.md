@@ -8,6 +8,11 @@
 **Probado:** Play en Studio, compra simulada de `Featured10`: los 10 fósiles quedan repartidos por toda la base (X -114…-75, Z -155…-194), separados y dentro de la valla.
 **Notas:** no cambia `Bases.place` (colocación manual del jugador).
 
+## 2026-11-12 · seguo970 (Claude) · Pared de detrás fusionada con la del pasillo de la puerta
+**Qué:** vista desde la parcela 1, la pared de detrás del lobby acababa antes de la esquina del pasillo y se veía la junta. Ahora llega hasta la esquina y se ve como una sola pared, igual que la del fondo del lobby desde el spawn. Está en los dos lados, y vuelve a estar donde empieza la parcela (z −520), como antes del cambio de abajo.
+**Dónde:** `Walls.Lobby.BackECopy/BackWCopy`: x ±38..±104, z −520..−514, 4 cuadros de 16,5. `Lane.Gateway.SideWalls` acaban en z −514 (remate en −513,5), justo donde empieza la copia, sin solaparse.
+**Probado:** captura desde la parcela 1. No probado en Play.
+
 ## 2026-11-12 · seguo970 (Claude) · El final del pasillo de la puerta, 6 studs más hacia el lobby
 **Qué:** las paredes del pasillo de la puerta y las copias de la pared del fondo que hay detrás acababan donde empieza la parcela 1. Ahora acaban 6 studs antes, más cerca del lobby, en los dos lados.
 **Dónde:** `Lane.Gateway.SideWalls` (pared y remate): ahora van de z −461 a −514, con 4 cuadros de 13,25 por fila (mismo orden de colores que antes). `Walls.Lobby.BackECopy/BackWCopy`: movidas a z −514..−508.
