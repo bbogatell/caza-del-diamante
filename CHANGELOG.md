@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Sin hierba asomando entre los hoyos
+**Qué:** en la franja de suelo entre un hoyo y el siguiente asomaba hierba del terreno de antes, porque ahí acababa el hoyo viejo. Se ha quitado: en esa franja y en la de la entrada de las 15 parcelas, el terreno de debajo del suelo es ahora el material de relleno de cada parcela, solo hasta y 16. Por encima no queda nada. seguo970 probó a cavar en los hoyos nuevos y va bien.
+**Dónde:** terreno de `workspace.Terrain` en z S..S−16 y S−152..S−168 de cada parcela, con x ±64. Debajo hay el último material de `Config.PLOTS[n].terrain`.
+**Probado:** Play en Studio, captura entre la parcela 1 y la 2: ya no sale hierba.
+
 ## 2026-11-13 · seguo970 (Claude) · Hoyos de las 15 parcelas más largos y centrados
 **Qué:** en las 15 parcelas del carril, la zona que se cava es más larga: 136 studs en vez de 112, con el mismo ancho. Está centrada en su parcela, así que entre un hoyo y el siguiente solo quedan 32 studs de suelo (16 al final de cada parcela y 16 al principio de la siguiente), como marcó seguo970. Antes había 56 de plaza delante del hoyo y el hoyo llegaba hasta el final de la parcela. Los carteles de la pala están ahora en la franja de suelo de la entrada.
 **Dónde:**
