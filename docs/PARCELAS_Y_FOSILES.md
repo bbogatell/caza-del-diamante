@@ -177,7 +177,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 
 **12. Islas del Cielo** · pala 23
 - **Tema:** islas flotantes entre las nubes, unidas por puentes, donde anidan los pterosaurios.
-- **Terreno que se cava:** la isla principal, de `Ground` y `Rock` (las islas pequeñas de alrededor son decoración de studs).
+- **Terreno que se cava:** la isla principal, con 6 studs de hierba (`Grass`) encima y piedra gris (`Rock`) debajo. La hierba se puso el 13/11; antes encima había tierra (`Ground`). Las islas pequeñas de alrededor son decoración de studs.
 - **Decoración:** islas flotantes con cascadas que caen al vacío, puentes colgantes, nidos gigantes de Quetzalcoatlus, nubes de bloques blancas, un arco de nubes en la entrada.
 - **Colores:** azul cielo, blanco nube, verde y dorado.
 - **Ambiente:** nubes que pasan, plumas, viento, rayos de sol.

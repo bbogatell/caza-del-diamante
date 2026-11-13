@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Islas del Cielo: hierba encima en vez de tierra
+**Qué:** en la parcela 12 (Islas del Cielo), la capa de arriba que se cava es ahora hierba en vez de tierra. Debajo sigue la misma piedra gris.
+**Dónde:** `ReplicatedStorage.Config` → `PLOTS[12].terrain = {{"Grass", 6}, {"Rock"}}` (antes `{{"Ground", 6}, {"Rock"}}`). `Grass` es la misma hierba de la parcela 1.
+**Probado:** Play en Studio. Se leyó el terreno del centro de la parcela 12: hierba arriba, piedra gris debajo y el fondo de basalto de siempre. En la captura, la superficie se ve de hierba.
+
 ## 2026-11-13 · seguo970 (Claude) · Parcela del Rey Galáctico: todo el terreno amarillo
 **Qué:** en la parcela 15 (Trono del Rey Galáctico), todo lo que se cava es ahora del mismo amarillo que la superficie. Antes, por debajo de los 6 primeros studs, salía piedra beige con vetas azules.
 **Dónde:** `ReplicatedStorage.Config` → `PLOTS[15].terrain = {{"Concrete"}}`, sin `veins` (antes `{{"Concrete", 6}, {"Limestone"}}` y `veins = "Glacier"`). `Concrete` solo lo usa esta parcela, así que las demás no cambian.
