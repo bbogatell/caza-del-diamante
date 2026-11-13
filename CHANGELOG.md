@@ -2,6 +2,20 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Lobby 24,5 studs más largo por el fondo
+**Qué:** con las bases al máximo, la fila de atrás llegaba casi a la pared del fondo (2 studs). El lobby es ahora 24,5 studs más largo por ese lado, así que detrás de las bases quedan 26,5 studs, lo mismo que hay entre las bases y las paredes de los lados.
+**Dónde:**
+- `Walls.Lobby.Front`: ahora en z −133,5..−127,5.
+- `Walls.Lobby.East/West`: van de −461 a −133,5, con 20 cuadros de 16,38.
+- `Lobby.Floor`: 152 baldosas nuevas en la misma rejilla de ajedrez.
+- `Bounds.MapBound` de delante: también movido.
+- Copia de antes en `ServerStorage.LobbyLargoBackup`.
+**Probado:**
+- Rayos: el suelo no tiene huecos.
+- Captura de la esquina en Edit.
+- Play con las 8 bases puestas al máximo a mano para verlas: caben con el espacio igual por los tres lados.
+**Notas:** `workspace.Scene` y `workspace.Guadana_NeonArcoiris` (de bbogatell) quedan ahora casi dentro de la pared del fondo (z ≈ −127/−121).
+
 ## 2026-11-13 · seguo970 (Claude) · Base mejorable 5 veces, hasta el doble de larga
 **Qué:** la base del lobby se puede agrandar 5 veces en lugar de 2. Cada mejora la alarga 10 studs hacia atrás; al máximo mide 50×100, el doble de larga que al principio, y tiene el doble de sitios (24).
 
