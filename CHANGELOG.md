@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Islas del Cielo sin nidos ni puentes flotantes
+**Qué:** en la parcela 12 se han quitado los 6 nidos marrones con forma de media luna (tres a cada lado) y los dos puentecitos de tablas que flotaban en el aire. Las nubes blancas de los lados se quedan.
+**Dónde:** `Lane.Plot12.Decor`: 6 `Nest` (con sus huevos) y 20 `Plank` sueltas. Están en `ServerStorage.IslasNidosPuentesBackup`.
+**Probado:** captura de la parcela desde arriba: ya no salen.
+**Notas:**
+- Si se rehace la parcela con `LaneThemes`, volverían a salir.
+- En Edit, el hoyo aún se ve de tierra. En el juego se rellena con la hierba nueva.
+
 ## 2026-11-13 · seguo970 (Claude) · Fuera decoración flotante de Islas del Cielo y Grieta Dimensional
 **Qué:** se han quitado las cuatro cosas que marcó seguo970:
 - La isla flotante con cascada.
