@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Nebulosa de los Dioses: estrellas y constelación a la altura de los jugadores
+**Qué:** en la parcela 14, la constelación (estrellas unidas con líneas) y las estrellas blancas sueltas estaban muy arriba (y 82 a 215). Ahora están a la altura por donde pasan los jugadores, de y 24 a 82. No chocan, así que se atraviesan al pasar.
+**Dónde:** `Lane.Plot14.Decor`:
+- `Line` + `ConStar` (24 piezas): bajadas 107 studs juntas, sin deformarse.
+- `Star` (20): sus alturas se han repartido entre y 24 y 80.
+- `CanCollide` y `CanTouch` desactivados.
+- Copia de antes en `ServerStorage.NebulosaEstrellasBackup`.
+**Probado:** captura desde la entrada de la parcela: la constelación se ve delante del arco del final y las estrellas, por encima del hoyo. No se ha probado atravesarlas en Play.
+
 ## 2026-11-13 · seguo970 (Claude) · Nebulosa de los Dioses: fila de cristales completa
 **Qué:** en la parcela 14 (Nebulosa de los Dioses), las filas de cristales rosas de los lados empezaban a mitad de la parcela. Ahora van de principio a fin en los dos lados.
 **Dónde:** `Lane.Plot14.Decor.Crystals`: 7 grupos más, copias de los que ya había, girados para que no se repitan iguales. Se añadieron 3 a la izquierda y 4 a la derecha, cada ~17 studs, desde z −2712.
