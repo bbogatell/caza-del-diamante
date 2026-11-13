@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Fuera los carámbanos flotantes de la Tundra
+**Qué:** en la parcela 6 (Tundra de los Mamuts) había una fila de 16 carámbanos de hielo flotando en el aire (y 67), porque el arco del que colgaban ya no existe. Se han quitado.
+**Dónde:** `Lane.Plot06.Decor.Icicle` (16 piezas): movidas a `ServerStorage.CarambanosBackup`.
+**Probado:** captura desde donde los vio seguo970: el cielo sale limpio.
+**Notas:** si se rehace la parcela con `LaneThemes`, volverían a salir.
+
 ## 2026-11-13 · seguo970 (Claude) · Abismo Marino Seco: mitad arena y mitad roca gris
 **Qué:** la parcela 8 ya no tiene la capa blanca de arriba. La mitad de arriba es arena y la de abajo, roca gris. Sustituye a las tres capas de la entrada de abajo.
 **Dónde:** `ReplicatedStorage.Config` → `PLOTS[8].terrain = {{"Sand", 16}, {"Rock"}}`.
