@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Bordillo de cada hoyo del color de su suelo
+**Qué:** el borde de studs que rodea la zona de cavar ya no es gris en todas las parcelas. Ahora es del color del suelo que lo rodea, un 12 % más oscuro para que se siga viendo el borde. Por ejemplo: blanco en el Abismo, naranja en el Cañón y arena en la Playa.
+**Dónde:** `Lane.PlotNN.Floor.Curb` y `CurbBack` de las 15 parcelas (color y `Color3` de sus texturas). Colores de cada parcela, de la 1 a la 15: 57933b, 3f6139, ccb682, ba8358, 407c36, cdd2db, 332e30, bfbaab, 4b4d51, 36284c, bbad8c, ced4dd, 1f1929, 251c45 y d0a739.
+**Probado:** captura del Abismo Marino Seco en Play: el borde sale blanco grisáceo, como el suelo.
+
 ## 2026-11-13 · seguo970 (Claude) · Sin hierba asomando entre los hoyos
 **Qué:** en la franja de suelo entre un hoyo y el siguiente asomaba hierba del terreno de antes, porque ahí acababa el hoyo viejo. Se ha quitado: en esa franja y en la de la entrada de las 15 parcelas, el terreno de debajo del suelo es ahora el material de relleno de cada parcela, solo hasta y 16. Por encima no queda nada. seguo970 probó a cavar en los hoyos nuevos y va bien.
 **Dónde:** terreno de `workspace.Terrain` en z S..S−16 y S−152..S−168 de cada parcela, con x ±64. Debajo hay el último material de `Config.PLOTS[n].terrain`.
