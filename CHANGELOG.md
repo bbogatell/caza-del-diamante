@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Cueva de Cristal sin el estegosaurio de cristal
+**Qué:** en la parcela 10 (Cueva de Cristal) se ha quitado el dinosaurio con cresta de cristales que había al entrar, a la derecha. También se ha quitado su pedestal.
+**Dónde:** `Lane.Plot10.Decor.CrystalStego` (101 piezas), `HeroPlinth` y `HeroTrim` (el borde de arriba del pedestal). Están en `ServerStorage.CuevaCristalDinoBackup`.
+**Probado:** captura del sitio: el suelo queda limpio.
+**Notas:** si se rehace la parcela con `LaneThemes`, volverían a salir.
+
 ## 2026-11-13 · seguo970 (Claude) · Fuera los carámbanos flotantes de la Tundra
 **Qué:** en la parcela 6 (Tundra de los Mamuts) había una fila de 16 carámbanos de hielo flotando en el aire (y 67), porque el arco del que colgaban ya no existe. Se han quitado.
 **Dónde:** `Lane.Plot06.Decor.Icicle` (16 piezas): movidas a `ServerStorage.CarambanosBackup`.
