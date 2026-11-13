@@ -2,6 +2,26 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Base mejorable 5 veces, hasta el doble de larga
+**Qué:** la base del lobby se puede agrandar 5 veces en lugar de 2. Cada mejora la alarga 10 studs hacia atrás; al máximo mide 50×100, el doble de larga que al principio, y tiene el doble de sitios (24).
+
+| Mejora | Largo | Sitios | Precio |
+|---|---|---|---|
+| Base grande | +10 | 14 | 25K |
+| Base muy grande | +20 | 17 | 300K |
+| Base enorme | +30 | 19 | 1,5M |
+| Base gigante | +40 | 22 | 8M |
+| Base colosal | +50 | 24 | 40M |
+
+Para que quepan al máximo, la fila de bases de delante se ha movido 14 studs hacia los puestos.
+
+**Dónde:** `ReplicatedStorage.Config` → `BASE.upgrades` (y los comentarios de al lado); `Lobby.PlotFrames` Plot5-8 movidas a z −361. El código de `Bases` ya servía para cualquier número de mejoras: no se ha tocado.
+**Probado:** Play en Studio con `Debug baseLevel` del 1 al 6 en una base de la fila de atrás: crece de 10 en 10 y al máximo llega a z −160, a 2 studs de la pared, con 0/24 sitios (captura). La fila de delante, por cuentas, llega a z −286 al máximo, y la cinta de la base de detrás empieza en −281.
+**Notas:**
+- Los precios son una primera propuesta: conviene revisarlos con la economía.
+- Una partida guardada con «Base grande» (antes +15) pasa a +10. Si tenía fósiles más atrás, se recolocan solos.
+- No probado con una base de la fila de delante al máximo ni con varios jugadores.
+
 ## 2026-11-13 · bbogatell (Claude) · El K.O. tira el fósil · la ruleta del lobby gira
 **Qué:**
 - **Fósil al noquear:** antes el bate quitaba «vida» al fósil y solo se caía cuando se agotaba. Ahora, si noqueas a alguien que lleva un fósil, se le cae al suelo **siempre** y lo puede coger cualquiera (también él mismo). Sigue protegido mientras el jugador hace el tutorial.
