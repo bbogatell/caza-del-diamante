@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Estatuas de 5 parcelas más a la derecha
+**Qué:** las estatuas del centro de entrada de estas parcelas se han movido 34 studs a la derecha (entrando desde el lobby), con su pedestal, igual que el dodo de la parcela 1:
+- 3: la cáscara (amonites).
+- 4: el esqueletito sobre la losa.
+- 6: el perezoso gigante de hielo.
+- 7: el dinosaurio negro del volcán.
+- 9: la calavera de ojos verdes.
+**Dónde:** `Lane.Plot03/04/06/07/09.Decor`: la estatua (`Ammonite`, `Triceratops`, `Megatherium`, `Spinosaurus`, `Skull`), `HeroPlinth` y `HeroTrim`, de x 46 a x 80.
+**Probado:** se comprobó que en el sitio nuevo de cada una no había nada. Hay una captura de la calavera (parcela 9) ya movida.
+
 ## 2026-11-13 · seguo970 (Claude) · Pantano Jurásico: el esqueleto en el sitio del charco
 **Qué:** en la parcela 2 se ha quitado el charco grande con tres nenúfares de la derecha. En su sitio se ha puesto la estatua de las dos rocas con el esqueletito de dinosaurio encima, con su pedestal. El charco igual de la izquierda se queda.
 **Dónde:**
