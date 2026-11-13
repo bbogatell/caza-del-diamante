@@ -2,6 +2,31 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Hoyos de las 15 parcelas más largos y centrados
+**Qué:** en las 15 parcelas del carril, la zona que se cava es más larga: 136 studs en vez de 112, con el mismo ancho. Está centrada en su parcela, así que entre un hoyo y el siguiente solo quedan 32 studs de suelo (16 al final de cada parcela y 16 al principio de la siguiente), como marcó seguo970. Antes había 56 de plaza delante del hoyo y el hoyo llegaba hasta el final de la parcela. Los carteles de la pala están ahora en la franja de suelo de la entrada.
+**Dónde:**
+- `ReplicatedStorage.Config`:
+  - `LANE.pitHalfZ = 68` (nuevo).
+  - `Config.plotCenter`: ahora da el centro del tramo.
+- `ServerScriptService.DiamondServer.Lane`: `insidePit`, `restoreShell`, `fill` (capas, `mix`, `veins`), `dirtIn`, `dig`, `edgeSpot` y `voxels` usan `pitHalfZ` para el largo.
+- `DiamondServer.Fossils`: los fósiles de evento salen dentro del hoyo nuevo.
+- `DiamondClient.HUD`: detecta que estás dentro del hoyo.
+- En las 15 parcelas:
+  - `Floor`: las 5 filas de plaza que ahora son hoyo se partieron en dos trozos laterales, y lo que era el final del hoyo pasa a ser 2 filas de suelo.
+  - Bordillos movidos a los bordes nuevos.
+  - `ShovelSign` movido a 8 studs del inicio de la parcela.
+  - 3 plumas de la parcela 12 que quedaban dentro del hoyo, quitadas.
+- Copia de todo lo de antes en `ServerStorage.HoyosAntesBackup`. El terreno de Edit se rellenó con el hoyo nuevo.
+**Probado:** Play en Studio:
+- El terreno de las parcelas 1, 3, 8 y 15 llena el hoyo nuevo.
+- Captura de la parcela 3 desde un lado: igual que el dibujo de seguo970.
+- Consola sin errores.
+- **No probado** cavar a mano en la parte nueva, el aviso de dentro del hoyo ni los fósiles de evento.
+**Notas:**
+- Cada hoyo tiene un 21 % más de tierra, así que tarda algo más en llegar al 80 % y rellenarse.
+- `ServerStorage.LaneKit` construiría el diseño viejo si se rehace una parcela.
+- Las decoraciones que cruzan por encima del hoyo (puente de mosasaurio, arco de costillas, anillos del Trono) no se han tocado.
+
 ## 2026-11-13 · seguo970 (Claude) · Templo Perdido: el T-Rex con corona a la derecha y mirando al jugador
 **Qué:** la estatua del T-Rex con corona de la parcela 11 se ha movido 34 studs a la derecha, como las demás estatuas, para dejar libre el camino del medio. Su cuerpo se ha girado para que mire hacia la entrada, esperando al jugador que llega, y así la cola ya no da con la pared. La losa solo se ha movido, no se ha girado.
 **Dónde:** `Lane.Plot11.Decor.RexGuardian`: girado ~105° alrededor del centro de la losa y movido a x 80. `HeroPlinth` y `HeroTrim` movidos a x 80 sin girar. Copia de antes en `ServerStorage.TemploRexBackup`.
