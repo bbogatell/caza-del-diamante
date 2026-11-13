@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Fuera decoración flotante de Islas del Cielo y Grieta Dimensional
+**Qué:** se han quitado las cuatro cosas que marcó seguo970:
+- La isla flotante con cascada.
+- La isla flotante con árbol.
+- El pájaro blanco de alas amarillas (Quetzalcoatlus).
+- El dragón oscuro de alas rosas de la Grieta Dimensional, con la islita de hierba que tenía encima.
+**Dónde:** `Lane.Plot12.Decor`: `Quetzal` y 3 `Island` (las de (69, −2546), (−60, −2520) y (0, −2630)). `Lane.Plot13.Decor.FracturedDragon`. Están en `ServerStorage.IslasGrietaDecorBackup`.
+**Probado:** captura desde el mismo ángulo antes y después: ya no salen, y el resto de la decoración sigue igual.
+**Notas:** si se rehacen las parcelas con `LaneThemes`, volverían a salir.
+
 ## 2026-11-13 · seguo970 (Claude) · Cueva de Cristal sin el estegosaurio de cristal
 **Qué:** en la parcela 10 (Cueva de Cristal) se ha quitado el dinosaurio con cresta de cristales que había al entrar, a la derecha. También se ha quitado su pedestal.
 **Dónde:** `Lane.Plot10.Decor.CrystalStego` (101 piezas), `HeroPlinth` y `HeroTrim` (el borde de arriba del pedestal). Están en `ServerStorage.CuevaCristalDinoBackup`.
