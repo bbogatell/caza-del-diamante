@@ -201,7 +201,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 
 **15. Trono del Rey Galáctico** · pala 29
 - **Tema:** la parcela definitiva: un santuario colosal de oro y luz en el que reina una estatua gigantesca del T-Rex Galáctico, justo antes del campo del diamante.
-- **Terreno que se cava:** `Foil` (oro) y `Marble` (mármol) en capas, con vetas de `Glacier` brillante.
+- **Terreno que se cava:** desde el 13/11, todo es `Concrete` en el amarillo de la superficie (`Config.TERRAIN_COLORS.Concrete` = 255, 196, 60), sin capas ni vetas. Antes eran 6 studs de `Concrete`, `Limestone` debajo y vetas de `Glacier`. La idea original era `Foil` y `Marble`, que no son materiales de terreno.
 - **Decoración:** estatua colosal del T-Rex Galáctico sentado en un trono, columnas de oro, escaleras de luz, halos flotando, cascadas de luz, arcos con gemas y un portal dorado hacia el campo del diamante.
 - **Colores:** oro, blanco, arcoíris y galaxia.
 - **Ambiente:** partículas arcoíris, rayos de luz desde el cielo, estrellas, polvo dorado y ondas de energía.

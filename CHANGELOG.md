@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Parcela del Rey Galáctico: todo el terreno amarillo
+**Qué:** en la parcela 15 (Trono del Rey Galáctico), todo lo que se cava es ahora del mismo amarillo que la superficie. Antes, por debajo de los 6 primeros studs, salía piedra beige con vetas azules.
+**Dónde:** `ReplicatedStorage.Config` → `PLOTS[15].terrain = {{"Concrete"}}`, sin `veins` (antes `{{"Concrete", 6}, {"Limestone"}}` y `veins = "Glacier"`). `Concrete` solo lo usa esta parcela, así que las demás no cambian.
+**Probado:** Play en Studio. Se leyó el terreno del hoyo de la parcela 15 después de rellenarse: todo `Concrete` (6160 vóxeles y nada más). Captura desde arriba: todo amarillo.
+
 ## 2026-11-13 · seguo970 (Claude) · Lobby 24,5 studs más largo por el fondo
 **Qué:** con las bases al máximo, la fila de atrás llegaba casi a la pared del fondo (2 studs). El lobby es ahora 24,5 studs más largo por ese lado, así que detrás de las bases quedan 26,5 studs, lo mismo que hay entre las bases y las paredes de los lados.
 **Dónde:**
