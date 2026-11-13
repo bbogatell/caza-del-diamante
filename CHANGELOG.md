@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Templo Perdido: el T-Rex con corona a la derecha y mirando al jugador
+**Qué:** la estatua del T-Rex con corona de la parcela 11 se ha movido 34 studs a la derecha, como las demás estatuas, para dejar libre el camino del medio. Su cuerpo se ha girado para que mire hacia la entrada, esperando al jugador que llega, y así la cola ya no da con la pared. La losa solo se ha movido, no se ha girado.
+**Dónde:** `Lane.Plot11.Decor.RexGuardian`: girado ~105° alrededor del centro de la losa y movido a x 80. `HeroPlinth` y `HeroTrim` movidos a x 80 sin girar. Copia de antes en `ServerStorage.TemploRexBackup`.
+**Probado:**
+- El cuerpo ocupa x 71..89 (la pared está en 103,5).
+- `GetPartsInPart`: no choca con ninguna pieza (columnas, braseros, pared).
+- En la captura mira hacia la entrada.
+
 ## 2026-11-13 · seguo970 (Claude) · Estatuas de 5 parcelas más a la derecha
 **Qué:** las estatuas del centro de entrada de estas parcelas se han movido 34 studs a la derecha (entrando desde el lobby), con su pedestal, igual que el dodo de la parcela 1:
 - 3: la cáscara (amonites).
