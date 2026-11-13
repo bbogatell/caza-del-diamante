@@ -161,7 +161,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 
 **10. Cueva de Cristal** · pala 19
 - **Tema:** una caverna gigante llena de cristales brillantes de colores.
-- **Terreno que se cava:** `Glacier` y `Rock`.
+- **Terreno que se cava:** `Glacier` (cristal azul) y `Rock` (piedra gris), mezclados en manchas por todo el hoyo, más o menos mitad y mitad (desde el 13/11; antes había 4 studs de cristal encima y piedra debajo). Se hace con `Config.PLOTS[10].mix = {"Glacier", 0.5}`.
 - **Decoración:** racimos de cristales colosales en Neon (rosa, cian, morado), estalactitas, un Estegosaurio de cristal gigante en la entrada, setas luminosas.
 - **Colores:** morado oscuro con cristales de colores brillantes.
 - **Ambiente:** destellos, polvo brillante, luz pulsante de los cristales.

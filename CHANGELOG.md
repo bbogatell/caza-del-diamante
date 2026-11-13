@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Cueva de Cristal: cristal y piedra mezclados
+**Qué:** en la parcela 10 (Cueva de Cristal), el cristal azul y la piedra gris salen mezclados en manchas por todo el hoyo, más o menos mitad y mitad, desde la superficie hasta el fondo. Antes había 4 studs de cristal encima y todo piedra debajo. Cada vez que la parcela se rellena, las manchas cambian de sitio.
+**Dónde:**
+- `ServerScriptService.DiamondServer.Lane` → `Lane.fill`: opción nueva `def.mix = {material, parte}`, con ruido 3D por vóxel (`math.noise`).
+- `ReplicatedStorage.Config` → `PLOTS[10].terrain = {{"Rock"}}, mix = {"Glacier", 0.5}`.
+**Probado:** Play en Studio. Se leyó el terreno de la parcela 10 después de rellenarse:
+- Todo el hoyo: 2323 de cristal y 2409 de piedra.
+- En la superficie: 329 de cristal y 347 de piedra.
+- Abajo: 331 de cristal y 345 de piedra.
+En la captura se ven las manchas mezcladas. No he medido si rellenar tarda más (lee y escribe una vez todos los vóxeles del hoyo).
+
 ## 2026-11-13 · seguo970 (Claude) · Islas del Cielo: hierba encima en vez de tierra
 **Qué:** en la parcela 12 (Islas del Cielo), la capa de arriba que se cava es ahora hierba en vez de tierra. Debajo sigue la misma piedra gris.
 **Dónde:** `ReplicatedStorage.Config` → `PLOTS[12].terrain = {{"Grass", 6}, {"Rock"}}` (antes `{{"Ground", 6}, {"Rock"}}`). `Grass` es la misma hierba de la parcela 1.
