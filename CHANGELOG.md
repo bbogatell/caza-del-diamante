@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Plumas sueltas en el suelo de Islas del Cielo
+**Qué:** en el suelo blanco de la parcela 12 (no en el hoyo que se cava) hay ahora 14 plumitas sueltas, rojas, naranjas y amarillas. Están repartidas por los pasillos de los lados y la entrada, cada una girada a su manera.
+**Dónde:** `Lane.Plot12.Decor.Feathers`: 14 modelos `Feather` de 5 piezas pequeñas cada uno (cañón blanco, tres trozos de pluma que se estrechan y un plumón más claro), de 2,8 a 4,2 studs de largo. No chocan ni se pueden pisar: `CanCollide`, `CanQuery` y `CanTouch` están desactivados.
+**Probado:** puestas comprobando con rayos que debajo hay suelo blanco (`Plaza`/`Walk` a y 18) y no el borde del hoyo; separadas al menos 16 studs entre sí. Captura de cerca y desde arriba.
+
 ## 2026-11-13 · seguo970 (Claude) · Islas flotantes: tierra pegada a la hierba
 **Qué:** en las dos islas flotantes de Islas del Cielo, la parte de tierra quedaba separada de la capa de hierba de encima. Ahora están juntas.
 **Dónde:** `Lane.Plot12.Decor.FloatIsland` (las 2): las piezas `Earth` subieron 2,26 studs en la del árbol y 1,64 en la pequeña, hasta tocar `Top`.
