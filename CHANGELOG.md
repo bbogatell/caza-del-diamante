@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Nebulosa de los Dioses: fila de cristales completa
+**Qué:** en la parcela 14 (Nebulosa de los Dioses), las filas de cristales rosas de los lados empezaban a mitad de la parcela. Ahora van de principio a fin en los dos lados.
+**Dónde:** `Lane.Plot14.Decor.Crystals`: 7 grupos más, copias de los que ya había, girados para que no se repitan iguales. Se añadieron 3 a la izquierda y 4 a la derecha, cada ~17 studs, desde z −2712.
+**Probado:** captura desde la entrada de la parcela: las dos filas llegan hasta el principio.
+
 ## 2026-11-13 · seguo970 (Claude) · Plumas de Islas del Cielo el triple de grandes
 **Qué:** las 28 plumas del suelo de la parcela 12 son ahora el triple de grandes, de unos 8 a 13 studs de largo. Siguen en el mismo sitio y apoyadas en el suelo.
 **Dónde:** `Lane.Plot12.Decor.Feathers`: cada `Feather` escalado ×3 (`Model:ScaleTo`) desde el punto del suelo que tiene debajo.
