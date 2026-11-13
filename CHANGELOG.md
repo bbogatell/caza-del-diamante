@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Abismo Marino Seco: tres capas (blanca, arena y piedra)
+**Qué:** la parcela 8 (Abismo Marino Seco) tiene ahora tres capas al cavar: arriba la blanca de siempre, en medio arena y abajo piedra gris. Antes eran 6 studs de blanco y caliza beige debajo.
+**Dónde:** `ReplicatedStorage.Config` → `PLOTS[8].terrain = {{"Salt", 12}, {"Sand", 12}, {"Rock"}}`.
+**Probado:** Play en Studio. Se leyó el terreno de la parcela capa a capa (rejilla de 4):
+- Sal blanca de y 16 a 4.
+- Arena de 4 a −8.
+- Piedra de −8 al fondo.
+Ningún vóxel de otro material. Captura con un corte: blanco arriba y arena debajo.
+**Notas:** los grosores tienen que ser múltiplos de 4. Con 11/11/10 salían rayas de la caliza de antes entre capa y capa.
+
 ## 2026-11-13 · seguo970 (Claude) · Cueva de Cristal: cristal y piedra mezclados
 **Qué:** en la parcela 10 (Cueva de Cristal), el cristal azul y la piedra gris salen mezclados en manchas por todo el hoyo, más o menos mitad y mitad, desde la superficie hasta el fondo. Antes había 4 studs de cristal encima y todo piedra debajo. Cada vez que la parcela se rellena, las manchas cambian de sitio.
 **Dónde:**
