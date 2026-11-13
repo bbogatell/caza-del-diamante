@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Fuera decoración suelta entre la Nebulosa y el Trono
+**Qué:** se han quitado las cuatro cosas que marcó seguo970:
+- El arco blanco del cielo (el anillo de un planeta que ya no tenía planeta).
+- El cubo azul flotante (restos del T-Rex Galáctico).
+- Las dos columnas blancas de luz de los lados de la entrada al Trono del Rey Galáctico.
+**Dónde:** `Lane.Plot14.Decor.Planet` (el de los 6 `Seg`), `Lane.Plot15.Decor.GalacticRex` y los 2 `Lane.Plot15.Decor.LightCascade`. Están en `ServerStorage.NebulosaTronoDecorBackup`.
+**Probado:** captura desde la misma zona: ya no salen.
+**Notas:** si se rehacen las parcelas con `LaneThemes`, volverían a salir.
+
 ## 2026-11-13 · seguo970 (Claude) · Nebulosa de los Dioses: estrellas y constelación a la altura de los jugadores
 **Qué:** en la parcela 14, la constelación (estrellas unidas con líneas) y las estrellas blancas sueltas estaban muy arriba (y 82 a 215). Ahora están a la altura por donde pasan los jugadores, de y 24 a 82. No chocan, así que se atraviesan al pasar.
 **Dónde:** `Lane.Plot14.Decor`:
