@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · bbogatell (Claude) · Ruleta 3D con su imagen de antes · Fósil de Evento al 0,1 %
+**Qué:**
+- La ruleta 3D del lobby vuelve a la imagen de antes (8 casillas iguales). La de la ventana se queda con las casillas proporcionales.
+- El Fósil de Evento de la ruleta baja de 2 % a **≈0,1 %** (peso 0,1). Su casilla en la ventana mide lo mismo (18°): los ángulos calculados no cambian. Los demás suben un poco: Trampas/Raro/Hielos 20,4 %, Épico 14,3 %, 5+5 11,2 %, Legendario 8,2 %, Mítico 5,1 %.
+**Dónde:** `Config.WHEEL.segments` (peso del Fósil de Evento); `Lobby.Wheel.Face.SurfaceGui` (rbxassetid://105512305313801).
+**Probado:** cálculo de `Config.wheelAngles()` con el peso nuevo: mismos ángulos que antes (69,7 / 69,7 / 69,7 / 48,8 / 38,3 / 27,9 / 18 / 18). Captura de la ruleta 3D en Edit.
+
 ## 2026-11-13 · bbogatell (Claude) · Estatua del ganador en la entrada a las parcelas · ruleta más grande y proporcional
 **Qué:**
 - **Estatua del ganador:** al acabar la caza ya no sale en el sitio del antiguo diamante (ahora está la ruleta), sino **en el centro de la entrada que separa el lobby de las parcelas** (pasillo de 76 studs entre el lobby y la Parcela 1, x 0, z −491), en el suelo, mirando al lobby. El pedestal mide 26 y deja 25 studs libres a cada lado, así que no corta el paso.
