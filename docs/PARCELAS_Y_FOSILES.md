@@ -145,7 +145,7 @@ Cada rareza tiene 3 fósiles. **Cuanto mejor es el fósil, mejor es el bicho que
 
 **8. Abismo Marino Seco** · pala 15
 - **Tema:** el fondo de un océano prehistórico que se ha secado: corales gigantes, conchas y esqueletos de reptiles marinos.
-- **Terreno que se cava:** desde el 13/11, tres capas: 12 studs de `Salt` (sal blanca), 12 de `Sand` (arena) y 8 de `Rock` (piedra gris) hasta el fondo. Antes eran 6 de sal y caliza debajo. Los grosores son múltiplos de 4 para que coincidan con la rejilla del terreno; si no, salen rayas del material de antes entre capa y capa.
+- **Terreno que se cava:** desde el 13/11, mitad y mitad: 16 studs de `Sand` (arena) arriba y 16 de `Rock` (piedra gris) hasta el fondo. Antes eran 6 de sal blanca y caliza debajo. Los grosores son múltiplos de 4 para que coincidan con la rejilla del terreno; si no, salen rayas del material de antes entre capa y capa.
 - **Decoración:** corales enormes de colores, esqueleto colosal de Mosasaurio arqueado sobre la parcela como un puente, conchas gigantes, algas secas.
 - **Colores:** azul profundo, coral rosa y blanco hueso.
 - **Ambiente:** burbujas que flotan en el aire, rayos de luz como bajo el agua.

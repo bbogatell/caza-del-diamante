@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Abismo Marino Seco: mitad arena y mitad roca gris
+**Qué:** la parcela 8 ya no tiene la capa blanca de arriba. La mitad de arriba es arena y la de abajo, roca gris. Sustituye a las tres capas de la entrada de abajo.
+**Dónde:** `ReplicatedStorage.Config` → `PLOTS[8].terrain = {{"Sand", 16}, {"Rock"}}`.
+**Probado:** Play en Studio. Se leyó el terreno de la parcela capa a capa: arena de y 16 a 0 y roca de 0 al fondo, sin ningún otro material.
+
 ## 2026-11-13 · seguo970 (Claude) · Abismo Marino Seco: tres capas (blanca, arena y piedra)
 **Qué:** la parcela 8 (Abismo Marino Seco) tiene ahora tres capas al cavar: arriba la blanca de siempre, en medio arena y abajo piedra gris. Antes eran 6 studs de blanco y caliza beige debajo.
 **Dónde:** `ReplicatedStorage.Config` → `PLOTS[8].terrain = {{"Salt", 12}, {"Sand", 12}, {"Rock"}}`.
