@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · bbogatell (Claude) · Estatua del ganador en la entrada a las parcelas · ruleta más grande y proporcional
+**Qué:**
+- **Estatua del ganador:** al acabar la caza ya no sale en el sitio del antiguo diamante (ahora está la ruleta), sino **en el centro de la entrada que separa el lobby de las parcelas** (pasillo de 76 studs entre el lobby y la Parcela 1, x 0, z −491), en el suelo, mirando al lobby. El pedestal mide 26 y deja 25 studs libres a cada lado, así que no corta el paso.
+- **Ruleta:** la ventana y la rueda son más grandes. Cada casilla mide **lo que su probabilidad**: Trampas/Raro/Hielos 69,7° (20 %), Épico 48,8° (14 %), 5+5 38,3° (11 %), Legendario 27,9° (8 %), Mítico 18° (5 %). El Fósil de Evento (2 %) mediría 7° y no se vería, así que tiene el mínimo de 18°, y el resto se reparte en proporción. En las casillas estrechas el premio va más hacia fuera y su nombre en sentido radial, sin pisar el centro. La ruleta 3D del lobby usa la misma imagen nueva. Las probabilidades reales no cambian (las decide el servidor con los pesos).
+**Dónde:** `ServerStorage.PostHunt.StonePedestal` movido a (0, 18, −491) y girado 180° (copia de antes en `ServerStorage.StonePedestal_antes_entrada`); `DiamondServer.PostHunt` (`buildStatue`: la figura mira a +Z). `Config.WHEEL.minAngle` y `Config.wheelAngles()`; `DiamondClient.Menus` (`buildWheel`: tamaño de la ventana, casillas, `segAt` y el ángulo de parada); `Lobby.Wheel.Face` (imagen rbxassetid://130942375846121).
+**Probado:** estatua: capturas en Edit del pedestal en la entrada (la figura de piedra se crea durante el juego; el código que la coloca es el de antes, cambiando solo la dirección). Ruleta: Play en Studio, captura de la ventana nueva; un giro cayó en «3 Trampas» y el servidor dio 3 trampas; simulación de 160 paradas (8 casillas × 5 desvíos × 4 giros de partida): la flecha cae siempre en la casilla del premio.
+**Notas:** si se cambian los pesos o `minAngle`, hay que volver a dibujar la imagen de la ruleta con los ángulos nuevos.
+
 ## 2026-11-12 · bbogatell (Claude) · Ruleta de premios en el lobby (en lugar del diamante pequeño)
 **Qué:**
 - Quitado (de momento) el diamante pequeño del lobby con el cartel «LA CAZA DEL DIAMANTE». En su sitio hay una **ruleta** 3D hecha a mano: escalones con studs (azul, blanco, dorado), soporte dorado, rueda de 8 colores con aro dorado, bombillas que parpadean, flecha roja y cartel «✨ RULETA ✨». El modelo no gira.
