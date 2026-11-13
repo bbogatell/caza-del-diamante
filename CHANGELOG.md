@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · El doble de plumas en Islas del Cielo
+**Qué:** en el suelo blanco de la parcela 12 hay ahora 28 plumas sueltas (antes 14), igual de pequeñas y de los mismos tres colores. Ninguna está en el hoyo.
+**Dónde:** `Lane.Plot12.Decor.Feathers`: 14 `Feather` más, a 10 studs como mínimo unas de otras.
+**Probado:** las nuevas se pusieron comprobando con rayos que debajo hay suelo blanco. También hay una captura del pasillo derecho.
+
 ## 2026-11-13 · seguo970 (Claude) · Plumas sueltas en el suelo de Islas del Cielo
 **Qué:** en el suelo blanco de la parcela 12 (no en el hoyo que se cava) hay ahora 14 plumitas sueltas, rojas, naranjas y amarillas. Están repartidas por los pasillos de los lados y la entrada, cada una girada a su manera.
 **Dónde:** `Lane.Plot12.Decor.Feathers`: 14 modelos `Feather` de 5 piezas pequeñas cada uno (cañón blanco, tres trozos de pluma que se estrechan y un plumón más claro), de 2,8 a 4,2 studs de largo. No chocan ni se pueden pisar: `CanCollide`, `CanQuery` y `CanTouch` están desactivados.
