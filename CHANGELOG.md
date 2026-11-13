@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · bbogatell (Claude) · Barra de objetos con imágenes, bate clásico y tutorial más bonito
+**Qué:**
+- **Barra de objetos nueva:** fuera la barra gris de Roblox. Ahora, abajo en el centro, una casilla de color por objeto: la pala y el bate en 3D girando un poco, la trampa y el hielo con sus imágenes de la tienda; cada una con su tecla (1, 2, 3, 4) en una bolita y la cantidad que te queda (×10). La que llevas en la mano se agranda con borde amarillo. Clic o número para sacarla o guardarla. «Soltar fósil» y «Salir del hoyo» suben un poco para no taparla.
+- **Bate:** el modelo pasa a ser el bate de madera clásico de Roblox (malla 54983181 con su textura, el que usan casi todos los juegos; sacado del modelo «Baseball Bat» de Rufus14 sin sus scripts ni sonidos).
+- **Tutorial (solo aspecto):** tarjeta en forma de píldora con un color vivo distinto en cada paso, rayas que se mueven y borde blanco; el icono va en una medalla redonda que sobresale a la izquierda y se balancea; etiqueta «PASO 3/10»; el progreso es una barra de segmentos (verde hecho, amarillo el actual); botón «Saltar» rojo en píldora. La pantalla «¡LISTO!» lleva degradado rosa-morado-azul, título dorado, el premio en una cinta naranja y botón redondo. La tarjeta baja un poco para no pisar el contador de arriba.
+**Dónde:** nuevo `DiamondClient.Hotbar` (lo arranca `DiamondClient.Main`); `DiamondServer.Items` (`batTool`) + `ServerStorage.ItemModels.BatHandle`; `DiamondClient.Tutorial` (`buildCard`, `STEP_COLORS`, `paint`, `showSummary`; copia de antes en `ServerStorage.CopiasSeguridad.Tutorial_antes_estilo_2026-11-13`); posiciones en `Main` y `HUD`.
+**Probado:** Play en Studio: 4 casillas con `/objetos`, la tecla 2 saca el bate (se ve en la mano) y su casilla se marca; tutorial paso 2 y pantalla final vistos en captura. Sin errores en la consola.
+**Notas:** no probado en móvil (las teclas no aplican; se toca la casilla).
+
 ## 2026-11-13 · bbogatell (Claude) · Prueba completa del juego y arreglos
 **Qué:** partida entera en Studio de principio a fin (tutorial de 11 pasos, máquina, diario, ruleta, tienda y sus secciones, VIP, promo ×2, estelas, ajustes, modo lento, palas 2-5, cinta, base, trampa/hielo/bate, carril completo hasta el campo, `/empezar`, cavar hasta el diamante, cinemática del ganador y lobby de después con la estatua). Arreglado:
 - **Tienda de estelas:** solo se podía desplazar hasta la 9.ª de 20 estelas (las 11 últimas, todas las de Robux, no se veían). El ancho se medía mientras la ventana se abría encogida; ahora se calcula del contenido real.
