@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Plumas de Islas del Cielo el triple de grandes
+**Qué:** las 28 plumas del suelo de la parcela 12 son ahora el triple de grandes, de unos 8 a 13 studs de largo. Siguen en el mismo sitio y apoyadas en el suelo.
+**Dónde:** `Lane.Plot12.Decor.Feathers`: cada `Feather` escalado ×3 (`Model:ScaleTo`) desde el punto del suelo que tiene debajo.
+**Probado:** captura del pasillo derecho. La parte más baja de las plumas queda a y 18,01, justo sobre el suelo.
+
 ## 2026-11-13 · seguo970 (Claude) · El doble de plumas en Islas del Cielo
 **Qué:** en el suelo blanco de la parcela 12 hay ahora 28 plumas sueltas (antes 14), igual de pequeñas y de los mismos tres colores. Ninguna está en el hoyo.
 **Dónde:** `Lane.Plot12.Decor.Feathers`: 14 `Feather` más, a 10 studs como mínimo unas de otras.
