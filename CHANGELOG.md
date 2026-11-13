@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · bbogatell (Claude) · El K.O. tira el fósil · la ruleta del lobby gira
+**Qué:**
+- **Fósil al noquear:** antes el bate quitaba «vida» al fósil y solo se caía cuando se agotaba. Ahora, si noqueas a alguien que lleva un fósil, se le cae al suelo **siempre** y lo puede coger cualquiera (también él mismo). Sigue protegido mientras el jugador hace el tutorial.
+- **Ruleta 3D del lobby:** ahora gira despacio (~34°/s): cara, centro y bombillas giran alrededor del eje; la flecha y el soporte se quedan quietos. Se anima en cada cliente y solo si estás a menos de 400 studs.
+**Dónde:** `DiamondServer.Items` (`useBat`: `Fossils.drop` en vez de `Fossils.hit`); `DiamondClient.Main` (giro de `Lobby.Wheel`).
+**Probado:** Play en Studio: la ruleta gira 34° en 1 s sin moverse de sitio (captura). Sin errores en la consola. La caída del fósil al noquear necesita 2 jugadores: sin probar aquí.
+
 ## 2026-11-13 · bbogatell (Claude) · K.O. del bate sin ragdoll: el cuerpo cae tieso y rueda
 **Qué:** fuera el ragdoll (se buguea). Ahora el golpeado se queda **tieso** (no se sueltan las articulaciones) y cae rodando por el suelo como un bloque durante 2,5 s, con el aviso «💫 ¡K.O.!»; luego se levanta donde ha caído. Técnica de los foros de Roblox: `Humanoid.PlatformStand = true` (el humanoide deja de mantener el equilibrio) + empuje y giro de lado. Al levantarse se para el cuerpo (velocidad 0) y se pone derecho antes de quitar `PlatformStand`, para que no salga disparado (el fallo típico de este método).
 **Dónde:** `DiamondClient.Main` (`handlers.Knock`); `DiamondServer.Items` (`useBat` ya no suelta articulaciones; marca `Ragdoll` 2,5 s para no poder volver a golpear en el suelo; borrada `Items.ragdoll`).
