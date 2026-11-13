@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Islas flotantes: tierra pegada a la hierba
+**Qué:** en las dos islas flotantes de Islas del Cielo, la parte de tierra quedaba separada de la capa de hierba de encima. Ahora están juntas.
+**Dónde:** `Lane.Plot12.Decor.FloatIsland` (las 2): las piezas `Earth` subieron 2,26 studs en la del árbol y 1,64 en la pequeña, hasta tocar `Top`.
+**Probado:** captura de cada isla: sin hueco.
+
 ## 2026-11-13 · seguo970 (Claude) · Dos islas flotantes en Islas del Cielo
 **Qué:** la parcela 12 tiene ahora dos islas flotando sobre los pasillos de los lados, sin tapar el hoyo:
 - A la izquierda (entrando desde el lobby), la isla del árbol.
