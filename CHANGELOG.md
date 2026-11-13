@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · bbogatell (Claude) · Pala para todos (también tras la caza) y bate que noquea con ragdoll
+**Qué:**
+- **Jugadores sin pala:** (1) `Shovels.give` no daba nada si la caza había terminado, así que tras la cinemática del ganador nadie recuperaba la pala y quien entraba después aparecía sin ella; también se bloqueaba comprar palas. Quitado (se sigue cavando después de la caza). (2) Red de seguridad en el servidor: cada 3 s, cualquier jugador vivo sin pala la recibe de nuevo (y el bate/objetos con `Items.refresh`); espera mientras dura la cinemática del ganador (atributo `FinalePlaying`), que quita las herramientas a propósito.
+- **Bate:** (1) ignoraba a cualquier jugador en el tutorial (en una prueba con 2 jugadores nuevos nunca pegaba a nadie). Ahora pega a todos; a los del tutorial solo se les protege el fósil (`Fossils.hit`). (2) El golpe ahora **noquea**: el golpeado sale despedido (62 de empuje + 34 hacia arriba) y queda como un **ragdoll 2,5 s** (aviso «💫 ¡K.O.!»), luego se levanta solo. Las articulaciones se sueltan en el servidor (todos lo ven), tanto con `Motor6D` como con las `AnimationConstraint` de los avatares nuevos, con colisionadores invisibles para que el cuerpo quede sobre el suelo. No se puede volver a golpear a alguien mientras está en el suelo.
+**Dónde:** `DiamondServer.Shovels.give`, `DiamondServer.Main` (`BuyShovel`, red de seguridad tras `PlayerAdded`), `DiamondServer.Finale` (`FinalePlaying`), `DiamondServer.Items` (`Items.ragdoll`, `useBat`), `Config.ITEMS.bat` (`knock`, `lift`, `ragdoll`), `DiamondClient.Main` (`handlers.Knock`).
+**Probado:** Play en Studio con 1 jugador: ragdoll sobre mi personaje (15 articulaciones sueltas, sale despedido, cae y a los 2,5 s se levanta y anda con la pala); quitada la pala desde el servidor → vuelve en ≤3 s, también con `EventState = Ended`. Sin errores.
+**Notas:** el golpe real entre 2 jugadores (y cómo se ve el ragdoll desde el otro) no se puede probar desde aquí: hay que probarlo en Studio con 2 jugadores.
+
 ## 2026-11-13 · bbogatell (Claude) · Barra de objetos con imágenes, bate clásico y tutorial más bonito
 **Qué:**
 - **Barra de objetos nueva:** fuera la barra gris de Roblox. Ahora, abajo en el centro, una casilla de color por objeto: la pala y el bate en 3D girando un poco, la trampa y el hielo con sus imágenes de la tienda; cada una con su tecla (1, 2, 3, 4) en una bolita y la cantidad que te queda (×10). La que llevas en la mano se agranda con borde amarillo. Clic o número para sacarla o guardarla. «Soltar fósil» y «Salir del hoyo» suben un poco para no taparla.
