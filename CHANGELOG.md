@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Pantano Jurásico: el esqueleto en el sitio del charco
+**Qué:** en la parcela 2 se ha quitado el charco grande con tres nenúfares de la derecha. En su sitio se ha puesto la estatua de las dos rocas con el esqueletito de dinosaurio encima, con su pedestal. El charco igual de la izquierda se queda.
+**Dónde:**
+- `Lane.Plot02.Decor`: `BigPuddle` y 3 `GiantLily` de x > 0, movidos a `ServerStorage.PantanoCharcoBackup`.
+- `Rock`, `Compsognathus`, `HeroPlinth` y `HeroTrim`: de (46, −720) a (84, −722).
+**Probado:** captura de la zona.
+
 ## 2026-11-13 · seguo970 (Claude) · El dodo de la parcela 1, más a la derecha
 **Qué:** la estatua del dodo de la parcela 1 (Bosque de Helechos), con su pedestal, se ha movido 34 studs a la derecha (entrando desde el lobby), hacia la esquina junto a la pared.
 **Dónde:** `Lane.Plot01.Decor.Dodo`, `HeroPlinth` y `HeroTrim`: de x 46 a x 80 (z −552).
