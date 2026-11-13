@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Suelo dorado en el Trono del Rey Galáctico
+**Qué:** el suelo que no se cava de la parcela 15 era blanco crema. Ahora es del mismo dorado que sus paredes, en franjas de 8 studs que alternan dorado claro y dorado oscuro, igual que antes alternaban los tonos de crema.
+**Dónde:** `Lane.Plot15.Floor`, piezas `Plaza` y `Walk` (35), con su color y el `Color3` de sus texturas:
+- Claro: `ffcd46` (el de la pared).
+- Oscuro: `dbb03c` (el de la pared con la capa de cuadros encima).
+- El bordillo gris del hoyo no cambia.
+- Copia de antes en `ServerStorage.TronoSueloBackup`.
+**Probado:** captura de la parcela.
+
 ## 2026-11-13 · seguo970 (Claude) · Fuera decoración suelta entre la Nebulosa y el Trono
 **Qué:** se han quitado las cuatro cosas que marcó seguo970:
 - El arco blanco del cielo (el anillo de un planeta que ya no tenía planeta).
