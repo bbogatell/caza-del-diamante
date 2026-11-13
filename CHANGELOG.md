@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Nebulosa de los Dioses: 3 cristales por lado, planetas y agujero negro
+**Qué:** en la parcela 14:
+- **Cristales:** de cada fila solo quedan 3, en espejo a los dos lados (al principio, en medio y al final del hoyo) y girados igual.
+- **Dos planetas de bloques flotando:** uno grande rosa y morado con anillo dorado, a la izquierda, y otro más pequeño azul, a la derecha y más adelante.
+- **Agujero negro en la pared derecha,** a mitad de la parcela: centro negro con anillos de neón blanco, naranja y morado, trocitos de materia girando alrededor y una luz morada.
+**Dónde:** `Lane.Plot14.Decor`:
+- `Crystals`: 6, en x ±86 y z −2734, −2788 y −2842. Las 13 de antes están en `ServerStorage.NebulosaCristalesBackup`.
+- `BlockPlanet`: 2, de 142 y 62 bloques, sin choque.
+- `BlackHole`: 14 piezas en la pared x 104, z −2788, y 46.
+**Probado:** capturas desde la entrada de la parcela.
+
 ## 2026-11-13 · seguo970 (Claude) · Grieta Dimensional: jeroglíficos brillantes en vez de grietas
 **Qué:** en la parcela 13, las rayas moradas brillantes del suelo (grietas torcidas y descolocadas) se han cambiado por 12 jeroglíficos de neón morado. Cada uno es un símbolo dentro de un marco cuadrado; hay 6 diseños propios, no copiados de ningún juego. Están en fila, centrados en el pasillo de cada lado y a la misma distancia unos de otros. Los dos lados quedan en espejo.
 **Dónde:** `Lane.Plot13.Decor.Glyphs`: 12 modelos `Glyph` hechos de piezas `GlyphLine` de neón (sin choque), en x ±81 y z −2562 a −2678, cada 23 studs. Las 16 `Crack` de antes están en `ServerStorage.GrietaGrietasBackup`.
