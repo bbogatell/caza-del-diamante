@@ -2,6 +2,20 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · bbogatell (Claude) · Prueba completa del juego y arreglos
+**Qué:** partida entera en Studio de principio a fin (tutorial de 11 pasos, máquina, diario, ruleta, tienda y sus secciones, VIP, promo ×2, estelas, ajustes, modo lento, palas 2-5, cinta, base, trampa/hielo/bate, carril completo hasta el campo, `/empezar`, cavar hasta el diamante, cinemática del ganador y lobby de después con la estatua). Arreglado:
+- **Tienda de estelas:** solo se podía desplazar hasta la 9.ª de 20 estelas (las 11 últimas, todas las de Robux, no se veían). El ancho se medía mientras la ventana se abría encogida; ahora se calcula del contenido real.
+- **Avisos grandes encimados:** dos avisos a la vez (p. ej. «¡Bien!» del tutorial y «¡COMÚN!» de la máquina, o el bicho que nace con la tienda abierta) salían uno encima del otro y tapaban el título de la ventana. Ahora el nuevo sustituye al anterior y, con una ventana abierta, sale más arriba.
+- **Mayúsculas con tilde:** `string.upper` no cambia las letras con tilde y salía «COMúN», «MíTICO», «CóSMICO», «POCO COMúN». Nueva `Config.upper` y usada en máquina, avisos, carteles de parcela, etiquetas de rareza, base, ruleta y pedestal del ganador.
+- **Contador de arriba:** al hacerse pequeño se iba a y=−6 y la línea «LA BARRERA SE ABRE EN» quedaba fuera de la pantalla. Ahora a y=4.
+- **Estela Burbujas:** el emoji 🫧 no se dibuja en Roblox (salía vacía); ahora 🧼.
+- **Ajustes:** quitada la opción «Correr con Shift», que ya no hacía nada (ahora siempre se corre).
+- **Textos largos:** la frase de la máquina pasa a «🟫 Tierra ➜ 🦴 Fósil ➜ 🏠 Tu base» y el aviso del minitutorial a «¡Ve a la máquina!».
+- **Z-fighting (parpadeo de caras pegadas):** detectadas por código 2.006 parejas de caras coplanarias y arregladas encogiendo unas centésimas la pieza menor: lobby (cofre, tienda de estelas, plaza, vallas de las bases), las 15 parcelas, final del carril, campo y paredes. Ahora 0.
+**Dónde:** `DiamondClient.Menus` (`buildTrails`, ajustes, máquina), `DiamondClient.Fx` (`banner`), `DiamondClient.HUD` (contador), `DiamondClient.Main`, `DiamondClient.Tutorial`, `Config` (`Config.upper`, estela 3), `DiamondServer.Plots/Lane/Looks/Bases/PostHunt` (mayúsculas; `PostHunt` ahora carga `Config`); mapa. Copias: `ServerStorage.CopiasSeguridad.Lobby_antes_zfighting_2026-11-13`, `Lane_Field_antes_zfighting_2026-11-13`, `Walls_antes_zfighting_2026-11-13`.
+**Probado:** todo lo de arriba en Play, sin errores de scripts en la consola (solo los avisos de DataStore de Studio). Los 60 fósiles y los 198 bichos se construyen sin errores y todos los fósiles dan un bicho válido; 8 fósiles ★★ de rarezas altas abiertos en la base. Rayos: sin huecos en las paredes del carril ni del campo y sin agujeros al vacío en el suelo del lobby y del carril, también después del arreglo del z-fighting.
+**Notas:** sin probar (necesitan 2 jugadores o el juego publicado): regalos, bate/trampa/hielo sobre otro jugador, guardado real, compras de Robux reales. Los clics simulados por coordenadas fallan en Studio (desplazamiento de la barra superior): es de la herramienta, no del juego.
+
 ## 2026-11-13 · bbogatell (Claude) · Ruleta 3D con su imagen de antes · Fósil de Evento al 0,1 %
 **Qué:**
 - La ruleta 3D del lobby vuelve a la imagen de antes (8 casillas iguales). La de la ventana se queda con las casillas proporcionales.
