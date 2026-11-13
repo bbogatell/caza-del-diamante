@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · bbogatell (Claude) · K.O. del bate sin ragdoll: el cuerpo cae tieso y rueda
+**Qué:** fuera el ragdoll (se buguea). Ahora el golpeado se queda **tieso** (no se sueltan las articulaciones) y cae rodando por el suelo como un bloque durante 2,5 s, con el aviso «💫 ¡K.O.!»; luego se levanta donde ha caído. Técnica de los foros de Roblox: `Humanoid.PlatformStand = true` (el humanoide deja de mantener el equilibrio) + empuje y giro de lado. Al levantarse se para el cuerpo (velocidad 0) y se pone derecho antes de quitar `PlatformStand`, para que no salga disparado (el fallo típico de este método).
+**Dónde:** `DiamondClient.Main` (`handlers.Knock`); `DiamondServer.Items` (`useBat` ya no suelta articulaciones; marca `Ragdoll` 2,5 s para no poder volver a golpear en el suelo; borrada `Items.ragdoll`).
+**Probado:** Play en Studio sobre mi personaje: da la vuelta en el aire, cae y se queda tumbado; a los 2,5 s se levanta derecho con velocidad 0 y anda. Sin errores. Falta verlo con 2 jugadores (cómo lo ve el que pega).
+
 ## 2026-11-13 · bbogatell (Claude) · Pala para todos (también tras la caza) y bate que noquea con ragdoll
 **Qué:**
 - **Jugadores sin pala:** (1) `Shovels.give` no daba nada si la caza había terminado, así que tras la cinemática del ganador nadie recuperaba la pala y quien entraba después aparecía sin ella; también se bloqueaba comprar palas. Quitado (se sigue cavando después de la caza). (2) Red de seguridad en el servidor: cada 3 s, cualquier jugador vivo sin pala la recibe de nuevo (y el bate/objetos con `Items.refresh`); espera mientras dura la cinemática del ganador (atributo `FinalePlaying`), que quita las herramientas a propósito.
