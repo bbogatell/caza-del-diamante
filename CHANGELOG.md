@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · El dodo de la parcela 1, más a la derecha
+**Qué:** la estatua del dodo de la parcela 1 (Bosque de Helechos), con su pedestal, se ha movido 34 studs a la derecha (entrando desde el lobby), hacia la esquina junto a la pared.
+**Dónde:** `Lane.Plot01.Decor.Dodo`, `HeroPlinth` y `HeroTrim`: de x 46 a x 80 (z −552).
+**Probado:** se comprobó que en el sitio nuevo no había nada, y hay una captura.
+
 ## 2026-11-13 · seguo970 (Claude) · Carteles de pala flotando, sin palos ni franjas
 **Qué:** los carteles «Necesitas la pala N» de las 15 parcelas ya no tienen los dos palos de madera ni las dos franjas de color de arriba y abajo. Ahora solo queda el recuadro blanco flotando en el aire, con el texto y la pala.
 **Dónde:** `Lane.PlotNN.ShovelSign`: se borraron `Post` (2) y `Frame` (2) de cada cartel, 60 piezas en total. Quedan `Board`, `ShovelSpot` y la pala, que pone `Lane` al arrancar. Copia de antes de los 15 en `ServerStorage.CartelesPalaBackup`.
