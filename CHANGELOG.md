@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Nebulosa: la constelación en la pared izquierda
+**Qué:** en la parcela 14, la constelación (estrellas unidas con líneas) ya no está al final de la parcela, delante del arco. Ahora flota junto a la pared izquierda, a mitad de la parcela, enfrente del agujero negro de la pared derecha, y mira hacia el hoyo.
+**Dónde:** `Lane.Plot14.Decor`, `Line` + `ConStar` (24 piezas): giradas 90° y movidas juntas a x −96, z −2836..−2740, y 22..78.
+**Probado:** captura desde el hoyo mirando a la pared izquierda: se ve entera sobre la pared, encima de los cristales.
+
 ## 2026-11-13 · seguo970 (Claude) · Nebulosa de los Dioses: 3 cristales por lado, planetas y agujero negro
 **Qué:** en la parcela 14:
 - **Cristales:** de cada fila solo quedan 3, en espejo a los dos lados (al principio, en medio y al final del hoyo) y girados igual.
