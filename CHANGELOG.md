@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Carteles de pala flotando, sin palos ni franjas
+**Qué:** los carteles «Necesitas la pala N» de las 15 parcelas ya no tienen los dos palos de madera ni las dos franjas de color de arriba y abajo. Ahora solo queda el recuadro blanco flotando en el aire, con el texto y la pala.
+**Dónde:** `Lane.PlotNN.ShovelSign`: se borraron `Post` (2) y `Frame` (2) de cada cartel, 60 piezas en total. Quedan `Board`, `ShovelSpot` y la pala, que pone `Lane` al arrancar. Copia de antes de los 15 en `ServerStorage.CartelesPalaBackup`.
+**Probado:** Play en Studio. Los 15 carteles salen solo con `Board`, `ShovelModel` y `ShovelSpot`, y la consola no da errores (solo los avisos de DataStore). Captura del cartel de la parcela 12: texto y pala bien.
+**Notas:** `ServerStorage.LaneKit` volvería a crear los palos y las franjas si se rehace una parcela.
+
 ## 2026-11-13 · seguo970 (Claude) · Suelo dorado en el Trono del Rey Galáctico
 **Qué:** el suelo que no se cava de la parcela 15 era blanco crema. Ahora es del mismo dorado que sus paredes, en franjas de 8 studs que alternan dorado claro y dorado oscuro, igual que antes alternaban los tonos de crema.
 **Dónde:** `Lane.Plot15.Floor`, piezas `Plaza` y `Walk` (35), con su color y el `Color3` de sus texturas:
