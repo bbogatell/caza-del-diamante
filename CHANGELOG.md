@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Dos islas flotantes en Islas del Cielo
+**Qué:** la parcela 12 tiene ahora dos islas flotando sobre los pasillos de los lados, sin tapar el hoyo:
+- A la izquierda (entrando desde el lobby), la isla del árbol.
+- A la derecha, más adelante, una isla pequeña de hierba.
+Son copias de las islas que se quitaron antes, pero más bajas y dentro de la parcela.
+**Dónde:** `Lane.Plot12.Decor.FloatIsland` (2 modelos): en (−80, 74, −2420) y (80, 66, −2500). Copiadas de `ServerStorage.IslasGrietaDecorBackup`.
+**Probado:** captura desde la entrada de la parcela: se ven las dos flotando y el hoyo queda despejado.
+
 ## 2026-11-13 · seguo970 (Claude) · Islas del Cielo sin nidos ni puentes flotantes
 **Qué:** en la parcela 12 se han quitado los 6 nidos marrones con forma de media luna (tres a cada lado) y los dos puentecitos de tablas que flotaban en el aire. Las nubes blancas de los lados se quedan.
 **Dónde:** `Lane.Plot12.Decor`: 6 `Nest` (con sus huevos) y 20 `Plank` sueltas. Están en `ServerStorage.IslasNidosPuentesBackup`.
