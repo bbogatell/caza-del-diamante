@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-13 · seguo970 (Claude) · Grieta Dimensional: jeroglíficos brillantes en vez de grietas
+**Qué:** en la parcela 13, las rayas moradas brillantes del suelo (grietas torcidas y descolocadas) se han cambiado por 12 jeroglíficos de neón morado. Cada uno es un símbolo dentro de un marco cuadrado; hay 6 diseños propios, no copiados de ningún juego. Están en fila, centrados en el pasillo de cada lado y a la misma distancia unos de otros. Los dos lados quedan en espejo.
+**Dónde:** `Lane.Plot13.Decor.Glyphs`: 12 modelos `Glyph` hechos de piezas `GlyphLine` de neón (sin choque), en x ±81 y z −2562 a −2678, cada 23 studs. Las 16 `Crack` de antes están en `ServerStorage.GrietaGrietasBackup`.
+**Probado:** captura del pasillo derecho.
+
 ## 2026-11-13 · seguo970 (Claude) · Bordillo de cada hoyo del color de su suelo
 **Qué:** el borde de studs que rodea la zona de cavar ya no es gris en todas las parcelas. Ahora es del color del suelo que lo rodea, un 12 % más oscuro para que se siga viendo el borde. Por ejemplo: blanco en el Abismo, naranja en el Cañón y arena en la Playa.
 **Dónde:** `Lane.PlotNN.Floor.Curb` y `CurbBack` de las 15 parcelas (color y `Color3` de sus texturas). Colores de cada parcela, de la 1 a la 15: 57933b, 3f6139, ccb682, ba8358, 407c36, cdd2db, 332e30, bfbaab, 4b4d51, 36284c, bbad8c, ced4dd, 1f1929, 251c45 y d0a739.
