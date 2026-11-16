@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-16 · bbogatell (Claude) · T-Rex Galáctico +75 % y todos los bichos apoyados en el suelo
+**Qué:**
+- **T-Rex Galáctico (174):** `Config.CREATURE_EXTRA_SCALE[174]` de 1,25 a 1,75 (unos 108 studs de alto).
+- **Ningún bicho flota:** 116 bichos tenían la pieza visible más baja por encima del suelo de su base (hasta 6,7 studs, el 122; muchos por haber perdido la base redonda). Bajadas todas sus piezas (menos la `Root`, que marca el suelo) para que lo más bajo toque el suelo, y bajados con ellas los puntos de giro del rig (atributos `...Pivot`, relativos a la `Root`) para que las animaciones sigan cuadrando. Cada modelo guarda cuánto se bajó en el atributo `GroundShift`. Los que tienen base tocan el suelo con la base. Quedan por debajo a propósito: 41 y 47 (la cola en su agua), 174 (rocas bajo su base) y 93 (la concha 0,7 hundida). Regeneradas las 198 versiones de lejos.
+**Dónde:** `ServerStorage.Models.Bichos` (116 modelos), `Models.BichosLod`, `Config`.
+**Probado:** Play en Studio, pasarela de prueba con los bichos colocados como en una base (la `Root` sobre el suelo): medido que ninguno queda por encima del suelo; captura del 122. Sin errores en la consola.
+**Notas:** los constructores (`CreatureBuilders`) no tienen este ajuste: si se regenera un bicho, hay que volver a bajarlo.
+
 ## 2026-11-16 · bbogatell (Claude) · T-Rex Galáctico más grande, casco del 64 y fuera las bases redondas
 **Qué:**
 - **T-Rex Galáctico (174):** un 25 % más grande que antes (unos 77 studs de alto), en el modelo completo y en el de lejos. Nuevo `Config.CREATURE_EXTRA_SCALE = {[174] = 1.25}`, que multiplica en `Config.creatureScale`.
