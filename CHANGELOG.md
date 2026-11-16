@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-16 · bbogatell (Claude) · T-Rex Galáctico más grande, casco del 64 y fuera las bases redondas
+**Qué:**
+- **T-Rex Galáctico (174):** un 25 % más grande que antes (unos 77 studs de alto), en el modelo completo y en el de lejos. Nuevo `Config.CREATURE_EXTRA_SCALE = {[174] = 1.25}`, que multiplica en `Config.creatureScale`.
+- **Gorilasaurio Cósmico (64):** el aro del cuello del casco estaba horizontal bajo la barbilla y el cuello sale por detrás de la cabeza. Girado 90° alrededor del centro del casco: ahora rodea el cuello por detrás. Arreglado en el modelo y en su constructor (`CreatureBuilders.Gorilasaurio`).
+- **Bases redondas:** quitadas de todos los bichos (las piezas con `Role = "Base"`), salvo las de 41, 47, 60, 67, 72, 76, 88, 102, 103, 107, 116, 119, 125, 138, 140, 141, 142, 158 y 174. Son 10.021 piezas de 149 bichos (30 bichos ya no tenían base). Regeneradas las 198 versiones de lejos (`Models.BichosLod`) para que tampoco la lleven.
+**Dónde:** `ServerStorage.Models.Bichos`, `Models.BichosLod`, `CreatureBuilders.Gorilasaurio`, `Config`. Copias: `ServerStorage.CopiasSeguridad.BasesBichos_quitadas_2026-11-16` (las piezas quitadas, por id) y `Bicho64_antes_casco_2026-11-16`.
+**Probado:** Play en Studio: los 198 bichos se crean sin errores en la pasarela de prueba; captura del 64 con el casco nuevo y del 15 sin base. Sin errores en la consola.
+**Notas:** los constructores de `ServerStorage.CreatureBuilders` siguen creando la base: si se vuelve a generar un bicho, hay que quitarle las piezas `Role = "Base"` (salvo los de la lista).
+
 ## 2026-11-16 · bbogatell (Claude) · Menos brillo; tienda: trampas/hielo solo de 3 en 3 y ×2 Monedas en Dinero
 **Qué:**
 - **Brillo:** Bloom de intensidad 0,6 → 0,3, umbral 1,6 → 2 y tamaño 30 → 24; rayos de sol 0,12 → 0,06.
