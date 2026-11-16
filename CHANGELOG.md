@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-16 · bbogatell (Claude) · T-Rex Galáctico sin base, en el suelo y otro 25 % más grande
+**Qué:** al T-Rex Galáctico (174) se le quita su base (63 piezas `Role = "Base"`), se baja 2,56 studs para que las patas toquen el suelo (con sus puntos de giro) y se hace un 25 % más grande que antes: `Config.CREATURE_EXTRA_SCALE[174]` de 1,75 a 2,1875 (unos 96 studs de alto ya sin base). Regenerada su versión de lejos.
+**Dónde:** `ServerStorage.Models.Bichos.174`, `Models.BichosLod.174`, `Config`. Copia de antes: `ServerStorage.CopiasSeguridad.Bicho174_antes_sin_base_2026-11-16`.
+**Probado:** Play en Studio: colocado como en una base, lo más bajo queda a 0,00 del suelo; captura. Sin errores.
+
 ## 2026-11-16 · bbogatell (Claude) · T-Rex Galáctico +75 % y todos los bichos apoyados en el suelo
 **Qué:**
 - **T-Rex Galáctico (174):** `Config.CREATURE_EXTRA_SCALE[174]` de 1,25 a 1,75 (unos 108 studs de alto).
