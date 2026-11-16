@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-16 · bbogatell (Claude) · Menos brillo; tienda: trampas/hielo solo de 3 en 3 y ×2 Monedas en Dinero
+**Qué:**
+- **Brillo:** Bloom de intensidad 0,6 → 0,3, umbral 1,6 → 2 y tamaño 30 → 24; rayos de sol 0,12 → 0,06.
+- **Alfombra voladora:** ya estaba quitada del juego y de la tienda (12/11); comprobado que no queda nada (solo la línea que se la quita a quien la tuviera guardada).
+- **Tienda:** quitadas las ofertas de 10 trampas y 10 hielos (también de `Config.PRODUCTS`): solo «3 Trampas» y «3 Hielos». La carta «×2 MONEDAS» pasa de Objetos al principio de la sección Dinero.
+**Dónde:** `Lighting.Bloom`, `Lighting.SunRays`; `Config.PRODUCTS` (fuera `Traps10`, `Freeze10`); `DiamondClient.Menus` (secciones dinero y objetos, `refreshShop`); `docs/PENDIENTES.md`.
+**Probado:** Play en Studio: capturas de Dinero (×2 Monedas arriba) y Objetos (3 Trampas, 3 Hielos y los giros). Sin errores.
+
 ## 2026-11-16 · bbogatell (Claude) · Cartel «10.000 ROBUX» del campo con símbolo de Robux y arcoíris
 **Qué:** el cartel gigante sobre el diamante del campo decía «$10.000 ROBUX». Ahora: símbolo de Robux (icono rbxassetid://11560341132, con borde oscuro) + «10.000 ROBUX», los dos con un arcoíris que fluye sin parar a lo largo del cartel.
 **Dónde:** `Map.Field.PrizeShow.TextAnchor.Prize` (nueva fila `Row` con `IconBox.RobuxIcon` y `Amount`; copia de antes en `ServerStorage.CopiasSeguridad.PrizeShow_Prize_antes_2026-11-16`); animación en `DiamondClient.Main`.
