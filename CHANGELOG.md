@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-16 · bbogatell (Claude) · Cartel «10.000 ROBUX» del campo con símbolo de Robux y arcoíris
+**Qué:** el cartel gigante sobre el diamante del campo decía «$10.000 ROBUX». Ahora: símbolo de Robux (icono rbxassetid://11560341132, con borde oscuro) + «10.000 ROBUX», los dos con un arcoíris que fluye sin parar a lo largo del cartel.
+**Dónde:** `Map.Field.PrizeShow.TextAnchor.Prize` (nueva fila `Row` con `IconBox.RobuxIcon` y `Amount`; copia de antes en `ServerStorage.CopiasSeguridad.PrizeShow_Prize_antes_2026-11-16`); animación en `DiamondClient.Main`.
+**Probado:** Play en Studio: captura del cartel con el icono y los colores cambiando.
+
 ## 2026-11-13 · seguo970 (Claude) · Nebulosa: la constelación en la pared izquierda
 **Qué:** en la parcela 14, la constelación (estrellas unidas con líneas) ya no está al final de la parcela, delante del arco. Ahora flota junto a la pared izquierda, a mitad de la parcela, enfrente del agujero negro de la pared derecha, y mira hacia el hoyo.
 **Dónde:** `Lane.Plot14.Decor`, `Line` + `ConStar` (24 piezas): giradas 90° y movidas juntas a x −96, z −2836..−2740, y 22..78.
