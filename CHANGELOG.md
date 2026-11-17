@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-17 · bbogatell (Claude) · Lista de cambios (parte 2): lobby en U con 7 bases, puestos orientados
+**Qué:**
+- **Lobby más ancho y más corto:** de 300 × 334 a 440 × 279 (paredes en x ±220 y z −185; la del fondo, con la puerta del carril, sigue en z −464). Suelo rehecho con las mismas baldosas de cuadros (1.925); muros invisibles (`Map.Bounds`) movidos a las paredes nuevas.
+- **7 bases en U** abierta hacia la puerta de la caza: 3 al fondo, frente a la puerta (x −62, 0, 62), y 2 en cada lado (x ±140). **Todas con la entrada hacia el centro**; crecen hacia la pared al agrandarlas y la cinta y los carteles quedan delante, mirando al centro. La base 8 se ha quitado.
+- **Código:** cada base tiene su giro (atributo `Yaw`); nuevo `Config.baseFrame(model)`. `Bases` (dentro/fuera, colocar, dibujar, valla, cartel de agrandar), `Training` (cinta y cartel), `Plots` (`plot.frame`), `Tutorial` (atributo `BaseYaw`) y el cliente (aviso de no cavar en tu base) lo usan en vez del antiguo `BASE.facing` (que solo permitía mirar a −Z o +Z).
+- **Cofre del diario y tienda de estelas:** girados para mirar hacia las bases (antes miraban a los lados).
+**Dónde:** `Map.Lobby` (Floor, PlotFrames, Daily, TrailShop), `Map.Walls.Lobby`, `Map.Bounds`; `Config`, `DiamondServer.Bases/Plots/Training/Tutorial`, `DiamondClient.Main`. Copia completa de antes (lobby, paredes, límites y scripts): `ServerStorage.CopiasSeguridad.Lobby_antes_U_2026-11-17`.
+**Probado:** Play en Studio en una base del fondo (Plot1) y en una lateral (Plot4, `Yaw` 90): base asignada, valla con la entrada hacia el centro, agrandada al máximo (crece hacia la pared), 7 fósiles/bichos dentro, colocar un fósil con clic, cinta (+12 de velocidad en 3 s). Rayos: sin agujeros en el suelo y paredes cerradas salvo la puerta del carril. Sin errores.
+**Notas:** con 7 bases hay que poner **7 jugadores por servidor** en Game Settings (PENDIENTES). Sin probar con varios jugadores a la vez.
+
 ## 2026-11-17 · bbogatell (Claude) · Lista de cambios (parte 1): economía, fallos y mejoras
 **Qué:**
 - **Probabilidad de fósil:** la Pala 1 sigue en 10 %; desde la Pala 2 baja exponencialmente (mismo factor cada pala) de 4,5 % a 0,4 % con la última (antes 9,3 % → 2 %): Pala 5 3,5 %, 10 2,25 %, 15 1,5 %, 20 0,95 %, 25 0,6 %. Nuevos `FOSSIL.secondChance` y `lastChance`.
