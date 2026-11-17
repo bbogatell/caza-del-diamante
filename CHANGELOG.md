@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-17 · bbogatell (Claude) · Imágenes de las estelas en la tienda (12 de 20)
+**Qué:** las cartas de la tienda de estelas llevan una imagen hecha con ChatGPT (zapatilla corriendo con su efecto, estilo de la tienda) en vez de la franja de color + emoji. Hechas las 12 primeras: Polvo, Huellas Brillantes, Burbujas, Corazones, Jardín, Melodía, Fuego, Ventisca, Fantasmal, Tóxica, Sakura y Estrellas Fugaces. Las 8 restantes (Tormenta Eléctrica, Inframundo, Galaxia, Dragón, Arcoíris, Agujero Negro, Divina, Supernova) siguen con la franja y el emoji: la cuenta de ChatGPT llegó al límite de imágenes.
+**Dónde:** `DiamondClient.Menus` → `SHOP_IMG.trail[n]` y la carta de `buildTrails` (si hay imagen, oculta la franja).
+**Probado:** Play en Studio: captura de la tienda de estelas con las imágenes.
+
 ## 2026-11-17 · bbogatell (Claude) · Bases del lobby más juntas y lobby más pequeño
 **Qué:** las 7 bases, casi pegadas: 58 studs entre centros (8 de hueco entre vallas) tanto en la fila del fondo como en los lados; las laterales más cerca de la puerta y las 3 del fondo a la misma distancia de ellas que antes. Lobby de 440 × 319 a 428 × 272. Respetado el espacio para agrandar cada base al máximo (50 hacia atrás) y su cinta/carteles delante: comprobado por cálculo que ninguna huella se solapa ni toca las paredes.
 **Dónde:** `Lobby.PlotFrames` (fondo z −272, x 0/±58; lados x ±134, z −337/−395), `Lobby.Floor` (1.836 baldosas), `Walls.Lobby`, `Map.Bounds`.
