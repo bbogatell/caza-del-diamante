@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-17 · bbogatell (Claude) · Las 3 bases del fondo, más atrás
+**Qué:** las 3 bases del fondo del lobby (las más lejanas de la puerta) quedaban justo delante de las 2 laterales más cercanas. Se alejan 40 studs (z −265 → −225) y la pared del fondo del lobby con ellas (z −185 → −145): el lobby pasa a 440 × 319 (sigue más corto que el original, 334). Suelo, paredes laterales y muros invisibles ajustados.
+**Dónde:** `Lobby.PlotFrames.Plot1-3`, `Lobby.Floor` (+275 baldosas), `Walls.Lobby` (Front, West, East), `Map.Bounds`.
+**Probado:** captura desde arriba; rayos: sin agujeros en el suelo y paredes cerradas salvo la puerta.
+
 ## 2026-11-17 · bbogatell (Claude) · Lista de cambios (parte 2): lobby en U con 7 bases, puestos orientados
 **Qué:**
 - **Lobby más ancho y más corto:** de 300 × 334 a 440 × 279 (paredes en x ±220 y z −185; la del fondo, con la puerta del carril, sigue en z −464). Suelo rehecho con las mismas baldosas de cuadros (1.925); muros invisibles (`Map.Bounds`) movidos a las paredes nuevas.
