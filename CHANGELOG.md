@@ -2,6 +2,26 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-17 · bbogatell (Claude) · Lista de cambios (parte 1): economía, fallos y mejoras
+**Qué:**
+- **Probabilidad de fósil:** la Pala 1 sigue en 10 %; desde la Pala 2 baja exponencialmente (mismo factor cada pala) de 4,5 % a 0,4 % con la última (antes 9,3 % → 2 %): Pala 5 3,5 %, 10 2,25 %, 15 1,5 %, 20 0,95 %, 25 0,6 %. Nuevos `FOSSIL.secondChance` y `lastChance`.
+- **Precio de las palas:** cada una cuesta al menos el doble que antes y al menos 2,5 veces la anterior (curva exponencial sin rellanos): 3 = 10K, 5 = 63K, 10 = 11M, 15 = 3B, 20 = 330B, 25 = 33T, 30 = 3,3Q.
+- **×2 Monedas:** 149 → 449 Robux.
+- **Botón rojo de la oferta de 50 fósiles:** ahora verde como los demás.
+- **Mapa sin cargar a trozos:** `StreamingMinRadius` 64 → 3600 y `StreamingTargetRadius` 3600 → 4000 (todo el mapa se carga a la vez).
+- **Palas de la tienda cortadas:** la cámara de la vista 3D se aleja lo justo para que quepan enteras al girar (alto y giro más ancho).
+- **Icono de la pala en la barra que se descolocaba:** usa el modelo guardado de la pala (antes copiaba las piezas de la herramienta, a veces antes de que estuvieran en su sitio) y la cámara se ajusta a su tamaño.
+- **Fósiles/bichos que se desmontaban:** sus modelos ahora llegan al cliente de una pieza (`ModelStreamingMode = Atomic`), porque el cliente los mueve (flotar, girar, animar) y las piezas que llegaban tarde se quedaban atrás.
+- **Fósil perdido al rellenarse la parcela:** justo antes de rellenarse, los fósiles sueltos que hay en el hoyo suben al borde (y se reinicia su tiempo para desaparecer). Nuevo `Lane.onBeforeRegen`.
+- **Tutorial atascado en el paso 5:** si se caía el fósil camino a casa, el tutorial volvía al paso 4 pero el cliente recordaba que ya había avisado del paso 5 y no volvía a avisar; ahora lo olvida al cambiar de paso.
+- **Tutorial, comprar la Pala 2:** el botón Tienda tiene un halo amarillo grueso que late, el botón crece y encoge, una mano grande y una burbuja «¡PULSA AQUÍ!».
+- **Diamante gigante del campo:** gira y flota despacio, con una capa brillante (ForceField azul), destellos dorados, estrellas que suben y un aura; luz más fuerte. (Se probaron anillos de luces alrededor: tapaban el diamante, quitados.)
+- **Ruleta:** el fósil que toca te lo da en la mano al parar la ruleta («¡Llévalo a tu base!»); si llevabas otro, ese cae al suelo.
+- **Sonido al encontrar un fósil según su rareza:** uno por rareza, cada vez más épico (`UIKit.RARITY_SOUNDS`, 12 sonidos de la Creator Store; todos cargan).
+- **Icono de fósiles en espera:** al comprar fósiles que no caben, sale grande en el centro 1 s y vuela pequeño abajo a la derecha con el número; al pasar el ratón (o tocar) explica «Vende un bicho o amplía tu base y aparecerán solos». Desaparece cuando caben todos. Quitado el aviso «Base llena».
+**Dónde:** `Config` (FOSSIL, `fossilChance`, SHOVELS, PASSES); `workspace` streaming; `DiamondClient.Menus` (`shovelViewport`, botón destacado, ruleta); `DiamondClient.Hotbar`; `DiamondServer.Looks`; `DiamondServer.Lane` + `Fossils`; `DiamondClient.Tutorial`; `Map.Field.PrizeShow` (`DiamondShine`, `DiamondFx`) + animación en `DiamondClient.Main`; `DiamondServer.Main` (`SpinWheel`, toast); `DiamondClient.UIKit`; nuevo `DiamondClient.PendingFossils`. Copias: `CopiasSeguridad.PrizeShow_antes_brillo_2026-11-17`.
+**Probado:** Play en Studio: sonidos (12 cargan), icono de espera (grande → derecha, texto al pasar el ratón), ruleta (Fósil Épico en la mano), diamante (captura), tutorial paso 10 (captura), palas de la tienda (captura). Sin errores en la consola. Sin probar con jugadores reales: el fallo del paso 5 (era intermitente) y el de la parcela rellenada.
+
 ## 2026-11-17 · bbogatell (Claude) · Tamaño de los bichos progresivo, del Dodo al T-Rex Galáctico
 **Qué:** antes cada bicho medía lo que tuviera su modelo (y solo los que dan más de 1.000 M crecían), así que había saltos y algunos de rareza alta eran más pequeños que otros más baratos. Ahora todos los bichos, ordenados por lo que dan por segundo (empates por número), crecen poco a poco: el primero (Dodo Corriente) mide 3,8 studs y el último (T-Rex Galáctico) 96, y cada uno es un poco más grande que el anterior (mismo factor de uno a otro). «Tamaño» = el alto, o el 60 % del largo en los bichos largos y bajos (para que una serpiente no salga enorme a lo largo). Ejemplos: 22 → 5,6 · 44 → 8,5 · 66 → 12,8 · 89 → 19,3 · 113 → 29 · 126 → 43,7 · 152 → 65,8 · 174 → 96.
 **Dónde:** `DiamondServer.Looks` (nuevo `Looks.sizeScale`, usado por `Looks.creature` y `Looks.creatureLod`; constantes `SIZE_FIRST`, `SIZE_LAST`). `Config.creatureScale` y `Config.CREATURE_EXTRA_SCALE` ya no se usan. Copia de antes: `ServerStorage.CopiasSeguridad.Looks_antes_escala_progresiva_2026-11-16`.
