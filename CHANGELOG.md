@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-17 · bbogatell (Claude) · Tamaño de los bichos progresivo, del Dodo al T-Rex Galáctico
+**Qué:** antes cada bicho medía lo que tuviera su modelo (y solo los que dan más de 1.000 M crecían), así que había saltos y algunos de rareza alta eran más pequeños que otros más baratos. Ahora todos los bichos, ordenados por lo que dan por segundo (empates por número), crecen poco a poco: el primero (Dodo Corriente) mide 3,8 studs y el último (T-Rex Galáctico) 96, y cada uno es un poco más grande que el anterior (mismo factor de uno a otro). «Tamaño» = el alto, o el 60 % del largo en los bichos largos y bajos (para que una serpiente no salga enorme a lo largo). Ejemplos: 22 → 5,6 · 44 → 8,5 · 66 → 12,8 · 89 → 19,3 · 113 → 29 · 126 → 43,7 · 152 → 65,8 · 174 → 96.
+**Dónde:** `DiamondServer.Looks` (nuevo `Looks.sizeScale`, usado por `Looks.creature` y `Looks.creatureLod`; constantes `SIZE_FIRST`, `SIZE_LAST`). `Config.creatureScale` y `Config.CREATURE_EXTRA_SCALE` ya no se usan. Copia de antes: `ServerStorage.CopiasSeguridad.Looks_antes_escala_progresiva_2026-11-16`.
+**Probado:** Play en Studio: los 198 bichos (y su versión de lejos) se crean sin errores y su tamaño crece siempre en ese orden (0 fallos); captura de una base con 6 bichos de rarezas distintas.
+**Notas:** los más grandes sobresalen de la base (ya pasaba). Para cambiar el tamaño del primero o del último, tocar `SIZE_FIRST` / `SIZE_LAST`.
+
 ## 2026-11-16 · bbogatell (Claude) · T-Rex Galáctico sin base, en el suelo y otro 25 % más grande
 **Qué:** al T-Rex Galáctico (174) se le quita su base (63 piezas `Role = "Base"`), se baja 2,56 studs para que las patas toquen el suelo (con sus puntos de giro) y se hace un 25 % más grande que antes: `Config.CREATURE_EXTRA_SCALE[174]` de 1,75 a 2,1875 (unos 96 studs de alto ya sin base). Regenerada su versión de lejos.
 **Dónde:** `ServerStorage.Models.Bichos.174`, `Models.BichosLod.174`, `Config`. Copia de antes: `ServerStorage.CopiasSeguridad.Bicho174_antes_sin_base_2026-11-16`.
