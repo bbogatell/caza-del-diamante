@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-17 · bbogatell (Claude) · Iconos nuevos en el lateral de la tienda
+**Qué:** la barra de saltos de la derecha de la tienda (Destacado, Palas, Velocidad, Dinero, Objetos) usaba iconos provisionales (UI.ICONS y emojis). Ahora lleva imágenes hechas con ChatGPT en el mismo estilo que las cartas: corona, pala dorada con diamante, zapatilla con alas, saco de dinero y mochila con bate, hielo y trampa. También el botón de regalo, que era el emoji 🎁, pasa a una caja de regalo.
+**Dónde:** `DiamondClient.Menus` → `SHOP_IMG.railDestacado/railPalas/railVelocidad/railDinero/railObjetos` y `SHOP_IMG.gift`.
+**Probado:** Play en Studio: captura de la tienda con la barra lateral nueva.
+
 ## 2026-11-17 · bbogatell (Claude) · Arreglo: las estelas de dinero compradas con Robux no se daban
 **Qué:** al comprar con el botón morado (Robux) una estela que también se vende por dinero (`TrailR2-16`), el servidor la apuntaba en `rtrails` (la lista de las estelas solo-Robux 17-20), pero `Config.ownsTrail` mira `owned` para las de dinero: no contaba como tuya ni se equipaba. Ahora `grantTrail` la guarda en `owned` (o en `rtrails` si es solo-Robux), y `ownsTrail` también acepta las que quedaron en `rtrails` en guardados anteriores.
 **Dónde:** `DiamondServer.Training.grantTrail`, `Config.ownsTrail`.
