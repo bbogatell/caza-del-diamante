@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-17 · bbogatell (Claude) · Bases del lobby más juntas y lobby más pequeño
+**Qué:** las 7 bases, casi pegadas: 58 studs entre centros (8 de hueco entre vallas) tanto en la fila del fondo como en los lados; las laterales más cerca de la puerta y las 3 del fondo a la misma distancia de ellas que antes. Lobby de 440 × 319 a 428 × 272. Respetado el espacio para agrandar cada base al máximo (50 hacia atrás) y su cinta/carteles delante: comprobado por cálculo que ninguna huella se solapa ni toca las paredes.
+**Dónde:** `Lobby.PlotFrames` (fondo z −272, x 0/±58; lados x ±134, z −337/−395), `Lobby.Floor` (1.836 baldosas), `Walls.Lobby`, `Map.Bounds`.
+**Probado:** captura desde arriba; rayos: suelo sin agujeros y paredes cerradas salvo la puerta; Play: base del fondo agrandada al máximo sin tocar la pared.
+
 ## 2026-11-17 · bbogatell (Claude) · Las 3 bases del fondo, más atrás
 **Qué:** las 3 bases del fondo del lobby (las más lejanas de la puerta) quedaban justo delante de las 2 laterales más cercanas. Se alejan 40 studs (z −265 → −225) y la pared del fondo del lobby con ellas (z −185 → −145): el lobby pasa a 440 × 319 (sigue más corto que el original, 334). Suelo, paredes laterales y muros invisibles ajustados.
 **Dónde:** `Lobby.PlotFrames.Plot1-3`, `Lobby.Floor` (+275 baldosas), `Walls.Lobby` (Front, West, East), `Map.Bounds`.
