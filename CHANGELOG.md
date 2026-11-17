@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-17 · bbogatell (Claude) · Imágenes de las 8 últimas estelas (20 de 20)
+**Qué:** hechas con ChatGPT (otra cuenta) las imágenes que faltaban: Tormenta Eléctrica, Inframundo, Galaxia, Dragón, Arcoíris, Agujero Negro, Divina y Supernova, mismo estilo que las 12 primeras. Ya no queda ninguna estela con la franja + emoji.
+**Dónde:** `DiamondClient.Menus` → `SHOP_IMG.trail[13..20]`.
+**Probado:** Play en Studio: tienda de estelas recorrida hasta el final, las 20 con su imagen.
+
 ## 2026-11-17 · bbogatell (Claude) · Imágenes de las estelas en la tienda (12 de 20)
 **Qué:** las cartas de la tienda de estelas llevan una imagen hecha con ChatGPT (zapatilla corriendo con su efecto, estilo de la tienda) en vez de la franja de color + emoji. Hechas las 12 primeras: Polvo, Huellas Brillantes, Burbujas, Corazones, Jardín, Melodía, Fuego, Ventisca, Fantasmal, Tóxica, Sakura y Estrellas Fugaces. Las 8 restantes (Tormenta Eléctrica, Inframundo, Galaxia, Dragón, Arcoíris, Agujero Negro, Divina, Supernova) siguen con la franja y el emoji: la cuenta de ChatGPT llegó al límite de imágenes.
 **Dónde:** `DiamondClient.Menus` → `SHOP_IMG.trail[n]` y la carta de `buildTrails` (si hay imagen, oculta la franja).

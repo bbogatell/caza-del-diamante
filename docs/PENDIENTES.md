@@ -6,7 +6,7 @@
 - Crear en el Creator Dashboard los productos de giros de la ruleta `Spin1` (49 R$), `Spin3` (129 R$) y `Spin10` (349 R$) y poner sus ids en `Config.PRODUCTS` (ahora id 0: en Studio se simulan, en el juego publicado salen «Próximamente»).
 - [ ] Confirmar fecha y hora definitivas del evento (`Config.EVENT_TIME`).
 - [ ] Crear los productos nuevos de la tienda (12/11): `Featured1/3/10/50`, `Restock1-3`, `SpeedPack1-6`, `TrailR2-16`.
-- [ ] Imágenes de la tienda que faltan (`Menus` → `SHOP_IMG`): iconos de la barra de la derecha, botón de regalo, una imagen por cinta de correr (para «tu cinta ➜ la siguiente») y las estelas. Las 24 principales ya están (12/11).
+- [ ] Imágenes de la tienda que faltan (`Menus` → `SHOP_IMG`): iconos de la barra de la derecha, botón de regalo, una imagen por cinta de correr (para «tu cinta ➜ la siguiente»). Las 20 estelas ya tienen imagen (17/11). Las 24 principales ya están (12/11).
 - [ ] Crear los gamepasses y productos de Robux y poner sus IDs en `Config.PASSES` / `Config.PRODUCTS` (ahora están a 0): x2 Monedas, los 4 «Abrir fósil ya» (`OpenNow1-4`), las trampas (`Traps3`), el hielo (`Freeze3`) y los packs de monedas (`Coins10k`…`Coins10q`); los de la velocidad: estelas de Robux `Trail17-20` (`TRAINING.trails[n].robuxId`), mejoras de cinta `Tread2-11` (`TRAINING.treadmills[n].robuxId`) y multiplicadores `SpeedX2-128` (`TRAINING.mults[n].id`).
 - [ ] Poner **7 jugadores por servidor** en Game Settings → Places (no se puede desde un script): desde el 17/11 el lobby tiene 7 bases (antes 8).
 - [ ] Revisar la economía jugando (precios de palas, tierra por bloque `DIRT.perVoxel`, precios de la máquina `DIRT.prices`, 2 % de fósiles, vida del fósil 60, venta ×60 s).
