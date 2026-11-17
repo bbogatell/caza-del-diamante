@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-17 · bbogatell (Claude) · Arreglo: las estelas de dinero compradas con Robux no se daban
+**Qué:** al comprar con el botón morado (Robux) una estela que también se vende por dinero (`TrailR2-16`), el servidor la apuntaba en `rtrails` (la lista de las estelas solo-Robux 17-20), pero `Config.ownsTrail` mira `owned` para las de dinero: no contaba como tuya ni se equipaba. Ahora `grantTrail` la guarda en `owned` (o en `rtrails` si es solo-Robux), y `ownsTrail` también acepta las que quedaron en `rtrails` en guardados anteriores.
+**Dónde:** `DiamondServer.Training.grantTrail`, `Config.ownsTrail`.
+**Probado:** Play en Studio (compra simulada): `TrailR5` y `Trail17` → `TrailsOwned` pasa de `[]` a `[5,17]` y se equipa la última.
+
 ## 2026-11-17 · bbogatell (Claude) · Imágenes de las 8 últimas estelas (20 de 20)
 **Qué:** hechas con ChatGPT (otra cuenta) las imágenes que faltaban: Tormenta Eléctrica, Inframundo, Galaxia, Dragón, Arcoíris, Agujero Negro, Divina y Supernova, mismo estilo que las 12 primeras. Ya no queda ninguna estela con la franja + emoji.
 **Dónde:** `DiamondClient.Menus` → `SHOP_IMG.trail[13..20]`.
