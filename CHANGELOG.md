@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-19 · bbogatell (Claude) · Terreno dorado: sin pared delantera y paredes azul cielo
+**Qué:** se quita la pared delantera del terreno dorado (la que daba a la plaza del final del carril, con el portón pequeño): ahora la entrada es de todo el ancho. La barrera que solo deja pasar con la pala 30 va de pared a pared (422 de ancho y 112 de alto). El arco con el cartel «TERRENO DORADO · Solo con la PALA 30» se queda en el centro, como entrada. Suelo nuevo donde estaba la pared. Las paredes que quedan (lados, fondo y los tramos que las unen con el carril) pasan de dorado a **azul cielo** (pared, cuadros, zócalo y remate).
+**Dónde:** `Map.GoldField.Walls` (fuera `FrontE`, `FrontW`, `GateTop`; copia en `CopiasSeguridad.CazaDiamante_quitada_2026-11-19.GoldField_ParedDelantera_quitada`), `GoldField.Gate.GateBarrier`, `GoldField.PlazaFill.FrontWallFloor`.
+**Probado:** rayos: suelo sin agujeros en toda la entrada; Play con la pala 1: andando hacia el terreno a 150 studs del arco se queda en la barrera (z −3078,9); captura.
+
 ## 2026-11-19 · bbogatell (Claude) · Botones de arriba: negros del todo y quietos
 **Qué:** los botones de Ajustes e Invitar de la barra de arriba botaban porque `UIFx` (la animación de la interfaz) les ponía su efecto de «respirar» a los iconos, brillos y chispas. Ahora `UIFx` no toca nada dentro de `TopButtons`. El fondo es negro del todo (antes semitransparente); al pasar el ratón se pone gris oscuro y al pulsar un poco más claro, sin moverse.
 **Dónde:** `DiamondClient.UIFx` (`consider`), `DiamondClient.HUD` (`topButton`).
