@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-19 · bbogatell (Claude) · Botones de arriba: negros del todo y quietos
+**Qué:** los botones de Ajustes e Invitar de la barra de arriba botaban porque `UIFx` (la animación de la interfaz) les ponía su efecto de «respirar» a los iconos, brillos y chispas. Ahora `UIFx` no toca nada dentro de `TopButtons`. El fondo es negro del todo (antes semitransparente); al pasar el ratón se pone gris oscuro y al pulsar un poco más claro, sin moverse.
+**Dónde:** `DiamondClient.UIFx` (`consider`), `DiamondClient.HUD` (`topButton`).
+**Probado:** Play en Studio: a los 14 s ningún efecto (`FxBreath`/`UIScale`/chispas) dentro de los botones, fondo (0, 0, 0) sin transparencia, captura.
+
 ## 2026-11-19 · bbogatell (Claude) · Fuera el botón VIP; Ajustes e Invitar arriba, como los botones de Roblox
 **Qué:** se quita el botón **VIP** del HUD (la tienda sigue teniendo todo lo de Robux). **Ajustes** e **Invitar** salen de la columna de la derecha y pasan arriba a la izquierda, justo después de los botones de Roblox: pequeños (44 px), redondos, negros semitransparentes con el icono blanco (los iconos de rueda dentada y de añadir amigo del propio Roblox), y se aclaran al pasar el ratón o pulsarlos, como los de Roblox. A la derecha solo queda el Diario.
 **Dónde:** `DiamondClient.HUD` (`TopButtons`, colocado con `GuiService.TopbarInset`; `HUD.settingsBtn`/`HUD.inviteBtn` son ahora esos botones; `HUD.vipBtn`/`robuxBtn` ya no existen), `DiamondClient.Main` (sin el clic del VIP).
