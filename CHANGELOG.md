@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-19 · bbogatell (Claude) · Fuera el botón VIP; Ajustes e Invitar arriba, como los botones de Roblox
+**Qué:** se quita el botón **VIP** del HUD (la tienda sigue teniendo todo lo de Robux). **Ajustes** e **Invitar** salen de la columna de la derecha y pasan arriba a la izquierda, justo después de los botones de Roblox: pequeños (44 px), redondos, negros semitransparentes con el icono blanco (los iconos de rueda dentada y de añadir amigo del propio Roblox), y se aclaran al pasar el ratón o pulsarlos, como los de Roblox. A la derecha solo queda el Diario.
+**Dónde:** `DiamondClient.HUD` (`TopButtons`, colocado con `GuiService.TopbarInset`; `HUD.settingsBtn`/`HUD.inviteBtn` son ahora esos botones; `HUD.vipBtn`/`robuxBtn` ya no existen), `DiamondClient.Main` (sin el clic del VIP).
+**Probado:** Play en Studio: los dos botones arriba a la izquierda en x 208 y 264 (la zona libre de la barra de Roblox empieza en 208), el de Ajustes abre su ventana, sin errores. Las capturas de Studio no enseñan los botones de Roblox: falta verlo en un servidor real o en móvil.
+
 ## 2026-11-19 · bbogatell (Claude) · Sonidos nuevos al abrir un fósil dorado y variantes raras mucho más raras
 **Qué:**
 - **Sonidos nuevos** (los de antes no le gustaban al usuario), todos de la Creator Store y comprobados que cargan: cada toque = roca que se agrieta (3 versiones de «Rock Cracks Rock Hitting Rock Impact Debris», ProSoundEffects); al romperse = «Rock Impact 7» (ProSoundEffects); tensión = latido «Slow Heartbeat»; en las variantes raras además una subida («REVERSE HARD STOP - Noise Build 02», APM) y un brillo («bling_diamond_pickup_3»); premio = «Prepare For Glory E» (APM) con el brillo. Fuera los «hit», «break_», «tick», «boom», «success» y «error» que se usaban. El aviso de fósil dorado encontrado en el terreno también usa el brillo + una grieta.
