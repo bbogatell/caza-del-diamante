@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-19 · bbogatell (Claude) · Fósil dorado nuevo (3D e imágenes) y animación de abrir con imágenes planas
+**Qué:**
+- **Dibujo de referencia** del fósil dorado con ChatGPT: ya no es un huevo, es una losa redonda de roca de oro facetada con un cráneo de T-Rex, costillas, garra, vértebras y cristales.
+- **Modelo 3D nuevo** (`Assets.GoldFossil`) hecho a partir de ese dibujo (113 piezas). El de huevo queda en la copia de seguridad.
+- **Animación de abrir con imágenes planas**: 6 fotogramas del mismo fósil (entero → grietas → más grietas → a punto de romper → explotando → roto y vacío). Cada toque pasa al siguiente; al final, explosión con destello y el **Robux dorado** (imagen) o el fósil roto vacío. Las esquirlas que saltan son trozos de roca dorada.
+- **Iconos**: el fósil dorado (lateral de la tienda, cartel de la sección y botón del HUD), los 3 packs (cojín con 1, cofre con 5, montaña con corona de 15) y el Robux dorado.
+- **Arreglo**: la arena dorada salía blanca en Play porque el color del material cambiado en Edit no llega al juego; ahora lo pone el código al arrancar (`Config.GOLD.colors`).
+**Dónde:** `ReplicatedStorage.Assets.GoldFossil`, `DiamondClient.GoldOpen` (`IMG`), `Menus` (`SHOP_IMG.railDorados/goldFossil/goldPacks`), `HUD` (icono del botón dorado), `Config.GOLD.colors`, `GoldHunt.start`.
+**Probado:** Play en Studio: línea de tiempo de la animación (F1 0 s → F2 4 s → F3 5,6 s → F4 7,1 s → F5 9,7 s → Robux 10,2 s) y capturas del resultado vacío y del premio; tienda con los 3 packs; botón del HUD; fósil 3D saliendo en el terreno; arena dorada en Play.
+
 ## 2026-11-19 · bbogatell (Claude) · GRAN CAMBIO: fuera la caza del diamante, llega el TERRENO DORADO
 **Qué:** se quita entera la caza del diamante (barrera, cuenta atrás, diamante escondido, reloj de arriba, pantalla gigante, cartel de la estatua, lobby de después de la caza, `/empezar`, `/rayosx`). En su lugar, al final del carril:
 - **Terreno dorado** de 416 × 416 (el triple de superficie que el campo de 240 × 240) con montañas en los bordes y colinas dentro, todo excavable; arena dorada, montañas de arenisca y vetas de oro bajo tierra. Paredes doradas de studs y un portón con barrera: **solo se entra con la pala 30** (y el servidor saca a quien entre sin ella).

@@ -5,7 +5,6 @@
 ## Por hacer antes de lanzar
 - Crear en el Creator Dashboard los productos de giros de la ruleta `Spin1` (49 R$), `Spin3` (129 R$) y `Spin10` (349 R$) y poner sus ids en `Config.PRODUCTS` (ahora id 0: en Studio se simulan, en el juego publicado salen «Próximamente»).
 - [ ] **Terreno dorado (19/11):** crear los productos `GoldPack1/5/15` (199 / 799 / 1.999 R$) y poner sus ids en `Config.PRODUCTS`. ⚠️ Antes, decidir si se venden: vender fósiles que pueden dar Robux puede ir contra las normas de Roblox sobre juegos de azar con premios de valor real.
-- [ ] Imágenes de ChatGPT para el terreno dorado (la cuenta de ChatGPT del navegador se cerró el 19/11): icono del fósil dorado (lateral de la tienda `SHOP_IMG.railDorados` y botón del HUD), los 3 packs (`SHOP_IMG.goldPacks`) y quizá el Robux dorado y el fósil vacío. Mientras tanto se usa el modelo 3D y el emoji 🥚.
 - [ ] El nombre del juego («ENCUENTRA EL DIAMANTE» / «La Caza del Diamante») ya no encaja con el juego nuevo: decidir si se cambia (lo hace el dueño en Roblox).
 - [ ] Crear los productos nuevos de la tienda (12/11): `Featured1/3/10/50`, `Restock1-3`, `SpeedPack1-6`, `TrailR2-16`.
 - [ ] Imágenes de la tienda que faltan (`Menus` → `SHOP_IMG`): una imagen por cinta de correr (para «tu cinta ➜ la siguiente»). Las 20 estelas ya tienen imagen (17/11). Las 24 principales ya están (12/11).
