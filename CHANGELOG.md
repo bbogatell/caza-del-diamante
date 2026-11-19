@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-19 · bbogatell (Claude) · Fósil dorado vacío: sin texto
+**Qué:** cuando el fósil dorado no lleva el Robux dorado, la animación ya no enseña nada más: el fósil explota, se ve roto y vacío 1,4 s y se cierra. Sin «Vacío…», sin «¡Sigue cavando!», sin el contador de fósiles abiertos y sin el sonido de error.
+**Dónde:** `DiamondClient.GoldOpen.play` (rama sin premio).
+**Probado:** Play en Studio: captura del final sin premio (solo el fósil roto).
+
 ## 2026-11-19 · bbogatell (Claude) · Fósil dorado nuevo (3D e imágenes) y animación de abrir con imágenes planas
 **Qué:**
 - **Dibujo de referencia** del fósil dorado con ChatGPT: ya no es un huevo, es una losa redonda de roca de oro facetada con un cráneo de T-Rex, costillas, garra, vértebras y cristales.
