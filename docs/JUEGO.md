@@ -1,9 +1,14 @@
 # El juego: La Caza del Diamante
 
 ## Idea principal
-Hay un **diamante escondido** bajo un campo de excavación de 240×240 studs, **al final del carril de parcelas**. Una **barrera** lo cierra hasta una fecha y hora (el **evento**, `Config.EVENT_TIME`, ahora el 25/10/2026 a las 18:00 UTC, provisional). Cuando se abre, todos cavan a la vez en todos los servidores. El diamante solo aparece cuando alguien cava cerca; **el primero que lo recoge gana el premio** (anunciado: 10.000 Robux).
+**Antes (hasta el 19/11/2026):** un diamante escondido bajo un campo al final del carril, con una barrera y una cuenta atrás; el primero en recogerlo ganaba 10.000 Robux. **Se quitó entero** (copias en `ServerStorage.CopiasSeguridad.CazaDiamante_quitada_2026-11-19`).
 
-Después viene una **cinemática final secreta** (el diamante sube, cielo con el ganador bailando, explosión de «10.000 ROBUX», el mapa se derrumba y se pasa a un **infierno** con una puerta «COMING SOON 100.000 ROBUX»). ⚠️ **El final no se revela a los jugadores** (ni en Discord).
+**Ahora: el TERRENO DORADO.** Al final del carril, donde estaba el campo del diamante, hay un terreno de 416 × 416 (el triple de superficie que el campo viejo) con montañas, que se puede cavar entero. **Solo se entra con la pala 30** (el portón tiene una barrera dorada que solo se abre para quien la tiene).
+- Cavando salen **fósiles dorados** (uno cada ~2 minutos de cavar). Salen del hoyo con un haz de luz y se abren **allí mismo** («¡Abrir!», con E). Si no los abres en 90 s se guardan en la mochila (botón dorado arriba del todo: «Fósiles Dorados ¡ABRIR! xN»).
+- Al abrir uno sale una **animación**: hay que tocar la pantalla 3 veces para romperlo, luego un momento de tensión y al final se ve si llevaba el **ROBUX DORADO** o estaba vacío. Hay 4 animaciones: la normal (88 %) y 3 raras que salen de vez en cuando (8 %, 3 %, 1 %) para que parezca que está a punto de tocar.
+- **Cada fósil dorado tiene 1 entre 140.000 de llevar el Robux dorado = 10.000 Robux.** Hay **un solo ganador en todo el juego**: en cuanto alguien lo saca, se avisa a todos los servidores, sale la cinemática del ganador bailando en la plataforma del cielo con el Robux dorado que explota en los 10.000 Robux, y el terreno se cierra (cartel «PRÓXIMAMENTE · Lo encontró …»).
+- En la tienda hay un apartado **Fósiles Dorados** con packs de 1 / 5 / 15 por 199 / 799 / 1.999 Robux (solo con la pala 30 y mientras el premio siga en juego; enseña la probabilidad).
+- La cinemática de entrada enseña el terreno dorado y el Robux dorado bajando del cielo y metiéndose en la tierra (es simbólico: el premio va dentro de los fósiles).
 
 ## Tutorial
 Los jugadores nuevos hacen un tutorial guiado de 11 pasos (tarjeta corta arriba con un icono grande y puntos de progreso, flechas que avanzan por el suelo hacia el objetivo y botones que brillan; mientras te manda a la parcela y de vuelta a la base corres como mínimo a 45):

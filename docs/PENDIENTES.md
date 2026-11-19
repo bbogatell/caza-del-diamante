@@ -4,7 +4,9 @@
 
 ## Por hacer antes de lanzar
 - Crear en el Creator Dashboard los productos de giros de la ruleta `Spin1` (49 R$), `Spin3` (129 R$) y `Spin10` (349 R$) y poner sus ids en `Config.PRODUCTS` (ahora id 0: en Studio se simulan, en el juego publicado salen «Próximamente»).
-- [ ] Confirmar fecha y hora definitivas del evento (`Config.EVENT_TIME`).
+- [ ] **Terreno dorado (19/11):** crear los productos `GoldPack1/5/15` (199 / 799 / 1.999 R$) y poner sus ids en `Config.PRODUCTS`. ⚠️ Antes, decidir si se venden: vender fósiles que pueden dar Robux puede ir contra las normas de Roblox sobre juegos de azar con premios de valor real.
+- [ ] Imágenes de ChatGPT para el terreno dorado (la cuenta de ChatGPT del navegador se cerró el 19/11): icono del fósil dorado (lateral de la tienda `SHOP_IMG.railDorados` y botón del HUD), los 3 packs (`SHOP_IMG.goldPacks`) y quizá el Robux dorado y el fósil vacío. Mientras tanto se usa el modelo 3D y el emoji 🥚.
+- [ ] El nombre del juego («ENCUENTRA EL DIAMANTE» / «La Caza del Diamante») ya no encaja con el juego nuevo: decidir si se cambia (lo hace el dueño en Roblox).
 - [ ] Crear los productos nuevos de la tienda (12/11): `Featured1/3/10/50`, `Restock1-3`, `SpeedPack1-6`, `TrailR2-16`.
 - [ ] Imágenes de la tienda que faltan (`Menus` → `SHOP_IMG`): una imagen por cinta de correr (para «tu cinta ➜ la siguiente»). Las 20 estelas ya tienen imagen (17/11). Las 24 principales ya están (12/11).
 - [ ] Crear los gamepasses y productos de Robux y poner sus IDs en `Config.PASSES` / `Config.PRODUCTS` (ahora están a 0): x2 Monedas, los 4 «Abrir fósil ya» (`OpenNow1-4`), las trampas (`Traps3`), el hielo (`Freeze3`) y los packs de monedas (`Coins10k`…`Coins10q`); los de la velocidad: estelas de Robux `Trail17-20` (`TRAINING.trails[n].robuxId`), mejoras de cinta `Tread2-11` (`TRAINING.treadmills[n].robuxId`) y multiplicadores `SpeedX2-128` (`TRAINING.mults[n].id`).
@@ -33,7 +35,8 @@
 - [ ] **Pala 28 (Pala Galáctica)** (seguo970, 21/10): seguo970 la ha visto en Play y se ve bien. Falta mirarla en la tienda, en móvil y en la mano de otro jugador. Del prompt quedan sin hacer el «aparecer» de anillos y halo al sacarla y la flotación de ±0,05 (casi no se vería).
 - [ ] Pala 30 importada (`Models.Palas.L30`, animada): rendimiento en móvil y verla en la mano de otro jugador. En la tienda se ve pálida sobre su tarjeta.
 - [ ] Con **2 jugadores**: el bate (empuje y tirar el fósil), la trampa y el hielo sobre otro jugador.
-- [ ] El evento del diamante con el campo en su sitio nuevo (z −3208) y el aviso `WinnerFound` (ya no hay cinemática final ni infierno).
+- [ ] **Terreno dorado con 2 jugadores**: que el prompt «¡Abrir!» solo lo vea el dueño, que el otro no pueda abrirlo, y la cinemática del ganador vista por el que no gana.
+- [ ] Ganador entre servidores del Robux dorado (DataStore `DiamondHunt_GoldRobux_v1` + MessagingService): solo se puede probar publicado. Y un servidor que arranca cuando ya hay ganador (terreno cerrado sin cinemática).
 - [ ] Guardado real de la base y la velocidad (DataStore apagado en Studio) y que los fósiles se abran estando desconectado.
 - [ ] Cuenta atrás, grietas y temblor de los fósiles vistos en pantalla.
 - [ ] Rendimiento del carril con StreamingEnabled en móvil (radio de carga bajado a 320 el 10/11: mirar que no aparezcan cosas de golpe al correr por el carril).

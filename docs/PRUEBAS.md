@@ -17,19 +17,20 @@
 | `/velocidad <cantidad>` | Te da velocidad (la estadística): `/velocidad 100k`, `/velocidad 2.5m`. |
 | `/tierra <cantidad>` | Te da tierra para la máquina: `/tierra 5000`, `/tierra 2m`. |
 | `/dinero <cantidad>` | Te da monedas: `/dinero 5000`, `/dinero 2.5m`, `/dinero 1b`, `/dinero 3t`. |
-| `/empezar` | Abre la barrera del evento del diamante ya. |
-| `/finalizar` · `/finalizar ya` | Hace como si TÚ encontraras el diamante (no guarda nada: `Event.finish`, no `Event.claim`). Con cinemática del ganador, o `ya` sin ella (como en un servidor que arranca después del final). Luego se ve el lobby de después de la caza (`PostHunt`). |
-| `/rayosx` | Muestra dónde está el diamante escondido. |
+| `/finalizar` · `/finalizar ya` | Hace como si TÚ encontraras el Robux dorado (no guarda nada: `GoldHunt.finish`, sin la reclamación del DataStore). Con la cinemática del ganador, o `ya` sin ella (como en un servidor que arranca después). El terreno dorado queda cerrado hasta el próximo Play. |
+| `/dorado <n>` | Te da n fósiles dorados en la mochila (botón dorado de arriba para abrirlos). |
+| `/dorado gana` | El próximo fósil dorado que abras lleva el Robux dorado (en Studio no se guarda nada: el DataStore está apagado). |
+| `/dorado fosil` | Tu próxima palada en el terreno dorado saca un fósil dorado. |
 | `/tutorial` | Empieza el tutorial otra vez desde el paso 1. |
 
 **Tutorial en Studio:** en Studio no se carga el guardado, así que cada Play eres un jugador nuevo y sale el tutorial. Para no verlo mientras pruebas otras cosas, pon el atributo `NoTutorial` = true en `Workspace` (en Edit), o pulsa «Saltar tutorial» dos veces.
 
 ## Desde un script (`Request:InvokeServer("Debug", ...)`, solo Studio)
-`"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `Request:InvokeServer("PlaceFossil")` deja el que llevas · `Request:InvokeServer("DropFossil")` lo suelta en el suelo (como el botón o la G) · `"UpgradeTread", "cash"|"robux"` · `"BuyTrail"` · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"diamond"`.
+`"coins", n` · `"level", n` · `"fossil", id` (a las manos) · `"fossilBase", id` · `Request:InvokeServer("PlaceFossil")` deja el que llevas · `Request:InvokeServer("DropFossil")` lo suelta en el suelo (como el botón o la G) · `"UpgradeTread", "cash"|"robux"` · `"BuyTrail"` · `"openAll"` · `"clearBase"` · `"event", true|false` · `"regen", n` · `"resetDaily"` · `"gold", n` (n fósiles dorados) · `"gold", "gana"` · `"gold", "fosil"` · `Request:InvokeServer("OpenGold")` abre uno de la mochila.
 
 - La tecla **E** sube de pala en Studio (`DebugLevelKey`), salvo si sale un aviso de «pulsa E».
 - Para probar los golpes y robar fósiles: en Studio, pestaña **Prueba**, elige **2 jugadores** y dale a **Iniciar**.
-- Las parcelas del carril empiezan en z = −520; centro de la parcela N: `Config.plotCenter(n)` (z = −632 − 168·(N−1)). El campo está en z = −3208.
+- Las parcelas del carril empiezan en z = −520; centro de la parcela N: `Config.plotCenter(n)` (z = −632 − 168·(N−1)). El terreno dorado va de z −3084 a −3500 (x ±208); el portón está en z −3080 y fuera, en la plaza, en (0, 21, −3060).
 
 ## Trucos (para Claude con el MCP de Roblox Studio)
 - El `studio_id` cambia en cada sesión: primero `list_roblox_studios`.
@@ -50,5 +51,5 @@
 - Si la pala cuelga de la mano en vez de ir cogida con las dos: mira si hay más de una `RightGrip` en `RightHand` (pasa si al jugador se le da la pala dos veces).
 - Los materiales de terreno válidos son pocos (Grass, Ground, Mud, Sand, Sandstone, Rock, Slate, Basalt, Ice, Glacier, Snow, Salt, Limestone, Cobblestone, Brick, Concrete, Pavement, Asphalt, CrackedLava, LeafyGrass, WoodPlanks): `Granite`, `Marble`, etc. son de piezas y en el terreno dan «Invalid terrain material».
 - Con StreamingEnabled el cliente no tiene las piezas lejanas: para leer algo de una parcela lejana desde una prueba, hazlo en el `Server` o teletranspórtate antes. Tras un teletransporte largo espera 2-3 s antes de pedir algo al servidor que dependa de la posición.
-- El módulo `Event` no se puede leer en Play (se esconde al arrancar); el diamante se recoge con el `ProximityPrompt` de `workspace.HiddenDiamond` (`InputHoldBegin`/`InputHoldEnd`).
+- **Probar la apertura de un fósil dorado sin el servidor:** un `LocalScript` metido en `PlayerGui` que haga `require` de un clon de `DiamondClient.GoldOpen`, lo inicie con un `ScreenGui` propio y llame a `play({variant = 1-4, win = true/false, n = 1})` desde su propio bucle (si se llama desde `execute_luau`, la animación se corta al acabar la llamada). Con el atributo del jugador `GoldOpenHold` = true el resultado se queda en pantalla para la captura.
 - La tienda se puede abrir desde un script de prueba con `LocalPlayer:SetAttribute("DebugOpenMenu", "Shop:objetos")` (pestañas: palas, velocidad, objetos, vip, monedas), porque los clics simulados del MCP no la abren.
