@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-19 · bbogatell (Claude) · Sonidos nuevos al abrir un fósil dorado y variantes raras mucho más raras
+**Qué:**
+- **Sonidos nuevos** (los de antes no le gustaban al usuario), todos de la Creator Store y comprobados que cargan: cada toque = roca que se agrieta (3 versiones de «Rock Cracks Rock Hitting Rock Impact Debris», ProSoundEffects); al romperse = «Rock Impact 7» (ProSoundEffects); tensión = latido «Slow Heartbeat»; en las variantes raras además una subida («REVERSE HARD STOP - Noise Build 02», APM) y un brillo («bling_diamond_pickup_3»); premio = «Prepare For Glory E» (APM) con el brillo. Fuera los «hit», «break_», «tick», «boom», «success» y «error» que se usaban. El aviso de fósil dorado encontrado en el terreno también usa el brillo + una grieta.
+- **Probabilidades de las animaciones raras** mucho más bajas (`Config.GOLD.variants`, pesos sobre 1000): normal 97,5 %, dorada 2 %, arcoíris 0,4 %, latido 0,1 % (antes 88 / 8 / 3 / 1). Si toca el premio sigue saliendo siempre una rara.
+**Dónde:** `DiamondClient.UIKit` (`UI.SOUNDS.goldCrack1-3`, `goldShatter`, `goldHeart`, `goldRiser`, `goldShimmer`, `goldWin`), `DiamondClient.GoldOpen`, `DiamondClient.Main` (`GoldFound`), `Config.GOLD.variants`.
+**Probado:** en Play, los 14 sonidos candidatos cargan (duraciones 1-10 s). La pasada de las 4 variantes con los sonidos nuevos no se pudo terminar: Studio se desconectó del MCP a mitad de la prueba.
+
 ## 2026-11-19 · bbogatell (Claude) · Fósil dorado vacío: sin texto
 **Qué:** cuando el fósil dorado no lleva el Robux dorado, la animación ya no enseña nada más: el fósil explota, se ve roto y vacío 1,4 s y se cierra. Sin «Vacío…», sin «¡Sigue cavando!», sin el contador de fósiles abiertos y sin el sonido de error.
 **Dónde:** `DiamondClient.GoldOpen.play` (rama sin premio).
