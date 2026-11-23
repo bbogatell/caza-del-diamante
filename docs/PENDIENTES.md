@@ -18,6 +18,7 @@
 - [x] Borrar `workspace.PasarelaFosiles` (seguo970, 03/11): borrada después de que seguo970 revisara los 60 fósiles en ella.
 
 ## Bugs / a medias
+- [ ] **Bloqueo de sesión del guardado** (23/11): `Data` usa `SetAsync` del perfil entero sin bloqueo; si alguien salta muy rápido de un servidor a otro puede cargar una partida algo vieja. Habría que pasar a `UpdateAsync` con un sello de sesión (o ProfileService).
 - [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
 - [ ] **Pala 29 nueva** (seguo970, 21/10): puesta, texturizada y animada. Falta verla en la tienda, en móvil y en la mano de otro jugador. La capa ya se mueve como tela (huesos `ShovelBone`).
 
