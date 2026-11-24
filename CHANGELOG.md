@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · bbogatell (Claude) · Interfaz para móvil
+**Qué:**
+- **Solo horizontal**: el juego dejaba girar el móvil (`ScreenOrientation = Sensor`) y el HUD se mide por la altura de la pantalla, así que en vertical los botones se hacían enormes y tapaban casi toda la pantalla (comprobado con el simulador). Ahora `StarterGui.ScreenOrientation` y el `PlayerGui` son `LandscapeSensor`.
+- **Joystick libre**: en pantallas táctiles la velocidad, el dinero y la tierra (abajo a la izquierda, justo donde sale el joystick de moverse) pasan arriba a la derecha, bajo la barra de Roblox; el Diario baja un poco (y 0,64) y el botón dorado de «Fósiles dorados» se aparta a la derecha (x 0,6) para no tocar Ajustes e Invitar.
+- **Tienda en pantallas pequeñas** (alto < 500): ventana más grande (74 % × 84 %) y títulos de sección más bajos (28 en vez de 44), para ver más contenido.
+- El marco de los botones de arriba mide lo que miden los dos botones (100 en vez de 200).
+**Dónde:** `StarterGui.ScreenOrientation`, `DiamondClient.Main` (`playerGui.ScreenOrientation`), `DiamondClient.HUD` (`HUD.touchLayout`, `Stats`, `Right`, `GoldBag`, `TopButtons`), `DiamondClient.Menus` (`header`, tamaño de la ventana `Shop`).
+**Probado:** con el simulador de dispositivos de Studio, en Play: iPhone 17 Pro en vertical (antes: los botones tapaban la pantalla) y en horizontal, Samsung Galaxy A06 (el más pequeño, 705 × 338: sin solapes entre bloques del HUD, joystick libre) e iPad 10.ª generación; tienda y diario en el iPhone. Consola sin errores. Studio devuelto a su tamaño normal.
+**Notas:** en el móvil, los botones de la izquierda (Tienda, oferta, modo lento) siguen a media altura; si estorban al joystick se pueden subir.
+
 ## 2026-11-24 · bbogatell (Claude) · Agujero en el suelo entre el lobby y el carril
 **Qué:** había una ranura de 4 studs sin suelo entre la última fila de baldosas del lobby (acaba en z −464) y la primera del pasillo del carril (empieza en z −468), a lo ancho de la puerta (x −37 a 37). Tapada con 12 baldosas de 8 × 4 iguales a las del lobby (atributo `GapFix`). La revisión del 23/11 miraba cada 4 studs y no la vio: ahora se ha repasado todo el suelo cada 1 stud.
 **Dónde:** `Map.Lobby.Floor` (12 baldosas nuevas en z −466).
