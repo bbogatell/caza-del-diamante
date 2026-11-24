@@ -1,3 +1,4 @@
 ﻿galaxy_gold.png  rbxassetid://110393704935785
 swirl_disc.png   rbxassetid://92644321101329
 swirl_ring.png   rbxassetid://127254545172037
+glint.png        rbxassetid://112216008765563

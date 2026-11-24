@@ -102,9 +102,30 @@ public static class RobuxTex {
         }
         Save(rgb, a, n, n, path);
     }
+
+    // destello: estrella de 4 puntas (larga en horizontal y vertical, corta en diagonal) con halo
+    public static void Glint(string path, int n) {
+        var rgb = new double[n * n][]; var a = new double[n * n];
+        for (int y = 0; y < n; y++) for (int x = 0; x < n; x++) {
+            double u = (x + 0.5) / n * 2 - 1, v = (y + 0.5) / n * 2 - 1;
+            double r = Math.Sqrt(u * u + v * v);
+            double ax = Math.Exp(-Math.Abs(v) * 60) * Math.Pow(Clamp(1 - Math.Abs(u), 0, 1), 2.2);
+            double ay = Math.Exp(-Math.Abs(u) * 60) * Math.Pow(Clamp(1 - Math.Abs(v), 0, 1), 2.2);
+            double du = (u + v) / Math.Sqrt(2), dv = (u - v) / Math.Sqrt(2);
+            double d1 = Math.Exp(-Math.Abs(dv) * 70) * Math.Pow(Clamp(1 - Math.Abs(du) * 1.8, 0, 1), 2);
+            double d2 = Math.Exp(-Math.Abs(du) * 70) * Math.Pow(Clamp(1 - Math.Abs(dv) * 1.8, 0, 1), 2);
+            double core = Math.Exp(-r * r * 60);
+            double halo = Math.Exp(-r * r * 9) * 0.45;
+            double k = Clamp(ax + ay + 0.6 * (d1 + d2) + core + halo, 0, 1);
+            rgb[y * n + x] = Mix(GOLD, WHITE, Clamp(core * 1.5 + (ax + ay) * 0.6, 0, 1));
+            a[y * n + x] = k * Smooth(1.0, 0.9, r);
+        }
+        Save(rgb, a, n, n, path);
+    }
 }
 '@
 [RobuxTex]::Galaxy((Join-Path $OutDir "galaxy_gold.png"), 512)
 [RobuxTex]::Swirl((Join-Path $OutDir "swirl_disc.png"), 512, 0)
 [RobuxTex]::Swirl((Join-Path $OutDir "swirl_ring.png"), 512, 0.62)
+[RobuxTex]::Glint((Join-Path $OutDir "glint.png"), 256)
 Get-ChildItem $OutDir | Select-Object Name, Length

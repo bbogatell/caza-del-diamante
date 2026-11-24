@@ -2,6 +2,22 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · seguo970 (Claude) · Pala Robux: hoja girando, destellos y mango arreglado
+**Qué:** cambios en la Pala Robux de prueba, que pidió seguo970:
+- **Hoja:** da vueltas enteras sobre su eje, en vez de balancearse.
+- **Pomo:** el Robux pequeño gira más rápido.
+- **Portal y torbellino:** se han quitado el fondo oscuro del agujero y los remolinos; el agujero vuelve a ser hueco.
+- **Destellos:** ahora dos estrellas doradas brillantes, con estela y chispitas, dan vueltas al borde del Robux.
+- **Mango:** las caras que se veían al revés ahora se ven por los dos lados.
+**Dónde:** `ServerStorage.Models.Palas.Robux` (y su copia en `ReplicatedStorage`):
+- Quitados `SwirlHoleBase`, `SwirlHoleFront/Back` y `SwirlRingFront/Back`.
+- 2 `Glint` nuevos.
+- `Orbit` de la `Blade`: `Speed = 200` (sin `Swing`). `Orbit` del `Pommel`: `Speed = −540`.
+- `DoubleSided` en todas las mallas.
+- La luz de la hoja ahora va en `BladeFx`.
+- Textura `glint.png` añadida a `tools/modelos/Robux/texturas.ps1`.
+**Probado:** Play en Studio con la pala en la mano. Captura con los destellos girando alrededor del Robux y el agujero hueco, y captura de cerca del mango en Edit.
+
 ## 2026-11-24 · seguo970 (Claude) · Pala Robux (de prueba)
 **Qué:** nueva pala aparte con forma de símbolo de Robux, toda de oro. En la hoja tiene un remolino dorado girando, como el de la Pala Galáctica: dentro del agujero cuadrado hay una nebulosa dorada fija con un remolino que gira encima, y sobre la cara de la hoja hay otro remolino más grande que gira al revés, así que parece que se hunde hacia el centro.
 - La hoja se balancea y flota, y el pomo gira.
