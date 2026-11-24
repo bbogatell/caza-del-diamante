@@ -3,6 +3,12 @@
 > Marca con `[x]` lo terminado y pon quién lo hizo.
 
 ## Por hacer antes de lanzar
+- [ ] **Poner a seguo970 de admin**: `Config.ADMINS` (el nombre «seguo970» no existe en Roblox: poner su nombre de usuario actual o su id).
+- [ ] **Decidir qué es el premio del Robux dorado** (24/11: de momento solo «el Robux dorado», sin cantidad). Ver `docs/LANZAMIENTO.md`.
+- [ ] Crear los productos y el pase de Robux y poner sus ids (68 productos + DoubleCoins).
+- [ ] Ficha del juego: nombre, descripción, icono, miniaturas, cuestionario de madurez (declarar objetos aleatorios de pago y violencia ligera) y 7 jugadores por servidor.
+- [ ] Traducción automática (inglés) desde el Creator Dashboard.
+- [ ] Probar en un móvil barato de verdad (memoria; `StreamingMinRadius` = 3.600 carga todo el mapa).
 - Crear en el Creator Dashboard los productos de giros de la ruleta `Spin1` (49 R$), `Spin3` (129 R$) y `Spin10` (349 R$) y poner sus ids en `Config.PRODUCTS` (ahora id 0: en Studio se simulan, en el juego publicado salen «Próximamente»).
 - [ ] **Terreno dorado (19/11):** crear los productos `GoldPack1/5/15` (199 / 799 / 1.999 R$) y poner sus ids en `Config.PRODUCTS`. ⚠️ Antes, decidir si se venden: vender fósiles que pueden dar Robux puede ir contra las normas de Roblox sobre juegos de azar con premios de valor real.
 - [ ] El nombre del juego («ENCUENTRA EL DIAMANTE» / «La Caza del Diamante») ya no encaja con el juego nuevo: decidir si se cambia (lo hace el dueño en Roblox).
@@ -18,7 +24,6 @@
 - [x] Borrar `workspace.PasarelaFosiles` (seguo970, 03/11): borrada después de que seguo970 revisara los 60 fósiles en ella.
 
 ## Bugs / a medias
-- [ ] **Bloqueo de sesión del guardado** (23/11): `Data` usa `SetAsync` del perfil entero sin bloqueo; si alguien salta muy rápido de un servidor a otro puede cargar una partida algo vieja. Habría que pasar a `UpdateAsync` con un sello de sesión (o ProfileService).
 - [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
 - [ ] **Pala 29 nueva** (seguo970, 21/10): puesta, texturizada y animada. Falta verla en la tienda, en móvil y en la mano de otro jugador. La capa ya se mueve como tela (huesos `ShovelBone`).
 

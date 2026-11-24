@@ -1,5 +1,7 @@
 # Qué falta para sacar el juego al público
 
+> **Estado (24/11):** hecho: premio sin «10.000 Robux», pack de 10Q al doble, probabilidades en todo lo aleatorio y bloqueo por país, bloqueo de sesión del guardado, estadísticas, límite de peticiones, copias de seguridad fuera del place y panel de admin. Decidido no hacer: acortar el camino a la pala 30 y nada de la sección 3 (insignias, misiones, rebirth…). Pendiente: premio definitivo, productos de Robux, ficha del juego, traducción y prueba en móvil barato.
+
 Revisión del 24/11/2026 (bbogatell con Claude): código, mapa, rendimiento, economía, monetización y normas de Roblox.
 
 ## 1. Bloqueantes: sin esto no se debería publicar
