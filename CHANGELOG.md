@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · bbogatell (Claude) · Probabilidad corta en la tienda y llevar el fósil con los brazos arriba
+**Qué:**
+- En la sección de fósiles dorados de la tienda la probabilidad pasa a ser solo «1 entre 140.000», en letra pequeña.
+- Al llevar un fósil, el personaje lo sujeta con los dos brazos por encima de la cabeza y sin la pala: el servidor guarda la herramienta al cogerlo y la vuelve a guardar si alguien la saca mientras lo lleva; cada cliente pone los brazos arriba a quien lleva uno (a menos de 250 studs).
+- El texto «Clic en el suelo para dejarlo» quedaba debajo del botón «Soltar fósil»: ahora va justo encima.
+**Dónde:** `DiamondClient.Menus` (banner de los dorados), `DiamondServer.Fossils` (`pickUp` y el bucle de entrega), `StarterPlayerScripts.CarryPose` (nuevo), `DiamondClient.Main` (`placeHint`).
+**Probado:** Play en Studio: coger un fósil con la pala en la mano → la pala se guarda, brazos arriba sujetando el fósil (captura); tienda (captura).
+
 ## 2026-11-24 · bbogatell (Claude) · Premio = Robux dorado, probabilidades, bloqueo de guardado, estadísticas, límite de peticiones, limpieza y panel de admin
 **Qué:**
 - **Premio**: ya no se dice «10.000 Robux» en ningún sitio del juego; el premio es «el Robux dorado» (cartel del terreno con la imagen del Robux dorado + «ROBUX DORADO», banner de la tienda, pantalla de premio al abrir un fósil y cinemática del ganador). `Config.GOLD.prize` se queda pero no se enseña.
