@@ -2,3 +2,15 @@
 swirl_disc.png   rbxassetid://92644321101329
 swirl_ring.png   rbxassetid://127254545172037
 glint.png        rbxassetid://112216008765563
+ray.png          rbxassetid://78558823518394
+gold_main.png    rbxassetid://119196381315398
+gold_light.png   rbxassetid://84490695813748
+gold_dark.png    rbxassetid://77206994840171
+metal_full.png   rbxassetid://100459522332712
+rough_low.png    rbxassetid://90910561922596
+normal_flat.png  rbxassetid://82725350171852
+(v2, más claras) gold_main.png  rbxassetid://98503069673622
+(v2) gold_light.png  rbxassetid://117382275841461
+(v2) gold_dark.png   rbxassetid://85923215466800
+rough_mid.png   rbxassetid://113892878373136
+metal_85.png    rbxassetid://112545692009817

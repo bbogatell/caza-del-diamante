@@ -32,7 +32,16 @@ La pala 28 (`tools/modelos/L28/`) llegó como 36 mallas sueltas con un manifest 
 
 Pala aparte, fuera de las 30 de nivel. Llegó como un `.glb` de 10 mallas sin texturas (`tools/modelos/Robux/RobuxShovel.glb`); sus medidas están en el `RobuxShovel_spec.json` del paquete. Para importarla hay que hacerlo a mano en Studio (Importar 3D, en studs); el importador la gira 180° sobre Y.
 - **Dónde está:** `ServerStorage.Models.Palas.Robux` (la de la mano; `Shovels.build({id = "Robux"})`) y una copia en `ReplicatedStorage.Models.Palas.Robux` (icono de la barra). El `.glb` importado tal cual se ha quedado en `ServerStorage.RobuxShovel`.
-- **Materiales:** `Foil` en tres dorados (hoja, pomo y monedas 255,196,40; casquillo y anillos más claros; mango y cuello más oscuros). La cinta en espiral es `Neon` y cambia entre dos dorados (`ShovelColor`, modo pulse).
+- **Materiales:** oro pulido y liso con un `SurfaceAppearance` en cada pieza dorada:
+  - `ColorMap` de un solo color, en tres tonos: `gold_main` en la hoja, el pomo y las monedas; `gold_light` en el casquillo y los anillos; `gold_dark` en el mango y el cuello.
+  - `MetalnessMap` al 85 %, `RoughnessMap` a 0,3 y `NormalMap` plano.
+  - Las imágenes de 16×16 salen de `texturas.ps1` y sus IDs están en `IDS.txt`; se usan las v2, que son más claras.
+  - Antes era `Foil`, que se veía rugoso.
+  - La cinta en espiral es `Neon` y cambia entre dos dorados (`ShovelColor`, modo pulse).
+- **Tamaño:** el Robux de la hoja y el del pomo son 1,5 veces el del `.glb` (atributo `Scaled`). La hoja se bajó y el pomo se subió para dejar el mismo hueco con el mango, y las monedas y los anillos de luz se alejaron del mango.
+- **Destellos que salen de la hoja** (en `BladeFx`; los dos con `ShovelPulse`, periodo 2,2 s):
+  - `BladeFlash`: una estrella de 4 puntas grande que salta de golpe y se apaga. `Min −3` hace que salga a ráfagas.
+  - `BladeRays`: rayitas de luz (`ray.png`, orientadas a su velocidad) que salen disparadas en todas direcciones y salen más fuerte justo con la estrella.
 - **Destellos de la hoja:** dos piezas invisibles `Glint`. Cada una lleva un `BillboardGui` con la estrella de 4 puntas `glint.png` (`LightInfluence = 0`), un `Trail` dorado y unas chispitas. Dan vueltas al borde del Robux, en su mismo plano (`Motor6D` `ShovelOrbit` a la `Blade`, 240°/s), así que giran con la hoja. Las texturas salen de `tools/modelos/Robux/texturas.ps1` y sus IDs están en `texturas/IDS.txt`. Las del remolino (`galaxy_gold`, `swirl_*`) se probaron el 24/11 y se quitaron.
 - **Mango:** todas las mallas son `DoubleSided`, porque algunas caras del mango venían al revés.
 - **Movimiento** (todo `ShovelOrbit`, lo anima `ShovelFx`):

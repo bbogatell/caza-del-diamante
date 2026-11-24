@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · seguo970 (Claude) · Pala Robux: oro pulido, Robux más grandes y destellos de la hoja
+**Qué:**
+- **Oro pulido:** el dorado ya no se ve rugoso (era el material `Foil`). Ahora es un oro liso y pulido, con mapas PBR.
+- **Tamaño:** el Robux de la hoja y el del pomo son un 50 % más grandes. Las monedas y los anillos de luz se han apartado un poco para no chocar.
+- **Destellos:** de la hoja salen destellos. Cada ~2 s salta una estrella de luz grande, y van saliendo rayitas de luz disparadas.
+**Dónde:** `ServerStorage.Models.Palas.Robux` y su copia en `ReplicatedStorage`: un `SurfaceAppearance` en cada pieza dorada, `Blade` y `Pommel` ×1,5, y `BladeFlash` + `BladeRays` en `Blade.BladeFx`. Texturas nuevas en `tools/modelos/Robux/texturas.ps1`, con los IDs en `texturas/IDS.txt`.
+**Probado:** Play en Studio con la pala en la mano. Capturas: oro liso, hoja más grande y rayitas de luz. La consola no da errores (solo los avisos de DataStore).
+
 ## 2026-11-24 · seguo970 (Claude) · Pala Robux: hoja girando, destellos y mango arreglado
 **Qué:** cambios en la Pala Robux de prueba, que pidió seguo970:
 - **Hoja:** da vueltas enteras sobre su eje, en vez de balancearse.

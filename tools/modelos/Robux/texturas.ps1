@@ -1,4 +1,4 @@
-# Genera las texturas de la Pala Robux (remolino dorado de la hoja), igual que la pala 28 pero en oro.
+﻿# Genera las texturas de la Pala Robux (remolino dorado de la hoja), igual que la pala 28 pero en oro.
 # Uso: .\texturas.ps1 -OutDir carpeta   (por defecto, la carpeta "texturas" junto a este script)
 #  - galaxy_gold.png : fondo fijo del agujero cuadrado de la hoja (nebulosa dorada con nucleo blanco y estrellas)
 #  - swirl_disc.png  : remolino de 3 brazos con alfa, en disco (gira encima del fondo, dentro del agujero)
@@ -122,10 +122,41 @@ public static class RobuxTex {
         }
         Save(rgb, a, n, n, path);
     }
+
+    // mapa liso de un solo color (oro pulido: ColorMap del color, MetalnessMap blanco, RoughnessMap casi negro, NormalMap plano)
+    public static void Flat(string path, double r, double g, double b) {
+        int n = 16; var rgb = new double[n * n][];
+        for (int i = 0; i < n * n; i++) rgb[i] = new double[] { r, g, b };
+        Save(rgb, null, n, n, path);
+    }
+
+    // rayo de luz: raya vertical fina y suave (para particulas que salen disparadas de la hoja)
+    public static void Ray(string path, int w, int h) {
+        var rgb = new double[w * h][]; var a = new double[w * h];
+        for (int y = 0; y < h; y++) for (int x = 0; x < w; x++) {
+            double u = (x + 0.5) / w * 2 - 1, v = (y + 0.5) / h * 2 - 1;
+            double k = Math.Exp(-u * u * 18) * Math.Pow(Clamp(1 - Math.Abs(v), 0, 1), 1.5);
+            double core = Math.Exp(-u * u * 90) * Math.Pow(Clamp(1 - Math.Abs(v), 0, 1), 2);
+            rgb[y * w + x] = Mix(GOLD, WHITE, Clamp(core * 1.4, 0, 1));
+            a[y * w + x] = Clamp(k + core, 0, 1);
+        }
+        Save(rgb, a, w, h, path);
+    }
 }
 '@
 [RobuxTex]::Galaxy((Join-Path $OutDir "galaxy_gold.png"), 512)
 [RobuxTex]::Swirl((Join-Path $OutDir "swirl_disc.png"), 512, 0)
 [RobuxTex]::Swirl((Join-Path $OutDir "swirl_ring.png"), 512, 0.62)
 [RobuxTex]::Glint((Join-Path $OutDir "glint.png"), 256)
+[RobuxTex]::Ray((Join-Path $OutDir "ray.png"), 32, 256)
+# oro pulido (SurfaceAppearance)
+[RobuxTex]::Flat((Join-Path $OutDir "gold_main.png"), 1.0, 0.82, 0.30)
+[RobuxTex]::Flat((Join-Path $OutDir "gold_light.png"), 1.0, 0.88, 0.50)
+[RobuxTex]::Flat((Join-Path $OutDir "gold_dark.png"), 0.97, 0.70, 0.18)
+[RobuxTex]::Flat((Join-Path $OutDir "metal_full.png"), 1, 1, 1)
+[RobuxTex]::Flat((Join-Path $OutDir "rough_low.png"), 0.12, 0.12, 0.12)
+[RobuxTex]::Flat((Join-Path $OutDir "rough_mid.png"), 0.3, 0.3, 0.3)
+[RobuxTex]::Flat((Join-Path $OutDir "metal_85.png"), 0.85, 0.85, 0.85)
+[RobuxTex]::Flat((Join-Path $OutDir "normal_flat.png"), 0.5, 0.5, 1.0)
 Get-ChildItem $OutDir | Select-Object Name, Length
+
