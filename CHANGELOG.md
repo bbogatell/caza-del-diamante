@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · seguo970 (Claude) · Terreno dorado: «clink» suave y 3 moneditas al cavar
+**Qué:**
+- **Sonido:** cada palada en las monedas del terreno dorado suena con un «clink» suave y bajito, con una nota distinta cada vez para que no canse aunque caves horas.
+- **Moneditas:** salen 3 moneditas del hoyo que suben y se desvanecen en el aire. Antes saltaban 7 monedas con física que caían; además, nunca llegaban a salir porque faltaba el punto de la palada.
+**Dónde:**
+- `DiamondClient.Main` → `handlers.Swing`, bloque del terreno dorado:
+  - Sonido `4612374209` a volumen 0,12, con una nota al azar de una escala pentatónica.
+  - 3 piezas ancladas `CoinPop` que suben con una animación y se desvanecen en unos 0,6 s.
+- `DiamondServer.Main`: en el resultado de la palada en el terreno dorado se manda `result.digPos`.
+**Probado:** Play en Studio con la pala 30, 4 paladas en el terreno dorado: salen 3 monedas por palada (12 en total). El sonido no se ha podido oír desde aquí.
+
 ## 2026-11-24 · seguo970 (Claude) · Terreno dorado: paredes doradas
 **Qué:** las paredes que rodean el terreno dorado ya no son azules. Ahora son doradas, con studs normales, del mismo dorado que los palos del cartel «Terreno dorado · Solo con la pala 30». Se ha quitado la capa de cuadros que tenían.
 **Dónde:** `Map.GoldField.Walls` (East, West, Back, StepE, StepW):
