@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · bbogatell (Claude) · Revisión para el lanzamiento
+**Qué:** revisión completa (código, mapa, rendimiento, economía, monetización y normas de Roblox, con búsqueda en internet) de lo que falta para publicar. Sin cambios en el juego.
+**Dónde:** `docs/LANZAMIENTO.md` (nuevo).
+**Probado:** mediciones en Studio: instancias, piezas y texturas del mapa, tamaño de ServerStorage, latido del servidor, memoria del cliente, precios de palas frente a ingresos y packs de monedas.
+
 ## 2026-11-24 · bbogatell (Claude) · Cinemática del principio centrada, cartel «10.000 + logo» e interfaz para consola y VR
 **Qué:**
 - **Primer plano de la intro**: la cámara empezaba en un lado de la plaza y miraba en diagonal: no se veía ni el terreno ni el cartel. Ahora sale centrada por encima de la plaza (pasada la decoración de la parcela 15, que tapaba si empezaba más atrás) y avanza por el eje del terreno, con el terreno dorado y el cartel «10.000» en el plano. El subtítulo «El terreno dorado / al final del carril» va abajo para no taparlo.
