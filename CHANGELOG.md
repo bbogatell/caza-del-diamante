@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · seguo970 (Claude) · Pala Robux: el pomo gira más lento
+**Qué:** el Robux pequeño del pomo gira más despacio: algo más de media vuelta por segundo, en vez de una vuelta y media. A seguo970 le gustan los destellos de la hoja tal como están.
+**Dónde:** `Models.Palas.Robux.Pommel.Orbit` (en ServerStorage y en ReplicatedStorage): `Speed = −200` (antes −540).
+**Probado:** Play en Studio con la pala en la mano.
+
 ## 2026-11-24 · seguo970 (Claude) · Pala Robux: oro pulido, Robux más grandes y destellos de la hoja
 **Qué:**
 - **Oro pulido:** el dorado ya no se ve rugoso (era el material `Foil`). Ahora es un oro liso y pulido, con mapas PBR.

@@ -46,7 +46,7 @@ Pala aparte, fuera de las 30 de nivel. Llegó como un `.glb` de 10 mallas sin te
 - **Mango:** todas las mallas son `DoubleSided`, porque algunas caras del mango venían al revés.
 - **Movimiento** (todo `ShovelOrbit`, lo anima `ShovelFx`):
   - La hoja da vueltas enteras sobre su eje vertical (200°/s) y flota un poco.
-  - El pomo da vueltas al revés, más rápido (−540°/s).
+  - El pomo da vueltas al revés (−200°/s; con −540 iba demasiado rápido).
   - Las 3 monedas dan vueltas al mango (radio 1,75), giran sobre sí mismas y flotan.
   - 3 piezas invisibles `LightRing1-3` dan vueltas inclinadas alrededor de la hoja con un `Trail` dorado: son los anillos de luz.
 - **Brillo:** `PointLight` en el `Handle` y en la hoja (`BladeFx`), que respiran (`ShovelPulse`). También hay chispas en la hoja y en el pomo. Al cavar usa el efecto `coinDig` (`DIG_FX.Robux` en `ShovelFx`).
