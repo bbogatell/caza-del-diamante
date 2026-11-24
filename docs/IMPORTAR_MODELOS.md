@@ -27,3 +27,21 @@ La pala 28 (`tools/modelos/L28/`) llegó como 36 mallas sueltas con un manifest 
 - **Ejes:** el importador gira el modelo 180° sobre Y, así que un punto o eje `(x, y, z)` del manifest es `(-x, y, -z)` en Studio (y se multiplica por la escala).
 - **Agarre:** en la mano, la izquierda queda ~0,68 studs por debajo del `Handle` y la derecha 2,8 studs más arriba (pose de `DigAnim`). Con un mango corto hay que bajar el `Handle` para que la mano derecha no caiga en la hoja.
 - **Animación:** sin huesos; cada pieza que se mueve va con un Motor6D al `Handle` con la etiqueta `ShovelOrbit` (ver `docs/ARQUITECTURA.md`).
+
+## Pala Robux (de prueba, 24/11)
+
+Pala aparte, fuera de las 30 de nivel. Llegó como un `.glb` de 10 mallas sin texturas (`tools/modelos/Robux/RobuxShovel.glb`); sus medidas están en el `RobuxShovel_spec.json` del paquete. Para importarla hay que hacerlo a mano en Studio (Importar 3D, en studs); el importador la gira 180° sobre Y.
+- **Dónde está:** `ServerStorage.Models.Palas.Robux` (la de la mano; `Shovels.build({id = "Robux"})`) y una copia en `ReplicatedStorage.Models.Palas.Robux` (icono de la barra). El `.glb` importado tal cual se ha quedado en `ServerStorage.RobuxShovel`.
+- **Materiales:** `Foil` en tres dorados (hoja, pomo y monedas 255,196,40; casquillo y anillos más claros; mango y cuello más oscuros). La cinta en espiral es `Neon` y cambia entre dos dorados (`ShovelColor`, modo pulse).
+- **Remolino de la hoja** (como el de la Pala Galáctica, pero en oro): texturas de `tools/modelos/Robux/texturas.ps1` (IDs en `texturas/IDS.txt`), puestas con `SurfaceGui` + `ImageLabel` con `LightInfluence = 0`, para que brillen.
+  - `SwirlHoleBase`: placa fija en el agujero cuadrado, con la nebulosa dorada en las dos caras.
+  - `SwirlHoleFront` / `SwirlHoleBack`: discos de remolino que giran encima (−110°/s).
+  - `SwirlRingFront` / `SwirlRingBack`: un anillo de remolino más grande, sobre la cara del hexágono de dentro, alrededor del agujero, que gira al revés (55°/s). Así parece que se hunde hacia el centro.
+  - Los cuatro remolinos van con un `Motor6D` `ShovelOrbit` a la `Blade`, así que siguen a la hoja.
+- **Movimiento** (todo `ShovelOrbit`, lo anima `ShovelFx`):
+  - La hoja se balancea ±30° sobre el eje del mango, en vez de dar vueltas enteras, para que el remolino se vea casi siempre de frente; también flota un poco.
+  - El pomo gira al revés.
+  - Las 3 monedas dan vueltas al mango (radio 1,75), giran sobre sí mismas y flotan.
+  - 3 piezas invisibles `LightRing1-3` dan vueltas inclinadas alrededor de la hoja con un `Trail` dorado: son los anillos de luz.
+- **Brillo:** `PointLight` en el `Handle` y en el agujero, que respiran (`ShovelPulse`). Chispas en la hoja, el pomo y saliendo por el agujero, por delante y por detrás. Al cavar usa el efecto `coinDig` (`DIG_FX.Robux` en `ShovelFx`).
+- **Sin hacer:** cómo se consigue en el juego (por ahora solo con `/palarobux`), una animación de golpe propia (usa la de todas las palas), el `Highlight` y el `Bloom`.

@@ -2,6 +2,24 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · seguo970 (Claude) · Pala Robux (de prueba)
+**Qué:** nueva pala aparte con forma de símbolo de Robux, toda de oro. En la hoja tiene un remolino dorado girando, como el de la Pala Galáctica: dentro del agujero cuadrado hay una nebulosa dorada fija con un remolino que gira encima, y sobre la cara de la hoja hay otro remolino más grande que gira al revés, así que parece que se hunde hacia el centro.
+- La hoja se balancea y flota, y el pomo gira.
+- Tres monedas Robux dan vueltas alrededor.
+- Tres anillos de luz dorada giran alrededor de la hoja.
+- Tiene chispas, luz que respira y la cinta del mango brilla.
+- De momento solo se consigue con el comando `/palarobux`; cambia el aspecto, no la fuerza.
+**Dónde:**
+- `ServerStorage.Models.Palas.Robux` y `ReplicatedStorage.Models.Palas.Robux` (nuevas). El modelo importado está en `ServerStorage.RobuxShovel`.
+- `DiamondServer.Main`: comando `/palarobux`.
+- `ShovelFx`: `DIG_FX.Robux = coinDig`.
+- Texturas: `tools/modelos/Robux/texturas.ps1`, con los IDs en `texturas/IDS.txt`. El `.glb` está en `tools/modelos/Robux/`.
+- Detalles en `docs/IMPORTAR_MODELOS.md`.
+**Probado:** Play en Studio: la pala se pone en la mano y la consola no da errores (solo los avisos de DataStore). Capturas de cerca de la hoja (se ven los remolinos, las monedas y un anillo de luz) y de cómo la sujeta el personaje. No se ha probado cavar con ella, ni el comando escrito en el chat (se probó llamando a `Shovels.build` directamente), ni en móvil, ni con otro jugador.
+**Notas:**
+- Del prompt del paquete no se ha hecho: el Tool en `StarterPack` (el juego crea las palas solo), el `Highlight` (son caros), el `Bloom`, ni una animación de golpe propia.
+- La hoja se balancea ±30° en vez de dar vueltas enteras, para que el remolino se vea casi siempre.
+
 ## 2026-11-24 · bbogatell (Claude) · Probabilidad corta en la tienda y llevar el fósil con los brazos arriba
 **Qué:**
 - En la sección de fósiles dorados de la tienda la probabilidad pasa a ser solo «1 entre 140.000», en letra pequeña.

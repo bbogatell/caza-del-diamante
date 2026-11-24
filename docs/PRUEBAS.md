@@ -21,6 +21,7 @@
 | `/dorado <n>` | Te da n fósiles dorados en la mochila (botón dorado de arriba para abrirlos). |
 | `/dorado gana` | El próximo fósil dorado que abras lleva el Robux dorado (en Studio no se guarda nada: el DataStore está apagado). |
 | `/dorado fosil` | Tu próxima palada en el terreno dorado saca un fósil dorado. |
+| `/palarobux` | Te pone en la mano la **Pala Robux** de prueba (solo cambia el aspecto: cavas con la fuerza de tu nivel). `/palarobux no` te devuelve tu pala normal. |
 | `/tutorial` | Empieza el tutorial otra vez desde el paso 1. |
 
 **Tutorial en Studio:** en Studio no se carga el guardado, así que cada Play eres un jugador nuevo y sale el tutorial. Para no verlo mientras pruebas otras cosas, pon el atributo `NoTutorial` = true en `Workspace` (en Edit), o pulsa «Saltar tutorial» dos veces.
