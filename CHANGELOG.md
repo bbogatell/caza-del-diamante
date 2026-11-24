@@ -2,6 +2,10 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · seguo970 (Claude) · Terreno dorado: otro sonido al cavar (2)
+**Qué:** tampoco convencía el de monedas chocando. Ahora suena un tintineo de moneda corto (0,45 s), flojito y con el tono un poco distinto en cada palada.
+**Dónde:** DiamondClient.Main → handlers.Swing (terreno dorado): sonido «coin2» bxassetid://134583420216867 (Creator Store, gratis, de Scattz_1), volumen 0,18 y velocidad 0,95–1,07. Antes era 133570405319995.
+**Probado:** el sonido carga en Studio. No se ha podido oír desde aquí.
 ## 2026-11-24 · seguo970 (Claude) · Terreno dorado: otro sonido al cavar
 **Qué:** a seguo970 no le convencía el «clink» de antes, así que se ha cambiado por un sonido de monedas chocando, flojito y con el tono un poco distinto en cada palada.
 **Dónde:** DiamondClient.Main → handlers.Swing (terreno dorado): sonido «Coin Clinking Sound» bxassetid://133570405319995 (Creator Store, gratis, de smashman65), dura 1 s, volumen 0,15 y velocidad 0,95–1,07. Antes era 4612374209 con notas pentatónicas.
@@ -5245,4 +5249,5 @@ Se guarda con la partida. Al irte, la base vuelve a su tamaño normal para el si
 - Decoración de las 30 parcelas, títulos flotantes encima de las parcelas.
 - Parcelas personales de terreno real, 30 niveles de terreno y minerales con física.
 - Evento del diamante, cinemática final e infierno.
+
 
