@@ -1,0 +1,6 @@
+﻿coins_color.png   rbxassetid://117348261962296
+coins_normal.png  rbxassetid://116772579356396
+coins_rough.png   rbxassetid://84783394703986
+coins_metal.png   rbxassetid://79692391360687
+(v2, menos metal) coins_metal.png  rbxassetid://127863881438289
+(v2) coins_rough.png  rbxassetid://81170698535608

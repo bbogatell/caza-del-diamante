@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · seguo970 (Claude) · Última parcela: cavar en monedas de oro
+**Qué:** el terreno de la parcela 15 (Trono del Rey Galáctico, pala 30) ya no es amarillo liso. Ahora tiene una textura de montón de monedas de oro, con relieve y brillo. Al cavar ahí saltan 7 monedas de oro por los aires y suena a monedas. Antes de hacerlo se guardó una copia del juego en Roblox: la **versión 817**, «Copia antes de las monedas en la parcela 15».
+**Dónde:**
+- `MaterialService.MonedasOro` (nueva `MaterialVariant`), puesta por encima de `Concrete` con `SetBaseMaterialOverride`.
+- `ReplicatedStorage.Config` → `TERRAIN_COLORS.Concrete = C(255, 255, 255)`; antes era 255, 196, 60.
+- `DiamondClient.Main`: las monedas que saltan al cavar.
+- Texturas: `tools/modelos/Monedas/texturas.ps1`, con los IDs en `texturas/IDS.txt`.
+**Probado:** Play en Studio: captura de la parcela con las monedas. Ninguna pieza ni ningún otro terreno usa `Concrete`, así que nada más cambia. **No probado:** las monedas saltando al cavar (hace falta la pala 30).
+**Notas:** si no gusta, se puede volver a la versión 817 desde el historial de versiones, o solo quitar `MaterialService.MonedasOro`.
+
 ## 2026-11-24 · seguo970 (Claude) · Pala Robux: el pomo gira más lento
 **Qué:** el Robux pequeño del pomo gira más despacio: algo más de media vuelta por segundo, en vez de una vuelta y media. A seguo970 le gustan los destellos de la hoja tal como están.
 **Dónde:** `Models.Palas.Robux.Pommel.Orbit` (en ServerStorage y en ReplicatedStorage): `Speed = −200` (antes −540).
