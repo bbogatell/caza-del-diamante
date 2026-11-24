@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · bbogatell (Claude) · Cinemática del principio centrada, cartel «10.000 + logo» e interfaz para consola y VR
+**Qué:**
+- **Primer plano de la intro**: la cámara empezaba en un lado de la plaza y miraba en diagonal: no se veía ni el terreno ni el cartel. Ahora sale centrada por encima de la plaza (pasada la decoración de la parcela 15, que tapaba si empezaba más atrás) y avanza por el eje del terreno, con el terreno dorado y el cartel «10.000» en el plano. El subtítulo «El terreno dorado / al final del carril» va abajo para no taparlo.
+- **Cartel grande del terreno**: «10.000» y detrás el logo de Robux (antes logo + «10.000 ROBUX»). Igual en el cartel de premio de la cinemática del ganador.
+- **Consola (mando)**: en las ventanas el mando selecciona el primer botón (cruceta para moverse, A para pulsar) y **B cierra**; **Y** abre la tienda; **L1/R1** cambian de objeto (la barra de Roblox está oculta); con un fósil en la base, **cruceta abajo** lo deja delante de ti, y **cruceta arriba** lo suelta (los textos de ayuda cambian a los botones del mando). En la tele el HUD se separa un 5 % de los bordes (la tele puede recortarlos).
+- **VR**: sin cinemática de entrada ni la cámara movida en las cinemáticas (marea con gafas) y sin desenfoque al abrir un fósil dorado. En pantallas casi cuadradas el HUD se encoge en proporción para caber.
+**Dónde:** `DiamondClient.Cinematic` (intro, cartel del premio, `camFn` en VR), `Map.GoldField.PrizeSign`, `DiamondClient.Menus` (`open`, `close`, B), `DiamondClient.Hotbar` (L1/R1), `DiamondClient.Main` (Y, cruceta), `DiamondClient.HUD` (`IsTenFootInterface`, `FitScale`), `DiamondClient.GoldOpen` (`blur`).
+**Probado:** simulador de Studio en Play: Xbox One 1920 × 1080 (HUD separado del borde, intro con el plano centrado, capturas) y Meta Quest 3 (686 × 734, VR activado: la intro se salta, ningún bloque del HUD fuera de pantalla). Captura del cartel en Edit. Consola sin errores. Studio devuelto a su tamaño normal.
+**Notas:** los botones del mando no se han podido pulsar de verdad (el MCP no simula un mando); sin probar con unas gafas reales.
+
 ## 2026-11-24 · bbogatell (Claude) · Interfaz para móvil
 **Qué:**
 - **Solo horizontal**: el juego dejaba girar el móvil (`ScreenOrientation = Sensor`) y el HUD se mide por la altura de la pantalla, así que en vertical los botones se hacían enormes y tapaban casi toda la pantalla (comprobado con el simulador). Ahora `StarterGui.ScreenOrientation` y el `PlayerGui` son `LandscapeSensor`.
