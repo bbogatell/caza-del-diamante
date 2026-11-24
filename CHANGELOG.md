@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · bbogatell (Claude) · Agujero en el suelo entre el lobby y el carril
+**Qué:** había una ranura de 4 studs sin suelo entre la última fila de baldosas del lobby (acaba en z −464) y la primera del pasillo del carril (empieza en z −468), a lo ancho de la puerta (x −37 a 37). Tapada con 12 baldosas de 8 × 4 iguales a las del lobby (atributo `GapFix`). La revisión del 23/11 miraba cada 4 studs y no la vio: ahora se ha repasado todo el suelo cada 1 stud.
+**Dónde:** `Map.Lobby.Floor` (12 baldosas nuevas en z −466).
+**Probado:** rayos cada 1 stud (cada 0,5 en la junta): sin agujeros en el lobby, el pasillo, las 15 parcelas fuera de los hoyos (también la franja junto a las paredes) y la plaza del final.
+
 ## 2026-11-23 · bbogatell (Claude) · Arreglo del tutorial (paso 5) y revisión completa del juego
 **Qué:**
 - **Tutorial atascado en el paso 5 («Llévalo a tu base»)**: ese paso solo avanzaba cuando el cliente avisaba de que estabas en tu base; si dejabas el fósil enseguida, el aviso llegaba tarde (ya sin fósil, `InOwnBase` borrado) y fallaba para siempre, y el gancho de «dejarlo» esperaba el paso 6. Ahora: (1) al dejar el fósil en la base estando en el paso 5, el servidor completa el 5 y el 6; (2) el servidor detecta él mismo que entras en tu base con el fósil (bucle de `Fossils`, sin depender del cliente); (3) quien ya se quedó atascado (paso 5 o 6, sin llevar nada y con un fósil o bicho en la base) se desatasca solo al paso 7 u 8.
