@@ -2,6 +2,19 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · seguo970 (Claude) · Las monedas, al terreno dorado (no a la parcela 15)
+**Qué:** seguo970 se refería al **terreno dorado**, la zona enorme del final, y no a la parcela 15. Ahora todo el terreno dorado es un montón de monedas de oro: lo de fuera y lo de dentro, al cavar. Al cavar ahí saltan monedas y suena a monedas. La parcela 15 (Trono del Rey Galáctico) vuelve a su amarillo liso de antes.
+**Dónde:**
+- **Terreno dorado:**
+  - Todo su terreno pasa a `Salt`. Antes eran capas de `Limestone`, `Sandstone`, `Glacier` y `Salt`.
+  - `MaterialService.MonedasOro` ahora va sobre `Salt`, no sobre `Concrete`.
+  - Tinte blanco para `Salt`: `Config.GOLD.colors` (antes `Salt` naranja y `Glacier` dorado) y `DiamondServer.Plots`.
+  - Lo que quedaba de `Salt` en el antiguo Abismo se cambió a `Sand`.
+- **Parcela 15:** `Config.TERRAIN_COLORS.Concrete` vuelve a 255, 196, 60.
+- **Monedas al cavar:** en `DiamondClient.Main`, ahora salen al cavar en el terreno dorado (`Config.inGoldField`).
+**Probado:** Play en Studio: capturas del terreno dorado (monedas doradas) y de la parcela 15 (amarillo). **No probado:** las monedas saltando al cavar (hace falta la pala 30).
+**Notas:** la copia de antes de todo esto es la **versión 817** del place.
+
 ## 2026-11-24 · seguo970 (Claude) · Última parcela: cavar en monedas de oro
 **Qué:** el terreno de la parcela 15 (Trono del Rey Galáctico, pala 30) ya no es amarillo liso. Ahora tiene una textura de montón de monedas de oro, con relieve y brillo. Al cavar ahí saltan 7 monedas de oro por los aires y suena a monedas. Antes de hacerlo se guardó una copia del juego en Roblox: la **versión 817**, «Copia antes de las monedas en la parcela 15».
 **Dónde:**
