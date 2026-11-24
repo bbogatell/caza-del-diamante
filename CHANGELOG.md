@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-24 · seguo970 (Claude) · Terreno dorado: paredes doradas
+**Qué:** las paredes que rodean el terreno dorado ya no son azules. Ahora son doradas, con studs normales, del mismo dorado que los palos del cartel «Terreno dorado · Solo con la pala 30». Se ha quitado la capa de cuadros que tenían.
+**Dónde:** `Map.GoldField.Walls` (East, West, Back, StepE, StepW):
+- `Wall`: `f0ba46`.
+- Remate `Part`: `ffd36e`, más claro.
+- Zócalo `Skirt`: `c8962e`, más oscuro.
+- La capa de cuadros que se ha quitado es la textura `78936773448807`.
+- Copia de antes en `ServerStorage.TerrenoDoradoParedesBackup`.
+**Probado:** capturas desde dentro del terreno dorado.
+
 ## 2026-11-24 · seguo970 (Claude) · Las monedas, al terreno dorado (no a la parcela 15)
 **Qué:** seguo970 se refería al **terreno dorado**, la zona enorme del final, y no a la parcela 15. Ahora todo el terreno dorado es un montón de monedas de oro: lo de fuera y lo de dentro, al cavar. Al cavar ahí saltan monedas y suena a monedas. La parcela 15 (Trono del Rey Galáctico) vuelve a su amarillo liso de antes.
 **Dónde:**
