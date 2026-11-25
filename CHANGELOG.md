@@ -2,6 +2,25 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: brillo de 1,5 s y estallido de energía
+**Qué:**
+- Cuando un fósil dorado lleva premio, brilla 1,5 s en vez de 0,5 s, cada vez con más luz y chispas, mientras suena un tono que va subiendo.
+- Luego estalla con un sonido de **liberación de energía y luz**, en vez del de explosión de roca, y sale la pantalla del premio.
+- Esa pantalla ya no vuelve a sonar a roca rota.
+**Dónde:**
+- `ReplicatedStorage.Config` → `GOLD.glowTime = 1.5` (nuevo).
+- `DiamondClient.UIKit` → sonido `goldBurst` = `rbxassetid://111341827543769` («Energy Burst Swing Magic SFX 3», de GleonoffG, Creator Store, gratis, 1,3 s).
+- `DiamondClient.GoldOpen` → `worldFx`:
+  - Durante el brillo suena `goldRiser` desde los 2,3 s.
+  - Al estallar suenan `goldBurst` y `goldShimmer`; antes eran `goldShatter` y `boom`.
+  - En `play`, `goldShatter` solo suena si está encendida la tensión.
+- Copia de antes: `ServerStorage.CopiasSeguridad.AntesDeBrillo15s_2026-11-25`.
+**Probado:** Play en Studio con `/dorado pala`:
+- Estalla a ~1,45 s de soltar la E y la pantalla del premio sale a ~2,35 s.
+- El tono que sube suena (volumen > 0). Sin errores.
+- **No se ha podido oír** cómo queda el sonido.
+**Notas:** se miró también «Magic Energy Charge Burst» (`122439012218772`), pero tiene el golpe a mitad de pista y no encaja con el estallido.
+
 ## 2026-11-25 · seguo970 (Claude) · Fósiles dorados: sin mochila, se abren donde salen
 **Qué:**
 - Los fósiles dorados ya no se pueden guardar: se quedan en el suelo del terreno dorado hasta que los abres ahí mismo, como un cofre.
