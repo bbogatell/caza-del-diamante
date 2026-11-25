@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: mantener E para abrirlo
+**Qué:** para abrir un fósil dorado en el suelo ya no basta con pulsar E: hay que mantenerla medio segundo, como un cofre de Fortnite. La animación de abrirlo (3 toques) sigue igual.
+**Dónde:** `ServerScriptService.DiamondServer.GoldHunt` → `spawnFossil`: `OpenPrompt.HoldDuration` 0,5 (antes 0).
+**Probado:** Play en Studio: mantener 0,2 s no lo abre y mantener 0,65 s sí. La captura de Studio no dibuja el aviso de Roblox, así que la barra que se llena no se ha visto.
+
 ## 2026-11-25 · seguo970 (Claude) · Plataforma de antes del terreno dorado, en dorado
 **Qué:** la plataforma de studs blanca que hay justo antes de la entrada al terreno dorado ahora es de studs dorados, del mismo dorado que sus paredes. Se mantienen las pequeñas diferencias de tono entre piezas.
 **Dónde:**
