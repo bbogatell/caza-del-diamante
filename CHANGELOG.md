@@ -11,7 +11,8 @@
   - `PLOTS[10].terrain = {{"Glacier"}}`, sin `mix`; antes era `{{"Rock"}}, mix = {"Glacier", 0.5}`.
   - `TERRAIN_COLORS.Glacier` = blanco; antes era 120, 235, 255.
 - Texturas generadas con `tools/modelos/CuarzoRosa/texturas.ps1`. Los ids están en `texturas/IDS.txt`.
-**Probado:** Play en Studio: en el hoyo todo es `Glacier` (`ReadVoxels`) y hay captura del suelo de cuarzo. **No se ha mirado** la consola después: Studio se desconectó del MCP justo al acabar.
+**Probado:** Play en Studio: en el hoyo todo es `Glacier` (`ReadVoxels`) y hay captura del suelo de cuarzo. Al reconectar Studio, todo seguía puesto y en Play no salió ningún error.
+**Guardado:** en Roblox como **versión 858** (Team Create, sin publicar). Incluye todo lo del 25/11 de seguo970: los 3 toques, abrir pulsando E y las parcelas 7, 10, 14 y 15.
 
 ## 2026-11-25 · bbogatell (Claude) · Iconos de las mejoras del terreno dorado
 **Qué:** los 4 objetos de pago del terreno dorado ya tienen icono hecho con ChatGPT, en estilo 3D cartoon y con fondo transparente. Sustituyen al modelo 3D en la tienda y en la barra de objetos.
