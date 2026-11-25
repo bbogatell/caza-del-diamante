@@ -12,6 +12,7 @@
   - `TERRAIN_COLORS.Cobblestone` = blanco; antes era 160, 150, 130.
 - Texturas generadas con `tools/modelos/LadrilloTemplo/texturas.ps1`. Los ids están en `texturas/IDS.txt`.
 **Probado:** Play en Studio: en el hoyo todo es `Cobblestone` (`ReadVoxels`). Captura del suelo de ladrillo. Sin errores.
+**Guardado:** en Roblox como **versión 861** (Team Create, sin publicar).
 **Notas:** `DiamondServer.Plots` (las parcelas personales antiguas) también puede usar `Cobblestone` (`Config.TERRAIN`). Si se vuelven a usar, saldrán con ladrillos.
 
 ## 2026-11-25 · seguo970 (Claude) · Parcela 7: la roca sin manchas repetidas
