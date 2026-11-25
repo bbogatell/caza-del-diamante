@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Piezas del fósil dorado: imágenes precargadas
+**Qué:** la primera vez que salía una pieza solo se veía el brillo un momento, porque la imagen aún no había cargado. Ahora las 10 imágenes se cargan al entrar en el juego.
+**Dónde:** `DiamondClient.GoldOpen` → `init`: `ContentProvider:PreloadAsync` de `Config.GOLD.parts[*].images`.
+**Probado:** Play en Studio: a los pocos segundos de entrar, las 10 imágenes ya están cargadas (estado `Success`).
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: piezas de la Pala Robux y del ticket dorado
 **Qué:** un fósil dorado que no lleva el Robux dorado puede dar ahora una pieza de la **Pala Robux** (1 entre 200) o una pieza del **ticket dorado** (1 entre 150). Cada pieza es una de las 5 al azar y se pueden repetir. Al abrirlo sale la imagen de la pieza en grande con «¡PIEZA DE …!» y «Pieza N de 5 · Tienes X/5». Las piezas se guardan, pero **todavía no hacen nada**: falta decidir qué pasa al juntar las 5.
 **Dónde:**
