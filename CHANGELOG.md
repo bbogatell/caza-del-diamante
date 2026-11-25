@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: sin los 3 toques (guardados)
+**Qué:** al abrir un fósil dorado ya no hay que tocar 3 veces para romperlo. Sale el fósil y pasa directo a la tensión y al resultado. A seguo970 le gustan los toques y puede que los vuelva a querer, así que **no se ha borrado nada**: están apagados con un interruptor.
+**Dónde:**
+- `ReplicatedStorage.Config` → `GOLD.taps = false` (nuevo). **Ponerlo a `true` vuelve a poner los 3 toques.**
+- `DiamondClient.GoldOpen` → `play`: si `taps` está apagado, no sale «¡TOCA PARA ROMPERLO!» ni los 3 puntos y espera 0,5 s en vez de los toques.
+- Copia del script de antes: `ServerStorage.CopiasSeguridad.GoldOpen_con3toques_2026-11-25`.
+**Probado:** Play en Studio: abrir uno de la mochila sale sin texto ni puntos, hace la tensión y termina bien. Sin errores en la consola.
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: mantener E para abrirlo
 **Qué:** para abrir un fósil dorado en el suelo ya no basta con pulsar E: hay que mantenerla medio segundo, como un cofre de Fortnite. La animación de abrirlo (3 toques) sigue igual.
 **Dónde:** `ServerScriptService.DiamondServer.GoldHunt` → `spawnFossil`: `OpenPrompt.HoldDuration` 0,5 (antes 0).
