@@ -1,0 +1,5 @@
+﻿Ladrillos de templo (parcela 11, MaterialVariant LadrilloTemplo sobre Cobblestone, 25/11/2026). ../texturas.ps1 (Rows 16, PerRow 8), StudsPerTile 40
+ladrillo_color.png   rbxassetid://133763503919601
+ladrillo_normal.png  rbxassetid://108801791423844
+ladrillo_rough.png   rbxassetid://101927137835140
+ladrillo_metal.png   rbxassetid://84832770600982

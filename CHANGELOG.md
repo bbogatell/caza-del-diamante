@@ -2,6 +2,18 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Parcela 11 (Templo Perdido): se cava en ladrillos de templo
+**Qué:** el hoyo entero de la parcela 11 (la de la Pala Rúnica del Templo, pala 21) es de **ladrillos de arenisca**, en los colores del bioma del templo. Cada ladrillo tiene su tono, entre arena clara y ocre, con bordes gastados, grano y algún desconchón, y juntas de mortero. Antes tenía 6 studs de adoquín arriba y caliza debajo.
+**Dónde:**
+- `MaterialService.LadrilloTemplo`: `MaterialVariant` nueva sobre `Cobblestone`, con `StudsPerTile` 40 (128 ladrillos por repetición) y `SetBaseMaterialOverride(Cobblestone, "LadrilloTemplo")`.
+- `Cobblestone` solo lo usaba esta parcela. `Limestone` no se ha tocado: la usan 114 piezas.
+- `ReplicatedStorage.Config`:
+  - `PLOTS[11].terrain = {{"Cobblestone"}}`.
+  - `TERRAIN_COLORS.Cobblestone` = blanco; antes era 160, 150, 130.
+- Texturas generadas con `tools/modelos/LadrilloTemplo/texturas.ps1`. Los ids están en `texturas/IDS.txt`.
+**Probado:** Play en Studio: en el hoyo todo es `Cobblestone` (`ReadVoxels`). Captura del suelo de ladrillo. Sin errores.
+**Notas:** `DiamondServer.Plots` (las parcelas personales antiguas) también puede usar `Cobblestone` (`Config.TERRAIN`). Si se vuelven a usar, saldrán con ladrillos.
+
 ## 2026-11-25 · seguo970 (Claude) · Parcela 7: la roca sin manchas repetidas
 **Qué:** en la roca del volcán (parcela 7) se veían unas manchas oscuras grandes repetidas muchas veces. Ahora la roca es más uniforme y natural:
 - Las manchas grandes son muy suaves.
