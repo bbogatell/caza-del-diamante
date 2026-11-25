@@ -2,6 +2,23 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Ticket dorado en el inventario
+**Qué:**
+- Cuando consigues el ticket dorado, al acabar la animación aparece en tu barra de herramientas, después de la pala, el bate y los objetos.
+- La casilla lleva la imagen del ticket entero y cuántos tienes («x1», «x2»…).
+- Al sacarlo lo llevas en la mano: un ticket plano con la imagen por los dos lados y unas chispitas.
+- Todavía no hace nada al usarlo.
+**Dónde:**
+- `DiamondServer.Items`: `ticketTool(count)`; en `refresh` está `want.ticket`, con el atributo de herramienta `Count`.
+- `DiamondServer.GoldHunt`: atributo del jugador `TicketPending` mientras dura la animación. En `shown` se quita y llama a `Items.refresh`; si no llega, se hace a los 40 s.
+- `DiamondClient.Hotbar`: tipo `ticket` (imagen `Config.GOLD.parts.ticket.full`, color dorado, contador).
+- Copia: `ServerStorage.CopiasSeguridad.AntesDeTicketInventario_2026-11-25`.
+**Probado:** Play en Studio con `/dorado completaticket`:
+- Durante la animación no está; al acabar sale en la casilla 3 con «x1».
+- Captura con el ticket en la mano.
+- Sin errores.
+- **No se ha probado** salir y volver a entrar (DataStore apagado en Studio).
+
 ## 2026-11-25 · seguo970 (Claude) · Ticket dorado entero: el diamante ya no sale cortado
 **Qué:** en la imagen del ticket entero, el marco tapaba la punta de abajo del diamante. Ahora el diamante es un poco más pequeño y se ve entero.
 **Dónde:**
