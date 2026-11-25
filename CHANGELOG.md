@@ -2,6 +2,52 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · bbogatell (Claude) · Mejoras de pago del terreno dorado: dinamita, barril, carga en cadena y taladro
+**Qué:** 4 objetos de Robux para el terreno dorado. Se gastan al usarlos y se pueden comprar las veces que quieras. Solo funcionan dentro del terreno dorado con la pala 30; fuera sale un aviso y no se gastan.
+
+| Objeto | Producto | Precio | Qué hace |
+|---|---|---|---|
+| Dinamita ×3 | `GoldDynamite3` | 99 R$ | Se pone 7 studs delante; a los 3 s explota: hoyo de radio 14 y un 18,8 % de fósil dorado. |
+| Barril de Pólvora | `GoldBarrel` | 99 R$ | 14 studs delante; a los 5 s, cráter de radio 22 y un 39,3 % de fósil dorado. |
+| Carga en Cadena | `GoldChain` | 129 R$ | 5 cargas en fila (cada 9 studs) que explotan una tras otra; radio 9 y un 11,7 % cada una. |
+| Taladro Dorado | `GoldDrill` | 249 R$ | 3 min desde que lo usas: en el terreno dorado la pala cava el doble de rápido, hoyos ×1,4 y el doble de probabilidad por segundo cavando. Si usas otro, se suma el tiempo. |
+
+- La probabilidad de cada explosión es la de cavar `search` segundos: 1 − e^(−search / 120).
+- Se respeta el máximo de 3 fósiles dorados tuyos sin abrir en el suelo.
+- Las explosiones no empujan ni hacen daño (`BlastPressure` 0).
+- Tarjetas en la tienda, en «Fósiles Dorados» → «💥 Mejoras del terreno dorado»: modelo 3D, botón % con las probabilidades y regalo. Con menos de la pala 30 sale «🔒 PALA 30».
+- En los países donde Roblox no deja vender objetos aleatorios se ocultan, porque pueden dar fósiles dorados.
+- Contador «⚙️ Taladro dorado m:ss» arriba en el HUD.
+
+**Dónde:**
+- `Config.GOLD.boosts`, `Config.PRODUCTS.GoldDynamite3/GoldBarrel/GoldChain/GoldDrill` (id 0) y `RANDOM_PRODUCTS`.
+- Nuevo `ReplicatedStorage.GoldBoostLook`: los 4 modelos hechos con piezas; los usan la herramienta, la carga en el suelo y la tienda.
+- `GoldHunt`:
+  - `useBoost`, `grantBoost`, `drilling`, `boostsOf`;
+  - `clampIn` y `rollFossil`, sacados de `dig`;
+  - carpeta `workspace.GoldCharges`.
+- Datos en `p.gold.boosts` (cuántos te quedan de cada uno) y `p.gold.drillUntil` (en `os.time`, para que el taladro siga si vuelves enseguida). Atributo del jugador `GoldDrillUntil` (en tiempo de `GetServerTimeNow`).
+- `Items`: `boostTool`, herramientas con el atributo `Count`.
+- `Main` del servidor: cooldown ÷2 con el taladro, `grantProduct` (`prod.boost`) y `BuyRobux`, que exige pala 30 y terreno abierto, como los packs.
+- Cliente:
+  - `Main` (`doSwing` ÷2);
+  - `HUD` (`DrillTimer`);
+  - `Hotbar` (colores, orden y `Count` genérico);
+  - `Menus` (tarjetas y probabilidades).
+
+**Probado:** en Play en Studio, con la pala 30 y las compras simuladas:
+- aparecen las 4 herramientas con su cantidad;
+- la dinamita y el barril hacen sus cráteres;
+- la carga en cadena pone 5 cargas y de ahí salió un fósil dorado;
+- el taladro da 3:00 de contador y 17 paladas en 4 s (sin él, unas 9);
+- precios y ventana de probabilidades en la tienda bien;
+- sin errores en la consola.
+
+**Notas:**
+- Sin imágenes de ChatGPT: la sesión estaba cerrada; la tienda y la barra enseñan el modelo 3D.
+- Faltan los ids de los 4 productos.
+- El barril cerca de ti te mete en el cráter: sale «Salir del hoyo».
+
 ## 2026-11-25 · seguo970 (Claude) · Parcela 7 (Volcán): roca más clara y sin patrón repetido
 **Qué:** la roca de la parcela 7 (Volcán Humeante) es ~15 % más clara. Ya no se ve el mismo dibujo pequeño repetido: ahora son manchas grandes y medianas de distinto tono, con grano y algunas grietas suaves. Las vetas de lava siguen igual.
 **Dónde:**

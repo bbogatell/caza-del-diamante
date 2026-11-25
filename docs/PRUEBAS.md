@@ -35,6 +35,11 @@
 - Para probar los golpes y robar fósiles: en Studio, pestaña **Prueba**, elige **2 jugadores** y dale a **Iniciar**.
 - Las parcelas del carril empiezan en z = −520; centro de la parcela N: `Config.plotCenter(n)` (z = −632 − 168·(N−1)). El terreno dorado va de z −3084 a −3500 (x ±208); el portón está en z −3080 y fuera, en la plaza, en (0, 21, −3060).
 
+## Mejoras del terreno dorado (25/11)
+- `Request:InvokeServer("Debug", "level", 30)` y después `Request:InvokeServer("BuyRobux", "GoldDynamite3")` (o `GoldBarrel`, `GoldChain`, `GoldDrill`): en Studio la compra se simula y la herramienta sale en la barra.
+- Para usarla desde un script del cliente: `hum:EquipTool(t); t:Activate()` (sí llega al servidor). Teletransporta al jugador **por encima** del suelo (con un rayo): si queda dentro del terreno, cae al vacío.
+- Comprobar: `workspace.GoldCharges` (cargas con mecha), el cráter y `workspace.GoldFossils`; el taladro, el atributo `GoldDrillUntil` y el contador del HUD.
+
 ## Trucos (para Claude con el MCP de Roblox Studio)
 - El `studio_id` cambia en cada sesión: primero `list_roblox_studios`.
 - No se puede editar en modo Edit mientras está en Play: para el Play primero.
