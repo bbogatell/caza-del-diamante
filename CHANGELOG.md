@@ -22,6 +22,7 @@
 - 98 bloques, y captura desde arriba con los 6 jeroglíficos.
 - Sin errores.
 - **No se ha probado** cavar encima a mano para ver que se rompen.
+**Guardado:** en Roblox como **versión 865** (Team Create, sin publicar). Incluye la nube, la galaxia, el oro, los cubos y la nebulosa por dentro.
 **Notas:** con la luz de la parcela, el ladrillo oscuro se ve gris morado. Si se quiere más negro, se puede poner una `MaterialVariant` sobre `Brick` con una textura más oscura.
 
 ## 2026-11-25 · seguo970 (Claude) · Cubos en el templo y no en la nube; grieta solo lila; nebulosa por dentro
