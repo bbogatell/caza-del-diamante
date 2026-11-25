@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · bbogatell (Claude) · Suelo del lobby: una sola pieza con la textura de cuadros
+**Qué:** el suelo del lobby eran 1.848 baldosas de 8 × 8 (cuadros claros y oscuros con studs). Ahora es **una sola pieza** de 432 × 276 (x ±216, z −468 a −192, arriba en y = 18) con dos texturas encima: `Checker` (los cuadros de 8 × 8, imagen rbxassetid://78936773448807 a 16 studs, tono oscuro (110, 186, 44) sobre el color de la pieza (139, 214, 64)) y `Studs` (rbxassetid://6348166067, verde (118, 190, 50) al 45 %). Se ve igual que antes y son 1.847 piezas menos.
+**Dónde:** `Map.Lobby.Floor` (ahora una `Part`, antes una carpeta de baldosas). El pasillo hacia el carril (`Lane.Gateway.FloorTiles`) sigue con baldosas.
+**Probado:** rayos cada 2 studs: sin agujeros en todo el lobby; Play: se anda bien encima, sin errores; capturas.
+
 ## 2026-11-25 · bbogatell (Claude) · Fuera las losas blancas de debajo de los puestos
 **Qué:** se quitan las 4 losas gris claro con borde marrón que había bajo la Tienda de Estelas, la Máquina de Fósiles, la Ruleta y el Diario. Los puestos quedan directamente sobre el césped (sin agujeros debajo).
 **Dónde:** borrado `Map.Lobby.PlazaLayout` (solo tenía `ShopPads`, 15 piezas; ningún script lo usaba).
