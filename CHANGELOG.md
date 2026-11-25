@@ -2,6 +2,20 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Parcela 14: se cava en galaxia
+**Qué:** el hoyo entero de la parcela 14 (Nebulosa de los Dioses) es ahora de **galaxia**: fondo azul oscuro, nubes de nebulosa moradas, magenta y azules, y muchas estrellas (las grandes con destello en cruz). Antes tenía 6 studs morados arriba y basalto negro debajo.
+**Dónde:**
+- `MaterialService.Galaxia`: `MaterialVariant` nueva sobre `Pavement`, con `StudsPerTile` 24 y `SetBaseMaterialOverride(Pavement, "Galaxia")`.
+- `ReplicatedStorage.Config`:
+  - `PLOTS[14].terrain = {{"Pavement"}}`; antes era `{{"Pavement", 6}, {"Basalt"}}`.
+  - `TERRAIN_COLORS.Pavement` = blanco; antes era morado 110, 60, 190.
+- Texturas generadas con `tools/modelos/Galaxia/texturas.ps1` (`Bright` 1,8). Los ids están en `texturas/IDS.txt`.
+**Probado:**
+- Antes de cambiarlo, en el terreno solo la parcela 14 usaba `Pavement`. En Play, el hoyo es todo `Pavement` (leído con `ReadVoxels`).
+- Capturas: la primera versión salía muy oscura con la luz de la parcela; se aclaró (v2).
+- Sin errores.
+**Notas:** **una pieza también usa `Pavement`:** `ServerStorage.Finale.SkyPlatform.Part`, la plataforma del cielo de la cinemática del ganador. Ahora también se verá de galaxia. No se ha mirado.
+
 ## 2026-11-25 · seguo970 (Claude) · Parcela 15: se cava en oro macizo
 **Qué:** el hoyo de la parcela 15 (Trono del Rey Galáctico, la de antes del terreno dorado) ya no es amarillo liso: es **oro macizo brillante**, bloques de oro pulido con juntas finas y brillos. Al cavar, por dentro también es oro.
 **Dónde:**

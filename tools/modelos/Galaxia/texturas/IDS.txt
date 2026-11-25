@@ -1,0 +1,5 @@
+﻿Galaxia (parcela 14, MaterialVariant Galaxia sobre Pavement, 25/11/2026). Generadas con ../texturas.ps1 (Bright 1.8)
+gal_color.png   rbxassetid://128950690085199  (v2 más clara; la v1 era 106903478891173)
+gal_normal.png  rbxassetid://103705346688450
+gal_rough.png   rbxassetid://98378217474922
+gal_metal.png   rbxassetid://84832770600982
