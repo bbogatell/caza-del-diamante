@@ -14,6 +14,7 @@
 - Antes de cambiarlo, en el terreno solo la parcela 14 usaba `Pavement`. En Play, el hoyo es todo `Pavement` (leído con `ReadVoxels`).
 - Capturas: la primera versión salía muy oscura con la luz de la parcela; se aclaró (v2).
 - Sin errores.
+**Guardado:** todo lo del 25/11 hasta aquí está guardado en Roblox: **versión 844** del place (Team Create, sin publicar).
 **Notas:** **una pieza también usa `Pavement`:** `ServerStorage.Finale.SkyPlatform.Part`, la plataforma del cielo de la cinemática del ganador. Ahora también se verá de galaxia. No se ha mirado.
 
 ## 2026-11-25 · seguo970 (Claude) · Parcela 15: se cava en oro macizo
