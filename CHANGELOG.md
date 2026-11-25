@@ -2,6 +2,31 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: nuevo orden al abrirlo (pulsar E → 3 toques → resultado)
+**Qué:**
+1. El fósil dorado se abre **pulsando** E una vez. Antes había que mantenerla.
+2. Sale **siempre** la pantalla «¡TOCA PARA ROMPERLO!» con los 3 toques. Mientras tanto, el fósil sigue en el suelo.
+3. Después de los 3 toques:
+   - **Si no hay nada:** el fósil roto sale un momento en pantalla, con chispas y temblor. En el mundo se deshace en polvo y la pantalla se cierra.
+   - **Si hay algo:** el fósil agrietado brilla y tiembla en pantalla. Mientras, en el mundo (lo ven todos los de cerca) brilla y estalla. Luego sale la pantalla del premio de siempre: pieza, 5 piezas juntas o Robux dorado.
+- Los demás ven el brillo o el polvo justo cuando el dueño acaba los toques, no al pulsar E.
+**Dónde:**
+- `DiamondServer.GoldHunt`:
+  - El prompt tiene `HoldDuration = 0`.
+  - `open` ya no borra el modelo: le pone el atributo `Opening`, apaga su prompt y guarda `pendingFx`.
+  - `GoldHunt.tapped` (nuevo) borra el modelo y manda `GoldFx` a todos. Si no llega, se hace a los 15 s o en `shown`.
+- `DiamondServer.Main`: `handlers.GoldTapped` (nuevo Request).
+- `DiamondClient.GoldOpen.play`: ya no hace el efecto del mundo al empezar.
+  - Después de los toques manda `GoldTapped` y borra en local su fósil `Opening`.
+  - Vacío: imagen 6 (roto), sonido `break_`, `worldFx(at, false)` y cierre.
+  - Premio: `worldFx(at, true)` y luego la revelación. La tensión y la revelación solo se hacen si hay premio.
+- Copia: `ServerStorage.CopiasSeguridad.AntesDeAbrirConToques_2026-11-25`.
+**Probado:** Play en Studio:
+- Con premio (`/dorado pala`): basta pulsar una vez y sale la pantalla de toques con el fósil aún en el suelo (`Opening`). Luego el estallido y la pieza; la pantalla se cierra.
+- Vacío: salen las chispas y el polvo, y se cierra.
+- Sin errores.
+- **No se ha probado** con 2 jugadores (lo que ve el otro) ni tocando a mano.
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: vuelven los 3 toques cuando hay premio
 **Qué:** cuando un fósil dorado lleva algo, después del brillo y el estallido sale la pantalla con el fósil y «¡TOCA PARA ROMPERLO!»: hay que tocarlo 3 veces (se va agrietando) y luego sale lo que te ha tocado. Si no tocas, se toca solo: el primero a los 4 s y luego cada 1,5 s. Los fósiles vacíos siguen igual: se deshacen en polvo, sin pantalla.
 **Dónde:** `ReplicatedStorage.Config` → `GOLD.taps = true` (antes `false`). No hacía falta cambiar ningún script: el código estaba guardado en `DiamondClient.GoldOpen`.
