@@ -2,6 +2,28 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Grieta Dimensional: bloques morado oscuro con jeroglíficos rosas
+**Qué:**
+- La parcela 13 sigue cavándose en bloques, pero ahora son de ladrillo **morado casi negro**, como el suelo y las paredes del bioma.
+- En la superficie hay **6 jeroglíficos** hechos con bloques rosas de ladrillo, el rosa del bioma (255, 90, 200): ankh, ojo, pirámide, sol, agua y bastón. Cada uno ocupa 7×7 bloques y se ven desde arriba.
+- Al cavar se rompen los bloques rosas que hay dentro del hoyo. Cuando la parcela se rellena, vuelven a salir.
+**Dónde:**
+- `ReplicatedStorage.Config`:
+  - `PLOTS[13].glyphs = true`.
+  - `TERRAIN_COLORS.Brick = C(22, 16, 32)`; antes era lila 150, 60, 230.
+- `DiamondServer.Lane`:
+  - `GLYPHS`: los 6 dibujos.
+  - `placeGlyphs`: se llama en `Lane.fill`. Vacía cada casilla del terreno y pone una `Part` de 4 × 4,4 × 4 que asoma 0,4 studs, para que no la tape el terreno.
+  - `breakGlyphs`: se llama en `Lane.dig`.
+  - Las piezas están en `workspace.LaneGlyphs.13`.
+- Copia: `ServerStorage.CopiasSeguridad.AntesDeJeroglificosGrieta_2026-11-25`.
+**Por qué son piezas y no terreno:** en Roblox cada material de terreno tiene un solo color, y los rosas tenían que salir en bloques como el ladrillo. `Limestone` sale redondeado y no encontré otro material libre que salga en bloques.
+**Probado:** Play en Studio:
+- 98 bloques, y captura desde arriba con los 6 jeroglíficos.
+- Sin errores.
+- **No se ha probado** cavar encima a mano para ver que se rompen.
+**Notas:** con la luz de la parcela, el ladrillo oscuro se ve gris morado. Si se quiere más negro, se puede poner una `MaterialVariant` sobre `Brick` con una textura más oscura.
+
 ## 2026-11-25 · seguo970 (Claude) · Cubos en el templo y no en la nube; grieta solo lila; nebulosa por dentro
 **Qué:**
 - **Parcela 12 (nube):** ya no se cava en cubos, sino redondo como en casi todas las parcelas.
