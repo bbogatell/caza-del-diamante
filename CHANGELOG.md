@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · bbogatell (Claude) · Fuera el podio del lobby
+**Qué:** se quita el podio con los 3 jugadores más ricos del juego (el monumento del lobby, en x 123, z −453) y su script. El suelo de debajo ya estaba entero.
+**Dónde:** borrados `Map.Lobby.Podium`, `DiamondServer.Podium` y `ServerStorage.PodiumBuilder`; quitada la línea que lo arrancaba en `DiamondServer.Main`. Se pueden recuperar del historial de versiones del place (versión 844 o anteriores).
+**Probado:** Play en Studio sin errores; captura del lobby.
+**Notas:** `Data` sigue guardando el ranking de dinero (`DiamondHunt_Coins_v1`) y el de nivel, aunque ya no se enseñan en ningún sitio.
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: nuevo orden al abrirlo (pulsar E → 3 toques → resultado)
 **Qué:**
 1. El fósil dorado se abre **pulsando** E una vez. Antes había que mantenerla.
@@ -271,11 +277,13 @@ Si se abre desde la mochila, el fósil aparece delante del jugador y pasa lo mis
 **Probado:** no se ha podido oír desde aquí.
 ## 2026-11-24 · seguo970 (Claude) · Terreno dorado: otro sonido al cavar (2)
 **Qué:** tampoco convencía el de monedas chocando. Ahora suena un tintineo de moneda corto (0,45 s), flojito y con el tono un poco distinto en cada palada.
-**Dónde:** DiamondClient.Main → handlers.Swing (terreno dorado): sonido «coin2» bxassetid://134583420216867 (Creator Store, gratis, de Scattz_1), volumen 0,18 y velocidad 0,95–1,07. Antes era 133570405319995.
+**Dónde:** DiamondClient.Main → handlers.Swing (terreno dorado): sonido «coin2» 
+bxassetid://134583420216867 (Creator Store, gratis, de Scattz_1), volumen 0,18 y velocidad 0,95–1,07. Antes era 133570405319995.
 **Probado:** el sonido carga en Studio. No se ha podido oír desde aquí.
 ## 2026-11-24 · seguo970 (Claude) · Terreno dorado: otro sonido al cavar
 **Qué:** a seguo970 no le convencía el «clink» de antes, así que se ha cambiado por un sonido de monedas chocando, flojito y con el tono un poco distinto en cada palada.
-**Dónde:** DiamondClient.Main → handlers.Swing (terreno dorado): sonido «Coin Clinking Sound» bxassetid://133570405319995 (Creator Store, gratis, de smashman65), dura 1 s, volumen 0,15 y velocidad 0,95–1,07. Antes era 4612374209 con notas pentatónicas.
+**Dónde:** DiamondClient.Main → handlers.Swing (terreno dorado): sonido «Coin Clinking Sound» 
+bxassetid://133570405319995 (Creator Store, gratis, de smashman65), dura 1 s, volumen 0,15 y velocidad 0,95–1,07. Antes era 4612374209 con notas pentatónicas.
 **Probado:** el sonido carga en Studio. No se ha podido oír desde aquí.
 ## 2026-11-24 · seguo970 (Claude) · Terreno dorado: «clink» suave y 3 moneditas al cavar
 **Qué:**
