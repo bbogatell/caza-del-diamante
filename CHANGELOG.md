@@ -2,6 +2,18 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: sin las burbujitas del final del estallido
+**Qué:** al final del sonido del estallido («4 Win Mythic») se oían unas burbujitas. Ahora el sonido se corta a los 0,7 s con un fundido de 0,15 s. También se han quitado las chispitas (`goldShimmer`) que sonaban al estallar y en la pantalla de la pieza. Siguen sonando al empezar el brillo.
+**Dónde:** `DiamondClient.GoldOpen`:
+- `worldFx`: `goldBurst` es ahora un `Sound` propio (grupo sfx) que se apaga a los 0,7 s.
+- `play`, resultado «pieza»: `goldShimmer` solo suena si está encendida la tensión.
+- Copia: `ServerStorage.CopiasSeguridad.AntesDeQuitarBurbujas_2026-11-25`.
+**Probado:** Play en Studio con `/dorado pala`:
+- El estallido dura 0,92 s en total y después no suena nada.
+- `goldShimmer` solo suena al empezar el brillo.
+- Sin errores.
+- **No se ha podido oír.**
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: estallido con sonido más lujoso
 **Qué:** a seguo970 le gusta el «trrrr» que sube mientras brilla, pero no el sonido del estallido. Ahora el estallido suena a premio raro y lujoso, en vez de a golpe de energía.
 **Dónde:** `DiamondClient.UIKit` → `goldBurst` = `rbxassetid://100618112435547`: «4 Win Mythic», de Inn_r (Creator Store, gratis, 1,6 s, fuerte desde el principio). Antes era `111341827543769`.
