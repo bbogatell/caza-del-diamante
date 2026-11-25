@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · bbogatell (Claude) · Fuera las losas blancas de debajo de los puestos
+**Qué:** se quitan las 4 losas gris claro con borde marrón que había bajo la Tienda de Estelas, la Máquina de Fósiles, la Ruleta y el Diario. Los puestos quedan directamente sobre el césped (sin agujeros debajo).
+**Dónde:** borrado `Map.Lobby.PlazaLayout` (solo tenía `ShopPads`, 15 piezas; ningún script lo usaba).
+**Probado:** rayos: suelo entero bajo los 4 puestos; captura.
+
 ## 2026-11-25 · bbogatell (Claude) · Los 4 puestos del fondo del lobby, simétricos
 **Qué:** la Tienda de Estelas, la Máquina de Fósiles, la Ruleta y la Recompensa Diaria estaban a distancias distintas de la puerta del carril (x −119, −72, 56 y 84). Ahora están en espejo respecto al centro: los de fuera a x ±112 (Estelas / Diario) y los de dentro a x ±66 (Máquina / Ruleta), todos en z −444 (medido por el centro de cada modelo; giros sin cambiar).
 **Dónde:** `Map.Lobby.TrailShop`, `FossilMachine`, `Wheel`, `Daily`.
