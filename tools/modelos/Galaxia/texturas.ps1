@@ -87,7 +87,8 @@ public static class GalTex {
                 R_[i] += sr * k; G_[i] += sg * k; B_[i] += sb * k;
             }
         };
-        int tiny = n * n / 900, med = n * n / 9000, big = 14;
+        // (v3, 25/11: 4x the stars, because the tile is now 4x bigger in the world: StudsPerTile 96)
+        int tiny = n * n / 300, med = n * n / 3000, big = 40;
         for (int s = 0; s < tiny; s++) { double t = rnd.NextDouble(); star(rnd.NextDouble() * n, rnd.NextDouble() * n, 0.7 + t * 0.5, 0.7 + t * 0.3, 0.75 + t * 0.25, 0.9, false); }
         for (int s = 0; s < med; s++) { double t = rnd.NextDouble(); star(rnd.NextDouble() * n, rnd.NextDouble() * n, 1.4 + t, 0.9, 0.85 + t * 0.15, 1.0, false); }
         for (int s = 0; s < big; s++) { double t = rnd.NextDouble(); star(rnd.NextDouble() * n, rnd.NextDouble() * n, 2.2 + t * 1.5, 1.0, 0.95, 1.0, true); }

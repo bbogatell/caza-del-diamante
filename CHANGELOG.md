@@ -2,6 +2,24 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Parcela 12 de nube; parcelas 14 y 15 sin patrón repetido
+**Qué:**
+- **Parcela 12** (Islas del Cielo, la de la Pala 23): el hoyo entero es de **nube**, con bultos blancos esponjosos de varios tamaños y sombras azuladas suaves. Antes tenía hierba arriba y piedra gris debajo.
+- **Parcela 14** (galaxia): ya no se nota el patrón desde arriba. La textura ocupa 4 veces más (96 studs en vez de 24) y tiene 4 veces más estrellas, para que no quede vacía.
+- **Parcela 15** (oro macizo): ya no se nota el patrón. La textura ocupa 4 veces más (64 studs en vez de 16), con 400 bloques en vez de 64 y cambios suaves de brillo por toda la textura.
+**Dónde:**
+- `MaterialService.Nube` (nueva): `MaterialVariant` sobre `WoodPlanks`, con `StudsPerTile` 64 y `SetBaseMaterialOverride(WoodPlanks, "Nube")`. `WoodPlanks` no lo usaba nada: ni piezas, ni parcelas, ni el terreno del mapa.
+- `Config`:
+  - `PLOTS[12].terrain = {{"WoodPlanks"}}`.
+  - `TERRAIN_COLORS.WoodPlanks` = blanco (nuevo).
+- `MaterialService.Galaxia`: `StudsPerTile` 96, color `72175773257964` y normal `101873375815619`.
+- `MaterialService.OroMacizo`: `StudsPerTile` 64, color `122434176833335`, normal `114846160892022`, rugosidad `93335784408872` y metal `123133641395271`.
+- Scripts de las texturas: `tools/modelos/Nube/texturas.ps1` (nuevo), `Galaxia/texturas.ps1` (v3, `-Seed 15`) y `OroMacizo/texturas.ps1` (v2, `-Cells 400 -Seed 12`). Los ids están en sus `IDS.txt`.
+**Probado:** Play en Studio:
+- Capturas de las 3 parcelas desde arriba.
+- En la parcela 12 todo el hoyo es `WoodPlanks` (`ReadVoxels`).
+- Sin errores. Los avisos «being generated» son de un asset que aún se estaba procesando.
+
 ## 2026-11-25 · seguo970 (Claude) · Parcela 11 (Templo Perdido): se cava en ladrillos de templo
 **Qué:** el hoyo entero de la parcela 11 (la de la Pala Rúnica del Templo, pala 21) es de **ladrillos de arenisca**, en los colores del bioma del templo. Cada ladrillo tiene su tono, entre arena clara y ocre, con bordes gastados, grano y algún desconchón, y juntas de mortero. Antes tenía 6 studs de adoquín arriba y caliza debajo.
 **Dónde:**

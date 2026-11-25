@@ -1,0 +1,5 @@
+﻿Nube (parcela 12, MaterialVariant Nube sobre WoodPlanks, 25/11/2026). ../texturas.ps1, StudsPerTile 64
+nube_color.png   rbxassetid://103375694264019
+nube_normal.png  rbxassetid://136554645152507
+nube_rough.png   rbxassetid://120841059374246
+nube_metal.png   rbxassetid://84832770600982

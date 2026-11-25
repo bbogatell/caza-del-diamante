@@ -1,5 +1,5 @@
-﻿Oro macizo (parcela 15, MaterialVariant OroMacizo sobre Concrete, 25/11/2026). Generadas con ../texturas.ps1 -Cells 64
-oro_color.png   rbxassetid://76077038603160
-oro_normal.png  rbxassetid://94308692481047
-oro_rough.png   rbxassetid://133829427522307
-oro_metal.png   rbxassetid://103083650063059
+﻿Oro macizo (parcela 15, MaterialVariant OroMacizo sobre Concrete, 25/11/2026). v2: ../texturas.ps1 -Cells 400 -Seed 12, StudsPerTile 64
+oro_color.png   rbxassetid://122434176833335  (v1 76077038603160)
+oro_normal.png  rbxassetid://114846160892022  (v1 94308692481047)
+oro_rough.png   rbxassetid://93335784408872   (v1 133829427522307)
+oro_metal.png   rbxassetid://123133641395271  (v1 103083650063059)

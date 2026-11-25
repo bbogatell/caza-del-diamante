@@ -63,6 +63,9 @@ public static class GoldTex {
             double grad = Clamp((ox * tx[c1] + oy * ty[c1]) / tl / (cs * 0.6), -1, 1);
             double sheen = Smooth(0.1, 0.95, grad) * 0.55 + bevel * 0.25; // bright streak on one side + shiny edges
             double k = 0.97 + tone[c1] * 0.05 - Smooth(-1.0, -0.2, -grad) * 0.22 - seam * 0.65;
+            // (v2, 25/11: large soft changes of tone across the tile, so the repetition does not show; whole periods = seamless)
+            double uu = x / (double)n, vv = y / (double)n;
+            k += 0.06 * Math.Sin(2 * Math.PI * (uu + 2 * vv) + 1.3) + 0.05 * Math.Sin(2 * Math.PI * (3 * uu - vv) + 0.4) + 0.04 * Math.Sin(2 * Math.PI * (2 * uu + 3 * vv) + 2.1);
             // gold (1, 0.74, 0.12) -> pale shine (1, 0.96, 0.62) on the sheen
             double r = 1.0, gg = 0.74 + (0.96 - 0.74) * sheen + tone[c1] * 0.03, b = 0.12 + (0.62 - 0.12) * sheen;
             R_[i] = r * k; G_[i] = gg * k; B_[i] = b * k;
