@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Parcela 10: el cuarzo sin patrón repetido
+**Qué:** el suelo de cuarzo rosado azulado de la parcela 10 ya no se ve como un mosaico con el mismo dibujo repetido muchas veces. Ahora parece más natural:
+- La textura ocupa casi 3 veces más (64 studs en vez de 24).
+- Las facetas son más pequeñas.
+- Las manchas rosas y azules son de varios tamaños.
+- Los brillos son más suaves.
+**Dónde:**
+- `MaterialService.CuarzoRosa`: `StudsPerTile` 64 y texturas nuevas (color `89366589418610`, normal `113177811501930`, rugosidad `138531765747769`).
+- `tools/modelos/CuarzoRosa/texturas.ps1` (v2, `-Cells 400 -Seed 37`) e `IDS.txt`.
+**Probado:** Play en Studio: captura de la parcela 10 desde arriba, sin repetición a la vista. Sin errores (los avisos «being generated» son de un asset que aún se estaba procesando). No está guardado en Roblox.
+
 ## 2026-11-25 · seguo970 (Claude) · Parcela 10 (Cueva de Cristal): todo de cuarzo rosado azulado
 **Qué:** el hoyo de la parcela 10 (la de la Pala de Cuarzo) es entero de **cuarzo rosado azulado**: facetas de cristal entre rosa y azul claro, con brillos blancos y aristas claras. Antes era piedra gris mezclada con cristal azul.
 **Dónde:**

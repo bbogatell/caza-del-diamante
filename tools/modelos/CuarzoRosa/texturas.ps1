@@ -74,14 +74,16 @@ public static class QuartzTex {
             double u = x / (double)n, v = y / (double)n;
             double edge = 1 - Smooth(1.0, 4.0, d2 - d1);      // bright crystal edge
             // pink <-> blue: large patches plus each facet's own shade
-            double mixK = Clamp(Smooth(0.35, 0.65, Fbm(u, v, 3, 4, 7.0)) * 0.75 + tone[c1] * 0.25, 0, 1);
+            // (v2: patches of several sizes, so the tile does not show)
+            double big = Fbm(u, v, 2, 3, 7.0), mid = Fbm(u, v, 5, 3, 29.0);
+            double mixK = Clamp(Smooth(0.30, 0.70, big * 0.6 + mid * 0.4) * 0.8 + tone[c1] * 0.2, 0, 1);
             double r = pr + (br - pr) * mixK, gg = pg + (bg - pg) * mixK, b = pb + (bb - pb) * mixK;
             // facet shading: gradient along the facet tilt, a white glint on one side
             double ox = x - px[c1]; if (ox > n / 2.0) ox -= n; if (ox < -n / 2.0) ox += n;
             double oy = y - py[c1]; if (oy > n / 2.0) oy -= n; if (oy < -n / 2.0) oy += n;
             double grad = Clamp((ox * tx[c1] + oy * ty[c1]) / (cs * 0.6), -1, 1);
-            double k = 0.88 + grad * 0.10;
-            double glint = Smooth(0.45, 0.95, grad) * 0.45 + edge * 0.55;
+            double k = 0.90 + grad * 0.06 + (Fbm(u, v, 3, 3, 61.0) - 0.5) * 0.12;
+            double glint = Smooth(0.55, 0.98, grad) * 0.22 + edge * 0.30;   // (v2: softer, the pattern shows less)
             R_[i] = r * k + (1 - r * k) * glint; G_[i] = gg * k + (1 - gg * k) * glint; B_[i] = b * k + (1 - b * k) * glint;
             double sx = tx[c1] * 0.30, sy = ty[c1] * 0.30;
             double len = Math.Sqrt(sx * sx + sy * sy + 1);
