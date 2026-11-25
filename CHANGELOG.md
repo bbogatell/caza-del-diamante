@@ -2,6 +2,17 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Parcela 10 (Cueva de Cristal): todo de cuarzo rosado azulado
+**Qué:** el hoyo de la parcela 10 (la de la Pala de Cuarzo) es entero de **cuarzo rosado azulado**: facetas de cristal entre rosa y azul claro, con brillos blancos y aristas claras. Antes era piedra gris mezclada con cristal azul.
+**Dónde:**
+- `MaterialService.CuarzoRosa`: `MaterialVariant` nueva sobre `Glacier`, con `StudsPerTile` 24 y `SetBaseMaterialOverride(Glacier, "CuarzoRosa")`.
+- `Glacier` solo lo usaba la parcela 10 (ni otras parcelas ni piezas).
+- `ReplicatedStorage.Config`:
+  - `PLOTS[10].terrain = {{"Glacier"}}`, sin `mix`; antes era `{{"Rock"}}, mix = {"Glacier", 0.5}`.
+  - `TERRAIN_COLORS.Glacier` = blanco; antes era 120, 235, 255.
+- Texturas generadas con `tools/modelos/CuarzoRosa/texturas.ps1`. Los ids están en `texturas/IDS.txt`.
+**Probado:** Play en Studio: en el hoyo todo es `Glacier` (`ReadVoxels`) y hay captura del suelo de cuarzo. **No se ha mirado** la consola después: Studio se desconectó del MCP justo al acabar.
+
 ## 2026-11-25 · bbogatell (Claude) · Iconos de las mejoras del terreno dorado
 **Qué:** los 4 objetos de pago del terreno dorado ya tienen icono hecho con ChatGPT, en estilo 3D cartoon y con fondo transparente. Sustituyen al modelo 3D en la tienda y en la barra de objetos.
 - Dinamita: rbxassetid://80682944499975

@@ -1,0 +1,5 @@
+﻿Cuarzo rosado azulado (parcela 10, MaterialVariant CuarzoRosa sobre Glacier, 25/11/2026). Generadas con ../texturas.ps1
+cuarzo_color.png   rbxassetid://102507381904130
+cuarzo_normal.png  rbxassetid://132971671704489
+cuarzo_rough.png   rbxassetid://137867238108969
+cuarzo_metal.png   rbxassetid://84832770600982
