@@ -44,6 +44,7 @@
 - El `studio_id` cambia en cada sesión: primero `list_roblox_studios`.
 - No se puede editar en modo Edit mientras está en Play: para el Play primero.
 - `execute_luau` restablece la cámara: para fijar una cámara de prueba usa `BindToRenderStep`.
+- **Devolver la cámara al jugador:** poner `CameraType = Custom` desde `execute_luau` no sirve. Al acabar, la herramienta la deja otra vez en `Scriptable` y el jugador no puede mover la cámara. Hay que crear un `LocalScript` en `PlayerGui` que ponga `CameraType = Custom` y `CameraSubject = Humanoid` (como `ArreglarCamara` del 25/11).
 - Los clics virtuales no activan ClickDetectors ni `Tool.Activated`: usa `tool:Activate()`.
 - Para escribir en el chat: `user_keyboard_input` con Slash, espera unos 600 ms, el texto y Return (`SendAsync` se queda colgado).
 - Un `require()` de un módulo del servidor desde `execute_luau` crea **otra copia** del módulo: para probar, usa los remotes o los comandos.
