@@ -2,6 +2,12 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: estallido con sonido más lujoso
+**Qué:** a seguo970 le gusta el «trrrr» que sube mientras brilla, pero no el sonido del estallido. Ahora el estallido suena a premio raro y lujoso, en vez de a golpe de energía.
+**Dónde:** `DiamondClient.UIKit` → `goldBurst` = `rbxassetid://100618112435547`: «4 Win Mythic», de Inn_r (Creator Store, gratis, 1,6 s, fuerte desde el principio). Antes era `111341827543769`.
+**Probado:** Play en Studio con `/dorado pala`: suena al estallar (volumen hasta 185) y se guarda la pieza. **No se ha podido oír.**
+**Notas:** otra opción, si no convence, es «VC spin chime 4» (`85343009717356`), una campana de rareza que pega fuerte y se apaga en ~1 s.
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: brillo de 1,5 s y estallido de energía
 **Qué:**
 - Cuando un fósil dorado lleva premio, brilla 1,5 s en vez de 0,5 s, cada vez con más luz y chispas, mientras suena un tono que va subiendo.
