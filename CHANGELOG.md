@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Imágenes de los premios del fósil dorado (aún sin usar)
+**Qué:** imágenes hechas con ChatGPT de las 5 partes de la **Pala Robux** y las 5 partes del **ticket dorado**, los premios que darán los fósiles dorados (además del Robux dorado). Están subidas a Roblox, pero **todavía no salen en el juego**: faltan los premios y en qué momento enseñarlas.
+**Dónde:** `tools/modelos/FosilDorado/premios/`: hojas originales, las 10 piezas recortadas y los ids en `IDS.txt`.
+**Probado:** las imágenes se han revisado a ojo. No hay nada en Studio que probar.
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: sin los 3 toques (guardados)
 **Qué:** al abrir un fósil dorado ya no hay que tocar 3 veces para romperlo. Sale el fósil y pasa directo a la tensión y al resultado. A seguo970 le gustan los toques y puede que los vuelva a querer, así que **no se ha borrado nada**: están apagados con un interruptor.
 **Dónde:**

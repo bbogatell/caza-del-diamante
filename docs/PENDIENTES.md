@@ -24,6 +24,7 @@
 - [x] Borrar `workspace.PasarelaFosiles` (seguo970, 03/11): borrada después de que seguo970 revisara los 60 fósiles en ella.
 
 ## Bugs / a medias
+- [ ] **Premios de los fósiles dorados** (seguo970, 25/11): un fósil dorado podrá dar una de las 5 partes de la Pala Robux, una de las 5 partes del ticket dorado o el Robux dorado. Las imágenes ya están (`tools/modelos/FosilDorado/premios/IDS.txt`). Falta la lógica, las probabilidades y en qué momentos enseñarlas.
 - [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
 - [ ] **Pala 29 nueva** (seguo970, 21/10): puesta, texturizada y animada. Falta verla en la tienda, en móvil y en la mano de otro jugador. La capa ya se mueve como tela (huesos `ShovelBone`).
 
