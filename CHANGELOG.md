@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Parcela 15: se cava en oro macizo
+**Qué:** el hoyo de la parcela 15 (Trono del Rey Galáctico, la de antes del terreno dorado) ya no es amarillo liso: es **oro macizo brillante**, bloques de oro pulido con juntas finas y brillos. Al cavar, por dentro también es oro.
+**Dónde:**
+- `MaterialService.OroMacizo`: `MaterialVariant` nueva sobre `Concrete`, con `StudsPerTile` 16 y `SetBaseMaterialOverride(Concrete, "OroMacizo")`.
+- `Concrete` solo lo usa la parcela 15, así que no cambia nada más.
+- `ReplicatedStorage.Config` → `TERRAIN_COLORS.Concrete = C(255, 255, 255)`; antes era 255, 196, 60.
+- Texturas generadas con `tools/modelos/OroMacizo/texturas.ps1 -Cells 64`. Los ids están en `tools/modelos/OroMacizo/texturas/IDS.txt`.
+**Probado:** Play en Studio: capturas de la parcela 15. El rayo al hoyo da `Concrete` y el color es blanco. Sin errores. **No se ha mirado** cavando dentro ni en móvil.
+**Notas:** para volver atrás, borra `MaterialService.OroMacizo` y pon `Concrete` otra vez a 255, 196, 60.
+
 ## 2026-11-25 · seguo970 (Claude) · Ticket dorado: gira poco a poco en la mano
 **Qué:** el ticket dorado que llevas en la mano gira despacio sobre sí mismo (una vuelta cada ~5 s), sin moverse de sitio. Todos lo ven girar.
 **Dónde:** `StarterPlayer.StarterPlayerScripts.TicketSpin` (LocalScript nuevo): cada fotograma cambia `Tool.Grip` del ticket que tiene en la mano cada personaje (solo en ese cliente). Velocidad: `SPEED = 1.2` rad/s.
