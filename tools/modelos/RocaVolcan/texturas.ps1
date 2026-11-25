@@ -56,8 +56,10 @@ public static class RockTex {
             double rn = Fbm(u, v, 5, 5, 101.0);
             double crack = Math.Exp(-Math.Pow((rn - 0.5) / 0.008, 2));
             int i = y * n + x;
-            double c = 0.78 + (big - 0.5) * 0.45 + (mid - 0.5) * 0.40 + (grain - 0.5) * 0.16
-                + (speck - 0.5) * 0.08 - crack * 0.15;
+            // (v2: the big dark patches were what showed the repetition: much softer now, more medium/fine detail)
+            double mid2 = Fbm(u, v, 13, 4, 151.0);
+            double c = 0.78 + (big - 0.5) * 0.14 + (mid - 0.5) * 0.30 + (mid2 - 0.5) * 0.22 + (grain - 0.5) * 0.18
+                + (speck - 0.5) * 0.08 - crack * 0.12;
             C[i] = Clamp(c, 0.25, 1.0);
             H[i] = big * 0.4 + mid * 0.35 + grain * 0.25 - crack * 0.3;
         }

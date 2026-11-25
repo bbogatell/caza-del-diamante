@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Parcela 7: la roca sin manchas repetidas
+**Qué:** en la roca del volcán (parcela 7) se veían unas manchas oscuras grandes repetidas muchas veces. Ahora la roca es más uniforme y natural:
+- Las manchas grandes son muy suaves.
+- Tiene más detalle mediano y fino.
+- La textura ocupa el doble (80 studs en vez de 40).
+**Dónde:**
+- `MaterialService.RocaVolcan`: `StudsPerTile` 80, color `112826062478022` y normal `71895642310226`.
+- `tools/modelos/RocaVolcan/texturas.ps1` (v2, `-Seed 44`) e `IDS.txt`.
+**Probado:** Play en Studio: captura de la parcela 7 desde arriba, sin repeticiones a la vista. Sin errores.
+
 ## 2026-11-25 · seguo970 (Claude) · Parcela 10: el cuarzo sin patrón repetido
 **Qué:** el suelo de cuarzo rosado azulado de la parcela 10 ya no se ve como un mosaico con el mismo dibujo repetido muchas veces. Ahora parece más natural:
 - La textura ocupa casi 3 veces más (64 studs en vez de 24).

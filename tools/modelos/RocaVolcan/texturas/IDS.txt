@@ -1,5 +1,5 @@
-﻿Roca volcánica (parcela 7, MaterialVariant RocaVolcan sobre Basalt, 25/11/2026). Generadas con ../texturas.ps1
-roca_color.png   rbxassetid://90025473849969
-roca_normal.png  rbxassetid://131472601326270
+﻿Roca volcánica (parcela 7, MaterialVariant RocaVolcan sobre Basalt, 25/11/2026). v2: ../texturas.ps1 -Seed 44, StudsPerTile 80
+roca_color.png   rbxassetid://112826062478022  (v1 90025473849969)
+roca_normal.png  rbxassetid://71895642310226   (v1 131472601326270)
 roca_rough.png   rbxassetid://101927137835140
 roca_metal.png   rbxassetid://84832770600982
