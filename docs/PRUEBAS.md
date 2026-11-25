@@ -18,7 +18,7 @@
 | `/tierra <cantidad>` | Te da tierra para la máquina: `/tierra 5000`, `/tierra 2m`. |
 | `/dinero <cantidad>` | Te da monedas: `/dinero 5000`, `/dinero 2.5m`, `/dinero 1b`, `/dinero 3t`. |
 | `/finalizar` · `/finalizar ya` | Hace como si TÚ encontraras el Robux dorado (no guarda nada: `GoldHunt.finish`, sin la reclamación del DataStore). Con la cinemática del ganador, o `ya` sin ella (como en un servidor que arranca después). El terreno dorado queda cerrado hasta el próximo Play. |
-| `/dorado <n>` | Te da n fósiles dorados en la mochila (botón dorado de arriba para abrirlos). |
+| `/dorado <n>` | Te da n fósiles dorados sin abrir. Desde el 25/11 no hay mochila: aparecen a tu lado cuando estás en el terreno dorado, como mucho 3 a la vez en el suelo. |
 | `/dorado gana` | El próximo fósil dorado que abras lleva el Robux dorado (en Studio no se guarda nada: el DataStore está apagado). |
 | `/dorado fosil` | Tu próxima palada en el terreno dorado saca un fósil dorado. |
 | `/dorado pala` · `/dorado ticket` | El próximo fósil dorado que abras lleva una pieza (al azar) de la Pala Robux o del ticket dorado. También `Request:InvokeServer("Debug", "gold", "pala"/"ticket")`. |

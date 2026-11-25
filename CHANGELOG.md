@@ -2,6 +2,31 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósiles dorados: sin mochila, se abren donde salen
+**Qué:**
+- Los fósiles dorados ya no se pueden guardar: se quedan en el suelo del terreno dorado hasta que los abres ahí mismo, como un cofre.
+- Ya no se van a la mochila a los 90 s, y no hay botón «Fósiles Dorados ¡ABRIR! xN».
+- Todos los que están cerca ven el brillo y la explosión, o el polvo. La pantalla del premio solo la ve el dueño.
+- Mientras tengas 3 sin abrir en el suelo, no salen más.
+- Los fósiles sin abrir que no están en el suelo aparecen a tu lado cuando entras en el terreno dorado: si saliste del juego, compras de la tienda, `/dorado n`, regalos del admin…
+**Dónde:**
+- `DiamondServer.GoldHunt`:
+  - Sin el temporizador `keepSeconds` ni el atributo `Expires`.
+  - `open` solo con `source == "found"`; desde la mochila da «Los fósiles dorados se abren donde salen».
+  - Nuevo push para todos `GoldFx {at, prize, owner}`.
+  - En el bucle de `start`, salen a tu lado los fósiles sin abrir que te faltan en el suelo (`p.gold.bag` > en el suelo, máx. 3).
+  - El aviso de los packs dice que aparecen a tu lado.
+- `DiamondClient.HUD` → `goldBtn` siempre oculto.
+- `DiamondClient.GoldOpen.fx` (nuevo) y `DiamondClient.Main` → `handlers.GoldFx`.
+- `Config.GOLD.keepSeconds` ya no se usa.
+- Copia de antes: `ServerStorage.CopiasSeguridad.AntesDeSinMochilaDorada_2026-11-25`.
+**Probado:** Play en Studio:
+- El botón está oculto.
+- Abrir desde la mochila se rechaza.
+- `/dorado 2` en el lobby no saca ninguno; al entrar en el terreno salen 2 a tu lado.
+- Abrir uno con E manda `GoldFx` y lo quita. Sin errores.
+- **Sin probar:** que otro jugador vea el efecto (hacen falta 2 jugadores) y que no desaparezcan pasados 90 s.
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: brilla y explota si tiene premio, se hace polvo si no
 **Qué:** al terminar de mantener E sobre un fósil dorado:
 - **Con premio** (pieza de la Pala Robux, pieza del ticket o el Robux dorado): el fósil brilla dorado medio segundo (contorno y relleno dorados, luz que crece, chispas, tiembla), explota con fragmentos y chispas, y sale directamente la pantalla del premio.
