@@ -2,6 +2,18 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: piezas de la Pala Robux y del ticket dorado
+**Qué:** un fósil dorado que no lleva el Robux dorado puede dar ahora una pieza de la **Pala Robux** (1 entre 200) o una pieza del **ticket dorado** (1 entre 150). Cada pieza es una de las 5 al azar y se pueden repetir. Al abrirlo sale la imagen de la pieza en grande con «¡PIEZA DE …!» y «Pieza N de 5 · Tienes X/5». Las piezas se guardan, pero **todavía no hacen nada**: falta decidir qué pasa al juntar las 5.
+**Dónde:**
+- `ReplicatedStorage.Config` → `GOLD.parts` (`shovel` y `ticket`: `chance`, `name` e `images` con las 5 imágenes).
+- `DiamondServer.GoldHunt` → `open`: sortea la pieza y la guarda en `p.gold.parts[kind][i]`, que cuenta cuántas tienes de cada una. Manda `part = {kind, i}` en el push `GoldOpen`. `debug` acepta `pala` y `ticket`.
+- `DiamondServer.Data` → atributo `GoldParts`, en JSON.
+- `DiamondServer.Main` → `/dorado pala` y `/dorado ticket`.
+- `DiamondClient.GoldOpen` → `play`: el resultado nuevo «pieza».
+- Copia de los 5 scripts de antes en `ServerStorage.CopiasSeguridad.AntesDePiezasFosilDorado_2026-11-25`.
+**Probado:** Play en Studio con `/dorado pala` y `/dorado ticket`: sale la imagen, se guarda la pieza (`GoldParts`) y no hay errores. No se han probado las probabilidades de verdad (hacen falta muchos fósiles).
+**Notas:** **corrección de la entrada «sin los 3 toques»:** la copia `GoldOpen_con3toques` no se llegó a guardar porque `ServerStorage.CopiasSeguridad` no existía. Se ha creado la carpeta y se ha guardado ahí `GoldOpen` con los toques apagados. Los toques siguen en el código, así que no se ha perdido nada.
+
 ## 2026-11-25 · seguo970 (Claude) · Imágenes de los premios del fósil dorado (aún sin usar)
 **Qué:** imágenes hechas con ChatGPT de las 5 partes de la **Pala Robux** y las 5 partes del **ticket dorado**, los premios que darán los fósiles dorados (además del Robux dorado). Están subidas a Roblox, pero **todavía no salen en el juego**: faltan los premios y en qué momento enseñarlas.
 **Dónde:** `tools/modelos/FosilDorado/premios/`: hojas originales, las 10 piezas recortadas y los ids en `IDS.txt`.

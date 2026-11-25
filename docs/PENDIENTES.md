@@ -24,7 +24,8 @@
 - [x] Borrar `workspace.PasarelaFosiles` (seguo970, 03/11): borrada después de que seguo970 revisara los 60 fósiles en ella.
 
 ## Bugs / a medias
-- [ ] **Premios de los fósiles dorados** (seguo970, 25/11): un fósil dorado podrá dar una de las 5 partes de la Pala Robux, una de las 5 partes del ticket dorado o el Robux dorado. Las imágenes ya están (`tools/modelos/FosilDorado/premios/IDS.txt`). Falta la lógica, las probabilidades y en qué momentos enseñarlas.
+- [ ] **Piezas de los fósiles dorados** (seguo970, 25/11): ya salen y se guardan (Pala Robux 1/200, ticket 1/150, `Config.GOLD.parts`). Falta decidir **qué pasa al juntar las 5** de la Pala Robux y del ticket. También dónde ver tu colección.
+- [ ] `ServerStorage.CopiasSeguridad` **no existía** el 25/11, aunque los documentos hablan de copias que había dentro (p. ej. `CazaDiamante_quitada_2026-11-19`, `FinaleInfierno_desactivado`). Esas copias parece que se han perdido. Se ha vuelto a crear la carpeta.
 - [ ] **Animación nueva de cavar** (seguo970, 21/10): puesta desde el `.blend` y vista cavando por seguo970 (se ve bien). Falta verla con otro jugador; en los fotogramas 8-9 el codo izquierdo se dobla del todo (viene así de Blender).
 - [ ] **Pala 29 nueva** (seguo970, 21/10): puesta, texturizada y animada. Falta verla en la tienda, en móvil y en la mano de otro jugador. La capa ya se mueve como tela (huesos `ShovelBone`).
 

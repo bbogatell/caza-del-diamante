@@ -21,6 +21,7 @@
 | `/dorado <n>` | Te da n fósiles dorados en la mochila (botón dorado de arriba para abrirlos). |
 | `/dorado gana` | El próximo fósil dorado que abras lleva el Robux dorado (en Studio no se guarda nada: el DataStore está apagado). |
 | `/dorado fosil` | Tu próxima palada en el terreno dorado saca un fósil dorado. |
+| `/dorado pala` · `/dorado ticket` | El próximo fósil dorado que abras lleva una pieza (al azar) de la Pala Robux o del ticket dorado. También `Request:InvokeServer("Debug", "gold", "pala"/"ticket")`. |
 | `/palarobux` | Te pone en la mano la **Pala Robux** de prueba (solo cambia el aspecto: cavas con la fuerza de tu nivel). `/palarobux no` te devuelve tu pala normal. |
 | `/tutorial` | Empieza el tutorial otra vez desde el paso 1. |
 
