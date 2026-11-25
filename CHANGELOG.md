@@ -2,6 +2,13 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: sonido nuevo al abrirlo (revelación legendaria)
+**Qué:** el estallido al abrir un fósil dorado con premio suena ahora a «revelación legendaria» de gacha: un golpe fuerte, una segunda subida brillante y se apaga limpio a los ~3 s.
+**Dónde:** `DiamondClient.UIKit` → `goldBurst` = `rbxassetid://71806017567681` («Skybound_Gacha_Reveal_Legendary», de N4W1N, Creator Store, gratis, 3,5 s).
+- Antes (sin apuntar aquí) estaba «VC spin chime 5» (`81975878080511`). `GoldOpen` ya lo tocaba entero (`UI.sound("goldBurst", 0.7, 1)`), sin corte.
+**Probado:** Play en Studio: carga, suena con fuerza (volumen hasta 315) y se apaga del todo a los 3,4 s. Sin errores. **No se ha podido oír.**
+**Notas:** otra opción parecida, más corta (se apaga en ~1,5 s): «KKC Reveal Legendary» (`135848425992250`).
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: sin las burbujitas del final del estallido
 **Qué:** al final del sonido del estallido («4 Win Mythic») se oían unas burbujitas. Ahora el sonido se corta a los 0,7 s con un fundido de 0,15 s. También se han quitado las chispitas (`goldShimmer`) que sonaban al estallar y en la pantalla de la pieza. Siguen sonando al empezar el brillo.
 **Dónde:** `DiamondClient.GoldOpen`:
