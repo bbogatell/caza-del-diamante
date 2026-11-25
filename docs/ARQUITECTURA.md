@@ -62,6 +62,7 @@ Atributos de `ReplicatedStorage`: `GoldState` (`Open`/`Ended`), `GoldWinnerName`
 | `CreatureLOD` | Partículas y luces de los bichos (`CreatureRig`) según la distancia a la cámara: de cerca, tope de partículas por bicho (escala todos sus emisores continuos a la vez); de lejos, emisores continuos y luces apagados. Con el atributo `PerfMode` del jugador (ajuste `perf`, «Modo rendimiento», encendido por defecto en táctil) usa menos distancia y menos tope. No toca los emisores de ráfaga (Rate 0) ni los que llevan etiquetas. |
 | `CarryPose` | Brazos arriba sujetando el fósil de quien lo lleva (atributo `Carrying`); el servidor (`Fossils`) le guarda la pala mientras tanto. |
 | `TreadFx` | Subirse a tu cinta: el personaje corre sin moverse y la cinta se mueve (atributo local `OnTreadmill`). |
+| `TicketSpin` | El ticket dorado en la mano (`Item = "ticket"`) gira despacio sobre sí mismo. Cambia `Tool.Grip` cada fotograma, solo en el cliente: `Grip = Rot⁻¹ · GripOriginal`. |
 | `CarpetFly` | Vuelo con la alfombra mágica (LinearVelocity + AlignOrientation en el personaje, límite de altura). |
 | `DebugLevelKey` | **Solo Studio:** la tecla E sube de nivel para probar. |
 

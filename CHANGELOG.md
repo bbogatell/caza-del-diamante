@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Ticket dorado: gira poco a poco en la mano
+**Qué:** el ticket dorado que llevas en la mano gira despacio sobre sí mismo (una vuelta cada ~5 s), sin moverse de sitio. Todos lo ven girar.
+**Dónde:** `StarterPlayer.StarterPlayerScripts.TicketSpin` (LocalScript nuevo): cada fotograma cambia `Tool.Grip` del ticket que tiene en la mano cada personaje (solo en ese cliente). Velocidad: `SPEED = 1.2` rad/s.
+**Probado:** Play en Studio: gira 41° en 0,6 s y el centro no se mueve (0,02 studs). Captura. Sin errores. **No se ha visto** con 2 jugadores.
+
 ## 2026-11-25 · seguo970 (Claude) · Ticket dorado en el inventario
 **Qué:**
 - Cuando consigues el ticket dorado, al acabar la animación aparece en tu barra de herramientas, después de la pala, el bate y los objetos.
