@@ -2,6 +2,25 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: brilla y explota si tiene premio, se hace polvo si no
+**Qué:** al terminar de mantener E sobre un fósil dorado:
+- **Con premio** (pieza de la Pala Robux, pieza del ticket o el Robux dorado): el fósil brilla dorado medio segundo (contorno y relleno dorados, luz que crece, chispas, tiembla), explota con fragmentos y chispas, y sale directamente la pantalla del premio.
+- **Sin premio:** suena a roca rota, el fósil se deshace en polvo y desaparece. No sale ninguna pantalla.
+
+Si se abre desde la mochila, el fósil aparece delante del jugador y pasa lo mismo. Se ha quitado la fase de tensión de la pantalla (latidos, rayos), pero queda guardada con un interruptor, como los 3 toques.
+**Dónde:**
+- `ReplicatedStorage.Config` → `GOLD.tension = false` (nuevo; `true` la vuelve a poner).
+- `DiamondServer.GoldHunt` → `open`: manda `at`, que es dónde estaba el fósil, en el push `GoldOpen`.
+- `DiamondClient.GoldOpen`:
+  - `worldFx` (nuevo): usa una copia local de `Assets.GoldFossil`. El brillo usa `Highlight`, `PointLight` y chispas, y la explosión 12 fragmentos de neón. Sonidos: `goldShimmer`, `goldShatter`, `boom`, `break_` y `goldCrack3`.
+  - `play`: si no hay premio, termina ahí. Si lo hay, va directo al resultado, sin enseñar el fósil en la pantalla.
+- Copia de antes: `ServerStorage.CopiasSeguridad.AntesDeBrilloFosilDorado_2026-11-25`.
+**Probado:** Play en Studio:
+- Con `/dorado pala`: brillo y luego la pantalla de la pieza.
+- Vacío, en el suelo y desde la mochila: la copia del fósil aparece y desaparece en ~0,5 s, sin pantalla.
+- Sin errores en la consola.
+- **Sin oír** los sonidos. En el terreno dorado, el brillo dorado se distingue poco del suelo dorado.
+
 ## 2026-11-25 · seguo970 (Claude) · Piezas del fósil dorado: imágenes precargadas
 **Qué:** la primera vez que salía una pieza solo se veía el brillo un momento, porque la imagen aún no había cargado. Ahora las 10 imágenes se cargan al entrar en el juego.
 **Dónde:** `DiamondClient.GoldOpen` → `init`: `ContentProvider:PreloadAsync` de `Config.GOLD.parts[*].images`.
