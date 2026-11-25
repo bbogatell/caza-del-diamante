@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · bbogatell (Claude) · Los 4 puestos del fondo del lobby, simétricos
+**Qué:** la Tienda de Estelas, la Máquina de Fósiles, la Ruleta y la Recompensa Diaria estaban a distancias distintas de la puerta del carril (x −119, −72, 56 y 84). Ahora están en espejo respecto al centro: los de fuera a x ±112 (Estelas / Diario) y los de dentro a x ±66 (Máquina / Ruleta), todos en z −444 (medido por el centro de cada modelo; giros sin cambiar).
+**Dónde:** `Map.Lobby.TrailShop`, `FossilMachine`, `Wheel`, `Daily`.
+**Probado:** sin choques con otras piezas; captura; Play: comprar en la máquina funciona y los avisos de la ruleta, el diario y las estelas salen al acercarse.
+
 ## 2026-11-25 · bbogatell (Claude) · Fuera el podio del lobby
 **Qué:** se quita el podio con los 3 jugadores más ricos del juego (el monumento del lobby, en x 123, z −453) y su script. El suelo de debajo ya estaba entero.
 **Dónde:** borrados `Map.Lobby.Podium`, `DiamondServer.Podium` y `ServerStorage.PodiumBuilder`; quitada la línea que lo arrancaba en `DiamondServer.Main`. Se pueden recuperar del historial de versiones del place (versión 844 o anteriores).
