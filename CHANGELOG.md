@@ -2,6 +2,11 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Fósil dorado: vuelven los 3 toques cuando hay premio
+**Qué:** cuando un fósil dorado lleva algo, después del brillo y el estallido sale la pantalla con el fósil y «¡TOCA PARA ROMPERLO!»: hay que tocarlo 3 veces (se va agrietando) y luego sale lo que te ha tocado. Si no tocas, se toca solo: el primero a los 4 s y luego cada 1,5 s. Los fósiles vacíos siguen igual: se deshacen en polvo, sin pantalla.
+**Dónde:** `ReplicatedStorage.Config` → `GOLD.taps = true` (antes `false`). No hacía falta cambiar ningún script: el código estaba guardado en `DiamondClient.GoldOpen`.
+**Probado:** Play en Studio con `/dorado pala`: captura de «¡TOCA PARA ROMPERLO!» con los 3 círculos. Se rompe sola, sale la pieza y la pantalla se cierra. Sin errores. **No se han probado** los toques a mano.
+
 ## 2026-11-25 · seguo970 (Claude) · Parcela 14: se cava en galaxia
 **Qué:** el hoyo entero de la parcela 14 (Nebulosa de los Dioses) es ahora de **galaxia**: fondo azul oscuro, nubes de nebulosa moradas, magenta y azules, y muchas estrellas (las grandes con destello en cruz). Antes tenía 6 studs morados arriba y basalto negro debajo.
 **Dónde:**
