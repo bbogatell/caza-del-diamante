@@ -2,6 +2,24 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Pala Robux: juntar las 5 piezas te da la pala
+**Qué:**
+- Al conseguir la última de las 5 piezas de la Pala Robux, después de la pantalla de la pieza aparecen las 5 en círculo.
+- Giran y se juntan cada vez más rápido, con un tono que sube y más luz.
+- ¡Pum! Un destello blanco y sale la Pala Robux en 3D girando, con «¡¡PALA ROBUX!!» y «¡Ya la tienes en tu inventario!».
+- Al acabar, la pala está en tu barra de herramientas, al lado de tu pala normal, y se guarda.
+- Las 5 piezas se gastan. Cava con la fuerza de tu nivel.
+**Dónde:**
+- `DiamondServer.GoldHunt`: `open` (pala completa, `part.complete`), `shown` (da la pala) y `debug "completa"`.
+- `DiamondServer.Data` (atributo `RobuxShovel`), `DiamondServer.Shovels.give` (añade la Pala Robux) y `DiamondServer.Main` (`/dorado completa`).
+- `DiamondClient.GoldOpen` (animación) y `DiamondClient.Main.doSwing` (ritmo de la Pala Robux = el de tu nivel).
+- Copia: `ServerStorage.CopiasSeguridad.AntesDePalaRobuxCompleta_2026-11-25`.
+**Probado:** Play en Studio con `/dorado completa`:
+- Capturas de la pieza 5/5, las piezas juntándose y la pala saliendo.
+- Al acabar tienes Bate, Pala Divina del Diamante y Pala Robux; la pantalla se cierra.
+- Sin errores.
+- **No se ha probado** cavar con la Pala Robux ni salir y volver a entrar (DataStore apagado en Studio).
+
 ## 2026-11-25 · seguo970 (Claude) · Fósil dorado: sonido nuevo al abrirlo (revelación legendaria)
 **Qué:** el estallido al abrir un fósil dorado con premio suena ahora a «revelación legendaria» de gacha: un golpe fuerte, una segunda subida brillante y se apaga limpio a los ~3 s.
 **Dónde:** `DiamondClient.UIKit` → `goldBurst` = `rbxassetid://71806017567681` («Skybound_Gacha_Reveal_Legendary», de N4W1N, Creator Store, gratis, 3,5 s).
