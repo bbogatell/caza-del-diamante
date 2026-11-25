@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Ticket dorado: al final sale el ticket entero
+**Qué:** al juntar las 5 piezas del ticket, después del ¡pum! ya no se quedan las 5 piezas rotas en fila: sale una imagen del ticket entero, sin grietas. Es el mismo diseño: marco dorado, diamante azul en el centro y 4 estrellas.
+**Dónde:**
+- Imagen nueva hecha con ChatGPT (fondo transparente, recortada a 1024×432): `rbxassetid://123608847761588`. Archivos en `tools/modelos/FosilDorado/premios/ticket_entero.png` y `ticket_entero_original.png`, y el id en `IDS.txt`.
+- `ReplicatedStorage.Config` → `GOLD.parts.ticket.full`.
+- `DiamondClient.GoldOpen`: en el ¡pum! se quitan las piezas y sale `def.full`. Se precarga con las piezas. Las piezas se juntan en fila con separación 0,285.
+**Probado:** Play en Studio con `/dorado completaticket`: captura del final con el ticket entero. Sin errores.
+
 ## 2026-11-25 · seguo970 (Claude) · Ticket dorado: animación al juntar las 5 piezas
 **Qué:**
 - Igual que con la Pala Robux: al conseguir la última pieza del ticket dorado, las 5 salen en círculo, giran y se colocan en fila de izquierda a derecha.
