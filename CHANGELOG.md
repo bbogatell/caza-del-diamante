@@ -2,6 +2,25 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Ticket dorado: animación al juntar las 5 piezas
+**Qué:**
+- Igual que con la Pala Robux: al conseguir la última pieza del ticket dorado, las 5 salen en círculo, giran y se colocan en fila de izquierda a derecha.
+- Las piezas son las 5 partes del ticket, así que juntas forman el ticket entero.
+- ¡Pum! Un destello, «¡¡TICKET DORADO!!» y «¡Ticket dorado conseguido!», con el ticket balanceándose.
+- Las 5 piezas se gastan y te suma 1 ticket (se pueden tener varios).
+- **Aún no sirve para nada:** falta decidir dónde se pone (lo dirá seguo970).
+**Dónde:**
+- `DiamondServer.GoldHunt.open`: rama `kind == "ticket"`, que suma 1 a `p.gold.tickets`, y `debug "completaticket"`.
+- `DiamondServer.Data`: atributo `GoldTickets`.
+- `DiamondServer.Main`: `/dorado completaticket`.
+- `DiamondClient.GoldOpen`: `isTicket` dentro de la animación de juntar piezas.
+- Copia: `ServerStorage.CopiasSeguridad.AntesDeTicketCompleto_2026-11-25`.
+**Probado:** Play en Studio con `/dorado completaticket`:
+- Capturas de las piezas juntándose y del ticket entero.
+- `GoldTickets` = 1 y las piezas se quedan a 0.
+- Sin errores.
+- Después se juntaron un poco más las piezas (separación 0,285); eso no se ha vuelto a ver.
+
 ## 2026-11-25 · seguo970 (Claude) · Pala Robux: juntar las 5 piezas te da la pala
 **Qué:**
 - Al conseguir la última de las 5 piezas de la Pala Robux, después de la pantalla de la pieza aparecen las 5 en círculo.

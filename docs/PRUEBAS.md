@@ -21,7 +21,7 @@
 | `/dorado <n>` | Te da n fósiles dorados sin abrir. Desde el 25/11 no hay mochila: aparecen a tu lado cuando estás en el terreno dorado, como mucho 3 a la vez en el suelo. ⚠️ Para entrar hace falta la Pala 30 (`Request:InvokeServer("Debug", "level", 30)`); si no, te echa a la plaza y el fósil no sale. |
 | `/dorado gana` | El próximo fósil dorado que abras lleva el Robux dorado (en Studio no se guarda nada: el DataStore está apagado). |
 | `/dorado fosil` | Tu próxima palada en el terreno dorado saca un fósil dorado. |
-| `/dorado completa` | Te deja con las piezas 1-4 de la Pala Robux y sin la pala: el próximo fósil dorado que abras trae la 5 y ves la animación de juntarlas. También `Request:InvokeServer("Debug", "gold", "completa")`. |
+| `/dorado completa` · `/dorado completaticket` | Te deja con las piezas 1-4 de la Pala Robux (y sin la pala) o del ticket dorado: el próximo fósil dorado que abras trae la 5 y ves la animación de juntarlas. También `Request:InvokeServer("Debug", "gold", "completa"/"completaticket")`. |
 | `/dorado pala` · `/dorado ticket` | El próximo fósil dorado que abras lleva una pieza (al azar) de la Pala Robux o del ticket dorado. También `Request:InvokeServer("Debug", "gold", "pala"/"ticket")`. |
 | `/palarobux` | Te pone en la mano la **Pala Robux** de prueba (solo cambia el aspecto: cavas con la fuerza de tu nivel). `/palarobux no` te devuelve tu pala normal. |
 | `/tutorial` | Empieza el tutorial otra vez desde el paso 1. |
