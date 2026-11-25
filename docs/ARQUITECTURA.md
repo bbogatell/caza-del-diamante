@@ -25,8 +25,11 @@
 - `GOLD.colors = {Salt = blanco}`: `GoldHunt` lo pone al arrancar y lo vuelve a poner `GoldOpen`. `Plots` también pinta `Salt` de blanco.
 - Ningún otro sitio usa `Salt`: lo que quedaba del Abismo de antes se cambió a `Sand`.
 - **Parcela 15 (25/11):** su terreno es `Concrete`, que solo usa ella. Lleva encima `MaterialService.OroMacizo` (oro macizo facetado; texturas de `tools/modelos/OroMacizo/texturas.ps1`) con `SetBaseMaterialOverride`, y `TERRAIN_COLORS.Concrete` es blanco.
-- **Parcela 12 (25/11):** todo su terreno es `WoodPlanks`, que no usa nada más. Encima lleva `MaterialService.Nube` (texturas de `tools/modelos/Nube/texturas.ps1`), y `TERRAIN_COLORS.WoodPlanks` es blanco.
-- **Parcela 11 (25/11):** todo su terreno es `Cobblestone` (solo lo usa ella), con `MaterialService.LadrilloTemplo` encima (ladrillos de arenisca; texturas de `tools/modelos/LadrilloTemplo/texturas.ps1`) y `TERRAIN_COLORS.Cobblestone` en blanco.
+- **Ojo:** Roblox dibuja en **bloques** algunos materiales de terreno, como `WoodPlanks` y `Brick`. Con esos, al cavar salen agujeros en cubos; con los demás salen redondos. Las capas de `terrain` tienen que ser **múltiplo de 4** studs; si no, entre las dos capas sale una franja de `Rock`.
+- **Parcela 11 (25/11):** todo su terreno es `WoodPlanks`, que no usa nada más (se cava en cubos). Encima lleva `MaterialService.LadrilloTemplo` (ladrillos de arenisca; texturas de `tools/modelos/LadrilloTemplo/texturas.ps1`). `TERRAIN_COLORS.WoodPlanks` es blanco.
+- **Parcela 12 (25/11):** todo su terreno es `Cobblestone` (solo lo usa ella), con `MaterialService.Nube` encima (texturas de `tools/modelos/Nube/texturas.ps1`) y `TERRAIN_COLORS.Cobblestone` en blanco.
+- **Parcela 13 (25/11):** solo `Brick` (ladrillos lilas), sin capa de `Asphalt` ni vetas.
+- **Parcela 14 (25/11, capas):** arriba 8 studs de `Asphalt` con `MaterialService.Estrellas` (noche estrellada) y debajo `Pavement` con `Galaxia`. `Asphalt` solo lo usa ella y está en blanco.
 - **Parcela 10 (25/11):** todo su terreno es `Glacier` (solo lo usa ella), con `MaterialService.CuarzoRosa` encima (texturas de `tools/modelos/CuarzoRosa/texturas.ps1`) y `TERRAIN_COLORS.Glacier` en blanco.
 - **Parcela 7 (25/11):** `Basalt` lleva encima `MaterialService.RocaVolcan` (roca sin patrón repetido; texturas de `tools/modelos/RocaVolcan/texturas.ps1`) y `TERRAIN_COLORS.Basalt` = 66, 63, 70. Ojo: `Basalt` es también el fondo de todos los hoyos y lo usan las piezas de la Pala 16.
 - **Parcela 14 (25/11):** todo su terreno es `Pavement` (solo lo usa ella, más la pieza `ServerStorage.Finale.SkyPlatform.Part`). Lleva encima `MaterialService.Galaxia` (texturas de `tools/modelos/Galaxia/texturas.ps1`), y `TERRAIN_COLORS.Pavement` es blanco.

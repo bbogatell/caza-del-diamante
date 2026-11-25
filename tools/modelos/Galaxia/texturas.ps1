@@ -2,7 +2,8 @@
 # fondo azul marino muy oscuro, nubes de nebulosa (morado, magenta, azul y cian) y muchas estrellas, algunas grandes
 # con destello en cruz. Mosaico sin costuras (ruido periodico y estrellas que dan la vuelta por los bordes).
 # Salida: gal_color.png, gal_normal.png, gal_rough.png, gal_metal.png
-param([string]$OutDir = (Join-Path $PSScriptRoot "texturas"), [int]$Size = 1024, [int]$Seed = 5, [double]$Bright = 1.8)
+param([string]$OutDir = (Join-Path $PSScriptRoot "texturas"), [int]$Size = 1024, [int]$Seed = 5, [double]$Bright = 1.8, [double]$Nebula = 1.0)
+# (-Nebula 0 -OutDir ..\Estrellas\texturas = only the starry night, for the top layer of plot 14, 25/11)
 New-Item -ItemType Directory -Force $OutDir | Out-Null
 Add-Type -ReferencedAssemblies System.Drawing -TypeDefinition @'
 using System;
@@ -49,7 +50,7 @@ public static class GalTex {
         return s / tot;
     }
 
-    public static void Make(string dir, int n, int seed, double bright) {
+    public static void Make(string dir, int n, int seed, double bright, double nebula) {
         var rnd = new Random(seed);
         lattice = new double[L * L];
         for (int i = 0; i < L * L; i++) lattice[i] = rnd.NextDouble();
@@ -62,6 +63,7 @@ public static class GalTex {
             double a = Smooth(0.45, 0.85, Fbm(u, v, 3, 6, 0.0));    // purple / magenta clouds
             double b = Smooth(0.50, 0.90, Fbm(u, v, 4, 6, 37.0));   // blue / cyan clouds
             double c = Smooth(0.60, 0.95, Fbm(u, v, 6, 5, 91.0));   // small bright wisps
+            a *= nebula; b *= nebula; c *= nebula;
             // base: deep navy
             double r = 0.03, g = 0.02, bl = 0.10;
             r += a * 0.45; g += a * 0.08; bl += a * 0.55;           // purple
@@ -112,5 +114,5 @@ public static class GalTex {
     }
 }
 '@
-[GalTex]::Make($OutDir, $Size, $Seed, $Bright)
+[GalTex]::Make($OutDir, $Size, $Seed, $Bright, $Nebula)
 Get-ChildItem $OutDir | Select-Object Name, Length

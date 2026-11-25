@@ -1,0 +1,3 @@
+﻿Noche estrellada (capa de arriba de la parcela 14, MaterialVariant Estrellas sobre Asphalt, 25/11/2026). ../../Galaxia/texturas.ps1 -Seed 23 -Nebula 0, StudsPerTile 96
+gal_color.png   rbxassetid://135538327140093
+(normal/rugosidad/metal: los de Galaxia: 101873375815619 / 98378217474922 / 84832770600982)

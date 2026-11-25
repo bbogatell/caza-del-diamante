@@ -2,6 +2,32 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Cubos en el templo y no en la nube; grieta solo lila; nebulosa por dentro
+**Qué:**
+- **Parcela 12 (nube):** ya no se cava en cubos, sino redondo como en casi todas las parcelas.
+- **Parcela 11 (templo):** ahora sí se cava en cubos de ladrillo.
+- **Parcela 13 (Grieta Dimensional):** solo ladrillos lilas. Se quita la capa gris de encima (`Asphalt`) y las vetas.
+- **Parcela 14 (Nebulosa de los Dioses):** desde fuera solo se ve **noche estrellada** (azul oscuro con estrellas, sin nebulosa). Al cavar, por debajo de 8 studs, sale la nebulosa morada y rosa.
+**Por qué los cubos:** no lo hace ningún script, todas las parcelas cavan igual (`FillBall`). Roblox dibuja algunos materiales de terreno **en bloques**: `WoodPlanks` y `Brick`, por ejemplo. La nube iba sobre `WoodPlanks` y el templo sobre `Cobblestone`, así que se han intercambiado.
+**Dónde:**
+- `MaterialService`:
+  - `LadrilloTemplo.BaseMaterial` = `WoodPlanks`.
+  - `Nube.BaseMaterial` = `Cobblestone`.
+  - Overrides cambiados a juego.
+  - `Estrellas` nueva, sobre `Asphalt`: textura de noche estrellada `135538327140093` (la normal y la rugosidad son las de `Galaxia`) y `StudsPerTile` 96.
+- `Config.PLOTS`:
+  - 11 = `{{"WoodPlanks"}}`.
+  - 12 = `{{"Cobblestone"}}`.
+  - 13 = `{{"Brick"}}`, sin `veins`.
+  - 14 = `{{"Asphalt", 8}, {"Pavement"}}`.
+- `Config.TERRAIN_COLORS.Asphalt` = blanco; antes era 30, 26, 38.
+- Textura de estrellas: `tools/modelos/Galaxia/texturas.ps1 -Nebula 0 -Seed 23`, guardada en `tools/modelos/Estrellas/texturas/`.
+**Probado:** Play en Studio:
+- Hoyos hechos con `FillBall` en las 4 parcelas y capturas: la nube cava redondo, el templo en cubos, la grieta toda lila (también en cubos) y la nebulosa con estrellas arriba y nebulosa al fondo.
+- Materiales del hoyo con `ReadVoxels`: 11 `WoodPlanks`, 12 `Cobblestone`, 13 `Brick`, 14 `Asphalt` + `Pavement`.
+- Con la capa de 6 studs salía una franja de `Rock` entre las dos capas. Por eso son 8: las capas tienen que ser múltiplo de 4.
+- Sin errores.
+
 ## 2026-11-25 · seguo970 (Claude) · Parcela 12 de nube; parcelas 14 y 15 sin patrón repetido
 **Qué:**
 - **Parcela 12** (Islas del Cielo, la de la Pala 23): el hoyo entero es de **nube**, con bultos blancos esponjosos de varios tamaños y sombras azuladas suaves. Antes tenía hierba arriba y piedra gris debajo.
