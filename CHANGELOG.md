@@ -2,6 +2,15 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Parcela 7 (Volcán): roca más clara y sin patrón repetido
+**Qué:** la roca de la parcela 7 (Volcán Humeante) es ~15 % más clara. Ya no se ve el mismo dibujo pequeño repetido: ahora son manchas grandes y medianas de distinto tono, con grano y algunas grietas suaves. Las vetas de lava siguen igual.
+**Dónde:**
+- `MaterialService.RocaVolcan`: `MaterialVariant` nueva sobre `Basalt`, con `StudsPerTile` 40 y `SetBaseMaterialOverride(Basalt, "RocaVolcan")`.
+- `Config.TERRAIN_COLORS.Basalt = C(66, 63, 70)`; antes era 44, 42, 50.
+- Texturas generadas con `tools/modelos/RocaVolcan/texturas.ps1`. Los ids están en `texturas/IDS.txt`.
+**Probado:** Play en Studio: capturas de antes y después de la parcela 7. Sin errores.
+**Notas:** `Basalt` también es el **fondo de todos los hoyos**, y lo usan **63 piezas**: la Pala 16 (Diente de Megalodón) y su modelo en `ShovelSign`. Todo eso coge la textura nueva. No se ha mirado.
+
 ## 2026-11-25 · bbogatell (Claude) · Suelo del lobby: una sola pieza con la textura de cuadros
 **Qué:** el suelo del lobby eran 1.848 baldosas de 8 × 8 (cuadros claros y oscuros con studs). Ahora es **una sola pieza** de 432 × 276 (x ±216, z −468 a −192, arriba en y = 18) con dos texturas encima: `Checker` (los cuadros de 8 × 8, imagen rbxassetid://78936773448807 a 16 studs, tono oscuro (110, 186, 44) sobre el color de la pieza (139, 214, 64)) y `Studs` (rbxassetid://6348166067, verde (118, 190, 50) al 45 %). Se ve igual que antes y son 1.847 piezas menos.
 **Dónde:** `Map.Lobby.Floor` (ahora una `Part`, antes una carpeta de baldosas). El pasillo hacia el carril (`Lane.Gateway.FloorTiles`) sigue con baldosas.

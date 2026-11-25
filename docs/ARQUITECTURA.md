@@ -25,6 +25,7 @@
 - `GOLD.colors = {Salt = blanco}`: `GoldHunt` lo pone al arrancar y lo vuelve a poner `GoldOpen`. `Plots` también pinta `Salt` de blanco.
 - Ningún otro sitio usa `Salt`: lo que quedaba del Abismo de antes se cambió a `Sand`.
 - **Parcela 15 (25/11):** su terreno es `Concrete`, que solo usa ella. Lleva encima `MaterialService.OroMacizo` (oro macizo facetado; texturas de `tools/modelos/OroMacizo/texturas.ps1`) con `SetBaseMaterialOverride`, y `TERRAIN_COLORS.Concrete` es blanco.
+- **Parcela 7 (25/11):** `Basalt` lleva encima `MaterialService.RocaVolcan` (roca sin patrón repetido; texturas de `tools/modelos/RocaVolcan/texturas.ps1`) y `TERRAIN_COLORS.Basalt` = 66, 63, 70. Ojo: `Basalt` es también el fondo de todos los hoyos y lo usan las piezas de la Pala 16.
 - **Parcela 14 (25/11):** todo su terreno es `Pavement` (solo lo usa ella, más la pieza `ServerStorage.Finale.SkyPlatform.Part`). Lleva encima `MaterialService.Galaxia` (texturas de `tools/modelos/Galaxia/texturas.ps1`), y `TERRAIN_COLORS.Pavement` es blanco.
 - Cada palada ahí (`DiamondClient.Main`, en `handlers.Swing`, cuando `Config.inGoldField(r.digPos)`) hace un «clink» suave: el sonido «coin2» `134583420216867` (Creator Store, gratis, 0,45 s) a volumen 0,18, tocado más grave (velocidad 0,72–0,80) y con el tono un poco distinto cada vez. También salen 3 moneditas (piezas ancladas sin choque) que suben y se desvanecen en unos 0,6 s. `Main` del servidor manda `result.digPos` para esto.
 
