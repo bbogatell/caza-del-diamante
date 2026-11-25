@@ -2,6 +2,14 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Ticket dorado entero: el diamante ya no sale cortado
+**Qué:** en la imagen del ticket entero, el marco tapaba la punta de abajo del diamante. Ahora el diamante es un poco más pequeño y se ve entero.
+**Dónde:**
+- Imagen nueva de ChatGPT: `rbxassetid://124966963850328` (antes `123608847761588`). En `tools/modelos/FosilDorado/premios/ticket_entero*.png` (cambiados) y `IDS.txt`.
+- `Config.GOLD.parts.ticket.full`.
+- `DiamondClient.GoldOpen`: tamaño de la imagen `1.6 × 0.711`, por la proporción nueva 1024×455.
+**Probado:** Play en Studio con `/dorado completaticket`: captura del final con el diamante entero. Sin errores.
+
 ## 2026-11-25 · seguo970 (Claude) · Ticket dorado: al final sale el ticket entero
 **Qué:** al juntar las 5 piezas del ticket, después del ¡pum! ya no se quedan las 5 piezas rotas en fila: sale una imagen del ticket entero, sin grietas. Es el mismo diseño: marco dorado, diamante azul en el centro y 4 estrellas.
 **Dónde:**

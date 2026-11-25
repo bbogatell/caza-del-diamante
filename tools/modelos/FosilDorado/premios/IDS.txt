@@ -1,4 +1,4 @@
-Premios de los fósiles dorados (ChatGPT, 25/11/2026). Recortadas de *_piezas_hoja.png, cuadradas, máx. 512 px, fondo transparente.
+﻿Premios de los fósiles dorados (ChatGPT, 25/11/2026). Recortadas de *_piezas_hoja.png, cuadradas, máx. 512 px, fondo transparente.
 
 Pala Robux (las 5 partes):
 pala_parte_1.png  Robux grande (hoja)          rbxassetid://119239892083547
@@ -15,5 +15,5 @@ ticket_parte_4.png  centro-derecha             rbxassetid://129881696313941
 ticket_parte_5.png  extremo derecho            rbxassetid://103026644321210
 
 Ticket dorado entero (ChatGPT, 25/11/2026, sale al juntar las 5 partes):
-ticket_entero.png   ticket intacto 1024x432    rbxassetid://123608847761588
-(ticket_entero_original.png = la imagen tal cual de ChatGPT, 1774x887)
+ticket_entero.png   ticket intacto 1024x455    rbxassetid://124966963850328  (2ª versión, diamante entero; la 1ª era 123608847761588)
+(ticket_entero_original.png = la imagen tal cual de ChatGPT, 1774x887; 2ª versión)
