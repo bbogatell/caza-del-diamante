@@ -2,6 +2,16 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · seguo970 (Claude) · Plataforma de antes del terreno dorado, en dorado
+**Qué:** la plataforma de studs blanca que hay justo antes de la entrada al terreno dorado ahora es de studs dorados, del mismo dorado que sus paredes. Se mantienen las pequeñas diferencias de tono entre piezas.
+**Dónde:**
+- `Map.Lane.FieldEnd` → las 9 piezas `Plaza` (y sus texturas de studs).
+- `Map.GoldField.PlazaFill` (FrontWallFloor, WallStrip, StairHoleFill, GateFloor y las 2 `Plaza` de los lados).
+- Base `f0ba46`, más claro u oscuro según el tono que tenía cada pieza.
+- Copia de antes en `ServerStorage.FieldEndPlazaBackup`.
+**Probado:** capturas en Edit desde la parcela 15 mirando a la entrada.
+**Notas:** `ServerStorage.LaneKit` menciona `FieldEnd`; si alguien vuelve a generar el carril con él, la plaza saldría blanca otra vez.
+
 ## 2026-11-24 · seguo970 (Claude) · Terreno dorado: sonido al cavar más grave
 **Qué:** el tintineo al cavar en el terreno dorado era demasiado agudo. Ahora se toca más grave, a un 75 % de velocidad (unos 5 semitonos más bajo).
 **Dónde:** DiamondClient.Main → handlers.Swing (terreno dorado): PlaybackSpeed 0,72–0,80 (antes 0,95–1,07), mismo sonido 134583420216867.
