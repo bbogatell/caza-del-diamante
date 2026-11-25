@@ -11,6 +11,7 @@
 - `MaterialService.RocaVolcan`: `StudsPerTile` 80, color `112826062478022` y normal `71895642310226`.
 - `tools/modelos/RocaVolcan/texturas.ps1` (v2, `-Seed 44`) e `IDS.txt`.
 **Probado:** Play en Studio: captura de la parcela 7 desde arriba, sin repeticiones a la vista. Sin errores.
+**Guardado:** en Roblox como **versión 860** (Team Create, sin publicar).
 
 ## 2026-11-25 · seguo970 (Claude) · Parcela 10: el cuarzo sin patrón repetido
 **Qué:** el suelo de cuarzo rosado azulado de la parcela 10 ya no se ve como un mosaico con el mismo dibujo repetido muchas veces. Ahora parece más natural:
