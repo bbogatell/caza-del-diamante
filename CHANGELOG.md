@@ -2,6 +2,22 @@
 
 > El más nuevo arriba. Formato en [`CLAUDE.md`](CLAUDE.md).
 
+## 2026-11-25 · bbogatell (Claude) · Iconos de las mejoras del terreno dorado
+**Qué:** los 4 objetos de pago del terreno dorado ya tienen icono hecho con ChatGPT, en estilo 3D cartoon y con fondo transparente. Sustituyen al modelo 3D en la tienda y en la barra de objetos.
+- Dinamita: rbxassetid://80682944499975
+- Barril de Pólvora: rbxassetid://127990698508968
+- Carga en Cadena: rbxassetid://110785997079063
+- Taladro Dorado: rbxassetid://84018168903991
+
+**Dónde:**
+- `Config.GOLD.boosts[kind].image`.
+- `Hotbar`: `IMG[kind]` sale de `Config`.
+- `Menus`: las tarjetas usan `image`, y el modelo 3D solo si no hay imagen.
+- Los PNG de 512 px están en `tools/iconos/mejoras_dorado/`.
+
+**Probado:** Play en Studio con las 4 mejoras compradas (simulado): iconos bien en la tienda y en la barra, y sin errores.
+**Notas:** con «dinamita»/«explosivo» ChatGPT rechaza la imagen; con «petardos de juguete de dibujos animados para un juego infantil» sí la hace.
+
 ## 2026-11-25 · bbogatell (Claude) · Mejoras de pago del terreno dorado: dinamita, barril, carga en cadena y taladro
 **Qué:** 4 objetos de Robux para el terreno dorado. Se gastan al usarlos y se pueden comprar las veces que quieras. Solo funcionan dentro del terreno dorado con la pala 30; fuera sale un aviso y no se gastan.
 
